@@ -13,7 +13,9 @@ name , money amount and it adds amount to the account. withdraw money - name , a
 c. A colleague suggests storing all account balances in one big array in main, with a
 separate array for owner names, just like Task 1 of Lab 1. What specific problem
 would appear the moment you need to handle 200 customers?
-ans -
+ans - The moment I need to handle 200 customers, it would be very difficult to manage all of their
+//balance or add new customers of remove existing customer if I use just two different arrays to
+//store the name and the balance.
 
 d. Suppose the bank later wants to add a transaction limit per day. Where exactly
 would you add that — in main, or somewhere else? Why?
@@ -21,6 +23,9 @@ ans - in the Bankaccount class. so , that every single person would have unique 
 */
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+        BankAccount rubayet = new BankAccount("rubayet");
+        BankAccount
+
     }
 }
