@@ -25,3 +25,16 @@ public class Main {
         Sajid.printStatement();
     }
 }
+/*
+a)BankAccount is a class, alice and bob are objects.
+b)when I call alice.deposit(500), balance of alice changes.
+ Baecause the method only changes the object of alice, not bob.
+c)alice:
+    name="Alice"
+    balance=0
+  bob:
+    name="Bob"
+    balance=0
+d)Nothing would happen to Bob's balance.
+  because we assigned bob's balance to alice, and changed alice's balance.
+ */
