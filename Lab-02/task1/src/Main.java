@@ -16,7 +16,7 @@ store the name and the balance.
 
 
 (d) I would add the transaction limit in the BankAccount class so that the transaction
-limit to each customer would be unique to them and not affect other people's transaction limits at all.
+limit to each customer would be unique to them and not affect other people's transaction limits at all..
 
  */
 public class Main {
