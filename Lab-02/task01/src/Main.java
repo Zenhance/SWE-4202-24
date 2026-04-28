@@ -1,1 +1,3 @@
-class BankAccount
+class BankAccount{
+
+}
