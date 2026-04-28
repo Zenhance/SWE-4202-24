@@ -13,13 +13,13 @@ class BankAccount{
     private String ownerName;
     private long balance;
 
-    public void BankAccount(String name) {
+    public BankAccount(String name) {
         ownerName = name;
         balance = 0;
     }
 
     public void deposit(long amount){
-        if(balance<=0){
+        if(amount<=0){
             System.out.println("Invalid amount.");
             return;
         }
@@ -28,7 +28,7 @@ class BankAccount{
 
     public void withdraw(long amount){
         if(amount>balance){
-            system.out.println("Insufficient balance.");
+            System.out.println("Insufficient balance.");
             return;
         }
         balance-=amount;
@@ -41,7 +41,7 @@ class BankAccount{
 
 }
 
-public class BankSystem(){
+public class BankSystem{
     public static void main(String[] args){
         BankAccount alice = new BankAccount("Alice");
         BankAccount bob = new BankAccount("Bob");
@@ -56,6 +56,15 @@ public class BankSystem(){
         bob.deposit(9000);
         bob.printStatement();
         bob.withdraw(2000);
+        bob.printStatement();
     }
 }
+
+/*
+* a.BankAccount is a class. alice and bob are objects;
+* b.only alice's balance changes.
+*
+*
+*
+* */
 
