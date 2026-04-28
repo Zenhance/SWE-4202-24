@@ -28,4 +28,6 @@ public class Main {
         b3.printstatement();
         }
     }
-
+/* a.Bankaccount is class. alice and bob ar objects.
+   b.Alices balance changes as the alice object has its own address which has the
+ */
