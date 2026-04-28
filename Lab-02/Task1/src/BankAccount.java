@@ -7,6 +7,7 @@ public class BankAccount {
     **amount>0
     2)withdraw(amount)
     *input: double amount
+
     *output: decreases balance
     **balance !< 0
     3)printStatement()
