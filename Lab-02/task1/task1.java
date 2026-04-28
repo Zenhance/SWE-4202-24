@@ -27,7 +27,7 @@ public class BankAccount {
     private String owner;
     private double balance;
 
-    public BankAccount{
+    public BankAccount(String owner){
 
     this.owner = owner;
     this.balance = 0;
