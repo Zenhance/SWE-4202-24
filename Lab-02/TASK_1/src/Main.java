@@ -16,6 +16,15 @@ class BankAccount
             System.out.println("Error!");
         }
     }
+    public void withdraw(double amount)
+    {
+        if (balance - amount <= 0) {
+            System.out.println("Insufficient Funds");
+        } else {
+            balance = balance - amount;
+        }
+    }
+
 }
 public class Main
 {
