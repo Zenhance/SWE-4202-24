@@ -23,4 +23,8 @@ public class StudentStack {
         this.marks[count-1] = 0;
         count--;
     }
+
+
+
+
 }

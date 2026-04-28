@@ -15,5 +15,13 @@ public class Main {
 
         // Testing error
         list.pop();
+
+        for (int i = 1; i <= 50; i++){
+            list.push("Student"+i, i+50);
+        }
+
+        // Testing error
+        list.push("Arnob", 90);
+
     }
 }
