@@ -30,4 +30,6 @@ public class StudentQueue {
         System.out.println(this.name[0] + " " + this.marks[0]);
     }
 
+
+
 }
