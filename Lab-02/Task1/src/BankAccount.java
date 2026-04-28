@@ -12,11 +12,13 @@ public class BankAccount {
             balance -= amount;
             return balance;
         }else{
-            System.out.println("You don't have enough balance!");
+            System.out.println("Insufficient funds");
+            return balance;
         }
     }
 
     public float printStatement(){
-        System.out.println(name);
+        System.out.println("Owner's Name: "+ name);
+        System.out.println("Current Balance: "+ balance);
     }
 }
