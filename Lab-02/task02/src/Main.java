@@ -9,5 +9,11 @@ public class Main {
         list.push("Moin", 89);
         list.push("Sakep", 90);
 
+        list.pop();
+        list.pop();
+        list.pop();
+
+        // Testing error
+        list.pop();
     }
 }

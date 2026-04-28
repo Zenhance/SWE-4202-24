@@ -13,5 +13,14 @@ public class StudentStack {
         count++;
     }
 
-
+    public void pop(){
+        if (count - 1 < 0) {
+            System.out.println("Stack is empty");
+            return;
+        }
+        System.out.println(this.name[count-1] + " " + this.marks[count-1]);
+        this.name[count-1] = null;
+        this.marks[count-1] = 0;
+        count--;
+    }
 }
