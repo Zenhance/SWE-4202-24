@@ -40,6 +40,5 @@ public class Main {
 
         // Implementing display method
         queue.display();
-
     }
 }
