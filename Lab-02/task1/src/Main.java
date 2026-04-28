@@ -33,6 +33,10 @@ public class Main {
         Mugdho.withdraw(41000);
         Alice.withdraw(1820);
 
+        Bob.printstatement();
+        Mugdho.printstatement();
+        Alice.printstatement();
+
     }
 
 }
