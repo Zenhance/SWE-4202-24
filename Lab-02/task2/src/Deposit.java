@@ -4,4 +4,4 @@ public class Deposit
     {
         acc.balance+=amount;
     }
-}
+}//

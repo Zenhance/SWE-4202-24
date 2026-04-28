@@ -13,4 +13,4 @@ public class Main {
         w.Withdraw(acc2,700);
         s.Print(acc2);
     }
-}
+}//
