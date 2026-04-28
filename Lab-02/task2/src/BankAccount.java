@@ -7,5 +7,4 @@ public class BankAccount
         this.owner=owner;
         this.balance=0;
     }
-
 }
