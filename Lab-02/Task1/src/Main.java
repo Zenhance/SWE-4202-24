@@ -28,6 +28,11 @@ public class Main {
         b3.printstatement();
         }
     }
-/* a.Bankaccount is class. alice and bob ar objects.
-   b.Alices balance changes as the alice object has its own address which has the
+/* a.Bankaccount is class. alice and bob are objects.
+   b.Alices balance changes as the alice object has its own address which has the value of amount in alice.
+   c. The output will be:
+      Alice 0
+      Bob 0
+   d.If we write alice=bob the address of alice will be equal of bob,and therefore if we
+    write alice.deposit(100),the balance of bob will be updated.
  */
