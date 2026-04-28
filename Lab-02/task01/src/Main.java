@@ -18,18 +18,44 @@ class BankAccount{
         balance = 0;
     }
 
-    public void Deposit(long amount){
+    public void deposit(long amount){
+        if(balance<=0){
+            System.out.println("Invalid amount.");
+            return;
+        }
         balance+=amount;
     }
 
-    public void Withdraw(long amount){
+    public void withdraw(long amount){
+        if(amount>balance){
+            system.out.println("Insufficient balance.");
+            return;
+        }
         balance-=amount;
     }
 
-    public void CheckBalance(){
+    public void printStatement(){
         System.out.println("Owner's name: "+ownerName);
         System.out.println("Balance: "+balance);
     }
 
+}
+
+public class BankSystem(){
+    public static void main(String[] args){
+        BankAccount alice = new BankAccount("Alice");
+        BankAccount bob = new BankAccount("Bob");
+        BankAccount charlie = new BankAccount("Charlie");
+
+        alice.printStatement();
+        alice.withdraw(1000);
+        alice.deposit(2000);
+        alice.printStatement();
+
+        bob.deposit(0);
+        bob.deposit(9000);
+        bob.printStatement();
+        bob.withdraw(2000);
+    }
 }
 
