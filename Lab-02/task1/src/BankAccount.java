@@ -31,23 +31,7 @@ public class BankAccount {
     }
 }
 
-public class Main{
-    public Static void(String[] args){
-    BankAccount alice = new BankAccount("Alice");
-    BankAccount bob = new BankAccount("Bob");
-    BankAccount jenny = new BankAccount("Jenny");
 
-    alice.deposit(500);
-    alice.withdraw(200);
-    printStatement();
-    alice.deposit(600);
-    alice.withdraw(300);
-    printStatement();
-    alice.deposit(300);
-    alice.withdraw(100);
-    printStatement();
-}
-}
 /*
 a. BankAccount is a class and alice and bob are objects as in instances of the class.
 b. When alice.deposit(500) is called, balance of alice changes. The program knows to update alice's balance through the dot operator which assigns values and it is also known as method invocation.
