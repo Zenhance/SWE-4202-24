@@ -22,8 +22,8 @@
 public class Main {
 
     static void main(String[] args) {
-        BankAccount Fuad = new BankAccount();
-        
+        BankAccount Fuad = new BankAccount("Fuad");
+
     }
 }
 
