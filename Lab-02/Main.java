@@ -24,5 +24,13 @@ public class Main {
         n1.withdraw(500);
         n1.printBalance();
 
+        n2.withdraw(6500);
+        n2.printBalance();
+
+        n3.deposit(-500);
+        n3.printBalance();
+
+        
+
     }
 }
