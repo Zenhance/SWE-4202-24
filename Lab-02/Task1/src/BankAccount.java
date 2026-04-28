@@ -17,7 +17,7 @@ public class BankAccount {
         }
     }
 
-    public float printStatement(){
+    public void printStatement(){
         System.out.println("Owner's Name: "+ name);
         System.out.println("Current Balance: "+ balance);
     }
