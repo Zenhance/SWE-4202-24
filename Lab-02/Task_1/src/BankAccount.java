@@ -29,6 +29,29 @@
 //                3. Avoids the reuse of code
 public class BankAccount {
 
+        String Name;
+        double balance;
+
+        public BankAccount(String Name,double balance){
+
+            this.Name=Name;
+            this.balance=balance;
+        }
+
+        void printStatement() {
+            System.out.println("The owner's name " + Name);
+            System.out.println("The Balance: " + balance);
+
+
+        }
+
+    public static void main(String[] args){
+
+        BankAccount s1=new BankAccount("M", 1000);
+        s1.printStatement();
+
+
+}
 
 
 
