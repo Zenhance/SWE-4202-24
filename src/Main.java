@@ -1,6 +1,23 @@
 public class Main{
     public static void main(String[] args){
-        System.out.println("Hello");
+        BankAccount Alice =new BankAccount("Alice",500.0F);
+        BankAccount Bob =new BankAccount("Bob",100.0F);
+        BankAccount abc =new BankAccount("abc",2000.0F);
+
+        Alice.deposit(500);
+        Alice.withdraw(30);
+        Alice.print();
+
+
+        Bob.deposit(100);
+        Bob.withdraw(20);
+        Bob.print();
+
+        abc.deposit(100);
+        abc.withdraw(20);
+        abc.print();
+
+
 
 
     }
