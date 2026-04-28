@@ -31,6 +31,7 @@ public class Main {
         Samin.deposit(113);
 
         Fuad.withdraw(325);
+        
         Rubayet.withdraw(124);
         Samin.withdraw(113);
 
