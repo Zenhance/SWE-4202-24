@@ -19,5 +19,9 @@ Ans: I would put that in BankAccount class.
 
 public class Main {
     public static void main(String[] args) {
+
+        BankAccount arnob = new BankAccount("arnob");
+        BankAccount moin = new BankAccount("moin");
+        BankAccount sakep = new BankAccount("sakep");
     }
 }
