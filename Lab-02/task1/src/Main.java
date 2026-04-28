@@ -3,7 +3,17 @@
 * 1) the information I need to colledt
 *       User Name
 *       Account ID
-*       Account Balance
+*       Current Balance
+*       Password
+*
+* 2)Actions they can perform
+*       Check balance
+*           => To check balance, we have to know the current balance of the account and then             we will show the current balance as output.
+*       Add Money
+*           => To do this thing we have to know nothing. Added money will be added to the               current balance.
+*       Withdraw Money
+*           =>To withdraw money, we have to check the current balance. and my must validate             the withdraw amount should not be larger the the current balance.
+*
 * */
 public class Main {
     public static void main(String[] args) {
