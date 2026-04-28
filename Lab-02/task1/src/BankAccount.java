@@ -2,32 +2,33 @@ public class BankAccount
 {
  private String ownername;
  private double balance;
-}
-public BankAccount(String ownername)
-{
- this.ownername = ownername;
- this.balance = 0;
-}
-public double deposite(double amount)
-{
- balance += amount;
- return balance;
-}
-public float withdraw(double amount)
-{
- if(amount <= balance)
+
+ public BankAccount(String ownername)
  {
-  balance -= amount;
+  this.ownername = ownername;
+  this.balance = 0;
+ }
+
+ public double deposit(double amount)
+ {
+  balance += amount;
   return balance;
  }
- else
+
+ public double withdraw(double amount)
  {
-  System.out.println(" Insufficient funds ");
-  return balance;
+  if (amount <= balance) {
+   balance -= amount;
+   return balance;
+  } else {
+   System.out.println(" Insufficient funds ");
+   return balance;
+  }
  }
-}
-public void printStatement()
-{
- System.out.println("Owner's Name: "+ ownername);
- System.out.println("Current Balance: "+ balance);
+
+ public void printStatement()
+ {
+  System.out.println("Owner's Name: " + ownername);
+  System.out.println("Current Balance: " + balance);
+ }
 }

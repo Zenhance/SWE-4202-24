@@ -21,14 +21,14 @@
 
 public class Main
 {
-    static void main(String[] args)
+    public static void main(String[] args)
     {
-        BankAccount Rakib = new BankAccount(" Rakib ");
-        BankAccount Alice = new BankAccount(" Alice ");
-        BankAccount Bob = new BankAccount(" Bob ");
-        Rakib.deposite(50000);
-        Alice.deposite(20000);
-        Bob.deposite(5000);
+        BankAccount Rakib = new BankAccount("Rakib");
+        BankAccount Alice = new BankAccount("Alice");
+        BankAccount Bob = new BankAccount("Bob");
+        Rakib.deposit(50000);
+        Alice.deposit(20000);
+        Bob.deposit(5000);
         Rakib.withdraw(2000);
         Alice.withdraw(1000);
         Bob.withdraw(500);
