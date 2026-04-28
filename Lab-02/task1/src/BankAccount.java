@@ -15,7 +15,5 @@ public class BankAccount {
     public void printStatement(){
         System.out.println("Owner's name: "+name);
         System.out.println("Balance: "+balance+" Taka");
-
     }
-    //test test test
 }

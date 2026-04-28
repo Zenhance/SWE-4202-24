@@ -15,8 +15,5 @@ public class Main {
         c.deposit(12300);
         c.withdraw(50.55);
         c.printStatement();
-
-        //test test test
-
     }
 }
