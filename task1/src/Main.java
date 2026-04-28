@@ -36,4 +36,4 @@ public class Main {
 //b2's name=bob and b2's balance is 0;
 //b3's name=Labiba and b3's balance is 0;
 //d)
-//
+//bob's one will be updated.
