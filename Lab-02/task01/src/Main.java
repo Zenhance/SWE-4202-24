@@ -23,5 +23,17 @@ public class Main {
         BankAccount arnob = new BankAccount("arnob");
         BankAccount moin = new BankAccount("moin");
         BankAccount sakep = new BankAccount("sakep");
+
+        arnob.deposit(500);
+        arnob.withdraw(100);
+        arnob.printStatement();
+
+        moin.withdraw(9000);
+        moin.printStatement();
+
+        sakep.deposit(-10);
+        sakep.printStatement();
     }
+
+
 }
