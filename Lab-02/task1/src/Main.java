@@ -32,6 +32,9 @@ public class Main
         Rakib.withdraw(2000);
         Alice.withdraw(1000);
         Bob.withdraw(500);
+        Rakib.printStatement();
+        Alice.printStatement();
+        Bob.printStatement();
 
     }
 }
