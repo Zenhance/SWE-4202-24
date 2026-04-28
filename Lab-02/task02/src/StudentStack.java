@@ -24,7 +24,13 @@ public class StudentStack {
         count--;
     }
 
-
+    public void peek() {
+        if (count == 0) {
+            System.out.println("Stack is empty");
+            return;
+        }
+        System.out.println(this.name[count-1] + " " + this.marks[count-1]);
+    }
 
 
 }

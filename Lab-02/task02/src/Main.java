@@ -5,10 +5,12 @@ public class Main {
 
         StudentStack list = new StudentStack();
 
+        // Testing push method
         list.push("Arnob", 99);
         list.push("Moin", 89);
         list.push("Sakep", 90);
 
+        // Testing pop method
         list.pop();
         list.pop();
         list.pop();
@@ -23,5 +25,7 @@ public class Main {
         // Testing error
         list.push("Arnob", 90);
 
+        // Testing peek method
+        list.peek();
     }
 }
