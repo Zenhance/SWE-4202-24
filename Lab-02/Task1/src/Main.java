@@ -45,7 +45,15 @@ public class Main {
 (a) BankAccount is a class and alice and bob is an object of the BankAccount class.
 (b) Only Alice's balance changes. because when we do alice.method, it knows that the
 method should only change the attributes of the alice object.
-(c)
+(c)alice:
+    name = "Alice"
+    balance = 0.00
+
+   bob:
+     name = "Bob:
+     balance = 0.00
+
+(d) it would update bob's balance. because alice now points to the object bob.
 
 
 
