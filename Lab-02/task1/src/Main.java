@@ -38,3 +38,26 @@ public class Main
 
     }
 }
+/*
+       a.
+          BankAccount is a class and alice and bob is an object of the BankAccount class.
+
+       b.
+          only changes Alice's balance because of when we will do alice.method, it knows that the
+          method should only change the attributes of the Alice object.
+
+       c.
+          alice:
+              name = "Alice"
+              balance = 0
+
+          bob:
+              name = "Bob:
+              balance = 0
+
+       d.
+             it would update bob's balance because of alice now the object bob.
+
+
+
+ */
