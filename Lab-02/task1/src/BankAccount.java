@@ -1,8 +1,7 @@
 public class BankAccount
 {
     private String name;
-    private int balance;
-    balance=0;
+    private int balance=0;
     public BankAccount(String name)
     {
         this.name=name;
@@ -21,6 +20,7 @@ public class BankAccount
         balance-=amount;
         if(balance<0) {
             System.out.println("Insufficient funds!");
+            balance+=amount;
         }
     }
     public void printStatement()
