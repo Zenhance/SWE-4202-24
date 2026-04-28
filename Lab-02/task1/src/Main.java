@@ -42,3 +42,22 @@ public class Main {
 
     }
 }
+/*
+Part C
+a. BankAccount is  class and alice and bob are objects of this class.
+
+b. Calling alice.deposit(500) will only update alice's balance.
+   By calling the alice.method,the program only change the attribute of alice object.
+
+c. alice:
+    name = "Alice"
+    balance = 0.0
+
+   bob:
+     name = "Bob:
+     balance = 0.0
+
+d. It will update bob's balance.
+   Because alice and bob points the same object which is object of bob.
+ */
+
