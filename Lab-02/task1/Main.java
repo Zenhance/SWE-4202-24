@@ -45,8 +45,14 @@ public class Main
   tasnova.printStatement();
 
   //BankAccount is a class and alice and bob are object
-  //when i call alice.deposit(500) Alice's balance changes,
-  // abc
+  //when i call alice.deposit(500) Alice's balance changes,as i have declared different object,that's ow it will understand which one to chamge.alice object is called,that's why only alice's information will change.
+  // Alice-  balance after deposit: 500.0
+  //         balance after withdrwal:0.0
+  //         Name: Alice Balance:0.0
+  //Bob-  balance after deposit: 500.0
+  //         balance after withdrwal:0.0
+  //         Name: Alice Balance:0.0
+  //then 100 will be deposited to bob as alice and bob inicate to same object now
   }
 
 
