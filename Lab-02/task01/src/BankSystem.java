@@ -64,7 +64,6 @@ public class BankSystem{
 * a.BankAccount is a class. alice and bob are objects;
 * b.only alice's balance changes.
 *
-*
-*
-* */
+* d. Bob's balance will remain unchanged. alice==bob only copies bob's attributes to alice's.
+*/
 
