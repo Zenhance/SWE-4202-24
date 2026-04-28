@@ -25,8 +25,7 @@ will keep track of daily changes until it hits the ceiling.
  */
 
 
-
-
+import java.sql.SQLOutput;
 
 class BankAccount {
     String name;
@@ -35,6 +34,29 @@ class BankAccount {
     BankAccount(String name){
         this.name = name;
         this.balance = 0.0f;
+    }
+    public deposit(){
+        int amount;
+        if (amount <= 0){
+            System.out.println("Error\n");
+        }
+        else{
+            balance = amount + balance;
+        }
+
+
+    }
+    public withdraw(){
+        int amount;
+        if (amount > balance){
+            System.out.println("Insufficient Balance\n");
+        }
+        else{
+            balance = balance - amount;
+        }
+    }
+    void printStatement(){
+        System.out.println("Name: " +name+ "Balance: " +balance+);
     }
 
 
