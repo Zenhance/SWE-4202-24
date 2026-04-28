@@ -6,4 +6,13 @@ public class BankAccount {
             this.owner = owner;
             this.balance = 0;
         }
+
+        double deposit(double amount){
+            balance+=amount;
+            return balance;
+        }
+
+    static void main(String[] args) {
+
+    }
 }
