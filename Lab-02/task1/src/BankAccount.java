@@ -17,4 +17,8 @@ public class BankAccount {
         System.out.println("Insufficient funds");
         return balance;}
     }
+    public void printstatement(){
+        System.out.println("Account Name" + name);
+        System.out.println("Balance" + balance);
+    }
 }
