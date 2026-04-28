@@ -16,7 +16,16 @@ public class Main {
          */
         Bankaccount b1=new Bankaccount("Bob",12345.00);
         Bankaccount b2=new Bankaccount("Sam",3459.22);
-        Bankaccount b3=new Bankaccount("Sydney",)
+        Bankaccount b3=new Bankaccount("Sydney",24411.39);
+        b1.printstatement();
+        b1.deposit(235.4);
+        b1.printstatement();
+        b2.printstatement();
+        b2.withdraw(300.5);
+        b2.printstatement();
+        b3.printstatement();
+        b3.deposit(22222);
+        b3.printstatement();
         }
     }
 
