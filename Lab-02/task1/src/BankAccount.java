@@ -24,15 +24,32 @@
 //        3. Keep logic encapsulted and reuse later
 
 public class BankAccount {
-        private String OwnerName;
+        private String ownerName;
         private double balance;
-        public BankAccount(String OwnerName){
-                this.OwnerName = OwnerName;
-                this.balance = 0;
+public BankAccount(String ownerName){
+        this.ownerName = ownerName;
+        this.balance = 0;
+}
+public void deposit(double amount){
+        if(amount <= 0){
+                System.out.println("Amount should be greater than 0");
         }
-        public void deposite(double amount){
-                if (amount < 0){
-                        System.out.println("Amount cant be neg");
-                }
+        else {
+                this.balance = this.balance + amount;
         }
 }
+public void withdraw(double amount){
+        if(amount > this.balance){
+                System.out.println("Insufficient funds");
+        }
+        else {
+                this.balance = this.balance - amount;
+        }
+}
+public void printStatement(){
+        System.out.println("The Account holder name is : " + this.ownerName);
+        System.out.println("Current Balance : " + this.balance);
+}
+
+}
+
