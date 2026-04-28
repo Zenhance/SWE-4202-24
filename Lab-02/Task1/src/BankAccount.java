@@ -12,11 +12,24 @@
 
 
 public class BankAccount {
-    String owners_name;
-    double account_balance;
- public BankAccount(String owners_name,double account_balance){
+    private String owners_name;
+   private double account_balance;
+ public BankAccount(String owners_name){
      this.owners_name=owners_name;
      this.account_balance=0.0;
  }
- void display()
+
+ public void deposit(double amount){
+     if(amount <=0){
+         System.out.println("The amount is error!");
+     }
+     else {
+         account_balance +=amount;
+     }
+ }
+ public void printStatement(){
+     System.out.println(this.owners_name);
+     System.out.println(this.account_balance);
+ }
+
 }
