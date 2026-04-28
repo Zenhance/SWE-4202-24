@@ -38,6 +38,8 @@ public class Main {
         queue.dequeue();
         queue.dequeue();
 
+        // Implementing display method
+        queue.display();
 
     }
 }
