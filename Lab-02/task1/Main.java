@@ -52,7 +52,7 @@ public class Main
   //Bob-  balance after deposit: 500.0
   //         balance after withdrwal:0.0
   //         Name: Alice Balance:0.0
-  //then 100 will be deposited to bob as alice and bob inicate to same object now
+  //then 100 will be deposited to bob as alice and bob indicate to same object now
   }
 
 
