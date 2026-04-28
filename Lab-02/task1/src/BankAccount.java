@@ -27,4 +27,10 @@ public class BankAccount {
             BankAccount.balance = balance - amount;
         }
     }
+
+    // printStatement() function created
+    public void printStatement() {
+        System.out.println("Account owner name: " + BankAccount.name);
+        System.out.println("Current balance: " + BankAccount.balance);
+    }
 }
