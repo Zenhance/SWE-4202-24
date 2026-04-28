@@ -1,0 +1,50 @@
+echo "# swe202" >> README.md        # --- lagbena
+git init                            # --- [initialize] git starts doing smth, creates .git
+git add README.md                   # --- add = "start tracking"
+git add .                           # --- git will now "add"/"track" everything
+git commit -m "first commit"        # --- commit = "capture changes"
+git branch -M main                  # --- branch 
+git remote add origin https://github.com/ayiham-1012/swe202.git     # --- git doesn't know github
+git push -u origin main             # --- git push 1st time
+git push                            # --- git push later on    push = "upload"
+git clone                           # --- 1st time pull.
+git pull                            # --- pull = "download the update"
+
+
+
+
+
+# per PC 1 time
+git config --global user.email <email>
+git config --global user.name ayiham-1012
+git config --global core.editor "code --wait"
+
+
+
+
+# okay
+git clone -b 57-Lamiya https://github.com/Zenhance/SWE-4202-24 swe24
+git switch 25-Nipun
+
+
+
+git init
+git add .
+git commit
+git branch -M main
+git remote add origin https://github.com/ayiham-1012/swe202.git
+git push -u origin main
+
+
+
+# From next on forward
+git add .
+git commit
+git push
+
+
+
+# Nice ones
+git log
+git clone
+git pull

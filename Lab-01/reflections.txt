@@ -1,0 +1,43 @@
+Task1 - Reflection
+
+a.  There are 4 paremeters of removeAt. 
+    It doesn't feel natural, 
+    like "why am I even doing so many tasks just to modify a list? 
+    Isn't programming supposed to make my work easier? 
+    I'm working more here!!!"
+    Third field = one more parameter in the function = another array = more pain! >:(
+
+b.  I wrote two seperate shift operations in removeAt:
+    strcpy(names[i], names[i+1]);   SHIFT 1    
+    marks[i] = marks[i+1];          SHIFT 2
+    Had to deal with shifting twice because the names and marks are stored seperately,
+    in two different arrays, can't deal with them together :(
+
+c.  If a collegue accidentally passed the wrong array to update, 
+    the code COULD NOT detect it, inside the function update(), the code cannot detect it.
+    We never wrote anything to detect any "accident" :')
+    So if we pass the wrong array...
+    the "count" paramter might still be a number, maybe 10
+    but it would be accessing a random memory, which has nothing to do with marks or names,
+    Trying to change it might crash our program, because all memories can't be touched 
+
+
+
+
+
+Task2 - Reflection
+
+a.  The arrays "names" and "marks" are gone now,
+    substituted "list"
+    because, "names" and "marks" are now inside "list"
+    and FINALLY they are working together, unlike task1 :D
+
+b.  Unfortunately, yes... someone could still call "update" with a wrong array
+    and the code stil can't prevent it :/
+
+c.  Yes, "main" can write 'list[0].mark = -999' directly without any function
+    WHICH was supposed to be done only using "update"
+    This is a pretty big problem, 
+    because we can accidently change the mark in "main" without realising :/
+    To prevent this, we must use something that does not allow this
+    outside "update".... which is CLASS
