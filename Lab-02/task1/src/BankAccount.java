@@ -11,6 +11,8 @@
 *
 * c.in this implementation, we have to keep track which customer is which element of the array. if we have to edit any details(owner names,balance), we then have to find that
 *   element and change, which is annoying. moreover, anyone, intentionally or not, can change any values of the array and cause problems.
-* d.for a transaction limit, I'd put in bank account class.If I put it in main(), it won't track transaction of each user separately. but in my way, each user's transaction will be tracked separately.  */
+*
+* d.for a transaction limit, I'd put in bank account class.If I put it in main(), it won't track transaction of each user separately.
+*   but in my way, each user's transaction will be tracked separately.  */
 public class BankAccount {
 }
