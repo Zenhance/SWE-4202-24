@@ -21,7 +21,5 @@ limit to each customer would be unique to them and not affect other people's tra
  */
 public class Main {
     public static void main(String[] args) {
-
-        System.out.println("Code is working");
     }
 }
