@@ -4,4 +4,5 @@
 //balance -> double
 
 //(b)depositMoney, withdrawMoney and checkBalance.
-//for depositMoney need to know the deposit amount
+//depositMoney needs to know the deposit amount and it produces the new balance
+//
