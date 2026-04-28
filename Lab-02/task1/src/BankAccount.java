@@ -26,3 +26,8 @@ public float withdraw(double amount)
   return balance;
  }
 }
+public void printStatement()
+{
+ System.out.println("Owner's Name: "+ ownername);
+ System.out.println("Current Balance: "+ balance);
+}
