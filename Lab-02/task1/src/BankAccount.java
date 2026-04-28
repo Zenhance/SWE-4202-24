@@ -28,6 +28,9 @@ will keep track of daily changes until it hits the ceiling.
 
 
 
-public class BankAccount {
+class BankAccount {
+    String name;
+    float balance;
+
 
 }
