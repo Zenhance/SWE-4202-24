@@ -9,4 +9,12 @@ public class BankAccount {
         balance = balance + amount;
         return balance;
     }
+    public float withdraw(float amount){
+        if (amount<=balance){
+            balance = balance - amount;
+            return balance;}
+        else {
+        System.out.println("Insufficient funds");
+        return balance;}
+    }
 }
