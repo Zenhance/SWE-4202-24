@@ -30,13 +30,51 @@ class BankAccount {
         this.balance=0;
     }
 
-    public void deposit(double balance){
-        if(balance<=0)
+    public void deposit(double amount){
+        if(amount<=0) {
             System.out.println("Invalid balance");
+        }
+        else {
+            balance += amount;
+        }
     }
 
-    public void withdraw(double balance){
-        if(balance<=0)
+    public void withdraw(double amount){
+        if(amount>balance) {
             System.out.println("Not enough");
+        }
+        else {
+            balance -= amount;
+        }
+    }
+
+    public void printStatement(){
+        System.out.println(name);
+        System.out.println(balance);
+    }
+}
+
+public class Main(){
+    public static void main(String[] args){
+        BankAccount b1=new BankAccount();
+        b1.name;
+        b1.balance;
+        b1.deposit();
+        b1.withdraw();
+        b1.printStatement();
+
+        BankAccount b2=new BankAccount();
+        b2.name;
+        b2.balance;
+        b2.deposit();
+        b2.withdraw();
+        b2.printStatement();
+
+        BankAccount b3=new BankAccount();
+        b3.name;
+        b3.balance;
+        b3.deposit();
+        b3.withdraw();
+        b3.printStatement();
     }
 }
