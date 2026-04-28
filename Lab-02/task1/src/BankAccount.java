@@ -25,4 +25,20 @@ public BankAccount(String owners_name,double balance){
     this.owners_name="Sameer";
     this.balance=0.0;
 }
+public void deposit(double amount){
+if(amount<=0){
+    System.out.println("Invalid transaction");
+}
+balance+=amount;
+}
+public void withdraw(double amount){
+    if(amount>balance){
+        System.out.println("Insufficient funds");
+    }
+    balance-=amount;
+}
+public void printstatement(){
+    System.out.println("Owner:"+owners_name+"Balance:"+balance);
+}
+
 }
