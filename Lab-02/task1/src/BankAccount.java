@@ -23,6 +23,11 @@ public class BankAccount {
             }
         }
 
+        void printStatement(String owner,double balance){
+            System.out.println("Owner's Name: "+owner);
+            System.out.println("Current Balance: "+balance);
+        }
+
 
     static void main(String[] args) {
 
