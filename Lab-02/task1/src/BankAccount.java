@@ -3,4 +3,12 @@ public class BankAccount {
 
     private String name;
     private double balance;
+
+    // constructor created
+    BankAccount(String name){
+        this.name = name;
+        this.balance = 0;
+    }
+
+
 }
