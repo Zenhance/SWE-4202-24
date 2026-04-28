@@ -16,5 +16,9 @@ public class Main {
 
     public static void main(String[] args) {
 
+        BankAccount n1 = new BankAccount("n1");
+        BankAccount n2 = new BankAccount("n2");
+        BankAccount n3 = new BankAccount("n3");
+
     }
 }
