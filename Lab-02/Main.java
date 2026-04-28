@@ -30,7 +30,15 @@ public class Main {
         n3.deposit(-500);
         n3.printBalance();
 
-        
+        // Checking the provided problem statement.
+
+        n1 = n3;
+
+        n3.printBalance();
+
+        n3.withdraw(140);
+
+        n3.printBalance();
 
     }
 }
