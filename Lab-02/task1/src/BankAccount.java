@@ -19,10 +19,10 @@
 
 
 public class BankAccount {
-String owners_name;
-double balance;
-public BankAccount(String owners_name,double balance){
-    this.owners_name="Sameer";
+private String owners_name;
+private double balance;
+public BankAccount(String owners_name){
+    this.owners_name=owners_name;
     this.balance=0.0;
 }
 public void deposit(double amount){
@@ -38,7 +38,21 @@ public void withdraw(double amount){
     balance-=amount;
 }
 public void printstatement(){
-    System.out.println("Owner:"+owners_name+"Balance:"+balance);
+    System.out.println("Owner:"+owners_name+"-Balance:"+balance);
+}
+
+    static void main(String[] args) {
+BankAccount a= new BankAccount("Harry");
+BankAccount b=new BankAccount("Ron");
+BankAccount c=new BankAccount("Harmaini");
+a.deposit(1400);
+a.withdraw(650);
+b.deposit(960);
+b.withdraw(156);
+c.withdraw(520);
+a.printstatement();
+b.printstatement();
+c.printstatement();
 }
 
 }
