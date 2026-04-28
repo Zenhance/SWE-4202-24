@@ -9,4 +9,10 @@
 //gives error if the withdraw amount is more than the balance
 //checkBalance just returns the account balance
 
-//(c)
+//(c)The moment I need to handle 200 customers, it would be very difficult to manage all of their
+//balance or add new customers of remove existing customer if I use just two different arrays to
+//store the name and the balance.
+
+
+//(d) I would add the transaction limit in the BankAccount class. So that the transaction
+//limit to each customer would be unique to them and not affect other people's transaction limits
