@@ -43,7 +43,9 @@ public class Main {
 }
 /*
 (a) BankAccount is a class and alice and bob is an object of the BankAccount class.
-(b) Alice's balance changes. 
+(b) Only Alice's balance changes. because when we do alice.method, it knows that the
+method should only change the attributes of the alice object.
+(c)
 
 
 
