@@ -12,7 +12,7 @@ public class Main {
          C.Storing all account balances in one big array in the main with a seperate array of
            owner names will cause problems because editing these informations will be difficult and inputting the
            balances in each index of the array will also be painful.
-         D.
+         D.To limit the transactions we need to add that in the class as an individual method.
          */
         Bankaccount b1=new Bankaccount("Bob",12345.00);
         Bankaccount b2=new Bankaccount("Sam",3459.22);
