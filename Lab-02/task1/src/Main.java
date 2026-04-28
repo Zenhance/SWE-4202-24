@@ -24,5 +24,9 @@ public class Main {
 
     public static void main(String[] args) {
 
+            BankAccount Raiyan=new BankAccount("Raiyan");
+            BankAccount Sadman=new BankAccount("Sadman");
+            BankAccount Fuad=new BankAccount("Fuad");
+
     }
 }
