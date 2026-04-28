@@ -25,4 +25,8 @@ public class BankAccount {
         }
     }
 
+    public void printBalance() {
+        System.out.println("Balance: " + balance);
+    }
+
 }
