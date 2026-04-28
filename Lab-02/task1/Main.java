@@ -22,7 +22,7 @@ this.name=name;
   System.out.println("balance after withdrawal:  "+balance);
  }
  void printStatement(){
-  System.out.println("Name: "+name+ " Balanace: "+balance);
+  System.out.println("Name: "+name+ " Balance: "+balance);
  }
 }
 
@@ -45,7 +45,7 @@ public class Main
   tasnova.printStatement();
 
   //BankAccount is a class and alice and bob are object
-  //when i call alice.deposit(500) Alice's balance changes
+  //when i call alice.deposit(500) Alice's balance changes,
   //
   }
 
