@@ -24,9 +24,15 @@ public class Main {
         BankAccount Bob = new BankAccount("Bob");
         BankAccount Mugdho = new BankAccount("Mugdho");
         BankAccount Alice = new BankAccount("Alice");
+
         Bob.deposit(20000);
         Mugdho.deposit(50000);
         Alice.deposit(1900);
+
+        Bob.withdraw(18000);
+        Mugdho.withdraw(41000);
+        Alice.withdraw(1820);
+
     }
 
 }
