@@ -28,5 +28,12 @@ public class Main {
             BankAccount Sadman=new BankAccount("Sadman");
             BankAccount Fuad=new BankAccount("Fuad");
 
+            Raiyan.deposit(10000);
+            Sadman.deposit(50000);
+            Fuad.deposit(30000);
+
+            Raiyan.withdraw(1000);
+            Sadman.withdraw(2000);
+            Fuad.withdraw(5000);
     }
 }
