@@ -1,3 +1,5 @@
+import java.sql.SQLOutput;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 class BankAccount
@@ -8,7 +10,12 @@ class BankAccount
     {
         balance = 0;
     }
-
+    public void deposit(double amount)
+    {
+        if(amount<=0)
+        {
+            System.out.println("Error!");
+        }
 }
 public class Main
 {
