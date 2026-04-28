@@ -1,3 +1,5 @@
-public class BankAccount {
- private String name;
+public class BankAccount
+{
+ private String ownername;
+ private double balance;
 }

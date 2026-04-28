@@ -17,6 +17,14 @@
                    both manually and keep indexes, one mistake
                    the wrong name to the wrong balance.
 
-
-
  */
+
+public class Main
+{
+    static void main(String[] args)
+    {
+        BankAccount Rakib = new BankAccount(" Rakib ");
+        BankAccount Alice = new BankAccount(" Alice ");
+        BankAccount Bob = new BankAccount(" Bob ");
+    }
+}
