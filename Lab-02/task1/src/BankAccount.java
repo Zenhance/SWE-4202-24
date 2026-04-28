@@ -15,4 +15,16 @@ public class BankAccount {
         if(amount<0) System.out.println("Cannot deposit negative amount");
         BankAccount.balance = balance+amount;
     }
+
+    // withdraw() function created
+    public void withdraw(int amount) {
+        if(amount<0) System.out.println("Cannot ");
+        if(BankAccount.balance<amount) {
+            System.out.println("Insufficient funds");
+        }
+
+        else {
+            BankAccount.balance = balance - amount;
+        }
+    }
 }
