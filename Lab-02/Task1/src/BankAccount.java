@@ -12,5 +12,11 @@
 
 
 public class BankAccount {
-
+    String owners_name;
+    double account_balance;
+ public BankAccount(String owners_name,double account_balance){
+     this.owners_name=owners_name;
+     this.account_balance=0.0;
+ }
+ void display()
 }
