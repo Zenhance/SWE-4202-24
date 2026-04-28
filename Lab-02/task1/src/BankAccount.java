@@ -18,10 +18,10 @@
 //        1. Data inconsistency
 //        2. Hard to manage
 //        3. Dificult to extend
-Question d ==>  i should add it inside the BankAccount class
-        1. Easier to maitian code
-        2. Avoid duplication in code
-        3. Keep logic encapsulted and reuse later
+//Question d ==>  i should add it inside the BankAccount class
+//        1. Easier to maitian code
+//        2. Avoid duplication in code
+//        3. Keep logic encapsulted and reuse later
 
 public class BankAccount {
 }
