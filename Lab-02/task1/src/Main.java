@@ -21,5 +21,8 @@ limit to each customer would be unique to them and not affect other people's tra
  */
 public class Main {
     public static void main(String[] args) {
+        BankAccount Bob = new BankAccount("Bob");
+        BankAccount Mugdho = new BankAccount("Mugdho");
+        BankAccount Alice = new BankAccount("Alice");
     }
 }
