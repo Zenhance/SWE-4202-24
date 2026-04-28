@@ -3,22 +3,33 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Main runs");
 
-        StudentStack list = new StudentStack();
+        // For Stack
+        StudentStack stack = new StudentStack();
 
         // Implementing push() method
         for (int i = 1; i <= 5; i++){
-            list.push("Student"+i, i+50);
+            stack.push("Student"+i, i+50);
         }
 
         // Implementing peek() method
-        list.peek();
+        stack.peek();
 
         // Implementing pop() method
-        list.pop();
-        list.pop();
-        list.pop();
+        stack.pop();
+        stack.pop();
+        stack.pop();
 
         // Implementing display() method
-        list.display();
+        stack.display();
+
+        // For Queue
+        StudentQueue queue = new StudentQueue();
+
+        // Implementing enqueue method
+        for (int i = 1; i <= 5; i++){
+            queue.enqueue("Student"+i, i+50);
+        }
+
+
     }
 }
