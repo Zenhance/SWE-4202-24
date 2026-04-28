@@ -31,7 +31,6 @@ public class Main {
         n3.printBalance();
 
         // Checking the provided problem statement.
-
         n1 = n3;
 
         n3.printBalance();
@@ -42,3 +41,25 @@ public class Main {
 
     }
 }
+
+/*
+a) Bank account - class
+   Alice and bob - objects
+
+b) It updates alice's balance and not bob's balance
+ because we are calling the deposit method on alice's object through 
+ alice.<method> .
+Therefore, it can update alice's balance but not bob's balance.
+
+c) Alice: 
+        name : "Alice"
+        balance : 1000
+    Bob:
+        name : "Bob"
+        balance : 0
+
+d) It would update bob's balance . Bob's balance would be incremented
+by 100 because bob's pointer value has been copied into alice.
+
+
+ */
