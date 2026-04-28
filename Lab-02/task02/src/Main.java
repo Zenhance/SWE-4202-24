@@ -30,9 +30,13 @@ public class Main {
             queue.enqueue("Student"+i, i+50);
         }
 
+        // Implementing front method
+        queue.front();
+
         // Implementing dequeue method
         queue.dequeue();
         queue.dequeue();
         queue.dequeue();
+
     }
 }

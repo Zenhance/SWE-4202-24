@@ -26,4 +26,8 @@ public class StudentQueue {
         count--;
     }
 
+    public void front(){
+        System.out.println(this.name[0] + " " + this.marks[0]);
+    }
+
 }
