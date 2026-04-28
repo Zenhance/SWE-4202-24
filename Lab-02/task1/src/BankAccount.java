@@ -1,6 +1,6 @@
 /*information to store
   1.String owner name
-  2.float account balance
+  2.double account balance
  */
 
 /*actions perform
@@ -21,5 +21,22 @@ Handling 200 customers and their information using array will make it hard to fi
 
 /* I will add the transaction limit in the main.
  */
-public class BankAccount {
+class BankAccount {
+    private String name;
+    private double balance;
+
+    public BankAccount(String name){
+        this.name=name;
+        this.balance=0;
+    }
+
+    public void deposit(double balance){
+        if(balance<=0)
+            System.out.println("Invalid balance");
+    }
+
+    public void withdraw(double balance){
+        if(balance<=0)
+            System.out.println("Not enough");
+    }
 }
