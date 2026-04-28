@@ -7,10 +7,19 @@ public class BankAccount{
          this.balance=balance;
     }
     void deposit(double amount){
-        balance += amount;
         if(amount<=0){
             System.out.println("Error");
+        }else {
+            balance += amount;
         }
+
+    }
+    void withdraw(double amount){
+        if(amount>balance){
+            System.out.println("Insufficient");
+        }else{
+        balance -= amount;
+
     }
 
 
