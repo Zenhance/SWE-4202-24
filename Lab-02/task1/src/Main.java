@@ -35,5 +35,10 @@ public class Main {
             Raiyan.withdraw(1000);
             Sadman.withdraw(2000);
             Fuad.withdraw(5000);
+
+            Raiyan.printStatement();
+            Sadman.printStatement();
+            Fuad.printStatement();
+
     }
 }
