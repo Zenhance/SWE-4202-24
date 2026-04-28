@@ -7,8 +7,8 @@
 //c.it will take a lot of time to store 200 accounts in one big array.it will create hassle and may cause overflow.it will be better to create a class for accounts.
 //d.if i want to add a transaction limit per day then i will create a function named int transactionLimit() to account class but i will call it in the main function after every transaction
 class BankAccount{
-  String name;
-  double balance=0;
+  public String name;
+  public double balance=0;
  BankAccount(String name){
 this.name=name;
  }
@@ -44,6 +44,8 @@ public class Main
   tasnova.withdraw(500);
   tasnova.printStatement();
 
+  //BankAccount is a class and alice and bob are object
+  //when i call alice.deposit(500) Alice's balance changes
   //
   }
 
