@@ -33,7 +33,41 @@ public class Main {
 
         sakep.deposit(-10);
         sakep.printStatement();
+
+        // checking alice = bob problem
+
+        sakep = arnob;
+
+        sakep.printStatement();
+
+        sakep.withdraw(100);
+
+        sakep.printStatement();
     }
-
-
 }
+/*
+    a. BankAccount is written once in your source file. alice and bob are two separate
+    things created from it. What is the word for what BankAccount is, and what is the
+    word for what alice and bob are?
+    Ans:BankAccount is Class, Alice and bob are objects.
+
+    b. When you call alice.deposit(500), which balance changes — Alice’s, Bob’s, or
+    both? How does the program know which one to update?
+    Ans: It updates alice's balance. Because we are accessing the object alice through "alice.<method>". Therefore,
+    it can only update alice's balance.
+
+    c. Draw a simple box diagram (in ASCII or words) showing what is in memory after
+    both lines above have run. Each box should show the field names and their values.
+    Ans: alice:
+                name : "Alice"
+                balance: 0
+
+         bob:
+                name : "Bob"
+                balance : 0
+    d. If you wrote alice = bob; and then called alice.deposit(100), what would hap-
+    pen to Bob’s balance? Predict the result and explain why.
+    Ans: it would update bob's balance. Bob's balance will be incremented by 100.
+         Because bob's pointer has been copied  into alice.
+
+ */
