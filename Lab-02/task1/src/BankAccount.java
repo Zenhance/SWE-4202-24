@@ -54,5 +54,15 @@ a.printstatement();
 b.printstatement();
 c.printstatement();
 }
-
 }
+//a)
+//Bank account-Class
+//Alice abd bob -Object
+//b)
+//When we call alice.deposit(500) only alice's balance changes
+//The program knows this because the method is called using the object name (alice),
+//d)
+//if we write alice=bob then alice and bob  both refer to same object .
+//Then calling alice.deposit(500) will increase bob balance as well.
+//because both variables points to the same location
+
