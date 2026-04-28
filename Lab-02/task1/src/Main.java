@@ -36,7 +36,5 @@ public class Main {
         Bob.printstatement();
         Mugdho.printstatement();
         Alice.printstatement();
-
     }
-
 }
