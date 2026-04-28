@@ -26,6 +26,18 @@ public class Main {
         BankAccount Rubayet = new BankAccount("Rubayet");
         BankAccount Samin = new BankAccount("Samin");
 
+        Fuad.deposit(10000);
+        Rubayet.deposit(20000);
+        Samin.deposit(113);
+
+        Fuad.withdraw(325);
+        Rubayet.withdraw(124);
+        Samin.withdraw(113);
+
+        Fuad.printStatement();
+        Rubayet.printStatement();
+        Samin.printStatement();
+
     }
 }
 
