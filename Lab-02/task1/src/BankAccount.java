@@ -24,4 +24,15 @@
 //        3. Keep logic encapsulted and reuse later
 
 public class BankAccount {
+        private String OwnerName;
+        private double balance;
+        public BankAccount(String OwnerName){
+                this.OwnerName = OwnerName;
+                this.balance = 0;
+        }
+        public void deposite(double amount){
+                if (amount < 0){
+                        System.out.println("Amount cant be neg");
+                }
+        }
 }
