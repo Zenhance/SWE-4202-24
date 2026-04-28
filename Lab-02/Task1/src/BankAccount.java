@@ -35,8 +35,8 @@ public class BankAccount {
      }
  }
  public void printStatement(){
-     System.out.println(this.owners_name);
-     System.out.println(this.account_balance);
+     System.out.println("Account Holder name:"+this.owners_name);
+     System.out.println("Account Balance:"+this.account_balance);
  }
 
 }
