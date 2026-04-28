@@ -27,5 +27,8 @@ public class Main {
 
         // Testing peek method
         list.peek();
+
+        // Testing display method
+        list.display();
     }
 }

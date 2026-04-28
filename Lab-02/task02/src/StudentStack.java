@@ -32,5 +32,9 @@ public class StudentStack {
         System.out.println(this.name[count-1] + " " + this.marks[count-1]);
     }
 
-
+    public void display (){
+        for (int i = 0; i < count; i++){
+            System.out.println(this.name[i] + " " + this.marks[i]);
+        }
+    }
 }
