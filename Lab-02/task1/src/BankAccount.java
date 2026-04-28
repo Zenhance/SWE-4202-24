@@ -5,5 +5,8 @@ public class BankAccount {
     public BankAccount(String accountName){
         this.name = accountName;
     }
-
+    public float deposit(float amount){
+        balance = balance + amount;
+        return balance;
+    }
 }
