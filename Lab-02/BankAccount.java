@@ -7,4 +7,13 @@ public class BankAccount {
         this.name = name;
     }
 
+    public void deposit(int amount){
+        if(amount > 0){
+            System.out.println("Invalid operation.");
+        }
+        else{
+            balance += amount;
+        }
+    }
+
 }
