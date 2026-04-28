@@ -31,7 +31,7 @@ public class Main {
         Samin.deposit(113);
 
         Fuad.withdraw(325);
-        
+
         Rubayet.withdraw(124);
         Samin.withdraw(113);
 
@@ -41,4 +41,11 @@ public class Main {
 
     }
 }
+/*
+(a) BankAccount is a class and alice and bob is an object of the BankAccount class.
+(b) Alice's balance changes. 
 
+
+
+
+ */
