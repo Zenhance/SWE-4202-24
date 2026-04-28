@@ -3,7 +3,8 @@ public class BankAccount {
     private String name;
     private int balance;
 
-    public BankAccount(String name) {
+
+    BankAccount(String name) {
         this.balance = 0;
         this.name = name;
     }
@@ -12,6 +13,10 @@ public class BankAccount {
         if (amount <= 0) {
             System.out.println("Error!!");
         }
+        else {
+            balance += amount;
+        }
     }
 
 }
+
