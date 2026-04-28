@@ -30,7 +30,11 @@ will keep track of daily changes until it hits the ceiling.
 
 class BankAccount {
     String name;
-    float balance;
+    float balance = 0.0f;
+
+    BankAccount(String name){
+        this.name = name;
+    }
 
 
 }
