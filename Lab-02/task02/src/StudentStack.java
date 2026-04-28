@@ -19,8 +19,6 @@ public class StudentStack {
             return;
         }
         System.out.println(this.name[count-1] + " " + this.marks[count-1]);
-        this.name[count-1] = null;
-        this.marks[count-1] = 0;
         count--;
     }
 
