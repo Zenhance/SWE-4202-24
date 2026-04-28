@@ -20,7 +20,6 @@ public class Main {
         rather create another BankBalance class. Because by doing
         this every customer can have their unique transaction limit,
         and it will not affect other customer's account.
-
      */
 
     public static void main(String[] args) {
