@@ -20,5 +20,9 @@ public class Main {
         BankAccount n2 = new BankAccount("n2");
         BankAccount n3 = new BankAccount("n3");
 
+        n1.deposit(1000);
+        n1.withdraw(500);
+        n1.printBalance();
+
     }
 }
