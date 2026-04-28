@@ -19,5 +19,10 @@
 
 
 public class BankAccount {
-
+String owners_name;
+double balance;
+public BankAccount(String owners_name,double balance){
+    this.owners_name="Sameer";
+    this.balance=0.0;
+}
 }
