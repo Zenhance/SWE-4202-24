@@ -30,6 +30,9 @@ public class Main {
             queue.enqueue("Student"+i, i+50);
         }
 
-
+        // Implementing dequeue method
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
     }
 }
