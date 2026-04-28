@@ -5,5 +5,6 @@ public class Bankaccount {
          this.name=name;
          this.balance=balance;
      }
+
 }
 
