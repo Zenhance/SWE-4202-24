@@ -10,11 +10,11 @@ c) 200 customers - difficult to manage account with all the steps of updating ba
 d) Adding the transaction limit in the BankAccount class so that 
 each user can have unique set of account records 
 and the transaction limit only affects the set user.
-*/
-
+ */
 
 public class Main {
+
     public static void main(String[] args) {
-        BankAccount account = new BankAccount();
+
     }
 }
