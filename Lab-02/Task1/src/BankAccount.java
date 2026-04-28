@@ -1,6 +1,6 @@
-public class BankAccount {
+public class BankAccount{
     private String name;
-    private float balance;
+    private float balance = 0.00f;
 
     public float deposit(float amount){
         balance += amount;

@@ -17,10 +17,13 @@
 //(d) I would add the transaction limit in the BankAccount class. So that the transaction
 //limit to each customer would be unique to them and not affect other people's transaction limits
 
+
+
 public class Main {
 
     static void main(String[] args) {
-
+        BankAccount Fuad = new BankAccount();
+        
     }
 }
 
