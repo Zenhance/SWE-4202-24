@@ -10,4 +10,17 @@
 // c. If we use array in the main then we need to use 200 different arrays.
 // d. We will do it in a different class which will check the amount and returns a flag value.
 
+public class BankAccount {
+    private String Name;
+    private float balance;
 
+    public BankAccount(String Name) {
+        this.Name=Name;
+        this.balance=0;
+    }
+
+
+    public setToZero (String Name) {
+
+    }
+}
