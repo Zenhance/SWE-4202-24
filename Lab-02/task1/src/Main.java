@@ -1,6 +1,7 @@
 public class Main {
-    //a.the owner variable is a String and balance double type.
-    /*b.Customer can
+    //a.the ownerName variable is a String and balance is double type.
+
+    /*b.Customers can
     Deposit:
         input:balance
         output:balance increase
@@ -11,7 +12,10 @@ public class Main {
         input:none
         output:balance
 
-      c.
+      c.When I handle 200 customers in just 2 different arrays,
+         it can be very hard to maintain all the data and can face
+         difficulties to update or add or remove a customer.
+
      */
 
     public static void main(String[] args) {
