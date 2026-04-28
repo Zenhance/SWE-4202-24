@@ -10,5 +10,9 @@ public class BankAccount {
         this.balance = 0;
     }
 
-
+    //  function deposit() created
+    public void deposit(int amount) {
+        if(amount<0) System.out.println("Cannot deposit negative amount");
+        BankAccount.balance = balance+amount;
+    }
 }
