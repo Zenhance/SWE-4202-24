@@ -1,9 +1,13 @@
 public class BankAccount{
     String name;
-    double balance;
+    double balance=0;
 
-   public BankAccount{
+    BankAccount(String name,double balance){
+         this.name=name;
+         this.balance=balance;
+    }
+    
 
-   }
+
 
 }
