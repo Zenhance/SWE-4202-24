@@ -1,7 +1,7 @@
 
 /*
-a.informations may be-account name(string),current balance(int),account number(int),
-deposited money,withdrawn money(int) etc.
+a.informations may be-account name(string),current balance(float),account number(int),
+deposited money,withdrawn money(float) etc.
 
 b. deposit money, withdraw money and check their balance.
 for deposited money it will take input the amount of money user wants to deposit,and will change the balance (add to it)
@@ -14,8 +14,7 @@ d.at the start of the main,there a variable will track of the transaction and ch
 */
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
+
         System.out.println("Hello and welcome!");
 
 
