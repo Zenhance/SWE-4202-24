@@ -1,8 +1,8 @@
 public class BankAccount {
     // variable created for owner's name and balance
 
-    private String name;
-    private double balance;
+    private static String name;
+    private static double balance;
 
     // constructor created
     BankAccount(String name){
@@ -33,4 +33,5 @@ public class BankAccount {
         System.out.println("Account owner name: " + BankAccount.name);
         System.out.println("Current balance: " + BankAccount.balance);
     }
+
 }
