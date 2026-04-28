@@ -16,11 +16,11 @@
 //                        input: None
 //                        output: current balance
 
-Question (c)==> The problems would be,
-                1. Data inconsistency
-                2. Hard to manage.
-                3. It is costly
-                4. Difficult to extend
+//Question (c)==> The problems would be,
+//                1. Data inconsistency
+//                2. Hard to manage.
+//                3. It is costly
+//                4. Difficult to extend
 
 public class BankAccount {
 
