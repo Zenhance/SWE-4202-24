@@ -14,7 +14,10 @@
 //            *input None;
 //            *output current balance;
 
-Question c ==>
+Question c ==>  the problems will be
+        1. Data inconsistency
+        2. Hard to manage
+        3. Dificult to extend
 
 public class BankAccount {
 }
