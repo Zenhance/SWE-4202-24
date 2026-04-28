@@ -8,6 +8,20 @@ d)for a new function transaction limit per day, I would add to BankAccount class
  */
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        BankAccount Inan=new BankAccount("Inan");
+        BankAccount Jaki=new BankAccount("Jaki");
+        BankAccount Sajid=new BankAccount("Sajid");
+
+        Inan.deposit(100);
+        Jaki.deposit(200);
+        Sajid.deposit(50);
+
+        Inan.withdraw(200);
+        Jaki.withdraw(30);
+        Sajid.withdraw(50);
+
+        Inan.printStatement();
+        Jaki.printStatement();
+        Sajid.printStatement();
     }
 }
