@@ -2,7 +2,7 @@ public class BankAccount {
         private String owner;
         private double balance;
 
-        BankAccount(String owner,double balance){
+        BankAccount(String owner){
             this.owner = owner;
             this.balance = 0;
         }
@@ -23,7 +23,7 @@ public class BankAccount {
             }
         }
 
-        void printStatement(String owner,double balance){
+        void printStatement(){
             System.out.println("Owner's Name: "+owner);
             System.out.println("Current Balance: "+balance);
         }
