@@ -22,6 +22,11 @@
 //                3. It is costly
 //                4. Difficult to extend
 
+//Question (d)==> I would add it inside the BankAccount class. Not inside main
+//                because ,
+//                1. The limit is a property of each account.
+//                2. Easier to maintain
+//                3. Avoids the reuse of code
 public class BankAccount {
 
 
