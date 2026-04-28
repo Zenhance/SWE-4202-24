@@ -12,7 +12,7 @@ public class Main {
          C.Storing all account balances in one big array in the main with a seperate array of
            owner names will cause problems because editing these informations will be difficult and inputting the
            balances in each index of the array will also be painful.
-
+         D.
          */
         }
     }
