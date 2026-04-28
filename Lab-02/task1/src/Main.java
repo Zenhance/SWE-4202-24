@@ -17,14 +17,36 @@ public class Main {
         c.printStatement();
     }
 }
+
 /*
+Part C
+
 a. BankAccount is CLASS
    Alice and Bob are OBJECTS or INSTANCES of the class BankAccount
 
 b. When we call alice.deposit(500), only Alice's balance changes. The program understands because
    we have instantiated Alice differently from Bob
 
+c.
+    BankAccount alice
+----------------------------
+    String name = "Alice"
+    double balance = 0.0
+
+    BankAccount bob
+----------------------------
+    String name = "Bob"
+    double balance = 0.0
+
+after alice.deposit(500)
+
+    BankAccount alice
+----------------------------
+    String name = "Alice"
+    double balance = 500.0
+
 
 d. Bob’s balance will remain unchanged, because we are putting Bob's attributes to Alice's
    not vice versa. So his balance is still 0
+
  */

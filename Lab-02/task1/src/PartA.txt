@@ -1,5 +1,7 @@
 /*
 
+Part A
+
 a. Every account needs to store 2 info:
    1. name (String type)
    2. balance (double type) //using double is a personal choice
@@ -21,4 +23,5 @@ c. If we listen to the colleague, we will lose track of 200 customers
 
 d. We will put the limit inside CLASS so that it's applicable
    for all the accounts that exist and the accounts being created in future
+
 */
