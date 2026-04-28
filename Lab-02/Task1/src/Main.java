@@ -1,7 +1,7 @@
 //(a) Every account should store two info. The name of the account owner
 //and the current balance of the account.
 //name -> String
-//balance -> double
+//balance -> float
 
 //(b)depositMoney, withdrawMoney and checkBalance.
 //depositMoney needs to know the deposit amount and it produces the new balance
@@ -16,3 +16,6 @@
 
 //(d) I would add the transaction limit in the BankAccount class. So that the transaction
 //limit to each customer would be unique to them and not affect other people's transaction limits
+
+
+
