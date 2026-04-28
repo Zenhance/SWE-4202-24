@@ -23,6 +23,8 @@ public class Main {
 
     static void main(String[] args) {
         BankAccount Fuad = new BankAccount("Fuad");
+        BankAccount Rubayet = new BankAccount("Rubayet");
+        BankAccount Samin = new BankAccount("Samin");
 
     }
 }
