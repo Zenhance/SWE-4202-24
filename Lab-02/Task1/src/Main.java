@@ -14,6 +14,9 @@ public class Main {
            balances in each index of the array will also be painful.
          D.
          */
+        Bankaccount b1=new Bankaccount("Bob",12345.00);
+        Bankaccount b2=new Bankaccount("Sam",3459.22);
+        Bankaccount b3=new Bankaccount("Sydney",)
         }
     }
 
