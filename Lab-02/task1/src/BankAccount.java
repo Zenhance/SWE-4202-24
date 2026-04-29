@@ -17,6 +17,11 @@ b. Three actions a customer can perform.
 c. If all account balances are stored in a big array, then we need to carefully match the index for each customers, making it harder to manage.
 d. If the bank later wants to add a transaction limit per day, then I would add that inside the BankAccount class, not inside 'main'. Because the code would be more cleaner and easier to manage if I write code in this way.
 */
+
+//------------------------------------------------------------------------------------------------------------------------------------------
+
+// Answer of part-B:
+//-----------------
 public class BankAccount{
     private String owner_name;
     private double balance;
@@ -65,4 +70,7 @@ public class BankAccount{
         john.printStatement();
     }
 }
+/*
+//
+ */
 
