@@ -20,10 +20,19 @@ When you create an object of either class,
 it will have its own count variable that is independent
 
  */
-
 public class StudentStack {
 
     private String[] name = new String[50];
     private int[] marks = new int[50];
     private int cnt = 0;
+
+    // Adding Push
+    public void push(String name, int marks) {
+        if (cnt + 1 > 50) {
+            System.out.println("Full Stack");
+        }
+        this.name[cnt] = name;
+        this.marks[cnt] = marks;
+        cnt++;
+    }
 }
