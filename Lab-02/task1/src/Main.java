@@ -1,7 +1,7 @@
 
 /*
-a.informations may be-account name(string),current balance(float),account number(int),
-deposited money,withdrawn money(float) etc.
+a.informations may be-account name(string),current balance(double),account number(int),
+ etc.
 
 b. deposit money, withdraw money and check their balance.
 for deposited money it will take input the amount of money user wants to deposit,and will change the balance (add to it)
