@@ -33,7 +33,7 @@ public class StudentQueue {
     }
     public void display(){
         for(int i=0;i<count;i++) {
-            System.out.println("Name:"+names[i]+" "+"Marks:"+marks[i]");
+            System.out.println("Name:"+names[i]+" "+"Marks:"+marks[i]);
         }
     }
 
