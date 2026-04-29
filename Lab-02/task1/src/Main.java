@@ -21,7 +21,13 @@
 public class Main {
     public static void main(String[] args) {
 
-    System.out.println("The code runs.");
+        BankAccount musaddik = new BankAccount("Musaddik");
+        BankAccount mustakim = new BankAccount("Mustakim");
+
+        musaddik.deposit(10000000);
+        musaddik.withdraw(2000);
+
+
 
     }
 }
