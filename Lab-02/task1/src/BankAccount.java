@@ -31,60 +31,36 @@ public class BankAccount {
     private String name;
     private float balance;
 
-    public BankAccount(String name){
+    public BankAccount(String name) {
         this.name = name;
         this.balance = 0.0f;
     }
-    public void deposit(float amount){
-        if (amount <= 0){
+
+    public void deposit(float amount) {
+        if (amount <= 0) {
             System.out.println("Error\n");
-        }
-        else{
+        } else {
             balance = amount + balance;
         }
 
 
     }
-    public void withdraw(float amount){
-        if (amount > balance){
+
+    public void withdraw(float amount) {
+        if (amount > balance) {
             System.out.println("Insufficient Balance\n");
-        }
-        else{
+        } else {
             balance = balance - amount;
         }
     }
-    public void printStatement(){
+
+    public void printStatement() {
         System.out.println("Name: " + name);
         System.out.println("Balance: " + balance);
     }
-
-
-
-
-public static void main(String[] args) {
-    BankAccount Tasauf = new BankAccount("Tasauf");
-    BankAccount Abdullah = new BankAccount("Abdullah");
-    BankAccount Sifat = new BankAccount("Sifat");
-
-
-    Tasauf.deposit(1000);
-    Tasauf.withdraw(200);
-    Tasauf.withdraw(900);
-
-
-    Abdullah.deposit(1000);
-    Abdullah.withdraw(500);
-    Abdullah.withdraw(1);
-
-    Sifat.deposit(500);
-    Sifat.withdraw(200);
-    Sifat.withdraw(300);
-
-
-    Tasauf.printStatement();
-    Abdullah.printStatement();
-    Sifat.printStatement();
-
-
 }
-}
+
+
+
+
+
