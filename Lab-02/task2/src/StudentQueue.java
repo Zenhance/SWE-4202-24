@@ -15,8 +15,18 @@ public class StudentQueue {
         }
         names[count] = name;
         marks[count] = mark;
-        count+++;
+        count++;
     }
-
+    public void dequeue(){
+        if(count==0){
+            System.out.println("ERROR!! QUEUE IS EMPTY!!");
+            return;
+        }
+        for(int i=0;i<count-1;i++){
+            names[i] = names[i+1];
+            marks[i] = marks[i+1];
+        }
+        count--;
+    }
 
 }
