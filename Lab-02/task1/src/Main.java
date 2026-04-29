@@ -14,9 +14,12 @@ b.the three actions are-deposit money, withdraw money and check their balance.
 
 c.management difficulty
  managing information of 200 customers will become difficult,adding or modifying the whole structure will
- be difficult.
+ be difficult,messy,indexes and datas will be mixed up easily,etc.
 
-d.at the start of the main,there a variable will track of the transaction and check if it hits limit or not
+d.in the account class,not in main,there a variable will track of the transaction and check if it hits limit or not,
+the reason it should be kept in account class is that this transcation limit is related to each individual
+account.,keeping it in class will make it organized and easy to manage later,but keeping it main will be
+problematic and hard to maintain.
 */
 public class Main {
     public static void main(String[] args) {
