@@ -25,5 +25,46 @@ public class BankAcc {
      part A)
      d)
      I would add that in BankAcc class because part of the account balance should be handled by class
-*///
+*/
+    //Part B-
+    private String ON;
+    private double  Bal;
+
+
+public BankAcc(String ONN){
+    this.ON=ONN;
+    this.Bal=0;
+}
+public void depo(double am){
+    if(am<=0){
+        System.out.println("Invalid ");
+        return;
+    }else Bal+=am;
+}
+public void wd(double am) {
+    if (am > Bal) {
+   System.out.println("Insufficient funds");
+   return ;
+    }else Bal-=am;
+}
+public void printStatement(){
+    System.out.prinln("Name:" + ON +"Balance:" +Bal);
+}
+public static void main(String[] args){
+    BankAcc Alice= new BankAcc("Alice");
+    BankAcc Bob= new BankAcc("Bob");
+    BankAcc Charlie= new BankAcc("Charlie");
+    Alice.depo(382);
+    Bob.depo(834);
+    Charlie.depo(673);
+    Alice.wd(20.23);
+    Bob.wd(40.98);
+    Charlie.wd(55.9);
+    Alice.printStatement();
+    Bob.printStatement();
+    Charlie.printStatement();
+
+
+}
+
 }
