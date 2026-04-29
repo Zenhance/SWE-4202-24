@@ -8,5 +8,15 @@ public class StudentQueue {
         this.marks = mark;
         this.count = 0;
     }
+    public void enqueue(String name, int mark){
+        if(count==100) {
+            System.out.println("ERROR!!QUEUE IS FULL!!");
+            return;
+        }
+        names[count] = name;
+        marks[count] = mark;
+        count+++;
+    }
+
 
 }
