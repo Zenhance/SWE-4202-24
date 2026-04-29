@@ -31,5 +31,10 @@ public class BankAccount {
         return;
      }
 
+     void printStatement() {
+         System.out.println(name);
+         System.out.println(balance);
+     }
+
 
 }
