@@ -18,4 +18,18 @@ public class BankAccount {
         this.balance = 0;
     }
 
+
+    public deposit(double amount) {
+        this.balance = this.balance +  amount;
+    }
+
+
+    public withdraw(double amount) {
+        this.balance = this.balance -  amount;
+    }
+
+    public void printStatement() {
+        System.out.println("Owner's Name: " + this.name);
+        System.out.println("Current Balance: " + this.balance);
+    }
 }
