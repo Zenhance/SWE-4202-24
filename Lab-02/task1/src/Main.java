@@ -36,3 +36,17 @@ public class Main {
 
     }
 }
+
+/*
+* a) Bank Account is a class. Alice and Bob is object.
+*
+* b)Alice's balance changes. Because, we objects has own memory location. One object is not connected with other.
+* so when we chane mentioning alice, it changes alice's balance
+*
+* c)             Object: Alice       Object: Bob
+*
+*                Name: Alice         Name: Bob
+*                balance: 0          balance:0
+*
+* d) I think nothing will happen to Bob's balance.
+* */
