@@ -1,7 +1,7 @@
-public class Account {
+public class BankAccount {
     String name;
     double balance;
-    public Account(String name){
+    public BankAccount(String name){
         this.name=name;
         this.balance=0.0;
     }

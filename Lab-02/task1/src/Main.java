@@ -21,8 +21,8 @@
 public class Main {
     public static void main(String[] args) {
 
-        Account musaddik = new Account("Musaddik");
-        Account mustakim = new Account("Mustakim");
+        BankAccount musaddik = new BankAccount("Musaddik");
+        BankAccount mustakim = new BankAccount("Mustakim");
 
         musaddik.deposit(10000000);
         musaddik.withdraw(2000);
