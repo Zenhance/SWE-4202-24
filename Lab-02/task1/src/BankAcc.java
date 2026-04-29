@@ -27,12 +27,12 @@ public class BankAcc {
      I would add that in BankAcc class because part of the account balance should be handled by class
 */
     //Part B-
-    private String ON;
+    private String Ownname;
     private double  Bal;
 
 
 public BankAcc(String ONN){
-    this.ON=ONN;
+    this.Ownname=ONN;
     this.Bal=0;
 }
 public void deposit(double am){
@@ -46,7 +46,7 @@ public void wd(double am) {
     }else Bal-=am;
 }
 public void printStatement(){
-    System.out.println("Name:" + ON +"Balance:" +Bal);
+    System.out.println("Name:" + Ownname +"Balance:" +Bal);
 }
 public static void main(String[] args){
     BankAcc Alice= new BankAcc("Alice");
