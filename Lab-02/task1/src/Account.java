@@ -9,4 +9,11 @@ public class Account {
         System.out.println("The owner name " + name);
         System.out.println("The Balance is " + balance);
     }
+    public void deposit(double amount){
+        if(amount<=0){
+            System.out.println("error");
+        }else{
+            balance+=amount;
+        }
+    }
 }
