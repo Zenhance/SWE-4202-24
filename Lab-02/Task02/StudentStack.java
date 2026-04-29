@@ -35,4 +35,13 @@ public class StudentStack {
         this.marks[cnt] = marks;
         cnt++;
     }
+
+    // Adding Pop
+    public void pop() {
+        if (cnt - 1 < 0) {
+            System.out.println("Empty Stack");
+        }
+        System.out.println(this.name[cnt - 1] + " " + this.marks[cnt - 1]);
+        cnt--;
+    }
 }
