@@ -27,32 +27,57 @@
 //                1. The limit is a property of each account.
 //                2. Easier to maintain
 //                3. Avoids the reuse of code
+
+import java.io.InvalidClassException;
+
+// Part==> B
 public class BankAccount {
 
         String Name;
         double balance;
 
-        public BankAccount(String Name,double balance){
+        public BankAccount(String Name){
 
             this.Name=Name;
-            this.balance=balance;
+            this.balance=0.0;
         }
 
-        void printStatement() {
+        public void printStatement() {
             System.out.println("The owner's name " + Name);
             System.out.println("The Balance: " + balance);
-
-
         }
 
-    public static void main(String[] args){
-
-        BankAccount s1=new BankAccount("M", 1000);
-        s1.printStatement();
-
-
+        public void deposit(double amount){
+            if(amount<=0){
+                System.out.println("error");
+            }else{
+                balance+=amount;
+            }
+        }
+        public void withdraw(double amount)
+        {
+            balance-=amount;
+        }
 }
 
+// Part ==> C
 
+// Question - a,
+//        Bank account is the class.
+//        Alice and Bob are Objects.
 
-}
+// Question - b,
+//            only Alice's balance changes.
+//            The program knows because Each object is independent. when I use Alice's name
+//            the program looks at the specefic memory location where alice's data is stored.
+
+// Question - c,
+//                Object: Alice       Object: Bob
+//
+//                Name: "Alice"       Name: "Bob"
+//                balance: 0          balance:0
+
+//Question - d,
+//            The prediction would be that Bob's balance will increase by 100.
+//            Because (=) this is an assignment operator. when alice=Bob is written
+//            the data of Bob is assigned to alice.
