@@ -63,6 +63,8 @@ public class StudentStack {
         roster.push("David", 80);
         roster.push("Evan", 75);
 
+        roster.display();
+
         roster.peek();
 
         roster.pop();
