@@ -1,3 +1,11 @@
+/*
+a)if queue holds 50 students, first deque will shift 49 students,
+  second 48, then 47 and so on. so, if we deque 45 times,
+  it will be like (49+48+47+...) 45 times.
+b)if we used public array, queue could easily be broken illegally,
+  count could be changed etc.
+  Which is why hiding the array makes it possible.
+ */
 public class StudentQueue {
     private String[] names;
     private int[] marks;
