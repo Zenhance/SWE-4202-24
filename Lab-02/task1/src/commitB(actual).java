@@ -5,11 +5,11 @@ private String customername;
 
     public BankAccount (String customername)
     {
-this.ownername= ownername;
+this.customername= customername;
       this.balance=0;
     }
 
-    public void deposit (doubole amount)
+    public void deposit (double amount)
     { if (amount<=0)
     {
       System.out.println("Invalid deposited amount");
