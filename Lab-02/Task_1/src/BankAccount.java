@@ -28,8 +28,6 @@
 //                2. Easier to maintain
 //                3. Avoids the reuse of code
 
-
-
 // Part==> B
 public class BankAccount {
 
