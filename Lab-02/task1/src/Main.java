@@ -1,15 +1,17 @@
 
-/*
-a.informations may be-account name(string),current balance(double),account number(int),
- etc.
+/* Part A-
+a.informations could be-account name(string),current balance(double),account number(int)
+
 
 b.the three actions are-deposit money, withdraw money and check their balance.
  1.for deposited money it will take
    input-the amount of money user wants to deposit,
    & output- will change the balance (add /increase balance)
- 2.for withdraw it will take input-the amount of money user wants to withdraw,
+ 2.for withdraw it will take
+   input-the amount of money user wants to withdraw,
    & output-will change the balance (deduct from it/decrease balance)
- 3.for checking the balance will take certain input-such as name and account password
+ 3.for checking the balance will take certain
+   input-such as name and account password
    & output-the current balance of the user
 
 c.management difficulty
@@ -18,9 +20,11 @@ c.management difficulty
 
 d.in the account class,not in main,there a variable will track of the transaction and check if it hits limit or not,
 the reason it should be kept in account class is that this transcation limit is related to each individual
-account.,keeping it in class will make it organized and easy to manage later,but keeping it main will be
+account,keeping it in account class will make it organized and easy to manage later,but keeping it main will be
 problematic and hard to maintain.
 */
+
+
 public class Main {
     public static void main(String[] args) {
 
@@ -50,7 +54,8 @@ public class Main {
 }
 
 
-/*
+/* Part C-
+
 a.Here BankAccount is called class(blueprint) and alice and bob are called objects,
 these are instances from the blueprint.
 
@@ -71,14 +76,4 @@ c.alice:
  now refer to the same object.When alice=bob,both variables point to the same memory location,
  so any change through alice will also affect bob.
 
-
-
-
-
-
-
-
-
-
-
- */
+*/
