@@ -24,7 +24,11 @@ public class StudentStack {
 
    }
    public void peek(){
-       System.out.println(this.name[0]+" "+this.mark[0]);
+       System.out.println(this.name[count-1]+" "+this.mark[count-1]);
    }
-
+   public void display(){
+        for (int i=0;i<count;i++){
+           System.out.println(this.name[i]+" "+this.mark[i]);
+       }
+   }
 }
