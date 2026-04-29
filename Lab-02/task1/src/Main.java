@@ -30,7 +30,19 @@ public class Main {
         BankAccount Hasan=new BankAccount("Hasan");
         BankAccount Riju=new BankAccount("Riju");
 
+        Jamil.deposit(400);
+        Jamil.withdraw(300);
 
+        Hasan.deposit(5000);
+        Hasan.withdraw(6000);
+        Hasan.deposit(700)
+
+        Riju.deposit(600);
+        Riju.withdraw(300);
+        Riju.deposit(6500);
+
+
+        Jamil.printStatement();
 
     }
 }
