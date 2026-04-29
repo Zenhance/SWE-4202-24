@@ -21,12 +21,17 @@
 public class Main {
     public static void main(String[] args) {
 
-        BankAccount musaddik = new BankAccount("Musaddik");
-        BankAccount mustakim = new BankAccount("Mustakim");
+        Account musaddik = new Account("Musaddik");
+        Account mustakim = new Account("Mustakim");
 
         musaddik.deposit(10000000);
         musaddik.withdraw(2000);
 
+        mustakim.deposit(202943);
+        mustakim.withdraw(3424);
+
+        musaddik.printStatement();
+        mustakim.printStatement();
 
 
     }
