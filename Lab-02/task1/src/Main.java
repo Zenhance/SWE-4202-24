@@ -3,12 +3,18 @@
 a.informations may be-account name(string),current balance(double),account number(int),
  etc.
 
-b. deposit money, withdraw money and check their balance.
-for deposited money it will take input the amount of money user wants to deposit,and will change the balance (add to it)
-for withdraw it will take input the amount of money user wants to withdraw,and will change the balance (deduct from it)
-check the balance will take certain input such as name and account password and check the balance of user
+b.the three actions are-deposit money, withdraw money and check their balance.
+ 1.for deposited money it will take
+   input-the amount of money user wants to deposit,
+   & output- will change the balance (add /increase balance)
+ 2.for withdraw it will take input-the amount of money user wants to withdraw,
+   & output-will change the balance (deduct from it/decrease balance)
+ 3.for checking the balance will take certain input-such as name and account password
+   & output-the current balance of the user
 
-c.overflow,management difficulty
+c.management difficulty
+ managing information of 200 customers will become difficult,adding or modifying the whole structure will
+ be difficult.
 
 d.at the start of the main,there a variable will track of the transaction and check if it hits limit or not
 */
