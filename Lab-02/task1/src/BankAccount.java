@@ -31,12 +31,11 @@ public class BankAccount {
     private String name;
     private float balance;
 
-    BankAccount(String name){
+    public BankAccount(String name){
         this.name = name;
         this.balance = 0.0f;
     }
-    public void deposit(balance){
-        int amount;
+    public void deposit(float amount){
         if (amount <= 0){
             System.out.println("Error\n");
         }
@@ -46,8 +45,7 @@ public class BankAccount {
 
 
     }
-    public void withdraw(balance){
-        int amount;
+    public void withdraw(float amount){
         if (amount > balance){
             System.out.println("Insufficient Balance\n");
         }
@@ -56,7 +54,8 @@ public class BankAccount {
         }
     }
     public void printStatement(){
-        System.out.println("Name: " + name "Balance: " + balance);
+        System.out.println("Name: " + name);
+        System.out.println("Balance: " + balance);
     }
 
 
@@ -74,7 +73,7 @@ public static void main(String[] args){
 
 
     Abdullah.deposit(1000);
-    Abdullah.withdraw(500)
+    Abdullah.withdraw(500);
             Abdullah.withdraw(1);
 
     Sifat.deposit(500);
