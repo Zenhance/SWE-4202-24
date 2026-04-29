@@ -1,9 +1,9 @@
 /*
- * a.Every account needs a account holder name and balance.
- *  String name, long long balance.
- * b.Deposit- Input: Amount ; Updates balance;
- *  Withdraw-    Input: Amount ; Updates balance;
- *  Check balance-   Input: Account name; Displays account balance;
+ * a.Every account needs an account holder name and balance.
+ *  String name, double balance.
+ * b.Deposit-Input: Amount ; Updates balance;
+ *  Withdraw-Input: Amount ; Updates balance;
+ *  Check balance-Input: Account name; Displays account balance;
  * c.
  *
  * d. Added in Withdraw method;
@@ -11,14 +11,14 @@
 
 class BankAccount{
     private String ownerName;
-    private long balance;
+    private double balance;
 
     public BankAccount(String name) {
         ownerName = name;
         balance = 0;
     }
 
-    public void deposit(long amount){
+    public void deposit(double amount){
         if(amount<=0){
             System.out.println("Invalid amount.");
             return;
@@ -26,7 +26,7 @@ class BankAccount{
         balance+=amount;
     }
 
-    public void withdraw(long amount){
+    public void withdraw(double amount){
         if(amount>balance){
             System.out.println("Insufficient balance.");
             return;
@@ -53,17 +53,23 @@ public class BankSystem{
         alice.printStatement();
 
         bob.deposit(0);
-        bob.deposit(9000);
+        bob.deposit(90.5);
         bob.printStatement();
         bob.withdraw(2000);
         bob.printStatement();
+
+        charlie.printStatement();
+        charlie.withdraw(20.1);
+        charlie.deposit(3000);
+        charlie.printStatement();
     }
 }
 
 /*
 * a.BankAccount is a class. alice and bob are objects;
-* b.only alice's balance changes.
-*
-* d. Bob's balance will remain unchanged. alice==bob only copies bob's attributes to alice's.
+* b.only Alice's balance changes. The program knows this because the method deposit is called by reference "alice".
+* c.
+* d. Bob's balance will change. bob and alice now both refer to the same memory location so changing one by reference
+*    will change the other as well;
 */
 
