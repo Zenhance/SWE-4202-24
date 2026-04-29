@@ -25,56 +25,47 @@ class BankAccount {
     private String name;
     private double balance;
 
-    public BankAccount(String name){
-        this.name=name;
-        this.balance=0;
+    public BankAccount(String name) {
+        this.name = name;
+        this.balance = 0;
     }
 
-    public void deposit(double amount){
-        if(amount<=0) {
+    public void deposit(double amount) {
+        if (amount <= 0) {
             System.out.println("Invalid balance");
-        }
-        else {
+        } else {
             balance += amount;
         }
     }
 
-    public void withdraw(double amount){
-        if(amount>balance) {
+    public void withdraw(double amount) {
+        if (amount > balance) {
             System.out.println("Not enough");
-        }
-        else {
+        } else {
             balance -= amount;
         }
     }
 
-    public void printStatement(){
+    public void printStatement() {
         System.out.println(name);
         System.out.println(balance);
     }
-}
 
-public class Main(){
-    public static void main(String[] args){
-        BankAccount b1=new BankAccount();
-        b1.name;
-        b1.balance;
-        b1.deposit();
-        b1.withdraw();
-        b1.printStatement();
+        public static void main(String[] args) {
+            BankAccount b1 = new BankAccount("Alice");
+            b1.deposit(7150);
+            b1.withdraw(715);
+            b1.printStatement();
 
-        BankAccount b2=new BankAccount();
-        b2.name;
-        b2.balance;
-        b2.deposit();
-        b2.withdraw();
-        b2.printStatement();
+            BankAccount b2 = new BankAccount("Bob");
+            b2.deposit(8000);
+            b2.withdraw(768);
+            b2.printStatement();
 
-        BankAccount b3=new BankAccount();
-        b3.name;
-        b3.balance;
-        b3.deposit();
-        b3.withdraw();
-        b3.printStatement();
+            BankAccount b3 = new BankAccount("Yami");
+            b3.deposit(7654);
+            b3.withdraw(987);
+            b3.printStatement();
+        }
     }
-}
+
