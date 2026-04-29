@@ -44,4 +44,12 @@ public class StudentStack {
         System.out.println(this.name[cnt - 1] + " " + this.marks[cnt - 1]);
         cnt--;
     }
+
+    // Adding peek
+    public void peek() {
+        if (cnt == 0) {
+            System.out.println("Empty Stack");
+        }
+        System.out.println(this.name[cnt - 1] + " " + this.marks[cnt - 1]);
+    }
 }
