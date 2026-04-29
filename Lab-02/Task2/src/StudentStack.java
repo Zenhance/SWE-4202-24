@@ -13,7 +13,7 @@ public class StudentStack {
         count++;
     }
    public void pop(){
-        if (count==0){
+        if (count-1<0){
             System.out.println("Stack is empty");
             return;
 
@@ -26,4 +26,5 @@ public class StudentStack {
    public void peek(){
        System.out.println(this.name[0]+" "+this.mark[0]);
    }
+
 }
