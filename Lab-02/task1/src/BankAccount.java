@@ -25,7 +25,7 @@ will keep track of daily changes until it hits the ceiling.
  */
 
 
-import java.sql.SQLOutput;
+
 
 public class BankAccount {
     private String name;
@@ -59,9 +59,9 @@ public class BankAccount {
     }
 
 
-}
 
-public static void main(String[] args){
+
+public static void main(String[] args) {
     BankAccount Tasauf = new BankAccount("Tasauf");
     BankAccount Abdullah = new BankAccount("Abdullah");
     BankAccount Sifat = new BankAccount("Sifat");
@@ -74,7 +74,7 @@ public static void main(String[] args){
 
     Abdullah.deposit(1000);
     Abdullah.withdraw(500);
-            Abdullah.withdraw(1);
+    Abdullah.withdraw(1);
 
     Sifat.deposit(500);
     Sifat.withdraw(200);
@@ -86,7 +86,5 @@ public static void main(String[] args){
     Sifat.printStatement();
 
 
-
-
-
+}
 }
