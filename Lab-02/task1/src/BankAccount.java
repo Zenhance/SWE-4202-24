@@ -15,5 +15,21 @@ public class BankAccount {
         this.balance=0;
     }
 
+     int deposit(amount) {
+        balance+=amount;
+        if(amount<=0) {
+            System.out.println("Error");
+        }
+        return;
+     }
+
+     int withdraw(amount) {
+        balance-=amount;
+        if(amount<=0) {
+            System.out.println("Insufficient funds");
+        }
+        return;
+     }
+
 
 }
