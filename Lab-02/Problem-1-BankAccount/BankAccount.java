@@ -9,7 +9,7 @@
  * d. Added in Withdraw method;
  * */
 
-class BankAccount{
+public class BankAccount{
     private String ownerName;
     private double balance;
 
@@ -41,7 +41,6 @@ class BankAccount{
 
 }
 
-public class BankSystem{
     public static void main(String[] args){
         BankAccount alice = new BankAccount("Alice");
         BankAccount bob = new BankAccount("Bob");
@@ -62,14 +61,13 @@ public class BankSystem{
         charlie.withdraw(20.1);
         charlie.deposit(3000);
         charlie.printStatement();
-    }
 }
 
 /*
-* a.BankAccount is a class. alice and bob are objects;
-* b.only Alice's balance changes. The program knows this because the method deposit is called by reference "alice".
-* c.
-* d. Bob's balance will change. bob and alice now both refer to the same memory location so changing one by reference
-*    will change the other as well;
-*/
+ * a.BankAccount is a class. alice and bob are objects;
+ * b.only Alice's balance changes. The program knows this because the method deposit is called by reference "alice".
+ * c.
+ * d. Bob's balance will change. bob and alice now both refer to the same memory location so changing one by reference
+ *    will change the other as well;
+ */
 
