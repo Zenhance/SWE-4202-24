@@ -18,7 +18,12 @@ else {
 balance+=amount;
 }
 
-
+public void withdraw(double amount){
+        if(amount>balance) {
+            System.out.println("Error!Invalid amount to deposit");}
+        else {
+            balance-=amount;
+        }
 
 
 
