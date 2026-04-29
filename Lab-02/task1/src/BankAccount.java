@@ -1,12 +1,25 @@
-private class BankAccount {
+public class BankAccount {
 
-    private string name;
-    private balance;
+    private String name;
+    private double balance;
 
-    BankAccount(string name,float balance){
+    public BankAccount(string name) {
 
-        this.name=name;
-        this.balance=balance;
+        this.name = name;
+        this.balance = 0;
+
 
     }
+
+public void deposit(double amount){
+
+
+
+}
+
+
+
+
+
+
 }
