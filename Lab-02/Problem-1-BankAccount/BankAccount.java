@@ -9,7 +9,7 @@
  * d. Added in Withdraw method;
  * */
 
-public class BankAccount{
+public class BankAccount {
     private String ownerName;
     private double balance;
 
@@ -18,30 +18,28 @@ public class BankAccount{
         balance = 0;
     }
 
-    public void deposit(double amount){
-        if(amount<=0){
+    public void deposit(double amount) {
+        if (amount <= 0) {
             System.out.println("Invalid amount.");
             return;
         }
-        balance+=amount;
+        balance += amount;
     }
 
-    public void withdraw(double amount){
-        if(amount>balance){
+    public void withdraw(double amount) {
+        if (amount > balance) {
             System.out.println("Insufficient balance.");
             return;
         }
-        balance-=amount;
+        balance -= amount;
     }
 
-    public void printStatement(){
-        System.out.println("Owner's name: "+ownerName);
-        System.out.println("Balance: "+balance);
+    public void printStatement() {
+        System.out.println("Owner's name: " + ownerName);
+        System.out.println("Balance: " + balance);
     }
 
-}
-
-    public static void main(String[] args){
+    public static void main(String[] args) {
         BankAccount alice = new BankAccount("Alice");
         BankAccount bob = new BankAccount("Bob");
         BankAccount charlie = new BankAccount("Charlie");
@@ -61,6 +59,7 @@ public class BankAccount{
         charlie.withdraw(20.1);
         charlie.deposit(3000);
         charlie.printStatement();
+    }
 }
 
 /*
