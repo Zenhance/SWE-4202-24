@@ -64,10 +64,14 @@ and starts the balance at 0. In the part of the program we make two accounts: on
 and one for Bob(Sumi). We give their names to the constructor so that both of their accounts start with no money
 in them.Then we perform the following processes. Lastly, we show how much money is, in each
 account now.
+b.When I call alice.deposit(500),it'll change Alice's balance. Because it knows that the method
+should modify the attributes of Alice.
 c. alice:
 name:"Alice";
 balance: 0;
 bob:
 name:"Bob";
 balance: 0;
+d. If I wrote alice=bob and then called alice.deposit(100), bob's balance would increase as the
+alice would indicates to object of it.
 */
