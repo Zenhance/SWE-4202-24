@@ -3,8 +3,9 @@ public class Main{
         String[] names = new String[100];
         int[] marks = new int[100];
 
-        StudentStack stack = new StudentStack(names, marks);
+        System.out.println("For Stack method:");
 
+        StudentStack stack = new StudentStack(names, marks);
         stack.push("Alice",100);
         stack.push("Bob",90);
         stack.push("Jenny",80);
@@ -18,6 +19,16 @@ public class Main{
         stack.pop();
 
         stack.display();
+
+        System.out.println("For queue method:");
+
+        StudentQueue queue = new StudentQueue(names, marks);
+        queue.enqueue("Alice",100);
+        queue.enqueue("Bob",90);
+        queue.enqueue("Jenny",80);
+        queue.enqueue("Clinton",70);
+        queue.enqueue("Fred",85);
+
 
     }
 }
