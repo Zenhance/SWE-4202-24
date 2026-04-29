@@ -35,7 +35,7 @@ public class Main {
 
         Hasan.deposit(5000);
         Hasan.withdraw(6000);
-        Hasan.deposit(700)
+        Hasan.deposit(700);
 
         Riju.deposit(600);
         Riju.withdraw(300);
@@ -43,6 +43,8 @@ public class Main {
 
 
         Jamil.printStatement();
+        Hasan.printStatement();
+        Riju.printStatement();
 
     }
 }
