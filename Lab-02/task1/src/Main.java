@@ -12,6 +12,8 @@ public class Main {
         bob.withdraw(100);
         bob.printStatement();
 
-
+        raida.deposit(100000);
+        raida.withdraw(00);
+        raida.printStatement();
     }
 }
