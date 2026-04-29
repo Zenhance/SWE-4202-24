@@ -1,4 +1,7 @@
 /*Every account needs to store informations that are private. Example : String name etc
+The customer can deposit
+can withdraw3
+ */
 public class Main{
     public static void main(String[] args){
         BankAccount Alice =new BankAccount("Alice",500.0F);
