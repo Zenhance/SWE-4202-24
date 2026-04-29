@@ -3,7 +3,7 @@ public class Main{
         String[] names = new String[100];
         int[] marks = new int[100];
 
-        System.out.println("For Stack method:");
+        System.out.println("For Stack:");
 
         StudentStack stack = new StudentStack(names, marks);
         stack.push("Alice",100);
@@ -20,7 +20,7 @@ public class Main{
 
         stack.display();
 
-        System.out.println("For queue method:");
+        System.out.println("For Queue:");
 
         StudentQueue queue = new StudentQueue(names, marks);
         queue.enqueue("Alice",100);
@@ -29,6 +29,12 @@ public class Main{
         queue.enqueue("Clinton",70);
         queue.enqueue("Fred",85);
 
+        queue.front();
 
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
+
+        queue.display();
     }
 }
