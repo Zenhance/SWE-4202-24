@@ -7,5 +7,11 @@ public class Main {
         alice.deposit(500);
         alice.withdraw(5);
         alice.printStatement();
+
+        bob.deposit(100);
+        bob.withdraw(100);
+        bob.printStatement();
+
+
     }
 }
