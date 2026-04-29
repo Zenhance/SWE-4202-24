@@ -38,17 +38,15 @@ public BankAcc(String ONN){
 public void depo(double am){
     if(am<=0){
         System.out.println("Invalid ");
-        return;
     }else Bal+=am;
 }
 public void wd(double am) {
     if (am > Bal) {
    System.out.println("Insufficient funds");
-   return ;
     }else Bal-=am;
 }
 public void printStatement(){
-    System.out.prinln("Name:" + ON +"Balance:" +Bal);
+    System.out.println("Name:" + ON +"Balance:" +Bal);
 }
 public static void main(String[] args){
     BankAcc Alice= new BankAcc("Alice");
@@ -63,8 +61,9 @@ public static void main(String[] args){
     Alice.printStatement();
     Bob.printStatement();
     Charlie.printStatement();
-
-
 }
+
+//Part C
+
 
 }
