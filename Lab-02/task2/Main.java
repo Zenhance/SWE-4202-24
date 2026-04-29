@@ -13,8 +13,11 @@ public class Main{
         stack.push("E",80);
 
         stack.peek();
-
         stack.pop();
+    stack.pop();
+
+
+
 
 
     }
