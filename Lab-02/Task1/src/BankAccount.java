@@ -58,6 +58,33 @@ public class BankAccount {
         bob.printStatement();
         charlie.printStatement();
     }
+    /*
+Part C
+a.
+- BankAccount → Class
+- Alice, bob, charlie → Objects (instances)
+
+b.
+Only Alice’s balance changes.
+When calling alice.deposit(500), the method operates on the specific object referenced by "alice". Each object has its own separate data.
+
+c. Memory diagram:
+alice -> [ ownerName: "Alice", balance: 0 ]
+bob -> [ ownerName: "Bob",   balance: 0 ]
+
+After alice.deposit(500):
+
+alice -> [ ownerName: "Alice", balance: 500 ]
+bob -> [ ownerName: "Bob",   balance: 0 ]
+
+d.
+If we write: alice = bob; -> both variables refer to the same object.
+
+alice.deposit(100); -> Bob’s balance increases.
+
+Reason:
+Both alice and bob point to the same memory location -> changes through one reference affect the same object.
+*/
 }
 
 
