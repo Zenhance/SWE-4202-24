@@ -5,22 +5,23 @@ public class BankAccount {
     private double balance;
 
     // constructor created
-    BankAccount(String name){
+    public BankAccount(String name) {
         this.name = name;
         this.balance = 0;
     }
 
     //  function deposit() created
-    public void deposit(int amount) {
+    public void deposit(double amount) {
         if(amount<0) System.out.println("Cannot deposit negative amount");
         else balance = balance+amount;
     }
 
     // withdraw() function created
-    public void withdraw(int amount) {
+    public void withdraw(double amount) {
         if(amount<0) System.out.println("Cannot withdraw negative amount");
         else if(balance<amount) {
             System.out.println("Insufficient funds");
+            System.out.println("Balance: " + balance);
         }
         else {
             balance = balance - amount;

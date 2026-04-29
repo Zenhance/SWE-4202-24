@@ -1,9 +1,31 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
+
     public static void main(String[] args) {
 
-        BankAccount account1 = new BankAccount("Wasif");
+        BankAccount wasif = new BankAccount("Wasif");
+        BankAccount jafar = new BankAccount("Jafar");
 
+        wasif.deposit(1000.0);
+        wasif.printStatement();
+
+        wasif.withdraw(1500.0);
+        wasif.printStatement();
+
+        wasif.withdraw(500.0);
+        wasif.printStatement();
+
+        jafar.deposit(2000.0);
+        jafar.printStatement();
+
+        jafar.withdraw(1000.0);
+        jafar.printStatement();
+
+        jafar.withdraw(200.0);
+        jafar.printStatement();
+
+        wasif = jafar;
+
+        wasif.printStatement();
+        jafar.printStatement();
     }
 }
