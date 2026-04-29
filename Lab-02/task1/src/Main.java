@@ -48,3 +48,24 @@ public class Main {
 
     }
 }
+
+
+/*
+a.Here BankAccount is called class(blueprint) and alice and bob are called objects,
+these are instances from the blueprint.
+
+b.When I call alice.deposit(500),only the balance of Alice changes,
+the program knows which to update because each object has its own memory location,
+when alice.deposit(500) is called,it goes to alice object location and changes it.
+
+
+
+
+
+
+
+
+
+
+
+ */
