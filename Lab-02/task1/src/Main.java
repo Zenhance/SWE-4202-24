@@ -1,5 +1,5 @@
-/*Q1)needs to store customer name: string, their current balance : float, deposited amount : float,
-withdrawn amount : float
+/*Q1)needs to store customer name: string, their current balance : double, deposited amount : double,
+withdrawn amount : double
 Q2) A customer can deposit money, withdraw money, can check their current balance, final balance
 It needs to know(input):  deposited amount, withdrawn amount, current balance
 It produces : final balance
