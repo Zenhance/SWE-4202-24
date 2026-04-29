@@ -56,7 +56,19 @@ these are instances from the blueprint.
 
 b.When I call alice.deposit(500),only the balance of Alice changes,
 the program knows which to update because each object has its own memory location,
-when alice.deposit(500) is called,it goes to alice object location and changes it.
+when alice.deposit(500) or the method is called,the program uses the
+reference of alice and it finds alice object's location in memory and changes it.
+
+c.alice:
+     name:"Alice"
+     balance:0
+
+   bob:
+     name:"Bob"
+     balance:0
+
+ d.bob's balance will change and it will be incremented by 100 because alice and bob
+ now refer to the same object,so any change through alic will also affect bob.
 
 
 
