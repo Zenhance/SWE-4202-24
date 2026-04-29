@@ -1,8 +1,10 @@
-/*
-*
-*   */
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        // Now you can create the object inside this method
+        BankAccount alice = new BankAccount("Alice");
+
+        // Example usage
+        alice.deposit(500);
+        alice.printStatement();
     }
 }

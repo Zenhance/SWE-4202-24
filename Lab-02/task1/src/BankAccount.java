@@ -15,4 +15,23 @@
 * d.for a transaction limit, I'd put in bank account class.If I put it in main(), it won't track transaction of each user separately.
 *   but in my way, each user's transaction will be tracked separately.  */
 public class BankAccount {
+   private String name;
+    private double balance;
+    BankAccount(String name)
+    {
+        this.name=name;
+        this.balance=0.0;
+    }
+    public  void deposit(double amount)
+    {
+        if(amount<=0) System.out.println("Error");
+        else balance+=amount;
+    }
+    public void withdraw(double amount)
+    {
+        if(amount>balance) System.out.println("Error");
+        else balance-=amount;}
+    void  printStatement(){
+        System.out.println(name+balance);
+    }
 }
