@@ -26,7 +26,7 @@ public class BankAccount {
 
      int withdraw(amount) {
         balance-=amount;
-        if(amount<=0) {
+        if(amount<0) {
             System.out.println("Insufficient funds");
         }
         return;
