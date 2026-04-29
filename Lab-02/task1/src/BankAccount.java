@@ -40,6 +40,6 @@ public class BankAccount {
 }
 
 /*
-a. Here BankAccount is a class alice,bob,raida are objects of the class.
+a. Here BankAccount is a class and alice,bob,raida are objects of the class.
 
  */
