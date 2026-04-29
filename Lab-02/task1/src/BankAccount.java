@@ -22,7 +22,7 @@
             if somehow the account holder's name and account number mismatches than it would
             be hard for the coder to go through all the names and accounts number one by one in array.
 
-   d. Transaction limit should should be added inside the BankAccount class,
+   d. Transaction limit should be added inside the BankAccount class,
 because it is part of account behavior, not main.
     */
 
@@ -32,10 +32,11 @@ public class BankAccount {
     private double balance;
 
 
-    public BankAccount(String name){
+    public BankAccount(String name) {
         this.name = name;
-        ths.balance = 0.0;
+        this.balance = 0.0;
 
+    }
         public void deposit(double amount) {
             if(amount<= 0){
                 System.out.println("Invalud Amount");
