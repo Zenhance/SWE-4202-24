@@ -28,7 +28,7 @@
 //                2. Easier to maintain
 //                3. Avoids the reuse of code
 
-import java.io.InvalidClassException;
+
 
 // Part==> B
 public class BankAccount {
