@@ -42,55 +42,23 @@ public class BankAccount {
     }
 
     public void printStatement(){
-        System.out.println(ownerName + "Account Balance: " + balance);
+        System.out.println("Owner: " + ownerName + ", Account Balance: " + balance);
     }
-/**/
+    public static void main(String[] args){
+        BankAccount Alice = new BankAccount("Alice");
+        BankAccount bob = new BankAccount("Bob");
+        BankAccount charlie = new BankAccount("Charlie");
+        Alice.deposit(500);
+        Alice.deposit(200);
+        bob.deposit(1000);
+        bob.withdraw(1200);
+        charlie.deposit(300);
+        charlie.withdraw(100);
+        Alice.printStatement();
+        bob.printStatement();
+        charlie.printStatement();
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
