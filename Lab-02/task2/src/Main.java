@@ -4,6 +4,7 @@ public class Main{
         int[] marks = new int[100];
 
         System.out.println("For Stack:");
+
         StudentStack stack = new StudentStack(names, marks);
         stack.push("Alice",100);
         stack.push("Bob",90);
@@ -20,6 +21,7 @@ public class Main{
         stack.display();
 
         System.out.println("For Queue:");
+
         StudentQueue queue = new StudentQueue(names, marks);
         queue.enqueue("Alice",100);
         queue.enqueue("Bob",90);

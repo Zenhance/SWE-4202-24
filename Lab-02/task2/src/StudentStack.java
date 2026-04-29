@@ -40,3 +40,8 @@ public void display(){
         }
 }
 }
+/*
+Part C-Realization:
+a. Even if no shifting is done, we would still need to add an element to the stack with each push and remove from the stack with each pop. So, doing it for 50 students will slow down the speed in comparison to 5 doing it for students.
+b. Since the classes are different, any private field created inside them also differ despite referring to the same thing. This happens because each object when created, gets its own version of the field and own initialization and passed value.
+ */

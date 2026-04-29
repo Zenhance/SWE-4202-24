@@ -36,5 +36,8 @@ public class StudentQueue {
             System.out.println("Name:"+names[i]+" "+"Marks:"+marks[i]);
         }
     }
-
 }
+/*
+a.
+b. As the array and count are private, bringing any change to them from outside is not possible and hence each class uses them to enforce various methods using their own features while maintaining their same initial structure.
+ */
