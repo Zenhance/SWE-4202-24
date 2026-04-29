@@ -13,16 +13,15 @@ public class BankAccount {
     //  function deposit() created
     public void deposit(int amount) {
         if(amount<0) System.out.println("Cannot deposit negative amount");
-        balance = balance+amount;
+        else balance = balance+amount;
     }
 
     // withdraw() function created
     public void withdraw(int amount) {
-        if(amount<0) System.out.println("Cannot ");
-        if(balance<amount) {
+        if(amount<0) System.out.println("Cannot withdraw negative amount");
+        else if(balance<amount) {
             System.out.println("Insufficient funds");
         }
-
         else {
             balance = balance - amount;
         }
@@ -33,5 +32,4 @@ public class BankAccount {
         System.out.println("Account owner name: " + name);
         System.out.println("Current balance: " + balance);
     }
-
 }
