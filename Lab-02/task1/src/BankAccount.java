@@ -31,7 +31,7 @@ public class BankAccount {
     {
         if(amount>balance) System.out.println("Error");
         else balance-=amount;}
-    void  printStatement(){
-        System.out.println(name+balance);
+   public void  printStatement(){
+        System.out.println(name+" "+balance);
     }
 }
