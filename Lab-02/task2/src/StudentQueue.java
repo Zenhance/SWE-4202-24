@@ -38,6 +38,12 @@ public class StudentQueue {
     }
 }
 /*
-a.
-b. As the array and count are private, bringing any change to them from outside is not possible and hence each class uses them to enforce various methods using their own features while maintaining their same initial structure.
+a. With first shift, 49 elements will be dequeued, with 2nd shift it will be 48 and the 47 and so on upto 5 for 45 shifts.
+Then, Total shifts = 49+48+47+...+5
+                = 49+48+47+...+1-(4+3+2+1) ; ; since the last four shifts need to be removed, we remove (4+3+2+1)
+                = (n*(n+1)/2)-10
+                = (49*50/2)-10
+                = 1225-10
+                = 1215
+b. As the array and count are private, bringing any change to them from outside is not possible and hence each class uses them to enforce various methods using their own features while maintaining the field's initial structure.
  */
