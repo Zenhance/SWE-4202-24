@@ -58,3 +58,16 @@ public class BankAccount{
 
     }
 }
+/* part-c
+a.The Account constructor is what we use to et up each account. When we make an acount it uses the owners name
+and starts the balance at 0. In the part of the program we make two accounts: one for Alice(Kallol)
+and one for Bob(Sumi). We give their names to the constructor so that both of their accounts start with no money
+in them.Then we perform the following processes. Lastly, we show how much money is, in each
+account now.
+c. alice:
+name:"Alice";
+balance: 0;
+bob:
+name:"Bob";
+balance: 0;
+*/
