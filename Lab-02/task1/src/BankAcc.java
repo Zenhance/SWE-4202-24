@@ -20,11 +20,11 @@ public class BankAcc {
      input- their log in information
      output-their bank statement
       part A)
-     c)difficulties in matching owners name array with balance array
+     c)difficulties in matching owners name array  index with balance array index when there are too many customers
 
      part A)
      d)
-     I would add that in BankAcc class because part of the account balance should be handled by class
+     I would add that in BankAcc class because it is part of the account behaviour and should be handled by class
 */
     //Part B-
     private String Ownname;
