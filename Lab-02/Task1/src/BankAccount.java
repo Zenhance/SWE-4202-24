@@ -19,13 +19,12 @@ public class BankAccount {
     }
 
 
-    public deposit(double amount) {
-        this.balance = this.balance +  amount;
+    public void deposit(double amount) {
+        this.balance = this.balance + amount;
     }
 
-
-    public withdraw(double amount) {
-        this.balance = this.balance -  amount;
+    public void withdraw(double amount) {
+        this.balance = this.balance - amount;
     }
 
     public void printStatement() {
