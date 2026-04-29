@@ -16,8 +16,20 @@ public class Main{
         stack.pop();
     stack.pop();
     stack,display();
+        System.out.println("Student Queue: ");
+StudentQueue queue=new StudentQueue(names,marks);
+        queue.enqueue("A",80);
+        queue.enqueue("B",90);
+        queue.enqueue("C",80);
+        queue.enqueueh("D",90);
+        queue.enqueue("E",80);
 
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
 
+        queue.front();
+        queue.display();
 
 
 
