@@ -38,3 +38,8 @@ public class BankAccount {
          return;
      }
 }
+
+/*
+a. Here BankAccount is a class alice,bob,raida are objects of the class.
+
+ */
