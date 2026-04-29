@@ -12,6 +12,10 @@ public class Main{
         stack.push("D",90);
         stack.push("E",80);
 
+        stack.peek();
+
+        stack.pop();
+
 
     }
 }
