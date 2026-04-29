@@ -17,7 +17,8 @@ public class StudentStack {
             System.out.println("Stack is empty");
 
         }
-       System.out.println(this.name+" "+this.mark);
+       System.out.println(this.name[count-1]+" "+this.mark[count-1]);
+
 
    }
 }
