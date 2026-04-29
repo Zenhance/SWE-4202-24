@@ -1,3 +1,11 @@
+/*
+a)as push and pop dont shift elements,
+  speed will remain same for 50 students vs 5 students
+b)It will not interfere, as I have used both in my main function.
+  one object's count cannot interfere with another object's count.
+  because each object has its own separate fields in memory.
+ */
+
 public class StudentStack {
     private String[] names;
     private int[] marks;
