@@ -68,7 +68,8 @@ c.alice:
      balance:0
 
  d.bob's balance will change and it will be incremented by 100 because alice and bob
- now refer to the same object,so any change through alic will also affect bob.
+ now refer to the same object.When alice=bob,both variables point to the same memory location,
+ so any change through alice will also affect bob.
 
 
 
