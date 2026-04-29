@@ -24,4 +24,17 @@ public class StudentStack{
        count--;
         System.out.println("Name:"+names[count]+" Marks:"+marks[count]);
     }
+    public void peek(){
+        if(count==0){
+            System.out.println("Stack is empty");
+            return;
+        }
+        System.out.println("Name:"+names[count-1]+" Marks: "+marks[count-1]);
+    }
+    public void display(){
+        for(int i=0;i<count;i++){
+            System.out.println("Name:"+names[i]+" Marks:"+marks[i]);
+        }
+    }
+
 }
