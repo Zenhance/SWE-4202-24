@@ -1,4 +1,4 @@
-/*
+ /*
 a. owner name - String
     current balance - double
 b. 1. Deposit money - input:deposited amount; output:
@@ -8,15 +8,6 @@ c.
 */
 public class BankAccount {
     String name;
-    double balance=0;
-
-    BankAccount(String name,
-                double balance) {
-        this.name = name;
-        this.balance = balance;
-
-        void deposit() {
-
-        }
+    double balance;
     }
 }
