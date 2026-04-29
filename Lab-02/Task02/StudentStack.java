@@ -52,4 +52,11 @@ public class StudentStack {
         }
         System.out.println(this.name[cnt - 1] + " " + this.marks[cnt - 1]);
     }
+
+    // Adding Display
+    public void display() {
+        for (int i = 0; i < cnt; i++) {
+            System.out.println(this.name[i] + " " + this.marks[i]);
+        }
+    }
 }
