@@ -26,8 +26,10 @@ public class Main {
 
 
 
+        BankAccount Jamil=new BankAccount("Jamil");
+        BankAccount Hasan=new BankAccount("Hasan");
+        BankAccount Riju=new BankAccount("Riju");
 
-        System.out.println("Hello and welcome!");
 
 
     }
