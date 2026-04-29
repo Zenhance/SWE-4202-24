@@ -70,7 +70,22 @@ public class BankAccount{
         john.printStatement();
     }
 }
+
+//------------------------------------------------------------------------------------------------------------------------------------------
+
+// Answer of part-C:
+//-----------------
 /*
-//
+a. 'BankAccount' is a class.
+   'alice' and 'bob' are the objects from the class 'BankAccount'
+b. When I call alice.deposit(500), only Alice's balance changes. The program knows which one to update because 'alice' refers to Alice's object in the class 'BankAccount', and thus the method work on that object accordingly.
+c. A simple box diagram (in ASCII or words) showing what is in memory after both lines above have run:
+                    --------------------------------------------------
+   For 'alice' ---> |String owner_name = "Alice"; double balance = 0;|
+                    --------------------------------------------------
+                  -------------------------------------------------
+   For 'bob' ---> | String owner_name = "bob"; double balance = 0;|
+                  -------------------------------------------------
+d. If I wrote 'alice = bob'; and then called alice.deposit(100), then it would act same as bob.deposit(100). Because when I declare 'alice = bob', I am allowing to refer the object 'Bob' with both 'bob' and 'alice', and thus the total balance will increase by 100 when either bob.deposit(100) or alice.deposit(100) works.
  */
 
