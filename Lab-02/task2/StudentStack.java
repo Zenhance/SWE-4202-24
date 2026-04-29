@@ -4,6 +4,7 @@
     same whether the stack has 5 students or 50 students because only the top position
     is accessed.
 
+
     b)The count field belongs to each object separately because it is not static.
     One StudentStack or StudentQueue object cannot interfere with another object's
     count value.
