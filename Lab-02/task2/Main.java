@@ -15,6 +15,7 @@ public class Main{
         stack.peek();
         stack.pop();
     stack.pop();
+    stack,display();
 
 
 
