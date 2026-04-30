@@ -12,7 +12,6 @@ public class StudentStack{
     private int[] marks;
     private int count;
     private int cap = 10;
-
     public StudentStack() {
         names = new String[cap];
         marks = new int[cap];
