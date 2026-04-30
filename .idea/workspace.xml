@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="student stack fixing code">
-      <change afterPath="$PROJECT_DIR$/Lab-02/task2/src/Main.java" afterDir="false" />
+    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="part c answer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab-02/task2/src/StudentQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-02/task2/src/StudentQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab-02/task2/src/StudentStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-02/task2/src/StudentStack.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +65,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1777353233463</updated>
-      <workItem from="1777576671937" duration="5841000" />
+      <workItem from="1777576671937" duration="6891000" />
     </task>
     <task id="LOCAL-00001" summary="a change">
       <option name="closed" value="true" />
@@ -226,7 +227,23 @@
       <option name="project" value="LOCAL" />
       <updated>1777588900883</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="main file">
+      <option name="closed" value="true" />
+      <created>1777589607850</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1777589607850</updated>
+    </task>
+    <task id="LOCAL-00022" summary="part c answer">
+      <option name="closed" value="true" />
+      <created>1777590236360</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1777590236360</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,6 +281,8 @@
     <MESSAGE value="student queue fixing" />
     <MESSAGE value="student stack" />
     <MESSAGE value="student stack fixing code" />
-    <option name="LAST_COMMIT_MESSAGE" value="student stack fixing code" />
+    <MESSAGE value="main file" />
+    <MESSAGE value="part c answer" />
+    <option name="LAST_COMMIT_MESSAGE" value="part c answer" />
   </component>
 </project>
