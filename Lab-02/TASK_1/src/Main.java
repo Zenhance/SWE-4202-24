@@ -1,26 +1,35 @@
 class BankAccount
 {
-    String name;
-    double balance;
-    BankAccount(String name)
+    private String name;
+    private double balance;
+    public BankAccount(String name)
     {
-        balance = 0;
+        this.name = name;
+        this.balance = 0;
     }
     public void deposit(double amount)
     {
-        if (amount <= 0) {
+        if (amount <= 0)
+        {
             System.out.println("Error!");
         }
+        balance= balance + amount;
     }
     public void withdraw(double amount)
     {
-        if (balance - amount <= 0) {
+        if (balance - amount <= 0)
+        {
             System.out.println("Insufficient Funds");
-        } else {
+        } else
+        {
             balance = balance - amount;
         }
     }
-
+    public void printStatement()
+    {
+        System.out.println("Owner : "+name);
+        System.out.println("Balance : "+balance);
+    }
 }
 public class Main
 {
