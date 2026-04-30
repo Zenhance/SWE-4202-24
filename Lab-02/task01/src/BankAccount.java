@@ -7,13 +7,20 @@ public class BankAccount {
         this.name= name;
     }
     public void deposit(double amount){
-    if(amount<=0){
+    if (amount <= 0){
         System.out.println("ERROR");
     }
     else{
-        balance=balance+amount;
+        balance = balance + amount;
     }
-
+        public void withdraw(double amount) {
+            if (this.balance - amount <= 0) {
+                System.out.println("invalid amount");
+            }
+            else{
+                balance = balance - amount;
+            }
+        }
 
     }
 }
