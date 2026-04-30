@@ -31,10 +31,8 @@ class BankAccount
         System.out.println("Balance : "+balance);
     }
 }
-public class Main
-{
-    public static void main(String[] args)
-    {
+public class Main {
+    public static void main(String[] args) {
         BankAccount alice = new BankAccount("Alice");
         BankAccount bob = new BankAccount("Bob");
         BankAccount charlie = new BankAccount("Charlie");
