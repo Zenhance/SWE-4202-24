@@ -16,6 +16,10 @@ public static void main(String[] args) {
     zinti.deposit(-20);
     zinti.withdraw(100);
 
+    //print accounts
+    ayesha.printStatement();
+    labiba.printStatement();
+    zinti.printStatement();
 }
 }
 /*
