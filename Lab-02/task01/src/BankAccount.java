@@ -21,6 +21,7 @@ public class BankAccount {
                 balance = balance - amount;
             }
         }
-
+    public void printStatement()
+                System.out.println(this.name + " " + this.balance);
     }
 }
