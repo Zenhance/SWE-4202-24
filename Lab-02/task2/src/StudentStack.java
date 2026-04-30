@@ -1,3 +1,13 @@
+/*
+a. push and pop do not shift elements,they only add at or remove from the last index,
+so the time taken is constant,whether there are 5 or 50 students,the operation takes
+the same amount of time.
+
+b.No,one object's count can't interfere with another,each object has its own
+separate memory and its own copy of the count variable.So,the work independently.
+
+*/
+
 public class StudentStack {
 
     private String[] names = new String[50];
