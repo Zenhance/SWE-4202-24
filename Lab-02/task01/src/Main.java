@@ -7,6 +7,15 @@ public static void main(String[] args) {
     //ayesha transactions
     ayesha.deposit(1000);
     ayesha.withdraw(200);
+
+    //labiba transactions
+    labiba.deposit(500);
+    labiba.withdraw(700);
+
+    //zinti transactions
+    zinti.deposit(-20);
+    zinti.withdraw(100);
+
 }
 }
 /*
