@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="student queue completion">
-      <change beforePath="$PROJECT_DIR$/Lab-02/task2/src/StudentQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-02/task2/src/StudentQueue.java" afterDir="false" />
+    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="student queue fixing">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab-02/task2/src/StudentStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-02/task2/src/StudentStack.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +64,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1777353233463</updated>
-      <workItem from="1777576671937" duration="3725000" />
+      <workItem from="1777576671937" duration="4463000" />
     </task>
     <task id="LOCAL-00001" summary="a change">
       <option name="closed" value="true" />
@@ -201,7 +202,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777587152478</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="student queue fixing">
+      <option name="closed" value="true" />
+      <created>1777587620023</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1777587620023</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,6 +245,7 @@
     <MESSAGE value="amending main" />
     <MESSAGE value="creating classes" />
     <MESSAGE value="student queue completion" />
-    <option name="LAST_COMMIT_MESSAGE" value="student queue completion" />
+    <MESSAGE value="student queue fixing" />
+    <option name="LAST_COMMIT_MESSAGE" value="student queue fixing" />
   </component>
 </project>
