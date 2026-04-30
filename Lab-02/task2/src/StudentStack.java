@@ -15,7 +15,7 @@ public void push(String name,int mark){
 
         names[count] = name;
         marks[count] = mark;
-        System.out.println("Pushed: " name + " (" + mark + ")");
+        System.out.println("Pushed: " + name + " (" + mark + ")");
         count++;
     }
 
@@ -29,7 +29,7 @@ public void pop() {
     }
 
     count--;
-    System.out.println("Popped: "names[count] + " (" + marks[count] + ")");
+    System.out.println("Popped: " + names[count] + " (" + marks[count] + ")");
 }
 
 public void peek() {
@@ -40,7 +40,7 @@ public void peek() {
             return;
         }
 
-        System.out.println("Top: "names[count-1] + " (" + marks[count-1] + ")");
+        System.out.println("Top: " + names[count-1] + " (" + marks[count-1] + ")");
     }
 
 
