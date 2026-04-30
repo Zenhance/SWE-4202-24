@@ -73,22 +73,4 @@ class StudentQueue {
         }
     }
 
-    public static void main(String[] args) {
-
-        StudentQueue queue = new StudentQueue(10);
-
-        queue.enqueue("Rahim", 85);
-        queue.enqueue("Karim", 90);
-        queue.enqueue("Rafiq", 78);
-        queue.enqueue("Jabbar", 88);
-        queue.enqueue("Siam", 95);
-        System.out.println();
-        queue.front();
-        System.out.println();
-        queue.dequeue();
-        queue.dequeue();
-        queue.dequeue();
-        System.out.println();
-        queue.display();
-    }
 }
