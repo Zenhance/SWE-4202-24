@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="creating classes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab-02/task2/src/StudentQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-02/task2/src/StudentQueue.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +63,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1777353233463</updated>
-      <workItem from="1777576671937" duration="2989000" />
+      <workItem from="1777576671937" duration="3336000" />
     </task>
     <task id="LOCAL-00001" summary="a change">
       <option name="closed" value="true" />
@@ -186,7 +185,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777577940700</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="creating classes">
+      <option name="closed" value="true" />
+      <created>1777586746984</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1777586746984</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
