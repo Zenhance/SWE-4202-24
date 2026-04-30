@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="a change">
+    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="amending main">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab-02/task1/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-02/task1/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +20,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "tuireuit"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Zenhance/SWE-4202-24.git",
+    "accountId": "aa5ee623-0c65-4302-94e4-d25466634c7a"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -32,9 +43,16 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "39-riju",
     "kotlin-language-version-configured": "true",
-    "node.js.selected.package.tslint": "(autodetect)"
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -45,6 +63,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1777353233463</updated>
+      <workItem from="1777576671937" duration="856000" />
     </task>
     <task id="LOCAL-00001" summary="a change">
       <option name="closed" value="true" />
@@ -54,12 +73,143 @@
       <option name="project" value="LOCAL" />
       <updated>1777475814049</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="amending the answer of part A">
+      <option name="closed" value="true" />
+      <created>1777476369208</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1777476369208</updated>
+    </task>
+    <task id="LOCAL-00003" summary="amending the answer of part A 2">
+      <option name="closed" value="true" />
+      <created>1777476947388</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1777476947388</updated>
+    </task>
+    <task id="LOCAL-00004" summary="answering part b">
+      <option name="closed" value="true" />
+      <created>1777477485605</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1777477485605</updated>
+    </task>
+    <task id="LOCAL-00005" summary="answering part b 2">
+      <option name="closed" value="true" />
+      <created>1777477781519</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1777477781519</updated>
+    </task>
+    <task id="LOCAL-00006" summary="answering part b 3">
+      <option name="closed" value="true" />
+      <created>1777478063557</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1777478063557</updated>
+    </task>
+    <task id="LOCAL-00007" summary="answering part b 4">
+      <option name="closed" value="true" />
+      <created>1777478438188</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1777478438188</updated>
+    </task>
+    <task id="LOCAL-00008" summary="creating main method">
+      <option name="closed" value="true" />
+      <created>1777478809892</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1777478809892</updated>
+    </task>
+    <task id="LOCAL-00009" summary="creating main method,adding printstatement">
+      <option name="closed" value="true" />
+      <created>1777479067115</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1777479067115</updated>
+    </task>
+    <task id="LOCAL-00010" summary="completed main method">
+      <option name="closed" value="true" />
+      <created>1777479164690</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1777479164690</updated>
+    </task>
+    <task id="LOCAL-00011" summary="answering part c">
+      <option name="closed" value="true" />
+      <created>1777479531747</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1777479531747</updated>
+    </task>
+    <task id="LOCAL-00012" summary="completing part c">
+      <option name="closed" value="true" />
+      <created>1777480327298</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1777480327298</updated>
+    </task>
+    <task id="LOCAL-00013" summary="amending part c">
+      <option name="closed" value="true" />
+      <created>1777480628308</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1777480628308</updated>
+    </task>
+    <task id="LOCAL-00014" summary="amending main">
+      <option name="closed" value="true" />
+      <created>1777480986236</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1777480986236</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="change 3" />
     <MESSAGE value="a change" />
-    <option name="LAST_COMMIT_MESSAGE" value="a change" />
+    <MESSAGE value="amending the answer of part A" />
+    <MESSAGE value="amending the answer of part A 2" />
+    <MESSAGE value="answering part b" />
+    <MESSAGE value="answering part b 2" />
+    <MESSAGE value="answering part b 3" />
+    <MESSAGE value="answering part b 4" />
+    <MESSAGE value="creating main method" />
+    <MESSAGE value="creating main method,adding printstatement" />
+    <MESSAGE value="completed main method" />
+    <MESSAGE value="answering part c" />
+    <MESSAGE value="completing part c" />
+    <MESSAGE value="amending part c" />
+    <MESSAGE value="amending main" />
+    <option name="LAST_COMMIT_MESSAGE" value="amending main" />
   </component>
 </project>
