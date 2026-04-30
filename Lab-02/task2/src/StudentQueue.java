@@ -12,7 +12,7 @@ public void enqueue(String n,int mark){
                    System.out.println("The queue is full");
                    return;
                }
-}
+
              names[count] = n;
              marks[count] = mark;
              System.out.println("Adding to the queue: " +names[count] + " (" + marks[count] + ")");
@@ -32,6 +32,10 @@ public void dequeue() {
 
     for (int i = 0; i < count - 1; i++) {
 
+        names[i] = names[i + 1];
+        marks[i] = marks[i + 1];
+    }
+
         names[count - 1] = null;
         marks[count - 1] = 0;
 
@@ -48,7 +52,7 @@ public void front(){
             return;
         }
 
-        System.out.println("Front: " + names[0] +  " (" + marks[0] + ")");
+        System.out.println("Front: " + names[0] + " (" + marks[0] + ")");
     }
 
 public void display(){
@@ -58,13 +62,6 @@ public void display(){
             System.out.println(i + " " + names[i] + " " + marks[i]);
         }
     }
-
-
-
-
-
-
-
 }
 
 
