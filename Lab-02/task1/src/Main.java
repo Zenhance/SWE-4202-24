@@ -20,7 +20,7 @@ public class Main{
 
     static class BankAccount{
         private String name;
-        private double balance=0;
+        private double balance=0 ;
 
         BankAccount(String name){
             this.name=name;
