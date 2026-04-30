@@ -40,3 +40,11 @@ public class BankAccount {
  }
 
 }
+/* part c
+ a. BankAccount is a class or a blue print and alice and bob are the objects of that class
+ b. alice's balance will update .Because it knows the method should modify the attributes of alice.
+ c. alice: name:"Alice";balance: 0;
+bob:name:"Bob";balance: 0;
+d.When i wrote alice =bob then alice balance will increase by 100.because alice=bob makes both
+variables point to the same object in the memory.
+ */
