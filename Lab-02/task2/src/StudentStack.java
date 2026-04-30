@@ -78,19 +78,13 @@ class StudentStack {
         stack.push("Rafiq", 78);
         stack.push("Jabbar", 88);
         stack.push("Siam", 95);
-
         System.out.println();
-
         stack.peek();
-
         System.out.println();
-
         stack.pop();
         stack.pop();
         stack.pop();
-
         System.out.println();
-
         stack.display();
     }
 }
