@@ -37,6 +37,14 @@ public class StudentStack {
         count--;
     }
 
+    public void peek(){
+        if(count == 0){
+            System.out.println("Error. No element to peek.");
+            return;
+        }
+        System.out.println("Student " + names[count - 1] + " with mark " + marks[count - 1] + " is at top.");
+    }
+
 
 }
 
