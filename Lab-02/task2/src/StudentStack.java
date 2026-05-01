@@ -15,4 +15,18 @@ Ans:- No, it is not going to interfere with one another's object count.
  */
 
 public class StudentStack {
+    private String[] Name = new String[60];
+    private double[] mark= new double[60];
+    private int count = 0;
+
+    public void push(String Name,double mark){
+        if (count +1 > 60){
+            System.out.println("Stack is full");
+            return;
+        }
+        this.Name[count]=Name;
+        this.mark[count]=mark;
+        count++;
+    }
+
 }
