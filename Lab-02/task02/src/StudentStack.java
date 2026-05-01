@@ -1,3 +1,16 @@
+/*
+a. push and pop never shift any elements. What does this mean for speed when the
+stack has 50 students versus 5 students?
+ans:whether there are 5 or 50 students, the speed stays the same.
+
+b. Your StudentStack and StudentQueue both have a private field called count (or
+similar). If someone writes code that uses both classes at the same time, can one
+object’s count interfere with the other’s? Why not?
+ans:  No, one object's count cannot interfere with another because each object has
+    its own separate memory, so their data is independent.
+
+ */
+
 public class StudentStack {
     String[] names;
     int[] marks;
