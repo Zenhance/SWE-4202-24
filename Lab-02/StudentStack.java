@@ -58,6 +58,27 @@ public class StudentStack {
     }
 
 
+public static void main(String[] args) {
 
+    StudentStack stack = new StudentStack();
+
+    System.out.println("Pushing 5 students\n");
+    stack.push("Alice",   85);
+    stack.push("Bob",     72);
+    stack.push("Mahdi",   90);
+    stack.push("Safwan",   65);
+    stack.push("Muhib",     78);
+
+    System.out.println("Peek\n");
+    stack.peek();
+
+    System.out.println("Popping 3 times\n");
+    stack.pop();
+    stack.pop();
+    stack.pop();
+
+    System.out.println("Display stack\n");
+    stack.display();
+}
 }
 
