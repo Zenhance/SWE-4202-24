@@ -35,3 +35,11 @@ public class StudentQueue {
         }
     }
 }
+/*
+A.
+
+
+B.Because the array is private, outside code cannot directly modify it.
+   This allows each class to enforce different rules (stack or queue)
+   while using the same underlying structure.
+ */

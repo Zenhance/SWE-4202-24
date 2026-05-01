@@ -34,4 +34,5 @@ public class StudentStack {
 }
 /*
 A.The speed will remain same.
+2.
  */
