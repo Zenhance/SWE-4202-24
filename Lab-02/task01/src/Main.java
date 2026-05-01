@@ -4,7 +4,9 @@ you would use.
 ans:String name, double balance
 b. What are the three actions a customer can perform on their account? For each one,
 write down what it needs to know (inputs) and what it produces (output or change).
-ans: deposit(amount) == updates balance, withdraw(amount) == updates balance, printstatement() == prints user info
+ans: deposit(amount)=updates balance;
+     withdraw(amount)=updates balance;
+     printstatement()=prints user info;
 c. A colleague suggests storing all account balances in one big array in main, with a
 separate array for owner names, just like Task 1 of Lab 1. What specific problem
 would appear the moment you need to handle 200 customers?
@@ -53,11 +55,11 @@ ans: it would change alices balance. alice.method is used so only alice would be
 c. Draw a simple box diagram (in ASCII or words) showing what is in memory after
 both lines above have run. Each box should show the field names and their values.
 ans:     alice:
-                name : "Alice"
+                name   :"Alice"
                 balance: 0
 
          bob:
-                name : "Bob"
+                name    :"Bob"
                 balance : 0
 
 d. If you wrote alice = bob; and then called alice.deposit(100), what would hap-
