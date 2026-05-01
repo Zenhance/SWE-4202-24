@@ -1,3 +1,4 @@
+
 public class Main {
 
     public static void main(String[] args) {
@@ -22,6 +23,8 @@ public class Main {
         StudentQueue queue = new StudentQueue();
 
         // Implementing enqueue , dequeue , front and display method
-        
+        for (int i = 0; i <= 5; i++) {
+            queue.enqueue("Student" + i, i + 50);
+        }
     }
 }
