@@ -30,9 +30,11 @@ public class StudentStack {
     public void peek(){
         System.out.println(names[count-1]+" "+marks[count-1]);
     }
-
-
-
+    public void display(){
+        for(int i=0;i<count;i++){
+            System.out.println(names[i]+" "+marks[i]);
+        }
+    }
 
 }
 
