@@ -20,14 +20,32 @@
  */
 
 class BankAccount {
-    // Private fields — data protected (encapsulation)
+
     private String ownerName;
     private double balance;
 
-    // Constructor — object create korar somoy call hoy
     public BankAccount(String name) {
         this.ownerName = name;
-        this.balance = 0.0;   // starting balance always 0
+        this.balance = 0.0;
+    }
+
+    public void deposit(double amount) {
+        if (amount <= 0) {
+            System.out.println("Error");
+            return;
+        }
+        balance += amount;
+    }
+
+    public void withdraw(double amount) {
+        if (amount > balance) {
+            System.out.println("Insufficient funds");
+            return;
+        }
+        balance -= amount;
+    }
+
+    public void printStatement() {
+        System.out.println("Owner: " + ownerName + " | Balance: " + balance);
     }
 }
-
