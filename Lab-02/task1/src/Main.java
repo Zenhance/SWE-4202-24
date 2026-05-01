@@ -23,7 +23,7 @@ public class Main {
     }
 }
 /*
-    a.the word for  BankAccount is class and alice and bob are two "object" created of that class.
+    a.the word for  BankAccount is class and alice and bob are two "objects" created of that class.
 
     b.for alice.deposit(500), only alice's balance changes. the program knows before each object has separate attributes and methods.
     When I call an object(alice), all methods used only change alice's attributes(balance).
