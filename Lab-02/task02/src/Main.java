@@ -34,11 +34,7 @@ public class Main{
         queue.dequeue();
 
 
-
-
-
-
-
+        queue.display();
 
     }
 }
