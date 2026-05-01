@@ -32,4 +32,14 @@ public class StudentStack {
              System.out.println("Student name: "+name[cnt-1]+" \nMarks: "+marks[cnt-1]);
          }
 
+         public void display(){
+            if(cnt==0){
+                System.out.println("Stack is empty");
+                return;
+            }
+             for(int i=0;i<cnt;i++){
+                 System.out.println(+i+". "+name[i]+" "+marks[i]);
+             }
+         }
+
 }
