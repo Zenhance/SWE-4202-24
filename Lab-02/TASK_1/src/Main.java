@@ -20,7 +20,8 @@ class BankAccount
         if (balance - amount <= 0)
         {
             System.out.println("Insufficient Funds");
-        } else
+        }
+        else
         {
             balance = balance - amount;
         }
