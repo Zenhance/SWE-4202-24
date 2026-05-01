@@ -52,7 +52,18 @@ b)because the array is private  , the outside code can not access it, each class
     }
 
     public static void main(String[] args){
-        
+        StudentQueue q = new StudentQueue();
+        q.eq("Apple",90);
+        q.eq("ball",92);
+        q.eq("cat",95);
+        q.eq("dog",97);
+        q.eq("egg",92);
+
+        q.front();
+        q.dq();
+        q.dq();
+        q.dq();
+        q.display();
     }
 
 
