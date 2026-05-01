@@ -32,5 +32,19 @@ public class StudentQueue
     private String[] names = new String[10];
     private int[] marks = new int[10];
 
+    public void enqueue(String name, int obtained_mark)
+    {
+        if(count >= 10)
+        {
+            System.out.println("Error. Queue is full.");
+        }
+        else
+        {
+            names[count] = name;
+            marks[count] = obtained_mark;
+            count++;
+        }
+    }
+
 
 }
