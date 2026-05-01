@@ -34,6 +34,10 @@ public void dequeue(){
     public void front(){
         System.out.println("Name:"+names[0]+"Marks"+marks[0]);
     }
-
+   public void display(){
+        for(int i=0;i<count;i++){
+            System.out.println("Name:"+names[i]+"Marks"+marks[i]);
+        }
+   }
 
 }
