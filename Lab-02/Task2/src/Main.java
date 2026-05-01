@@ -14,7 +14,7 @@ public class Main {
      for (int i=0;i<9;i++){
          q1.enqueue("Student"+i,80+i);
      }
-       q1.dequeue();
+     q1.dequeue();
      q1.front();
      q1.display();
 
