@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="56558594-c60f-4d67-b487-d8833e516d7f" name="Changes" comment="Task2 FUll done" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Maomao-starry"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Zenhance/SWE-4202-24.git",
+    "accountId": "7855b64e-34ac-4930-ba45-cd4ead97fdb8"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5,
+  "fromUser": false
+}]]></component>
+  <component name="ProjectId" id="3D83e0fNnRNDyy3c22Rh08SSdWf" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "01-Amina",
+    "kotlin-language-version-configured": "true",
+    "onboarding.tips.debug.path": "C:/Users/Lenovo/IdeaProjects/SWE-4202-24/Lab-02/Task2/src/Main.java"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="56558594-c60f-4d67-b487-d8833e516d7f" name="Changes" comment="" />
+      <created>1777649976068</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1777649976068</updated>
+    </task>
+    <task id="LOCAL-00001" summary="innit commit">
+      <option name="closed" value="true" />
+      <created>1777650164250</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1777650164250</updated>
+    </task>
+    <task id="LOCAL-00002" summary="innit commit">
+      <option name="closed" value="true" />
+      <created>1777650986331</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1777650986331</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Task2 Part B">
+      <option name="closed" value="true" />
+      <created>1777652568801</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1777652568801</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Task2 Part A+C">
+      <option name="closed" value="true" />
+      <created>1777655205322</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1777655205322</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Task2 Part A+C">
+      <option name="closed" value="true" />
+      <created>1777655315722</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1777655315722</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Task2 Part A+C">
+      <option name="closed" value="true" />
+      <created>1777655930844</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1777655930844</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Task2 Part A+C">
+      <option name="closed" value="true" />
+      <created>1777656007663</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1777656007663</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Task2 Part A+C">
+      <option name="closed" value="true" />
+      <created>1777656137666</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1777656137666</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Task2 Part A+C">
+      <option name="closed" value="true" />
+      <created>1777656619208</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1777656619209</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Task2 Part A+C">
+      <option name="closed" value="true" />
+      <created>1777656702576</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1777656702576</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Task2 Part B+C">
+      <option name="closed" value="true" />
+      <created>1777656796127</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1777656796127</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Task2 Part B+C">
+      <option name="closed" value="true" />
+      <created>1777657501275</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1777657501275</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Task2 Part B+C">
+      <option name="closed" value="true" />
+      <created>1777658240870</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1777658240870</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Task2 Part B+C">
+      <option name="closed" value="true" />
+      <created>1777658373501</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1777658373501</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Task2 Part B+C">
+      <option name="closed" value="true" />
+      <created>1777659780623</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1777659780623</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Task2 FUll done">
+      <option name="closed" value="true" />
+      <created>1777659808541</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1777659808541</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Task2 FUll done">
+      <option name="closed" value="true" />
+      <created>1777659876653</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1777659876653</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Task2 FUll done">
+      <option name="closed" value="true" />
+      <created>1777660017389</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1777660017389</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="innit commit" />
+    <MESSAGE value="Task2 Part B" />
+    <MESSAGE value="Task2 Part A+C" />
+    <MESSAGE value="Task2 Complete" />
+    <MESSAGE value="Task2 Part B+C" />
+    <MESSAGE value="Task2 FUll done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Task2 FUll done" />
+  </component>
+</project>
