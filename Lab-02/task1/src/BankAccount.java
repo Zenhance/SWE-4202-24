@@ -7,12 +7,12 @@ public class BankAccount {
             this.balance = 0;
         }
 
-        double deposit(double amount){
+        public double deposit(double amount){
             balance+=amount;
             return balance;
         }
 
-        double withdraw(double amount){
+        public double withdraw(double amount){
             if(balance>=amount) {
                 balance -= amount;
                 return balance;
@@ -23,7 +23,7 @@ public class BankAccount {
             }
         }
 
-        void printStatement(){
+        public void printStatement(){
             System.out.println("Owner's Name: "+owner);
             System.out.println("Current Balance: "+balance);
         }
