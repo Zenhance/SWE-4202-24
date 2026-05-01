@@ -20,6 +20,7 @@ public class StudentQueue {
           }
           if (count-1<0){
               System.out.println("Queue is empty");
+              return;
           }
     }
     public void front(){
