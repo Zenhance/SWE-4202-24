@@ -44,8 +44,12 @@ public class StudentStack {
         }
     }
     public void peek(){
+        if (count == 0)
+            System.out.println("The list is empty");
+        else {
         int x = count - 1;
         System.out.println("Student at peek: "+names[x]+" ("+marks[x]+")");
+        }
     }
     public void display ()
     {
