@@ -7,8 +7,9 @@ public class StudentQueue {
              this.name[count]=name;
              this.mark[count]=mark;
              count++;
-             if (count<=50){
+             if (count+1>50){
                  System.out.println("Queue is full");
+                 return;
              }
     }
     public void dequeue(){
