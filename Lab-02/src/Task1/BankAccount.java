@@ -34,6 +34,15 @@ public class BankAccount {
         this.ownerName = ownerName;
         this.balance = 0;
     }
-}
+
+    public void deposit(double amount){
+        if(amount <= 0){
+            System.out.println("Can't deposit.");
+            return;
+        }
+        else{
+            balance += amount;
+        }
+    }
 
 
