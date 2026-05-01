@@ -21,9 +21,8 @@ public class StudentQueue {
     private String[] Names = new String[60];
     private double[] Marks = new double[60];
     private int count = 0;
-
     public void enqueue(String Names, double Marks) {
-        if (count>= 60) {
+        if (count >= 60) {
             System.out.println("Queue is full");
             return;
         }
@@ -31,19 +30,24 @@ public class StudentQueue {
         this.Marks[count] = Marks;
         count++;
     }
-    public void dequeue(){
+    public void dequeue() {
         if (count == 0) {
             System.out.println("Queue is empty");
             return;
         }
         System.out.println(this.Names[0] + " " + this.Marks[0]);
-        for (int i = 0; i < count-1; i++){
-            this.Names[i] = this.Names[i+1];
-            this.Marks[i] = this.Marks[i+1];
+        for (int i = 0; i < count - 1; i++) {
+            this.Names[i] = this.Names[i + 1];
+            this.Marks[i] = this.Marks[i + 1];
         }
         count--;
     }
-    public void front(){
+    public void front() {
         System.out.println(this.Names[0] + " " + this.Marks[0]);
+    }
+    public void display() {
+        for (int i = 0; i < count; i++) {
+            System.out.println(this.Names[i] + " " + this.Marks[i]);
+        }
     }
 }
