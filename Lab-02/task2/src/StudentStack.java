@@ -21,7 +21,6 @@ public class StudentStack
         }
     }
 
-
     public void peek()
     {
         System.out.println("Top: " + names[count - 1]  + " " + marks[count - 1] );
