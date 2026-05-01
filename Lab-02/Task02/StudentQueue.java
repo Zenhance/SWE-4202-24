@@ -24,8 +24,8 @@ array structure behaving differently.
  */
 public class StudentQueue {
 
-    private String[] name = new String[50];
-    private int[] marks = new int[50];
+    private final String[] name = new String[50];
+    private final int[] marks = new int[50];
     private int cnt = 0;
 
     public void enqueue(String name, int marks) {
