@@ -1,15 +1,41 @@
 class StudentStack
 {
-    private String[] name;
-    private int[] mark;
+    private String[] names;
+    private int[] marks;
     private int count;
     private int total=5;
 
     public StudentStack()
     {
-        this.name=new String[total];
-        this.mark=new int[total];
+        this.names=new String[total];
+        this.marks=new int[total];
         this.count=0;
+    }
+
+    public void push(String name, int mark)
+    {
+        if(count==total)
+        {
+            System.out.println("Stack Is Full!");
+        }
+        names[count]=name;
+        marks[count]=mark;
+        count++;
+    }
+
+    public void pop()
+    {
+
+    }
+
+    public void peek()
+    {
+
+    }
+
+    public void display()
+    {
+
     }
 }
 class StudentQueue
@@ -24,6 +50,25 @@ class StudentQueue
         this.name=new String[total];
         this.mark=new int[total];
         this.count=0;
+    }
+
+    public void enqueue(String name, int mark)
+    {
+
+    }
+    public void dequeue()
+    {
+
+    }
+
+    public void front()
+    {
+
+    }
+
+    public void display()
+    {
+
     }
 }
 public class Main
