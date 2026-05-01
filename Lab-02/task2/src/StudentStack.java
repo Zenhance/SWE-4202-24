@@ -25,7 +25,7 @@ public class StudentStack {
     }
     public void display(){
         for(int i=0;i<count;i++){
-            System.out.println("Name:" +this.name[i] + " Marks: " + this.marks[i]+"\n");
+            System.out.println("Name:" +this.name[i] + " Marks: " + this.marks[i]);
         }
     }
 }
