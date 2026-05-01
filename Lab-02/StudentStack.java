@@ -18,4 +18,16 @@ public class StudentStack {
     private String[] names = new String[10];
     private int[] marks = new int[10];
 
+    public void push(String name, int obtained_mark){
+        if(count == 10){
+            System.out.println("Error. No space left. Can't push " + name + ".");
+            return;
+        }
+        names[count] = name;
+        marks[count] = obtained_mark;
+        count++;
+    }
+
+
 }
+
