@@ -1,4 +1,10 @@
-
+/*
+a. For each call of dequeue, each array element will be moved once except the first index.
+    For the first dequeue, other 49 elements will be moved once each. Each dequeue moves the remaining elements once.
+    So elements will be moved total 1215 times.
+b. As the array and count is private, outside code cannot access its data. So each class can behave differently without
+    interfering each other using the same internal data.
+ */
 
 public class StudentQueue {
 

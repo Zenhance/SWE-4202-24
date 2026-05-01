@@ -1,4 +1,8 @@
-
+/*
+a. Push and pop only adds at or removes from the last index so it takes the same time for every number of students;
+b. One objects count cannot interfere with the other. Because the count has to be called with reference.
+    so only the count of the referenced object will be changed;
+*/
 
 public class StudentStack {
 
