@@ -1,5 +1,16 @@
 package task2;
+/*
+a. Every time dequeue() is called, all remaining students are shifted one position to
+the left. If there are 50 students, the first dequeue shifts 49 elements, the next one
+shifts 48, then 47, and so on. After dequeuing 45 times, the total number of element
+moves becomes very large — around 1215 moves in total — which makes dequeue()
+slower when the queue size is large.
 
+b. Keeping the array private allows the class to control how the data is used through
+specific methods only. Because outside code cannot directly access the array, the
+same array structure can behave like a list, stack, or queue depending on which
+methods the class provides.
+*/
 public class StudentQueue {
     String[] names;
     double[] marks;
