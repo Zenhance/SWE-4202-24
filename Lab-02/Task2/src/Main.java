@@ -16,9 +16,15 @@ public class Main {
      for (int i=1;i<9;i++){
          q1.enqueue("Student"+i,50+i);
      }
-     q1.dequeue();
-     q1.front();
+        System.out.println("Displaying the queue");
      q1.display();
+        System.out.println("The first queue");
+     q1.front();
+        System.out.println("Removing");
+     q1.dequeue();
+        System.out.println("After Removing");
+        q1.display();
+
 
 }
 }

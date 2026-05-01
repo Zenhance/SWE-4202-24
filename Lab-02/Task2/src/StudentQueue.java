@@ -18,6 +18,7 @@ public class StudentQueue {
         System.out.println("Queue is empty");
         return;
     }
+        System.out.println(this.name[0]+" "+this.mark[0]);
           for (int i=0;i<count-1;i++){
               this.name[i]=this.name[i+1];
               this.mark[i]=this.mark[i+1];
