@@ -1,9 +1,9 @@
 public class StudentQueue {
     private String[] name=new String[50];
-    private int[] mark=new int[50];
+    private double[] mark=new double[50];
     private int count=0;
 
-    public void enqueue(String name,int mark){
+    public void enqueue(String name,double mark){
         if(count>=50){
             System.out.println("the queue is full!");
             return;
