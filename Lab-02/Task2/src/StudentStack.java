@@ -1,7 +1,9 @@
+
+
 public class StudentStack {
     private String[] name=new String[50];
     private int[] mark=new int[50];
-    public int count=0;
+    private int count=0;
 
     public void push(String name,int mark){
         if(count>=50){
@@ -42,3 +44,10 @@ public class StudentStack {
     }
 
 }
+/*
+Part c
+a)The speed of operations remains constant because no shifting is required for push or pop.
+This means the time taken is the same whether the stack has 5 students or 50.
+b)No, they cannot interfere because each object is a separate copy in memory.
+ Since the count field is private, only its own class can change it.
+ */

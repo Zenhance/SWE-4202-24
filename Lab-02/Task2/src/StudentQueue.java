@@ -1,7 +1,7 @@
 public class StudentQueue {
     private String[] name=new String[50];
     private int[] mark=new int[50];
-    public int count=0;
+    private int count=0;
 
     public void enqueue(String name,int mark){
         if(count>=50){
@@ -42,3 +42,10 @@ public class StudentQueue {
         }
     }
 }
+/*
+part c
+a)It will take about 1,215 individual moves in total. This is because every
+dequeue forces all remaining students in the line to shift one step forward.
+ b)Making the array private ensures that the data is hidden and protected from the outside.
+ This forces the code to follow the specific rules of a Queue or Stack.
+ */
