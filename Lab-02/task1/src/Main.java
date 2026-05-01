@@ -18,6 +18,7 @@
                    the wrong name to the wrong balance.
 
  */
+package task1;
 
 public class Main
 {
