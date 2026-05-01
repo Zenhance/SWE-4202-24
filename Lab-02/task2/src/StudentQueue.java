@@ -23,4 +23,7 @@ public class StudentQueue {
         }
         count--;
     }
+    public void front(){
+        System.out.println("Name: "+this.name[0] + " Mark:" + this.marks[0]);
+    }
 }
