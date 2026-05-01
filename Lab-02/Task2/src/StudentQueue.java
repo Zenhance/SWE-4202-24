@@ -14,6 +14,14 @@ public class StudentQueue {
     public void dequeue(){
           for (int i=0;i<count-1;i++){
               this.name[i]=this.name[i-1];
+              this.mark[i]=this.mark[i-1];
+              count--;
           }
+          if (count-1<0){
+              System.out.println("Queue is empty");
+          }
+    }
+    public void front(){
+        System.out.println(this.name[0]+" "+this.mark[0]);
     }
 }
