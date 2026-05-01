@@ -1,0 +1,18 @@
+/* a) push and pop never shift any elements. What does this mean for speed when the
+stack has 50 students versus 5 students?
+
+Ans:- Push and pop only affects on the top of a stack.So no elements are shifted.
+ Their speed stays the same whether there are 50 or 5 students.
+
+b. Your StudentStack and StudentQueue both have a private field called count (or
+similar). If someone writes code that uses both classes at the same time, can one
+object’s count interfere with the other’s? Why not?
+
+Ans:- No, it is not going to interfere with one another's object count.
+ It happens because count is in a private within the class that means each individual
+ gets it's own separate memory.
+
+ */
+
+public class StudentStack {
+}
