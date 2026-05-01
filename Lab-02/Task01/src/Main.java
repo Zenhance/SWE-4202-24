@@ -1,3 +1,6 @@
+
+
+
 /* A. Every account needs to store Current Balance
 
 B. One can perform three actions from their account:
@@ -12,3 +15,23 @@ Editing data is also a hassle here.
 D. I will add that in the class as an individual method.
  */
 
+
+public static void main(String[] args) {
+
+    BankAccount A1 = new BankAccount("Rafsan", 1000);
+    BankAccount A2 = new BankAccount("Roodra", 500);
+    BankAccount A3 = new BankAccount("Wasi", 793.56);
+
+    A1.printstatement();
+    A1.withdraw(500);
+    A1.printstatement();
+
+    A2.printstatement();
+    A2.deposit(676.67);
+    A2.printstatement();
+
+    A3.printstatement();
+    A3.withdraw(800);
+    A3.printstatement();
+
+}
