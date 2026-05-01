@@ -13,5 +13,9 @@ object’s count interfere with the other’s? Why not?
 
  b. Each object get its own private count variable assigned when it's called. So, one object's count can't interfere with other's.
 */
+public class StudentStack {
+    private int count = 0;
+    private String[] names = new String[10];
+    private int[] marks = new int[10];
 
-
+}
