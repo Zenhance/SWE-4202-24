@@ -76,5 +76,13 @@ public class StudentQueue
         }
     }
 
-
+    public void display()
+    {
+        System.out.println("(Front)\n");
+        for(int i = 0; i < count; i++)
+        {
+            System.out.println(names[i] + " " + marks[i]);
+        }
+        System.out.println("(Rear)\n");
+    }
 }
