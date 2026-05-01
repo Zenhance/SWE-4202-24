@@ -16,5 +16,22 @@ public class main {
         stack.display();
 
 
+        StudentQueue queue=new StudentQueue();
+        queue.enqueue("Sadman",86);
+        queue.enqueue("Raiyan",78);
+        queue.enqueue("Syed",87);
+        queue.enqueue("Baba",88);
+        queue.enqueue("Naz",67);
+
+        queue.front();
+
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
+
+        queue.display();
+
+
+
     }
 }
