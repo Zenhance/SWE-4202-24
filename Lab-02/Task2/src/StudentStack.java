@@ -38,7 +38,7 @@ public void display(){
         System.out.print(n[i]+" "+m[i]);
     }
 }
-public static void Main(String[] args){
+public static void main(String[] args){
     StudentStack stk =new StudentStack();
     stk.push("Sukuna",90);
     stk.push("gojo",62);
