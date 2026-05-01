@@ -5,7 +5,7 @@
    */
 
 //b
-   /* no one objects count cannot interfere with the other's. because both has its own separtate
+   /* no one objects count cannot interfere with the other's. because both has its own separate
       copy of the private file named "count" stored in the memory. as private means the field belongs
       to that object only. it is not accessible to all the other classes. so it cannot interfere.
     */
