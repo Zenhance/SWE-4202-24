@@ -40,7 +40,10 @@ class StudentStack
 
     public void display()
     {
-
+        for(int i=0;i<count;i++)
+        {
+            System.out.println(names[i]+" "+marks[i]);
+        }
     }
 }
 class StudentQueue
