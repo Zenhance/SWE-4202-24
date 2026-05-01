@@ -26,9 +26,12 @@ public void push(String name, int mar){
     }
 }
 public void pop(){
-    
+    if(cnt==0){
+        return;
+    }
   int tp=cnt-1;
   System.out.println(n[tp]+" "+m[tp]);
+  cnt--;
 }
 
 
