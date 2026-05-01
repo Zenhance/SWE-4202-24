@@ -46,5 +46,23 @@ public class StudentQueue
         }
     }
 
+    public void dequeue()
+    {
+        if(count == 0)
+        {
+            System.out.println("Error. Queue is empty.");
+        }
+        else
+        {
+            System.out.println(names[0] + " with " + marks[0] + " has been dequeued.");
+            for(int i = 0; i < count - 1; i++)
+            {
+                names[i] = names[i + 1];
+                marks[i] = marks[i + 1];
+            }
+            count--;
+        }
+    }
+
 
 }
