@@ -28,5 +28,23 @@ public class StudentQueue {
 
     }
 
+    public void front(){
+        if(cnt==0){
+            System.out.println("Queue is empty");
+            return;
+        }
+        System.out.println("Name: "+name[0]+"\nMarks: "+marks[0]);
+    }
+
+    public void display(){
+        if(cnt==0){
+            System.out.println("Queue is empty");
+            return;
+        }
+        for(int i=0;i<cnt;i++){
+            System.out.println(+i+". "+name[i]+" "+marks[i]);
+        }
+    }
+
 
 }
