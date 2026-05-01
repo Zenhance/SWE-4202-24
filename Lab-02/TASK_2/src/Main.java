@@ -146,3 +146,15 @@ public class Main
         queue.display();
     }
 }
+//StudentStack
+//
+//a. Push and Pop do not shift elements. Therefore, the speed remains the same for each cases that means whether there are 5 students or 50 students the speed remains same.
+//
+//b. If someone writes code using both classes at same time, there will be no interfere with another because each object has separate memory. 'count' variable is private and it belongs to each of them independently.
+//
+//StudentQueue
+//
+//a. Every time dequeue shifts remaining all elements to the left. For 50 students and 45 dequeues, the individual element moves required in total is roughly 1000.
+//
+//
+//b. We make the array private so that the outside code can not directly modify it. Because of this different classes use same internal structure safely.
