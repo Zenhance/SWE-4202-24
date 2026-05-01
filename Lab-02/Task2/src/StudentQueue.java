@@ -4,13 +4,14 @@ public class StudentQueue {
     private int count = 0;
 
     public void enqueue(String name,int mark){
+        if (count+1>50){
+        System.out.println("Queue is full");
+        return;
+    }
              this.name[count]=name;
              this.mark[count]=mark;
              count++;
-             if (count+1>50){
-                 System.out.println("Queue is full");
-                 return;
-             }
+
     }
     public void dequeue(){
         if (count-1<0){
