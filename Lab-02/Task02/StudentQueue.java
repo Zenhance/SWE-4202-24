@@ -43,10 +43,14 @@ public class StudentQueue {
         }
         System.out.println(this.name[0] + " " + this.marks[0]);
 
-        for (int i = 0; i < cnt-1; i++) {
-            this.name[i] = this.name[i+1];
-            this.marks[i] = this.marks[i+1];
+        for (int i = 0; i < cnt - 1; i++) {
+            this.name[i] = this.name[i + 1];
+            this.marks[i] = this.marks[i + 1];
         }
         cnt--;
+    }
+
+    public void front() {
+        System.out.println(this.name[0] + " " + this.marks[0]);
     }
 }
