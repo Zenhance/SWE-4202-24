@@ -1,13 +1,34 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+public static void main(String[] args) {
+    StudentStack stack = new StudentStack();
+    StudentQueue queue = new StudentQueue();
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
-    }
+    stack.push("Trump", 85);
+    stack.push("Putin", 72);
+    stack.push("Hasina", 94);
+    stack.push("Modi", 68);
+    stack.push("Marx", 79);
+
+    stack.peek();
+
+    stack.pop();
+    stack.pop();
+    stack.pop();
+
+    stack.display();
+
+    System.out.println("---New Class---");
+
+    queue.enqueue("Trump", 85);
+    queue.enqueue("Putin", 72);
+    queue.enqueue("Hasina", 94);
+    queue.enqueue("Modi", 68);
+    queue.enqueue("Marx", 80);
+
+    queue.front();
+
+    queue.dequeue();
+    queue.dequeue();
+    queue.dequeue();
+
+    queue.display();
 }
