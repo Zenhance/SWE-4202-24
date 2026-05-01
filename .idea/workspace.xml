@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="559d1c85-8102-47da-9638-78d32035fbf7" name="Changes" comment="commit the merge">
+      <change beforePath="$PROJECT_DIR$/Lab-02/StudentStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/Task2/StudentStack.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "mahdinursamin-iut"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Zenhance/SWE-4202-24.git",
+    "accountId": "dd1f5060-4ca4-4aef-928b-730c43ef846f"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2,
+  "fromUser": false
+}]]></component>
+  <component name="ProjectId" id="3D8iXndFEWo8jGma1rrummAiQ08" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.StudentStack.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "32-Mahdi",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="559d1c85-8102-47da-9638-78d32035fbf7" name="Changes" comment="" />
+      <created>1777670140152</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1777670140152</updated>
+      <workItem from="1777670141372" duration="5787000" />
+    </task>
+    <task id="LOCAL-00001" summary="Queue QnA part done">
+      <option name="closed" value="true" />
+      <created>1777674090142</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1777674090143</updated>
+    </task>
+    <task id="LOCAL-00002" summary="created StudentQueue with private fields.">
+      <option name="closed" value="true" />
+      <created>1777674165164</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1777674165164</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Created enqueue method">
+      <option name="closed" value="true" />
+      <created>1777674213705</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1777674213705</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Created denqueue method">
+      <option name="closed" value="true" />
+      <created>1777674284944</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1777674284944</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Created front method">
+      <option name="closed" value="true" />
+      <created>1777674304074</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1777674304074</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Created display method">
+      <option name="closed" value="true" />
+      <created>1777674342704</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1777674342704</updated>
+    </task>
+    <task id="LOCAL-00007" summary="done with QnA part">
+      <option name="closed" value="true" />
+      <created>1777674441350</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1777674441350</updated>
+    </task>
+    <task id="LOCAL-00008" summary="done with QnA part and created StudentStack class">
+      <option name="closed" value="true" />
+      <created>1777674499469</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1777674499469</updated>
+    </task>
+    <task id="LOCAL-00009" summary="created push method">
+      <option name="closed" value="true" />
+      <created>1777674721679</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1777674721679</updated>
+    </task>
+    <task id="LOCAL-00010" summary="created pop method">
+      <option name="closed" value="true" />
+      <created>1777674754758</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1777674754758</updated>
+    </task>
+    <task id="LOCAL-00011" summary="created peek method">
+      <option name="closed" value="true" />
+      <created>1777674778935</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1777674778935</updated>
+    </task>
+    <task id="LOCAL-00012" summary="created display method">
+      <option name="closed" value="true" />
+      <created>1777674808830</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1777674808830</updated>
+    </task>
+    <task id="LOCAL-00013" summary="created main with proper operations">
+      <option name="closed" value="true" />
+      <created>1777674849493</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1777674849493</updated>
+    </task>
+    <task id="LOCAL-00014" summary="unversioned files">
+      <option name="closed" value="true" />
+      <created>1777675141732</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1777675141732</updated>
+    </task>
+    <task id="LOCAL-00015" summary="commit the merge">
+      <option name="closed" value="true" />
+      <created>1777675286934</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1777675286934</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Queue QnA part done" />
+    <MESSAGE value="created StudentQueue with private fields." />
+    <MESSAGE value="Created enqueue method" />
+    <MESSAGE value="Created denqueue method" />
+    <MESSAGE value="Created front method" />
+    <MESSAGE value="Created display method" />
+    <MESSAGE value="done with QnA part" />
+    <MESSAGE value="done with QnA part and created StudentStack class" />
+    <MESSAGE value="created push method" />
+    <MESSAGE value="created pop method" />
+    <MESSAGE value="created peek method" />
+    <MESSAGE value="created display method" />
+    <MESSAGE value="created main with proper operations" />
+    <MESSAGE value="unversioned files" />
+    <MESSAGE value="commit the merge" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit the merge" />
+  </component>
+</project>
