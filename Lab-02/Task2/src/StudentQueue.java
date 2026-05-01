@@ -3,8 +3,9 @@ public class StudentQueue {
     private int[] mark = new int[50];
     private int count = 0;
 
-    public void enqueue(){
-
+    public void enqueue(String name,int mark){
+             this.name[count]=name;
+             this.mark[count]=mark;
     }
 
 }
