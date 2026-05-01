@@ -28,6 +28,15 @@ public class StudentStack {
         count++;
     }
 
+    public void pop(){
+        if(count == 1){
+            System.out.println("Error. No element to pop.");
+            return;
+        }
+        System.out.println(names[count-1] + " with mark " + marks[count-1] + " popped successfully.");
+        count--;
+    }
+
 
 }
 
