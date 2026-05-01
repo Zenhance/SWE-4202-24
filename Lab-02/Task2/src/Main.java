@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("For Student Stack");
         StudentStack s1=new StudentStack();
-        for (int i=0;i<9;i++){
+        for (int i=1;i<9;i++){
             s1.push("Student"+i,50+i);
         }
         s1.peek();
@@ -13,8 +13,8 @@ public class Main {
         s1.display();
         System.out.println("For Student Queue");
      StudentQueue q1=new StudentQueue();
-     for (int i=0;i<9;i++){
-         q1.enqueue("Student"+i,80+i);
+     for (int i=1;i<9;i++){
+         q1.enqueue("Student"+i,50+i);
      }
      q1.dequeue();
      q1.front();
