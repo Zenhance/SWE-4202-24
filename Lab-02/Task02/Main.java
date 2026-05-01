@@ -18,6 +18,10 @@ public class Main {
 
         stack.display();
 
-        //
+        // Queue Func
+        StudentQueue queue = new StudentQueue();
+
+        // Implementing enqueue , dequeue , front and display method
+        
     }
 }
