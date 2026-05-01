@@ -1,3 +1,13 @@
+/*
+a. Push and pop do not shift any elements.They only add or remove at the top element.
+   So speed when the stack has 50 students versus 5 students will be the same.
+
+b. No. It won't interfere with the other’s when both classes are called.
+   Cause it is placed it in different memory location
+ */
+
+
+
 public class StudentStack {
         private String[] name=new String[50];
         private int[] marks=new int[50];
