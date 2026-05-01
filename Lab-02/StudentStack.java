@@ -27,4 +27,14 @@ public class StudentStack {
         System.out.println("top elements: ");
         students[count - 1].display();
     }
+    public void display(){
+        if (count == 0) {
+            System.out.println("Stack is empty");
+            return;
+        }
+        System.out.println("Stack elements: ");
+        for(int i=0;i<count;i++){
+            students[i].display();
+        }
+    }
 }
