@@ -16,5 +16,6 @@ public class Main {
             Stack.push(name, mark);
         }
 
+        Stack.peek();
     }
 }
