@@ -18,4 +18,17 @@
 */
 
 public class StudentQueue {
+    private String[] Names = new String[60];
+    private double[] Marks = new double[60];
+    private int count = 0;
+
+    public void enqueue(String Names, double Marks) {
+        if (count>= 60) {
+            System.out.println("Queue is full");
+            return;
+        }
+        this.Names[count] = Names;
+        this.Marks[count] = Marks;
+        count++;
+    }
 }
