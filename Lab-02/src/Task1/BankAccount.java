@@ -18,7 +18,7 @@ b.  Three actions a customer can perform -
     output -> shows the account holder's name
     and the current balance in the account.
 
-c. It will be difficult to match the            informations of the accounts as there       will be two separate arrays for one task.   We'll face difficulties to match the        corresponding indexes of two arrays and     operation on accounts will become           difficult.
+c. It will be difficult to match the informations of the accounts as there will be two separate arrays for one task. We'll face difficulties to match the corresponding indexes of two arrays and operation on accounts will become difficult.
 
 d. I would add this feature in the BankAccount class. As it will be treated just like other methods.
 

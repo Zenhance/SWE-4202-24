@@ -17,7 +17,6 @@ public class Main {
     alice.printStatement();
     bob.printStatement();
     mahdi.printStatement();
-
     }
 }
 
