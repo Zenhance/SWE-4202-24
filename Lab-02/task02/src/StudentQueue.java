@@ -19,7 +19,7 @@ public class StudentQueue {
         count++;
 
     }
-public void dequeue(){
+    public void dequeue(){
         if (count == 0) {
             System.out.println("ERROR:QUEUE IS EMPTY");
         return;

@@ -11,6 +11,7 @@ public class BankAccount {
         System.out.println("ERROR");
     }
     else{
+
         balance = balance + amount;
     }
         public void withdraw(double amount) {
