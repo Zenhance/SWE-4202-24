@@ -30,16 +30,21 @@ class StudentStack
             System.out.println("Stack Is Empty!");
         }
         count--;
-        System.out.println(names[count]+" "+marks[count]);
+        System.out.println("Remooved Student : "+names[count]+" "+marks[count]);
     }
 
     public void peek()
     {
-
+        if(count==0)
+        {
+            System.out.println("Stack Is Empty!");
+        }
+        System.out.println("Student At Top : "+names[count-1]+" "+marks[count-1]);
     }
 
     public void display()
     {
+        System.out.println("Student List : ");
         for(int i=0;i<count;i++)
         {
             System.out.println(names[i]+" "+marks[i]);
