@@ -47,7 +47,7 @@ public class StudentStack{
            return ;
        }
        for(int i=0; i<=count; i++){
-           System.out.println(list[i]);
+           System.out.println(list[i].name+ "  "+list[i].mark);
        }
 
     }
