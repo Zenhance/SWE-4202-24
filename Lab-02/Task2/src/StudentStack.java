@@ -1,9 +1,9 @@
 public class StudentStack {
     private String[] name=new String[50];
-    private double[] mark=new double[50];
+    private int[] mark=new int[50];
     private int count;
 
-    StudentStack (String name,double mark){
+    StudentStack (String name[],int mark[]){
         this.name=name;
         this.mark=mark;
         this.count =0;
