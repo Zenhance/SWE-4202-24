@@ -18,6 +18,9 @@ public class StudentStack {
             return;
         }
         count--;
-        System.out.println("Name:"+this.name[count] + " Marks: " + this.marks[count]);
+        System.out.println("Name:" +this.name[count] + " Marks: " + this.marks[count]);
+    }
+    public void peek(){
+       System.out.println("Name: "+this.name[count-1]);
     }
 }
