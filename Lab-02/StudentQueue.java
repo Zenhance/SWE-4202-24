@@ -30,4 +30,14 @@ public class StudentQueue{
         students[0].display();
 
     }
+    public void display(){
+        if(count==0){
+            System.out.println("Queue is empty");
+            return;
+        }
+        System.out.println("Queue elements: ");
+        for(int i=0;i<count;i++){
+            students[i].display();
+        }
+    }
 }
