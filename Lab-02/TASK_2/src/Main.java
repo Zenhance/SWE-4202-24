@@ -30,7 +30,7 @@ class StudentStack
             System.out.println("Stack Is Empty!");
         }
         count--;
-        System.out.println("Remooved Student : "+names[count]+" "+marks[count]);
+        System.out.println("Removed Student : "+names[count]+" "+marks[count]);
     }
 
     public void peek()
@@ -53,21 +53,27 @@ class StudentStack
 }
 class StudentQueue
 {
-    private String[] name;
-    private int[] mark;
+    private String[] names;
+    private int[] marks;
     private int count;
     private int total=5;
 
     public StudentQueue()
     {
-        this.name=new String[total];
-        this.mark=new int[total];
+        this.names=new String[total];
+        this.marks=new int[total];
         this.count=0;
     }
 
     public void enqueue(String name, int mark)
     {
-
+        if(count==total)
+        {
+            System.out.println("Queue Is Full!");
+        }
+        names[count]=name;
+        marks[count]=mark;
+        count++;
     }
     public void dequeue()
     {
