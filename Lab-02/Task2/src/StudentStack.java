@@ -38,4 +38,19 @@ public void display(){
         System.out.print(n[i]+" "+m[i]);
     }
 }
+public static void Main(String[] args){
+    StudentStack stk =new StudentStack();
+    stk.push("Sukuna",90);
+    stk.push("gojo",62);
+    stk.push("naruto",23);
+    stk.push("tom",99);
+    stk.push("jerry",100);
+
+    stk.pop();
+    stk.pop();
+    stk.pop();
+
+    stk.display();
+}
+
 }
