@@ -40,6 +40,15 @@ public class Main
         BankAccount bob = new BankAccount("Bob");
         BankAccount charlie = new BankAccount("Charlie");
 
+        alice.deposit(500);
+        alice.withdraw(300);
+
+        bob.deposit(1000);
+        bob.withdraw(500);
+
+        charlie.deposit(1500);
+        charlie.withdraw(700);
+
         alice.printStatement();
         bob.printStatement();
         charlie.printStatement();
