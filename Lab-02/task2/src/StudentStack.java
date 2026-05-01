@@ -14,4 +14,15 @@ public class StudentStack {
             cnt++;
         }
 
+        public void pop(){
+            if(cnt==0){
+                System.out.println("Stack is empty");
+                return;
+            }
+            System.out.println("Student name: "+name[cnt-1]+" \nMarks: "+marks[cnt-1]);
+
+        }
+
+
+
 }
