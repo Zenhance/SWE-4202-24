@@ -41,7 +41,7 @@ public class StudentQueue {
         if (cnt - 1 < 0) {
             System.out.println("Empty Queue");
         }
-        System.out.println(this.name[0] + " " + this.marks[0]);
+        System.out.println("Dequeued: " + this.name[0] + ": " + this.marks[0] + "\n");
 
         for (int i = 0; i < cnt - 1; i++) {
             this.name[i] = this.name[i + 1];
@@ -51,12 +51,12 @@ public class StudentQueue {
     }
 
     public void front() {
-        System.out.println(this.name[0] + " " + this.marks[0]);
+        System.out.println("Front " + this.name[0] + ": " + this.marks[0] + "\n");
     }
 
     public void display() {
         for (int i = 0; i < cnt; i++) {
-            System.out.println(this.name[i] + " " + this.marks[i]);
+            System.out.println(this.name[i] + ": " + this.marks[i]);
         }
     }
 }

@@ -1,4 +1,3 @@
-
 public class Main {
 
     public static void main(String[] args) {
@@ -38,6 +37,7 @@ public class Main {
         queue.dequeue();
         queue.dequeue();
 
+        System.out.println("Students in Queue:");
         queue.display();
     }
 }

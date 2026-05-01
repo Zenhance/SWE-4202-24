@@ -41,7 +41,7 @@ public class StudentStack {
         if (cnt - 1 < 0) {
             System.out.println("Empty Stack");
         }
-        System.out.println("Popped: " + this.name[cnt - 1] + " " + this.marks[cnt - 1] + "\n");
+        System.out.println("Popped: " + this.name[cnt - 1] + ": " + this.marks[cnt - 1] + "\n");
         cnt--;
     }
 
@@ -50,13 +50,13 @@ public class StudentStack {
         if (cnt == 0) {
             System.out.println("Empty Stack");
         }
-        System.out.println("Top " + this.name[cnt - 1] + " " + this.marks[cnt - 1] + "\n");
+        System.out.println("Top " + this.name[cnt - 1] + ": " + this.marks[cnt - 1] + "\n");
     }
 
     // Adding Display
     public void display() {
         for (int i = 0; i < cnt; i++) {
-            System.out.println(this.name[i] + " " + this.marks[i]);
+            System.out.println(this.name[i] + ": " + this.marks[i]);
         }
     }
 }
