@@ -50,3 +50,16 @@ public class BankAccount {
         danik.printStatement();
     }
 }
+
+/* Part C
+   a. BankAccount is a class. alice and bob are objects.
+   b. Alice's balance changes. Because through this syntax alice.deposit(500),
+      we are telling the computer to make changes in Alice's account.
+   c. alice
+      name = "Alice"
+      balance = 0.0;
+      bob
+      name = "Bob"
+      balance = 0.0;
+   d. Bob's account will also have 100 as Alice's.
+ */
