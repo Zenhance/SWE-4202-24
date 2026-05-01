@@ -31,4 +31,16 @@ public class StudentQueue {
         this.Marks[count] = Marks;
         count++;
     }
+    public void dequeue(){
+        if (count == 0) {
+            System.out.println("Queue is empty");
+            return;
+        }
+        System.out.println(this.Names[0] + " " + this.Marks[0]);
+        for (int i = 0; i < count-1; i++){
+            this.Names[i] = this.Names[i+1];
+            this.Marks[i] = this.Marks[i+1];
+        }
+        count--;
+    }
 }
