@@ -13,4 +13,18 @@ class StackMain{
             s.display();
         }
     }
-
+class QueueMain{
+    static void main(String[] args) {
+       StudentQueue q=new StudentQueue();
+        q.enqueue("Harry",95);
+        q.enqueue("Ron",88);
+        q.enqueue("Hermayni",92);
+        q.enqueue("Luna",87);
+        q.enqueue("Nolan",86);
+        q.front();
+        q.dequeue();
+        q.dequeue();
+        q.dequeue();
+        q.display();
+    }
+}
