@@ -8,5 +8,6 @@ public class StudentQueue{
         }
         students[count]=new Student(name,mark);
         count++;
+
     }
 }
