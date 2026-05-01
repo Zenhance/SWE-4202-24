@@ -19,5 +19,12 @@ public class Main{
 
         stack.display();
 
+        System.out.println("For the queue:");
+        StudentQueue queue = new StudentQueue(names,marks);
+        queue.enqueue("Alice",100);
+        queue.enqueue("Bob",90);
+        queue.enqueue("Jenny",80);
+        queue.enqueue("Harry",70);
+        queue.enqueue("Zayn",85);
     }
 }
