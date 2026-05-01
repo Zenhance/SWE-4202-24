@@ -25,7 +25,12 @@ class StudentStack
 
     public void pop()
     {
-
+        if(count==0)
+        {
+            System.out.println("Stack Is Empty!");
+        }
+        count--;
+        System.out.println(names[count]+" "+marks[count]);
     }
 
     public void peek()
