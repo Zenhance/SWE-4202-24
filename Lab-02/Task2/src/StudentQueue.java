@@ -18,8 +18,8 @@ public class StudentQueue {
         return;
     }
           for (int i=0;i<count-1;i++){
-              this.name[i]=this.name[i-1];
-              this.mark[i]=this.mark[i-1];
+              this.name[i]=this.name[i+1];
+              this.mark[i]=this.mark[i+1];
               count--;
           }
 
