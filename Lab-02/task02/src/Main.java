@@ -26,5 +26,19 @@ public class Main{
         queue.enqueue("Jenny",80);
         queue.enqueue("Harry",70);
         queue.enqueue("Zayn",85);
+
+        queue.front();
+
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
+
+
+
+
+
+
+
+
     }
 }
