@@ -77,7 +77,19 @@ class StudentQueue
     }
     public void dequeue()
     {
+        if(count==0)
+        {
+            System.out.println("Queue Is Empty!");
+        }
+        count--;
+        System.out.println("Removed Student : "+names[0]+" "+marks[0]);
 
+        for(int i=0;i<count-1;i++)
+        {
+            names[i]=names[i+1];
+            marks[i]=marks[i+1];
+        }
+        count--;
     }
 
     public void front()
