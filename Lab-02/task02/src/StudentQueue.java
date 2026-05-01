@@ -12,8 +12,8 @@ ans: Total individual moves = n*(n+1)/2 - (1 + 2 + 3 + 4)
 
 b. You have now written three classes — StudentList, StudentStack, and StudentQueue
 
-— all using the same private array and count. The only real difference is which meth-
-ods are available to outside code. In one sentence, explain why hiding the array as
+— all using the same private array and count. The only real difference is which
+methods are available to outside code. In one sentence, explain why hiding the array as
 private makes this possible.
 ans:Because the array is private, outside code cannot directly modify it.
    This allows each class to enforce different rules (stack or queue)
