@@ -21,8 +21,19 @@ private makes this possible.
 the public methods can be used by outside code , allowing different classes to use the same 
 array structure behaving differently.
 
-
 */
 public class StudentQueue {
 
+    private String[] name = new String[50];
+    private int[] marks = new int[50];
+    private int cnt = 0;
+
+    public void enqueue(String name, int marks){
+        if (cnt + 1 > 50) {
+            System.out.println("Full Queue");
+        }
+        this.name[cnt] = name;
+        this.marks[cnt] = marks;
+        cnt++;
+    }
 }
