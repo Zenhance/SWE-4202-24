@@ -112,4 +112,17 @@ public class StudentQueue {
     }
 
 }
+/*part--c
+In StudentStack.java-
+a) The speed will not vary based on the size and it takes the same amount of time whether because both push()
+and pop() operations deal with the top of the stack. So, if there are 5 students or 50,the time
+complexity is always the same.
+b) No. Because the count of one object doesn't affect that of another object. In object oriented programming,
+objects have their memory space for variables.
+
+In StudentQueue.java-
+a) For the removal of elements from a queue of 50 elements, 45 times,it would need about 1035 single element shifts
+for  each removal operation, all other elements have to be shifted one place to the left.
+b) By making the array private, it could be ensured that every data is protected and hidden outside the class.
+Consequently, every class can maintain their unique principles of stack and queue.*/
 
