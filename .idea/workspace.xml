@@ -59,6 +59,12 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\SWE-4202-24_\Lab-02/Task2" />
+      <recent name="D:\SWE-4202-24_\Task2" />
+    </key>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="559d1c85-8102-47da-9638-78d32035fbf7" name="Changes" comment="" />
@@ -66,7 +72,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1777670140152</updated>
-      <workItem from="1777670141372" duration="5787000" />
+      <workItem from="1777670141372" duration="6504000" />
     </task>
     <task id="LOCAL-00001" summary="Queue QnA part done">
       <option name="closed" value="true" />
