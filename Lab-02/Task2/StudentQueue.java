@@ -64,5 +64,17 @@ public class StudentQueue
         }
     }
 
+    public void front()
+    {
+        if(count == 0)
+        {
+            System.out.println("Error. Queue is empty.");
+        }
+        else
+        {
+            System.out.println(names[0] + " with " + marks[0] + " is at front of the queue.");
+        }
+    }
+
 
 }
