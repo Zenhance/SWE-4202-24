@@ -6,7 +6,8 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/Lab-02/task1" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/out" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/task2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Lab-02/src" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/task2" />
     </content>
     <content url="file://$MODULE_DIR$/out" />
     <orderEntry type="inheritedJdk" />

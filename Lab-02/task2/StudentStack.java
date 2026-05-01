@@ -1,3 +1,4 @@
+package task2;
 public class StudentStack {
     String[] names;
     double[] marks;
@@ -41,3 +42,4 @@ public class StudentStack {
         }
     }
 }
+

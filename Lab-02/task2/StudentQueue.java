@@ -1,3 +1,5 @@
+package task2;
+
 public class StudentQueue {
     String[] names;
     double[] marks;
@@ -40,4 +42,5 @@ public class StudentQueue {
             System.out.println("Name:" + names[i] + " Marks" + marks[i]);
         }
     }
+
 }
