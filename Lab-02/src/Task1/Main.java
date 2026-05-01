@@ -5,5 +5,15 @@ public class Main {
         BankAccount alice = new BankAccount("Alice");
         BankAccount bob = new BankAccount("Bob");
         BankAccount mahdi = new BankAccount("Mahdi");
+
+    alice.deposit(1000);
+    bob.deposit(1499);
+    mahdi.deposit(2000);
+
+
     }
 }
+
+
+
+
