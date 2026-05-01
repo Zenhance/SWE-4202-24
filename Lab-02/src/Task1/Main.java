@@ -10,6 +10,11 @@ public class Main {
     bob.deposit(1499);
     mahdi.deposit(2000);
 
+    alice.withdraw(450);
+    bob.withdraw(1500);
+    mahdi.withdraw(2000);
+
+
 
     }
 }
