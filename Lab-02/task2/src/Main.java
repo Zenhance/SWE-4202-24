@@ -18,5 +18,6 @@ public class Main {
 
         Stack.peek();
         Stack.pop();
+
     }
 }
