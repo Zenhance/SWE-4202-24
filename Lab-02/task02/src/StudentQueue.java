@@ -31,4 +31,9 @@ public void dequeue(){
         }
         count--;
     }
+    public void front(){
+        System.out.println("Name:"+names[0]+"Marks"+marks[0]);
+    }
+
+
 }
