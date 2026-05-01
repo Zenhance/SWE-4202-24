@@ -113,6 +113,22 @@ public class Main
 {
     public static void main(String[] args)
     {
+        StudentStack stack=new StudentStack();
+
+        stack.push("Zunied",90);
+        stack.push("Raiyan",80);
+        stack.push("Rusafi",75);
+        stack.push("Tajwar",97);
+        stack.push("Tanvir",86);
+
+        stack.peek();
+
+        stack.pop();
+        stack.pop();
+        stack.pop();
+
+        stack.display();
+
 
     }
 }
