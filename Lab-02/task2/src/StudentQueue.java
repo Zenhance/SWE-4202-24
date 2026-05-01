@@ -1,3 +1,15 @@
+/*
+a. If the queue holds 50 students and I dequeue 45 times then at first it will move 49 spaces
+   then 48 and 47 ...lastly 5 times so the total movement will be sum of
+   1->49 -(1+2+3+4)=49x50/2-10=1215 times
+
+b. Using private in array and cnt,others can't access it's data.
+
+ */
+
+
+
+
 public class StudentQueue {
 
     private String[] name=new String[50];
