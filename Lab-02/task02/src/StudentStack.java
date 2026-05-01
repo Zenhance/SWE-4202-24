@@ -19,5 +19,18 @@ public class StudentStack {
         count++;
 
     }
+    public void pop(){
+        if(count==0){
+            System.out.println("ERROR:STACK IS EMPTY");
+            return;
+        }
+        System.out.println(names[count-1]+" "+marks[count-1]);
+        count--;
+    }
+
+
+
+
+
 }
 
