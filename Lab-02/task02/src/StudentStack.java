@@ -27,7 +27,9 @@ public class StudentStack {
         System.out.println(names[count-1]+" "+marks[count-1]);
         count--;
     }
-
+    public void peek(){
+        System.out.println(names[count-1]+" "+marks[count-1]);
+    }
 
 
 
