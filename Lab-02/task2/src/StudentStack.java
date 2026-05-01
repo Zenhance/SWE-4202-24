@@ -1,44 +1,57 @@
-public class StudentStack {
-    private int capacity;
-    private Student[] list; //declaring the variable for the array.
+// sir has asked to take two parameters of student name and marks in the push method,but i created a separate class for it
+
+
+public class StudentStack{
+    private Student[] list;
+    private int  maximum_capacity;
     private int count;
 
-    public StudentStack(int capacity){
-        list=new Student[capacity]; //declaring the array
+    public StudentStack(int maximum_capacity){
+        this.maximum_capacity=maximum_capacity;
+        list= new Student[maximum_capacity];
         count=-1;
     }
 
     public void push(Student s){
-        if(count== capacity-1){
-           System.out.println("Error, stack overflow");
+        if(count==maximum_capacity-1){
+            System.out.println("ERROR!");
         }
         count++;
         list[count]=s;
     }
 
-    public void pop(Student s){
+    public Student pop(){
         if(count==-1){
-            System.out.println("Error, stack underflow");
+            System.out.println("ERROR");
+            return null;
         }
         Student temp=list[count];
-        System.out.println(temp);
         count--;
+        return temp;
     }
 
-    public void peek(Student s){
+
+
+    public Student peek(){
         if(count==-1){
-            System.out.println("Error");
+            System.out.println("ERROR");
+            return null;
         }
-        System.out.println(list[count]);
+        return list[count];
     }
 
 
-    public void display(Student s){
-        for(int i=0; i<count; i++){
-            System.out.println(list[i]);
-        }
-    }
+    public void display(){
+       if(count==-1){
+           System.out.println("ERROR");
+           return ;
+       }
+       for(int i=0; i<=count; i++){
+           System.out.println(list[i]);
+       }
 
-    // there are lots of mistakes here,i am trying again.
+    }
 
 }
+
+// this is the corrected version
