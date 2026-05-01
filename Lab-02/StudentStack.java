@@ -19,4 +19,12 @@ public class StudentStack {
     students[count-1].display();
     count--;
     }
+    public void peek() {
+        if (count == 0) {
+            System.out.println("Stack is empty");
+            return;
+        }
+        System.out.println("top elements: ");
+        students[count - 1].display();
+    }
 }
