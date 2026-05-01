@@ -7,39 +7,41 @@ public class StudentStack
 
     public void push(String name, int mark)
     {
+        if (count >= 99)
         {
-            if(count >= 99)
-            {
-                System.out.println("Error: Stack is full.");
-            }
-            else
-            {
-                names[count] = name;
-                marks[count] = mark;
-                count++;
-            }
+            System.out.println("Error: Stack is full.");
         }
-    }
-
-    public void peek()
-    {
-        System.out.println("Top: " + names[count - 1]  + " " + marks[count - 1] );
+        else
+        {
+            names[count] = name;
+            marks[count] = mark;
+            count++;
+        }
     }
 
     public void pop()
     {
-        if(count==0)
+        if(count == 0)
         {
             System.out.println("Error: Stack is empty.");
             return;
         }
         count--;
-        System.out.println("Popped: " + names[count] + " " + marks[count] );
+        System.out.println("Popped: " + names[count] + " " + marks[count]);
+    }
+
+    public void peek()
+    {
+        System.out.println("Top: " + names[count - 1] + " " + marks[count - 1]);
     }
 
     public void display()
     {
-        for(int i = 0; i < count; i++)
+        System.out.println("(Top)");
+        for (int i = count - 1; i >= 0; i--)
+        {
             System.out.println(names[i] + " " + marks[i]);
+        }
+        System.out.println("(Bottom)");
     }
 }

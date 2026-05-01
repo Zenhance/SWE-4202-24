@@ -7,16 +7,55 @@ public class StudentQueue
 
     public void enqueue(String name, int mark)
     {
-        if(count==0)
+        if(count >= 99)
+        {
+            System.out.println("Error: Queue is full.");
+        }
+        else
+        {
+            names[count] = name;
+            marks[count] = mark;
+            count++;
+        }
+    }
+
+    public void dequeue()
+    {
+        if(count == 0)
         {
             System.out.println("Error: Queue is empty.");
         }
-        System.out.println("Dequeued: " + names[0] + " " + marks[0]);
-        for(int i = 0; i < count - 1; i++)
+        else
         {
-            names[i] = names[i + 1];
-            marks[i] = marks[i + 1];
+            System.out.println("Dequeued: " + names[0] + " " + marks[0]);
+            for(int i = 0; i < count - 1; i++)
+            {
+                names[i] = names[i + 1];
+                marks[i] = marks[i + 1];
+            }
+            count--;
         }
-        count--;
+    }
+
+    public void front()
+    {
+        if(count == 0)
+        {
+            System.out.println("Error: Queue is empty.");
+        }
+        else
+        {
+            System.out.println("Front: " + names[0] + " " + marks[0]);
+        }
+    }
+
+    public void display()
+    {
+        System.out.println("(Front)");
+        for(int i = 0; i < count; i++)
+        {
+            System.out.println(names[i] + " " + marks[i]);
+        }
+        System.out.println("(Rear)");
     }
 }

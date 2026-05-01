@@ -17,8 +17,8 @@ public class Main
             int mark = sc.nextInt();
             Stack.push(name, mark);
         }
-        Stack.peek();
         Stack.pop();
+        Stack.peek();
         Stack.display();
 
 
@@ -33,6 +33,9 @@ public class Main
             int mark = sc.nextInt();
             Queue.enqueue(name, mark);
         }
-
+        Queue.dequeue();
+        Queue.front();
+        Queue.display();
+        sc.close();
     }
 }
