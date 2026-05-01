@@ -12,6 +12,8 @@ public class StudentQueue {
              }
     }
     public void dequeue(){
-
+          for (int i=0;i<count-1;i++){
+              this.name[i]=this.name[i-1];
+          }
     }
 }
