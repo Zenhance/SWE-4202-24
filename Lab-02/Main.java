@@ -13,5 +13,17 @@ public class Main {
         s1.pop();
         System.out.println("DISPLAY:");
         s1.display();
-
+        StudentQueue q1 = new StudentQueue();
+        for (int i = 1; i <= 5; i++) {
+            q1.enqueue("Student" + i, 50 + i);
+        }
+        System.out.println("FRONT");
+        q1.front();
+        System.out.println("DEQUEUE");
+        q1.dequeue();
+        q1.dequeue();
+        q1.dequeue();
+        System.out.println("DISPLAY");
+        q1.display();
+    }
 }
