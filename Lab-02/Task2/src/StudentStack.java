@@ -33,7 +33,9 @@ public void pop(){
   System.out.println(n[tp]+" "+m[tp]);
   cnt--;
 }
-
-
-
+public void display(){
+    for(int i=0;i<cnt;i++){
+        System.out.print(n[i]+" "+m[i]);
+    }
+}
 }
