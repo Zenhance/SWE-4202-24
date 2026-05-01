@@ -44,7 +44,7 @@ class StudentStack
 
     public void display()
     {
-        System.out.println("Student List : ");
+        System.out.println("Student Stack : ");
         for(int i=0;i<count;i++)
         {
             System.out.println(names[i]+" "+marks[i]);
@@ -102,7 +102,11 @@ class StudentQueue
 
     public void display()
     {
-
+        System.out.println("Student Queue : ");
+        for(int i=0;i<count;i++)
+        {
+            System.out.println(names[i]+" "+marks[i]);
+        }
     }
 }
 public class Main
