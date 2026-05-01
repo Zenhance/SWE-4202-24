@@ -43,4 +43,7 @@ public class StudentQueue {
         }
         count--;
     }
+    public void front(){
+        System.out.println(this.Names[0] + " " + this.Marks[0]);
+    }
 }
