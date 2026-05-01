@@ -6,21 +6,31 @@ b) No , one count can not interfere another count ,
 because it has given an instance variable and every object gets its own separate copy
  */
 
-private static final int MAX=50;
+private static final int STK=50;
 private String[] n;
 private int []m;
 private int cnt;
 
 public StudentStack(){
-    n=new String[MAX];
+    n=new String[STK];
     cnt=0;
-    m=new int[MAX];
+    m=new int[STK];
 }
 public void push(String name, int mar){
-    n[cnt]=name;
-    m[cnt]=mar;
-    cnt++;
+    if(cnt==STK){
+        System.out.println("ERROR");
+    }else {
+        n[cnt] = name;
+        m[cnt] = mar;
+        cnt++;
+    }
 }
+public void pop(){
+    
+  int tp=cnt-1;
+  System.out.println(n[tp]+" "+m[tp]);
+}
+
 
 
 }
