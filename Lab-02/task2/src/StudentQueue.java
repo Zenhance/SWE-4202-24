@@ -26,4 +26,9 @@ public class StudentQueue {
     public void front(){
         System.out.println("Name: "+this.name[0] + " Mark:" + this.marks[0]);
     }
+    public void display(){
+        for (int i = 0; i < count; i++){
+            System.out.println("Name: "+this.name[i] + " Mark:" + this.marks[i]);
+        }
+    }
 }
