@@ -1,4 +1,11 @@
+/*
+a. What information does every account need to store? List each piece and the type
+you would use.
 
+
+
+
+*/
 public class Main {
     public static void main(String[] args) {
 
@@ -6,15 +13,19 @@ public class Main {
         BankAccount moin = new BankAccount("Moin");
         BankAccount arnob= new BankAccount("Arnob");
 
-        tahsin.withdraw(690);
-        moin.withdraw(650);
-        arnob.withdraw(666);
 
-        tahsin.deposit(500);
-        moin.deposit(250);
-        arnob.deposit(333);
+        tahsin.deposit(1000000);
+        tahsin.withdraw(50000);
 
-        arnob.printing();
+        moin.deposit(12433333);
+        moin.withdraw(3333);
+
+        arnob.deposit(500000);
+        arnob.withdraw(4000);
+
+        tahsin.printStatement();
+        moin.printStatement();
+        arnob.printStatement();
 
 
     }
