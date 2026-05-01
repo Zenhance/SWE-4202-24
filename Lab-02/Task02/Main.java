@@ -28,5 +28,9 @@ public class Main {
         }
 
         queue.front();
+
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
     }
 }
