@@ -7,7 +7,6 @@ b) No, one object's count can't interefere with another. Each object has it's ow
 
 public class StudentStack{
 
-}
     private String[] names;
     private int[] marks;
     private int count;
@@ -46,5 +45,22 @@ public class StudentStack{
         for (int i = 0; i < count; i++) {
             System.out.println(names[i] + " (" + marks[i] + ")");
         }
+    }
+    public static void main(String[] args) {
+    StudentStack s = new StudentStack();
+
+    s.push("A", 80);
+    s.push("B", 85);
+    s.push("C", 90);
+    s.push("D", 75);
+    s.push("E", 88);
+
+    s.peek();
+
+    s.pop();
+    s.pop();
+    s.pop();
+
+    s.display();
     }
 }
