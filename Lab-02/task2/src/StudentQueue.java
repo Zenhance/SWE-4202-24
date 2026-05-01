@@ -1,3 +1,23 @@
+//a
+   /* after each dequeue the queue shift one step to the left. so
+      after 1st dequeue shift= 50-1 =49
+      after 2nd dequeue shift= 50-2 =48
+      after 3rd dequeue shift= 50-3 =47
+
+      so after each dequeue shift= total - number of dequeue
+
+      after 45th dequeue shift= 50-45 =5
+
+      therefore total shifts= 49+48+47+...........+5=1215
+    */
+
+//b
+   /* we have declared the array as private. as a result though the three classes uses the same array
+      they cannot influence or change one another. no outside code can directly access it or modify it.
+      for this reason each class can behave differently imposing its own rule
+    */
+
+
 public class StudentQueue {
     private String[] name = new String[50];
     private int[] marks = new int[50];
