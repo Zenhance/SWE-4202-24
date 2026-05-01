@@ -1,3 +1,10 @@
+/*
+    a)First deque will take 49 shifts, 2nd will take 48 shits and so on. total number of shifts=49+48+...+1.
+
+
+*?
+ */
+
 public class StudentQueue {
     private String[] name = new String[100];
     private int[] marks = new int[100];

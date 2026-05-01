@@ -1,3 +1,12 @@
+/*
+a)Shifting elements decreasing speed. The more elements the more operations and more times takes. in 50 students array it will take 10 times more time than 5 stduents array.
+but, as push and pop don't shift studets, it will not matter, if there is 5 or 50 students.
+
+b)NO.the private fields in different class. and each object will get separate memeory
+* */
+
+
+
 public class StudentStack {
     private String[] name = new String[100];
     private int[] marks = new int[100];
