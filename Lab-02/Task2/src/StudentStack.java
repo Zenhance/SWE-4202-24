@@ -34,5 +34,7 @@ public class StudentStack {
 }
 /*
 A.The speed will remain same.
-2.
+
+B.No, one object's count cannot interfere with another because each object has
+    its own separate memory, so their data is independent.
  */
