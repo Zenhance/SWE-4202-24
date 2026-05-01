@@ -13,6 +13,7 @@ Ans:- No, it is not going to interfere with one another's object count.
  gets it's own separate memory.
 
  */
+
 public class StudentStack {
     private String[] Name = new String[60];
     private double[] mark= new double[60];
