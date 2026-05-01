@@ -8,7 +8,7 @@ slower when the queue size is large.
 
 b. Keeping the array private allows the class to control how the data is used through
 specific methods only. Because outside code cannot directly access the array, the
-same array structure can behave like a list, stack, or queue depending on which
+same array structure can   behave like a list, stack, or queue depending on which
 methods the class   provides.
 */
 public class StudentQueue {
