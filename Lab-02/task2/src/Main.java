@@ -1,6 +1,5 @@
 public class Main {
     public static void main(String[] args) {
-
         StudentStack stack = new StudentStack(10);
         StudentQueue queue = new StudentQueue(10);
 
