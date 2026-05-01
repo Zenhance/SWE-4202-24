@@ -20,7 +20,7 @@ public class StudentStack {
     private int count = 0;
 
     public void push(String Name,double mark){
-        if (count +1 > 60){
+        if (count >= 60){
             System.out.println("Stack is full");
             return;
         }
@@ -43,5 +43,9 @@ public class StudentStack {
         }
         System.out.println(this.Name[count-1]+" "+ this.mark[count-1]);
     }
-
+    public void display(){
+        for (int i = 0; i < count; i++){
+            System.out.println(this.Name[i] + " " + this.mark[i]);
+        }
+    }
 }
