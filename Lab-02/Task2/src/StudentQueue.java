@@ -36,7 +36,14 @@ public class StudentQueue {
     }
 }
 /*
-A.
+A.Total individual moves = n*(n+1)/2 - (1 + 2 + 3 + 4)
+                                = 49*50/2 - 10
+                                = 1215
+        In every dequeue we need to move count-1 elements. so the number of moves per
+        dequeue 49, 48, 47, 46,....
+        As we dequeued 45 elements, we do not need to count for last
+        4 element's dequeue's move count. Hence, 49*50/2 - 10.
+
 
 
 B.Because the array is private, outside code cannot directly modify it.
