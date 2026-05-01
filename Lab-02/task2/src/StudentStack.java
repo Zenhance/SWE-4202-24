@@ -1,4 +1,15 @@
+/*
+(a)
+Ans:
+Push and pop always work at the top (end) of the stack. They don’t move any other elements.
+So the time it takes is the same whether there are 5 students or 50 students. The size doesn’t affect the speed.
 
+(b)
+Ans:
+No, it cannot. Each object has its own separate count variable.
+Because count is private, it belongs only to that specific object.
+So if we create two stacks, their counts are completely independent.
+*/
 
 public class StudentStack {
     private String[] name;
