@@ -28,5 +28,6 @@ public class StudentQueue{
         }
         System.out.println("Front: ");
         students[0].display();
+
     }
 }
