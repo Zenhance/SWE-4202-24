@@ -1,7 +1,9 @@
 package src;
 import java.util.Scanner;
-public class Main {
-    public static void main(String[] args) {
+public class Main
+{
+    public static void main(String[] args)
+    {
         Scanner sc = new Scanner(System.in);
 
         //Stack
@@ -15,9 +17,11 @@ public class Main {
             int mark = sc.nextInt();
             Stack.push(name, mark);
         }
-
         Stack.peek();
         Stack.pop();
+        Stack.display();
 
+
+        //
     }
 }
