@@ -24,3 +24,13 @@ b. Because private hides the array from outside code, each
    bypass the rule by indexing the array directly.
 */
 
+package Task2;
+
+public class StudentQueue
+{
+    private int count = 0;
+    private String[] names = new String[10];
+    private int[] marks = new int[10];
+
+
+}
