@@ -14,7 +14,9 @@ public class Main {
     bob.withdraw(1500);
     mahdi.withdraw(2000);
 
-
+    alice.printStatement();
+    bob.printStatement();
+    mahdi.printStatement();
 
     }
 }
