@@ -1,3 +1,11 @@
+/*a. In a queue, every dequeue requires shifting all the remaining students one position to the left. If we remove 45 students from a queue of 50, this shifting happens many times, adding up to more than 1000 moves. That’s why dequeue is much slower compared to stack operations.
+
+b. The array is private, which means it cannot be accessed directly from outside the class. This forces all interactions to happen through methods like enqueue and dequeue. Because of this, different classes can use the same structure safely without interfering with each other.
+*/
+
+
+
+
 public class StudentQueue {
     private String[] names = new String[5];
     private int[] marks = new int[5];

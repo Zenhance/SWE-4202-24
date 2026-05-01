@@ -1,3 +1,13 @@
+/*a. In a stack, push and pop don’t move any other elements, they just work at the top. Because of that, each operation takes the same amount of time no matter how many students are in the stack. So whether there are 5 or 50 students, the speed stays almost the same.
+
+b. No, one object’s count cannot affect another’s. Each object has its own separate count variable stored in memory. Since it is private, it can only be changed through its own methods, so the two objects stay completely independent.
+*/
+
+
+
+
+
+
 public class StudentStack {
     private String[] names = new String[5];
     private int[] marks = new int[5];
