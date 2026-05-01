@@ -56,4 +56,15 @@ public class StudentQueue {
         q.dequeue();
         q.display();
     }
+
+    //part C
+    /*
+a.
+Each dequeue shifts all remaining elements.
+If there are 50 students and we dequeue 45 times, roughly 50 + 49 + ... + 6 ~= 1000+ element moves occur.
+
+b.
+Because the array is private, outside code cannot access or modify it directly.
+Each class controls how the array is used, allowing different behaviors (list, stack, queue) using the same underlying structure.
+*/
 }

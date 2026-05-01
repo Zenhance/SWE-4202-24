@@ -63,4 +63,15 @@ public class StudentStack{
 
     s.display();
     }
+
+    //part C
+    /*
+a.
+push and pop do not shift elements, so operations are constant time.
+Even with 50 students, performance is the same as with 5 students (O(1)).
+
+b.
+No, one object's count cannot interfere with another.
+Each object has its own separate memory, so their data is independent.
+*/
 }
