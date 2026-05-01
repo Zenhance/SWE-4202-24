@@ -8,7 +8,7 @@ almost the same in both cases.
 b. No, the count variable of one object cannot interfere with another object’s count.
 Each object keeps its own separate copy of its private fields. Since count is private,
 it cannot be directly accessed or changed from outside the class, which keeps the
-objects independent from each other.
+objects  independent from  each other.
 */
 public class StudentStack {
     String[] names;
