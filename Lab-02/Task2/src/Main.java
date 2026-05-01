@@ -26,7 +26,7 @@ public class Main {
      q1.dequeue();
      q1.dequeue();
      q1.dequeue();
-     System.out.println("Disply");
+     System.out.println("Display");
         q1.display();
 
 
