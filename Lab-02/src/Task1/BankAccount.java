@@ -55,3 +55,7 @@ public class BankAccount {
         }
     }
 
+    public void printStatement(){
+        System.out.println("Owner's name: " + ownerName + " and current balance: " + balance);
+    }
+}
