@@ -17,5 +17,7 @@ public class Main {
         stack.pop();
 
         stack.display();
+
+        //
     }
 }
