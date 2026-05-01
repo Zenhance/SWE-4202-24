@@ -1,14 +1,10 @@
 public class StudentQueue {
     private String[] name=new String[50];
     private int[] mark=new int[50];
-    private int count;
-    StudentQueue(String name[],int mark[]){
-       this.name=name;
-       this.mark=mark;
-       this.count=0;
-    }
+    public int count=0;
+
     public void enqueue(String name,int mark){
-        if(count>=100){
+        if(count>=50){
             System.out.println("the queue is full!");
             return;
         }

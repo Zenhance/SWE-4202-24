@@ -1,13 +1,8 @@
 public class StudentStack {
     private String[] name=new String[50];
     private int[] mark=new int[50];
-    private int count;
+    public int count=0;
 
-    StudentStack (String name[],int mark[]){
-        this.name=name;
-        this.mark=mark;
-        this.count =0;
-    }
     public void push(String name,int mark){
         if(count>=50){
             System.out.println("The stack is full");
