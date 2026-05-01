@@ -129,6 +129,20 @@ public class Main
 
         stack.display();
 
+        StudentQueue queue=new StudentQueue();
 
+        queue.enqueue("Zunied",90);
+        queue.enqueue("Raiyan",80);
+        queue.enqueue("Rusafi",75);
+        queue.enqueue("Tajwar",97);
+        queue.enqueue("Tanvir",86);
+
+        queue.front();
+
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
+
+        queue.display();
     }
 }
