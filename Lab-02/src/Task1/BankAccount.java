@@ -45,4 +45,13 @@ public class BankAccount {
         }
     }
 
+    public void withdraw(double amount){
+        if((balance - amount) < 0){
+            System.out.println("Insufficient funds");
+            return;
+        }
+        else{
+            balance -= amount;
+        }
+    }
 
