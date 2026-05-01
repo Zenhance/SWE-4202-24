@@ -45,6 +45,19 @@ public class StudentStack {
         System.out.println("Student " + names[count - 1] + " with mark " + marks[count - 1] + " is at top.");
     }
 
+    public void display(){
+        if(count == 0){
+            System.out.println("Error. Nothing to display.");
+            return;
+        }
+        System.out.println("(Top of the Stack)");
+        for(int i = count - 1; i >= 0; i--){
+            System.out.println(names[i] + " " + marks[i]);
+        }
+        System.out.println("(Bottom of the Stack)");
+    }
+
+
 
 }
 
