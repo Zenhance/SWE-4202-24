@@ -26,5 +26,7 @@ public class Main {
         for (int i = 0; i <= 5; i++) {
             queue.enqueue("Student" + i, i + 50);
         }
+
+        queue.front();
     }
 }
