@@ -59,3 +59,14 @@ public class StudentQueue
         System.out.println("(Rear)");
     }
 }
+/*
+    a.
+      Since push and pop operations interact only with the top of the stack without shifting elements,
+      their execution time is constant (O(1)).This means the speed of a single operation remains exactly
+      the same regardless of whether the stack contains 5 students or 50 students.
+
+    b.
+      No, they cannot interfere because each instance of a class occupies its own unique memory space,
+      and the private modifier ensures that each object's data is isolated and accessible only through
+      its own methods.
+*/

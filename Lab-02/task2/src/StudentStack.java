@@ -45,3 +45,18 @@ public class StudentStack
         System.out.println("(Bottom)");
     }
 }
+/*
+    a.
+        Since each dequeue operation requires shifting all remaining count - 1 elements,
+        the total moves for 45 dequeues form a decreasing arithmetic series.
+        1st dequeue: 49 moves
+        45th dequeue: 5 moves
+        Total Moves :n/2(first+last)
+                    =45/2(49+5)
+                    =1215 individual moves
+
+    b.
+        As we are hiding the arrays we need to access via methods where their push/enqueue
+        or pop/dequeue
+        methods differ.
+*/
