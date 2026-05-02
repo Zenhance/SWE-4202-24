@@ -31,4 +31,34 @@ public class StudentQueue {
         marks[count] = mark;
         count++;
     }
+
+    public void pop() {
+        if (count == 0) {
+            System.out.println("Error: stack is empty");
+            return;
+        }
+        count--;
+        System.out.println("Popped: " + names[count] + " (" + marks[count] + ")");
+    }
+
+    public void peek() {
+        if (count == 0) {
+            System.out.println("Stack is empty");
+            return;
+        }
+        System.out.println("Top: " + names[count - 1] + " (" + marks[count - 1] + ")");
+    }
+
+    public void display() {
+        if (count == 0) {
+            System.out.println("Stack is empty");
+            return;
+        }
+        System.out.println("Stack (bottom to top):");
+        for (int i = 0; i < count; i++) {
+            System.out.println("  " + names[i] + " - " + marks[i]);
+        }
+    }
+
+
 }
