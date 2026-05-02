@@ -15,7 +15,7 @@ public class StudentStack {
        }
        students[count] = new Student(name, mark);
        count++;
-       System.out.println("Added " + name);
+       System.out.println("Added " + name + ", " + mark);
     }
 
     public void display() {
@@ -36,7 +36,20 @@ public class StudentStack {
             return;
         }
 
-       System.out.println("Student " + (count) + ": " +
+       System.out.println("Peeked Student " + (count) + ": " +
                students[count-1].name + ", " + students[count-1].mark);
+    }
+
+    public void pop() {
+        if(count==0) {
+            System.out.println("Error: Student list is empty!");
+        }
+        else {
+            System.out.println("Removed Student " + count + ": " +
+                    students[count-1].name + ", " + students[count-1].mark);
+            count--;
+            students[count].name = null;
+            students[count].mark = 0;
+        }
     }
 }

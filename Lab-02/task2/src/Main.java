@@ -10,5 +10,15 @@ public class Main {
         stack.display();
 
         stack.peek();
+
+        stack.push("Rafi", 89);
+        stack.display();
+
+        stack.push("Hasan", 81);
+        stack.display();
+
+        stack.peek();
+        stack.pop();
+        stack.display();
     }
 }
