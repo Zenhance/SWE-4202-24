@@ -27,6 +27,14 @@ public class StudentQueue {
 
         }
     }
+    public void front(){
+        if(count==0){
+            System.out.println("Empty");
+            return;
+        }
+        System.out.println("Front Name:"+this.name[0]);
+        System.out.println("Front Mark:"+this.marks[0]);
+    }
     public void display(){
         if(count == 0){
             System.out.println("Empty");
