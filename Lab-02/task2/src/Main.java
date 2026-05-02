@@ -7,6 +7,5 @@ public class Main {
         stack.display();
         stack.push("Jafar", 83);
         stack.display();
-
     }
 }
