@@ -24,4 +24,14 @@ public class StudentQueue {
         count = 0;
     }
 
+    public void enqueue(String name, int mark) {
+        if (count == 100) {
+            System.out.println("Error: queue is full");
+            return;
+        }
+        names[count] = name;
+        marks[count] = mark;
+        count++;
+    }
+
 }
