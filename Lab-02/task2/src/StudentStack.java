@@ -10,11 +10,23 @@ public class StudentStack {
 
    public void push(String name, int mark) {
        if(count>=MAX) {
-           System.out.println("Student list is full!");
+           System.out.println("Error: Student list is full!");
            return;
        }
        students[count] = new Student(name, mark);
        count++;
        System.out.println("Added " + name);
+   }
+
+   public void display() {
+       if(count==0) {
+           System.out.println("Error: Student list is empty!");
+           return;
+       }
+
+       for(int i=0;i<count;i++) {
+           System.out.println("Student " + (i+1)
+                + ": " + students[i].name + ", " + students[i].mark);
+       }
    }
 }
