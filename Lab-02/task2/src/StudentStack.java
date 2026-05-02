@@ -8,11 +8,12 @@ public class StudentStack {
        this.marks=marks;
        this.count=0;
    }
-   public void push(String[] name,int marks){
+   public void push(String name,int marks){
        if(count == 100){
            System.out.println("Error!");
        }
-       name[count]=name;
-       marks[count]=marks;
+       this.name[count]=name;
+       this.marks[count]=marks;
+       count++;
    }
 }
