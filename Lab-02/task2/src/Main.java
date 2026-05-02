@@ -1,16 +1,24 @@
 public class Main {
-    public static void main(String[] args)
-    {
-        BankAccount acc1 = new BankAccount("Alex");
-        BankAccount acc2 = new BankAccount("blue");
-        Deposit d=new Deposit();
-        Withdraw w=new Withdraw();
-        Statement s=new Statement();
-        d.Deposit(acc1,1000);
-        w.Withdraw(acc1,200);
-        s.Print(acc1);
-        d.Deposit(acc2,500);
-        w.Withdraw(acc2,700);
-        s.Print(acc2);
+    public static void main(String[] args) {
+
+        StudentStack stack = new StudentStack();
+        stack.push("Safwan", 90);
+        stack.push("Ali", 85);
+        stack.push("wasif", 88);
+        stack.push("madrur", 98);
+        stack.display();
+        stack.pop();
+        stack.peek();
+
+        System.out.println("\n");
+
+        StudentQueue queue = new StudentQueue();
+        queue.enqueue("rakin", 70);
+        queue.enqueue("wasif", 75);
+        queue.enqueue("wasifa", 88);
+        queue.enqueue("madrur", 98);
+        queue.display();
+        queue.dequeue();
+        queue.peek();
     }
-}//
+}
