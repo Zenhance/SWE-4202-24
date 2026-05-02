@@ -20,6 +20,7 @@ public class StudentStack {
         count++;
     }
 
+
     public void pop() {
         if (count == 0) {
             System.out.println("Stack is empty");

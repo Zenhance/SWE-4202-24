@@ -12,6 +12,7 @@ public class StudentQueue {
     private int[] marks=new int[50];
     private int count=0;
 
+
     void enqueue(String name, int marks){
         if(count>=50) {
             System.out.println("Queue is full");
