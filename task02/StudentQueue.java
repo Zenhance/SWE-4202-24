@@ -34,4 +34,23 @@ public class StudentQueue {
         count++;
     }
 
+    public void dequeue() {
+        if (count == 0) {
+            System.out.println("Error: queue is empty");
+            return;
+        }
+
+        String removedName = names[0];
+        int removedMark = marks[0];
+
+        // shift everyone left by one
+        for (int i = 0; i < count - 1; i++) {
+            names[i] = names[i + 1];
+            marks[i] = marks[i + 1];
+        }
+
+        count--;
+        System.out.println("Dequeued: " + removedName + " (" + removedMark + ")");
+    }
+
 }
