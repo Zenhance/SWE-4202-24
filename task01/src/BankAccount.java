@@ -2,27 +2,23 @@ public class BankAccount {
     private String name;
     private float balance;
 
-    public BankAccount(String name) {        
+    Public BackAccount(string name){
         this.balance = 0;
-        this.name = name;                    
+        this.name = name;
     }
-
-    public float deposit(float amount) {
+    public float deposit(float amount){
         balance = balance + amount;
         return balance;
     }
-
-    public float withdraw(float amount) {
-        if (amount >= balance) {             
+    public float withdraw(float amount){
+        if( amount =>balance){
             System.out.println("Error\n");
             return balance;
-        } else {
-            balance = balance - amount;
-            return balance;                 
         }
+        else{
+            balance=balance-amount;}
     }
-
-    public void checkBalance() {             
-        System.out.println("Your Balance is: " + balance);
+    public float CheckBalance(String name){
+        System.out.println("Your Balance is :"+balance);
     }
 }
