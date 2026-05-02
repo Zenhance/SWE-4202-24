@@ -1,13 +1,9 @@
 public class StudentStack {
-     String[] name;
-     int[] marks;
-     int count;
+     String[] name=new String[100];
+     int[] marks =new int[100];
+     int count=0;
     final int MAX_SIZE=100;
-   StudentStack(String[] name,int[] marks){
-       this.name=name;
-       this.marks=marks;
-       this.count=0;
-   }
+
    public void push(String name,int marks){
        if(count == 100){
            System.out.println("Error!");
@@ -22,8 +18,8 @@ public class StudentStack {
        }
        else{
            count--;
-           System.out.println("Remove: "+name[count-1]);
-           System.out.println("Marks:"+marks[count-1]);
+           System.out.println("Remove: "+name[count]);
+           System.out.println("Marks:"+marks[count]);
        }
    }
     public void peek(){
