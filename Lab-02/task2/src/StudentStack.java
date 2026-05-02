@@ -48,8 +48,9 @@ public class StudentStack {
             System.out.println("Removed Student " + count + ": " +
                     students[count-1].name + ", " + students[count-1].mark);
             count--;
-            students[count].name = null;
-            students[count].mark = 0;
+            // since I dont need to zero out the removed slot
+            // students[count].name = null;
+            // students[count].mark = 0;
         }
     }
 }
