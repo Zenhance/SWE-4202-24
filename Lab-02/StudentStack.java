@@ -37,4 +37,26 @@ public class StudentStack {
         System.out.println("Name: "+name[count - 1]+" Marks: "+ marks[count - 1]);
     }
 
+    public void display() {
+        for (int i = 0; i < count; i++) {
+            System.out.println("Name:" + this.name[i] + " " + " Marks: " + this.marks[i]);
+        }
+    }
+
+    public static void main(String[] args) {
+        StudentStack stack = new StudentStack();
+        stack.push("Sadeed", 67);
+        stack.push("Anwar", 73);
+        stack.push("Saad", 49);
+        stack.push("Fahim", 51);
+        stack.push("Wasi", 63);
+
+        stack.peek();
+
+        stack.pop();
+        stack.pop();
+        stack.pop();
+
+        stack.display();
+    }
 }

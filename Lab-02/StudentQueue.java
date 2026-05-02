@@ -47,4 +47,22 @@ public class StudentQueue {
         }
     }
 
+
+    public static void main(String[] args) {
+        StudentQueue queue=new StudentQueue();
+        queue.enqueue("Sadeed",82);
+        queue.enqueue("Anwar",78);
+        queue.enqueue("Saad",87);
+        queue.enqueue("Fahim",88);
+        queue.enqueue("Wasi",91);
+
+        queue.front();
+
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
+
+        queue.display();
+
+    }
 }
