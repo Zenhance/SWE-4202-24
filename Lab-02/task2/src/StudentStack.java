@@ -26,5 +26,15 @@ public class StudentStack {
            System.out.println("Marks:"+marks[count-1]);
        }
    }
+    public void peek(){
+        if(count == 0){
+            System.out.println("Empty");
+        }
+        else{
+            count--;
+            System.out.println("Top Name: "+this.name[count-1]);
+            System.out.println("Marks:"+this.marks[count-1]);
+        }
+    }
 
 }
