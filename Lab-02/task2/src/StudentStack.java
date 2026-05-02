@@ -16,4 +16,15 @@ public class StudentStack {
        this.marks[count]=marks;
        count++;
    }
+   public void pop(){
+       if(count == 0){
+           System.out.println("Empty");
+       }
+       else{
+           count--;
+           System.out.println("Remove: "+name[count-1]);
+           System.out.println("Marks:"+marks[count-1]);
+       }
+   }
+
 }
