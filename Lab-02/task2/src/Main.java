@@ -10,6 +10,5 @@ public class Main {
         stack.display();
 
         stack.peek();
-
     }
 }
