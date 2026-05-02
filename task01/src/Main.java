@@ -21,11 +21,40 @@ d. Suppose the bank later wants to add a transaction limit per day. Where exactl
 would you add that — in main, or somewhere else? Why?
 ans - in the Bankaccount class. so , that every single person would have unique transaction limits.
 */
-public class Main {
-    public static void main(String[] args) {
 
-        BankAccount rubayet = new BankAccount("rubayet");
-        BankAccount
+public class Main {
+
+    static void main(String[] args) {
+        BankAccount Rubayet = new BankAccount("Rubayet");
+        BankAccount Safwan = new BankAccount("Safwan");
+
+        Safwan.deposit(10000);
+        Rubayet.deposit(20000);
+
+        Safwan.withdraw(325);
+
+        Rubayet.withdraw(124);
+
+
+        Safwan.printStatement();
+        Rubayet.printStatement();
 
     }
 }
+
+/*
+(a) BankAccount is a class and alice and bob is an object of the BankAccount class.
+(b) Only Alice's balance changes. because when we do alice.method, it knows that the
+method should only change the attributes of the alice object.
+(c)alice:
+    name = "Alice"
+    balance = 0.00
+
+   bob:
+     name = "Bob:
+     balance = 0.00
+
+(d) it would update bob's balance. because alice now points to the object bob.
+
+
+ */
