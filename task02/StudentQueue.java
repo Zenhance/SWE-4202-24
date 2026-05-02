@@ -13,3 +13,15 @@
  *    the underlying array is the same idea in both.
  */
 
+public class StudentQueue {
+    private String[] names;
+    private int[] marks;
+    private int count;
+
+    public StudentQueue() {
+        names = new String[100];
+        marks = new int[100];
+        count = 0;
+    }
+
+}
