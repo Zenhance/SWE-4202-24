@@ -20,14 +20,14 @@ public class StudentStack{
         list[count]=s;
     }
 
-    public Student pop(){
+    public void pop(){
         if(count==-1){
             System.out.println("ERROR");
-            return null;
+            return;
         }
-        Student temp=list[count];
+
         count--;
-        return temp;
+
     }
 
 
