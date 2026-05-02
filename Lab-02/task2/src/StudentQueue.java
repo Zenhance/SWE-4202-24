@@ -1,3 +1,9 @@
+//StudentQueue (a): It would require roughly 1,125 moves.
+//(Calculation: The first dequeue moves 49, the second 48... until the 45th dequeue moves 5.
+// The sum of $49+48...+5 \approx 1215$ moves).
+//StudentQueue (b): Hiding the array as private allows the class to strictly control how data is accessed,
+//ensuring that a Stack only uses "top" logic and a Queue only uses "front/back" logic without outside code
+//bypassing these rules[cite: 1].
 class StudentQueue {
     String[] names;
     int[] marks;
@@ -35,7 +41,8 @@ class StudentQueue {
     }
     public void peek()
     {
-        if (front == rear) {
+        if (front == rear)
+        {
             System.out.println("Queue is empty!");
             return;
         }

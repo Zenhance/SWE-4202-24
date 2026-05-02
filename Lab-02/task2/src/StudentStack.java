@@ -1,3 +1,7 @@
+//StudentStack (a): The speed is the same for 5 or 50 students. Since there is no shifting, the operation takes
+// the same amount of time regardless of size (O(1) complexity).
+// StudentStack (b): No, they cannot interfere. Each object has its own separate memory space for its count field,
+// so changing one does not affect the other.
 class StudentStack {
     String[] names;
     int[] marks;
