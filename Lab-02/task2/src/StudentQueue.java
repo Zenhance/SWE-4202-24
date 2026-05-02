@@ -1,3 +1,15 @@
+/*a)
+Each dequeue shifts all remaining elements one step to the left.In the scenario of 50 students
+the first step moves 49,second moves 48 and it goes on like that.
+If the queue holds 50 students and I dequeue 45 times, roughly 49+48+47.....+5=1210 individual element
+moves required in.
+b)
+By hiding the array as private,outside code can only interact with data through the methode we choose to expose.
+So the exact same array and count fields can power completely different behaviours by changing which public methods are provided,
+without any risk of outside code accidentally bypassing the rules.
+ */
+
+
 public class StudentQueue {
     String[] name=new String[100];
     int[] marks =new int[100];
