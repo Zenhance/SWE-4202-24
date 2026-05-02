@@ -53,4 +53,23 @@ public class StudentQueue {
         System.out.println("Dequeued: " + removedName + " (" + removedMark + ")");
     }
 
+    public void front() {
+        if (count == 0) {
+            System.out.println("Queue is empty");
+            return;
+        }
+        System.out.println("Front: " + names[0] + " (" + marks[0] + ")");
+    }
+
+    public void display() {
+        if (count == 0) {
+            System.out.println("Queue is empty");
+            return;
+        }
+        System.out.println("Queue (front to back):");
+        for (int i = 0; i < count; i++) {
+            System.out.println("  " + names[i] + " - " + marks[i]);
+        }
+    }
+
 }
