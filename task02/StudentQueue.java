@@ -60,5 +60,23 @@ public class StudentQueue {
         }
     }
 
+    public static void main(String[] args) {
+
+        StudentStack stack = new StudentStack();
+
+        stack.push("Alice", 85);
+        stack.push("Bob", 90);
+        stack.push("Charlie", 78);
+        stack.push("Diana", 92);
+        stack.push("Evan", 66);
+
+        stack.peek();
+
+        stack.pop();
+        stack.pop();
+        stack.pop();
+
+        stack.display();
+    }
 
 }
