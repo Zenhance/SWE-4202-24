@@ -15,4 +15,20 @@ public class StudentQueue {
     private String[] names;
     private int[] marks;
     private int count;
+
+    public StudentStack() {
+        names = new String[100];
+        marks = new int[100];
+        count = 0;
+    }
+
+    public void push(String name, int mark) {
+        if (count == 100) {
+            System.out.println("Error: stack is full");
+            return;
+        }
+        names[count] = name;
+        marks[count] = mark;
+        count++;
+    }
 }
