@@ -18,6 +18,10 @@ public class StudentQueue {
             count--;
             System.out.println("Remove: "+name[0]);
             System.out.println("Marks:"+marks[0]);
+            for(int i=0;i<count;i++){
+                this.name[i]=name[i+1];
+                this.marks[i]=marks[i+1];
+            }
 
         }
     }
