@@ -29,4 +29,14 @@ public class StudentStack {
                    students[i].name + ", " + students[i].mark);
        }
     }
+
+    public void peek() {
+        if(count==0) {
+            System.out.println("Error: Student list is empty!");
+            return;
+        }
+
+       System.out.println("Student " + (count) + ": " +
+               students[count-1].name + ", " + students[count-1].mark);
+    }
 }

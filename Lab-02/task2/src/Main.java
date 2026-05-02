@@ -5,7 +5,11 @@ public class Main {
 
         stack.push("Wasif", 87);
         stack.display();
+
         stack.push("Jafar", 83);
         stack.display();
+
+        stack.peek();
+
     }
 }
