@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d87352d3-c56a-42ca-be1a-f6f47a99d8eb" name="Changes" comment="innit commit">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task01/src/BankAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/task01/src/BankAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task01/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/task01/src/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="d87352d3-c56a-42ca-be1a-f6f47a99d8eb" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,7 +23,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "Rebasing 12-Muiruzzaman",
+    "git-widget-placeholder": "12-Muiruzzaman",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/cse/Munman/LAB-02/SWE-4202-24"
   }

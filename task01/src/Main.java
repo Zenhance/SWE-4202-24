@@ -34,8 +34,8 @@ public class Main {
         Safwan.withdraw(325);
 
         Rubayet.withdraw(124);
-        
-        
+
+
         Safwan.printStatement();
         Rubayet.printStatement();
 
@@ -55,8 +55,6 @@ method should only change the attributes of the alice object.
      balance = 0.00
 
 (d) it would update bob's balance. because alice now points to the object bob.
-
-
 
 
  */
