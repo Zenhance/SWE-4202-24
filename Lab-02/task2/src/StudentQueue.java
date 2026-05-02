@@ -5,6 +5,7 @@ public class StudentQueue {
     public void enqueue(String name,int marks){
         if(count == 100){
             System.out.println("Error!");
+            return;
         }
         this.name[count]=name;
         this.marks[count]=marks;
@@ -13,6 +14,7 @@ public class StudentQueue {
     public void dequeue(){
         if(count == 0){
             System.out.println("Empty");
+            return;
         }
         else{
             count--;
@@ -23,6 +25,16 @@ public class StudentQueue {
                 this.marks[i]=marks[i+1];
             }
 
+        }
+    }
+    public void display(){
+        if(count == 0){
+            System.out.println("Empty");
+            return;}
+        for(int i=0;i<count;i++){
+
+            System.out.println("Name: "+this.name[i]);
+            System.out.println("Marks:"+this.marks[i]);
         }
     }
 
