@@ -11,7 +11,9 @@
  *    each object gets its own separate copy of it in memory. so changing one
  *    objects count doesnt affect the other at all.
  */
-public class StudentQueue {
+
+public class StudentStack {
+
     private String[] names;
     private int[] marks;
     private int count;
@@ -78,5 +80,4 @@ public class StudentQueue {
 
         stack.display();
     }
-
 }
