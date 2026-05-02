@@ -72,4 +72,23 @@ public class StudentQueue {
         }
     }
 
+    public static void main(String[] args) {
+
+        StudentQueue queue = new StudentQueue();
+
+        queue.enqueue("Alice", 85);
+        queue.enqueue("Bob", 90);
+        queue.enqueue("Charlie", 78);
+        queue.enqueue("Diana", 92);
+        queue.enqueue("Evan", 66);
+
+        queue.front();
+
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
+
+        queue.display();
+    }
+
 }
