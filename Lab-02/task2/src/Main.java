@@ -1,20 +1,24 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
+        Scanner scan = new Scanner(System.in);
+
         StudentStack stack = new StudentStack();
 
-        stack.push("Wasif", 87);
+        stack.push(scan.nextLine(), scan.nextInt());
         stack.display();
 
-        stack.push("Jafar", 83);
+        stack.push(scan.nextLine(), scan.nextInt());
         stack.display();
 
         stack.peek();
 
-        stack.push("Rafi", 89);
+        stack.push(scan.nextLine(), scan.nextInt());
         stack.display();
 
-        stack.push("Hasan", 81);
+        stack.push(scan.nextLine(), scan.nextInt());
         stack.display();
 
         stack.peek();
@@ -25,9 +29,9 @@ public class Main {
 
         StudentQueue queue = new StudentQueue();
 
-        queue.enqueue("wasif", 71);
-        queue.enqueue("jafar", 78);
-        queue.enqueue("rafi", 77);
+        queue.enqueue(scan.nextLine(), scan.nextInt());
+        queue.enqueue(scan.nextLine(), scan.nextInt());
+        queue.enqueue(scan.nextLine(), scan.nextInt());
         queue.display();
         queue.front();
 
