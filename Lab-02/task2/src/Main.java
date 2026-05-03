@@ -20,5 +20,11 @@ public class Main {
         stack.peek();
         stack.pop();
         stack.display();
+
+        System.out.println("===Start of StudentQueue===");
+
+        StudentQueue queue = new StudentQueue();
+
+        queue.enqueue("wasif", 71);
     }
 }
