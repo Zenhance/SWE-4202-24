@@ -1,3 +1,5 @@
+import java.sql.SQLOutput;
+
 public class StudentStack {
     String[] name;
     float[] mark;
@@ -28,7 +30,9 @@ public class StudentStack {
         System.out.println("The top student info: "+"name"+this.name[count]+" "+"Marks"+this.mark[count] );
     }
 
-    public display() {
-
+    public void display() {
+        for(int i=0;i<name.length;i++) {
+            System.out.println("NAME: "+name[i]+" and MARKS: "+mark[i]);
+        }
     }
 }
