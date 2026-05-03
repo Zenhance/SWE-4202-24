@@ -1,8 +1,8 @@
 import java.sql.SQLOutput;
 
 public class StudentStack {
-    String[] name;
-    float[] mark;
+    String[] name = new String[1000];
+    float[] mark = new float[1000];
     int students=1000;
     int count=0;
 
@@ -11,8 +11,8 @@ public class StudentStack {
             System.out.println("The Stack is full");
         }
 
-        name[count] =name;
-        mark[count] =mark;
+        this.name = name;
+        this.mark =mark;
         count++;
     }
 
@@ -27,7 +27,7 @@ public class StudentStack {
     }
 
     public void peek() {
-        System.out.println("Top student's info: "+"name"+this.name[count]+" "+"Marks"+this.mark[count] );
+        System.out.println("Top student's info: "+"name"+name[count]+" "+"Marks"+mark[count] );
     }
 
     public void display() {
