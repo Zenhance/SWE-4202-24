@@ -25,6 +25,8 @@ public class StudentStack {
     }
 
     public void peek() {
-
+        System.out.println("The top student info: "+"name"+this.name[count]+" "+"Marks"+this.mark[count] );
     }
+
+
 }
