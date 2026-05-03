@@ -28,5 +28,7 @@ public class StudentStack {
         System.out.println("The top student info: "+"name"+this.name[count]+" "+"Marks"+this.mark[count] );
     }
 
+    public display() {
 
+    }
 }
