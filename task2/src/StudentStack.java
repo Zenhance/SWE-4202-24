@@ -23,6 +23,8 @@ public class StudentStack {
             System.out.println("The stack is empty");
         }
 
-
+        System.out.println(this.name);
+        System.out.println(this.mark);
+        count--;
     }
 }
