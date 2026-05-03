@@ -11,8 +11,8 @@ public class StudentStack {
             System.out.println("The Stack is full");
         }
 
-        this.name=name;
-        this.mark=mark;
+        name[count] =name;
+        mark[count] =mark;
         count++;
     }
 
@@ -22,12 +22,12 @@ public class StudentStack {
         }
 
         count--;
-        System.out.println(this.name[count]);
-        System.out.println(this.mark[count]);
+        System.out.println(name[count]);
+        System.out.println(mark[count]);
     }
 
     public void peek() {
-        System.out.println("The top student info: "+"name"+this.name[count]+" "+"Marks"+this.mark[count] );
+        System.out.println("Top student's info: "+"name"+this.name[count]+" "+"Marks"+this.mark[count] );
     }
 
     public void display() {
