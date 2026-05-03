@@ -25,6 +25,10 @@ public class Main {
 
         StudentQueue queue = new StudentQueue();
 
-        queue.enqueue("wasif", 71);
+        queue.enqueue("asif", 71);
+        queue.enqueue("jafar", 78);
+        queue.enqueue("rafi", 77);
+        queue.display();
+
     }
 }
