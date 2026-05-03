@@ -5,8 +5,8 @@ public class StudentStack {
     int count=0;
 
     StudentStack() {
-        System.out.println(this.name);
-        System.out.println(this.mark);
+        this.name=name;
+        this.mark=mark;
     }
     public void push(String[] name, float[] mark) {
         if(count==students) {
@@ -23,8 +23,12 @@ public class StudentStack {
             System.out.println("The stack is empty");
         }
 
-        System.out.println(this.name);
-        System.out.println(this.mark);
+        System.out.println(this.name[count]);
+        System.out.println(this.mark[count]);
         count--;
+    }
+
+    public void peek() {
+        System.out.println(this.name[count]);
     }
 }
