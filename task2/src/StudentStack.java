@@ -1,5 +1,8 @@
 public class StudentStack {
-    void push () {
+    String name;
+    float mark;
+
+    public void push(String name, float mark) {
 
     }
 }
