@@ -29,9 +29,10 @@ public class Main {
         queue.enqueue("jafar", 78);
         queue.enqueue("rafi", 77);
         queue.display();
+        queue.front();
 
         queue.dequeue();
         queue.display();
-
+        queue.front();
     }
 }

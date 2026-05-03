@@ -42,4 +42,14 @@ public class StudentQueue {
         }
         count--;
     }
+
+    public void front() {
+        if (count == 0) {
+            System.out.println("Error: Student list is empty!");
+            return;
+        }
+
+        System.out.println("At front, Student " + 1 + ": " +
+                students[0].name + ", " + students[0].mark);
+    }
 }
