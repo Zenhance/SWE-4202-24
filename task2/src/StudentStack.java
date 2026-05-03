@@ -35,4 +35,5 @@ public class StudentStack {
             System.out.println("NAME: "+name[i]+" and MARKS: "+mark[i]);
         }
     }
+
 }
