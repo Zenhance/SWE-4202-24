@@ -29,4 +29,17 @@ public class StudentQueue {
                     students[i].name + ", " + students[i].mark);
         }
     }
+
+    public void dequeue() {
+        if(count==0) {
+            System.out.println("Error: Student list is empty!");
+            return;
+        }
+        System.out.println("Removed Student " + 1 + ": " +
+                students[0].name + ", " + students[0].mark);
+        for(int i=1;i<count;i++) {
+            students[i-1]=students[i];
+        }
+        count--;
+    }
 }

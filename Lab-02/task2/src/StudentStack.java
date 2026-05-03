@@ -43,14 +43,13 @@ public class StudentStack {
     public void pop() {
         if(count==0) {
             System.out.println("Error: Student list is empty!");
+            return;
         }
-        else {
-            System.out.println("Removed Student " + count + ": " +
-                    students[count-1].name + ", " + students[count-1].mark);
-            count--;
-            // since I dont need to zero out the removed slot
-            // students[count].name = null;
-            // students[count].mark = 0;
-        }
+        System.out.println("Removed Student " + count + ": " +
+                students[count-1].name + ", " + students[count-1].mark);
+        count--;
+        // since I dont need to zero out the removed slot
+        // students[count].name = null;
+        // students[count].mark = 0;
     }
 }
