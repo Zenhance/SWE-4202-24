@@ -6,6 +6,10 @@ public class StudentStack {
     int students=1000;
     int count=0;
 
+    StudentStack(String name,float mark) {
+        this.name[count]=name;
+        this.mark[count]=mark;
+    }
     public void push(String[] name, float[] mark) {
         if(count==students) {
             System.out.println("The Stack is full");
