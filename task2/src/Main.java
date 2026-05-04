@@ -9,6 +9,10 @@ public class Main {
         s1.push("LeeMinHo",96);
 
         s1.peek();
+        s1.peek();
+        s1.peek();
+        s1.peek();
+        s1.peek();
 
         s1.pop();
         s1.pop();
