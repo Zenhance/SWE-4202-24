@@ -36,4 +36,10 @@ public class StudentQueue {
         System.out.println("Front: " + this.name[0] + " " + this.marks[0]);
 
     }
+
+    public void display(){
+        for(int i=0; i<count; i++){
+            System.out.println(this.name[i] + " " + this.marks[i]);
+        }
+    }
 }
