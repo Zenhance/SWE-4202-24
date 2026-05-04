@@ -24,6 +24,10 @@ public class StudentQueue {
             this.name[i]=name[i+1];
             this.mark[i]=mark[i+1];
         }
+    }
 
+    public void front() {
+        System.out.println(name[0]);
+        System.out.println(mark[0]);
     }
 }
