@@ -7,7 +7,7 @@ public class StudentStack {
 
     public void push(String name, int marks)
     {
-        if(count+1>50)
+        if(count>=50)
         {
             System.out.println("stack already full");
             return;
@@ -17,5 +17,15 @@ public class StudentStack {
             this.marks[count] =marks;
             count++;
         }
+    }
+
+    public void pop(){
+        if(count==0){
+            System.out.println("stack is empty");
+            return;
+        }
+        count --;
+        System.out.println("Popped: " + name[count] + " " + marks[count]);
+
     }
 }
