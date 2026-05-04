@@ -30,4 +30,11 @@ public class StudentQueue {
         System.out.println(name[0]);
         System.out.println(mark[0]);
     }
+
+    public void display() {
+        for(int i=0;i<name.length;i++) {
+            System.out.println(name[i]);
+            System.out.println(mark[i]);
+        }
+    }
 }
