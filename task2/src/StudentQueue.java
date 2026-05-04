@@ -16,7 +16,14 @@ public class StudentQueue {
 
     public void dequeue() {
         if(count==0) {
-
+            System.out.println("Error! The queue is empty");
         }
+
+        count--;
+        for(int i=0;i<count;i++) {
+            this.name[i]=name[i+1];
+            this.mark[i]=mark[i+1];
+        }
+
     }
 }
