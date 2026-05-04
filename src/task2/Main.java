@@ -23,5 +23,18 @@ public class Main {
 
         stack.display();
 
+        StudentQueue queue = new StudentQueue();
+
+        for (int i = 1; i <= 5; i++){
+            queue.enqueue("Student"+i, i+50);
+        }
+
+        queue.front();
+
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
+
+        queue.display();
     }
 }
