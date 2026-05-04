@@ -15,5 +15,5 @@ public class StudentQueue {
         count++;
     }
 
-    public void dequeue()
+    
 }
