@@ -15,5 +15,16 @@ public class StudentQueue {
         count++;
     }
 
-    
+    public void dequeue(){
+        if(count ==0){
+            System.out.println("empty queue");
+            return;
+        }
+        System.out.println("Dequeued: " + this.name[0] + " " + this.marks[0]);
+        for(int i=1; i<count; i++){
+            this.name[i-1]= this.name[i];
+            this.marks[i-1]=this.marks[i];
+        }
+        count--;
+    }
 }
