@@ -18,12 +18,12 @@ public class Main {
         s1.pop();
         s1.pop();
 
+        s1.display();
+        s1.display();
+        s1.display();
+        s1.display();
+        s1.display();
 
-        s1.display();
-        s1.display();
-        s1.display();
-        s1.display();
-        s1.display();
 
     }
 }
