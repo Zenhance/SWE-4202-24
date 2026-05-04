@@ -28,4 +28,15 @@ public class StudentStack {
         System.out.println("Popped: " + name[count] + " " + marks[count]);
 
     }
+
+    public void peek(){
+        if(count==0){
+            System.out.println("stack is empty");
+            return;
+        }
+        System.out.println("Top: " + this.name[count - 1] + " " + this.marks[count - 1]);
+
+    }
+
+
 }
