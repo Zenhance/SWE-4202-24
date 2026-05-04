@@ -20,10 +20,11 @@ public class StudentStack {
         if(count == 0) {
             System.out.println("The stack is empty");
         }
-
-        count--;
-        System.out.println(name[count]);
-        System.out.println(mark[count]);
+        if(count==1) {
+            count--;
+            System.out.println(name[count]);
+            System.out.println(mark[count]);
+        }
     }
 
     public void peek() {

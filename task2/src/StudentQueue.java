@@ -13,4 +13,10 @@ public class StudentQueue {
         this.mark[count]=mark;
         count++;
     }
+
+    public void dequeue() {
+        if(count==0) {
+
+        }
+    }
 }
