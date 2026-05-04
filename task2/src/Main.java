@@ -24,6 +24,12 @@ public class Main {
         s1.display();
         s1.display();
 
+        StudentQueue s2=new StudentQueue();
 
+        s2.enqueue("JeeChangWook",100);
+        s2.enqueue("Spaiky",78);
+        s2.enqueue("Chocolate",999);
+        s2.enqueue("Burger",888);
+        s2.enqueue("Pizza",666);
     }
 }
