@@ -4,7 +4,13 @@ public class StudentQueue {
     int students=1000;
     int count;
 
-    public void enqueue() {
+    public void enqueue(String name,float mark) {
+        if(count==students) {
+            System.out.println("SORRY! The queue is full");
+        }
 
+        this.name[count]=name;
+        this.mark[count]=mark;
+        count++;
     }
 }
