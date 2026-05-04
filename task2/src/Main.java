@@ -31,5 +31,9 @@ public class Main {
         s2.enqueue("Chocolate",999);
         s2.enqueue("Burger",888);
         s2.enqueue("Pizza",666);
+
+        s2.front();
+
+        s2.dequeues();
     }
 }
