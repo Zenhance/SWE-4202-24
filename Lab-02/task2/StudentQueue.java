@@ -1,7 +1,7 @@
 /*
     a.The first dequeue move 49 elements and the second one moves 48 and so on.
 
-    b. As the array and count is private, outside code cannot access its data. So each class can
+    b. As the array and  count is private, outside code cannot access its data. So each class can
     behave differently without
     interfering each other.
  */
