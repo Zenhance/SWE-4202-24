@@ -27,4 +27,13 @@ public class StudentQueue {
         }
         count--;
     }
+
+    public void front(){
+        if(count==0){
+            System.out.println("empty queue");
+            return;
+        }
+        System.out.println("Front: " + this.name[0] + " " + this.marks[0]);
+
+    }
 }
