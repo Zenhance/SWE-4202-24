@@ -39,5 +39,6 @@ public class Main {
         s2.dequeues();
 
         s2.display();
+
     }
 }
