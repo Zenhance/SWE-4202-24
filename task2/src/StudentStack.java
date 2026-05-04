@@ -4,19 +4,15 @@ public class StudentStack {
     String[] name = new String[1000];
     float[] mark = new float[1000];
     int students=1000;
-    int count=0;
+    int count;
 
-    StudentStack(String name,float mark) {
-        this.name[count]=name;
-        this.mark[count]=mark;
-    }
-    public void push(String[] name, float[] mark) {
+    public void push(String name, float mark) {
         if(count==students) {
             System.out.println("The Stack is full");
         }
 
-        this.name = name;
-        this.mark =mark;
+        this.name[count] = name;
+        this.mark[count] = mark;
         count++;
     }
 
