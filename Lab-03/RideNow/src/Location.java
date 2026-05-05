@@ -26,10 +26,13 @@ public class Location{
         return this.y;
     }
 
-    public double distance(double x, double y){
+    public double distanceTo(double x, double y){
         return Math.sqrt((this.x - x)*(this.x - x)+(this.y - y)*(this.y - y));
     }
 
-
+    public String toString(){
+        String res = label + " (" + x + ", "+ y + ")";
+        return res;
+    }
 
 }
