@@ -11,11 +11,19 @@ class Location
         this.y=y;
     }
 
-    public String getLabel() {
+    public Location(double x, double y)
+    {
+        this.x=x;
+        this.y=y;
+    }
+
+    public String getLabel()
+    {
         return label;
     }
 
-    public void setLabel(String label) {
+    public void setLabel(String label)
+    {
         this.label = label;
     }
 
@@ -23,15 +31,18 @@ class Location
         return x;
     }
 
-    public void setX(double x) {
+    public void setX(double x)
+    {
         this.x = x;
     }
 
-    public double getY() {
+    public double getY()
+    {
         return y;
     }
 
-    public void setY(double y) {
+    public void setY(double y)
+    {
         this.y = y;
     }
 
@@ -39,5 +50,10 @@ class Location
     {
         double distance=0;
         return distance;
+    }
+
+    public String toString()
+    {
+        return "Airport (3.00,7,50)";
     }
 }
