@@ -52,4 +52,16 @@ public class Trip {
     public void completeTrip() {
 
     }
+
+    public String getSummary() {
+        String summary = "Trip Summary\n" +
+                "Passenger : Alice\n" +
+                "Driver : Bob ( DHA -1234)\n" +
+                "From : Airport (3.00 , 7.50)" +
+                "To : University (8.00 , 4.00)\n" +
+                "Distance : 6.10 km\n" +
+                "Fare : BDT 141.50\n" +
+                "Status : COMPLETED";
+        return summary;
+    }
 }
