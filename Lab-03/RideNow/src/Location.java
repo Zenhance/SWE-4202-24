@@ -24,16 +24,6 @@ public class Location {
     public double getY(){
         return y;
     }
-    public double distanceTo(Location other){
-        double dx=other.x-this.x;
-        double dy=other.y-this.y;
-        return Math.sqrt(dx*dx+dy*dy);
-
-    }
-
-    public String toString(){
-        return String.format("%s (%.2f, %.2f)", label, x ,y);
-    }
 
 }
 
