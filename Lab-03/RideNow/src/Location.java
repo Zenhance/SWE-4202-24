@@ -20,7 +20,7 @@ public class Location {
       return y;
     }
     public double distanceTo(double x1,double y1){
-        double distance=math.sqrt(((x1-x)*(x1-x))+((y1-y)*(y1-y)));
+        double distance=Math.sqrt(((x1-x)*(x1-x))+((y1-y)*(y1-y)));
         return distance;
     }
     public String toString(String lebel, double x, double y){
