@@ -15,4 +15,7 @@ public class Driver {
         this. name = name;
         this.licencePlate = licencePlate;
     }
+    public int getId(){
+        return this.id;
+    }
 }
