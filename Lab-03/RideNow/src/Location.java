@@ -1,5 +1,5 @@
 public class Location {
-    private String label;
+    private String label = "unknown";
     private double x;
     private double y;
 
