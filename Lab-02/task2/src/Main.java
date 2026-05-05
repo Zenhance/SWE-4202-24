@@ -19,4 +19,6 @@ public class Main{
         s2.dequeue();
         s2.display();
     }
+
+
 }
