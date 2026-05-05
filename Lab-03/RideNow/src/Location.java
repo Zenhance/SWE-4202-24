@@ -14,18 +14,19 @@ public class Location {
         this.x=x;
         this.y=y;
     }
-    getLabel()
+    String getLabel()
     {
         return label;
     }
-    getX()
+    double getX()
     {
         return x;
 
     }
-    getY(){ return y;
+    double getY(){ return y;
     }
     double distanceTo(Location other){
 
+        return 0;
     }
 }

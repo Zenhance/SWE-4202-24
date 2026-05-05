@@ -15,10 +15,10 @@ public class Driver {
         this.licencePlate=licencePlate;
         this.isAvailable=isAvailable;
     }
-    void getId(){return id;}
-    void getName(){return name;}
-    void getLicencePlate(){return licencePlate;}
-    void isAvailable(){return isAvailable;}
+    int getId(){return id;}
+    String getName(){return name;}
+    String getLicencePlate(){return licencePlate;}
+    boolean isAvailable(){return isAvailable;}
     void setAvailable(boolean available){
         isAvailable=available;
     }
