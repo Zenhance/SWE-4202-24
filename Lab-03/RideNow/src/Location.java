@@ -14,5 +14,7 @@ public class Location {
         return label;
     }
 
-
+    public double getX() {
+        return x;
+    }
 }
