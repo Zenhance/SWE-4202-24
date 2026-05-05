@@ -1,7 +1,7 @@
 public class Location {
-    public  String label;
-    public double x;
-    public double y;
+    private  String label;
+    private double x;
+    private double y;
     public Location(String label,double x,double y){
         this.label=label;
         this.x=x;
@@ -21,4 +21,5 @@ public class Location {
     public double getY(){
         return y;
     }
+
 }
