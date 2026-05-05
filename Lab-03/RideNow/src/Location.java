@@ -1,33 +1,35 @@
 public class Location {
-    String label;//— a human-readable name (e.g. "Airport")
-    double x; //— east coordinate in kilometres
-    double y ;
-    public Location(double x, double y){
+    private String label;
+    private double x;
+    private double y;
 
+    public Location(String label, double x, double y) {
+        this.label = label;
+        this.x = x;
+        this.y = y;
+    }
+
+    public Location(double x, double y) {
+
+        this("Unknown", x, y);
 
     }
 
-    public void getLabel()
-    {
-
-
+    public String getLabel() {
+        return label;
     }
-    public void getX(){
-
-
+    public double getX() {
+        return x;
     }
-    public void getY(){
-
+    public double getY() {
+        return y;
     }
-    public String toString()
-    {
 
-        return "a";
+    public double distanceTo(Location other) {
+        double dx = other.x - this.x;
+        double dy = other.y - this.y;
+        return Math.sqrt(dx * dx + dy * dy);
     }
-    double distanceTo(Location other){
 
 
-
-       return 9.5;
-    }
 }
