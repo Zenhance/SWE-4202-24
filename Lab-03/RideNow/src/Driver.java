@@ -1,8 +1,8 @@
 public class Driver {
-     int id;
-     String name;
-     String licencePlate;
-     boolean isAvailable;
+    private int id;
+     private String name;
+     private String licencePlate;
+     private boolean isAvailable;
 
     public Driver(int id, String name, String licencePlate){
         this.id=id;
@@ -31,5 +31,18 @@ public class Driver {
 
     public boolean isAvailable() {
         return isAvailable;
+    }
+    public void setAvailable(boolean available){
+          this.isAvailable=available;
+    }
+    public String toString(){
+        String out="Driver["+id+"]"+name+"("+licencePlate+")";
+        if (isAvailable==true){
+            out=out+"[Available]";
+        }
+        else{
+            out=out+"[Busy]";
+        }
+        return out;
     }
 }
