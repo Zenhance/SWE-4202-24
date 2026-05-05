@@ -4,8 +4,8 @@ class Trip
     private Driver driver;
     private Location from;
     private Location to;
-    double baseFare;
-    boolean completed;
+    private double baseFare;
+    private boolean completed;
 
     public Trip(Passenger passenger, Driver driver, Location from, Location to, double baseFare)
     {
@@ -15,12 +15,14 @@ class Trip
     public double calculateFare()
     {
         double fare=0;
+        fare=baseFare+(15.0*getDistance());
         return fare;
     }
 
     public void completeTrip()
     {
-
+        completed=true;
+        driver.setAvailable(true);
     }
 
     public double getDistance()
