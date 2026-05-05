@@ -41,6 +41,5 @@ public class Location {
 
     }
     public String toString(){
-
     }
 }
