@@ -13,7 +13,7 @@ public class Location {
     }
 
     public Location(double x, double y) {
-        label = label;
+        this.label = "Unknown";
         this.x = x;
         this.y = y;
     }
