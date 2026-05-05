@@ -56,7 +56,7 @@ public class Location {
         output = output.concat(", ");
         output = output.concat(y_str);
         output = output.concat(")");
-        // test: System.out.println(output);
+
         return output;
     }
 }

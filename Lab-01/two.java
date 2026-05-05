@@ -19,7 +19,7 @@ public class two {
 
 class ImaginaryNumber {
     public static int SMTH = 0;
-    private int realPart;               // Visibility: public/private
+    public int realPart;               // Visibility: public/private
     public int imaginaryPart;
 
     // Member Function/Method
