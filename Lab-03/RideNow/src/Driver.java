@@ -27,4 +27,6 @@ public class Driver {
     public void setAvailable(boolean newBoolean){
         this.isAvailable = newBoolean;
     }
+
+
 }
