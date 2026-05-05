@@ -9,8 +9,8 @@ public class Location{
         this.y = y;
     }
 
-    public Location(String label, double y){
-        this.label = label;
+    public Location(double x, double y){
+        this.x = x;
         this.y = y;
     }
 
@@ -24,6 +24,10 @@ public class Location{
 
     public double getY(){
         return this.y;
+    }
+
+    public double distance(double x, double y){
+        return Math.sqrt((this.x - x)*(this.x - x)+(this.y - y)*(this.y - y));
     }
 
 
