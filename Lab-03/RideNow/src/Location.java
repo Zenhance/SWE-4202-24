@@ -1,0 +1,24 @@
+public class Location{
+    private String label;
+    private double x;
+    private double y;
+
+    public Location(String label,double x, double y){
+        this.label = label;
+        this.x = x;
+        this.y = y;
+    }
+
+    public void getLabel(){
+
+    }
+    public void getX(){
+
+    }
+    public void getY(){
+
+    }
+    public String toString(){
+
+    }
+}
