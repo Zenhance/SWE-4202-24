@@ -42,4 +42,7 @@ public class Location {
         double distance = 0;
         return distance;
     }
+    public String toString(){
+        return "Airport (3.00, 7.50)";
+    }
 }
