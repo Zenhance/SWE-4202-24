@@ -11,4 +11,5 @@ public Location(String x,double x,double y)
     this.y = y;
 
 
+
 }
