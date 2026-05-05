@@ -14,5 +14,9 @@ public class Passenger {
         this.name = name;
         rating = 5.0;
     }
+
+    public int getId(){
+        return id;
+    }
     
 }
