@@ -17,12 +17,21 @@ class Driver
 
     public void setAvailable(boolean available)
     {
-
+        this.isAvailable=available;
     }
 
     public String toString()
     {
-        return "Driver[7] Bob (DHA-1234) [AVAILABLE]";
+        String situation="[AVAILABLE]";
+        if(isAvailable)
+        {
+            situation="[AVAILABLE]";
+        }
+        else
+        {
+            situation="[BUSY]";
+        }
+        return "Driver["+id+"]"+" "+name+" "+"("+licencePlate+")"+situation;
     }
 
     public int getId()
