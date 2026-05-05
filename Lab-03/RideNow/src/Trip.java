@@ -4,8 +4,8 @@ public class Trip {
     private Driver driver;
     private Location from;
     private Location to;
-    private double baseFare;
-    private boolean completed;
+    private double baseFare = 50;
+    private boolean completed = false;
 
 
     Trip(Passenger passenger, Driver driver, Location from,
@@ -30,11 +30,14 @@ public class Trip {
         return to;
     }
 
+    public double getBaseFare(){
+        return baseFare;
+    }
     public boolean isCompleted() {
         return completed;
     }
 
-    double distance = from.distanceTo(to.x, to.y);
+    double distance = from.distanceTo(to.getX(), to.getY());
 
     public double getDistance(){
         return distance;
@@ -52,7 +55,7 @@ public class Trip {
 
     public String getSummary(){
         String msg;
-        if (completed  == true){
+        if (completed == true){
             msg = "COMPLETED";
         }
         else{

@@ -1,3 +1,5 @@
+import java.lang.Math;
+
 public class Location{
     private String label;
     private double x;
