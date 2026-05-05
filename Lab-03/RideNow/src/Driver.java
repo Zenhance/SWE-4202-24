@@ -30,5 +30,7 @@ public class Driver {
     public void setAvailable(boolean available){
         this.isAvailable = available;
     }
-
+    public String toString(){
+        return "Driver" + "[" + id + "]" + name + "(" + licencePlate + ")" + isAvailable;
+    }
 }
