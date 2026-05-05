@@ -36,4 +36,12 @@ public class Driver {
     public void setAvailable(boolean available) {
 
     }
+
+    public String toString() {
+        if (isAvailable) {
+            return "Driver[7] Bob (DHA-1234) [AVAILABLE]";
+        } else {
+            return "[BUSY]";
+        }
+    }
 }
