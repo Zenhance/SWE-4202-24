@@ -30,5 +30,9 @@ public class Passenger {
         this.rating = newRating;
     }
 
+    public String toString(){
+        String res = "Passenger["+id+"] "+name+" ("+rating+")";
+        return res;
+    }
 
 }
