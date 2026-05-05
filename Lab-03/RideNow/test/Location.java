@@ -15,14 +15,21 @@ class Location {
     }
 
     public String getLabel() {
-        return label;
+        return this.label;
     }
 
     public double getX() {
-        return x;
+        return this.x;
     }
 
     public double getY() {
-        return y;
+        return this.y;
+    }
+
+    public double distanceTo(Location other){
+        double dx = this.x - other.x;
+        double dy = this.y - other.y;
+        return Math.sqrt(dx*dx + dy*dy);
     }
 }
+
