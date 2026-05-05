@@ -26,4 +26,8 @@ public class Passenger {
         this.rating = newRating;
     }
 
+    public String toString(){
+        return String.format("%d %s %.2f", id, name, rating);
+    }
+
 }
