@@ -21,5 +21,9 @@ public class Location {
     public double getY(){
         return y;
     }
-
+public double distanceTo(Location other){
+        double disX=other.x-this.x;
+        double disY=other.y-this.y;
+        return Math.sqrt(disX*disX-disY*disY);
+}
 }
