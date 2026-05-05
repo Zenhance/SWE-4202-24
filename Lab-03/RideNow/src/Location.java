@@ -13,22 +13,22 @@ public class Location {
         this.y=y;
     }
 
-    String getLabel() {
+    public String getLabel() {
         return label;
     }
-    double getX(){
+    public double getX(){
         return x;
     }
-    double getY(){
+    public double getY(){
         return y;
     }
-    double distance(Location p){
+    public double distance(Location p){
         double dx=p.x-this.x;
         double dy=p.y-this.y;
         return Math.sqrt((dx*dx)-(dy*dy));
     }
 
-    String ToString(){
+    public String ToString(){
       return String.format("%s (.2f,.2f)",label,x,y);
 
     }
