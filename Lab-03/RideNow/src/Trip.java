@@ -33,4 +33,41 @@ public class Trip {
     public boolean isCompleted() {
         return completed;
     }
+
+    double distance = from.distanceTo(to.x, to.y);
+
+    public double getDistance(){
+        return distance;
+    }
+
+    double fare;
+    public double calculateFare() {
+        fare = baseFare + 15.0 * distance;
+        return fare;
+    }
+
+    public void completeTrip(){
+        driver.setAvailable(true);
+    }
+
+    public String getSummary(){
+        String msg;
+        if (completed  == true){
+            msg = "COMPLETED";
+        }
+        else{
+            msg =  "IN PROGRESS";
+        }
+        String res =
+                "Trip Summary" +
+                        "\n\tPassenger\t:\t" + passenger.getName()+
+                        "\n\tDriver\t:\t" + driver.getName()+
+                        "\n\tFrom\t:\t"+from.toString()+
+                        "\n\tTo\t:\t"+to.toString()+
+                        "\n\tDistance\t:\t"+distance+ " km"+
+                        "\n\tFare\t:\t"+"BDT "+fare+
+                        "\n\tStatus\t:\t"+msg;
+
+        return res;
+    }
 }
