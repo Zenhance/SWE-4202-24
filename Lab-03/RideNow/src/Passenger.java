@@ -19,5 +19,14 @@ public class Passenger {
         return id;
     }
 
+    public String getName(){
+        return name;
+    }
+
+    public double getRating(){
+        return rating;
+    }
+
+
 
 }
