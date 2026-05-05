@@ -21,4 +21,11 @@ public class Passenger {
     double getRating(){
         return rating;
     }
+    void updateRating(double newRating){
+        rating=newRating;
+    }
+    String toString(){
+        String output="Passenger["+id+"] "+name+" ("+rating+")";
+        return output;
+    }
 }
