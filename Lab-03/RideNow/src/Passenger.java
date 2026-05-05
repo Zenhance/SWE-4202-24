@@ -25,8 +25,8 @@ public class Passenger {
         this.rating = newRating;
     }
 
-    public void StringToString() {
-        System.out.println(id + " " + name + " " + rating);
+    public String toString() {
+        return(id + " " + name + " " + rating);
     }
 
 
