@@ -33,4 +33,8 @@ public class Driver {
     public void setAvailable(boolean available) {
         isAvailable = available;
     }
+    public String toString() {
+        String status = isAvailable ? "AVAILABLE" : "BUSY";
+        return String.format("Driver[%d] %s (%s) [%s]", id, name, licensePlate, status);
+    }
 }
