@@ -9,5 +9,7 @@ public class Location {
         this.y = y;
     }
 
+    public void Location(double x, double y) {
 
+    }
 }
