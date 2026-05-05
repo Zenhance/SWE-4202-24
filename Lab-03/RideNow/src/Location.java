@@ -8,5 +8,9 @@ public class Location {
         this.x=x;
         this.y=y;
     }
-    public void 
+    public void Location(double x, double y){
+        this.label="Unknown";
+        this.x=x;
+        this.y=y;
+    }
 }
