@@ -10,4 +10,9 @@ public class Location {
         this.y=y;
     }
 
+    public String getLabel() {
+        return label;
+    }
+
+
 }
