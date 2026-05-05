@@ -15,12 +15,15 @@ public class Driver {
         this.id = id;
         this.name = name;
         this.licencePlate = licencePlate;
+        isAvailable = true;
     }
 
     public int getId() {
+
         return id;
     }
     public String getName() {
+
         return name;
     }
     public String getLicencePlate() {
