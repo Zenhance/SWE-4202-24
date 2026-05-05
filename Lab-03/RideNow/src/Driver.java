@@ -28,5 +28,9 @@ public class Driver {
         this.isAvailable = newBoolean;
     }
 
+    public String toString(){
+        String status = isAvailable ? "Available" : "Not Available";
+        return String.format("%d %s %s %s", id, name, licensePlate, status);
+    }
 
 }
