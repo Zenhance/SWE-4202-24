@@ -35,13 +35,13 @@ class Location
     public double distanceTo(Location that)
     {
         double xValue=that.x-this.x;
-        double yValue= that.y-this.y;
+        double yValue=that.y-this.y;
         return Math.sqrt(xValue*xValue + yValue*yValue);
     }
 
     public String toString()
     {
-        return "Airport (3.00,7,50)";
+        return label+"("+String.format("%.2f",x)+","+String.format("%.2f",y)+")";
     }
 
 }
