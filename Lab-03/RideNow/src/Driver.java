@@ -2,7 +2,7 @@ public class Driver {
     private int id;
     private String name;
     private String licencePlate;
-    boolean isAvailable;
+    private boolean isAvailable;
 
     Driver(int id, String name, String licencePlate) {
         this.id=id;
@@ -13,9 +13,31 @@ public class Driver {
     Driver(int id, String name, String licencePlate, boolean isAvailable) {
         this.id=id;
         this.name=name;
-        this.licenceplate=licencePlate;
+        this.licencePlate=licencePlate;
         this.isAvailable=isAvailable;
     }
 
+    public int getId() {
+        return id;
+    }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getLicenceplate() {
+        return licencePlate;
+    }
+
+    public void isAvailable() {
+        return;
+    }
+
+    public void setAvailable(boolean available) {
+
+    }
+
+    public String toString() {
+
+    }
 }
