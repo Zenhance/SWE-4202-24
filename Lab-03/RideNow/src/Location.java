@@ -21,4 +21,11 @@ public class Location {
     double getY(){
         return y;
     }
+    double distanceTo(Location Other){
+        double distance=Math.sqrt(Math.pow((Location.x-Other.x))+Math.pow((Location.y-Other.y)));
+    }
+    String toString(){
+        String output=label+"("+x+","+y+")";
+        return output;
+    }
 }
