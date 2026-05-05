@@ -7,6 +7,11 @@ public class Trip {
     private boolean completed;
 
 
+    Trip(Passenger passenger, Driver driver, Location from,
+         Location to, double baseFare){
+        completed = false;
+        driver.setAvailable(false);
+    }
 
 
 
