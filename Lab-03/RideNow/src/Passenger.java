@@ -9,7 +9,7 @@ public class Passenger {
         this.rating = rating;
     }
     public Passenger(int id, String name) {
-        this.rating = 5.0;
+        this.rating = 5.00;
     }
     public int getId() {
         return id;
