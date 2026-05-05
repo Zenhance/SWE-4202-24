@@ -4,25 +4,31 @@ public class Location {
     private double x;
     private double y;
 
-    public Location(){
+    public Location(String label, double x, double y)){
         this.label = null;
         this.x = x;
         this.y = y;
     }
 
-    void getLabel(){
+    public Location(double x, double y){
+        this.label = "Unknown";
+        this.x = x;
+        this.y = y;
+    }
 
+    void getLabel(){
+        System.out.println(label);
     }
     void getX(){
-
+        System.out.println(x);
     }
 
     void getY(){
-
+        System.out.println(y);
     }
 
     double distanceTo(){
-
+        double z = Math.sqrt(());
     }
 
     String tostring(){
