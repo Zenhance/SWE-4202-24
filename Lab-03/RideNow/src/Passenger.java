@@ -19,12 +19,18 @@ public class Passenger {
     }
 
 
-    public int getID(){
+    public int getId(){
         return this.id;
     }
 
 
+    public String getName(){
+        return this.name;
+    }
 
+    public double getRating(){
+        return this.rating;
+    }
 
 
 
