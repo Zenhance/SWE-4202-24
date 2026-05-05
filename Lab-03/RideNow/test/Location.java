@@ -20,6 +20,9 @@ public class Location {
     }
 public double getY(){
         return y;
+
+
+
 }
 
 
