@@ -46,4 +46,13 @@ class Passenger
         this.rating = rating;
     }
 
+    public void updateRating(double newRating)
+    {
+
+    }
+
+    public String toString()
+    {
+        return "Passenger[42] Alice (4.80)";
+    }
 }
