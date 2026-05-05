@@ -1,5 +1,3 @@
-import java.lang.Math;
-
 public class Location{
     private String label;
     private double x;
@@ -29,12 +27,13 @@ public class Location{
         return this.y;
     }
 
-    public double distanceTo(double x, double y){
-        return Math.sqrt((this.x - x)*(this.x - x)+(this.y - y)*(this.y - y));
+    public double distanceTo(Location other){
+        double res = Math.sqrt(Math.pow(this.x - other.x, 2)+Math.pow(this.y - other.y, 2));
+        return res;
     }
 
     public String toString(){
-        String res = label + " (" + x + ", "+ y + ")";
+        String res = label + " (" + String.format("%.2f",x) + ", "+ String.format("%.2f",y) + ")";
         return res;
     }
 

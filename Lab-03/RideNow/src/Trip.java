@@ -1,5 +1,4 @@
 public class Trip {
-
     private Passenger passenger;
     private Driver driver;
     private Location from;
@@ -8,8 +7,12 @@ public class Trip {
     private boolean completed = false;
 
 
-    Trip(Passenger passenger, Driver driver, Location from,
-         Location to, double baseFare){
+    Trip(Passenger passenger, Driver driver, Location from, Location to, double baseFare){
+        this.passenger = passenger;
+        this.driver = driver;
+        this.from = from;
+        this.to = to;
+        this.baseFare = baseFare;
         completed = false;
         driver.setAvailable(false);
     }
@@ -37,7 +40,7 @@ public class Trip {
         return completed;
     }
 
-    double distance = from.distanceTo(to.getX(), to.getY());
+    double distance = from.distanceTo(to);
 
     public double getDistance(){
         return distance;

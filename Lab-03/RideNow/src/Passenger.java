@@ -32,7 +32,7 @@ public class Passenger {
     }
 
     public String toString(){
-        String res = "Passenger["+id+"] "+name+" ("+rating+")";
+        String res = "Passenger["+id+"] "+name+" ("+String.format("%.2f",rating)+")";
         return res;
     }
 
