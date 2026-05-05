@@ -8,7 +8,9 @@ public class Location{
         this.x = x;
         this.y = y;
     }
+    public Location(double x, double y){
 
+    }
     public void getLabel(){
 
     }
@@ -18,7 +20,12 @@ public class Location{
     public void getY(){
 
     }
-    public String toString(){
-
+    public String toString() {
     }
+
+
 }
+
+
+
+
