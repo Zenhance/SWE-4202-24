@@ -18,5 +18,21 @@ public class Driver {
         isAvailable = true;
     }
 
+    public int getId(){
+        return id;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public String getLicencePlate(){
+        return licencePlate;
+    }
+
+    public boolean isAvailable(){
+        return isAvailable;
+    }
+
 
 }
