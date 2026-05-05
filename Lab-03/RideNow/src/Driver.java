@@ -35,6 +35,10 @@ public class Driver {
     public boolean isAvailable(){
         return isAvailable;
     }
+    public String toString(){
+        String res = "Driver[" + id + "]" + " " + name + " " + "(" + licencePlate + ")" + "[" + (isAvailable? "AVAILABLE":"BUSY") + "]";
 
+        return res;
+    }
 
 }
