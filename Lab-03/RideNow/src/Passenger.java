@@ -15,6 +15,21 @@ public class Passenger {
         this.rating=5.0;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public double getRating(){
+        return rating;
+    }
+
+
+
+
 
 
 
