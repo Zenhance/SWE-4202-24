@@ -1,0 +1,30 @@
+# ── IntelliJ IDEA ──────────────────────────────────────────────
+.idea/
+*.iml
+out/
+gen/
+
+# ── Maven ───────────────────────────────────────────────────────
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# ── Gradle ──────────────────────────────────────────────────────
+.gradle/
+build/
+gradle-app.setting
+!gradle-wrapper.jar
+
+# ── Compiled output ─────────────────────────────────────────────
+*.class
+
+# ── OS noise ────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Test reports ────────────────────────────────────────────────
+*.xml
+*.html
