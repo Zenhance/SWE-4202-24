@@ -10,5 +10,4 @@ public class Location {
         this.y=y;
     }
 
-
 }
