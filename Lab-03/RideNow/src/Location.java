@@ -1,5 +1,8 @@
 import static java.lang.Math.sqrt;
 
+
+// javac *.java && java -cp .:junit-platform-console-standalone.jar org.junit.platform.console.ConsoleLauncher --select-class=RideNowTest
+
 public class Location {
 
     private String label = "Unknown";
@@ -19,7 +22,7 @@ public class Location {
 
     public String getLabel(){
         String label = this.label;
-        return label;
+        return label;               
     }
 
     public double getX(){
@@ -37,18 +40,17 @@ public class Location {
         double x2 = other.getX();
         double y2 = other.getY();
 
-        double distance = sqrt((x2-x2)*(x2-x1) + (y2-y1)*(y2-y1));
+        double distance = sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));
         return distance;
     }
 
     public String toString(){
-
         String label = getLabel();
         double x = getX();
         double y = getY();
 
-        String x_str = String.valueOf(x);
-        String y_str = String.valueOf(y);
+        String x_str = String.format("%.2f", x);
+        String y_str = String.format("%.2f", y);
 
         String output;
         output = label.concat(" (");
@@ -56,6 +58,9 @@ public class Location {
         output = output.concat(", ");
         output = output.concat(y_str);
         output = output.concat(")");
+
+        //actually output = label + " (" + x_str blah blah blah works too
+        //thought it only worked for "print"
 
         return output;
     }

@@ -38,7 +38,7 @@ public class Trip {
     }
     public boolean isCompleted(){
         boolean c = this.completed;
-        return c;
+        return c;                   // only "return complete" works too apparently... same for all the other getters
     }
 
     public double getDistance() {

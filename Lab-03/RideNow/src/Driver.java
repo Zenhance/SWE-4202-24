@@ -31,9 +31,12 @@ public class Driver {
         return licencePlate;
     }
 
-    public boolean setAvailable(boolean available) {
-        boolean isAvailable = this.isAvailable;
+    public boolean isAvailable(){
         return isAvailable;
+    }
+
+    public void setAvailable(boolean available) {
+        this.isAvailable = available;
     }
 
     public String toString(){
@@ -43,7 +46,7 @@ public class Driver {
         if (isAvailable == true)
             availability = "[AVAILABLE]";
         else if (isAvailable == false)
-            availability = "[UNAVAILABLE]";
+            availability = "[BUSY]";
 
         String output = "Driver[";
         output = output.concat(id_str);

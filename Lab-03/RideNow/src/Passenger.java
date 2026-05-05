@@ -38,7 +38,7 @@ public class Passenger {
         double rating = getRating();
 
         String id_str = String.valueOf(id);
-        String rating_str = String.valueOf(rating);
+        String rating_str = String.format("%.2f", rating); // another reminder to read the problem statement with open eyes
 
         String output = "Passenger[";
         output = output.concat(id_str);
