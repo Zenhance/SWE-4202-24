@@ -40,14 +40,14 @@ public class Driver {
 
 
     public String toString(){
-        String res;
+        String res = "Driver["+id+"] "+name+" ("+licencePlate+") ";
         if (isAvailable == true)
         {
-            res = "Driver["+id+"] "+name+" ("+licencePlate+") [AVAILABLE]";
+            res =  res + "[AVAILABLE]";
         }
 
         else{
-            res = "[BUSY]";
+            res = res + "[BUSY]";
         }
 
         return res;
