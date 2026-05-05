@@ -11,15 +11,20 @@ public class Passenger {
         this.id=id;
         this.name=name;
     }
-    public void getId(){
-
+    public int getId(int id){
+    return id;
     }
-    public void getName(){
-
+    public String getName(String name){
+     return name;
     }
-    public void getRating(){
-
+    public double getRating(double rate){
+         return rate;
     }
-
+    public void updateRating(double newRating){
+        rating= newRating;
+    }
+    public String toString(String name, int id, double rating){
+    return String.format(Passenger[%d] %s (%0.2f), id,name,id,rating);
+    }
 
 }
