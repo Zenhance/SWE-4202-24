@@ -22,4 +22,11 @@ public class Passenger {
     public double getRating(){
         return this.rating;
     }
+
+    public void updateRating(double newRating){
+        newRating = getRating();
+    }
+    public String toString(){
+        return "Passenger" + "[" + id + "]" + name + " " + "(" + rating + ")";
+    }
 }
