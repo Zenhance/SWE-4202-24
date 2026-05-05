@@ -25,4 +25,8 @@ public class Passenger {
     public double getRating() {
         return rating;
     }
+
+    void updateRating(double newRating) {
+
+    }
 }
