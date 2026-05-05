@@ -9,4 +9,5 @@ public Location(String x,double x,double y)
     this.label = label;
     this.x = x;
     this.y = y;
+
 }
