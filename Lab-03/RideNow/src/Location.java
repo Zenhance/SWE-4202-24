@@ -3,6 +3,17 @@ public class Location {
     private double x;
     private double y;
 
+    public Location(String label, double x, double y) {
+        this.label = label;
+        this.x = x;
+        this.y = y;
+    }
+
+    public Location(double x, double y) {
+        this.x = x;
+        this.y = y;
+    }
+
     public String getLabel() {
         return label;
     }
@@ -27,10 +38,8 @@ public class Location {
         this.y = y;
     }
 
-    public Location(String label, double x, double y)
-    {
-       this.label = label;
-       this.x = x;
-       this.y = y;
+    public double distanceTo() {
+        double distance = 0;
+        return distance;
     }
 }
