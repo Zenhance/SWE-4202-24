@@ -1,37 +1,40 @@
 //Part B
 public class Passenger {
-
-    private int id;
-    private String name;
+    
+    private final int id;
+    private final String name;
     private double rating;
-
-    public Passenger(int id, String name, double rating){
-        this.id=id;
-        this.name=name;
-        this.rating=rating;
+    
+    Passenger(int id, String name, double rating) {
+        this.id = id;
+        this.name = name;
+        this.rating = rating;
     }
-    public Passenger(int id, String name){
+    
+    Passenger(int id, String name) {
         this.id = id;
         this.name = name;
         this.rating = 5.0;
     }
-
-    public int getId(){
+    
+    int getId() {
         return id;
     }
-    public String getName(){
+    
+    String getName() {
         return name;
     }
-    public double getRating(){
+    
+    double getRating() {
         return rating;
     }
-
-    void updateRating(double newRating){
-        this.rating=newRating;
+    
+    void updateRating(double newRating) {
+        this.rating = newRating;
     }
-
-    public String toString(){
-        return String.format("Passenger[%d] %s (%.2f)",id,name,rating);
+    
+    public String toString() {
+        return String.format("Passenger[%d] %s (%.2f)", id, name, rating);
     }
 }
 
