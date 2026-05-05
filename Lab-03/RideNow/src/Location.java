@@ -11,8 +11,6 @@ public class Location{
 
     public Location(String label, double y){
         this.label = label;
-        this.y = y;
-
-    }
+        this.y = y;}
 
 }
