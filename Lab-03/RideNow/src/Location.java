@@ -1,3 +1,5 @@
+import java.awt.*;
+
 public class Location {
     private String label;
     private double x;
@@ -5,9 +7,14 @@ public class Location {
     public Location(String label,double x,double y) {
         this.label = label;
         this.x = x;
-        this.y;
+        this.y=y;
     }
-
+public String getLabel(){
+        return label;
+}
+public double getX(){
+        return x;
+}
 
 
 
