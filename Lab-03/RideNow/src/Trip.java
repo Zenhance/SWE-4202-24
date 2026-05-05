@@ -42,4 +42,13 @@ public class Trip {
     public double getDistance(){
      return from.distanceTo(to);
     }
+    public double calculateFare(){
+      double fare=baseFare+(15.0*from.distanceTo(to);
+    }
+    public void completeTrip(){
+     driver.setAvailable(true);
+    }
+    public String getSummary(){
+
+    }
 }
