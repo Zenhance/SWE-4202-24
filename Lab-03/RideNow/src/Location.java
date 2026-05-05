@@ -13,7 +13,6 @@ public class Location {
     void getLabel(){
 
     }
-
     void getX(){
 
     }
