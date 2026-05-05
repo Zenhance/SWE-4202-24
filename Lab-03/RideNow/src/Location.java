@@ -18,3 +18,7 @@ public String getLabel()
 {
     return this.label;
 }
+public double getX()
+{
+    return this.x;
+}
