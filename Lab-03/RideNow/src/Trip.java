@@ -64,4 +64,5 @@ public class Trip {
                 "Status : COMPLETED";
         return summary;
     }
+
 }
