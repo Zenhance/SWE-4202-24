@@ -9,6 +9,12 @@ private double rating; // a number from 1.0 to 5.0
         this.rating = rating;
     }
 
+    Passenger(int id, String name){
+        this.rating = 5.0;
+        this.id = id;
+        this.name = name;
+    }
+
 
 
 }
