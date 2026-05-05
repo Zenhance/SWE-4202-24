@@ -15,6 +15,19 @@ public class Location {
         this.y = y;
     }
 
+    //getters
+
+    public String getLabel(){
+        return label;
+    }
+
+    public double getX(){
+        return x;
+    }
+    public double getY(){
+        return y;
+    }
+
 
 
 }
