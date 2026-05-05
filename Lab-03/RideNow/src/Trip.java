@@ -39,6 +39,13 @@ public class Trip {
     }
 
     public double getDistance() {
+        double distance = 0;
         return 0.0;
+    }
+
+    public double calculateFare() {
+        double distance = 0;
+        double fare = baseFare + 15 * distance;
+        return fare;
     }
 }
