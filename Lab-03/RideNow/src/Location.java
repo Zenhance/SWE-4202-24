@@ -32,4 +32,8 @@ public class Location {
         return Math.sqrt(dx * dx + dy * dy);
     }
 
+    public String toString() {
+        return String.format("%s (%.2f, %.2f)", label, x, y);
+    }
+
 }
