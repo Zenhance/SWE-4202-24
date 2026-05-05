@@ -15,4 +15,22 @@ public class Passenger {
         this.name=name;
         this.rating=5.0;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public double getRating() {
+        return rating;
+    }
+
+    public String getName() {
+        return name;
+    }
+    public void updateRating(double newRating){
+        this.rating=newRating;
+    }
+    public String toString(){
+        return (id+" "+name+" "+rating);
+    }
 }
