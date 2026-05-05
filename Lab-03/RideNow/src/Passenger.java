@@ -11,4 +11,23 @@ public class Passenger {
     public Passenger(int id, String name) {
         this.rating = 5.0;
     }
+    public int getId() {
+        return id;
+    }
+    public String getName() {
+        return name;
+    }
+    public double getRating() {
+        return rating;
+    }
+
+    public void updateRating(double newRating) {
+        this.rating = newRating;
+    }
+
+    public void StringToString() {
+        System.out.println(id + " " + name + " " + rating);
+    }
+
+
 }
