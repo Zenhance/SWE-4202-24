@@ -29,4 +29,8 @@ public class Passenger {
     public void updateRating(double newRating) {
         newRating=this.rating;
     }
+
+    public String toString() {
+
+    }
 }
