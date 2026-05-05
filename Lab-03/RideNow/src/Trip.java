@@ -48,4 +48,8 @@ public class Trip {
         double fare = baseFare + 15 * distance;
         return fare;
     }
+
+    public void completeTrip() {
+
+    }
 }
