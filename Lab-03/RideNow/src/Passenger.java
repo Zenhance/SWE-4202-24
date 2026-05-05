@@ -10,9 +10,22 @@ private double rating; // a number from 1.0 to 5.0
     }
 
     Passenger(int id, String name){
-        this.rating = 5.0;
+        rating = 5.0;
         this.id = id;
         this.name = name;
+    }
+
+    //getters
+    public int getID(){
+        return id;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public double getRating(){
+        return rating;
     }
 
 
