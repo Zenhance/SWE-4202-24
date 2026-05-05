@@ -27,21 +27,11 @@ public class Location {
         return y;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    double distanceTo(Location destination) {
+        double dx = destination.x - this.x;
+        double dy = destination.y - this.y;
+        return Math.sqrt(dx * dx + dy * dy);
+    }
 
 
 }
