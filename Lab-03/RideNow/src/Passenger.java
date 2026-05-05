@@ -33,11 +33,11 @@ class Passenger
 
     public void updateRating(double newRating)
     {
-
+        this.rating=newRating;
     }
 
     public String toString()
     {
-        return "Passenger[42] Alice (4.80)";
+        return "Passenger["+id+"]"+" "+name+" "+"("+String.format("%.2f",rating)+")";
     }
 }
