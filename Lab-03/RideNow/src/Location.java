@@ -26,5 +26,7 @@ public double distanceTo(Location other){
         double disY=other.y-this.y;
         return Math.sqrt(disX*disX+disY*disY);
 }
-
+public String toString(){
+        return String
+}
 }
