@@ -39,6 +39,19 @@ public class Driver {
     }
 
 
+    public String toString(){
+        String res;
+        if (isAvailable == true)
+        {
+            res = "Driver["+id+"] "+name+" ("+licencePlate+") [AVAILABLE]";
+        }
+
+        else{
+            res = "[BUSY]";
+        }
+
+        return res;
+    }
 
 
 }
