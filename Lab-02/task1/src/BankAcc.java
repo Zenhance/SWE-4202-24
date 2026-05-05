@@ -26,4 +26,6 @@ public class BankAcc {
      d)
      I would add that in BankAcc class because part of the account balance should be handled by class
 */
+    //part B)
+    
 }
