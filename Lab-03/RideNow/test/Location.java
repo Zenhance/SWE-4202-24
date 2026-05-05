@@ -16,7 +16,7 @@ public class Location {
         return label;
     }
     public double getX(){
-        return X;
+        return x;
     }
 public double getY(){
         return y;
