@@ -28,9 +28,9 @@ public class Location {
         return Math.sqrt((dx*dx)-(dy*dy));
     }
 
-    public String ToString(){
-      return String.format("%s (.2f,.2f)",label,x,y);
+    public String toString(){
 
+      return label+" "+"("+x+y+")";
     }
 
 
