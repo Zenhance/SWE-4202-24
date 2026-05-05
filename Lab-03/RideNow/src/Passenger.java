@@ -1,0 +1,21 @@
+public class Passenger {
+    private int id;
+    private String name;
+    private double rating;
+    Passenger(int id, String name, double rating){
+        this.id=id;
+        this.name=name;
+        this.rating=rating;
+    }
+    Passenger(int id, String name){
+        this.id=id;
+        this.name=name;
+        rating=5.0;
+    }
+    getId(){return id;} getName(){return name;} getRating(){return rating;}
+    void updateRating(double newRating){
+        rating=newRating;
+    }
+}   public String toString(){
+
+}
