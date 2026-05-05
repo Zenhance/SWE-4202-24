@@ -17,4 +17,6 @@ public class Driver {
         this.licencePlate = licencePlate;
         isAvailable = true;
     }
+
+
 }
