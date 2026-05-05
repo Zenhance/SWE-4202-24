@@ -24,7 +24,7 @@ public class Passenger {
         rating= newRating;
     }
     public String toString(String name, int id, double rating){
-    return String.format(Passenger[%d] %s (%0.2f), id,name,id,rating);
+    return String.format("Passenger[%d] %s (%0.2f)", id,name,id,rating);
     }
 
 }
