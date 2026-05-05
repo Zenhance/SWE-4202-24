@@ -22,7 +22,8 @@ class Location
         return label;
     }
 
-    public double getX() {
+    public double getX()
+    {
         return x;
     }
 
@@ -31,10 +32,11 @@ class Location
         return y;
     }
 
-    public double distanceTo()
+    public double distanceTo(Location that)
     {
-        double distance=0;
-        return distance;
+        double xValue=that.x-this.x;
+        double yValue= that.y-this.y;
+        return Math.sqrt(xValue*xValue + yValue*yValue);
     }
 
     public String toString()
