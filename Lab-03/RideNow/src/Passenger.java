@@ -12,5 +12,13 @@ public class Passenger {
         this.name=name;
         this.rating=5.0;
     }
-
+    int getId(){
+        return id;
+    }
+    String getName(){
+        return name;
+    }
+    double getRating(){
+        return rating;
+    }
 }
