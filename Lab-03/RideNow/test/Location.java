@@ -15,8 +15,12 @@ public class Location {
     public String getLabel(){
         return label;
     }
-
-
+    public double getX(){
+        return X;
+    }
+public double getY(){
+        return y;
+}
 
 
 
