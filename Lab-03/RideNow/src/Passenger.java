@@ -1,6 +1,6 @@
 public class Passenger {
-    private int id;
-    private String name;
+    private final int id;
+    private final String name;
     private double rating;
 
     public Passenger(int id, String name, double rating){
@@ -26,7 +26,9 @@ public class Passenger {
     public double getRating(){
         return rating;
     }
-
+public void updateRating(double newRating){
+        this.rating=newRating;
+}
 
 
 
