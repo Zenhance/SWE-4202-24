@@ -11,6 +11,21 @@ public class Location{
 
     public Location(String label, double y){
         this.label = label;
-        this.y = y;}
+        this.y = y;
+    }
+
+    public String getLabel(){
+        return this.label;
+    }
+
+    public double getX(){
+        return this.x;
+    }
+
+    public double getY(){
+        return this.y;
+    }
+
+
 
 }
