@@ -41,5 +41,4 @@ public class Trip {
     public double getDistance() {
         return 0.0;
     }
-
 }
