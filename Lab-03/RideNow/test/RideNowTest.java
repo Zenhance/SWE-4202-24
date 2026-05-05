@@ -158,8 +158,8 @@ public class RideNowTest {
     private Trip makeTrip() {
         Passenger p    = new Passenger(42, "Alice", 4.8);
         Driver    d    = new Driver(7, "Bob", "DHA-1234");
-        Location  from = new Location("Airport",    3.0, 7.5);
-        Location  to   = new Location("University", 8.0, 4.0);
+        Location from = new Location("Airport",    3.0, 7.5);
+        Location to   = new Location("University", 8.0, 4.0);
         return new Trip(p, d, from, to, 50.0);
     }
 
@@ -167,8 +167,8 @@ public class RideNowTest {
     void tripGettersReturnCorrectObjects() {
         Passenger p    = new Passenger(42, "Alice", 4.8);
         Driver    d    = new Driver(7, "Bob", "DHA-1234");
-        Location  from = new Location("Airport",    3.0, 7.5);
-        Location  to   = new Location("University", 8.0, 4.0);
+        Location from = new Location("Airport",    3.0, 7.5);
+        Location to   = new Location("University", 8.0, 4.0);
         Trip trip = new Trip(p, d, from, to, 50.0);
 
         assertSame(p,    trip.getPassenger());
@@ -210,7 +210,7 @@ public class RideNowTest {
     void tripCalculateFareZeroDistance() {
         Passenger p    = new Passenger(1, "Zara");
         Driver    d    = new Driver(2, "Hasan", "XX-0000");
-        Location  same = new Location("Mall", 4.0, 4.0);
+        Location same = new Location("Mall", 4.0, 4.0);
         Trip trip = new Trip(p, d, same, same, 30.0);
         assertEquals(30.0, trip.calculateFare(), 1e-9);
     }
@@ -263,8 +263,8 @@ public class RideNowTest {
         Passenger p2 = new Passenger(2, "Ben");
         Driver    d1 = new Driver(10, "Carl", "A-111");
         Driver    d2 = new Driver(11, "Dana", "B-222");
-        Location  l1 = new Location("Start", 0, 0);
-        Location  l2 = new Location("End",   3, 4);
+        Location l1 = new Location("Start", 0, 0);
+        Location l2 = new Location("End",   3, 4);
 
         Trip t1 = new Trip(p1, d1, l1, l2, 100.0);
         Trip t2 = new Trip(p2, d2, l2, l1, 200.0);
