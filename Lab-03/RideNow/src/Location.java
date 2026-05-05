@@ -28,6 +28,14 @@ public class Location {
         return y;
     }
 
+    //distance
 
+//    public double distanceTo(Location other){
+//        return Math.sqrt(());
+//    }
+//
+//    public String toString(){
+//
+//    }
 
 }
