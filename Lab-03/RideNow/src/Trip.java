@@ -2,7 +2,7 @@ public class Trip {
 private final Passenger passenger;
 private final Driver driver;
 private final Location from;
-    private final Location to;
+private final Location to;
 private final double basefare;
 private boolean completed=false;
     Trip(Passenger passenger, Driver driver, Location from, Location to, double baseFare){

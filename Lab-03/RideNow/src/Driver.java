@@ -20,7 +20,7 @@ public class Driver {
     String getLicencePlate(){return licencePlate;}
     boolean isAvailable(){return isAvailable;}
     public String toString(){
-        if (isAvailable()) {return String.format("Driver[%d] %s (%s) [AVILABLE]",id,name,licencePlate);}
+        if (isAvailable()) {return String.format("Driver[%d] %s (%s) [AVAILABLE]",id,name,licencePlate);}
         else {return String.format("Driver[%d] %s (%s) [BUSY]",id,name,licencePlate);}
     }
 
