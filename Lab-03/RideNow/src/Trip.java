@@ -19,4 +19,9 @@ public Trip(Passenger passenger, Driver driver, Location from, Location to, doub
     completed=false;
     driver.setAvailable(false);
 }
+
+public void getPassenger(){
+
+
+}
 }

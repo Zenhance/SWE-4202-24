@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="passenger class" />
+    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="writing trip class" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,7 +64,7 @@
       <updated>1777353233463</updated>
       <workItem from="1777576671937" duration="7367000" />
       <workItem from="1778092688155" duration="94000" />
-      <workItem from="1778092809585" duration="4758000" />
+      <workItem from="1778092809585" duration="5979000" />
     </task>
     <task id="LOCAL-00001" summary="a change">
       <option name="closed" value="true" />
@@ -282,7 +282,31 @@
       <option name="project" value="LOCAL" />
       <updated>1778101162507</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="passenger class">
+      <option name="closed" value="true" />
+      <created>1778101202262</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1778101202262</updated>
+    </task>
+    <task id="LOCAL-00029" summary="passenger class">
+      <option name="closed" value="true" />
+      <created>1778101962270</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1778101962270</updated>
+    </task>
+    <task id="LOCAL-00030" summary="writing trip class">
+      <option name="closed" value="true" />
+      <created>1778102366907</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1778102366907</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,8 +336,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="answering part b" />
-    <MESSAGE value="answering part b 2" />
     <MESSAGE value="answering part b 3" />
     <MESSAGE value="answering part b 4" />
     <MESSAGE value="creating main method" />
@@ -336,7 +358,9 @@
     <MESSAGE value="completed the ans of part c" />
     <MESSAGE value="location class" />
     <MESSAGE value="location class fix" />
-    <MESSAGE value="passenger class" />
-    <option name="LAST_COMMIT_MESSAGE" value="passenger class" />
+    <MESSAGE value="passenger class completion" />
+    <MESSAGE value="passenger class completion" />
+    <MESSAGE value="writing trip class" />
+    <option name="LAST_COMMIT_MESSAGE" value="writing trip class" />
   </component>
 </project>
