@@ -26,4 +26,10 @@ public class Trip {
     public Location getTo(){
         return to;
     }
+    public double getBaseFare(){
+        return baseFare;
+    }
+    public boolean isCompleted(){
+        return completed;
+    }
         }
