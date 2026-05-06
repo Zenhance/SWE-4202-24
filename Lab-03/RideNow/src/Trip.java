@@ -43,5 +43,14 @@ public class Trip {
         return baseFare=baseFare+15.0*getDistance();
     }
 
+     void completeTrip(){
+        driver.setAvailable(true);
+     }
 
+     String getSummary(){
+        String status;
+        if(completed){status="Completed";}
+        else{status="In progress";}
+       return String.format("Trip Summary\n"+"Passenger :%s\n"+"Driver :%s (%s)\n"+"From : %s\n" +"To: %s\n"+"Distance : %.2f km\n" +"Fare : BDT %.2f km\n" +"Status : %s",passenger.getName(),driver.getName(),driver.getLicencePlate(),from.toString(),to.toString(),getDistance(),calculateFare(),status);
+     }
 }
