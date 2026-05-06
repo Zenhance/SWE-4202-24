@@ -17,4 +17,7 @@ public class Trip {
     public Passenger getPassenger(){
         return passenger;
     }
+    public Driver getDriver(){
+        return driver;
+    }
         }
