@@ -20,4 +20,10 @@ public class Trip {
     public Driver getDriver(){
         return driver;
     }
+    public Location getFrom(){
+        return from;
+    }
+    public Location getTo(){
+        return to;
+    }
         }
