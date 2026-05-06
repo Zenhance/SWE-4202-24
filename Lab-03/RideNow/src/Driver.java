@@ -19,8 +19,13 @@ public class Driver {
     String getName(){return name;}
     String getLicencePlate(){return licencePlate;}
     boolean isAvailable(){return isAvailable;}
-    void setAvailable(boolean available){
-        isAvailable=available;
+    public String toString(){
+        if (isAvailable()) {return String.format("Driver[%d] %s (%s) [AVILABLE]",id,name,licencePlate);}
+        else {return String.format("Driver[%d] %s (%s) [BUSY]",id,name,licencePlate);}
+    }
+
+    public void setAvailable(boolean b) {
+        this.isAvailable=b;
     }
 
 }

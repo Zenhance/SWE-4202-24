@@ -23,10 +23,16 @@ public class Location {
         return x;
 
     }
-    double getY(){ return y;
+     public double getY(){ return y;
     }
-    double distanceTo(Location other){
+     public double distanceTo(Location other){
+        double ans= Math.pow((other.x-x),2);
+        ans+=Math.pow((other.y-y),2);
+        ans= Math.sqrt(ans);
+        return ans;
+    }
+    public String toString(){
+        return String.format("%s (%f, %f)", label,x,y);
+    }
 
-        return 0;
-    }
 }
