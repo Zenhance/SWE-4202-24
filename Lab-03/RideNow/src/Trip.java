@@ -49,4 +49,14 @@ public class Trip {
         double fare=baseFare+(getDistance()*15.0);
         return fare;
     }
+
+    public void completeTrip(){
+        completed=true;
+        driver.setAvailable(true);
+    }
+
+    public String getSummary(){
+        return "Trip Summary\n  Passenger : "+getPassenger().getName()+"\n  Driver    : "+getDriver().getName()+" ("+getDriver().getLicencePlate()+")\n"+"  From      : "+from.toString()+
+                "\n  To        : "+to.toString()+"\n  Distance  : "+String.format("%.2f",getDistance())+" km\n  Fare      : BDT "+String.format("%.2f",calculateFare())+"\n"+"  Status    : "+(completed?"COMPLETED":"IN PROGRESS");
+    }
 }
