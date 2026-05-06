@@ -33,7 +33,12 @@ public class Location {
 
     public double distanceTo(Location other){
 
+        double x = other.getX();
+        double y = other.getY();
 
+        double distance k = Math.sqrt((this.x - x)*(this.x - x)+(this.y - y)*(this.y - y));\
+
+        return distance;
 
     }
 

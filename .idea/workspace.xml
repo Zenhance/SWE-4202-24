@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d87352d3-c56a-42ca-be1a-f6f47a99d8eb" name="Changes" comment="complete">
+    <list default="true" id="d87352d3-c56a-42ca-be1a-f6f47a99d8eb" name="Changes" comment="adding getLabel, getX, getY">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab-03/RideNow/src/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-03/RideNow/src/Location.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -188,7 +189,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778080533753</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="adding getLabel, getX, getY">
+      <option name="closed" value="true" />
+      <created>1778080988548</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1778080988548</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,7 +213,8 @@
     <MESSAGE value="adding dequeue" />
     <MESSAGE value="adding front and display" />
     <MESSAGE value="complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="complete" />
+    <MESSAGE value="adding getLabel, getX, getY" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding getLabel, getX, getY" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
