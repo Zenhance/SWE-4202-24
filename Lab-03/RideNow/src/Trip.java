@@ -60,4 +60,9 @@ public String getSummary(){
             "\n\tPassenger\t:\t"+passenger.getName()+
             "\n\tDriver\t:\t"+driver.toString()+
             "\n\tFrom\t:\t"+from.toString()+
+            "\n\tTo\t:\t"+ to.toString()+
+            "\n\tDistance\t:\t"+String.format("%.2f",from.distanceTo(to))+"km"+
+            "\n\tFare\t:\t+"BDT"+fare+
+        "\n\tStatus\t:\t"+status;
+    return status;
 }
