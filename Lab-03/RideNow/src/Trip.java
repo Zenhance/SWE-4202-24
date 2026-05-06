@@ -1,5 +1,3 @@
-import java.security.PublicKey;
-
 public class Trip {
     private Passenger passenger;
     private Driver driver;
@@ -8,16 +6,17 @@ public class Trip {
     private double baseFare;
     private boolean completed;
 
-    public Trip(Passenger passenger, Driver drive, Location from, Location to, double baseFare) {
+    public Trip(Passenger passenger, Driver driver, Location from, Location to, double baseFare) {
         this.passenger = passenger;
         this.driver = driver;
         this.from = from;
         this.to = to;
         this.baseFare = baseFare;
         this.completed = false;
-    }
+
     driver.setAvailable(false);
 }
+//getters
 public Passenger getPassenger() {
     return passenger;
 }
@@ -31,9 +30,9 @@ public Location getTo() {
     return to;
 }
 public double getBaseFare() {
-    return getBaseFare;
+    return baseFare;
 }
-public double isCompleted() {
+public boolean isCompleted() {
     return completed;
 }
 public double getDistance(){
@@ -49,12 +48,12 @@ public void completeTrip(){
     driver.setAvailable(true);
 }
 public String getSummary(){
-    String status;
-    if(completed==true){
-        status="COMPLETED";
+    String message;
+    if(completed){
+        message="COMPLETED";
     }
     else{
-        status="IN PRPGRESS";
+        message="IN PROGRESS";
     }
     String status="Trip Summary"+
             "\n\tPassenger\t:\t"+passenger.getName()+
@@ -63,6 +62,7 @@ public String getSummary(){
             "\n\tTo\t:\t"+ to.toString()+
             "\n\tDistance\t:\t"+String.format("%.2f",from.distanceTo(to))+"km"+
             "\n\tFare\t:\t+"BDT"+fare+
-        "\n\tStatus\t:\t"+status;
+        "\n\tStatus\t:\t"+message;
     return status;
+}
 }
