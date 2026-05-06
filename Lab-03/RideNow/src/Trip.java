@@ -5,6 +5,7 @@ public class Trip  {
    private location to;
    private double baseFare;
    private boolean completed;
+   double totalFare;
     Trip(Passenger passenger,Driver driver,location from,location to,double baseFare){
         this.passenger=passenger;
         this.driver=driver;
@@ -36,12 +37,27 @@ public class Trip  {
         return from.distanceTo(this.to);
     }
     double calculateFare(){
-        return baseFare+15.0*getDistance();
+         totalFare= baseFare+15.0*getDistance();
+        return totalFare;
     }
     void completeTrip(){
         if(this.completed){
             driver.setAvailable(true);
         }
     }
+String getSummary(){
+    System.out.println("Trip Summary");
+    System.out.println("Passenger:"+passenger.getName());
+    System.out.println("Driver   :"+driver.getName()+"("+driver.getLicensePlate()+")");
+    System.out.println("From     :"+from.toString());
+    System.out.println("To       :"+to.toString());
+    System.out.println("Distance :"+getDistance());
+    System.out.println("Fare     : BDT") + totalFare;
+    if(isCompleted()){
+        System.out.println("Status  :COMPLETED");
+    }else{
+        System.out.println("Status   :IN PROGRESS");
+    }
+}
 
 }
