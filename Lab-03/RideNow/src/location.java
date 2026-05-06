@@ -1,11 +1,13 @@
 public class location {
-    private String[] label;
-    private double x;
-    private double y;
+     private String label;
+     private double x;
+     private double y;
 
-    public void Location(String label,double x,double y){
+    public location(String label,double x,double y){
         this.label=label;
         this.x=x;
         this.y=y;
     }
+
+
 }
