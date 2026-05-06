@@ -36,6 +36,6 @@ public class Location {
     }
 
     public String toString(){
-        return label+" ("+x+", "+y+")";
+        return label+" ("+String.format("%.2f",x)+" , "+String.format("%.2f",y)+")";
     }
 }
