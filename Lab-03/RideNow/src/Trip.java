@@ -1,3 +1,3 @@
 public class Trip {
-    private
+    private passenger
 }
