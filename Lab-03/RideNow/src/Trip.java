@@ -4,8 +4,8 @@ public class Trip {
     private Driver driver;
     private Location from;
     private Location to;
-    private double baseFare;
-    private boolean completed;
+    private double baseFare=100;
+    private boolean completed=false;
 
     Trip(Passenger passenger,Driver driver,Location from,Location to,double baseFare){
         this.passenger=passenger;
@@ -14,6 +14,7 @@ public class Trip {
         this.to=to;
         this.baseFare=baseFare;
         this.completed=false;
+        driver.setAvailable(false);
     }
 
     public Passenger getPassenger(){
@@ -38,6 +39,10 @@ public class Trip {
 
     public boolean isCompleted(){
         return completed;
+    }
+
+    public double getDistance(){
+        return from.distanceTo(to);
     }
 
 }
