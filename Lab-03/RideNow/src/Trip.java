@@ -26,7 +26,22 @@ public class Trip {
     public Location getFrom(){
         return from;
     }
-    public Location getTo(){
+    public Location getTo() {
         return to;
     }
+        public double getBaseFare(){
+            return baseFare;
+        }
+    public boolean idCompleted(){
+        return completed;
+    }
+
+    public  double getDistance(){
+        return from.distance(to);
+    }
+    public double calculateFare(){
+        return baseFare=baseFare+15.0*getDistance();
+    }
+
+
 }
