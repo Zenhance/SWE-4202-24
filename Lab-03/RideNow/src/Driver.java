@@ -39,8 +39,8 @@ public class Driver {
     }
 
     public String toString() {
-        String status = "Driver[" + id + "]" + name + "(" + licencePlate + ");
-        if (isAvailable == true) {
+        String status = "Driver[" + id + "]" + name + "(" + licencePlate +")";
+        if (isAvailable) {
             status = status + "[AVAILABLE]";
         } else {
             status = status + "[BUSY]";
