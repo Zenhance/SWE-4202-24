@@ -12,17 +12,21 @@ public class Passenger {
         this.name=name;
         this.rating=5.0;
   }
-  public void getId(){
-        return Id;
+  public int getId(){
+        return id;
   }
-  public void getName(){
-        return Name;
+  public String getName(){
+        return name;
   }
-  public void getRating(){
-        return Rating;
+  public double getRating(){
+        return rating;
   }
-  void updatedRating(){
-        Rating=this.rating;
+  public void updateRating(double newRating){
+        this.rating=newRating;
     }
+    public String toString(){
+        return "Passenger"+"["+id+"]"+name+"("+rating+")";
+    }
+
 
 }
