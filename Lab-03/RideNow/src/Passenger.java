@@ -3,5 +3,5 @@ public class Passenger {
     private String name;
     private double rating;
 
-    public passenger(int id)
+    public passenger(int id, double rating)
 }
