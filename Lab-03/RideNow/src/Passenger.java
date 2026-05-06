@@ -9,3 +9,6 @@ public Passenger(int id,String name,double rating){
     this.name=name;
     this.rating=rating;
 }
+public Passenger(int id,String name){
+    this(id,name,5.0);
+}
