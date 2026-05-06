@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="location class">
-      <change beforePath="$PROJECT_DIR$/Lab-03/RideNow/src/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-03/RideNow/src/Location.java" afterDir="false" />
-    </list>
+    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="passenger class" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,7 +64,7 @@
       <updated>1777353233463</updated>
       <workItem from="1777576671937" duration="7367000" />
       <workItem from="1778092688155" duration="94000" />
-      <workItem from="1778092809585" duration="3893000" />
+      <workItem from="1778092809585" duration="4758000" />
     </task>
     <task id="LOCAL-00001" summary="a change">
       <option name="closed" value="true" />
@@ -260,7 +258,31 @@
       <option name="project" value="LOCAL" />
       <updated>1778096583250</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="location class">
+      <option name="closed" value="true" />
+      <created>1778100316478</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1778100316478</updated>
+    </task>
+    <task id="LOCAL-00026" summary="location class fix">
+      <option name="closed" value="true" />
+      <created>1778100820014</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1778100820014</updated>
+    </task>
+    <task id="LOCAL-00027" summary="passenger class">
+      <option name="closed" value="true" />
+      <created>1778101162507</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1778101162507</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,8 +312,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="amending the answer of part A" />
-    <MESSAGE value="amending the answer of part A 2" />
     <MESSAGE value="answering part b" />
     <MESSAGE value="answering part b 2" />
     <MESSAGE value="answering part b 3" />
@@ -315,6 +335,8 @@
     <MESSAGE value="comp" />
     <MESSAGE value="completed the ans of part c" />
     <MESSAGE value="location class" />
-    <option name="LAST_COMMIT_MESSAGE" value="location class" />
+    <MESSAGE value="location class fix" />
+    <MESSAGE value="passenger class" />
+    <option name="LAST_COMMIT_MESSAGE" value="passenger class" />
   </component>
 </project>
