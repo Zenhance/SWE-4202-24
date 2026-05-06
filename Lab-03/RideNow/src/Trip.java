@@ -56,4 +56,8 @@ public String getSummary(){
     else{
         status="IN PRPGRESS";
     }
+    String status="Trip Summary"+
+            "\n\tPassenger\t:\t"+passenger.getName()+
+            "\n\tDriver\t:\t"+driver.toString()+
+            "\n\tFrom\t:\t"+from.toString()+
 }
