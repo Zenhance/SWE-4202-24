@@ -10,7 +10,7 @@ public class Driver {
         this.id=id;
         this.name=name;
         this.licencePlate=licencePlate;
-        this.isAvailable=1;
+        this.isAvailable=true;
 
     }
 
@@ -19,7 +19,7 @@ public class Driver {
                this.name=name;
                this.licencePlate=licencePlate;
                this.isAvailable=isAvailable;
- 
+
     }
 
     public int getId(){
@@ -38,4 +38,29 @@ public class Driver {
     public boolean isAvailable(){
         return this.isAvailable;
     }
+
+
+    public void setAvailable(boolean available){
+
+        this.isAvailable=available;
+    }
+
+    public String toString(){
+
+        String status;
+
+        if(isAvailable==true){
+            status= "AVAILABLE";
+        } else {status= "BUSY";}
+
+
+        String result=String.format("Driver[%d] %s (%s) [%s]",id,name,licencePlate,status);
+
+        return result;
+
+
+
+    }
 }
+
+
