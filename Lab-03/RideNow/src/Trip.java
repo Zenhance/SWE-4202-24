@@ -61,8 +61,8 @@ public String getSummary(){
             "\n\tFrom\t:\t"+from.toString()+
             "\n\tTo\t:\t"+ to.toString()+
             "\n\tDistance\t:\t"+String.format("%.2f",from.distanceTo(to))+"km"+
-            "\n\tFare\t:\t+"BDT"+fare+
+            "\n\tFare\t:\t"+"BDT"+fare+
         "\n\tStatus\t:\t"+message;
-    return status;
+return status;
 }
 }
