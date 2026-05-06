@@ -19,7 +19,7 @@ public class Driver {
                this.name=name;
                this.licencePlate=licencePlate;
                this.isAvailable=isAvailable;
-
+ 
     }
 
     public int getId(){

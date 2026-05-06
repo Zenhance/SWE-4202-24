@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="part c answer">
+    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="completed the answer of part c">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab-02/task2/src/StudentQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-02/task2/src/StudentQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab-02/task2/src/StudentStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-02/task2/src/StudentStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab-03/RideNow/src/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-03/RideNow/src/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab-03/RideNow/src/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-03/RideNow/src/Location.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,23 +17,23 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="39-riju" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "tuireuit"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;tuireuit&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Zenhance/SWE-4202-24.git",
-    "accountId": "aa5ee623-0c65-4302-94e4-d25466634c7a"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Zenhance/SWE-4202-24.git&quot;,
+    &quot;accountId&quot;: &quot;aa5ee623-0c65-4302-94e4-d25466634c7a&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -45,6 +45,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
@@ -65,7 +66,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1777353233463</updated>
-      <workItem from="1777576671937" duration="6891000" />
+      <workItem from="1777576671937" duration="7367000" />
+      <workItem from="1778092688155" duration="94000" />
+      <workItem from="1778092809585" duration="2317000" />
     </task>
     <task id="LOCAL-00001" summary="a change">
       <option name="closed" value="true" />
@@ -243,7 +246,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777590236360</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="part c answer 2">
+      <option name="closed" value="true" />
+      <created>1777590966053</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1777590966053</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,14 +265,25 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/39-riju" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change 3" />
     <MESSAGE value="a change" />
     <MESSAGE value="amending the answer of part A" />
     <MESSAGE value="amending the answer of part A 2" />
@@ -283,6 +305,10 @@
     <MESSAGE value="student stack fixing code" />
     <MESSAGE value="main file" />
     <MESSAGE value="part c answer" />
-    <option name="LAST_COMMIT_MESSAGE" value="part c answer" />
+    <MESSAGE value="completed the ans of part c" />
+    <MESSAGE value="completed the answer of part c" />
+    <MESSAGE value="comp" />
+    <MESSAGE value="completed the ans of part c" />
+    <option name="LAST_COMMIT_MESSAGE" value="completed the ans of part c" />
   </component>
 </project>
