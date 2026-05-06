@@ -42,4 +42,13 @@ public class Trip {
         completed=true;
         driver.setAvailable(true);
     }
+    public String getSummary(){
+        String status;
+        if(completed){
+            status="Completed";
+        }
+        else{
+            status="In progress";
+        }
+    }
         }
