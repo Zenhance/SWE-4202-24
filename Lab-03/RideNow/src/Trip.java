@@ -22,6 +22,10 @@ public Passenger getPassenger() {
 public Driver getDriver() {
     return driver;
 }
+public Location getFrom() {
+    return from;
+}
+
 
 
 
