@@ -39,5 +39,10 @@ public class Trip {
         return from.distanceTo(to);
     }
 
+    public double calculateFare(){
+        double distance = getDistance();
+        return this.baseFare+(15.0*distance);
+    }
+
 
 }
