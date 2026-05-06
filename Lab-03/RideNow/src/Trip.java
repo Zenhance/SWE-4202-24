@@ -36,3 +36,6 @@ public double getBaseFare() {
 public double isCompleted() {
     return completed;
 }
+public double getDistance(){
+    return from.distanceTo(to);
+}
