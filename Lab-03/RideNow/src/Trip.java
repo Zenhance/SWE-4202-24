@@ -48,3 +48,12 @@ public void completeTrip(){
     completed=true;
     driver.setAvailable(true);
 }
+public String getSummary(){
+    String status;
+    if(completed==true){
+        status="COMPLETED";
+    }
+    else{
+        status="IN PRPGRESS";
+    }
+}
