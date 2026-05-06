@@ -21,4 +21,7 @@ public class Trip {
     public Driver getDriver(){
         return this.driver;
     }
+    public Location getFrom(){
+        return this.from;
+    }
 }
