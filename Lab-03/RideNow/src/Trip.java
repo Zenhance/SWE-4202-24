@@ -39,3 +39,8 @@ public double isCompleted() {
 public double getDistance(){
     return from.distanceTo(to);
 }
+double fare;
+public double calculateFare(){
+    fare=baseFare+15.0*from.distanceTo(to);
+    return fare;
+}
