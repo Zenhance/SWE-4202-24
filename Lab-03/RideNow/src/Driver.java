@@ -16,3 +16,6 @@ public class Driver {
         this.isAvailable=isAvailable;
     }
     }
+    public int getId(){
+    return id;
+    }
