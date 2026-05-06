@@ -14,4 +14,7 @@ public class Trip {
         completed=false;
         driver.setAvailable(false);
     }
-}
+    public Passenger getPassenger(){
+        return passenger;
+    }
+        }
