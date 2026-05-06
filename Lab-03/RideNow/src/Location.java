@@ -1,5 +1,3 @@
-import java.awt.*;
-
 public class Location {
     private String label;
     private double x;
@@ -30,15 +28,7 @@ public class Location {
     }
     public String toString(){
         return String.format("%s(%.2f,%.2f)",label,x,y);
+
     }
-
-
-
-
-
-
-
-
-
 
 }
