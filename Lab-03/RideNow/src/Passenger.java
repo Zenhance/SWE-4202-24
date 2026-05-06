@@ -12,3 +12,9 @@ public Passenger(int id,String name,double rating){
 public Passenger(int id,String name){
     this(id,name,5.0);
 }
+public int getId(){
+    return id;
+}
+public String getName(){
+    return name;
+}
