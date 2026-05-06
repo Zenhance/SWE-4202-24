@@ -22,6 +22,23 @@ public Trip(Passenger passenger, Driver driver, Location from, Location to, doub
 
 public void getPassenger(){
 
-
+    return passenger;
 }
+
+public void getDriver(){
+
+    retrun driver;
+}
+
+public void getFrom(){
+
+        retrun from;
+    }
+
+public void getTo(){
+
+        retrun to;
+    }
+
+
 }
