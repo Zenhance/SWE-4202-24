@@ -16,4 +16,6 @@ public class Trip {
         this.completed=false;
     }
 
+
+
 }
