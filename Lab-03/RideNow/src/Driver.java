@@ -15,7 +15,6 @@ public class Driver {
         this.licencePlate=licencePlate;
         this.isAvailable=isAvailable;
     }
-    }
     public int getId(){
     return id;
     }
@@ -26,7 +25,7 @@ public class Driver {
     return isAvailable;
     }
     public void setAvailable(boolean available){
-    this.available=available;
+    this.isAvailable=available;
     }
     public String toString(){
     String status = "Driver["+id+"]"+name+"("+licencePlate");
@@ -37,4 +36,5 @@ public class Driver {
                     status=status+"[BUSY]";
                 }
                 return status;
+    }
     }
