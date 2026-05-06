@@ -18,4 +18,7 @@ public class Passenger {
     public String getName(){
         return name;
     }
+    public double getRating(){
+        return rating;
+    }
 }
