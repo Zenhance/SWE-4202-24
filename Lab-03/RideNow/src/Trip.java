@@ -44,5 +44,8 @@ public class Trip {
         return this.baseFare+(15.0*distance);
     }
 
-
+    public void completeTrip(){
+        this.completed = true;
+        driver.setAvailable(true);
+    }
 }
