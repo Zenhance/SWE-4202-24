@@ -29,7 +29,7 @@ public class Location {
         return y;
     }
 
-    public double distanceto(Location other){
+    public double distanceTo(Location other){
         double xx=other.x-this.x;
         double yy=other.y-this.y;
         return Math.sqrt(xx*xx + yy*yy);
