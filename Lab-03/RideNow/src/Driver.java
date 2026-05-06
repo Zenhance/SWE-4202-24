@@ -4,16 +4,15 @@ public class Driver {
     private String licencePlate;
     private boolean isAvailable;
 
+    //available constructor
+    public Driver(int id,String name,String licencePlate) {
+        this(id, name, licencePlate, true);
+    }
+
     public Driver(int id,String name,String licencePlate,boolean isAvailable){
         this.id=id;
         this.name=name;
         this.licencePlate=licencePlate;
         this.isAvailable=isAvailable;
     }
-
-
-
-
-
-
-}
+    }
