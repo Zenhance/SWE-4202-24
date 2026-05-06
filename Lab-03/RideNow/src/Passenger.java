@@ -4,3 +4,8 @@ public class Passenger {
     private double rating;
 
 }
+public Passenger(int id,String name,double rating){
+    this.id=id;
+    this.name=name;
+    this.rating=rating;
+}
