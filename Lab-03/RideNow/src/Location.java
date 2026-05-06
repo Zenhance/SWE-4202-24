@@ -1,7 +1,7 @@
 public class Location {
-    private String label;
-    private double x;
-    private double y;
+    private String label="Unknown";
+    private final double x;
+    private final double y;
 
     Location(String label,double x,double y){
         this.label=label;
@@ -22,15 +22,17 @@ public class Location {
     public double getY(){
         return y;
     }
-    public double distance(Location p){
+
+
+    public double distanceTo(Location p){
         double dx=p.x-this.x;
         double dy=p.y-this.y;
-        return Math.sqrt((dx*dx)-(dy*dy));
+        return Math.sqrt((dx*dx)+(dy*dy));
     }
 
     public String toString(){
 
-      return label+" "+"("+x+y+")";
+      return String.format("%s (%.2f, %.2f)",label,x,y);
     }
 
 

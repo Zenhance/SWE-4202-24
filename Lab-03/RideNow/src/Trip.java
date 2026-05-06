@@ -1,17 +1,17 @@
 public class Trip {
-    private Passenger passenger;
-    private Driver driver;
-    private Location from;
-    private Location to;
-    private double baseFare;
-    private boolean completed=false;
+    private final Passenger passenger;
+    private final Driver driver;
+    private final Location from;
+    private final Location to;
+    private final double baseFare;
+    private boolean completed;
 
     Trip(Passenger passenger,Driver driver,Location from,Location to,double basefare){
         this.passenger=passenger;
         this.driver=driver;
         this.from=from;
         this.to=to;
-        this.baseFare=baseFare;
+        this.baseFare=basefare;
         completed=false;
         driver.setAvailable(false);
 
@@ -32,25 +32,26 @@ public class Trip {
         public double getBaseFare(){
             return baseFare;
         }
-    public boolean idCompleted(){
+    public boolean isCompleted(){
         return completed;
     }
 
     public  double getDistance(){
-        return from.distance(to);
+        return from.distanceTo(to);
     }
     public double calculateFare(){
-        return baseFare=baseFare+15.0*getDistance();
+        return baseFare+15.0* getDistance();
     }
 
      void completeTrip(){
+        completed=true;
         driver.setAvailable(true);
      }
 
      String getSummary(){
         String status;
-        if(completed){status="Completed";}
-        else{status="In progress";}
-       return String.format("Trip Summary\n"+"Passenger :%s\n"+"Driver :%s (%s)\n"+"From : %s\n" +"To: %s\n"+"Distance : %.2f km\n" +"Fare : BDT %.2f km\n" +"Status : %s",passenger.getName(),driver.getName(),driver.getLicencePlate(),from.toString(),to.toString(),getDistance(),calculateFare(),status);
+        if(completed){status="COMPLETED";}
+        else{status="IN PROGRESS";}
+       return String.format("Trip Summary\n" +"Passenger :%s\n"+"Driver :%s (%s)\n"+"From : %s\n" +"To: %s\n"+"Distance : %.2f km\n" +"Fare : BDT %.2f km\n" +"Status : %s",passenger.getName(),driver.getName(),driver.getLicencePlate(),from.toString(),to.toString(),getDistance(),calculateFare(),status);
      }
 }
