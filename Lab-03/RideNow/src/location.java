@@ -15,5 +15,8 @@ public class location {
     public String getLabel(){
         return label;
     }
+    public double getX(){
+        return x;
+    }
 
 }
