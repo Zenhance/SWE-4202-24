@@ -35,5 +35,8 @@ public class Driver {
         this.isAvailable = available;
     }
 
-
+    public String toString(){
+        String availablility = isAvailable ? "AVAILABLE" : "BUSY";
+        return String.format("Driver[%d] %s (%s) [%s]", this.id, this.name, this.licencePlate, availablility);
+    }
 }
