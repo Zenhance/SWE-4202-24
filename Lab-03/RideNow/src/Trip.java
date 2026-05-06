@@ -46,18 +46,10 @@ public class Trip  {
         }
     }
 String getSummary(){
-    System.out.println("Trip Summary");
-    System.out.println("Passenger:"+passenger.getName());
-    System.out.println("Driver   :"+driver.getName()+"("+driver.getLicensePlate()+")");
-    System.out.println("From     :"+from.toString());
-    System.out.println("To       :"+to.toString());
-    System.out.println("Distance :"+getDistance());
-    System.out.println("Fare     : BDT") + totalFare;
-    if(isCompleted()){
-        System.out.println("Status  :COMPLETED");
-    }else{
-        System.out.println("Status   :IN PROGRESS");
-    }
+    return "Trip Summary\n"+"Passenger :"+passenger.getName()+"\n"+"Driver"+driver.getName()+"\n"+"From   :"+from.toString()+"\n"
+            +"To     :"+to.toString()+"\n"+"Distance  :"+getDistance()+"\n"+"Fare   :Bdt "+calculateFare()+"TK"+"\n"+
+            "Status  :"+((isCompleted())?"COMPLETED":"IN PROGRESS");
+
 }
 
 }
