@@ -23,4 +23,5 @@ public double getRating(){
 }
 public void updateRating(double newRating){
     this.rating = newRating;
+
 }
