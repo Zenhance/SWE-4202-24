@@ -24,7 +24,11 @@ public class location {
    public double distanceTo(location other){
         double finalX= other.x-this.x;
         double finalY= other.y-this.y;
-        double distance = sqrt(finalX*finalX+finalY*finalY);
-
+        double distance =Math.sqrt(finalX*finalX+finalY*finalY);
+         return distance;
     }
+    public String toString(){
+        return label+"("+x+","+y+")";
+    }
+
 }
