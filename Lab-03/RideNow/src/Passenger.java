@@ -14,4 +14,5 @@ public class Passenger {
         this.name = name;
         this.rating = 5.0 ;
     }
+
 }
