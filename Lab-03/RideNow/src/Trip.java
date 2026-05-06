@@ -33,4 +33,7 @@ public class Trip {
     public boolean isCompleted(){
         return this.completed;
     }
+    public double getDistance(){
+        return from.distanceTo(to);
+    }
 }
