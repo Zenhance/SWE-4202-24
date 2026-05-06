@@ -18,5 +18,13 @@ public class location {
     public double getX(){
         return x;
     }
+    public double getY(){
+        return y;
+    }
+   public double distanceTo(location other){
+        double finalX= other.x-this.x;
+        double finalY= other.y-this.y;
+        double distance = sqrt(finalX*finalX+finalY*finalY);
 
+    }
 }
