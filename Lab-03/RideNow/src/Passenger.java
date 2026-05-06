@@ -21,4 +21,8 @@ public class Passenger {
     public double getRating(){
         return rating;
     }
+    public void updateRating(double newRating){
+        this.rating=newRating;
+    }
+
 }
