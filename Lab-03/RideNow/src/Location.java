@@ -5,7 +5,7 @@ public class Location {
     Location(String label, double x, double y)
     {
         this.label=label;
-        this.x=this.x;
+        this.x=x;
         this.y=y;
     }
     Location(double x, double y)
