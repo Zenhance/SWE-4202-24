@@ -1,5 +1,5 @@
 public class Location {
-    private String label = "unknown";
+    private String label = "Unknown";
     private double x;
     private double y;
 
@@ -28,7 +28,7 @@ public class Location {
        return Math.sqrt(dx * dx + dy * dy);
     }
     public String toString(){
-        String result = label + " " + "(" + x + "," + y + ")";
+        String result = label + " " + "(" + String.format("%.2f",x) + "," + String.format("%.2f",y) + ")";
         return result;
     }
 }
