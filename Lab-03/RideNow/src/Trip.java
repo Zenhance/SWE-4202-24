@@ -38,4 +38,8 @@ public class Trip {
     public double calculateFare(){
         return baseFare+(15.0*getDistance());
     }
+    public void completeTrip(){
+        completed=true;
+        driver.setAvailable(true);
+    }
         }
