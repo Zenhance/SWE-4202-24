@@ -21,4 +21,7 @@ public class Driver {
     public String getName(){
         return name;
     }
+    public  String getLicencePlate(){
+        return licencePlate;
+    }
 }
