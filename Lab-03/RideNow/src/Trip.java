@@ -1,3 +1,5 @@
+import java.security.PublicKey;
+
 public class Trip {
     private Passenger passenger;
     private Driver driver;
@@ -25,9 +27,12 @@ public Driver getDriver() {
 public Location getFrom() {
     return from;
 }
-
-
-
-
-
+public Location getTo() {
+    return to;
+}
+public double getBaseFare() {
+    return getBaseFare;
+}
+public double isCompleted() {
+    return completed;
 }
