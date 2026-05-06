@@ -8,6 +8,12 @@ public class location {
         this.x=x;
         this.y=y;
     }
-
+    public location(double x,double y){
+        this.x=x;
+        this.y=y;
+    }
+    public String getLabel(){
+        return label;
+    }
 
 }
