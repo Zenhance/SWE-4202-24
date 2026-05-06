@@ -20,25 +20,39 @@ public Trip(Passenger passenger, Driver driver, Location from, Location to, doub
     driver.setAvailable(false);
 }
 
-public void getPassenger(){
+public Passenger getPassenger(){
 
     return passenger;
 }
 
-public void getDriver(){
+public Driver getDriver(){
 
     retrun driver;
 }
 
-public void getFrom(){
+public Location getFrom(){
 
         retrun from;
     }
 
-public void getTo(){
+public Location getTo(){
 
         retrun to;
     }
+
+public double getBaseFare(){
+    return baseFare;
+}
+
+
+public boolean isCompleted(){
+        return completed;
+    }
+
+
+
+
+
 
 
 }
