@@ -24,4 +24,7 @@ public class Trip {
     public Location getFrom(){
         return this.from;
     }
+    public Location getTo(){
+        return this.to;
+    }
 }
