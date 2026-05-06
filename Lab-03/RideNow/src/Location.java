@@ -27,8 +27,8 @@ public double distanceTo(Location other){
         return Math.sqrt(disX*disX+disY*disY);
 }
 public String toString(){
-        return label+"("+
+        return label+" ("+
                 String.format("%.2f",x)+","+
-                String.format("%.2f",x)+")";
+                String.format(" %.2f",y)+")";
 }
 }

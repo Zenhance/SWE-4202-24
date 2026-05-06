@@ -33,13 +33,13 @@ public class Driver {
     public String toString(){
         String status;
         if(isAvailable){
-            status="Available";
+            status="AVAILABLE";
         }
         else{
-            status="Busy";
+            status="BUSY";
         }
-        return "Driver["+id+"]"+
-                name+"("+licencePlate+") ["+
+        return "Driver["+id+"] "+
+                name+" ("+licencePlate+") ["+
                 status+"]";
     }
 }

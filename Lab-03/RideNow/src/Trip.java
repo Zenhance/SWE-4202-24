@@ -45,10 +45,10 @@ public class Trip {
     public String getSummary(){
         String status;
         if(completed){
-            status="Completed";
+            status="COMPLETED";
         }
         else{
-            status="In progress";
+            status="IN PROGRESS";
         }
         return "Trip Summary\n"+
                 "Passenger : " + passenger.getName() + "\n" +
