@@ -16,23 +16,32 @@ public class Location {
         this.y = y;
     }
 
-    void getLabel(){
-        System.out.println(label);
-    }
-    void getX(){
-        System.out.println(x);
+    public getLabel(){
+
+    return label;
     }
 
-    void getY(){
-        System.out.println(y);
+    public double getX(){
+
+    return x;
     }
 
-    double distanceTo(){
-        double z = Math.sqrt(());
+    public double getY(){
+
+        return y;
+    }
+
+    public double distanceTo(Location other){
+
+
+
     }
 
     String tostring(){
         String result =
     }
 
+    public double getX() {
+        return x;
+    }
 }
