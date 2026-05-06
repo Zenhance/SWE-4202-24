@@ -28,7 +28,7 @@ public class Location {
        return Math.sqrt(dx * dx + dy * dy);
     }
     public String toString(){
-        String result = label + " " + "(" + String.format("%.2f",x) + "," + String.format("%.2f",y) + ")";
+        String result = label + " " + "(" + String.format("%.2f",x) + "," + String.format(" %.2f",y) + ")";
         return result;
     }
 }

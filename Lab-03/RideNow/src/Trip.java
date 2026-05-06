@@ -44,7 +44,7 @@ public class Trip {
         driver.setAvailable(true);
     }
     public String getSummary(){
-      String status = completed? "Completed" : "In Progress";
+      String status = completed? "COMPLETED" : "IN PROGRESS";
             return "Trip Summary\n" +
                     "Passenger :" + passenger.getName() + "\n" +
                     "Driver :" + driver.getName() + "(" + driver.getLicencePlate() + ")\n" +
