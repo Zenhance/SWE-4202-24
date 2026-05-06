@@ -32,4 +32,10 @@ public class Trip {
     public boolean isCompleted(){
         return completed;
     }
+    public double getDistance(){
+        return from.distanceTo();
+    }
+    public double calculateFare(){
+        return baseFare+(15.0*getDistance());
+    }
         }
