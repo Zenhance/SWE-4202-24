@@ -1,12 +1,12 @@
 public class Trip  {
    private Passenger passenger;
    private Driver driver;
-   private location from;
-   private location to;
+   private Location from;
+   private Location to;
    private double baseFare;
    private boolean completed;
    double totalFare;
-    Trip(Passenger passenger,Driver driver,location from,location to,double baseFare){
+    Trip(Passenger passenger,Driver driver,Location from,Location to,double baseFare){
         this.passenger=passenger;
         this.driver=driver;
         this.from=from;
@@ -21,13 +21,13 @@ public class Trip  {
     Driver getDriver(){
         return this.driver;
     }
-    location getFrom(){
+    Location getFrom(){
         return this.from;
     }
-    location getTo(){
+    Location getTo(){
         return this.to;
     }
-    double busFare(){
+    double getBaseFare(){
         return this.baseFare;
     }
     boolean isCompleted(){
