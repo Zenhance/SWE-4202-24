@@ -1,7 +1,7 @@
 public class Driver {
     private int id;
     private String name;
-    private String licencePlate,
+    private String licencePlate;
     boolean isAvailable = true;
 
     Driver(int id, String name, String licencePlate, boolean isAvailable){
