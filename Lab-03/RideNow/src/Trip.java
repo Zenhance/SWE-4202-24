@@ -14,4 +14,11 @@ public class Trip {
         this.baseFare = baseFare;
         this.driver.setAvailable(false);
     }
+
+    public Passenger getPassenger(){
+        return this.passenger;
+    }
+    public Driver getDriver(){
+        return this.driver;
+    }
 }
