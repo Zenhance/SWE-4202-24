@@ -32,6 +32,6 @@ public class Driver {
     }
     public String toString(){
         String status = isAvailable? "AVAILABLE" : "BUSY";
-        return "Driver" + "[" + id + "] " + name + "(" + licencePlate + ")" + isAvailable;
+        return "Driver" + "[" + id + "] " + name + " (" + licencePlate + ")" + status;
     }
 }
