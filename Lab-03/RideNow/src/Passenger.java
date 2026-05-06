@@ -16,16 +16,20 @@ public class Passenger {
     }
 
     public int getId(){
-        return id;
+        return this.id;
     }
     public String getName() {
-        return name;
+        return this.name;
     }
     public  double getRating() {
-        return rating;
+        return this.rating;
     }
 
     public void updateRating(double newRating) {
         this.rating = newRating;
+    }
+
+    public String toString(){
+        return String.format("Passenger[%d] %s (%.2f)", this.id, this.name, this.rating);
     }
 }
