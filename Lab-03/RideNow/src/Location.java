@@ -36,7 +36,11 @@ public class Location {
          return result;
     }
 
-    public String toString()
+    public String toString(){
+
+        String result=("%s (%.2f %.2f)",label,x,y;
+        return result;
+    }
 
 
 
