@@ -35,5 +35,9 @@ public class Trip {
         return this.completed;
     }
 
+    public double getDistance(){
+        return from.distanceTo(to);
+    }
+
 
 }
