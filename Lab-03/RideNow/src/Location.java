@@ -42,11 +42,10 @@ public class Location {
 
     }
 
-    String tostring(){
-        String result =
+    public String toString(){
+        String string = String.format("%s (%.2f,%.2f), label, x, y") ;
+
+        return string;
     }
 
-    public double getX() {
-        return x;
-    }
 }
