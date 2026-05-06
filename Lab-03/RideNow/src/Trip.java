@@ -1,10 +1,10 @@
 public class Trip {
-    Passenger passenger;
- Driver driver;
- Location from;
- Location to;
- double baseFare;
- boolean completed=false;
+  private   Passenger passenger;
+private Driver driver;
+ private Location from;
+ private Location to;
+ private double baseFare;
+private boolean completed=false;
 
  public Trip(Passenger passenger, Driver driver, Location from, Location to, double baseFare){
      this.passenger=passenger;
@@ -12,7 +12,7 @@ public class Trip {
      this.from=from;
      this.to=to;
      this.baseFare=baseFare;
-     this.completed=false;
+     completed=false;
      driver.setAvailable(false);
  }
 
@@ -42,13 +42,31 @@ public class Trip {
     public double getDistance(){
      return from.distanceTo(to);
     }
+    double fare;
     public double calculateFare(){
-      double fare=baseFare+(15.0*from.distanceTo(to);
+      fare=baseFare+(15.0*from.distanceTo(to));
+      return fare;
     }
     public void completeTrip(){
-     driver.setAvailable(true);
-    }
-    public String getSummary(){
+        completed = true;
+        driver.setAvailable(true);}
 
+    public String getSummary(){
+        String stat;
+        if (completed){
+            stat="COMPLETED";
+        }
+        else {
+            stat="IN PROGRESS";
+        }
+      String summary="Trip Summary"+
+              "Passenger  :"+passenger.getName()+
+              "Driver  :"+driver.toString()+
+              "From  :"+from.toString()+
+              "To  :"+to.toString()+
+              "Distance  : "+String.format("%.2f",from.distanceTo(to))+"km"+
+              "Fare  :"+"BDT"+fare+
+              "Status  :"+stat;
+      return summary;
     }
 }
