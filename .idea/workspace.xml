@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="trip completion" />
+    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="fixing location class">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab-03/RideNow/src/Trip.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-03/RideNow/src/Trip.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -363,7 +366,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778167036731</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="fixing location class">
+      <option name="closed" value="true" />
+      <created>1778167334946</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1778167334946</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -393,7 +404,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="amending part c" />
     <MESSAGE value="amending main" />
     <MESSAGE value="creating classes" />
     <MESSAGE value="student queue completion" />
@@ -418,6 +428,7 @@
     <MESSAGE value=" trip class method writing 2" />
     <MESSAGE value=" trip class method writing getsummary" />
     <MESSAGE value="trip completion" />
-    <option name="LAST_COMMIT_MESSAGE" value="trip completion" />
+    <MESSAGE value="fixing location class" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing location class" />
   </component>
 </project>

@@ -4,7 +4,7 @@ public class Trip {
     private Driver driver;
     private Location from;
     private Location to;
-    private double baseFare = 10;
+    private double baseFare;
     private boolean completed = false;
 
 
