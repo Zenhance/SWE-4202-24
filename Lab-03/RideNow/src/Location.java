@@ -33,6 +33,7 @@ public class Location {
         int y1=this.y;
         int x2=this.other;
         int y2=this.other;
+        ditance
     }
 
 
