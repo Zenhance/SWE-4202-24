@@ -12,6 +12,7 @@ public class Passenger {
     public Passenger(int id, String name) {
         this.id = id;
         this.name = name;
+        this.rating = 5.0;
     }
 
     public int getId() {
@@ -23,10 +24,10 @@ public class Passenger {
     public double getRating() {
         return rating;
     }
-    void updateRating(double newRating){
-
+    public void updateRating(double newRating){
+        this.rating =newRating;
     }
-    String toString(){
-
+    public String toString(){
+       return String.format("Passenger[%d] %s (%.2f)", this.id,this.name,this.rating);
     }
 }
