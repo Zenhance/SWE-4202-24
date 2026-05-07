@@ -10,6 +10,7 @@ public class Location {
     }
 
     public Location (double x, double y) {
+        this.label="Unknown";
         this.x = x;
         this.y = y;
     }
@@ -32,7 +33,7 @@ public class Location {
         return Math.sqrt(dx*dx+dy*dy);
     }
     public String toString(){
-        return String.format("%s (%.2f, %.2f)",label,x,y);
+        return (label+" ("+String.format("%.2f",x)+", "+String.format("%.2f",y)+")");
 
     }
 
