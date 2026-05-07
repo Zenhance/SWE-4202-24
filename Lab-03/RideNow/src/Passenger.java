@@ -14,4 +14,19 @@ public class Passenger {
         this.name=name;
         this.rating=5.0;
     }
+    int getId(){
+        return id;
+    }
+    String getName(){
+        return name;
+    }
+    double getRating(){
+        return rating;
+    }
+    void updateRating(double newRating){
+        this.rating=newRating;
+    }
+    public String toString(){
+        return String.format("Passenger[%d]%s (%.2f)",id,name,rating);
+    }
 }
