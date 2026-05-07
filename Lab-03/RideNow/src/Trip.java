@@ -69,10 +69,22 @@ public void completeTrip(){
 
 public String getSummary(){
 
+    String status;
+
+    if(completed){status= "COMPLETED";}
+    else {status="IN PROGRESS";}
+
 
     String res=String.format(
 
             "Trip Summary\n"+
+            "   Passenger   : %s\n" +
+            "   Driver      : %s (%s)\n"+
+            "   From        :%s\n" +
+            "   To          :%s\n" +
+            "   Distance    :%.2f km\n"+
+            "   Fare        :BDT %.2f\n"+
+            "   Status      :%s",passenger.getName(),driver.getName(),
 
 
 
