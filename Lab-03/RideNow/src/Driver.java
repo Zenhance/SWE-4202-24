@@ -10,6 +10,7 @@ class Driver
         this.id=id;
         this.name=name;
         this.licencePlate=licencePlate;
+        this.isAvailable=true;
     }
 
     public Driver(int id, String name, String licencePlate, boolean isAvailable)
@@ -36,7 +37,7 @@ class Driver
         {
             situation="[BUSY]";
         }
-        return "Driver["+id+"]"+" "+name+" "+"("+licencePlate+")"+situation;
+        return "Driver["+id+"]"+" "+name+" "+"("+licencePlate+")"+" "+situation;
     }
 
     public int getId()
