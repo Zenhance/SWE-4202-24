@@ -15,15 +15,13 @@ public class Driver {
         this.id = id;
         this.name = name;
         this.licencePlate = licencePlate;
-        isAvailable = true;
+        this.isAvailable = true;
     }
 
     public int getId() {
-
         return id;
     }
     public String getName() {
-
         return name;
     }
     public String getLicencePlate() {
@@ -34,9 +32,17 @@ public class Driver {
     }
 
     public void setAvailable(boolean available) {
-        isAvailable = available;
+       this.isAvailable = available;
     }
-    String toString(){
 
-    }
-}
+   public String toString() {
+        String availability;
+        if (isAvailable()){
+            availability = "AVAILABLE";
+        }
+        else {
+            availability = "BUSY";
+        }
+        return String.format("Driver[%d] %s (%s) [%s]", this.id,this.name,this.licencePlate,availability);
+   }
+   }
