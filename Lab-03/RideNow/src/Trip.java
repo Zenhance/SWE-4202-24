@@ -5,6 +5,7 @@ public class Trip {
     private Location to;
     private double baseFare;
     private boolean completed;
+    private double fare;
 
     public Trip(Passenger passenger, Driver driver, Location from, Location to, double baseFare) {
         this.passenger = passenger;
@@ -45,8 +46,23 @@ public class Trip {
     }
 
     public double calculateFare() {
-        double fare = baseFare + 15 * getDistance();
+        fare = baseFare + 15 * getDistance();
         return fare;
+    }
+
+    public void completeTrip() {
+        completed = true;
+        driver.setAvailable(true);
+    }
+
+    public String getSummary() {
+        System.out.println(passenger + " " + driver + " " + from + " " + to + " " + getDistance() + " " + fare);
+        if (completed) {
+            return "COMPLETED";
+        }
+        else  {
+            return "IN PROGRESS";
+        }
     }
 
 
