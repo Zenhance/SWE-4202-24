@@ -88,8 +88,5 @@ public class Trip {
                         "   Fare        : BDT %.2f\n" +
                         "   Status      : %s", passenger.getName(), driver.getName(), driver.getLicencePlate(), from.toString(), to.toString(), getDistance(), calculateFare(), status);
         return res;
-
-    }
-
-}
+    } }
 
