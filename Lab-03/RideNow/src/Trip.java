@@ -49,7 +49,11 @@ class Trip
         {
             situation="IN PROGRESS";
         }
-        return "Trip Summary";
+        return "Trip Summary\n"+"Passenger : "+passenger.getName()+"\n"+"Driver : "+"Driver["+driver.getId()+"]"+" "+driver.getName()+" "+"("+driver.getLicencePlate()+")"+"\n"+
+                "From : "+from.toString()+"\n"+"To : "+toString()+"\n"+
+                "Distance : "+String.format("%.2f",getDistance())+"km\n"+
+                "Fare : BDT"+String.format("%.2f",calculateFare())+"\n"+
+                "Status : "+situation;
     }
 
     public Passenger getPassenger()
