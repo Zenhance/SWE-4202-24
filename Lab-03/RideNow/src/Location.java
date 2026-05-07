@@ -27,6 +27,16 @@ public class Location {
         return this.y;
     }
 
+    // i am not getting how this distanceTo method is working!
+    public double distanceTo(Location other){
+        int x1=this.x;
+        int y1=this.y;
+        int x2=this.other;
+        int y2=this.other;
+    }
+
+
+
 
 
 }
