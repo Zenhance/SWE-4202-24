@@ -41,10 +41,10 @@ public class Driver {
 
     public String toString(){
         if(isAvailable == true){
-            return String.format("Driver %s (%s) [AVAILABLE]", name, licensePlate);
+            return String.format("Driver[%d] %s (%s) [AVAILABLE]", id, name, licensePlate);
         }
         else{
-            return String.format("Driver %s (%s) [BUSY]", name, licensePlate);
+            return String.format("Driver[%d] %s (%s) [BUSY]",id, name, licensePlate);
 
         }
     }
