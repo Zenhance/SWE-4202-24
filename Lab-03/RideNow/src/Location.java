@@ -3,6 +3,16 @@ public class Location {
     private double x;
     private double y;
 
+    public Location(String label, double x, double y) {
+        this.label = label;
+        this.x = x;
+        this.y = y;
+    }
+    public Location(double x, double y) {
+        this.x = x;
+        this.y = y;
+        this.label = "Unknown";
+    }
     public String getLabel() {
         return label;
     }
@@ -12,19 +22,13 @@ public class Location {
     public double getY() {
         return y;
     }
-    public Location(String label, double x, double y) {
-        this.label = label;
-        this.x = x;
-        this.y = y;
-    }
-    public Location(double x, double y) {
-        this.x = x;
-        this.y = y;
-    }
-    public double distanceTo(){
-
+    public double distanceTo(Location other){
+        double xDiff = this.x - other.x;
+        double yDiff = this.y - other.y;
+        return Math.sqrt(xDiff * xDiff + yDiff * yDiff);
     }
     public String toString(){
-    }
+        return String.format("%s (%.2f, %.2f)", this.label,this.x,this.y);
 
+    }
 }
