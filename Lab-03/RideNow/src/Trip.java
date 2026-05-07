@@ -17,4 +17,51 @@ public class Trip {
         driver.setAvailable(false);
     }
 
+    public Passenger getPassenger() {
+        return passenger;
+    }
+
+    public Driver getDriver() {
+        return driver;
+    }
+
+    public Location getFrom() {
+        return from;
+    }
+
+    public Location getTo() {
+        return to;
+    }
+
+
+    public double getBaseFare() {
+        return baseFare;
+    }
+
+    public boolean isCompleted() {
+        return completed;
+    }
+
+    public double getDistance(){
+        double distance = (from.distanceTo(to));
+        return distance;
+    }
+
+    public double calculateFare(){
+        double fare;
+
+        fare = baseFare + 15.0 * getDistance();
+        return fare;
+
+    }
+
+    public void completeTrip(){
+        completed = true;
+        driver.setAvailable(true);
+    }
+
+    public String getSummery(){
+        return "Hello";
+
+    }
 }
