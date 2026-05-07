@@ -7,5 +7,13 @@ private Location to;
 private double baseFare; // a fixed per-trip charge in BDT.
 private boolean completed;
 
-
+Trip (Passenger passenger, Driver driver, Location from, Location to, double baseFare){
+    this.passenger = passenger;
+    this.driver = driver;
+    this.from = from;
+    this.to = to;
+    this.baseFare = baseFare;
+    completed = false;
+    this.driver.setAvailable(false);
+}
 }
