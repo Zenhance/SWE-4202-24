@@ -14,12 +14,16 @@ public class Main {
         s.pop();
 
 
-        Student topstudent=s.peek();
-        System.out.println(topstudent.name+"--"+topstudent.mark);
+
+
+        //Student topstudent=s.peek();
+       // System.out.println(topstudent.name+"--"+topstudent.mark);
 
         s.display();
 
+        s.push(new Student("x",12));
 
+        s.display();
 
 
 
