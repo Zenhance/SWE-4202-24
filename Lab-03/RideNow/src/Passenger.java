@@ -42,10 +42,4 @@ public class Passenger {
         String result=String.format("Passenger[%d] %s (%.2f)",id,name,rating);
         return result;
     }
-
-
-
-
-
-
 }

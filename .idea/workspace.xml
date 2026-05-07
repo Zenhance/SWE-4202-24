@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment=" trip class method writing 2">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab-03/RideNow/src/Trip.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-03/RideNow/src/Trip.java" afterDir="false" />
-    </list>
+    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="trip completion" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -358,7 +355,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778166340724</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="trip completion">
+      <option name="closed" value="true" />
+      <created>1778167036731</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1778167036731</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,7 +393,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="completing part c" />
     <MESSAGE value="amending part c" />
     <MESSAGE value="amending main" />
     <MESSAGE value="creating classes" />
@@ -413,6 +417,7 @@
     <MESSAGE value=" trip class method writing" />
     <MESSAGE value=" trip class method writing 2" />
     <MESSAGE value=" trip class method writing getsummary" />
-    <option name="LAST_COMMIT_MESSAGE" value=" trip class method writing getsummary" />
+    <MESSAGE value="trip completion" />
+    <option name="LAST_COMMIT_MESSAGE" value="trip completion" />
   </component>
 </project>
