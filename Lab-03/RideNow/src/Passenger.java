@@ -28,8 +28,8 @@ public class Passenger {
         return rating;
     }
 
-    public void updateRating(){
-         double newRating=rating;
+    public void updateRating(Double newRating){
+         this.rating=newRating;
     }
 
     public String toString(){
