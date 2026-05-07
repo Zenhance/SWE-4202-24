@@ -27,13 +27,23 @@ public class Location {
         return this.y;
     }
 
-    // i am not getting how this distanceTo method is working!
+    // i am now getting how this distanceTo method is working!
+    /*SO, when we are passing the Location other, the 'other' object
+     which is basically the co-ordinates of the second location,
+     points to the x and y co-ordinates alongside the label. SO, we
+     can access to the x and y co-ordinates using other.this
+     cuz, other.x=this.x(b)=x;
+          other.y=this.y(b)=y;  */
+
     public double distanceTo(Location other){
-        int x1=this.x;
-        int y1=this.y;
-        int x2=this.other;
-        int y2=this.other;
-        ditance
+        double dx=other.x-this.x;
+        double dy=other.y-this.y;
+        return  Math.sqrt(dx*dx+dy*dy);
+    }
+
+    public  String toString(){
+        String loc=label+"("+x+","+y+")";
+        return loc;
     }
 
 
@@ -41,3 +51,4 @@ public class Location {
 
 
 }
+
