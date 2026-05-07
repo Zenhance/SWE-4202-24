@@ -11,6 +11,9 @@ public class Location {
 
     public Location(double x, double y) {
         this.label = "Unknown";
+        this.x = x;
+        this.y = y;
+        System.out.println(label + " " + "(" + x + "," + " " + y + ")");
     }
 
     public String getLabel() {
@@ -30,6 +33,6 @@ public class Location {
     }
 
     public String toString() {
-        return label;
+        return (label + " " + "(" + String.format("%.2f", x) + "," + " " + String.format("%.2f", y) + ")");
     }
 }

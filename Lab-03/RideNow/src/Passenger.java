@@ -10,6 +10,8 @@ public class Passenger {
     }
     public Passenger(int id, String name) {
         this.rating = 5.00;
+        this.id = id;
+        this.name = name;
     }
     public int getId() {
         return id;
@@ -26,7 +28,7 @@ public class Passenger {
     }
 
     public String toString() {
-        return(id + " " + name + " " + rating);
+        return("Passenger" + '[' + id + ']' + " " + name + " " + "(" + String.format("%.2f", rating) + ')');
     }
 
 
