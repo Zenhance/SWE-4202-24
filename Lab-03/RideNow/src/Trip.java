@@ -14,4 +14,27 @@ public class Trip {
         this.baseFare=baseFare;
     }
 
+    public Passenger getPassenger() {
+        return passenger;
+    }
+
+    public Driver getDriver() {
+        return driver;
+    }
+
+    public Location getFrom() {
+        return from;
+    }
+
+    public Location getTo() {
+        return to;
+    }
+
+    public double getBaseFare() {
+        return baseFare;
+    }
+
+    public boolean isCompleted() {
+        return completed;
+    }
 }
