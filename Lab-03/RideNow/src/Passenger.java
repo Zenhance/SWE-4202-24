@@ -32,6 +32,10 @@ public class Passenger {
         this.rating = newRating;
     }
 
+    public String toString() {
+        return String.format("Passenger %s (%.2f)", name, rating);
+    }
+
 
 
 

@@ -1,6 +1,5 @@
 
-import java.lang.classfile.Label;
-import java.lang.math;
+import java.lang.Math;
 
 
 public class Location {
@@ -40,6 +39,10 @@ public class Location {
         distance = Math.sqrt(dx*dx + dy*dy);
 
         return distance;
+    }
+
+    public String toString(){
+        return String.format("%s (%.2f , %.2f)", label, x, y);
     }
 
 
