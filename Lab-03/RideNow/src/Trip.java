@@ -56,15 +56,26 @@ public class Trip {
     }
 
     public String getSummary() {
-        System.out.println(passenger + " " + driver + " " + from + " " + to + " " + getDistance() + " " + fare);
+        String status;
         if (completed) {
-            return "COMPLETED";
+            status = "COMPLETED";
+        } else {
+            status = "IN PROGRESS";
         }
-        else  {
-            return "IN PROGRESS";
-        }
-    }
 
+        String sum = "Trip Summary" +
+                "Passenger  :" + passenger.getName() +
+                "Driver  :" + driver.getName() + " " + driver.getLicencePlate() +
+                "From  :" + from.toString() +
+                "To  :" + to.toString() +
+                "Distance :" + getDistance() + "km" +
+                "Fare :" + "BDT" + String.format("%.2f", fare) +
+                "Status :" + status;
+
+        return sum;
+
+
+    }
 
 
 }
