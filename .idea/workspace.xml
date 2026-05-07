@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment=" trip class method writing">
+    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment=" trip class method writing 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab-03/RideNow/src/Trip.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-03/RideNow/src/Trip.java" afterDir="false" />
     </list>
@@ -68,7 +68,7 @@
       <workItem from="1777576671937" duration="7367000" />
       <workItem from="1778092688155" duration="94000" />
       <workItem from="1778092809585" duration="6679000" />
-      <workItem from="1778163384097" duration="2708000" />
+      <workItem from="1778163384097" duration="3333000" />
     </task>
     <task id="LOCAL-00001" summary="a change">
       <option name="closed" value="true" />
@@ -350,7 +350,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778165057798</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary=" trip class method writing 2">
+      <option name="closed" value="true" />
+      <created>1778166340724</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1778166340724</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -380,8 +388,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="completed main method" />
-    <MESSAGE value="answering part c" />
     <MESSAGE value="completing part c" />
     <MESSAGE value="amending part c" />
     <MESSAGE value="amending main" />
@@ -405,6 +411,8 @@
     <MESSAGE value=" trip class methods fix" />
     <MESSAGE value="continuing trip class method writing" />
     <MESSAGE value=" trip class method writing" />
-    <option name="LAST_COMMIT_MESSAGE" value=" trip class method writing" />
+    <MESSAGE value=" trip class method writing 2" />
+    <MESSAGE value=" trip class method writing getsummary" />
+    <option name="LAST_COMMIT_MESSAGE" value=" trip class method writing getsummary" />
   </component>
 </project>
