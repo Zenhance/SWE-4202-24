@@ -20,4 +20,12 @@ public class Location {
     double getY(){
         return y;
     }
+    double distanceTo(Location other){
+        double a=other.x - this.x;
+        double b=other.y - this.y;
+        return Math.sqrt(Math.pow(a,2)+Math.pow(b,2));
+    }
+    public String toString(){
+        return String.format("%s (%.2f, %.2f)", label,x,y);
+    }
 }
