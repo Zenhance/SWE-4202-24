@@ -13,7 +13,7 @@ public class Location {
     Location(double x,double y){
         this.x=x;
         this.y=y;
-        this.label="unknown";
+        this.label="Unknown";
     }
 
     public String getLabel(){
