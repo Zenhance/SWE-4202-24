@@ -14,7 +14,8 @@ class Trip
         this.from=from;
         this.to=to;
         this.baseFare=baseFare;
-        this.completed=false;
+
+        completed=false;
 
         driver.setAvailable(false);
     }
@@ -34,12 +35,20 @@ class Trip
 
     public double getDistance()
     {
-        double distance=0;
-        return distance;
+        return from.distanceTo(to);
     }
 
     public String getSummary()
     {
+        String situation;
+        if(completed)
+        {
+            situation="COMPLETED";
+        }
+        else
+        {
+            situation="IN PROGRESS";
+        }
         return "Trip Summary";
     }
 
