@@ -30,6 +30,14 @@ public class Driver {
         this.isAvailable=available;
     }
     public String toString(){
-        return "Driver["+this.id+"] "+this.name+" ("+this.licencePlate+") ["+isAvailable +"]";
+        String status;
+        if(isAvailable){
+            status="AVAILABLE";
+
+        }
+        else{
+            status="BUSY";
+        }
+        return "Driver["+this.id+"] "+this.name+" ("+this.licencePlate+") ["+status+"]";
     }
 }
