@@ -38,4 +38,14 @@ public class Driver {
     public void setAvailable(boolean available){
         this.isAvailable = available;
     }
+
+    public String toString(){
+        if(isAvailable == true){
+            return String.format("Driver %s (%s) [AVAILABLE]", name, licensePlate);
+        }
+        else{
+            return String.format("Driver %s (%s) [BUSY]", name, licensePlate);
+
+        }
+    }
 }
