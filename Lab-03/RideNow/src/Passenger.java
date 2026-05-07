@@ -24,7 +24,7 @@ public void updateRating(double newRating){
     this.rating = newRating;
 }
 public String toString(){
-    String status= "Passenger["+id+"]"+name+"("+String.format("%.2f",rating)+")";
+    String status= "Passenger["+id+"] "+name+" ("+String.format("%.2f",rating)+")";
     return status;
 }
 }
