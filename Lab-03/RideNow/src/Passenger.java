@@ -32,6 +32,6 @@ public class Passenger {
     }
 
     public String toString(){
-        return "Passenger["+id+"] "+name+" ("+rating+")";
+        return "Passenger["+id+"] "+name+" ("+String.format("%.2f",rating)+")";
     }
 }
