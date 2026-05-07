@@ -13,6 +13,7 @@ class Location
 
     public Location(double x, double y)
     {
+        this.label="Default";
         this.x=x;
         this.y=y;
     }
@@ -41,7 +42,7 @@ class Location
 
     public String toString()
     {
-        return label+"("+String.format("%.2f",x)+","+String.format("%.2f",y)+")";
+        return label+" ("+String.format("%.2f",x)+", "+String.format("%.2f",y)+")";
     }
 
 }
