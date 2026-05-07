@@ -37,4 +37,9 @@ public class Trip {
     public boolean isCompleted() {
         return completed;
     }
+
+    public double getDistance() {
+
+    }
+
 }
