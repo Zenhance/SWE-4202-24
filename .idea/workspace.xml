@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="writing trip class" />
+    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment=" trip class methods fix">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab-03/RideNow/src/Trip.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-03/RideNow/src/Trip.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,22 +41,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "39-riju",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;39-riju&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -64,7 +67,8 @@
       <updated>1777353233463</updated>
       <workItem from="1777576671937" duration="7367000" />
       <workItem from="1778092688155" duration="94000" />
-      <workItem from="1778092809585" duration="5979000" />
+      <workItem from="1778092809585" duration="6679000" />
+      <workItem from="1778163384097" duration="1226000" />
     </task>
     <task id="LOCAL-00001" summary="a change">
       <option name="closed" value="true" />
@@ -306,7 +310,31 @@
       <option name="project" value="LOCAL" />
       <updated>1778102366907</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="writing trip class">
+      <option name="closed" value="true" />
+      <created>1778102467966</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1778102467966</updated>
+    </task>
+    <task id="LOCAL-00032" summary="writing trip class methods">
+      <option name="closed" value="true" />
+      <created>1778102818670</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1778102818670</updated>
+    </task>
+    <task id="LOCAL-00033" summary=" trip class methods fix">
+      <option name="closed" value="true" />
+      <created>1778103073490</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1778103073490</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,8 +364,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="answering part b 3" />
-    <MESSAGE value="answering part b 4" />
     <MESSAGE value="creating main method" />
     <MESSAGE value="creating main method,adding printstatement" />
     <MESSAGE value="completed main method" />
@@ -361,6 +387,8 @@
     <MESSAGE value="passenger class completion" />
     <MESSAGE value="passenger class completion" />
     <MESSAGE value="writing trip class" />
-    <option name="LAST_COMMIT_MESSAGE" value="writing trip class" />
+    <MESSAGE value="writing trip class methods" />
+    <MESSAGE value=" trip class methods fix" />
+    <option name="LAST_COMMIT_MESSAGE" value=" trip class methods fix" />
   </component>
 </project>
