@@ -15,4 +15,23 @@ public class Driver {
         this.licencePlate=licencePlate;
         this.isAvailable=isAvailable;
     }
+    int getId(){
+        return id;
+    }
+    String getName(){
+        return name;
+    }
+    String getLicencePlate(){
+        return licencePlate;
+    }
+    boolean isAvailable(){
+        return isAvailable;
+    }
+    void setAvailable(boolean available){
+        this.isAvailable=available;
+    }
+    public  String toString(){
+        return String.format("Driver[%d] %s (%s) [%b]", id,name,licencePlate,isAvailable);
+    }
+
 }
