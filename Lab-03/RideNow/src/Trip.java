@@ -70,6 +70,17 @@ public void completeTrip(){
 public String getSummary(){
 
 
+    String res=String.format(
+
+            "Trip Summary\n"+
+
+
+
+
+
+
+
+
 }
 
 
