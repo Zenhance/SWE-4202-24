@@ -1,5 +1,5 @@
 public class Location {
-     private String label;
+     private String label= "Unknown";
      private double x;
      private double y;
 
@@ -9,6 +9,7 @@ public class Location {
         this.y=y;
     }
     public Location(double x,double y){
+
         this.x=x;
         this.y=y;
     }

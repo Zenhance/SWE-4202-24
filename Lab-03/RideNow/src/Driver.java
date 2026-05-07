@@ -4,10 +4,11 @@ public class Driver {
     private String licencePlate;
     private boolean isAvailable;
 
-    Driver(int id,String name,String licensePlate){
+    Driver(int id,String name,String licencePlate){
         this.id=id;
         this.licencePlate=licencePlate;
         this.name=name;
+        this.isAvailable=true;
     }
     Driver(int id,String name,String licencePlate,boolean isAvailable){
         this.id=id;
@@ -33,10 +34,10 @@ public void setAvailable(boolean isAvailable){
 }
 public String toString(){
         if(isAvailable) {
-            return "Driver" + "[" + id + "]" + name + "(" + licencePlate + ")" + "[AVAILABLE]";
+            return "Driver" + "[" + id + "] " + name + " (" + licencePlate + ")" + " [AVAILABLE]";
         }
         else{
-            return "Driver" + "[" + id + "]" + name + "(" + licencePlate + ")" + "[BUSY]";
+            return "Driver" + "[" + id + "] " + name + " (" + licencePlate + ")" + " [BUSY]";
         }
 }
 

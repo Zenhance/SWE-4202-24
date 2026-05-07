@@ -41,14 +41,13 @@ public class Trip  {
         return totalFare;
     }
     void completeTrip(){
-        if(this.completed){
-            driver.setAvailable(true);
-        }
+       this.completed=true;
+       driver.setAvailable(true);
     }
 String getSummary(){
-    return "Trip Summary\n"+"Passenger :"+passenger.getName()+"\n"+"Driver"+driver.getName()+"\n"+"From   :"+from.toString()+"\n"
-            +"To     :"+to.toString()+"\n"+"Distance  :"+getDistance()+"\n"+"Fare   :Bdt "+calculateFare()+"TK"+"\n"+
-            "Status  :"+((isCompleted())?"COMPLETED":"IN PROGRESS");
+    return "Trip Summary\n"+"Passenger :"+passenger.getName()+"\n"+"Driver"+driver.getName()+" ("+driver.getLicencePlate()+")"+"\n"+"From   :"+from.toString()+"\n"
+            +"To     :"+to.toString()+"\n"+"Distance  :"+getDistance()+"\n"+"Fare   :BDT "+calculateFare()+"TK"+"\n"+
+            "Status  :"+(completed?"COMPLETED":"IN PROGRESS");
 
 }
 
