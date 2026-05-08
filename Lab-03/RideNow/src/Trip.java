@@ -6,7 +6,7 @@ public class Trip {
     private double baseFare;
     private boolean completed;
 
-    Trip(Passenger passenger, Driver driver, Location from, Location to, double
+public Trip(Passenger passenger, Driver driver, Location from, Location to, double
             baseFare){
         this.passenger = passenger;
         this.driver = driver;
@@ -58,7 +58,20 @@ public class Trip {
     }
 
     public String getSummary(){
-        String string = String.format("Trip Summary\n" + "  Passenger  : " + passenger.getName() + "\n  Driver  : " + driver.getName() + " ");
-    return string;
+        if(completed) {
+            String string1 = String.format(
+                    "Trip Summary\n" + "  Passenger : %s\n" + "  Driver    : %s (%s)\n" + "  From      : %s\n" + "  To        : %s\n" + "  Distance  : %.2f km\n" + "  Fare      : BDT %.2f\n" + "  Status    : COMPLETED",
+                    passenger.getName(), driver.getName(), driver.getLicencePlate(), from.toString(), to.toString(),
+                    getDistance(), calculateFare());
+            return string1;
+        }
+        else {
+            String string2 = String.format(
+                    "Trip Summary\n" + "  Passenger : %s\n" + "  Driver    : %s (%s)\n" + "  From      : %s\n" + "  To        : %s\n" + "  Distance  : %.2f km\n" + "  Fare      : BDT %.2f\n" + "  Status    : IN PROGRESS",
+                    passenger.getName(), driver.getName(), driver.getLicencePlate(), from.toString(), to.toString(),
+                    getDistance(), calculateFare());
+            return string2;
+
+        }
     }
 }
