@@ -1,8 +1,8 @@
 public class Location {
-    String lebel;
-    double x,y;
-    Location(String lebel,double x, double y){
-        this.lebel=lebel;
+    private String label;
+    private double x,y;
+    Location(String label,double x, double y){
+        this.label=label;
         this.x=x;
         this.y=y;
     }
@@ -10,21 +10,21 @@ public class Location {
         this.x=x;
         this.y=y;
     }
-    public String getlebel(String str){
-        return str;
+    public String getLabel(){
+        return label;
     }
-    public double getx(double x){
+    public double getX(){
        return x;
     }
-    public double gety(double y){
+    public double getY(){
       return y;
     }
-    public double distanceTo(double x1,double y1){
-        double distance=Math.sqrt(((x1-x)*(x1-x))+((y1-y)*(y1-y)));
+    public double distanceTo(Location other){
+        double distance=Math.sqrt(((other.x-x)*(other.x-x))+((other.y-y)*(other.y-y)));
         return distance;
     }
-    public String toString(String lebel, double x, double y){
-        return String.format(lebel,x,y);
+    public String toString(){
+        return String.format("%s (%0.2f, %0.2f)",label,x,y);
     }
 
 }
