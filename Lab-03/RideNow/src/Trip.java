@@ -37,7 +37,7 @@ public class Trip {
         return from.distanceTo(to);
     }
     /// /////////////////////////////////////
-    public double calulateFare(){
+    public double calculateFare(){
         return baseFare+(15.0*getDistance());
     }
     public void completeTrip(){
@@ -51,6 +51,16 @@ public class Trip {
             current_status="COMPLETED";
         }
         else current_status="IN PROGRESS";
-        return String.format("Trip summary\nPassenger :\t%s\nDriver :\t%s (%s)\nFrom :\t%s (%.2f, %.2f)\nTo :\t%s (%.2f, %.2f)Distance :\t%.2f km\nFare :\tBDT %.2f\nStatus :\t%s",passenger.getName(),driver.getName(),driver.getLicencePlate(),from.toString(),to.toString(),getDistance(),calulateFare(),current_status);
+        return "Trip Summary\n" +
+                "Passenger : " + passenger.getName() + "\n" +
+                "Driver : " + driver.getName() +
+                " (" + driver.getLicencePlate() + ")\n" +
+                "From : " + from.toString() + "\n" +
+                "To : " + to.toString() + "\n" +
+                "Distance : " +
+                String.format("%.2f", getDistance()) + " km\n" +
+                "Fare : BDT " +
+                String.format("%.2f", calculateFare()) + "\n" +
+                "Status : " + current_status;
     }
 }
