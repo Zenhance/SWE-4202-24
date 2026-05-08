@@ -28,10 +28,20 @@ public class Location{
     return y;
     }
 
+    public double distanceTo(Location other){
+        double x = other.getX();
+        double y = other.getY();
+        double X = this.x - x;
+        double Y = this.y -y;
+        double distance = Math.sqrt(X*X + Y*Y);
+        return distance;
+    }
+
     public  String toString(){
         String string = String.format("%s(%.2f,%.2f)",label,x,y);
         return string;
     }
+
 
 }
 
