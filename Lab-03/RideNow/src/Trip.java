@@ -40,4 +40,18 @@ public class Trip {
     public boolean isCompleted(){
         return completed;
     }
+
+    public double getDistance(){
+        return from.distanceTo(to);
+    }
+
+    public double calculatefare(){
+        return baseFare+15.0*getDistance();
+    }
+
+    public void completeTrip(){
+        this.completed= true;
+        driver.setAvailable(true);
+    }
+
 }
