@@ -3,13 +3,13 @@ public class Passenger {
     private String name;
     double rating;
 
-    Passenger(int id, String name, double rating){
+    public Passenger(int id, String name, double rating){
         this.id=id;
         this.name=name;
         this.rating=rating;
     }
 
-    Passenger(int id, String name){
+    public Passenger(int id, String name){
         rating=5.0;
         this.id=id;
         this.name=name;
@@ -34,6 +34,11 @@ public class Passenger {
         this.rating=newRating;
     }
 
+    @Override
+    public String toString(){
 
+        String format = String.format("Passenger[%d] %s (%.2f)", id, name, rating);
+        return format;
+    }
 
 }
