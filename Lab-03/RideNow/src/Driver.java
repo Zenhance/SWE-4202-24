@@ -4,11 +4,18 @@ public class Driver {
     private String licencePlate;
     private boolean isAvailable;
 
+    public Driver(int id, String name, String licencePlate) {
+        this.id = id;
+        this.name = name;
+        this.licencePlate = licencePlate;
+        this.isAvailable = true;
+    }
+
     public Driver(int id, String name, String licencePlate, boolean isAvailable) {
         this.id = id;
         this.name = name;
         this.licencePlate = licencePlate;
-        this.isAvailable = false;
+        this.isAvailable = isAvailable;
     }
 
     public int getId() {
@@ -28,14 +35,11 @@ public class Driver {
     }
 
     public void setAvailable(boolean available) {
-
+        this.isAvailable = available;
     }
 
     public String toString() {
-
-    }
-
-    public static void main(String[] args) {
+        
 
     }
 }
