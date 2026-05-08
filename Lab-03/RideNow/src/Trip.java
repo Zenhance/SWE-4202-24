@@ -68,11 +68,14 @@ public class Trip {
                 "Trip Summary\n" +
                 "Passenger : %s\n" +
                 "Driver    : %s (%s)\n" +
-                "From      : %s (%.2f, %.2f)\n" +
-                "To        : %s (%.2f, %.2f)\n" +
+                "From      : %s\n" +
+                "To        : %s\n" +
                 "Distance  : %.2f km\n" +
                 "Fare      : BDT %.2f\n" +
-                "Status    : %s\n"
+                "Status    : %s\n",
+                passenger.getName(),
+                driver.getName(), driver.getLicencePlate(),
+                from.toString()
                 );
 
         return summary;
