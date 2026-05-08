@@ -25,16 +25,16 @@ public class Driver {
         return name;
     }
 
-    public String getLicenceplate() {
+    public String getLicencePlate() {
         return licencePlate;
     }
 
-    public void isAvailable() {
-        return;
+    public boolean isAvailable() {
+        return isAvailable;
     }
 
     public void setAvailable(boolean available) {
-
+        boolean isAvailable=available;
     }
 
     public String toString() {
