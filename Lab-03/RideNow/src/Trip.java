@@ -53,7 +53,23 @@ public class Trip {
         driver.setAvailable(true);
     }
 
-    public String getSummary() {
-        return "Passenger : "+" "+ passenger + "\n" + "Driver  : "+" "+ driver + "\n" + "From   : "+" "+ from + "\n" + "To    : "+" "+ to + "\n" + " Distance :" + " " + from.distanceTo(to) + "km" + "\n" +"Fare   :" + " " + "BDT" + calculateFare() + "\n" + "Status   :" + " "  ;
+    public String getSummary(){
+        String status;
+        if(completed) {
+            status = "COMPLETED";
+        }
+        else{status="IN PROGRESS";}
+
+        return "Trip Summary\n" +
+        "Passenger :" + passenger.getName() + "\n" +
+                "Driver :" + driver.getName() + "(" + driver.getLicencePlate() + ")\n" +
+                "From :" + from.getLabel() + "(" + from.getX() + "," + from.getY() + ")\n" +
+                "To :" + to.getLabel() + "(" + to.getX() + "," + to.getY() + ")\n" +
+                "Distance :" + String.format("%.2f",getDistance()) + " km" + "\n" +
+                "Fare :" + String.format("BDT %.2f",calculateFare()) + "\n" +
+                "Status :" + status;
+    }
+);
+        );
     }
 }

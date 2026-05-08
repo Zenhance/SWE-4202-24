@@ -1,5 +1,5 @@
 public class Location {
-    private String label="Seoul";
+    private String label="Unknown";
     private double x=3.00;
     private double y=7.50;
 
@@ -40,6 +40,6 @@ public class Location {
     }
 
     public String toString() {
-        return label+"("+x+","+y+")";
+        return String.format("%s (%.2f, %.2f)",label,x,y);
     }
 }

@@ -2,7 +2,7 @@ public class Driver {
     private int id;
     private String name;
     private String licencePlate;
-    private boolean isAvailable;
+    private boolean isAvailable=true;
 
     Driver(int id, String name, String licencePlate) {
         this.id=id;
@@ -38,6 +38,9 @@ public class Driver {
     }
 
     public String toString() {
-        return "Driver["+id+"]"+" "+name+" "+"("+licencePlate+")"+" "+"["+isAvailable+"]";
-    }
+        String status;
+        if(isAvailable){status="AVAILABLE";}
+        else{status="BUSY";}
+        return String.format("Driver[%d] %s (%s) [%s]",id,name,licencePlate,status);
+}
 }

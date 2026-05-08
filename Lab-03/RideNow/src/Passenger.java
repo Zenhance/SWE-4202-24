@@ -6,7 +6,7 @@ public class Passenger {
     Passenger(int id, String name, double rating) {
         this.id=id;
         this.name=name;
-        this.rating=rating;
+        this.rating=5.00;
     }
 
     Passenger(int id,String name) {
@@ -31,6 +31,6 @@ public class Passenger {
     }
 
     public String toString() {
-        return "Passenger["+id+"]"+" "+name+" "+"("+rating+")";
+        return String.format("Passenger[%d] %s (%.2f)",id,name,rating);
     }
 }
