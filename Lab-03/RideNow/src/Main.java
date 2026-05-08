@@ -9,13 +9,7 @@ public class Main {
                 new Location("Airport", 3.0, 7.5);
         Location finalBossArena =
                 new Location("University", 8.0, 4.0);
-        Trip chaosRide = new Trip(
-                sleepyCoder,
-                nightOwl,
-                spawnPoint,
-                finalBossArena,
-                50.0
-        );
+        Trip chaosRide = new Trip(sleepyCoder, nightOwl, spawnPoint, finalBossArena, 50.0);
         System.out.println(chaosRide.getSummary());
         System.out.println();
         chaosRide.completeTrip();
