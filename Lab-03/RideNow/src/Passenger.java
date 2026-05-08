@@ -4,9 +4,13 @@ public class Passenger {
    private double rating;
 
     public Passenger(int id, String name, double rating){
-        System.out.println("Passenger " +"[" + id+"]"+name+"("+rating+")" );
+        this.id = id;
+        this.name = name;
+        this.rating = rating;
     }
     public Passenger(int id, String name){
+      this.id = id;
+      this.name = name;
     }
     public int getId() {
         return id;
@@ -21,7 +25,8 @@ public class Passenger {
     public void updateRating(double newRating){
         this.rating = newRating;
     }
-    public String toString(){
-        return name;
-    }
+
+public String toString(){
+    return String.format("Passenger[%d] %s (%.2f)",id,name,rating);
+}
 }
