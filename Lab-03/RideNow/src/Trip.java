@@ -36,18 +36,20 @@ public class Trip {
     }
 
     public double getDistance() {
-
+        return from.distanceTo(to);
     }
 
     public double calculateFare() {
-
+        return baseFare + 15.0 * getDistance();
     }
 
     public void completeTrip() {
-
+        this.completed = true;
+        driver.setAvailable(true);
     }
 
     public String getSummary() {
+        String status = completed ? "COMPLETED" : "IB PROGRESS";
         return String.format("Trip Summary" +
                                 "Passenger : %s" +
                                 "Driver    : %s (%s)" +
@@ -57,10 +59,11 @@ public class Trip {
                                 "Fare      : BDT %.2f" +
                                 "Status    : %s",
                                  passenger.getName(), driver.getName(), driver.getLicencePlate(),
-                                 from.getLabel(), from.getX(), from.getY(), to.getLabel(), to.getX()
-                                 to.getY(), );
+                                 from.getLabel(), from.getX(), from.getY(), to.getLabel(), to.getX(),
+                                 to.getY(), getDistance(), calculateFare(), status);
     }
 }
+
 
 
 
