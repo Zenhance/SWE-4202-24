@@ -9,7 +9,9 @@ public class Location{
         this.y = y;
     }
     public Location(double x, double y){
-
+        this.label = "Unknown";
+        this.x = x;
+        this.y = y;
     }
     public void getLabel(){
 
@@ -20,9 +22,10 @@ public class Location{
     public void getY(){
 
     }
-    public String toString() {
+    public  String toString(){
+        String string = String.format("%s(%.2f,%.2f)",label,x,y);
+        return string;
     }
-
 
 }
 
