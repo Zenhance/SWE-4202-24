@@ -45,7 +45,7 @@ public class Trip {
     }
 
     public double calculateFare() {
-        double distance = 0;
+        double distance = getDistance();
         double fare = baseFare + 15 * distance;
         return fare;
     }
