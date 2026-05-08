@@ -26,7 +26,9 @@ public class Passenger {
         return rating;
     }
 
+    public void updateRating(double newRating) {
 
+    }
 
     public String toString() {
         return "Passenger[42] Alice (4.80)";
