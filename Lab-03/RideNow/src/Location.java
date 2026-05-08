@@ -28,8 +28,10 @@ public class Location {
         return y;
     }
 
-    public double distanceTo(double x,double y) {
-
+    public double distanceTo(Location other) {
+        other.label=label;
+        other.x=x;
+        other.y=y;
     }
 
     public String toString() {
