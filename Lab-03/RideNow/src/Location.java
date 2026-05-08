@@ -16,7 +16,7 @@ public class Location {
         this.y = y;
     }
 
-    public getLabel(){
+    public String getLabel(){
 
     return label;
     }
