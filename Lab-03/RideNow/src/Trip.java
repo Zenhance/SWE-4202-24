@@ -49,6 +49,12 @@ public class Trip {
         this.completed=true;
         driver.setAvailable(true);
     }
+    public String getSummery(){
+        String vibe =completed? "COMPLETED":"IN PROGRESS";
+        return String.format("Trip Summery\n"+ "Passenger:%s\n"+"Driver:%s\n"+"From:%s\n"+"To:%s\n"+"Distance:%.2fkm\n"+"FAre:%.2ftaka\n"+"Status:%s",
+                passenger.getName(),driver.getName()+driver.getLicencePlate(),from.getLabel(),to.getLabel(),getDistance(),calculateFare(),vibe);
+    }
+
 
 
 
