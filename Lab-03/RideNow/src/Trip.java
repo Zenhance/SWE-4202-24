@@ -69,7 +69,7 @@ public class Trip {
                 "Fare :" + String.format("BDT %.2f",calculateFare()) + "\n" +
                 "Status :" + status;
     }
-);
-        );
+;
+        ;
     }
-}
+
