@@ -33,4 +33,7 @@ public class Trip {
         return to;
     }
 
+    public double getBaseFare(){
+        return baseFare;
+    }
 }
