@@ -18,6 +18,11 @@ public class Driver {
     //full time driver
     public Driver(int id, String name, String licencePlate, boolean isAvailable){
 
+        this.id = id;
+        this.name = name;
+        this.licencePlate = licencePlate;
+        this.isAvailable = isAvailable;
+
     }
 
     //getters
