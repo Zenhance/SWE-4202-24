@@ -61,7 +61,12 @@ public class Trip {
     }
 
     public String getSummery(){
-        return "Hello";
+            String status;
+            if (completed == true) {
+                status = "COMPLETED";
+            } else {
+                status = "IN PROGRESS";
+            }
 
-    }
+
 }
