@@ -27,4 +27,7 @@ public class Location {
         return y;
     }
 
+    public double distanceTo(Location other) {
+
+    }
 }
