@@ -42,6 +42,10 @@ public class Trip {
         double fare= baseFare + 15* from.distanceTo(to);
         return fare;
     }
-    public
+    public void completeTrip(){
+        this.completed = true;
+        driver.setAvailable(true);
+    }
+
 
 }

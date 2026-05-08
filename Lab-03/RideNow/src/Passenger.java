@@ -1,7 +1,7 @@
 public class Passenger {
-    public int id;
-    public String name;
-    public double rating;
+    private int id;
+    private String name;
+    private double rating;
 
     public Passenger(int id, String name, double rating){
         this.id=id;

@@ -1,8 +1,8 @@
 public class Location
 {
-    public String label;
-    public double x;
-    public double y;
+    private String label;
+    private double x;
+    private double y;
 
     public Location(String label, int x, int y){
         this.label=label;
