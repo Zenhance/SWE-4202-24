@@ -51,4 +51,9 @@ public class Trip {
 
         return fare;
     }
+
+    public void completeTrip() {
+        completed = true;
+        driver.setAvailable(true);
+    }
 }
