@@ -23,5 +23,7 @@ public class Passenger {
         return name;
     }
 
-
+    public double getRating(){
+        return rating;
+    }
 }
