@@ -2,30 +2,29 @@ public class Passenger {
     private int id;
     private String name;
     private double rating;
-    Passenger(int id, String name, double rating){
+    public Passenger(int id, String name, double rating){
         this.id=id;
         this.name=name;
         this.rating=rating;
     }
-    Passenger(int id, String name){
+    public Passenger(int id, String name){
         this.id=id;
         this.name=name;
         this.rating=5.0;
     }
-    int getId(){
+    public int getId(){
         return id;
     }
-    String getName(){
+    public String getName(){
         return name;
     }
-    double getRating(){
+    public double getRating(){
         return rating;
     }
-    void updateRating(double newRating){
+    public void updateRating(double newRating){
         rating=newRating;
     }
-    String toString(){
-        String output="Passenger["+id+"] "+name+" ("+rating+")";
-        return output;
+    public String toString(){
+        return String.format("Passenger[%d] %s (%.2f)", id, name, rating);
     }
 }
