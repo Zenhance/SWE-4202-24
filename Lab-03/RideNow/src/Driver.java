@@ -14,7 +14,7 @@ public class Driver {
         this.id = id;
         this.name = name;
         this.licencePlate = licencePlate;
-        this.isAvailable = isAvailable;
+        this.isAvailable = true;
     }
 
     public int getId() {
