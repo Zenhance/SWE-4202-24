@@ -17,4 +17,31 @@ public class Trip {
 
 
     }
+
+    public Passenger getPassenger() {
+        return passenger;
+    }
+
+    public Driver getDriver() {
+        return driver;
+    }
+
+    public Location getFrom() {
+        return from;
+    }
+
+    public Location getTo() {
+        return to;
+    }
+
+    public double getDistance() {
+        return from.distanceTo(to);
+    }
+
+    public double calculateFare(){
+        double fare= baseFare + 15* from.distanceTo(to);
+        return fare;
+    }
+    public
+
 }
