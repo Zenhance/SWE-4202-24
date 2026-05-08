@@ -15,4 +15,9 @@ public class Driver {
     public Driver(int id, String name, String licencePlate, boolean isAvailable){
 
     }
+
+    //getters
+    public int getId(){
+        return id;
+    }
 }
