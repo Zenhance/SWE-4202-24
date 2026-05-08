@@ -1,4 +1,5 @@
 public class Location{
+
     private String label;
     private double x;
     private double y;
@@ -8,20 +9,25 @@ public class Location{
         this.x = x;
         this.y = y;
     }
+
     public Location(double x, double y){
         this.label = "Unknown";
         this.x = x;
         this.y = y;
     }
-    public void getLabel(){
 
+    public String getLabel(){
+    return label;
     }
-    public void getX(){
 
+    public double getX(){
+    return x;
     }
-    public void getY(){
 
+    public double getY(){
+    return y;
     }
+
     public  String toString(){
         String string = String.format("%s(%.2f,%.2f)",label,x,y);
         return string;
