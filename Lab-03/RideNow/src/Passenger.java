@@ -1,12 +1,12 @@
 public class Passenger {
     private int id;
     private String name;
-    private double rating;
+    private double rating=5.00;
 
     Passenger(int id, String name, double rating) {
         this.id=id;
         this.name=name;
-        this.rating=5.00;
+        this.rating=rating;
     }
 
     Passenger(int id,String name) {
@@ -27,7 +27,7 @@ public class Passenger {
     }
 
     public void updateRating(double newRating) {
-        double rating=newRating;
+         this.rating=newRating;
     }
 
     public String toString() {

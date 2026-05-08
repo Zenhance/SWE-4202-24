@@ -34,7 +34,7 @@ public class Driver {
     }
 
     public void setAvailable(boolean available) {
-        boolean isAvailable=available;
+        this.isAvailable=available;
     }
 
     public String toString() {
