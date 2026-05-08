@@ -1,3 +1,4 @@
+import java.util.Locale;
 public class Passenger {
 
     private int id;
@@ -29,10 +30,10 @@ public class Passenger {
         rating = newRating;
     }
 
-    public String toString(){
-        return "Passenger["+id+"]"+name+"(" + String.format("%2f",rating)+ ")";
+    @Override
+    public String toString() {
+        return String.format(Locale.US, "Passenger[%d] %s (%.2f)", id, name, rating);
     }
-
 
 
 }
