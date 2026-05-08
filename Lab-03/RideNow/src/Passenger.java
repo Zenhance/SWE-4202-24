@@ -6,4 +6,12 @@ public class Passenger {
 
     private double rating;
 
+
+    public Passenger(int id, String name, double rating){
+
+    }
+
+    public Passenger(int id, String name) {
+
+    }
 }
