@@ -4,12 +4,10 @@ public class Driver {
     private String name;
     private String licencePlate;
     private boolean isAvailable;
-    Driver(int id, String name,String licencePlate){
-        this.id=id;
-        this.name=name;
-        this.licencePlate=licencePlate;
+    public Driver(int id, String name,String licencePlate){
+        this(id,name,licencePlate,true);
     }
-    Driver(int id, String name,String licencePlate,boolean isAvailable){
+    public Driver(int id, String name,String licencePlate,boolean isAvailable){
         this.id=id;
         this.name=name;
         this.licencePlate=licencePlate;
@@ -25,10 +23,10 @@ public class Driver {
         return licencePlate;
     }
 
-    public boolean isAvailable(){
+    public boolean isAvailable(boolean isAvailable){
         return isAvailable;
     }
-    public String toString(int id,String name,String licencePlate, boolean isAvailable){
+    public String toString(){
         String status= isAvailable? "AVAILABLE":"BUSY";
         return String.format("Passenger[%d] %s (%s)[%s]", id,name,licencePlate,isAvailable);
     }
