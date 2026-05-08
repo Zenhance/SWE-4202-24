@@ -28,10 +28,10 @@ public class Passenger {
     }
 
     public void updateRating(double newRating) {
-
+        rating = newRating;
     }
 
     public String toString() {
-
+        return String.format("Passenger[%d] %s (%.2f)", id, name, rating)
     }
 }
