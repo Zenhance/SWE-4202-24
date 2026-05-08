@@ -37,9 +37,7 @@ public class Location {
     }
 
     public String toString() {
-
-    }
-    public static void main(String[] args) {
-
+        String l1 = String.format("%s (%.2f, %.2f)", label, x, y);
+        return l1;
     }
 }
