@@ -25,5 +25,7 @@ public class Trip {
         return driver;
     }
 
-    public
+    public Location getFrom(){
+        return from;
+    }
 }
