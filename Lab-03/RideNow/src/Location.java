@@ -25,7 +25,6 @@ public class Location{
         return y;
     }
 
-    // Distance calculation
     public double distanceTo(Location other) {
         double dx = other.x - this.x;
         double dy = other.y - this.y;
