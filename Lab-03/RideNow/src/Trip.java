@@ -14,7 +14,45 @@ public class Trip {
         this.to=to;
         this.baseFare=baseFare;
         this.completed=false;
+        this.driver.setAvailable(false);
     }
+    public Passenger getPassenger(){
+        return passenger;
+    }
+    public Driver getDriver(){
+        return driver;
+    }
+    public Location getTo(){
+        return to;
+    }
+    public Location getFrom(){
+        return from;
+    }
+
+    public double getBaseFare(){
+        return baseFare;
+    }
+
+    public boolean isCompleted(){
+        return completed;
+    }
+
+    public double getDistance(){
+        return from.distanceTo(to);
+    }
+
+    public double calculateFare(){
+        return baseFare+15.0*getDistance();
+
+    }
+    public void completeTrip(){
+        this.completed=true;
+        driver.setAvailable(true);
+    }
+
+
+
+
 
 
 }
