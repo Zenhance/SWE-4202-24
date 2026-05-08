@@ -41,12 +41,12 @@ public class Trip {
     }
 
     public double getDistance() {
-        return from.distanceTo(from);
+        return from.distanceTo(to);
     }
 
     public double calculateFare() {
         double distance = getDistance();
-        double fare = baseFare + 15 * distance;
+        double fare = baseFare + 15.0 * distance;
         return fare;
     }
 
@@ -72,7 +72,7 @@ public class Trip {
                 "To        : %s\n" +
                 "Distance  : %.2f km\n" +
                 "Fare      : BDT %.2f\n" +
-                "Status    : %s\n",
+                "Status    : %s",
                 passenger.getName(),
                 driver.getName(), driver.getLicencePlate(),
                 from.toString(),
