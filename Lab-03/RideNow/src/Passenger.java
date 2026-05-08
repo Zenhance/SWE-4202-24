@@ -15,17 +15,24 @@ public Passenger(int id,String name){
     rating = 5.0;
 }
 
-int getId(){
+public int getId(){
     return id;
 }
 
-String getName(){
+public String getName(){
     return name;
 }
 
-double getRating(){
+public double getRating(){
     return rating;
 }
 
+public void updateRating(double newRating){
+    this.rating = newRating;
+}
 
+public  String toString(){
+    String string = String.format("Passenger[%d] %s (%f)",id,name,rating);
+    return string;
+}
 }
