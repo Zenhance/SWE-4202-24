@@ -37,4 +37,16 @@ public class Driver {
     public void setAvailable(boolean available) {
         this.isAvailable = available;
     }
+
+    public String toString() {
+        String state;
+
+        if (isAvailable) {
+            state = "AVAILABLE";
+        } else {
+            state = "BUSY";
+        }
+
+        return String.format("Driver[%d] %s (%s) [%s]", id, name, licencePlate, status);
+    }
 }
