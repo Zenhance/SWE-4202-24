@@ -18,15 +18,15 @@ public class Driver {
         this.isAvailable = isAvailable;
     }
 
-    private int getId(){
+    public int getId(){
         return id;
     }
 
-    private String gatName(){
+    public String gatName(){
         return name;
     }
 
-    private String  getLicencePlate(){
+    public String  getLicencePlate(){
         return licencePlate;
     }
 
