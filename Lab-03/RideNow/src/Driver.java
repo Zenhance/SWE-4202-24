@@ -38,6 +38,12 @@ public class Driver {
         isAvailable = available;
     }
 
+    public String toString() {
+        String available = String.format("Driver[%d] %s (%s) [AVAILABLE]", id, name, licencePlate);
+        String busy = String.format("Driver[%d] %s (%s) [BUSY]", id, name, licencePlate);
 
+        if(isAvailable) return available;
+        else return busy;
+    }
 
 }
