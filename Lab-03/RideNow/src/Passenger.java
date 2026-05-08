@@ -18,6 +18,16 @@ public class Passenger {
     //getters
     public int getId(int id){
 
+        return id;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getRating() {
+        return rating;
+    }
+
 
 }
