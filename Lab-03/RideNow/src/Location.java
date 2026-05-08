@@ -1,4 +1,4 @@
-public class Location {
+class Location {
     private String label;
     private double x;
     private double y;
