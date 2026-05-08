@@ -17,4 +17,20 @@ public class Driver {
         this.x=x;
     }
 
+    public String getLicencePlate() {
+        return licencePlate;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+    public boolean isAvailable(){
+        return x;
+    }
+
+
 }
