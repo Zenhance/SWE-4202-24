@@ -4,7 +4,7 @@ public class Location {
     private double x;
     private double y;
 
-    public Location(String label, double x, double y)){
+    public Location(String label, double x, double y){
         this.label = null;
         this.x = x;
         this.y = y;
@@ -36,9 +36,9 @@ public class Location {
         double x = other.getX();
         double y = other.getY();
 
-        double distance k = Math.sqrt((this.x - x)*(this.x - x)+(this.y - y)*(this.y - y));\
+        double distance_k= Math.sqrt((this.x - x)*(this.x - x)+(this.y - y)*(this.y - y));
 
-        return distance;
+        return distance_k;
 
     }
 
