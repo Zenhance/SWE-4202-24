@@ -2,24 +2,24 @@ import java.lang.Math;
 
 
 public class Location {
-    private String label;
+    private String Label;
     double x;
     double y;
 
     public Location(String label, double x, double y){
-        this.label = label;
+        this.Label = label;
         this.x = x;
         this.y = y;
     }
 
     public Location(double x, double y){
-        this.label = "Unknown";
+        this.Label = "Unknown";
         this.x = x;
         this.y = y;
     }
 
     public String getLabel() {
-        return label;
+        return Label;
     }
 
     public double getX() {
@@ -41,7 +41,7 @@ public class Location {
     }
 
     public String toString(){
-        return String.format("%s (%.2f, %.2f)", label, x, y);
+        return String.format("%s (%.2f, %.2f)", Label, x, y);
     }
 
 
