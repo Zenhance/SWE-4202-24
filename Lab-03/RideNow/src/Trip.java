@@ -56,4 +56,32 @@ public class Trip {
         completed = true;
         driver.setAvailable(true);
     }
+
+    public String getSummary() {
+        String string = String.format(
+                "Trip Summary\n" +
+                        "  %-10s: %s\n" +
+                        "  %-10s: %s (%s)\n" +
+                        "  %-10s: %s (%.2f, %.2f)\n" +
+                        "  %-10s: %s (%.2f, %.2f)\n" +
+                        "  %-10s: %.2f km\n" +
+                        "  %-10s: BDT %.2f\n",
+                "Passenger", getPassenger().getName(),
+                "Driver",    getDriver().getName(), getDriver().getLicencePlate(),
+                "From",      getFrom().getLabel(), getFrom().getX(), getFrom().getY(),
+                "To",        getTo().getLabel(), getTo().getX(), getTo().getY(),
+                "Distance",  getDistance(),
+                "Fare",      calculateFare() );
+
+        String flag;
+
+        if(completed) {
+            flag = String.format("  %-10s: %s", "Status", "COMPLETED");
+        }
+        else {
+            flag = String.format("  %-10s: %s", "Status", "IN PROGRESS");
+        }
+
+        return string + flag;
+    }
 }
