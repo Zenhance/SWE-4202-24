@@ -41,4 +41,19 @@ public class Trip {
         return completed;
     }
 
+    public double getDistance(){
+        double distance = from.distanceTo(to);
+        return distance;
+    }
+
+    public double calculateFare(){
+        double distance = from.distanceTo(to);
+        double fare = baseFare + 15*distance;
+        return fare;
+    }
+
+    public void completeTrip(){
+        completed = true;
+        driver.setAvailable(true);
+    }
 }
