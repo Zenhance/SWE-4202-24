@@ -28,4 +28,9 @@ public class Trip {
     public Location getFrom(){
         return from;
     }
+
+    public Location getTo(){
+        return to;
+    }
+
 }
