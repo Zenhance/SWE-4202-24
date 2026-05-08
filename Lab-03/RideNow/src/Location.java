@@ -33,4 +33,16 @@ public class Location {
     public double getY() {
         return y;
     }
+
+    public double distanceTo(Location other){
+        double distance = Math.sqrt( (Math.pow((this.x - other.x), 2) - Math.pow((this.y - other.y), 2) ) );
+
+        return distance;
+
+    }
+
+    public void toString(String label ){
+
+        System.out.println("label" + ());
+    }
 }
