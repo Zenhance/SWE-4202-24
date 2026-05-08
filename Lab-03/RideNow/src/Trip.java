@@ -12,6 +12,7 @@ public class Trip {
         this.from = from;
         this.to = to;
         this.baseFare = baseFare;
+        this.completed = false; // completed is false before trip begins
     }
 
     public Passenger getPassenger() {
