@@ -32,7 +32,6 @@ public class Passenger {
 
     public String toString() {
         String passengerInfo = String.format("Passeger[%d] %s (%.2lf)", id, name, rating);
-
         return passengerInfo;
     }
 }
