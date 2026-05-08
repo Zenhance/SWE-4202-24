@@ -41,8 +41,7 @@ public class Trip {
     }
 
     public double getDistance() {
-        double distance = 0;
-        return 0.0;
+        return from.distanceTo(from);
     }
 
     public double calculateFare() {
