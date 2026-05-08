@@ -24,4 +24,22 @@ public class Driver {
     public String getName() {
         return name;
     }
+
+    public String getLicencePlate() {
+        return licencePlate;
+
+    }
+
+    public boolean isAvailable() {
+        return isAvailable;
+    }
+
+    //availability
+
+
+    public void setAvailable(boolean available) {
+        isAvailable = available;
+    }
+
+
 }
