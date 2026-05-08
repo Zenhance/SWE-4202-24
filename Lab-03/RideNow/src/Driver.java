@@ -26,4 +26,10 @@ public class Driver {
         return name;
     }
 
+    private String  getLicencePlate(){
+        return licencePlate;
+    }
+
+
+
 }

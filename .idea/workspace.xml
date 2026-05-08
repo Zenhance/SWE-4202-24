@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d87352d3-c56a-42ca-be1a-f6f47a99d8eb" name="Changes" comment="completing Passenger">
-      <change afterPath="$PROJECT_DIR$/Lab-03/RideNow/src/Driver.java" afterDir="false" />
-    </list>
+    <list default="true" id="d87352d3-c56a-42ca-be1a-f6f47a99d8eb" name="Changes" comment="adding getName" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -275,14 +273,53 @@
       <option name="project" value="LOCAL" />
       <updated>1778260362721</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="innit commit">
+      <option name="closed" value="true" />
+      <created>1778260659308</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1778260659308</updated>
+    </task>
+    <task id="LOCAL-00028" summary="adding constructor">
+      <option name="closed" value="true" />
+      <created>1778260699845</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1778260699845</updated>
+    </task>
+    <task id="LOCAL-00029" summary="adding constructor">
+      <option name="closed" value="true" />
+      <created>1778260792880</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1778260792880</updated>
+    </task>
+    <task id="LOCAL-00030" summary="adding getId">
+      <option name="closed" value="true" />
+      <created>1778260867024</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1778260867024</updated>
+    </task>
+    <task id="LOCAL-00031" summary="adding getName">
+      <option name="closed" value="true" />
+      <created>1778260919636</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1778260919636</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="innit commit" />
     <MESSAGE value="adding push" />
     <MESSAGE value="adding pop,peek,display" />
     <MESSAGE value="init commit" />
@@ -299,7 +336,11 @@
     <MESSAGE value="adding getRating" />
     <MESSAGE value="adding updateRating" />
     <MESSAGE value="completing Passenger" />
-    <option name="LAST_COMMIT_MESSAGE" value="completing Passenger" />
+    <MESSAGE value="innit commit" />
+    <MESSAGE value="adding constructor" />
+    <MESSAGE value="adding getId" />
+    <MESSAGE value="adding getName" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding getName" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
