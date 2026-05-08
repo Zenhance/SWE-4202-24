@@ -56,4 +56,9 @@ public class Trip {
         completed = true;
         driver.setAvailable(true);
     }
+
+    public String getSummary(){
+        String string = String.format("Trip Summary\n" + "  Passenger  : " + passenger.getName() + "\n  Driver  : " + driver.getName() + " ");
+    return string;
+    }
 }
