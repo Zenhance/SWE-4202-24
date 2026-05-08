@@ -1,41 +1,61 @@
 public class Trip {
     private Passenger passenger;
- private Driver driver;
-private Location from;
-private Location to;
-private double baseFare;
-private boolean completed;
+    private Driver driver;
+    private Location from;
+    private Location to;
+    private double baseFare;
+    private boolean completed;
 
-   public Trip(Passenger passenger, Driver driver, Location from, Location to, double baseFare){
-      this.passenger = passenger;
-      this.driver = driver;
-      this.from = from;
-      this.to = to;
-      this.baseFare = baseFare;
-      this.completed = false;
-       driver.setAvailable(false);
-   }
+    public Trip(Passenger passenger,
+                Driver driver,
+                Location from,
+                Location to,
+                double baseFare){
+
+        this.passenger = passenger;
+        this.driver = driver;
+        this.from = from;
+        this.to = to;
+        this.baseFare = baseFare;
+        this.completed = false;
+
+        driver.setAvailable(false);
+    }
+
     public Passenger getPassenger(){
-       return passenger;
+        return passenger;
     }
 
-    public boolean setAvailable(boolean a){
-       return a;
-    }
     public Driver getDriver(){
-       return driver;
+        return driver;
     }
+
     public Location getFrom(){
-       return from;
+        return from;
     }
+
     public Location getTo(){
-       return to;
+        return to;
     }
+
     public double getBaseFare(){
-       return baseFare;
+        return baseFare;
     }
+
     public boolean isCompleted(){
         return completed;
     }
 
+    public double getDistance(){
+        return from.distanceTo(to);
+    }
+
+    public double calculateFare(){
+        return baseFare + (15.0 * getDistance());
+    }
+
+    public void completeTrip(){
+        completed = true;
+        driver.setAvailable(true);
+    }
 }
