@@ -45,13 +45,34 @@ public class Trip {
         return from.distanceTo(to);
     }
 
-    public double calculatefare(){
-        return baseFare+15.0*getDistance();
+    public double calculateFare(){
+        return baseFare+ 15.0*getDistance();
     }
 
     public void completeTrip(){
         this.completed= true;
         driver.setAvailable(true);
     }
+
+    public String getSummary(){
+        String status;
+        if(completed){
+            status = "Completed";
+
+        }
+        else{
+            status = "In progress";
+        }
+
+        return "Trip Summary\n"
+                + "Passenger : " + passenger.getName() + "\n"
+                + "Driver : " + driver.getName() + " (" + driver.getLicencePlate() + ")\n"
+                + "From : " + from.toString() + "\n"
+                + "To : " + to.toString() + "\n"
+                + String.format("Distance : %.2f km\n", getDistance())
+                + String.format("Fare : BDT %.2f\n", calculateFare())
+                + "Status : " + status;
+    }
+
 
 }
