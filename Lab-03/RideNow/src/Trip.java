@@ -23,4 +23,7 @@ public class Trip {
     public double    getBaseFare()   { return baseFare; }
     public boolean   isCompleted()   { return completed; }
 
+    public double getDistance() {
+        return from.distanceTo(to);
+    }
 }
