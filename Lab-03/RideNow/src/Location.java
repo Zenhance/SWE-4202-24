@@ -34,4 +34,10 @@ public class Location {
 
         return distance;
     }
+
+    public String toString() {
+        String lokeshon = String.format("%s (%.2lf, %.2lf", label, x, y);
+
+        return lokeshon;
+    }
 }
