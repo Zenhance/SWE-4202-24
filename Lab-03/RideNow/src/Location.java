@@ -10,6 +10,7 @@ public class Location {
     }
 
     public Location(double x, double y) {
+        this.label = "Unknown";
         this.x = x;
         this.y = y;
     }
@@ -18,31 +19,12 @@ public class Location {
         return label;
     }
 
-    public void setLabel(String label) {
-        this.label = label;
-    }
-
     public double getX() {
         return x;
-    }
-
-    public void setX(double x) {
-        this.x = x;
     }
 
     public double getY() {
         return y;
     }
 
-    public void setY(double y) {
-        this.y = y;
-    }
-
-    public double distanceTo() {
-        double distance = 0;
-        return distance;
-    }
-    public String toString(){
-        return "Airport (3.00, 7.50)";
-    }
 }
