@@ -39,11 +39,14 @@ public class Trip {
     }
 
     public double getDistance() {
-        double distance = this.from - this.to;
+        double distance = from.distanceTo(to);
         return distance;
     }
 
     public double calculateFare() {
-        double fare=baseFare + 15.0 * distance;
+        double fare=baseFare + 15.0 * from.distanceTo(to);
+        return fare;
     }
+
+
 }
