@@ -6,4 +6,12 @@ public class Trip {
     private Location from;
     private Location to;
 
+    private double baseFare;
+    private boolean completed = false;
+
+    public Trip(Passenger passenger, Driver driver, Location from, Location to, double
+            baseFare) {
+
+
+    }
 }
