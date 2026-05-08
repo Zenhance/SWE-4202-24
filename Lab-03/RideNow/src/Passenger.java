@@ -12,6 +12,7 @@ public class Passenger {
     public Passenger(int id, String name) {
         this.id = id;
         this.name = name;
+        this.rating = 5.0;
     }
 
     public int getId() {
@@ -31,7 +32,7 @@ public class Passenger {
     }
 
     public String toString() {
-        String passengerInfo = String.format("Passeger[%d] %s (%.2lf)", id, name, rating);
+        String passengerInfo = String.format("Passenger[%d] %s (%.2f)", id, name, rating);
         return passengerInfo;
     }
 }
