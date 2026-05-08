@@ -42,6 +42,27 @@ public class Trip {
     }
 
 
+    public double getDistance(){
+        double calculated_distance=from.distanceTo(to);
+        return calculated_distance;
+    }
+
+    public double calculateFare(){
+       //  fare=baseFare+15.0*calulated_distance;
+    }
+
+    public void completeTrip(){
+        completed=true;
+        driver.setAvailable(true);
+    }
+
+    public String getSummary(){
+        String message;
+
+    }
+
+
+
 
 
 
