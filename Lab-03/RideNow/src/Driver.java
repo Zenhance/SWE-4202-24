@@ -42,6 +42,12 @@ public boolean isAvailable()
      return isAvailable;
       
     }
+
+    void setAvailable (boolean available)
+    {
+
+      this.isAvailable=available;
+    }
 public String toString()
     { String status;
      if (isAvailable){ status= "AVAILABLE";}
