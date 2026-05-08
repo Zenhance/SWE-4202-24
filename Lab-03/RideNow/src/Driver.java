@@ -42,4 +42,10 @@ public class Driver {
     }
 
 
+    public String toString(int id, String name, boolean isAvailable, String licencePlate){
+        String str = "Driver [" + id + "]" + name + " (" licencePlate + ") " +  (isAvailable)? "[AVAILABLE]" : "[BUSY]";
+
+        return str;
+
+    }
 }
