@@ -31,6 +31,17 @@ public class Driver {
    public boolean isAvailable(){
        return this.isAvailable;
    }
+   public void setAvailable(boolean available){
+       this.isAvailable=available;
+   }
+   public String toString(){
+       if(isAvailable){
+           return "Driver["+this.id+"] "+this.name+" ("+this.licencePlate+") [AVAILABLE]";
+       }
+       else{
+           return "Driver["+this.id+"] "+this.name+" ("+this.licencePlate+") [BUSY]"
+       }
+   }
 
 
 
