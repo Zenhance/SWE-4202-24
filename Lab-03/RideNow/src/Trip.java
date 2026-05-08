@@ -71,7 +71,6 @@ public Trip(Passenger passenger, Driver driver, Location from, Location to, doub
                     passenger.getName(), driver.getName(), driver.getLicencePlate(), from.toString(), to.toString(),
                     getDistance(), calculateFare());
             return string2;
-
         }
     }
 }
