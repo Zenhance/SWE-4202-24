@@ -29,8 +29,8 @@ public class Location {
     }
 
     public double distanceTo(Location other) {
-        double newX=other.x=x;
-        double newY=other.y=y;
+        double newX=other.x;
+        double newY=other.y;
 
         double xDiff=newX-this.x;
         double yDiff=newY-this.y;
