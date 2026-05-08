@@ -1,5 +1,6 @@
-public class Trip {
+import java.util.Locale;
 
+public class Trip {
     private Passenger passenger;
     private Driver driver;
     private Location from;
@@ -7,15 +8,14 @@ public class Trip {
     private double baseFare;
     private boolean completed;
 
-    public Trip(Passenger passenger, Driver driver, Location from, Location to, double baseFare){
+    public Trip(Passenger passenger, Driver driver, Location from, Location to, double baseFare) {
         this.passenger = passenger;
         this.driver = driver;
-        this. from = from;
+        this.from = from;
         this.to = to;
         this.baseFare = baseFare;
         this.completed = false;
-
-        driver.setAvailable(false);
+        this.driver.setAvailable(false);
     }
 
     public Passenger getPassenger() {
@@ -38,5 +38,29 @@ public class Trip {
         return baseFare;
     }
 
+    public boolean isCompleted() {
+        return completed;
+    }
 
+    public double getDistance() {
+        return from.distanceTo(to);
+    }
+
+    public double calculateFare() {
+        return baseFare + 15.0 * getDistance();
+    }
+
+    public void completeTrip() {
+        this.completed = true;
+        this.driver.setAvailable(true);
+    }
+
+    public String getSummary() {
+
+        String status = completed ? "COMPLETED" : "IN PROGRESS";
+        String driverName = driver.getName();
+        String licencePlate = driver.getLicencePlate();
+
+        return "Passenger : " + passenger.getName() + "\n" + "Driver : " + driverName + " (" + licencePlate + ")\n" + "From : " + from + "\n" + "To : " + to + "\n" + "Distance : " + String.format("%.2f", getDistance()) + " km\n" +"Fare : BDT " + String.format("%.2f", calculateFare()) + "\n" +"Status : " + status;
+    }
 }
