@@ -13,6 +13,7 @@ public class Trip {
         this.to = to;
         this.baseFare = baseFare;
         this.completed = false; // completed is false before trip begins
+        driver.setAvailable(false); // calling the setAvaiable() method
     }
 
     public Passenger getPassenger() {
