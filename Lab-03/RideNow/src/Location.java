@@ -40,8 +40,6 @@ public class Location {
     }
 
     public String toString() {
-        return label;
-        return x;
-        return y;
+        return label+"("+x+","+y+")";
     }
 }
