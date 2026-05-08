@@ -7,7 +7,7 @@ public class Trip {
     private boolean completed;
 
     public Trip(Passenger passenger, Driver driver, Location from, Location to, double
-            baseFare){
+            baseFare) {
         this.passenger = passenger;
         this.driver = driver;
         this.from = from;
@@ -42,12 +42,12 @@ public class Trip {
         return completed;
     }
 
-    public double getDistance(){
+    public double getDistance() {
         double distance = (from.distanceTo(to));
         return distance;
     }
 
-    public double calculateFare(){
+    public double calculateFare() {
         double fare;
 
         fare = baseFare + 15.0 * getDistance();
@@ -55,18 +55,32 @@ public class Trip {
 
     }
 
-    public void completeTrip(){
+    public void completeTrip() {
         completed = true;
         driver.setAvailable(true);
     }
 
-    public String getSummery(){
-            String status;
-            if (completed == true) {
-                status = "COMPLETED";
-            } else {
-                status = "IN PROGRESS";
-            }
+    public String getSummary() {
+        String status;
+        if (completed == true) {
+            status = "COMPLETED";
+        } else {
+            status = "IN PROGRESS";
+        }
+
+        return String.format(
+                "Trip Summary\n" +
+                        "  Passenger : %s\n" +
+                        "  Driver    : %s (%s)\n" +
+                        "  From      : %s\n" +
+                        "  To        : %s\n" +
+                        "  Distance  : %.2f km\n" +
+                        "  Fare      : BDT %.2f\n" +
+                        "  Status    : %s",
+                passenger.getName(), driver.getName(), driver.getLicencePlate(), from.toString(), to.toString(),
+                getDistance(), calculateFare(), status
+        );
 
 
+    }
 }
