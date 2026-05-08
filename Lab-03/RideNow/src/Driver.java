@@ -30,6 +30,10 @@ public class Driver {
         return licencePlate;
     }
 
+    public boolean isAvailable(){
+        return isAvailable;
+    }
+
 
 
 }
