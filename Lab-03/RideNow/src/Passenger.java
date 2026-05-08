@@ -33,4 +33,8 @@ public class Passenger {
         rating = newRating;
     }
 
+    public String toString() {
+        System.out.println("Passenger[" + id + "] " + name +" (" + rating + " )");
+
+    }
 }
