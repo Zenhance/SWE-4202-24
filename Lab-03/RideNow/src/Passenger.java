@@ -3,5 +3,17 @@ public class Passenger {
     private String name;
     private double rating;
 
-    public passenger(int id, double rating)
+   public Passenger(int id, String name, double rating) {
+        this.id = id;
+        this.name = name;
+        this.rating = rating;
+    }
+
+    public Passenger(int id, String name){
+       this.id=id;
+       this.name=name;
+       this.rating=5.0;
+    }
+
+
 }
