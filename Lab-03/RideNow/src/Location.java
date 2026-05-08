@@ -31,9 +31,9 @@ public class Location{
     public double distanceTo(Location other){
         double x = other.getX();
         double y = other.getY();
-        double X = this.x - x;
-        double Y = this.y -y;
-        double distance = Math.sqrt(X*X + Y*Y);
+        double dX = this.x - x;
+        double dY = this.y -y;
+        double distance = Math.sqrt(dX*dX + dY*dY);
         return distance;
     }
 
