@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d87352d3-c56a-42ca-be1a-f6f47a99d8eb" name="Changes" comment="add getPassenger">
-      <change beforePath="$PROJECT_DIR$/Lab-03/RideNow/src/Trip.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-03/RideNow/src/Trip.java" afterDir="false" />
-    </list>
+    <list default="true" id="d87352d3-c56a-42ca-be1a-f6f47a99d8eb" name="Changes" comment="add getDistance" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -379,19 +377,61 @@
       <option name="project" value="LOCAL" />
       <updated>1778261991609</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="add getDriver">
+      <option name="closed" value="true" />
+      <created>1778262056655</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1778262056655</updated>
+    </task>
+    <task id="LOCAL-00041" summary="add getFrom">
+      <option name="closed" value="true" />
+      <created>1778262117804</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1778262117804</updated>
+    </task>
+    <task id="LOCAL-00042" summary="add getTo">
+      <option name="closed" value="true" />
+      <created>1778262162991</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1778262162991</updated>
+    </task>
+    <task id="LOCAL-00043" summary="add getBaseFare">
+      <option name="closed" value="true" />
+      <created>1778262224123</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1778262224123</updated>
+    </task>
+    <task id="LOCAL-00044" summary="add isCompleted">
+      <option name="closed" value="true" />
+      <created>1778262306698</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1778262306698</updated>
+    </task>
+    <task id="LOCAL-00045" summary="add getDistance">
+      <option name="closed" value="true" />
+      <created>1778262370263</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1778262370263</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="init commit" />
-    <MESSAGE value="adding variables" />
-    <MESSAGE value="adding enqueue" />
-    <MESSAGE value="adding dequeue" />
-    <MESSAGE value="adding front and display" />
-    <MESSAGE value="complete" />
     <MESSAGE value="adding getLabel, getX, getY" />
     <MESSAGE value="adding distanceTo" />
     <MESSAGE value="adding toString" />
@@ -411,7 +451,13 @@
     <MESSAGE value="add Trip" />
     <MESSAGE value="add constructor" />
     <MESSAGE value="add getPassenger" />
-    <option name="LAST_COMMIT_MESSAGE" value="add getPassenger" />
+    <MESSAGE value="add getDriver" />
+    <MESSAGE value="add getFrom" />
+    <MESSAGE value="add getTo" />
+    <MESSAGE value="add getBaseFare" />
+    <MESSAGE value="add isCompleted" />
+    <MESSAGE value="add getDistance" />
+    <option name="LAST_COMMIT_MESSAGE" value="add getDistance" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
