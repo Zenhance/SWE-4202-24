@@ -29,12 +29,13 @@ public class Location {
     }
 
     public double distanceTo(Location other) {
-        other.label=label;
-        other.x=x;
-        other.y=y;
+        double newX=other.x=x;
+        double newY=other.y=y;
+
+        double xDiff=newX-this.x;
+        double yDiff=newY-this.y;
+
+        double distance= Math.sqrt(xDiff * xDiff + yDiff * yDiff);
     }
 
-    public String toString() {
-
-    }
 }
