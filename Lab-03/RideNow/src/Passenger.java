@@ -14,4 +14,10 @@ public class Passenger {
     public Passenger(int id, String name) {
 
     }
+
+    //getters
+    public int getId(int id){
+
+    }
+
 }
