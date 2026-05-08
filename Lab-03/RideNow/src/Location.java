@@ -25,6 +25,15 @@ public class Location {
     public double getY() {
         return y;
     }
+    public double distanceTo(Location Other){
+
+        double distance =Math.sqrt(Math.pow(this.x-Other.x, 2)+Math.pow(this.y-Other.y, 2));
+        return distance;
+    }
+
+    public String toString(){
+        return String.format("%s (%.2f, %.2f)", label,x,y);
+    }
 
 
 }
