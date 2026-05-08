@@ -44,7 +44,7 @@ public class Driver {
             msg = String.format("Driver[%d] %s (%s) [AVAILABLE]", id, name, licencePlate);
             return msg;
         } else {
-            msg = String.format("Driver[%d] %s (%s) [BUSY]");
+            msg = String.format("Driver[%d] %s (%s) [BUSY]", name, id, licencePlate);
             return msg;
         }
     }
