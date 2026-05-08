@@ -28,7 +28,7 @@ public class Location {
         return Math.sqrt(x2*x2 + y2*y2);
     }
      public String toString(){
-        return label+ "("+x+","+y+")";
+        return label+ " ("+String.format("%.2f",x)+", "+String.format("%.2f",y)+")";
     }
 
 }

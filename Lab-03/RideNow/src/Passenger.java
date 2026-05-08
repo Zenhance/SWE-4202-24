@@ -25,6 +25,6 @@ public class Passenger {
         this.rating=newRating;
     }
     public String toString(){
-        return "Passenger["+this.id+"]"+this.name+"("+this.rating+")";
+        return "Passenger["+this.id+"] "+this.name+" ("+String.format("%.2f",this.rating)+")";
     }
 }
