@@ -9,5 +9,12 @@ public class Location {
     //north coordinates in km
     private double y;
 
+    public Location(String label, double x, double y){
+
+    }
+
+    public Location(double x, double y){
+
+    }
 
 }
