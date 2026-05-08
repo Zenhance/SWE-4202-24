@@ -75,7 +75,11 @@ public class Trip {
                 "Status    : %s\n",
                 passenger.getName(),
                 driver.getName(), driver.getLicencePlate(),
-                from.toString()
+                from.toString(),
+                to.toString(),
+                getDistance(),
+                calculateFare(),
+                status
                 );
 
         return summary;
