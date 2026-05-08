@@ -9,6 +9,10 @@ public class Driver {
     //newly registered driver
     public Driver(int id, String name, String licencePlate){
 
+        this.id = id;
+        this.name = name;
+        this.licencePlate = licencePlate;
+
     }
 
     //full time driver
