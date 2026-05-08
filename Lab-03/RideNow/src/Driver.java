@@ -26,6 +26,9 @@ public class Driver {
     public String getLicencePlate(){
         return licencePlate;
     }
+    public boolean isAvailable(){
+        return isAvailable;
+    }
     public void setAvailable(boolean available){
         this.isAvailable=available;
     }
