@@ -38,6 +38,6 @@ public class Driver {
         String mood = isAvailable ? "Available": "BUSY";
         return String.format("Driver[%d] %s (%s) [%s]",id,name,licencePlate,mood);
     }
-    
+
 
 }
