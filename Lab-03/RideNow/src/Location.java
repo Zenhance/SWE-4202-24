@@ -1,4 +1,3 @@
-
 public class Location {
 
     private String label;
@@ -36,7 +35,6 @@ public class Location {
     }
 
     public String toString() {
-        String ans = label + " (" + x + ", " + y + ")";
-        return ans;
+        return String.format("%s (%.2f ,%2f)",label,x,y);
     }
 }
