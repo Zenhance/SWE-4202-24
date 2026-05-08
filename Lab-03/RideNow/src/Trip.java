@@ -4,7 +4,7 @@ public class Trip {
     private Location from;
     private Location to;
     private double baseFare;
-    private boolean completed = false;
+    private boolean completed=false;
 
 
     public Trip(Passenger passenger, Driver driver, Location from, Location to, double baseFare) {
@@ -16,4 +16,37 @@ public class Trip {
         driver.setAvailable(false);
 
     }
+    public Passenger getPassenger() {
+        return passenger;
+    }
+
+    public Driver getDriver() {
+        return driver;
+    }
+
+    public Location getFrom() {
+        return from;
+    }
+
+    public Location getTo() {
+        return to;
+    }
+
+    public double getBaseFare() {
+        return baseFare;
+    }
+
+    public boolean isCompleted() {
+        return completed;
+    }
+
+    public double getDistance() {
+        return from.distanceTo(to);
+    }
+
+    public double calculateFare() {
+        return baseFare + (15.0 * getDistance());
+    }
+
+
 }
