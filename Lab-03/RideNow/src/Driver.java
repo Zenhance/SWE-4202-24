@@ -6,4 +6,8 @@ public class Driver {
     private boolean isAvailable;
 
 
+    public Driver(int id, String name, String licencePlate){
+
+
+    }
 }
