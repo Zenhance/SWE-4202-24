@@ -41,14 +41,16 @@ public class Trip {
         return completed;
     }
 
-
+    double calculated_distance;
     public double getDistance(){
-        double calculated_distance=from.distanceTo(to);
+        calculated_distance=from.distanceTo(to);
         return calculated_distance;
     }
 
+    double fare;
     public double calculateFare(){
-       //  fare=baseFare+15.0*calulated_distance;
+         fare=baseFare+15.0*calculated_distance;
+         return fare;
     }
 
     public void completeTrip(){
@@ -58,7 +60,22 @@ public class Trip {
 
     public String getSummary(){
         String message;
+        if(completed==true){
+            message="COMPLETED";
+        }else{
+            message="IN PROGRESS";
+        }
 
+        String result=
+                 "Trip Summary"+
+                         "\n\tPassenger\t:\t" + passenger.getName()+
+                         "\n\tDriver\t:\t" + driver.toString()+
+                         "\n\tFrom\t:\t"+from.toString()+
+                         "\n\tTo\t:\t"+to.toString()+
+                         "\n\tDistance\t:\t"+String.format("%.2f", from.distanceTo(to))+ " km"+
+                         "\n\tFare\t:\t"+"BDT "+fare+
+                         "\n\tStatus\t:\t"+message;
+           return result;
     }
 
 
