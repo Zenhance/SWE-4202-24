@@ -36,3 +36,6 @@ public class Passenger {
         return String.format(Locale.US, "Passenger[%d] %s (%.2f)", id, name, rating);
     }
 }
+
+
+
