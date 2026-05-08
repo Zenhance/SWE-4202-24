@@ -31,4 +31,7 @@ public class Passenger {
         this.rating = newRating ;
     }
 
+    public String toString(){
+        return (this.id+" "+this.name+" "+this.rating);
+    }
 }
