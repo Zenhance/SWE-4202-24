@@ -10,13 +10,27 @@ public class Location {
     }
 
     public Location(double x, double y) {
-        this.label = "unknown";
         this.x = x;
         this.y = y;
     }
 
     public String getlabel(){
         return label;
+    }
+    public double getX(){
+        return x;
+    }
+    public double getY(){
+        return y;
+    }
+
+    public double Distanceto(Location other){
+     double distancex= other.x-this.x;
+     double distancey=other.y-this.y;
+     return Math.sqrt(distancex*distancex+distancey*distancey);
+    }
+    public String tostring(){
+        return String.format("%s(%.2f,%.2f)",label,x,y);
     }
 
 
