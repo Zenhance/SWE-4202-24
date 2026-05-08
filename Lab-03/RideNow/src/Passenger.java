@@ -15,6 +15,27 @@ public class Passenger {
         this.rating=5.0;
     }
 
+    public int getId(){
+        return id;
+    }
+
+ public String getName(){
+        return name;
+ }
+public double getRating(){
+        return rating;
+}
+public void updateRating(double newRating){
+        this.rating =newRating;
+}
+@Override
+
+    public String toString(){
+        return String.format("Passenger[%d] %s (%.2f)",id,name,rating);
+
+        
+}
+
 
 
 }
