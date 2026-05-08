@@ -38,6 +38,6 @@ public class Driver {
     }
 
     public String toString() {
-        return "Driver["+id+"]"+" "+" "+"("+licencePlate+")"+" "+"["+isAvailable+"]";
+        return "Driver["+id+"]"+" "+name+" "+"("+licencePlate+")"+" "+"["+isAvailable+"]";
     }
 }
