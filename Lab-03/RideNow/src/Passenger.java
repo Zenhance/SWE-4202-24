@@ -27,10 +27,10 @@ public class Passenger {
     }
 
     public void updateRating(double newRating) {
-        newRating=this.rating;
+        double rating=newRating;
     }
 
     public String toString() {
-
+        return "Passenger["+id+"]"+" "+name+" "+"("+rating+")";
     }
 }
