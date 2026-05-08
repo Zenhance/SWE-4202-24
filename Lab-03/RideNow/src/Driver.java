@@ -33,4 +33,17 @@ public String getLicencePlate(){
         return isAvailable;
     }
 
+    public void setAvailable(boolean available) {
+        this.isAvailable= available;
+    }
+
+    public String toString() {
+        String res = "Driver[" + id + "] " + name + " (" + licencePlate + ") ";
+        if (isAvailable == true) {
+            res = res + "[AVAILABLE]";
+        } else {
+            res = res + "[BUSY]";
+        }
+        return res;
+    }
 }
