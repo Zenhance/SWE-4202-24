@@ -38,6 +38,10 @@
         public void setAvailable(boolean available){
             isAvailable = available;
         }
+         public String toString() {
+        String status = isAvailable ? "AVAILABLE" : "BUSY";
+        return "Driver" + "[" + id + "] " + name + " (" + licensePlate + ") " + "[" + status + "]";
+        }
 
     }
 
