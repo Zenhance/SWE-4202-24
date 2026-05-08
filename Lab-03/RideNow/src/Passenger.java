@@ -1,13 +1,18 @@
+import java.util.Locale;
+
 public class Passenger {
     private int id;
     private String name;
     private double rating;
 
-
-    public Passenger(int id, String name, double rating){
+    public Passenger(int id, String name, double rating) {
         this.id = id;
         this.name = name;
         this.rating = rating;
+    }
+
+    public Passenger(int id, String name) {
+        this(id, name, 5.0);
     }
 
     public int getId() {
@@ -22,12 +27,12 @@ public class Passenger {
         return rating;
     }
 
-    public void updateRating(double newRating){
+    public void updateRating(double newRating) {
         this.rating = newRating;
     }
 
-    public String toString(){
-        return String.format("%d %s %.2f", id, name, rating);
+    @Override
+    public String toString() {
+        return String.format(Locale.US, "Passenger[%d] %s (%.2f)", id, name, rating);
     }
-
 }
