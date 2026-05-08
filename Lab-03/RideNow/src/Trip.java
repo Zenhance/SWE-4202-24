@@ -58,19 +58,15 @@ public Trip(Passenger passenger, Driver driver, Location from, Location to, doub
     }
 
     public String getSummary(){
-        if(completed) {
-            String string1 = String.format(
-                    "Trip Summary\n" + "  Passenger : %s\n" + "  Driver    : %s (%s)\n" + "  From      : %s\n" + "  To        : %s\n" + "  Distance  : %.2f km\n" + "  Fare      : BDT %.2f\n" + "  Status    : COMPLETED",
-                    passenger.getName(), driver.getName(), driver.getLicencePlate(), from.toString(), to.toString(),
-                    getDistance(), calculateFare());
-            return string1;
-        }
-        else {
-            String string2 = String.format(
-                    "Trip Summary\n" + "  Passenger : %s\n" + "  Driver    : %s (%s)\n" + "  From      : %s\n" + "  To        : %s\n" + "  Distance  : %.2f km\n" + "  Fare      : BDT %.2f\n" + "  Status    : IN PROGRESS",
-                    passenger.getName(), driver.getName(), driver.getLicencePlate(), from.toString(), to.toString(),
-                    getDistance(), calculateFare());
-            return string2;
-        }
+      String check;
+      if(completed)
+           check = "COMPLETED";
+      else check = "IN PROGRESS";
+      String string;
+      string = String.format("Trip Summary\n" + "  Passenger : %s\n" + "  Driver    : %s (%s)\n" + "  From      : %s\n" + "  To        : %s\n" + "  Distance  : %.2f km\n" + "  Fare      : BDT %.2f\n" + "  Status    : %s",
+                passenger.getName(), driver.getName(), driver.getLicencePlate(), from.toString(), to.toString(),
+                getDistance(), calculateFare(),check);
+      return string;
     }
+
 }
