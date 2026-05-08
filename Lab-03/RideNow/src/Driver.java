@@ -38,10 +38,14 @@ public class Driver {
     }
 
     public String toString() {
+        String msg;
+
         if (isAvailable) {
-            return "Driver[7] Bob (DHA-1234) [AVAILABLE]";
+            msg = String.format("Driver[%d] %s (%s) [AVAILABLE]", id, name, licencePlate);
+            return msg;
         } else {
-            return "[BUSY]";
+            msg = String.format("Driver[%d] %s (%s) [BUSY]");
+            return msg;
         }
     }
 }
