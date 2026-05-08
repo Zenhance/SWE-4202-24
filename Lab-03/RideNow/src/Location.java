@@ -27,13 +27,19 @@ public class Location {
         return y;
     }
 
-    public double distanceTo() {
-        double distance;
+    public double distanceTo(Location other) {
+        double p = this.x - other.x;
+        double q = this.y - other.y;
+
+        double distance = Math.sqrt(p*p + q*q);
+
+        return distance;
     }
 
     public String toString() {
 
     }
     public static void main(String[] args) {
+
     }
 }
