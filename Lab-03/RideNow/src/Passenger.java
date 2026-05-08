@@ -24,5 +24,8 @@ public class Passenger {
     void updateRating(double rating){
         this.rating=rating;
     }
+    public String toString(){
+    return String.format("Passenger[%d] %s (%.2f)",id,name,rating);
+    }
 
 }
