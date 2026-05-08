@@ -22,5 +22,8 @@ public class Driver {
         return id;
     }
 
+    private String gatName(){
+        return name;
+    }
 
 }
