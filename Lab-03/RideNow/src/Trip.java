@@ -51,7 +51,8 @@ public class Trip {
     }
 
     public void completeTrip() {
-
+        completed = true;
+        driver.setAvailable(true);
     }
 
     public String getSummary() {
