@@ -30,7 +30,7 @@ public class Location {
     public double distanceTo(Location other) {
         double dx = other.x - this.x; // difference of x1, x2, (x1 - x2)
         double dy = other.y - this.y; // difference of y1, y2, (y1 - y2)
-        double distance = Math.sqrt(dx * dx - dy * dy);
+        double distance = Math.sqrt(dx * dx + dy * dy);
 
         return distance;
     }
