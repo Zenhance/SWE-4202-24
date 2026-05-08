@@ -16,7 +16,40 @@ public class Trip {
         driver.setAvailable(false);
     }
 
+    public Passenger getPassenger() {
+        return passenger;
+    }
+    public Driver getDriver() {
+        return driver;
+    }
+    public Location getFromFrom() {
+        return from;
+    }
+    public Location getTo() {
+        return to;
+    }
+    public double getBaseFare() {
+        return baseFare;
+    }
+    public boolean isCompleted() {
+        return completed;
+    }
 
+    double getDistance() {
+
+    }
+
+    double calculateFare() {
+
+    }
+
+    void completeTrip() {
+
+    }
+
+    String getSummary() {
+
+    }
 }
 
 

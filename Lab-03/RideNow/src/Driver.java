@@ -35,7 +35,7 @@ public class Driver {
 
     }
 
-    public static main void(String[] args) {
+    public static void main(String[] args) {
 
     }
 }

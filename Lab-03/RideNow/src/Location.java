@@ -28,13 +28,12 @@ public class Location {
     }
 
     public double distanceTo() {
-
+        double distance;
     }
 
     public String toString() {
 
     }
     public static void main(String[] args) {
-
     }
 }
