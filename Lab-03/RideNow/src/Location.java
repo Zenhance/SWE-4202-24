@@ -1,3 +1,4 @@
+import java.util.Locale;
 public class Location {
     private String label;
     private double x;
@@ -33,8 +34,8 @@ public class Location {
         return Math.sqrt(dx * dx + dy * dy);
     }
 
-    public String toString(){
-        return label + "(" + String.format("%2f",y)+ ")" ;
+    @Override
+    public String toString() {
+        return String.format(Locale.US, "%s (%.2f, %.2f)", label, x, y);
     }
-
 }
