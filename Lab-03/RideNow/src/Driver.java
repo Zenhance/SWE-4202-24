@@ -39,12 +39,12 @@ public class Driver {
     }
 
     public String toString() {
-        String state;
+        String status;
 
         if (isAvailable) {
-            state = "AVAILABLE";
+            status = "AVAILABLE";
         } else {
-            state = "BUSY";
+            status = "BUSY";
         }
 
         return String.format("Driver[%d] %s (%s) [%s]", id, name, licencePlate, status);
