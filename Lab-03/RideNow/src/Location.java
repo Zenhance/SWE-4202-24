@@ -1,18 +1,20 @@
-public class Location{
-        private String label;
-        private double x, y;
+public class Location {
+    private String label;
+    private double x;
+    private double y;
 
-        public Location(String label, double x, double y){
-            this.label = label;
-            this.x = x;
-            this.y = y;
-        }
+    public Location(String label, double x, double y) {
+        this.label = label;
+        this.x = x;
+        this.y = y;
+    }
 
-        public Location(double x, double y){
-            this.label = "UNKNOWN";
-            this.x = x;
-            this.y = y;
-        }
+    public Location(double x, double y) {
+        this.label = "Unknown";
+        this.x = x;
+        this.y = y;
+    }
+
     public String getLabel() {
         return label;
     }
@@ -26,14 +28,14 @@ public class Location{
     }
 
     public double distanceTo(Location other) {
-        double dx = other.x - this.x;
-        double dy = other.y - this.y;
+        double magicX = other.x - this.x;
+        double magicY = other.y - this.y;
 
-        return Math.sqrt(dx * dx + dy * dy);
+        return Math.sqrt(magicX * magicX + magicY * magicY);
     }
 
     @Override
     public String toString() {
         return String.format("%s (%.2f, %.2f)", label, x, y);
     }
-    }
+}
