@@ -36,6 +36,7 @@ public class Location {
         double yDiff=newY-this.y;
 
         double distance= Math.sqrt(xDiff * xDiff + yDiff * yDiff);
+        return distance;
     }
 
 }
