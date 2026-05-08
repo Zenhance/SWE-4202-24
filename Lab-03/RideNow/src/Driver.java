@@ -1,9 +1,19 @@
-public class  Driver {
-
+public class Driver {
     private int id;
     private String name;
-    private String licensePlate;
+    private String licencePlate;
     private boolean isAvailable;
+
+    public Driver(int id, String name, String licencePlate) {
+        this(id, name, licencePlate, true);
+    }
+
+    public Driver(int id, String name, String licencePlate, boolean isAvailable) {
+        this.id = id;
+        this.name = name;
+        this.licencePlate = licencePlate;
+        this.isAvailable = isAvailable;
+    }
 
     public int getId() {
         return id;
@@ -13,8 +23,8 @@ public class  Driver {
         return name;
     }
 
-    public String getLicensePlate() {
-        return licensePlate;
+    public String getLicencePlate() {
+        return licencePlate;
     }
 
     public boolean isAvailable() {
@@ -22,13 +32,12 @@ public class  Driver {
     }
 
     public void setAvailable(boolean available) {
-        isAvailable = available;
-
+        this.isAvailable = available;
     }
 
+    @Override
     public String toString() {
-        if(isAvailable) {
-            return "Driver["+id+"]"+name+ ("+licensePlate+") + "[AVAILABLE]";
-        }
+        String status = isAvailable ? "AVAILABLE" : "BUSY";
+        return String.format("Driver[%d] %s (%s) [%s]", id, name, licencePlate, status);
     }
 }
