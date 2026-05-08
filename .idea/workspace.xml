@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d87352d3-c56a-42ca-be1a-f6f47a99d8eb" name="Changes" comment="adding isAvailable">
-      <change beforePath="$PROJECT_DIR$/Lab-03/RideNow/src/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-03/RideNow/src/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab-03/RideNow/src/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-03/RideNow/src/Location.java" afterDir="false" />
+    <list default="true" id="d87352d3-c56a-42ca-be1a-f6f47a99d8eb" name="Changes" comment="add Trip">
+      <change beforePath="$PROJECT_DIR$/Lab-03/RideNow/src/Trip.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-03/RideNow/src/Trip.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -340,7 +339,31 @@
       <option name="project" value="LOCAL" />
       <updated>1778261216122</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="adding setAvailable">
+      <option name="closed" value="true" />
+      <created>1778261418467</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1778261418467</updated>
+    </task>
+    <task id="LOCAL-00036" summary="add toString">
+      <option name="closed" value="true" />
+      <created>1778261531508</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1778261531508</updated>
+    </task>
+    <task id="LOCAL-00037" summary="add Trip">
+      <option name="closed" value="true" />
+      <created>1778261714542</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1778261714542</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -369,7 +392,10 @@
     <MESSAGE value="adding getName" />
     <MESSAGE value="adding getLicencePlate" />
     <MESSAGE value="adding isAvailable" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding isAvailable" />
+    <MESSAGE value="adding setAvailable" />
+    <MESSAGE value="add toString" />
+    <MESSAGE value="add Trip" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Trip" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
