@@ -19,6 +19,19 @@ public class Driver {
        this.isAvailable=true;
 
    }
+   public int getId(){
+       return this.id;
+   }
+   public String getName(){
+       return this.name;
+   }
+   public String getLicencePlate(){
+       return this.licencePlate;
+   }
+   public boolean isAvailable(){
+       return this.isAvailable;
+   }
+
 
 
 }
