@@ -1,7 +1,7 @@
 public class Location {
     private String label="Seoul";
-    private double x;
-    private double y;
+    private double x=3.00;
+    private double y=7.50;
 
     //Create Constructor
     Location(String label, double x, double y) {
@@ -39,4 +39,9 @@ public class Location {
         return distance;
     }
 
+    public String toString() {
+        return label;
+        return x;
+        return y;
+    }
 }
