@@ -16,17 +16,14 @@ public class Location {
 
     public String getLabel() {
         return label;
-        return this.label;
     }
 
     public double getX() {
         return x;
-        return this.x;
     }
 
     public double getY() {
         return y;
-        return this.y;
     }
 
     public double distanceTo(Location other){
