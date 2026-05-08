@@ -22,7 +22,7 @@ public class Trip {
     public Driver getDriver() {
         return driver;
     }
-    public Location getFromFrom() {
+    public Location getFrom() {
         return from;
     }
     public Location getTo() {
@@ -35,20 +35,30 @@ public class Trip {
         return completed;
     }
 
-    double getDistance() {
+    public double getDistance() {
 
     }
 
-    double calculateFare() {
+    public double calculateFare() {
 
     }
 
-    void completeTrip() {
+    public void completeTrip() {
 
     }
 
-    String getSummary() {
-
+    public String getSummary() {
+        return String.format("Trip Summary" +
+                                "Passenger : %s" +
+                                "Driver    : %s (%s)" +
+                                "From      : %s (%.2f, %.2f)" +
+                                "To        : %s (%.2f, %.2f" +
+                                "Distance  : %.2f km" +
+                                "Fare      : BDT %.2f" +
+                                "Status    : %s",
+                                 passenger.getName(), driver.getName(), driver.getLicencePlate(),
+                                 from.getLabel(), from.getX(), from.getY(), to.getLabel(), to.getX()
+                                 to.getY(), );
     }
 }
 
