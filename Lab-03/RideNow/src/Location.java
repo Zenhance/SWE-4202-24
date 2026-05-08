@@ -36,7 +36,7 @@ public class Location {
     }
 
     public String toString() {
-        String lokeshon = String.format("%s (%.2lf, %.2lf", label, x, y);
+        String lokeshon = String.format("%s (%.2f, %.2f", label, x, y);
 
         return lokeshon;
     }
