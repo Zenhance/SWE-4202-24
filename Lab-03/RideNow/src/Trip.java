@@ -56,14 +56,25 @@ public class Trip {
     }
 
     public String getSummary() {
-        String summary = "Trip Summary\n" +
-                "Passenger : Alice\n" +
-                "Driver : Bob ( DHA -1234)\n" +
-                "From : Airport (3.00 , 7.50)" +
-                "To : University (8.00 , 4.00)\n" +
-                "Distance : 6.10 km\n" +
-                "Fare : BDT 141.50\n" +
-                "Status : COMPLETED";
+        String status;
+
+        if (completed) {
+            status = "COMPLETED";
+        } else {
+            status = "IN PROGRESS";
+        }
+
+        String summary = String.format(
+                "Trip Summary\n" +
+                "Passenger : %s\n" +
+                "Driver    : %s (%s)\n" +
+                "From      : %s (%.2f, %.2f)\n" +
+                "To        : %s (%.2f, %.2f)\n" +
+                "Distance  : %.2f km\n" +
+                "Fare      : BDT %.2f\n" +
+                "Status    : %s\n"
+                );
+
         return summary;
     }
 }
