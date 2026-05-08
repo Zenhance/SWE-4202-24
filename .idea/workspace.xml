@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d87352d3-c56a-42ca-be1a-f6f47a99d8eb" name="Changes" comment="adding updateRating">
-      <change beforePath="$PROJECT_DIR$/Lab-03/RideNow/src/Passenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-03/RideNow/src/Passenger.java" afterDir="false" />
+    <list default="true" id="d87352d3-c56a-42ca-be1a-f6f47a99d8eb" name="Changes" comment="completing Passenger">
+      <change afterPath="$PROJECT_DIR$/Lab-03/RideNow/src/Driver.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -267,7 +267,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778260080081</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="completing Passenger">
+      <option name="closed" value="true" />
+      <created>1778260362721</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1778260362721</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,7 +298,8 @@
     <MESSAGE value="adding getId, getName" />
     <MESSAGE value="adding getRating" />
     <MESSAGE value="adding updateRating" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding updateRating" />
+    <MESSAGE value="completing Passenger" />
+    <option name="LAST_COMMIT_MESSAGE" value="completing Passenger" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
