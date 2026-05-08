@@ -1,8 +1,8 @@
 public class passenger
 { 
-    int id;
-    String name;
-    double rating;
+  private  int id;
+    private String name;
+    private double rating;
 
 public passenger (int id, String name, double rating)
     {
