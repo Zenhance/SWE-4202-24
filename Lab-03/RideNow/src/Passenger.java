@@ -12,6 +12,7 @@ public class Passenger {
     public Passenger(int id, String name) {
         this.id = id;
         this.name = name;
+        this.rating = 5.00;
     }
 
     public int getId() {
