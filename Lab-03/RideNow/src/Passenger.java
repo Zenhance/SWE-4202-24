@@ -1,3 +1,5 @@
+import javax.lang.model.element.NestingKind;
+
 public class Passenger {
 private int id;
 private String name;
@@ -33,8 +35,9 @@ private double rating; // a number from 1.0 to 5.0
         this.rating = newRating;
     }
 
-//    public String toString(){
-//
-//    }
+    @Override
+    public String toString(){
+    return String.format("Passenger[%d] %s (%.2f)", id, name, rating);
+    }
 
 }
