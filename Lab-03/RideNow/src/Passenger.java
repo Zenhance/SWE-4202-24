@@ -21,11 +21,11 @@ public class Passenger {
         return id;
     }
 
-    public String getName() {
+    public String getName(String name) {
         return name;
     }
 
-    public double getRating() {
+    public double getRating(double rating) {
         return rating;
     }
 
@@ -33,7 +33,7 @@ public class Passenger {
         rating = newRating;
     }
 
-    public static String toString() {
+    public static String toString(String name, int id, double rating) {
         System.out.println("Passenger[" + id + "] " + name +" (" + rating + " )");
 
     }
