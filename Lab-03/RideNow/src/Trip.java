@@ -55,5 +55,15 @@ public double getDistance(){
     this.driver.setAvailable(true);
     }
 
-
+    public String getSummary() {
+        String status = completed ? "COMPLETED" : "IN PROGRESS";
+        return "Trip Summary\n" +
+                "Passenger : " + passenger.getName() + "\n" +
+                "Driver    : " + driver.getName() + " (" + driver.getLicencePlate() + ")\n" +
+                "From      : " + from.toString() + "\n" +
+                "To        : " + to.toString() + "\n" +
+                "Distance  : " + String.format("%.2f", getDistance()) + " km\n" +
+                "Fare      : BDT " + String.format("%.2f", calculateFare()) + "\n" +
+                "Status    : " + status;
+    }
 }
