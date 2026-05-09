@@ -69,5 +69,6 @@ public class Trip {
                 + "Distance : " + String.format("%.2f", getDistance()) + "km\n"
                 + "Fare     : BDT" + String.format("%.2f", calculateFare()) + "\n"
                 + "Status   : " + tripStatus;
+
     }
 }
