@@ -9,7 +9,7 @@ public class Driver {
         this.id = id;
         this.name = name;
         this.licencePlate = licencePlate;
-        isAvailable = true;
+        this.isAvailable = true;
     }
 
     Driver(int id, String name, String licencePlate, boolean isAvailable){
@@ -35,10 +35,15 @@ public class Driver {
     public boolean isAvailable(){
         return isAvailable;
     }
-    public String toString(){
-        String res = "Driver[" + id + "]" + " " + name + " " + "(" + licencePlate + ")" + "[" + (isAvailable? "AVAILABLE":"BUSY") + "]";
 
-        return res;
+    public void setAvailable(boolean available){
+        this.isAvailable = available;
+    }
+
+    @Override
+    public String toString(){
+
+        return String.format("Driver[%d] %s (%s) [%s]", id, name, licencePlate, isAvailable? "Available": "Busy");
     }
 
 }
