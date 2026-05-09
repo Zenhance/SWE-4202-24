@@ -50,5 +50,10 @@ public double getDistance(){
     return fare;
     }
 
+    public void completeTrip(){
+    this.completed = true;
+    this.driver.setAvailable(true);
+    }
+
 
 }
