@@ -13,7 +13,7 @@ Trip (Passenger passenger, Driver driver, Location from, Location to, double bas
     this.from = from;
     this.to = to;
     this.baseFare = baseFare;
-    completed = false;
+    this.completed = false;
     this.driver.setAvailable(false);
 }
 
@@ -40,5 +40,10 @@ public double getBaseFare(){
 public boolean isCompleted(){
     return completed;
 }
+
+public double getDistance(){
+    return from.distanceTo(to);
+}
+
 
 }
