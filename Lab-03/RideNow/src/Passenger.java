@@ -18,7 +18,7 @@ private double rating; // a number from 1.0 to 5.0
     }
 
     //getters
-    public int getID(){
+    public int getId(){
         return id;
     }
 

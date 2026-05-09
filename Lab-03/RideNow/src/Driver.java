@@ -43,7 +43,7 @@ public class Driver {
     @Override
     public String toString(){
 
-        return String.format("Driver[%d] %s (%s) [%s]", id, name, licencePlate, isAvailable? "Available": "Busy");
+        return String.format("Driver[%d] %s (%s) [%s]", id, name, licencePlate, isAvailable? "AVAILABLE": "BUSY");
     }
 
 }
