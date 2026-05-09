@@ -8,13 +8,14 @@ public class Driver {
         this.id = id;
         this.name = name;
         this.licensePlate = licensePlate;
+        this.isAvailable = true;
     }
 
     public Driver(int id, String name, String licensePlate, boolean isAvailable) {
         this.id = id;
         this.name = name;
         this.licensePlate = licensePlate;
-        this.isAvailable = isAvailable; 
+        this.isAvailable = isAvailable;
     }
 
     public int getId() {
