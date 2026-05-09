@@ -22,15 +22,15 @@ public class Location {
         this.y = y;
     }
 
-    public String getLabel() {
+    public String getLabel(String label) {
         return label;
     }
 
-    public double getX() {
+    public double getX(double x) {
         return x;
     }
 
-    public double getY() {
+    public double getY(double y) {
         return y;
     }
 
