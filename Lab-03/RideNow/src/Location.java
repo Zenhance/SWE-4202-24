@@ -5,7 +5,7 @@ public class Location {
     private double y;
 
     public Location(String label, double x, double y){
-        this.label = null;
+        this.label = label;
         this.x = x;
         this.y = y;
     }
@@ -43,7 +43,7 @@ public class Location {
     }
 
     public String toString(){
-        String string = String.format("%s (%.2f,%.2f), label, x, y") ;
+        String string = String.format("%s (%.2f, %.2f)", label, x, y) ;
 
         return string;
     }
