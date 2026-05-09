@@ -29,4 +29,27 @@ public class Driver{
     public String getLicencePlate(){
         return licencePlate;
     }
+    public boolean isAvailable(){
+        return isAvailable;
+    }
+
+    public void setAvailable(boolean available){
+        isAvailable=available;
+    }
+
+    public String toString(){
+        if (isAvailable){
+            return "Driver[" + id + "] " +name + " (" + licencePlate + ")[AVAILABLE]";
+        }
+        else{
+            return "Driver[" + id + "] " +name + " (" + licencePlate + ") [BUSY]";
+        }
+    }
+}
+
+
+
+
+
+
 
