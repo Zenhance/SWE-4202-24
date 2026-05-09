@@ -61,6 +61,7 @@ public class Trip{
         else{
             status="IN PROGRESS";
         }
+
         return "Trip Summary\n"+
                 "Passenger:"+passenger.getName()+"\n"+
                 "Driver:"+driver.getName()+" ("+driver.getLicencePlate()+")\n"+
