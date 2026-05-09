@@ -26,8 +26,8 @@ public class Driver {
         return name;
     }
 
-    public String getLicensePlate() {
-        return licensePlate;
+    public String getLicencePlate() {
+        return licencePlate;
     }
 
     public boolean isAvailable() {
