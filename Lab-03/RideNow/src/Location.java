@@ -4,13 +4,13 @@ public class Location
     private double x;
     private double y;
 
-    public Location(String label, int x, int y){
+    public Location(String label, double x, double y){
         this.label=label;
         this.x=x;
         this.y=y;
 
     }
-    public Location(int x,int y){
+    public Location(double x,double y){
         this.label="Unknown";
         this.x=x;
         this.y=y;

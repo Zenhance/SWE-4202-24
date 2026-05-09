@@ -39,7 +39,7 @@ public class Driver {
            return "Driver["+this.id+"] "+this.name+" ("+this.licencePlate+") [AVAILABLE]";
        }
        else{
-           return "Driver["+this.id+"] "+this.name+" ("+this.licencePlate+") [BUSY]"
+           return "Driver["+this.id+"] "+this.name+" ("+this.licencePlate+") [BUSY]";
        }
    }
 
