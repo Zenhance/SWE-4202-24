@@ -32,7 +32,7 @@
      }
 
      public String toString() {
-         return "passenger[+id]" + "+name";
+         return "passenger[" + id + "] " + name + " (" + rating + ")" ;
      }
 
  }

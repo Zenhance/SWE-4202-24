@@ -11,6 +11,7 @@ class Location {
 
 
     Location(double x, double y){
+        this.label = "unknown";
         this.x = x;
         this.y = y;
     }

@@ -44,10 +44,10 @@
     public String toString() {
         if (isAvailable) {
 
-            return "Driver[" + id + "]" + name + "(" + licencePlate +") [ AVAILABLE ]";
+            return "Driver[" + id + "] " + name + " (" + licencePlate + ") [ AVAILABLE ]";
 
         } else {
-            return "Driver[" + id + "]" + name + "(" + licencePlate + ") [ BUSY ]";
+            return "Driver[" + id + "] " + name + " (" + licencePlate + ") [ BUSY ]";
 
         }
     }

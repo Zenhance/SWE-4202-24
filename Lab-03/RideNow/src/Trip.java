@@ -68,8 +68,8 @@ class Trip {
                 "Driver    : " +driver.getName() + "(" + driver.getLicencePlate() + ")\n" +
                 "From      : " +from.toString() + "\n" +
                 "To        : " +passenger.getName() + "\n" +
-                "Distance  : "
-                "Fare      : "
+                "Distance  : " +
+                "Fare      : " +
                 "Status    : " + status;
 
         return Summary;
