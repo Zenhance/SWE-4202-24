@@ -28,14 +28,16 @@ public class Location {
         return y;
     }
 
-    //distance
 
-//    public double distanceTo(Location other){
-//        return Math.sqrt(());
-//    }
-//
-//    public String toString(){
-//
-//    }
+    public double distanceTo(Location other){
+        double distance_x = other.x - this.x;
+        double distance_y = other.y - this.y;
+        return Math.sqrt(distance_x * distance_x + distance_y * distance_y);
+    }
+
+    @Override
+    public String toString(){
+        return String.format("%s (%.2f, %.2f)", label, x, y);
+    }
 
 }
