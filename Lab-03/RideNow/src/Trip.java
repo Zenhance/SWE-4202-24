@@ -52,6 +52,25 @@ public class Trip{
         completed=true;
         driver.setAvailable(true);
     }
+    public String getSummary(){
+        String status;
+
+        if(completed){
+            status="COMPLETED";
+        }
+        else{
+            status="IN PROGRESS";
+        }
+        return "Trip Summary\n"+
+                "Passenger:"+passenger.getName()+"\n"+
+                "Driver:"+driver.getName()+" ("+driver.getLicencePlate()+")\n"+
+                "From:"+from+"\n"+
+                "To:"+to+"\n"+
+                "Distance:"+String.format("%.2f",getDistance())+" km\n"+
+                "Fare:BDT "+String.format("%.2f",calculateFare())+"\n"+
+                "Status:"+status;
+
+    }
 
 
 
