@@ -14,7 +14,7 @@ public class Driver {
         this.id = id;
         this.name = name;
         this.licensePlate = licensePlate;
-        this.isAvailable = isAvailable;
+        this.isAvailable = isAvailable; 
     }
 
     public int getId() {
@@ -37,6 +37,7 @@ public class Driver {
         isAvailable = available;
     }
     public String toString(){
+
 
     }
 }
