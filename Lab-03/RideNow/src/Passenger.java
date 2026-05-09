@@ -27,9 +27,9 @@ public class Passenger {
     }
 
     public void updateRating(double newRating){
-
+        rating = newRating;
     }
     public String toString(){
-        
+        return "Passenger[" + id + "] " + name + " (" + String.format("%.2f", rating) + ")";
     }
 }
