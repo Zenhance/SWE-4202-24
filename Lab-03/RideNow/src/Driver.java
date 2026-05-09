@@ -26,32 +26,32 @@ public class Driver {
     }
 
     //getters
-    public int getId(){
+    public static int getId(){
         return id;
     }
 
-    public String getName() {
+    public static String getName() {
         return name;
     }
 
-    public String getLicencePlate() {
+    public static String getLicencePlate() {
         return licencePlate;
 
     }
 
-    public boolean isAvailable() {
+    public static boolean isAvailable() {
         return isAvailable;
     }
 
     //availability
 
 
-    public void setAvailable(boolean available) {
+    public static void setAvailable(boolean available) {
         isAvailable = available;
     }
 
 
-    public String toString(int id, String name, boolean isAvailable, String licencePlate){
+    public static String toString(int id, String name, boolean isAvailable, String licencePlate){
         String str = "Driver [" + id + "]" + name + " (" licencePlate + ") " +  (isAvailable)? "[AVAILABLE]" : "[BUSY]";
 
         return str;

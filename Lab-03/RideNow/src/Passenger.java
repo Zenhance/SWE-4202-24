@@ -29,11 +29,11 @@ public class Passenger {
         return rating;
     }
 
-    public void updateRating(double newRating){
+    public static void updateRating(double newRating){
         rating = newRating;
     }
 
-    public String toString() {
+    public static String toString() {
         System.out.println("Passenger[" + id + "] " + name +" (" + rating + " )");
 
     }

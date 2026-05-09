@@ -41,7 +41,7 @@ public class Location {
 
     }
 
-    public void toString(String label ){
+    public static void toString(String label ){
 
         System.out.println("label" + ());
     }
