@@ -58,5 +58,11 @@ public class Trip
         return baseFare + 15.0 * getDistance();
     }
 
+    public void completeTrip()
+    {
+        this.completed = true;
+        driver.setAvailable(true);
+    }
+
 
 }
