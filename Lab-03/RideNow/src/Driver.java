@@ -28,4 +28,9 @@ public class Driver
     {
         return this.id;
     }
+
+    public String getName()
+    {
+        return this.name;
+    }
 }
