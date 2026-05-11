@@ -29,3 +29,7 @@ public double getRating()
 {
     return this.rating;
 }
+public void updateRating(double newRating)
+{
+    this.rating = newRating;
+}
