@@ -33,4 +33,9 @@ public class Driver
     {
         return this.name;
     }
+
+    public String getLicencePlate()
+    {
+        return this.licencePlate;
+    }
 }
