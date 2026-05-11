@@ -33,3 +33,7 @@ public void updateRating(double newRating)
 {
     this.rating = newRating;
 }
+public String toString()
+{
+    return String.format("Passenger[%d] %s (%.2f)", id, name, rating);
+}
