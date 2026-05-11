@@ -18,6 +18,36 @@ public class Trip
         driver.setAvailable(false);
     }
 
+    public Passenger getPassenger()
+    {
+        return this.passenger;
+    }
+
+    public Driver getDriver()
+    {
+        return this.driver;
+    }
+
+    public Location getFrom()
+    {
+        return this.from;
+    }
+
+    public Location getTo()
+    {
+        return this.to;
+    }
+
+    public double getBaseFare()
+    {
+        return this.baseFare;
+    }
+
+    public boolean isCompleted()
+    {
+        return this.completed;
+    }
+
 
 
 }
