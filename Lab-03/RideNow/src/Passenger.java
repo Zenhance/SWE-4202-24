@@ -25,3 +25,7 @@ public String getName()
 {
     return this.name;
 }
+public double getRating()
+{
+    return this.rating;
+}
