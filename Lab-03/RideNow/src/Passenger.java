@@ -17,3 +17,7 @@ public Passenger(int id, String name)
     this.name = name;
     this.rating = 5.0;
 }
+public int getId()
+{
+    return this.id;
+}
