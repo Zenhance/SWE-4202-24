@@ -38,4 +38,9 @@ public class Driver
     {
         return this.licencePlate;
     }
+
+    public boolean isAvailable()
+    {
+        return this.isAvailable;
+    }
 }
