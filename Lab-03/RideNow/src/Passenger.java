@@ -1,4 +1,4 @@
- class Passenger {
+ public class Passenger {
      private final int id;
      private final String name;
      private double rating;
@@ -12,7 +12,7 @@
      public Passenger(int id, String name) {
          this.id = id;
          this.name = name;
-         this.rating = 5.0;
+         this.rating = 5.00;
      }
 
      public int getId() {

@@ -1,4 +1,4 @@
-class Trip {
+public class Trip {
     private Passenger passenger;
     private Driver    driver;
     private Location  from;
