@@ -52,4 +52,11 @@ public class Trip
     {
         return from.distanceTo(to);
     }
+
+    public double calculateFare()
+    {
+        return baseFare + 15.0 * getDistance();
+    }
+
+
 }
