@@ -13,7 +13,16 @@ public Hall(int id, int rows, int cols, int premiumRows){
     this.id=id;
     this.rows=rows;
     this.cols=cols;
+}
 
+
+public int countAvailable(){
+
+
+
+}
+
+public void displayLayout(){
 
 
 }
