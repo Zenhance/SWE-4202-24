@@ -24,4 +24,8 @@ public class Movie {
     public String getRating(){
         return this.rating;
     }
+    public int durationMin(){
+        return this.durationMin;
+    }
+
 }
