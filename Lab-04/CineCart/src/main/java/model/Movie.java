@@ -37,4 +37,9 @@ public class Movie
         return durationMin;
     }
 
+    public double getBasePrice()
+    {
+        return basePrice;
+    }
+
 }
