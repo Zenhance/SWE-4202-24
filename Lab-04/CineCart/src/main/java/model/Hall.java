@@ -19,12 +19,15 @@ public class Hall {
             }
         }
         //methods
-    public Seat getSeat(int row,int col){
-        return grid[row][col];
-
+    public Seat getSeat(int rows,int cols){
+        return grid[rows][cols];
     }
-
-
-
-
-}
+    public int countAvailable() {
+        int count = 0;
+        for (int r = 0; r < rows; r++) {
+            for (int c = 0; c < cols; c++) {
+                if (grid[r][c].isAvailable()) {
+                    count++;
+                }
+            }
+        }
