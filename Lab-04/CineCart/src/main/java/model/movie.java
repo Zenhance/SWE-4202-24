@@ -19,4 +19,10 @@ public class movie {
     public String gettitle(){
         return title;
     }
+    public String getrating(){
+        return rating;
+    }
+    public int getdurationMin(){
+        return durationMin;
+    }
 }
