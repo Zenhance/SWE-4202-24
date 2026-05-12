@@ -39,8 +39,26 @@ public double getBasePrice(){
     return basePrice;
 }
 
-public int get
+public int getMinAge(){
+    int ret=0;
+    if rating=="G"{
+        ret = 0;
+    }
 
+    if rating=="PG"{
+        ret = 7;
+    }
+
+    if rating=="PG-13"{
+        ret 13;
+    }
+
+    if rating=="R"{
+        ret 18;
+      }
+
+    return ret;
+}
 
 
 }
