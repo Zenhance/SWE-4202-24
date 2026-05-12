@@ -1,4 +1,4 @@
-package Model;
+package model;
 
 public class Movie {
     int id;
@@ -6,16 +6,16 @@ public class Movie {
     String rating;
     int durationMin;
     double basePrice;
-    int MinAge;
+
 
     public Movie(int id, String title, String rating, int
-                 durationMin, double basePrice, int MinAge){
+                 durationMin, double basePrice ){
         this.id=id;
         this.title=title;
         this.rating=rating;
         this.durationMin=durationMin;
         this.basePrice=basePrice;
-        this.MinAge=MinAge;
+
     }
 
     public int getId() {
@@ -48,6 +48,13 @@ public class Movie {
          }else if(rating=="R"){
              return 18;
          }
-         return MinAge;
+
+    }
+
+
+    public String toString(){
+
+        return title+ "("+rating+")"+ durationMin+"min" +"-"+"BDT"+ basePrice;
+
     }
 }
