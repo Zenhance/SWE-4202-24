@@ -31,3 +31,20 @@ public class Hall {
                 }
             }
         }
+        public void displayLayout(){
+            for(int r=0;r<rows;r++){
+                for(int c=0;c<cols;c++){
+                    Seat seat= grid[r][c];
+                    if(seat.isBooked()){
+                        System.out.println("#");
+                    }
+                    else if(seat.isPremium()){
+                    System.out.println("*")
+                    }
+                    else{
+                        System.out.println(".");
+                    }
+                }
+                System.out.println();
+            }
+        }
