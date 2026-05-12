@@ -51,6 +51,11 @@ public class Movie {
         return 0;
     }
 
+    public String toString(){
+        return String.format("%s (%s) %dmin - BDT %.2f", title, rating, durationMin, basePrice);
+    }
+
+
 
 
 
