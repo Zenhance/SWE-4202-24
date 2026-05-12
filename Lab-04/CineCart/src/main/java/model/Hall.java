@@ -7,7 +7,7 @@ public class Hall {
         this.id=id;
         this.rows=rows;
         this.cols=cols;
-       // this.grid=new Seat[rows][cols];
+        this.grid=new Seat[rows][cols];
         for(int r=0;r<rows;r++)
         {
             boolean isPremium=(r<premiumRows);
@@ -42,4 +42,7 @@ public class Hall {
         return grid[row][col];
     }
 
+    public int getId() {
+        return id;
+    }
 }
