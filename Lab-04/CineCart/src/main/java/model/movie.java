@@ -25,4 +25,7 @@ public class movie {
     public int getdurationMin(){
         return durationMin;
     }
+    public double getbasePrice(){
+        return basePrice;
+    }
 }
