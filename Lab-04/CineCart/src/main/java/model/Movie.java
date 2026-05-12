@@ -16,5 +16,12 @@ public class Movie {
         this.basePrice = basePrice;
     }
 
+    //getters
+    public int getId(){
+        return id;
+    }
 
+    public String getTitle() {
+        return title;
+    }
 }
