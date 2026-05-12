@@ -14,4 +14,7 @@ public class Seat {
     public int getrow(){
         return row;
     }
+    public int getcol(){
+        return col;
+    }
 }
