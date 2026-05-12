@@ -38,6 +38,11 @@ public class Movie {
         if (rating.equals("PG")) return 7;
         if (rating.equals("PG-13")) return 13;
         if  (rating.equals("R")) return 18;
-        return -1;
+        return -12;
+    }
+
+    public String toString(){
+        String phunmara = String.format("%s (%s) %dmin - BDT %f",title,rating,durationMin, basePrice);
+        return phunmara;
     }
 }
