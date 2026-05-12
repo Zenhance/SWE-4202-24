@@ -24,12 +24,16 @@ public class Seat {
         return isBooked;
     }
     public void book(){
-
+        isBooked=true;
     }
     public void release(){
-
+        isBooked=false;
     }
-    public void isAvailable(){
-
+    public boolean isAvailable(){
+        return isBooked=false;
+    }
+    public String toString(){
+        return "R3C5"+
+                if()
     }
 }
