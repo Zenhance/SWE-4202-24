@@ -16,4 +16,7 @@ public class movie {
     public int getid(){
         return id;
     }
+    public String gettitle(){
+        return title;
+    }
 }
