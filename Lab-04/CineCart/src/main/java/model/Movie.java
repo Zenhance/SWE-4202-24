@@ -27,5 +27,8 @@ public class Movie
         return title;
     }
 
-
+    public String getRating()
+    {
+        return rating;
+    }
 }
