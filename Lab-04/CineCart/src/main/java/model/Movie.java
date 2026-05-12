@@ -54,4 +54,9 @@ public class Movie
         }
     }
 
+    public String toString()
+    {
+        return title + " (" + rating + ") " + durationMin + " min - BDT " + String.format("%.2f", basePrice);
+    }
+
 }
