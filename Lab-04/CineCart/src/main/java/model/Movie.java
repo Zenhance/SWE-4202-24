@@ -64,7 +64,7 @@ public String toString(){
 
     String res;
 
-    res=String.format("%s (%s) %dmin - BDT %.2f",title,rating,durationMin,basePrice);
+    res=String.format("%s (%s) %d min - BDT %.2f",title,rating,durationMin,basePrice);
 
     return res;
 
