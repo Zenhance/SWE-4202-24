@@ -34,5 +34,11 @@ public class Seat {
     public void release() {
         isBooked = false;
     }
+    public String toString(){
+        String premium = (isPremium) ? "*" : "";
+        String booked = (isBooked) ? "#" : "";
+        return "R"+ row +"C"+ col + ""+ premium + booked;
+    }
+
 
 }
