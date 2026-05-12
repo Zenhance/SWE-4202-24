@@ -13,4 +13,20 @@ public class Movie{
         this.durationMin = durationMin;
         this.basePrice = basePrice;
     }
+
+    public int getId(){
+        return id;
+    }
+    public String getTitle()
+    {
+        return title;
+    }
+
+    public int getDurationMin() {
+        return durationMin;
+    }
+
+    public double getBasePrice(){
+    return basePrice;
 }
+
