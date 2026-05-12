@@ -2,5 +2,7 @@ package model;
 
 public class Hall {
     int id;
-    int
+    int rows;
+    int cols;
+
 }
