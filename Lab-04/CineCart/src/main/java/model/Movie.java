@@ -47,7 +47,7 @@ public class Movie {
     }
     @Override
     public String toString(){
-        return
+        return title+"("+rating+"-"+" "+durationMin+"min"+"-BDT"+String.format("%.2f",basePrice);
     }
 
 
