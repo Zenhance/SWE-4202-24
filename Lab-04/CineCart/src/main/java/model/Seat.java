@@ -31,5 +31,19 @@ public class Seat {
         isBooked = true;
     }
 
+    public void release(boolean isBooked) {
+        isBooked = false;
+    }
+
+    public String toString(int row, int col) {
+        System.out.println("R" + row + "C" + col);
+
+        if (isPremium = true)
+            System.out.println("*");
+        if (isBooked = true)
+            System.out.println("#");
+
+
+    }
 
 }
