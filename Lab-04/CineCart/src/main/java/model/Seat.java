@@ -1,5 +1,7 @@
 package model;
 
+import java.util.SplittableRandom;
+
 public class Seat {
     private int row;
     private int col;
@@ -40,5 +42,13 @@ public class Seat {
     public boolean isAvailable() {
         if (isBooked) return false;
         return true;
+    }
+
+    public String toString() {
+        String string = String.format("R%dC%d", row, col);
+        if (isPremium) string = string + "*";
+        if (isBooked) string = string + "#";
+
+        return string;
     }
 }
