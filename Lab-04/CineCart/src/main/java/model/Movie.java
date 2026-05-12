@@ -32,7 +32,18 @@ public class Movie {
         return basePrice;
     }
     public int getMinage(){
-
+         if(rating.equals("G")){
+             return 0;
+         }
+        if(rating.equals("PG")){
+            return 7;
+        }
+        if(rating.equals("PG-13",)){
+            return 13;
+        }
+        if(rating.equals("R")){
+            return 18;
+        }
     }
 
 
