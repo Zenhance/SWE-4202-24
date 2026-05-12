@@ -38,4 +38,8 @@ public class Seat {
         return isBooked;
     }
 
+    public String toString(){
+        return isPremium? "R3C5*":"R3C5#";
+    }
+
 }
