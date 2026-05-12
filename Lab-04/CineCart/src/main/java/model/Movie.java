@@ -36,4 +36,21 @@ public class Movie {
     public double getBasePrice() {
         return basePrice;
     }
+
+    //methods
+    public getMinAge(){
+
+        if (rating = "G")
+            return 0;
+        else if (rating = "PG")
+            return 7;
+        else if (rating = "PG-13")
+            return 13;
+        else if (rating = "R")
+            return 18;
+    }
+
+    public String toString() {
+
+    }
 }
