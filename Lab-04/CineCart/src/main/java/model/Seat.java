@@ -17,4 +17,7 @@ public class Seat {
     public boolean getIsPremium(){return isPremium;}
     public boolean getIsBooked(){return isBooked;}
 
+    public void book(){ isBooked=true;}
+
+    public void release(){isBooked=false;}
 }
