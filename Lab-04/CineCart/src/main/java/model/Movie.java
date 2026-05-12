@@ -28,7 +28,22 @@ public class Movie {
     double getBasePrice(){
         return basePrice;
     }
-    int getMinAge(){
-        
+    public int getMinAge(){
+        if(rating.equals("G")){
+            return 0;
+        }
+        else if(rating.equals("PG")){
+            return 7;
+        }
+        else if(rating.equals("PG-13")){
+            return 13;
+        }
+        else if(rating.equals("R")){
+            return 18;
+        }
+        else return -1;
+    }
+    public String toString(){
+        return String.format("%s (%s) %d - BDT %.2f", title,rating,durationMin,basePrice);
     }
 }
