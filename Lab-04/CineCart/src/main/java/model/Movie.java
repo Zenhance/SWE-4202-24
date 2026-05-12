@@ -21,4 +21,7 @@ public class Movie {
     public String getTitle(){
         return this.title;
     }
+    public String getRating(){
+        return this.rating;
+    }
 }
