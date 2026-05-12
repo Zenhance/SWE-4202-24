@@ -4,6 +4,7 @@ public class Hall {
     int id;
     int rows;
     int cols;
+    Seat s[][];
     int premiumRows;
 
     public Hall(int id, int rows, int cols, int premiumRows) {
