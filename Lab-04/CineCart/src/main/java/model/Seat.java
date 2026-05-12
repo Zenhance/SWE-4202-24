@@ -23,4 +23,10 @@ public class Seat {
     public boolean getisBooked(){
         return isBooked;
     }
+    public void book(){
+
+    }
+    public void release(){
+
+    }
 }
