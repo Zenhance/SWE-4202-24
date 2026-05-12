@@ -49,6 +49,10 @@ public class Movie{
         }
     }
 
+    public String toString(){
+        return title+ "("+rating+")" +durationMin+"min - BDT "+basePrice;
+    }
+
 }
 
 
