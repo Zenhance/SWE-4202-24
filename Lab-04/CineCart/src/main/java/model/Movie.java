@@ -8,7 +8,7 @@ public class Movie {
     private  int durationMin;
     private double basePrice;
 
-    public Movie(int id,String title,String rating ,int durationMin, double basePrice){
+    public Movie(int id, String title,String rating ,int durationMin, double basePrice){
         this.id=id;
         this.title=title;
         this.rating=rating;
@@ -45,6 +45,11 @@ public class Movie {
             return 18;
         }
     }
+    @Override
+    public String toString(){
+        return
+    }
+
 
 
 }
