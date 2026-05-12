@@ -29,4 +29,7 @@ public class Seat {
     public void release(){
 
     }
+    public void isAvailable(){
+
+    }
 }
