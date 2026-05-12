@@ -15,6 +15,25 @@ public class Movie {
         this.basePrice=basePrice;
     }
 
+    public int getMinAge(){
+        int age = 0;
+        if(this.rating=="G"){
+            age=0;
+        }
+        else if(this.rating=="PG"){
+            age=7;
+        }
+        else if(this.rating=="PG-13"){
+            age=13;
+        }
+        else if(this.rating=="R"){
+            age=18;
+        }
+        return age;
+
+
+    }
+
 
 
 
