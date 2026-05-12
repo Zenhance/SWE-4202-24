@@ -1,16 +1,15 @@
 package model;
 
 public class Seat {
-    private int row;
-    private int col;
+    private final int row;
+    private final int col;
     private boolean isBooked = false;
-    private boolean isPremium;
+    private final boolean isPremium;
 
     Seat(int row, int col, boolean isPremium) {
         this.row = row;
         this.col = col;
         this.isPremium = isPremium;
-        this.isBooked = true;
     }
 
     public int getRow() {
@@ -27,6 +26,25 @@ public class Seat {
 
     public boolean isBooked() {
         return isBooked;
+    }
+
+    public void book(){
+        isBooked = true;
+    }
+    public void release(){
+        isBooked = false;
+    }
+    public boolean isAvailable(){
+        boolean b;
+        b = !isBooked;
+        return b;
+    }
+    public String toString(){
+
+        String out = String.format("R%dC%d", row, col);
+        if(isPremium) {out = out + "*";}
+        if(isBooked) {out = out + "#";}
+        return out;
     }
 
 }
