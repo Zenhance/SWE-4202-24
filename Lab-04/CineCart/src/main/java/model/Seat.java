@@ -14,5 +14,13 @@ public class Seat {
         this.isBooked=isBooked;
     }
 
+    public int getRow() {
+        return row;
+    }
+
+    public int getCol() {
+        return col;
+    }
+
 
 }
