@@ -32,11 +32,10 @@ public class Movie {
     }
 
     public int getMinAge() {
-        if (rating.equals("G")) return 0;
-        if (rating.equals("PG")) return 7;
-        if (rating.equals("PG-13")) return 13;
         if (rating.equals("R")) return 18;
-        return -1;
+        if (rating.equals("PG-13")) return 13;
+        if (rating.equals("PG")) return 7;
+        return 0;
     }
 
     public String toString() {
