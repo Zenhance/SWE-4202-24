@@ -24,4 +24,16 @@ public class Movie {
     public String getTitle() {
         return title;
     }
+
+    public String getRating() {
+        return rating;
+    }
+
+    public int getDurationMin() {
+        return durationMin;
+    }
+
+    public double getBasePrice() {
+        return basePrice;
+    }
 }
