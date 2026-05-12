@@ -12,4 +12,8 @@ public class Hall {
         this.cols=cols;
         this.premiumRows=premiumRows;
     }
+
+    public int getId() {
+        return id;
+    }
 }
