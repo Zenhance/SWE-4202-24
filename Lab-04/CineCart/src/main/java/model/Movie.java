@@ -1,5 +1,6 @@
 public class Movie {
 
+    //fields
     private int id;
     private String title;
     private String rating;
@@ -17,23 +18,23 @@ public class Movie {
     }
 
     //getters
-    public int getId(){
+    public int getId(int id){
         return id;
     }
 
-    public String getTitle() {
+    public String getTitle(String title) {
         return title;
     }
 
-    public String getRating() {
+    public String getRating(int durationMin) {
         return rating;
     }
 
-    public int getDurationMin() {
+    public int getDurationMin(int durationMin) {
         return durationMin;
     }
 
-    public double getBasePrice() {
+    public double getBasePrice(double basePrice) {
         return basePrice;
     }
 
