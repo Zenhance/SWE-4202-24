@@ -26,6 +26,31 @@ public class Seat {
         return isBooked;
     }
 
+    public void book() {
+        isBooked = true;
+    }
+
+    public void release() {
+        isBooked = false;
+    }
+
+    public boolean isAvailable() {
+        return isBooked;
+    }
+
+    public String toString() {
+        if(isPremium) {
+            return "R365*";
+        } else if(isBooked) {
+            return "R365#";
+        }
+        return "";
+    }
+
+
+
+
+
 
 
 
