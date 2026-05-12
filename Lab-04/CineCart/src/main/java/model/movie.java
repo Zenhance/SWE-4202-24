@@ -28,4 +28,18 @@ public class movie {
     public double getbasePrice(){
         return basePrice;
     }
+    public int getMinAge(){
+        switch(rating){
+            case "G":
+                return 0;
+            case "PG":
+                return 7;
+            case "PG-13":
+                return 13;
+            case "R":
+                return 18;
+            default:
+                return 0;
+        }
+    }
 }
