@@ -47,8 +47,10 @@ public class Movie {
             case "R":
                 return 18;
 
+            default: return 0;
+
         }
-        return 0;
+
     }
 
     public String toString(){
