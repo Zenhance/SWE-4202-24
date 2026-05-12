@@ -22,4 +22,8 @@ public class Seat {
     public boolean getIsPremium() {
         return  isPremium;
     }
+
+    public boolean getIsBooked(){
+        return isBooked;
+    }
 }
