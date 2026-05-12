@@ -4,23 +4,23 @@ public class Trip {
     private Location from;
     private Location to;
     private double baseFare;
-    private boolean completed;
+    private boolean completeTrip;
 
     public Trip (Passenger passenger,Driver driver ,Location from, Location to,double baseFare){
         this.passenger=passenger;
         this.driver=driver;
         this.from=from;
         this.to=to;
-        this.completed=false;
+        this.completeTrip=false;
         this.baseFare=baseFare;
-        driver.isAvailable(false);
+        driver.setAvailable(false);
     }
     public  double getDistance(){
         return from.distanceToLocation(to);
     }
     public void setCompleted(){
-        this.completed=true;
-        driver.isAvailable(true);
+        this.completeTrip=true;
+        driver.setAvailable(true);
     }
     public double calculateFare(){
         return baseFare+15.0*getDistance();
@@ -34,6 +34,6 @@ public class Trip {
                 "Fare: BDT %.2f\n"
                 +"Status: %s",
                 passenger.getName(),driver.getname(),driver.getLicensePlate(),from.toString(),to.toString(),
-                getDistance(),calculateFare(),completed ?  "Completed" : "In Progress");
+                getDistance(),calculateFare(),completeTrip ?  "Completed" : "In Progress");
     }
 }
