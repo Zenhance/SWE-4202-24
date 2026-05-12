@@ -19,11 +19,11 @@ public class Seat {
     public int getCol(){
         return col;
     }
-    public boolean getIsPremium(){
+    public boolean isPremium(){
         return isPremium;
     }
 
-    public boolean getIsBooked(){
+    public boolean isBooked(){
         return isBooked;
     }
    public void book(){
@@ -39,7 +39,7 @@ public class Seat {
    @Override
 
     public String toString(){
-
+     return String.format();
    }
 
 
