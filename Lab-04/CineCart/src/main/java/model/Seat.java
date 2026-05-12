@@ -1,5 +1,37 @@
 package model;
 
 public class Seat {
-    private int
+    private int row;
+    private int col;
+    private boolean isPrime;
+    private boolean isBooked;
+
+
+    public Seat(int row,int col,boolean isPrime,boolean isBooked){
+        this.row=row;
+        this.col=col;
+        this.isPrime=isPrime;
+        this.isBooked=isBooked;
+    }
+
+    public int getRow(){
+        return row;
+    }
+    public int getCol(){
+        return col;
+    }
+
+    public boolean getIsPrime(){
+        return isPrime;
+    }
+    public boolean isBooked(){
+        return isBooked;
+    }
+
+    public void book(){
+
+    }
+    public void release(){
+
+    }
 }
