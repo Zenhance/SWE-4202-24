@@ -17,5 +17,8 @@ public class Movie
         this.basePrice = basePrice;
     }
 
-
+    public int getId()
+    {
+        return id;
+    }
 }
