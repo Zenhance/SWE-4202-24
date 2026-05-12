@@ -3,10 +3,9 @@ package model;
 public class Seat {
     int row, col;
     boolean isPremium, isBooked=false;
-    Seat(int row,int col, boolean isPremium, boolean isBooked){
+    Seat(int row,int col, boolean isPremium){
         this.row=row;
         this.col=col;
-        this.isBooked=isBooked;
         this.isPremium=isPremium;
     }
 
