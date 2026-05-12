@@ -19,4 +19,10 @@ public class Seat
     {
         return row;
     }
+
+    public boolean isPremium()
+    {
+        return isPremium;
+    }
+
 }
