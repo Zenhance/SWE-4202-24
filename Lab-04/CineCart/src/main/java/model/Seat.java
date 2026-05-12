@@ -42,5 +42,9 @@ public class Seat {
 
     }
 
-    public
+    public String toString() {
+
+    }
+
+
 }
