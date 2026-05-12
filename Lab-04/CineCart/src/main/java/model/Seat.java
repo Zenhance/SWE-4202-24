@@ -12,6 +12,19 @@ public class Seat {
         this.isPremimum=isPremium;
 
     }
-    void get
+    public int getRow(){
+        return row;
+    }
+    public int getCol(){
+        return col;
+    }
+
+    public boolean isBooked() {
+        return isBooked;
+    }
+
+    public boolean isPremimum() {
+        return isPremimum;
+    }
 
 }
