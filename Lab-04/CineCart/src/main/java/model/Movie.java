@@ -37,20 +37,18 @@ public class Movie{
         return rating;
     }
 
-    public int getMinAge(){
-    if(rating == "G"){
-        return 0;
+    public int getMinAge() {
+        if (rating == "G") {
+            return 0;
+        } else if (rating == "PG") {
+            return 7;
+        } else if (rating == "PG-13") {
+            return 13;
+        } else if (rating == "R") {
+            return 18;
+        }
     }
-    else if (rating == "PG"){
-        return 7;
-    }
-    else if(rating == "PG-13"){
-        return 13;
-    }
-    else if(rating == "R"){
-        return 18;
-    }
-    }
+
 }
 
 
