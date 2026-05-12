@@ -7,3 +7,5 @@ public class Movie {
     int durationMin;
     double basePrice;
 }
+
+
