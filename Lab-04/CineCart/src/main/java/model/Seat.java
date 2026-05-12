@@ -33,4 +33,35 @@ public class Seat
     {
         return isBooked;
     }
+
+    public void book()
+    {
+
+    }
+
+    public void release()
+    {
+
+    }
+
+    public boolean isAvailable()
+    {
+        return !isBooked;
+    }
+
+    public String toString()
+    {
+        String booked=" ";
+        String premium=" ";
+        if(isBooked)
+        {
+            booked="#";
+        }
+        if(isPremium)
+        {
+            premium="*";
+        }
+
+        return "R"+row+"C"+col+premium+booked;
+    }
 }
