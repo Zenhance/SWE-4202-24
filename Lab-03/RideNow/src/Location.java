@@ -12,7 +12,7 @@ public class Location {
 
     public Location(double x, double y)
     {
-        this("Unknown", x, y);   //this is called constructor delegation
+        this("Unknown", x, y);  
     }
 
     public String getLabel() {
