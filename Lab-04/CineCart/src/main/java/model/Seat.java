@@ -12,5 +12,4 @@ public class Seat {
         this.isPremium = isPremium;
         isBooked = false;
     }
-
 }
