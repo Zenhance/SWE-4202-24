@@ -36,6 +36,13 @@ public class Seat {
    public boolean isAvailable(){
         return isBooked;
    }
+   @Override
+
+    public String toString(){
+
+   }
+
+
 
 
 
