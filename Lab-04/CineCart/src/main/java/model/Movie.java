@@ -51,6 +51,6 @@ public class Movie {
     }
 
     public String toString() {
-        return String.format("Inceotion (%s) %dmin - BDT %.2f",rating,durationMin,basePrice);
+        return String.format("Inception (%s) %d min - BDT %.2f",rating,durationMin,basePrice);
     }
 }
