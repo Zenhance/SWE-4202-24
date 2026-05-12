@@ -15,5 +15,7 @@ public class Seat {
         return row;
     }
 
-    public
+    public int getCol(){
+        return col;
+    }
 }
