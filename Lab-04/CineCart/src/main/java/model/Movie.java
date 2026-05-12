@@ -1,6 +1,6 @@
 package model;
 
-public class Movie {
+public class Movie{
 
     private int id;
     private String title;
@@ -47,7 +47,7 @@ public class Movie {
     }
     @Override
     public String toString(){
-        return title+"("+rating+"-"+" "+durationMin+"min"+"-BDT"+String.format("%.2f",basePrice);
+        return title+"("+rating+"-"+" "+this.durationMin+"min"+"-BDT"+String.format("%.2f",this.basePrice);
     }
 
 
