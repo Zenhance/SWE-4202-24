@@ -13,5 +13,7 @@ public class Seat {
         this.isBooked=false;
     }
 
-
+    public int getRow(){
+        return row;
+    }
 }
