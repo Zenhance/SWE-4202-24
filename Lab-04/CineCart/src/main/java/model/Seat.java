@@ -36,7 +36,7 @@ public class Seat {
         else return true;
     }
     public String toString(){
-        return String.format("R%dC%d %c",row,col,isPremium?*:#);
+        return String.format("R%dC%d",row,col,isPremium? "*": "", isBooked? "#": "");
     }
 
 }
