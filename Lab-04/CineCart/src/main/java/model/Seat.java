@@ -28,4 +28,12 @@ public class Seat {
     public boolean isPremium() {
         return isPremium;
     }
+
+    public void book(){
+        isBooked = true;
+    }
+
+    public void release(){
+        isBooked = false;
+    }
 }
