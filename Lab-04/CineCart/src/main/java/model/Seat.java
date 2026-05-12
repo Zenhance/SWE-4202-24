@@ -26,5 +26,17 @@ public class Seat {
     public boolean isPremimum() {
         return isPremimum;
     }
+    public void book(){
+
+    }
+    public void release(){
+
+    }
+    public boolean isAvailable(){
+
+    }
+    public String toString(){
+
+    }
 
 }
