@@ -1,4 +1,7 @@
 package model;
 
-public class Seat {
+public class Seat {int row;
+    int col;
+    boolean isPremium;
+    boolean isBooked;
 }
