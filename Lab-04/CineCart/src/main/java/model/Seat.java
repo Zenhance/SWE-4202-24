@@ -31,4 +31,9 @@ public class Seat {
     void release(){
         isBooked = false;
     }
+    boolean isAvailabe(){
+        if(isBooked = true){return false;}
+        if(isBooked = false){return true;}
+    }
+
 }
