@@ -13,6 +13,20 @@ public class Seat {
     this.isBooked=false;
     }
 
+    public int getRow(){
+        return row;
+    }
+    public int getCol(){
+        return col;
+    }
+    public boolean getIsPremium(){
+        return isPremium;
+    }
+
+
+
+
+
 
 
 }
