@@ -3,7 +3,7 @@ package model;
 public class Seat {
     private int row;
     private int col;
-    private boolean isBooked;
+    private boolean isBooked = false;
     private boolean isPremium;
 
     Seat(int row, int col, boolean isPremium) {
@@ -11,6 +11,22 @@ public class Seat {
         this.col = col;
         this.isPremium = isPremium;
         this.isBooked = true;
+    }
+
+    public int getRow() {
+        return row;
+    }
+
+    public int getCol() {
+        return col;
+    }
+
+    public boolean isPremium() {
+        return isPremium;
+    }
+
+    public boolean isBooked() {
+        return isBooked;
     }
 
 }
