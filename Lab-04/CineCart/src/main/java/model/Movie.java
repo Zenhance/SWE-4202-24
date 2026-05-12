@@ -35,4 +35,8 @@ public class Movie {
     public double getBasePrice() {
         return basePrice;
     }
+
+    public int getMinAge() {
+
+    }
 }
