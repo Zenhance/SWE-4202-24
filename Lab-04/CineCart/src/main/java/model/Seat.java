@@ -33,7 +33,13 @@ public class Seat {
         return isBooked=false;
     }
     public String toString(){
-        return "R3C5"+
-                if()
+     String res="R"+row+"C"+col;
+     if(isPremium){
+         return "*";
+     }
+     else if(isBooked){
+         return "#";
+     }
+     return res;
     }
 }
