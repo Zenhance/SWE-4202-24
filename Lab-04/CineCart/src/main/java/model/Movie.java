@@ -58,7 +58,6 @@ public class Movie {
     }
     @Override
     public String toString() {
-
         return String.format(
                 "%s (%s) %dmin - BDT %.2f",
                 title,
