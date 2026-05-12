@@ -42,4 +42,8 @@ public class movie {
                 return 0;
         }
     }
+    public String toString(){
+        return title+" ("+getMinAge()+") "+durationMin+
+                "min - BDT"+basePrice;
+    }
 }
