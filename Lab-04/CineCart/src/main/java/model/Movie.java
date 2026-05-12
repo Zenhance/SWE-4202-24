@@ -50,4 +50,7 @@ public class Movie {
         }
         return 0;
     }
+    public String toString(){
+        return this.title+" ("+this.rating+") "+this.durationMin+"min - BDT "+String.format("%.2f",this.basePrice);
+    }
 }
