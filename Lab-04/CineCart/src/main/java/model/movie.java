@@ -13,4 +13,7 @@ public class movie {
         this.durationMin=durationMin;
         this.basePrice=basePrice;
     }
+    public int getid(){
+        return id;
+    }
 }
