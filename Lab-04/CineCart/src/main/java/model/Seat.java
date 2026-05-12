@@ -34,6 +34,14 @@ public void release(){
 public boolean isAvailable(){
     return isBooked=false;
 }
-
-
+public String toString(){
+    String result = "R" + row + "C" + col;
+    if(isPremium) {
+        return "*";
+    }
+        else if(isBooked){
+            return "#";
+        }
+        return result;
+}
 }
