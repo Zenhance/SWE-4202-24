@@ -38,7 +38,7 @@ public class Movie {
     }
 
     //methods
-    public getMinAge(){
+    public getMinAge(String rating){
 
         if (rating = "G")
             return 0;
@@ -50,7 +50,10 @@ public class Movie {
             return 18;
     }
 
-    public String toString() {
+    public String toString(String title, String rating, int durationMin, double basePrice) {
+
+        System.out.println(title + " (" + rating + ") " + durationMin + " - BDT" + basePrice)
+        ;
 
     }
 }
