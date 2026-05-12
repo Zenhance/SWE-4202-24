@@ -37,11 +37,11 @@ public class Seat {
     public boolean isAvailable(){
         if(isBooked){
             return true;
-        };
-        else if(!isBooked){return false;}
+        }
+        else {return false;}
     }
     public String toString(){
-        String result= "R"+ row + "C"+ col;
+         String result= "R"+ row + "C"+ col;
     }
 
 
