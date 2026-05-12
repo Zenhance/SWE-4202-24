@@ -27,16 +27,23 @@ public class Seat {
         return isPremimum;
     }
     public void book(){
-
+        this.isBooked=true;
     }
     public void release(){
-
+        this.isBooked=false;
     }
     public boolean isAvailable(){
-
+            if(this.isBooked)return false;
+            else {return true;}
     }
     public String toString(){
-
+           if(this.isPremimum){
+               return "R3C5"+"*";
+           }
+         else  if(this.isBooked){
+             return "R3C5"+"#";
+           }
     }
+
 
 }
