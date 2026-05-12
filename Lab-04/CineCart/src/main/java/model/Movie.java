@@ -44,6 +44,9 @@ public class Movie {
          else {
              return 18;
          }
+    }
 
+    public String toString(){
+        return title+" ("+rating+") "+durationMin+" - BDT "+String.format("%.2f",basePrice);
     }
 }
