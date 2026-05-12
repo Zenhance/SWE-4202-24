@@ -25,5 +25,8 @@ public boolean getIsPremium(){
 public boolean getIsBooked(){
     return isBooked;
 }
+public void book(){
+    isBooked=true;
+}
 
 }
