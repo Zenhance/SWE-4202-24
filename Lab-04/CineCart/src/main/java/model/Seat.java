@@ -27,4 +27,27 @@ public class Seat {
         return this.isBooked;
     }
 
+    public void book(){
+        if(!this.isBooked){
+            this.isBooked=true;
+        }
+
+    }
+    public void release(){
+        this.isPremium=true;
+        this.isBooked=false;
+    }
+
+    public boolean isAvailable(){
+        boolean x=false;
+        if(!this.isBooked){
+            x=true;
+
+        }
+        else if(this.isBooked){
+            x=false;
+        }
+        return x;
+    }
+
 }
