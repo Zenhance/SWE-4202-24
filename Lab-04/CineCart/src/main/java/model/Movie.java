@@ -30,5 +30,19 @@ public class Movie {
     public double getBasePrice(){
         return this.basePrice;
     }
+    public int getMinAge(){
+        if(rating.equals("G")){
+            return 0;
+        }
+        if(rating.equals("PG")){
+            return 7;
+        }
+        if(rating.equals("PG-13")){
+            return 13;
+        }
+        if(rating.equals("R")){
+            return 18;
+        }
+    }
 
 }
