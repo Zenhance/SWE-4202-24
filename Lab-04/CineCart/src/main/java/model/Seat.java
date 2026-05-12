@@ -16,6 +16,14 @@ public Seat(int row,int col,boolean isPremium,boolean isBooked){
 public int getRow(){
     return row;
 }
-
+public int getCol(){
+    return col;
+}
+public boolean getIsPremium(){
+    return isPremium;
+}
+public boolean getIsBooked(){
+    return isBooked;
+}
 
 }
