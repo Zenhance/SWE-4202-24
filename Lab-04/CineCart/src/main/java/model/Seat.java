@@ -11,7 +11,7 @@ public class Seat
         this.row=row;
         this.col=col;
         this.isPremium=isPremium;
-        this.isBooked=isBooked;
+        this.isBooked=false;
     }
 
     public int getRow()
