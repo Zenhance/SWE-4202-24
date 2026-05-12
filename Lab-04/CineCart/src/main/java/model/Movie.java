@@ -38,4 +38,9 @@ public class Movie {
         if (rating.equals("R")) return 18;
         return -1;
     }
+
+    public String toString() {
+        String string = String.format("%s (%s) %dmin - BDT %f", title,rating,durationMin, basePrice);
+        return string;
+    }
 }
