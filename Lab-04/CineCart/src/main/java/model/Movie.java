@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Objects;
+
 public class Movie {
     int id;
     String title;
@@ -16,7 +18,7 @@ public class Movie {
     }
 
     // Setting up getters
-    public int getId(){
+    public int getId() {
         return id;
     }
 
@@ -34,5 +36,23 @@ public class Movie {
 
     public double getBasePrice() {
         return basePrice;
+    }
+
+    public int getMinAge() {
+        int age;
+
+        if (Objects.equals(rating, "G")) {
+            age = 0;
+        } else if (Objects.equals(rating, "PG")) {
+            age = 7;
+        } else if (Objects.equals(rating, "PG-13")) {
+            age = 13;
+        } else age = 18;
+
+        return age;
+    }
+
+    public String toString() {
+        return String.format("%s (%s) %d - BDT %.2f",title , rating, durationMin,basePrice);
     }
 }
