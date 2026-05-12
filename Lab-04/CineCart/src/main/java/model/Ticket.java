@@ -13,5 +13,4 @@ public class Ticket {
         this.pricePaid=pricePaid;
     }
 
-
 }
