@@ -10,6 +10,7 @@ public class Location {
 
     }
     public Location(double x, double y){
+        this.label="Unknown";
         this.x=x;
         this.y=y;
     }
@@ -24,11 +25,11 @@ public class Location {
     }
 
     public double distanceTo(Location other){
-        double distance= Math.sqrt(Math.pow(this.x-other.x,2))+Math.sqrt(Math.pow(this.y-other.y,2));
+        double distance= Math.sqrt((Math.pow(this.x-other.x,2))+(Math.pow(this.y-other.y,2)));
         return distance;
     }
     public String toString(){
-        return (this.label+" "+this.x+" "+this.y);
+        return String.format("%s (%.2f, %.2f)",label,x,y);
     }
 
 }

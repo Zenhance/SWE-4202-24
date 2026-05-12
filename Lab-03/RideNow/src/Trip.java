@@ -40,8 +40,7 @@ public class Trip {
         return distance;
     }
     double calculateFare(){
-        double fare= this.baseFare+(15.0*getDistance());
-        return fare;
+        return this.baseFare+ (15.0 * getDistance());
     }
 
     void completeTrip(){
@@ -58,6 +57,7 @@ public class Trip {
         }
         return String.format(
                 "Passenger: %s\n"+
+                        "Trip Summary\n"+
                         "Driver: %s (%s)\n"+
                         "From: %s\n"+
                         "To: %s\n"+

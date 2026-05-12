@@ -30,6 +30,6 @@ public class Passenger {
     }
 
     public String toString(){
-        return (this.id+" "+this.name+" "+this.rating);
+        return String.format("Passenger[%d] %s (%.2f)",id,name,rating);
     }
 }

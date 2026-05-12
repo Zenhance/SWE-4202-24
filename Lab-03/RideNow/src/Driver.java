@@ -38,6 +38,10 @@ public class Driver {
     }
 
     public String toString(){
-        return (this.name+" "+this.licencePlate+" "+this.isAvailable);
+        if(isAvailable) {
+            return String.format("Driver[%d] %s (%s) [%s]", id, name, licencePlate,"AVAILABLE");
+        }else {
+            return String.format("Driver[%d] %s (%s) [%s]", id, name, licencePlate,"BUSY");
+        }
     }
 }
