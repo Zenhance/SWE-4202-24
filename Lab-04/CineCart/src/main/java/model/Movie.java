@@ -18,7 +18,7 @@ public class Movie {
 
     // Getter methods
     public int getMinAge(){
-        int res;
+        int res = 0;
         if (rating == "G"){
             res = 0;
         }
