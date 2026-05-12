@@ -11,7 +11,7 @@ public class Seat {
         this.row=row;
         this.col=col;
         this.isPrime=isPrime;
-        this.isBooked=isBooked;
+        this.isBooked=false;
     }
 
     public int getRow(){
@@ -29,9 +29,17 @@ public class Seat {
     }
 
     public void book(){
-
+    isBooked=true;
     }
     public void release(){
-
+    isBooked=false;
     }
+    public boolean isAvailable(){
+        return isBooked=false;
+    }
+    public String toString(){
+        String result= "R"+ row + "C"+ col;
+    }
+
+
 }
