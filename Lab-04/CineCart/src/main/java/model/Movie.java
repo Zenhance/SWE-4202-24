@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Objects;
+
 public class Movie {
     private int id;
     private String title;
@@ -18,5 +20,18 @@ public class Movie {
     public String getRating(){return rating;}
     public int getDurationMin(){return durationMin};
     public double getBasePrice() {return basePrice;}
+    public int getMinAge(){
+        if(rating.equals("G")){
+            return 0;
+        }else if(rating.equals("PG")){
+            return 7;
+        }else if(rating.equals("PG-13")){
+            return 13;
+        }else{
+            return 18;
+        }
+    }
+
+
 
 }
