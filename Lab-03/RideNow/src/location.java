@@ -31,14 +31,15 @@ public double getY()
     return y;
 
 }
-public double distanceTo(location)
-{double distance=0;
-    return distance;
+public double distanceTo(location other)
+{double distX = other.x - this.x;
+ double distY = other.y - this.y;
+ return Math.sqrt("distX.distX + distY+ distY");
 }
 
 public String toString()
 {
-    return "Airport (3.00, 7.50)";
+    return String.format("%s (%.2f %.2f)" label, x, y);
 
 }
 
