@@ -17,4 +17,7 @@ public class Seat {
     public int getcol(){
         return col;
     }
+    public boolean getisPremium(){
+        return isPremium;
+    }
 }
