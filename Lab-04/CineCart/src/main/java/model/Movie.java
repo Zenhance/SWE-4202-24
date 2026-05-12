@@ -5,13 +5,16 @@ public class Movie{
     private String title;
     private int durationMin;
     private double basePrice;
+    private String rating;
+
 
     public Movie(int id, String title, int durationMin,
-                 double basePrice){
+                 double basePrice, String Rating){
         this.id = id;
         this.title = title;
         this.durationMin = durationMin;
         this.basePrice = basePrice;
+        this.rating = rating;
     }
 
     public int getId(){
@@ -26,7 +29,16 @@ public class Movie{
         return durationMin;
     }
 
-    public double getBasePrice(){
-    return basePrice;
-}
+    public double getBasePrice() {
+        return basePrice;
+    }
+
+    public String getRating(){
+        return rating;
+    }
+
+
+
+
+
 
