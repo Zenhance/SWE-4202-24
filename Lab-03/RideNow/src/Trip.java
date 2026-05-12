@@ -1,4 +1,4 @@
-public class Trip{
+public class Trip {
     private Passenger passenger;
     private Driver driver;
     private Location from;
@@ -6,72 +6,73 @@ public class Trip{
     private double baseFare;
     private boolean completed;
 
-    public Trip(Passenger passenger,Driver driver,Location from,Location to,double baseFare){
-        this.passenger=passenger;
-        this.driver=driver;
-        this.from=from;
-        this.to=to;
-        this.baseFare=baseFare;
-        this.completed=false;
+    public Trip(Passenger passenger, Driver driver, Location from, Location to, double baseFare) {
+        this.passenger = passenger;
+        this.driver = driver;
+        this.from = from;
+        this.to = to;
+        this.baseFare = baseFare;
+        this.completed = false;
         driver.setAvailable(false);
     }
 
-    public Passenger getPassenger(){
+    public Passenger getPassenger() {
         return passenger;
     }
 
-    public Driver getDriver(){
+    public Driver getDriver() {
         return driver;
     }
 
-    public Location getFrom(){
+    public Location getFrom() {
         return from;
     }
 
-    public Location getTo(){
+    public Location getTo() {
         return to;
     }
 
-    public double getBaseFare(){
+    public double getBaseFare() {
         return baseFare;
     }
 
-    public boolean isCompleted(){
+    public boolean isCompleted() {
         return completed;
     }
 
-    public double getDistance(){
+    public double getDistance() {
         return from.distanceTo(to);
     }
 
-    public double calculateFare(){
-        return baseFare + (15.00*getDistance());
+    public double calculateFare() {
+        return baseFare + (15.00 * getDistance());
     }
 
-    public void completeTrip(){
-        completed=true;
+    public void completeTrip() {
+        completed = true;
         driver.setAvailable(true);
     }
-    public String getSummary(){
+
+    public String getSummary() {
         String status;
 
-        if(completed){
-            status="COMPLETED";
-        }
-        else{
-            status="IN PROGRESS";
+        if (completed) {
+            status = "COMPLETED";
+        } else {
+            status = "IN PROGRESS";
         }
 
-        return "Trip Summary\n"+
-                "Passenger:"+passenger.getName()+"\n"+
-                "Driver:"+driver.getName()+" ("+driver.getLicencePlate()+")\n"+
-                "From:"+from+"\n"+
-                "To:"+to+"\n"+
-                "Distance:"+String.format("%.2f",getDistance())+" km\n"+
-                "Fare:BDT "+String.format("%.2f",calculateFare())+"\n"+
-                "Status:"+status;
+        return "Trip Summary\n" +
+                "Passenger:" + passenger.getName() + "\n" +
+                "Driver:" + driver.getName() + " (" + driver.getLicencePlate() + ")\n" +
+                "From:" + from + "\n" +
+                "To:" + to + "\n" +
+                "Distance:" + String.format("%.2f", getDistance()) + " km\n" +
+                "Fare:BDT " + String.format("%.2f", calculateFare()) + "\n" +
+                "Status:" + status;
 
     }
+}
 
 
 
