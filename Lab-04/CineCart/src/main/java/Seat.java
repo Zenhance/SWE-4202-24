@@ -10,4 +10,10 @@ public class Seat {
         this.isPremium = isPremium;
         this.isBooked = isBooked;
     }
+
+    public int getRow(){
+        return row;
+    }
+
+    public
 }
