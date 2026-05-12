@@ -16,34 +16,35 @@ public class Movie{
         this.basePrice=basePrice;
     }
     public int getId(){
-        return id;
+        return this.id;
     }
     public String getTitle(){
-        return title;
+
+        return this.title;
     }
 
     public String getRating(){
-        return rating;
+
+        return this.rating;
     }
-    public int getDurationMin(){
-        return durationMin;
+    public int getDurationMin()
+    {
+        return this.durationMin;
     }
     public double getBasePrice(){
-        return basePrice;
+             return  this.basePrice;
     }
     public int getMinage(){
-         if(rating.equals("G")){
+         if(rating=="G"){
              return 0;
          }
-        if(rating.equals("PG")){
+        if(rating=="PG"){
             return 7;
         }
-        if(rating.equals("PG-13",)){
+        if(rating=="PG-13"){
             return 13;
         }
-        if(rating.equals("R")){
-            return 18;
-        }
+        else return 18;
     }
     @Override
     public String toString(){
