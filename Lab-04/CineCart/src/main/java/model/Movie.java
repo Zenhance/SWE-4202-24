@@ -31,4 +31,10 @@ public class Movie
     {
         return rating;
     }
+
+    public int getDurationMin()
+    {
+        return durationMin;
+    }
+
 }
