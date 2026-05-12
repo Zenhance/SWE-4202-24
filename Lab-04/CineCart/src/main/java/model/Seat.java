@@ -12,4 +12,36 @@ public class Seat {
         this.isPremium = isPremium;
         this.isBooked = false;
     }
+
+    public int getRow() {
+        return row;
+    }
+
+    public int getCol() {
+        return col;
+    }
+
+    public boolean isPremium() {
+        return isPremium;
+    }
+    public boolean isAvailable(){
+        return isBooked;
+    }
+    public void book(){
+        isBooked = true;
+    }
+    public void release(){
+        isBooked = false;
+    }
+    public String toString(){
+        String premium = "";
+        String booked = "";
+        if (isPremium){
+            premium = "*";
+        }
+        if (isBooked){
+            booked = "#";
+        }
+        return "R" + row + "C" + col + premium + booked;
+    }
 }
