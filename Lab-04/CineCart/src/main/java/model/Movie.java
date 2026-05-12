@@ -37,6 +37,20 @@ public class Movie {
     }
 
     public int getMinAge() {
+        if(this.rating == "G") {
+            return 0;
+        }
+        else if(this.rating=="PG") {
+            return 7;
+        }
+        else if(this.rating == "PG-13") {
+            return 13;
+        }
+        else
+            return 18;
+    }
 
+    public String toString() {
+        return String.format("Inceotion (%s) %dmin - BDT %.2f",);
     }
 }
