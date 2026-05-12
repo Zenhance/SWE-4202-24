@@ -49,5 +49,19 @@ public class Seat {
         }
         return x;
     }
+    public String toString(){
+        char x=' ', y=' ';
+        if(isPremium){
+            x='*';
+        }
+        if(isBooked){
+            y='#';
+        }
+        return "RC35"+x+y;
+
+
+    }
+
+
 
 }
