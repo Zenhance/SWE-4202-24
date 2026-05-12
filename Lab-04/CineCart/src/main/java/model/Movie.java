@@ -43,6 +43,7 @@ public class Movie {
         if(rating.equals("R")){
             return 18;
         }
+        return 0;
     }
     public String toString(){
         return String.format("%s (%s) %dmin - BDT %.2f",
