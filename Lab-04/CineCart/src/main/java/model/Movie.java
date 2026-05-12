@@ -27,5 +27,7 @@ public class Movie {
     public int durationMin(){
         return this.durationMin;
     }
-
+    public double basePrice(){
+        return this.basePrice;
+    }
 }
