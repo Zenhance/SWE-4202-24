@@ -20,7 +20,6 @@ public class Location {
         return x;
     }
     public double getY(){
-
         return y;
     }
     double distanceToLocation(Location other){

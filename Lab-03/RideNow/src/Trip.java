@@ -35,5 +35,6 @@ public class Trip {
                 +"Status: %s",
                 passenger.getName(),driver.getname(),driver.getLicensePlate(),from.toString(),to.toString(),
                 getDistance(),calculateFare(),completeTrip ?  "Completed" : "In Progress");
+
     }
 }
