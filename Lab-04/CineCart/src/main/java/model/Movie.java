@@ -24,10 +24,10 @@ public class Movie {
     public String getRating(){
         return this.rating;
     }
-    public int getdurationMin(){
+    public int getDurationMin(){
         return this.durationMin;
     }
-    public double getbasePrice(){
+    public double getBasePrice(){
         return this.basePrice;
     }
 
