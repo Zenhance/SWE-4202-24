@@ -27,7 +27,7 @@ public class Seat {
         return isBooked;
     }
 
-    public boolean geIsPremium() {
+    public boolean isPremium() {
         return isPremium;
     }
 
