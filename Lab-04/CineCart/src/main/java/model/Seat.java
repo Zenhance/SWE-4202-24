@@ -23,7 +23,7 @@ public class Seat {
         return col;
     }
 
-    public boolean getIsBooked() {
+    public boolean isBooked() {
         return isBooked;
     }
 
