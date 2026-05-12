@@ -7,7 +7,7 @@ public class Seat {
     boolean isPremium;
     boolean isBooked;
 
-Public Seat(){
+public Seat(){
 
     this.row=row;
     this.col=col;
@@ -21,7 +21,7 @@ public int getRow(){
 
 public int getCol(){
 
-    return rol;
+    return col;
 }
 
 public boolean getIsPremium(){
