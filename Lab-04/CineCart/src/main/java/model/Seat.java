@@ -12,4 +12,20 @@ public class Seat{
         this.isPremium = isPremium;
         this.isAvailable = false;
     }
+
+    public int getRow(){
+        return row;
+    }
+
+    public int getCol(){
+        return col;
+    }
+
+    public boolean isAvailable(){
+        return isAvailable;
+    }
+
+    public boolean isPremium(){
+        return isPremium;
+    }
 }
