@@ -63,5 +63,4 @@ public class Trip {
                 passenger.getName(),driver.getName(),driver.getLicencePlate(),
                 from.toString(),to.toString(),getDistance(),calculateFare(),status);
     }
-
 }
