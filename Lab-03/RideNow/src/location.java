@@ -34,20 +34,19 @@ public double getY()
 public double distanceTo(location other)
 {double distX = other.x - this.x;
  double distY = other.y - this.y;
- return Math.sqrt("distX.distX + distY+ distY");
-}
+ return Math.sqrt(distX*distX + distY*distY); /*prreviously, accidentally put the entire distX*distX + distY*distY part inside quotes
+and accidentally typed dot instead of asterisk */}
 
 public String toString()
 {
-    return String.format("%s (%.2f %.2f)" label, x, y);
+    return String.format("%s (%.2f %.2f)" , label, x, y); //needed to put a comma before label
 
 }
 
 }
 
 
+//previously, accidentally used one more extra curly brace
 
 
 
-
-}
