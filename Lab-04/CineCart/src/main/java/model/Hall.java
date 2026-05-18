@@ -39,12 +39,21 @@ public class Hall {
 
     // getter methods
 
+
+    public int getId() {
+        return id;
+    }
+
     public int getRows() {
         return rows;
     }
 
     public int getCols(){
         return cols;
+    }
+
+    public Seat[][] getGrid() {
+        return grid;
     }
 
     public void displayLayout() {
