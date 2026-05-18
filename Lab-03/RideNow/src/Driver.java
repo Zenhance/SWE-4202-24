@@ -1,48 +1,63 @@
-//naming the classes in small letters were getting me into trouble, so here's a full rewrite of Location.java exactly as it was but class name as capital
-public class Location {
-
-
-    String label;
-    double x;
-    double y;
-
-    public Location(String label, double x, double y) {
-
-        this.label = label;
-        this.x = x;
-        this.y = y;
-    }
-
-    public Location(double x, double y) {
-        this.label = "Unknown";
-        this.x = x;
-        this.y = y;
-
-    }
-
-    public String getlabel() {
-        return label;
-    }
-    public double getX(){
-
-        return x;
-    }
-    public double getY()
+public class Driver
+{
+    private  int id;
+    private String name;
+    private String licensePlate;
+    boolean isAvailable;
+    public Driver (int id, String name, String licensePlate )
     {
-        return y;
+
+        this.id=id;
+        this.name=name;
+        this.licensePlate=licensePlate;
+    }
+
+    public Driver (int id, String name, String licensePlate, boolean isAvailable)
+    {
+        this.id=id;
+        this.name=name;
+        this.licensePlate=licensePlate;
+        this.isAvailable=isAvailable;
+    }
+
+    public int getId()
+    {
+
+        return id;
+    }
+
+
+    public String getName()
+    {
+        return name;
+    }
+    public String getLicensePlate()
+    {
+
+        return  licensePlate;
+    }
+
+    public boolean isAvailable()
+    {
+        return isAvailable;
 
     }
-    public double distanceTo(Location other)
-    {double distX = other.x - this.x;
-        double distY = other.y - this.y;
-        return Math.sqrt(distX*distX + distY*distY); /*prreviously, accidentally put the entire distX*distX + distY*distY part inside quotes
-and accidentally typed dot instead of asterisk */}
 
+    void setAvailable (boolean available)
+    {
+
+        this.isAvailable=available;
+    }
     public String toString()
-    {
-        return String.format("%s (%.2f %.2f)", label, x, y); //previously forgot to put a comma before label
+    { String status;
+        if (isAvailable){ status= "AVAILABLE";}
+        else {status= "BUSY";}
+        return String.format (" Driver[%d] %s (%s) [%s]",
+                id, name, licensePlate, status);
+
+
+
+
+
 
     }
-
-}
-//previously put an additional curly brace
