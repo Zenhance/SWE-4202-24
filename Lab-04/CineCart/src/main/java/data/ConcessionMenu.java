@@ -1,8 +1,7 @@
 package data;
 
-import model.ConcessionItem;
-import model.Showtime;
 
+import model.ConcessionItem;
 
 public class ConcessionMenu {
     private ConcessionItem[] items;
