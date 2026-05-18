@@ -20,7 +20,7 @@ public class Showtime {
         return id;
     }
 
-    public int getHall() {
+    public Hall getHall() {
         return hall;
     }
 
