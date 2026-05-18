@@ -1,36 +1,48 @@
-public class Driver {
+//naming the classes in small letters were getting me into trouble, so here's a full rewrite of Location.java exactly as it was but class name as capital
+public class Location {
 
-    private final int    id;
-    private final String name;
-    private final String licencePlate;
-    private boolean      isAvailable;
 
-    /** Full constructor: set all four fields explicitly. */
-    public Driver(int id, String name, String licencePlate, boolean isAvailable) {
-        this.id           = id;
-        this.name         = name;
-        this.licencePlate = licencePlate;
-        this.isAvailable  = isAvailable;
+    String label;
+    double x;
+    double y;
+
+    public Location(String label, double x, double y) {
+
+        this.label = label;
+        this.x = x;
+        this.y = y;
     }
 
-    /** Convenience constructor: newly registered drivers are available by default. */
-    public Driver(int id, String name, String licencePlate) {
-        this(id, name, licencePlate, true);   // delegate to full constructor
+    public Location(double x, double y) {
+        this.label = "Unknown";
+        this.x = x;
+        this.y = y;
+
     }
 
-    public int     getId()           { return id; }
-    public String  getName()         { return name; }
-    public String  getLicencePlate() { return licencePlate; }
-    public boolean isAvailable()     { return isAvailable; }
+    public String getlabel() {
+        return label;
+    }
+    public double getX(){
 
-    /** Mark this driver as available or busy. */
-    public void setAvailable(boolean available) {
-        this.isAvailable = available;
+        return x;
+    }
+    public double getY()
+    {
+        return y;
+
+    }
+    public double distanceTo(Location other)
+    {double distX = other.x - this.x;
+        double distY = other.y - this.y;
+        return Math.sqrt(distX*distX + distY*distY); /*prreviously, accidentally put the entire distX*distX + distY*distY part inside quotes
+and accidentally typed dot instead of asterisk */}
+
+    public String toString()
+    {
+        return String.format("%s (%.2f %.2f)", label, x, y); //previously forgot to put a comma before label
+
     }
 
-    @Override
-    public String toString() {
-        String status = isAvailable ? "AVAILABLE" : "BUSY";
-        return String.format("Driver[%d] %s (%s) [%s]", id, name, licencePlate, status);
-    }
 }
+//previously put an additional curly brace
