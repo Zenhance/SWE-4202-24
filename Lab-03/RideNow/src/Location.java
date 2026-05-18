@@ -1,41 +1,48 @@
+//naming the classes in small letters were getting me into trouble, so here's a full rewrite of Location.java exactly as it was but class name as capital
 public class Location {
 
-    private final String label;
-    private final double x;
-    private final double y;
+
+    String label;
+    double x;
+    double y;
 
     public Location(String label, double x, double y) {
+
         this.label = label;
         this.x = x;
         this.y = y;
     }
 
-    public Location(double x, double y)
-    {
-        this("Unknown", x, y);   //this is called constructor delegation
+    public Location(double x, double y) {
+        this.label = "Unknown";
+        this.x = x;
+        this.y = y;
+
     }
 
-    public String getLabel() {
+    public String getlabel() {
         return label;
     }
+    public double getX(){
 
-    public double getX() {
         return x;
     }
-
-    public double getY() {
+    public double getY()
+    {
         return y;
-    }
-
-    public double distanceTo(Location other) {
-        double dx = this.x - other.x;
-        double dy = this.y - other.y;
-        return Math.sqrt(dx * dx + dy * dy);
-    }
-
-    @Override
-    public String toString() {
-        return String.format("%s (%.2f, %.2f)", label, x, y);
 
     }
+    public double distanceTo(Location other)
+    {double distX = other.x - this.x;
+        double distY = other.y - this.y;
+        return Math.sqrt(distX*distX + distY*distY); /*prreviously, accidentally put the entire distX*distX + distY*distY part inside quotes
+and accidentally typed dot instead of asterisk */}
+
+    public String toString()
+    {
+        return String.format("%s (%.2f %.2f)", label, x, y); //previously forgot to put a comma before label
+
+    }
+
 }
+//previously put an additional curly brace
