@@ -27,7 +27,7 @@ public class CheckoutEngine {
         }
 
         if (showtime.getHall().getSeat(row, col).isBooked()){
-            return "Seat unavailable;"
+            return "Seat unavailable";
         }
 
         double price = showtime.getMovie().getBasePrice() * (showtime.getHall().getSeat(row, col).isPremium() ? 1.30 : 1.00) * (showtime.isPeak() ? 1.20 : 1.00);
