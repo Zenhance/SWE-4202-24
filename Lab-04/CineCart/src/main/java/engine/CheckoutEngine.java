@@ -55,5 +55,7 @@ public class CheckoutEngine {
         else{
             cart.addItem(item, qty);
         }
+
+        return "OK";
     }
 }
