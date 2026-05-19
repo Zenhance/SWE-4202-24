@@ -34,10 +34,13 @@ public Showtime(int id, Movie movie, Hall hall, int startHour, String dateTag){
         return dateTag;
     }
 
-    public boolean isPeak(){
-    return
+    public boolean isPeak() {
+        if (startHour >= 18 && startHour <= 21) {
+            return true;
+        } else {
+            return false;
+        }
     }
-
     public String toString(){
 
         String seat = "[T" + id + "] "
