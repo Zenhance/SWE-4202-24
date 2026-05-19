@@ -17,5 +17,9 @@ public class Showtime
         this.dateTag = dateTag;
     }
 
+    public int getId()
+    {
+        return id;
+    }
 
 }
