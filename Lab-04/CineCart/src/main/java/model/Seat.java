@@ -9,15 +9,16 @@ public class Seat {
         this.row = row;
         this.col = col;
         this.isPremium = isPremium;
+        isBooked = false;
     }
-    void book(){
+    public void book(){
       isBooked = true;
     }
-    void release(){
+    public void release(){
       isBooked = false;
     }
     boolean isAvailable(){
-         return true;
+        return !isBooked;
     }
     public String toString(){
         if(isPremium){
