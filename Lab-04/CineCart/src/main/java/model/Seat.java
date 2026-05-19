@@ -2,7 +2,7 @@ package model;
 
 public class Seat {
     int row, col;
-    boolean isPremium, isBooked=false;
+    public boolean isPremium, isBooked=false;
     Seat(int row,int col, boolean isPremium){
         this.row=row;
         this.col=col;
