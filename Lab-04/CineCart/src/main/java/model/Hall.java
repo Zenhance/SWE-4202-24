@@ -25,8 +25,11 @@ public class Hall {
     public int getCols(){
         return cols;
     }
-
+    public Seat[][] getGrid(){
+        return grid;
+    }
     public Seat getSeat(int rows,int cols){
+
         return grid[rows][cols]
     }
     public int countAvailable(){
@@ -38,5 +41,24 @@ public class Hall {
                 }
             }
         }
+        return count;
+    }
+    public void displayLayout(){
+        for(int i=0;i<rows;i++) {
+            for (int j = 0; j < cols; j++) {
+                Seat seat=grid[i][j];
+                if(seat.isBooked()){
+                    System.out.print("# ");
+            }
+                else if(seat.isPremium()){
+                    System.out.print("* ");
+                }
+                else{
+                    System.out.print(". ");
+                }
+
+        }
+            }
+        System.out.println();
     }
 }
