@@ -46,5 +46,7 @@ public class Customer {
             return 0.00;
     }
 
-
+    public String toString() {
+        return String.format("hi");
+    }
 }
