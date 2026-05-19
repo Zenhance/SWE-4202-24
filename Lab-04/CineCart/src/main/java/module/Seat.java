@@ -30,4 +30,14 @@ public class Seat {
     public void release(){
         isBooked = false;
     }
+    public boolean isAvailable(){
+        return !isBooked;
+    }
+    @Override
+    public String toString(){
+        String xtraChaos = "";
+        if (isPremium) xtraChaos = xtraChaos + "*";
+        if (isBooked) xtraChaos = xtraChaos + "#";
+        return "R" + row + "C" + col;
+    }
 }
