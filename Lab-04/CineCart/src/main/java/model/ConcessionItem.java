@@ -13,6 +13,21 @@ public class ConcessionItem
         this.unitPrice = unitPrice;
     }
 
+    public String getCode()
+    {
+        return code;
+    }
+
+    public String getName()
+    {
+        return name;
+    }
+
+    public double getUnitPrice()
+    {
+        return unitPrice;
+    }
+
     public String toString()
     {
         return code+" - "+name+" - BDT "+String.format("%.2f",unitPrice);
