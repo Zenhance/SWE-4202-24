@@ -32,7 +32,21 @@ public class Hall {
                 grid[r][c]=new Seat(r,c,r<premiumRows);
             }
         }
+    }
 
+    public Seat getSeat(int row,int col){
+        return grid[row][col];
+    }
 
+    public int countAvailable(){
+        int cnt=0;
+        for(int r=0;r<rows;r++){
+            for(int c=0;c<cols;c++){
+               if(grid[r][c].isAvailable()){
+                   cnt++;
+               }
+            }
+        }
+        return cnt;
     }
 }
