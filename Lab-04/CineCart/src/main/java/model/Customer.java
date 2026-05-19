@@ -5,4 +5,23 @@ public class Customer {
     private String name;
     private int age;
     private String loyaltyTier;
+    //constructor
+    public Customer{
+        this.id=id;
+        this.name=name;
+        this.age=age;
+        this.loyaltyTier="BASIC";
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 }
