@@ -19,4 +19,8 @@ public class Customer
         this.loyaltyTier = loyaltyTier;
     }
 
+    public int getId()
+    {
+        return id;
+    }
 }
