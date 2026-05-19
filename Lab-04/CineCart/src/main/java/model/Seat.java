@@ -50,6 +50,16 @@ public class Seat
         isBooked = false;
     }
 
+    public String toString()
+    {
+        String base = "R" + row + "C" + col;
 
+        if(isBooked)
+            return base + "#";
 
+        if(isPremium)
+            return base + "*";
+
+        return base;
+    }
 }
