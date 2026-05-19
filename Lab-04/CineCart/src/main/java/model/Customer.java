@@ -43,5 +43,18 @@ public class Customer
         return loyaltyTier;
     }
 
+    public double getTierDiscount()
+    {
+        if(loyaltyTier.equals("GOLD"))
+        {
+            return 0.15;
+        }
+        if(loyaltyTier.equals("SILVER"))
+        {
+            return 0.08;
+        }
+        return 0.0;
+    }
+
 
 }
