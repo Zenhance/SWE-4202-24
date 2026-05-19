@@ -7,4 +7,13 @@ public class Showtime {
     private int startHour;
     private String dateTag;
 
+    Showtime(int id, Movie movie, Hall hall, int startHour,String dateTag) {
+        this.id=id;
+        this.movie=movie;
+        this.hall=hall;
+        this.startHour=startHour;
+        this.dateTag=dateTag;
+    }
+
+
 }
