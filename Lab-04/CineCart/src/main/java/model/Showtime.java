@@ -45,6 +45,6 @@ public class Showtime {
     }
 
     public String toString(){
-        return "[T"+hall.getId()+"] "+movie+" @ "+"Hall "+id+" - "+String.format("%.2f",startHour)+" ("+dateTag+")";
+        return "[T"+movie.getId()+"] "+movie+" @ "+"Hall "+id+" - "+String.format("%.2f",startHour)+" ("+dateTag+")";
     }
 }
