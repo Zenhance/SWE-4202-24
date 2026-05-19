@@ -31,6 +31,12 @@ public class Seat {
     public void Book() {
         isBooked = true ;
     }
+    public void Release(){
+        isBooked=false;
+    }
+    public String toString(){
+        return "R"+row+"C"+col+(isPremium?"*":"#");
+    }
 
 
 }
