@@ -59,5 +59,28 @@ public class Cart {
         itemCount++;
     }
 
+    public double sumTicketsPaid(){
+        double ticketPrice = 0;
+        for(int i = 0; i < ticketCount; i++){
+            ticketPrice += tickets[i].getPricePaid();
+        }
+        return ticketPrice;
+    }
 
+    public double sumConcessionsRaw(){
+        double conPrice = 0;
+        for(int i = 0; i < itemCount; i++){
+            conPrice += items[i].getUnitPrice() * qtys[i];
+        }
+        return conPrice;
+    }
+
+    public boolean hasItem(String code){
+
+        for(int i = 0; i < itemCount; i++){
+            ConcessionItem it = items[i];
+            if(code.equals(it.getCode())) return true;
+        }
+        return false;
+    }
 }
