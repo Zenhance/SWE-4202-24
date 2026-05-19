@@ -14,5 +14,19 @@ public class Ticket {
         this.pricePaid = pricePaid;
     }
 
+    public Showtime getShowtime() {
+        return showtime;
+    }
 
+    public double getPricePaid() {
+        return pricePaid;
+    }
+
+    public int getCol() {
+        return col;
+    }
+
+    public int getRow() {
+        return row;
+    }
 }
