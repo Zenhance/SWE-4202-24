@@ -28,13 +28,9 @@ public class Showtime {
         return false;
     }
 
-
-
-
-
-
-
-
+    public String toString(){
+        return ("["+id+"]"+" "+movie+" "+"@"+" "+hall+" "+"-"+" "+startHour+" "+"("+dateTag+")");
+    }
 
 
 }
