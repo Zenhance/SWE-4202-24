@@ -35,5 +35,8 @@ public class Movie{
         if (rating.equals("R")) return 18;
         return 0;
     }
-
+    @Override
+    public String toString(){
+        return title + " (" + rating +") " + durationMin + "min - BDT" + String.format("%.2f", basePrice);
+    }
 }
