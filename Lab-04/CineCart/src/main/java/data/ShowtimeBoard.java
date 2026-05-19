@@ -1,5 +1,4 @@
 package data;
-
 public class ShowtimeBoard {
     private Showtime[] shows;
     private int count;
@@ -23,5 +22,10 @@ public Showtime findById(int id){
         }
     }
     return null;
+public void displayAll(){
+    for(int i=0;i<count;i++){
+        System.out.println(shows[i]);
+    }
+    }
 
 }
