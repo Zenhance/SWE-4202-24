@@ -29,7 +29,7 @@ public class Showtime {
     }
 
     public String toString(){
-        return ("["+id+"]"+" "+movie+" "+"@"+" "+hall+" "+"-"+" "+startHour+" "+"("+dateTag+")");
+        return ("["+id+"]"+" "+movie.getTitle()+" "+"@"+" "+hall+" "+"-"+" "+startHour+" "+"("+dateTag+")");
     }
 
 
