@@ -23,4 +23,8 @@ public class Customer
     {
         return id;
     }
+    public String getName()
+    {
+        return name;
+    }
 }
