@@ -12,4 +12,15 @@ public class ConcessionItem {
     }
 
 
+    public String getName() {
+        return name;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public double getUnitPrice() {
+        return unitPrice;
+    }
 }
