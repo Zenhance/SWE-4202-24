@@ -6,7 +6,7 @@ public class Seat {
     private boolean isBooked = false;
     private final boolean isPremium;
 
-    Seat(int row, int col, boolean isPremium) {
+    public Seat(int row, int col, boolean isPremium) {
         this.row = row;
         this.col = col;
         this.isPremium = isPremium;
@@ -15,7 +15,6 @@ public class Seat {
     public int getRow() {
         return row;
     }
-
     public int getCol() {
         return col;
     }
@@ -28,23 +27,19 @@ public class Seat {
         return isBooked;
     }
 
-    public void book(){
-        isBooked = true;
-    }
-    public void release(){
-        isBooked = false;
-    }
     public boolean isAvailable(){
-        boolean b;
-        b = !isBooked;
-        return b;
-    }
-    public String toString(){
+        return (isBooked==true) ? false : true ;}  // just trying ternary
 
+    public void book(){
+        isBooked = true;}
+
+    public void release(){
+        isBooked = false;}
+
+    public String toString(){
         String out = String.format("R%dC%d", row, col);
         if(isPremium) {out = out + "*";}
         if(isBooked) {out = out + "#";}
         return out;
     }
-
 }
