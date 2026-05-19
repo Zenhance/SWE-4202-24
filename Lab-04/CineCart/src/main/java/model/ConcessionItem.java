@@ -11,4 +11,8 @@ public class ConcessionItem {
         this.unitPrice = unitPrice;
     }
 
+    public String toString(){
+        String string = String.format("%s - %s - BDT %d.00",code,name,unitPrice);
+        return string;
+    }
 }
