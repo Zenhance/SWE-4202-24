@@ -15,7 +15,6 @@ public class Cart {
         this.owner = owner;
         this.tickets = new Ticket[MAX_TICKETS];
         this.items = new ConcessionItem[MAX_ITEMS];
-        this.qtys = new int[MAX_ITEMS];
         this.ticketcount = 0;
         this.itemCount = 0;
     }
@@ -59,7 +58,7 @@ public class Cart {
         return itemCount;
     }
 
-    public double sumTicketPaid(){
+    public double sumTicketsPaid(){
         int sum = 0;
         for(int i = 0; i < ticketcount; i++){
             sum += tickets[i].getPricePaid();
