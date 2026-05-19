@@ -44,5 +44,6 @@ public class Seat {
         if(isBooked) s+= "#";
         return s;
     }
+
 }
 
