@@ -17,5 +17,15 @@ public class Hall {
         return grid[row][col];
     }
 
-   
+    public int countAvailable(){
+        int cnt = 0;
+        for(int i = 0; i < rows; i++){
+            for(int j = 0; j < cols; j++){
+                if(grid[i][j].isAvailable()){
+                    cnt++;
+                }
+            }
+        }
+        return cnt;
+    }
 }
