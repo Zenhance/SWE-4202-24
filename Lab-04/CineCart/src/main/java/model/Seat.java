@@ -2,10 +2,10 @@ package model;
 
 public class Seat
 {
-    int row;
-    int col;
-    boolean isPremium;
-    boolean isBooked;
+    private int row;
+    private int col;
+    private boolean isPremium;
+    private boolean isBooked;
 
     public Seat(int row, int col, boolean isPremium, boolean isBooked)
     {
@@ -25,4 +25,8 @@ public class Seat
         return isPremium;
     }
 
+    public boolean isBooked()
+    {
+        return isBooked;
+    }
 }
