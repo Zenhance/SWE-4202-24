@@ -31,4 +31,8 @@ public class Showtime {
     public boolean isPeak() {
         return startHour >= 18 && startHour <= 21;
     }
+    public String toString() {
+
+        return String.format("[T%d] %s @ Hall 2 - %02d:00 (%s)",id,movie.getTitle(),startHour,dateTag);
+    }
 }
