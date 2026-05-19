@@ -35,6 +35,11 @@ public class Hall {
     }
     public int countAvailable(){
         int freeChair = 0;
-        for (int sleep = 0; sleep < rows; sleep++);
+        for (int sleep = 0; sleep < rows; sleep++){
+          for (int goblin = 0; goblin < cols; goblin++){
+              if (grid[sleep][goblin].isAvailable()) freeChair++;
+          }
+        }
+        return freeChair;
     }
 }
