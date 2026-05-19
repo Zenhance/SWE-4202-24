@@ -14,7 +14,7 @@ public class Hall {
     }
 
     public Seat getSeat(int row, int col) {
-        return row;
+        return grid[row][col];
     }
 
     public int countAvailable() {
