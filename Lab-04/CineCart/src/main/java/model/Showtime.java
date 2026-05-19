@@ -43,5 +43,7 @@ public class Showtime {
             return false;
     }
 
-
+    public String toString() {
+        return String.format("[%d] Inception @ Hall 2 - %d (%s)",id,startHour,dateTag);
+    }
 }
