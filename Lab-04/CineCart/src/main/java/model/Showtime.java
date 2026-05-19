@@ -18,4 +18,15 @@ public Showtime(int id,Movie movie,Hall hall,int startHour,String dateTag){
     this.dateTag=dateTag;
 }
 
+public int getId(){
+    return id;
+}
+
+public Movie getMovie(){
+    return movie;
+}
+
+public Hall getHall(){
+    return hall;
+}
 }
