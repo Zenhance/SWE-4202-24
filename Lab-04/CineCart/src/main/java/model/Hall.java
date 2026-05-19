@@ -16,6 +16,15 @@ public class Hall {
             }
         }
     }
+     public int getId(){
+        return id;
+    }
+    public int getRows(){
+        return rows;
+    }
+    public int getCols(){
+        return cols;
+    }
 
     public Seat getSeat(int rows,int cols){
         return grid[rows][cols]
