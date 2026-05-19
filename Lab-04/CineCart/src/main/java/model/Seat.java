@@ -32,6 +32,20 @@ public boolean getIsBooked(){
      return isBooked;
 }
 
+public void book(){
+
+}
+
+public void release(){
+
+
+}
+
+public boolean isAvailable(){
+
+
+}
+
 
 
 
