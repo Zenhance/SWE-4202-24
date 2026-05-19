@@ -49,6 +49,7 @@ public class Seat {
         if (isPremium) System.out.println("*");
         if(isBooked) System.out.println("#");
         return string;
+
     }
 }
 
