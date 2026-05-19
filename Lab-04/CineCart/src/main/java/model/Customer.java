@@ -52,5 +52,9 @@ public double getTierDiscount(){
     return res;
 }
 
+public String toString(){
 
+    String res=String.format("%d %s %d %s",id,name,age,loyaltyTier);
+    return res;
+}
 }
