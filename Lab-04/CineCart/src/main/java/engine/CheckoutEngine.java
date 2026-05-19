@@ -40,5 +40,30 @@ public class CheckoutEngine {
         cart.addItem(menu.findByCode(code),qty);
         return "OK";
     }
+
+    public double checkout(Cart cart){
+        double ticketSubtotal = cart.sumTicketsPaid();
+        double concessionSubtotal = cart.sumConcessionsRaw();
+
+        double combo = 0;
+        if(cart.hasItem("POP")&& cart.hasItem("SODA")){
+            combo = 50.00;
+        }
+        double preDiscount = ticketSubtotal + concessionSubtotal - combo;
+        double group = 0;
+        if(cart.getTicketCount()>=4)
+            group= 0.10*preDiscount;
+
+        double tier = cart.getOwner().getTierDiscount()*preDiscount;
+        double afterDiscounts = preDiscount - group - tier;
+
+        double tax = 0.05 * afterDiscounts;
+
+        return Math.round(afterDiscounts+tax);
+    }
+
+    public String getReceipt(Cart cart){
+
+    }
 }
 
