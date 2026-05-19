@@ -19,7 +19,7 @@ public class Ticket {
     public double getPricePaid(){return pricePaid;}
 
     public String toString() {
-        return (showtime.getId()+" "+"-"+" "+row+col+" "+"@"+" "+"BDT"+pricePaid);
+        return (showtime.getId()+" "+"-"+" "+"R"+row+"C"+col+" "+"@"+" "+"BDT"+pricePaid);
     }
 
 
