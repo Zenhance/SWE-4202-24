@@ -50,4 +50,14 @@ public class Cart {
         tickets[ticketCount] = t;
         ticketCount++;
     }
+
+    public void addItem(ConcessionItem c, int qty){
+        if (itemCount >= MAX_ITEMS || qty <= 0)
+            throw new IllegalArgumentException("MAX ITEMS exceeded OR Qty is too low");
+        items[itemCount] = c;
+        qtys[itemCount] = qty;
+        itemCount++;
+    }
+
+
 }
