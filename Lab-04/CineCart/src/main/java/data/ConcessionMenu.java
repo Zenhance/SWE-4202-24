@@ -11,5 +11,11 @@ public class ConcessionMenu {
         items = new ConcessionItem[MAX];
         count = 0;
     }
+    public void add(ConcessionItem c){
+        if(count<MAX){
+            items[count]=c;
+            count++;
+        }
+    }
 
 }
