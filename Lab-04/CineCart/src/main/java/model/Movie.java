@@ -1,5 +1,5 @@
 package model;
-class Movie
+public class Movie
 {
     private int id;
     private String title;
