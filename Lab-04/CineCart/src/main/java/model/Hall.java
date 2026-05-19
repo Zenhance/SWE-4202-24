@@ -18,7 +18,7 @@ public class Hall  {
         }
     }
 
-    private Seat getSeat(int row, int col) {
+    public Seat getSeat(int row, int col) {
         return grid[row][col];
     }
 
