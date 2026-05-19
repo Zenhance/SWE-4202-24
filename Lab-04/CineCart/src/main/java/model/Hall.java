@@ -15,8 +15,8 @@ public class Hall {
 
         for(int r=0;r<rows;r++) {
             for (int c = 0; c < cols; c++) {
-                boolean premium=r<premiumRows;
-                grid[r][c] =new Seat(r,c,premium);
+                boolean isPremium=r<premiumRows;
+                grid[r][c] =new Seat(r,c,isPremium);
             }
         }
     }
