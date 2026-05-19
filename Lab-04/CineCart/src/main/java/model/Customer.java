@@ -16,6 +16,23 @@ public class Customer {
     public Customer(int id, String name, int age){
         this(id, name, age, "BASIC");
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getLoyaltyTier() {
+        return loyaltyTier;
+    }
+
 }
 
 
