@@ -37,4 +37,16 @@ public int getStartHour(){
 public String getDateTag(){
     return getDateTag();
 }
+
+public boolean isPeak(){
+
+    if (startHour>=18 && startHour<=21){
+        return true;
+    else return false;
+}
+
+public String toString(){
+
+
+    }
 }
