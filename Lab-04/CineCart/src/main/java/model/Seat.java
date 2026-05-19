@@ -4,13 +4,13 @@ public class Seat{
     private int row;
     private int col;
     private boolean isPremium;
-    private boolean isAvailable;
+    private boolean isBooked;
 
     public Seat(int row, int col, boolean isPremium){
         this.row = row;
         this.col = col;
         this.isPremium = isPremium;
-        this.isAvailable = false;
+        this.isBooked = false;
     }
 
     public int getRow(){
@@ -21,9 +21,6 @@ public class Seat{
         return col;
     }
 
-    public boolean isAvailable(){
-        return isAvailable;
-    }
 
     public boolean isPremium(){
         return isPremium;
@@ -44,6 +41,17 @@ public class Seat{
 
     public void book(){
         isBooked = true;
+    }
+
+    public String toString(){
+        if(isPremium){
+            return String.format("R%dC%d*", row, col);
+        }
+        if(isBooked){
+            return String.format("R%dC%d#", row, col);
+        }
+
+        return String.format("R%dC%d", row, col);
     }
 
 }
