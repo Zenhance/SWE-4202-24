@@ -26,4 +26,36 @@ public class Cart {
             ticketcount++;
         }
     }
+
+    public void addItem(ConcessionItem c, int qty){
+        if(itemCount < MAX_ITEMS){
+            items[itemCount] = c;
+            qtys[itemCount] = qty;
+            itemCount++;
+        }
+    }
+
+    public Customer getOwner() {
+        return owner;
+    }
+
+    public Ticket[] getTickets() {
+        return tickets;
+    }
+
+    public int getTicketcount() {
+        return ticketcount;
+    }
+
+    public ConcessionItem[] getItems() {
+        return items;
+    }
+
+    public int[] getQtys() {
+        return qtys;
+    }
+
+    public int getItemCount() {
+        return itemCount;
+    }
 }
