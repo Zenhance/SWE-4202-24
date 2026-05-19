@@ -26,4 +26,7 @@ public class Showtime {
     public int getStartHour(){
         return this.startHour;
     }
+    public String getDateTag(){
+        return this.dateTag;
+    }
 }
