@@ -26,5 +26,30 @@ public class Hall {
         return grid[rows][cols];
     }
 
+    int countAvailable(){
+        int count=0;
+        for(int i =1;i<=rows;i++){
+            for(int j=1;j<=cols;j++){
+                if(grid[i][j].isAvailable())
+                    count++;
+            }
+
+        }
+        return count;
+
+    }
+
+    void displayLayout(){
+
+        if(grid[rows][cols].isAvailable())
+            String.format(".");
+        else
+        if(grid[rows][cols].isPremium())
+            String.format("*");
+        else
+            String.format("#");
+
+    }
+
 
 }
