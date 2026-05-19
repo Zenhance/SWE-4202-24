@@ -33,15 +33,17 @@ public boolean getIsBooked(){
 }
 
 public void book(){
-
+  isBooked=true
 }
 
 public void release(){
 
-
+isbooked=false;
 }
 
 public boolean isAvailable(){
+
+
 
 
 }
