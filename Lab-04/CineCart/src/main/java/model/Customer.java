@@ -30,6 +30,6 @@ public class Customer {
         }
     }
     public String toString(){
-        return
+        return id+" "+name+" "+age+" "+loyaltyTier;
     }
 }
