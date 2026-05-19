@@ -6,7 +6,7 @@ public class Showtime {
     int id;
     Movie movie;
     Hall hall;
-    int startHour (0–23);
+    int startHour;
     String dateTag;
 
 

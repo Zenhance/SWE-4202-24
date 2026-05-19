@@ -1,7 +1,7 @@
 package model;
 
 public class ConcessionItem {
-    String code;
-    String name;
-    double unitPrice;.
+   private String code;
+    private String name;
+    private double unitPrice;.
 }
