@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="showtime class completion">
+    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="customer class">
       <change beforePath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/model/Customer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,22 +69,6 @@
       <workItem from="1778092688155" duration="94000" />
       <workItem from="1778092809585" duration="6679000" />
       <workItem from="1778163384097" duration="3333000" />
-    </task>
-    <task id="LOCAL-00001" summary="a change">
-      <option name="closed" value="true" />
-      <created>1777475814049</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1777475814049</updated>
-    </task>
-    <task id="LOCAL-00002" summary="amending the answer of part A">
-      <option name="closed" value="true" />
-      <created>1777476369208</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1777476369208</updated>
     </task>
     <task id="LOCAL-00003" summary="amending the answer of part A 2">
       <option name="closed" value="true" />
@@ -462,7 +446,23 @@
       <option name="project" value="LOCAL" />
       <updated>1779168073828</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="customer class constructor">
+      <option name="closed" value="true" />
+      <created>1779168218401</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1779168218402</updated>
+    </task>
+    <task id="LOCAL-00051" summary="customer class">
+      <option name="closed" value="true" />
+      <created>1779168438243</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1779168438243</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -492,8 +492,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="part c answer" />
-    <MESSAGE value="completed the ans of part c" />
     <MESSAGE value="completed the answer of part c" />
     <MESSAGE value="comp" />
     <MESSAGE value="completed the ans of part c" />
@@ -517,6 +515,8 @@
     <MESSAGE value="showtime class constructor" />
     <MESSAGE value="showtime class" />
     <MESSAGE value="showtime class completion" />
-    <option name="LAST_COMMIT_MESSAGE" value="showtime class completion" />
+    <MESSAGE value="customer class constructor" />
+    <MESSAGE value="customer class" />
+    <option name="LAST_COMMIT_MESSAGE" value="customer class" />
   </component>
 </project>

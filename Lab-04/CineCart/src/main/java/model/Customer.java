@@ -39,4 +39,17 @@ public int getAge(){
 public String getLoyaltyTier(){
     return loyaltyTier;
 }
+
+public double getTierDiscount(){
+
+    double res=0;
+    if(loyaltyTier=="GOLD"){
+        res=0.15;
+        else if(loyaltyTier=="Silver"){
+            res=0.08;
+        }
+        else res=0.00;
+    }
+    return res;
+}
 }
