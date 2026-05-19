@@ -22,7 +22,8 @@ public boolean getIsPremium(){
         return isPremium;
 }
 public boolean getIsBooked(){
-    return isBooked;}
+    return isBooked;
+    }
 
 public void book(){
     isBooked=true;
@@ -31,8 +32,7 @@ public void release(){
         isBooked=false;
 }
 public boolean isAvailable(){
-        if(isBooked==true) return false;
-        else return true;
+        return !isBooked;
 }
 public String toString(){
         String base= "R"+row+"C"+col;
