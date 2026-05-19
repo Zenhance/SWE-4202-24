@@ -19,6 +19,12 @@ public class Showtime {
     public int getId{
         return id;
     }
+    public getMovie(){
+        return movie;
+    }
+    public getHall(){
+        return hall;
+    }
 
 
 
