@@ -44,11 +44,13 @@ public double getTierDiscount(){
 
     double res=0.00;
     if(loyaltyTier=="GOLD"){
-        res=0.15;
+        res=0.15;}
         else if(loyaltyTier=="Silver"){
             res=0.08;
         }
-    }
+
     return res;
 }
+
+
 }
