@@ -34,6 +34,8 @@ public class Showtime {
         }
     }
     String toString(){
-
+    String s;
+    s=""+" Inception @ Hall 2 - "+startHour+":00 (Fri)";
+    return s;
     }
 }
