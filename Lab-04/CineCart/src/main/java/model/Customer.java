@@ -6,6 +6,10 @@ public class Customer {
     private int age;
     private String loyaltyTier;
 
+    public int getAge() {
+        return age;
+    }
+
     public Customer(int id, String name, int age){
         this.id = id;
         this.name = name;
@@ -19,6 +23,20 @@ public class Customer {
         this.age = age;
         this.loyaltyTier = tier;
     }
+
+    public String getLoyaltyTier() {
+        return loyaltyTier;
+    }
+
+    public int getId(){
+        return id;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+
 
 
 
