@@ -59,4 +59,22 @@ public class Hall
         return grid;
     }
 
+    public void displayLayout()
+    {
+
+        for(int i = 0; i < rows; i++)
+        {
+            for(int j = 0; j < cols; j++)
+            {
+                if (grid[i][j].isAvailable())
+                {
+                    if(grid[i][j].isPremium()) System.out.print("*");
+                    else System.out.print(".");
+                }
+                else System.out.print("#");
+            }
+        }
+
+        System.out.println("");
+    }
 }
