@@ -44,12 +44,11 @@ public class Seat {
     }
 
     public String toString() {
-        String string = String.format("R%dC%d", row, col);
+        String string = String.format("R%dC%d ", row, col);
         String flag1;
-        if (isPremium) {
-            flag1 = "*";
-            return flag1;
-        }
-
+        if (isPremium) System.out.println("*");
+        if(isBooked) System.out.println("#");
+        return string;
     }
+}
 
