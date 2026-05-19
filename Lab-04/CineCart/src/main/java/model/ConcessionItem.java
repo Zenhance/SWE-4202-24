@@ -18,4 +18,7 @@ public class ConcessionItem {
     public double getUnitPrice(){
         return unitPrice;
     }
+    public String toString(){
+        return code+" - "+name+" - BDT"+unitPrice;
+    }
 }
