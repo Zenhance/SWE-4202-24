@@ -24,6 +24,7 @@ public class Seat {
     }
 
     public boolean isBooked(){
+
         return isBooked;
     }
    public void book(){
@@ -34,20 +35,17 @@ public class Seat {
         isBooked=false;
    }
    public boolean isAvailable(){
-        return isBooked;
+
+        return !isBooked;
    }
    @Override
 
     public String toString(){
-     return String.format();
+        String result ="R"+row+"C"+col;
+        if(isPremium){
+            result+="*";
+        }
+        else result+="#";
+        return result;
    }
-
-
-
-
-
-
-
-
-
 }
