@@ -25,8 +25,11 @@ public double getUnitPrice(){
     return unitPrice;
 }
 
-public String toString(){
+public String toString(){  //"POP - Popcorn (Large) - BDT 220.00".
 
+    String res=String.format("POP - %s (%d) - BDT %.2f",name,code,unitPrice);
+
+    return res;
 
 }
 
