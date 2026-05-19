@@ -28,7 +28,7 @@ public class Cart {
     }
 
     public void addItem(ConcessionItem c,int qty){
-        if(itemcount<MAX_ITEMS && qty<=0){
+        if(itemcount<MAX_ITEMS && qty>0){
             items[itemcount]=c;
             itemcount+=qty;
         }
@@ -72,5 +72,14 @@ public class Cart {
             sum+=items[i].getUnitPrice()*qtys[i];
         }
         return sum;
+    }
+
+    public boolean hasItem(String code){
+        for(int i=0;i<MAX_ITEMS;i++){
+            if(items[i].getCode().equals(code)){
+                return true;
+            }
+        }
+        return false;
     }
 }
