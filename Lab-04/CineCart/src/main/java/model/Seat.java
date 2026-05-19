@@ -40,4 +40,16 @@ public class Seat {
     public boolean isAvailable() {
         return !isBooked;
     }
+
+    public String toString() {
+        String position = "R" + row + "C" + col;
+
+        if (isPremium) {
+            position += "*";
+        } else if (isBooked) {
+            position += "#";
+        }
+
+        return position;
+    }
 }
