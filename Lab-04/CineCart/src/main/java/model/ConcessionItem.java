@@ -18,5 +18,7 @@ public class ConcessionItem {
     public double getUnitPrice(){
         return this.unitPrice;
     }
-    public String
+    public String toString(){
+        return code+" - "+name+" (Large) - BDT"+unitPrice;
+    }
 }
