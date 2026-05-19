@@ -9,6 +9,9 @@ public class Showtime {
     public int startHour;
     public String dateTag;
 
+
+    //Constructor: full five-argument constructor.
+
     public Showtime(int id, Movie movie, Hall hall, int startHour, String dateTag) {
         this.id = id;
         this.movie = movie;
@@ -16,7 +19,34 @@ public class Showtime {
         this.startHour = startHour;
         this.dateTag = dateTag;
     }
-    //Constructor: full five-argument constructor.
+
     //Methods: getters; boolean isPeak() returning true when startHour is between 18 and 21 inclusive;
+
+    public int getId() {
+        return id;
+    }
+
+    public Movie getMovie() {
+        return movie;
+    }
+
+    public Hall getHall() {
+        return hall;
+    }
+
+    public int getStartHour() {
+        return startHour;
+    }
+
+    public String getDateTag() {
+        return dateTag;
+    }
+
+
+    //Methods: getters; boolean isPeak() returning true when startHour is between 18 and 21 inclusive;
+
+
+
+
     //toString() e.g. "[T17] Inception @ Hall 2 - 19:00 (Fri)".
 }
