@@ -20,6 +20,9 @@ public class Seat {
     boolean isAvailable(){
         return !isBooked;
     }
+    boolean isPremium(){
+        return isPremium;
+    }
     public String toString(){
         if(isPremium){
            return "R"+row+"C"+col+ "*";
