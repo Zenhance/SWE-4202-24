@@ -34,5 +34,17 @@ public class Showtime {
     public String getDateTag() {
         return dateTag;
     }
+    public boolean isPeak(){
+            boolean peak;
+            if(startHour>=18 && startHour<=21){
+                peak=true;
+
+            }
+            else{
+                peak=false;
+            }
+            return peak;
+    }
+
 
 }
