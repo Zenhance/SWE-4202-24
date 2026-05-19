@@ -6,7 +6,7 @@ public class Seat {
     private boolean isPremium;
     private boolean isBooked;
 
-    public Seat(int row, int col, boolean isPremium, boolean isBooked) {
+    public Seat(int row, int col, boolean isPremium) {
         this.row = row;
         this.col = col;
         this.isPremium = isPremium;
@@ -20,12 +20,19 @@ public class Seat {
     public int getCol() {
         return col;
     }
-
     public boolean isPremium() {
         return isPremium;
     }
-    public boolean isAvailable(){
+    public boolean isBooked(){
         return isBooked;
+    }
+    public boolean isAvailable(){
+        if (isBooked == false){
+            return true;
+        }
+        else {
+            return false;
+        }
     }
     public void book(){
         isBooked = true;
