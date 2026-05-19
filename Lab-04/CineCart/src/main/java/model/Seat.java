@@ -28,5 +28,25 @@ public class Seat {
     public boolean getIsBooked(){
         return isBooked;
     }
+
+    public void book(){
+        isBooked = true;
+    }
+
+    public void release(){
+        isBooked = false;
+    }
+
+    public boolean isAvailable(){
+        if (isBooked) return false;
+        if (!isBooked) return true;
+    }
+
+    public toString(){
+        String string = new String.format("R%dC%d",row,col);
+        if (isPremium) string = string + "*";
+        if (isBooked) string = string + "#";
+    }
+
 }
 
