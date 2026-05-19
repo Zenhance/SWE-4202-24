@@ -32,5 +32,12 @@ public class Cart {
         }
         items[itemCount]=c;
         qtys[itemCount]=qty;
+        itemCount++;
+    }
+    public Customer getOwner(){
+        return owner;
+    }
+    public Ticket[] getTickets(){
+        return tickets;
     }
 }
