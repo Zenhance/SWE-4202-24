@@ -29,5 +29,7 @@ public class Ticket {
         return pricePaid;
     }
 
-
+    public String toString() {
+        return String.format("");
+    }
 }
