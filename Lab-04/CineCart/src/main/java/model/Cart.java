@@ -13,14 +13,16 @@ int[] qtys;
  public Cart(Customer owner,Ticket[] tickets,int ticketCount,ConcessionItem[] items,int[] qtys,int itemCount){
      this.itemCount=itemCount;
      this.owner=owner;
-     this.tickets=tickets;
+     this.tickets= new Ticket[MAX_TICKETS];
      this.qtys=qtys;
-     this.itemCount=itemCount;
-     this.items=items;
+     this.items=new ConcessionItem[MAX_ITEMS];
+     this.ticketCount=0;
 
  }
  public void addTicket(Ticket t){
+             if(ticketCount<MAX_TICKETS){
 
+             }
  }
  public Customer getOwner(){
      return owner;
@@ -41,8 +43,11 @@ int[] qtys;
     public int getTicketCount() {
         return ticketCount;
     }
+
+
+public Ticket[] getTickets() {
+    return tickets;
 }
 
-public Ticket getTicket(){
-    return
+
 }
