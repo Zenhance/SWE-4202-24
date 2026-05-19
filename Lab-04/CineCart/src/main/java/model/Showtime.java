@@ -6,4 +6,21 @@ public class Showtime {
     private Hall hall;
     private int startHour;
     private String dateTag;
+
+    //constructor
+    public Showtime{
+        this.id=id;
+        this.movie=movie;
+        this.hall=hall;
+        this.startHour=startHour;
+        this.dateTag=dateTag;
+    }
+
+
+
+
+
+
+
+
 }
