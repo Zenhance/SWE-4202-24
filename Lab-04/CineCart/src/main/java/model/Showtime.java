@@ -25,5 +25,9 @@ public class Showtime
     {
         return movie;
     }
+    public Hall getHall()
+    {
+        return hall;
+    }
 
 }
