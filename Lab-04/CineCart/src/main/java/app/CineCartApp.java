@@ -1,10 +1,13 @@
 package app;
-
+import model.Movie;
 import io.CsvLoader;
+import data.ShowtimeBoard;
+import model.Hall;
+import data.ConcessionMenu;
+import model.Customer;
+import engine.CheckoutEngine;
+import model.Cart;
 
-import model.*;
-import data.*;
-import engine.*;
 
 public class CineCartApp {
 
