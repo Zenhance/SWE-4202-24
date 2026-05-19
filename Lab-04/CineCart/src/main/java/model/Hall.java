@@ -10,10 +10,13 @@ public class Hall {
         this.id = id;
         this.rows = rows;
         this.cols = cols;
-        for(int i = 0; i < rows; i++) {
-            for(int j = 0; j < cols; j++) {
-                grid.isPremium = (i < premiumRows);
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                grid[i][j] = new Seat(i, j, i < premiumRows);
+
             }
         }
     }
+
+
 }
