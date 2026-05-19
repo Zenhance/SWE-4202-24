@@ -39,4 +39,9 @@ public class Showtime {
         if(startHour >= 18 && startHour <= 21) return true;
         else                                   return false;
     }
+
+    public String toString(){
+        String out = String.format("[T%d] %s @ Hall %d - %d:00 (%s)", movie.getId(), movie.getTitle(), id, startHour, dateTag);
+        return out;
+    }
 }
