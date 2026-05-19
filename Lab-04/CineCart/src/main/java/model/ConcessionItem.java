@@ -12,5 +12,8 @@ public class ConcessionItem {
     public String getCode(){
         return this.code;
     }
+    public String getName(){
+        return this.name;
+    }
 
 }
