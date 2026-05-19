@@ -49,4 +49,8 @@ public class Customer {
         return ret;
     }
 
+    public String toString(){
+        return "[Customer #" + id + "] " + name + " | Age: " + age + " | Tier: " + loyaltyTier;
+    }
+
 }
