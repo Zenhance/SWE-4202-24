@@ -23,4 +23,8 @@ public class Hall {
         }
     }
 
+    public Seat getSeat(int row,int col){
+        return grid[row][col];
+    }
+
 }
