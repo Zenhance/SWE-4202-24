@@ -14,5 +14,11 @@ public class Showtime {
         this.startHour=startHour;
         this.dateTag=dateTag;
     }
+    public int getId(){return id;}
+    public Movie getMovie(){return movie;}
+    public Hall getHall(){return hall;}
+    public int getStartHour(){return startHour;}
+    public String getDateTag(){return dateTag;}
+
 
 }
