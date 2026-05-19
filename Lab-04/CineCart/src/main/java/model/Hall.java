@@ -32,4 +32,16 @@ public class Hall  {
 
         return count;
     }
+
+    public void displayLayout() {
+        for (int r=0; r<rows; r++) {
+            for (int c=0; c<cols; c++) {
+                if (!grid[r][c].isAvailable()) System.out.print("#");
+                else if (grid[r][c].isPremium()) System.out.print("*");
+                else System.out.print(".");
+            }
+            System.out.println();
+        }
+    }
+
 }
