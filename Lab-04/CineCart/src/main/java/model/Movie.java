@@ -42,6 +42,7 @@ public class Movie {
             return 13;}
         else if (rating.compareTo("R")==0) {
             return 18;}
+        return  0;
     }
     public String toString(){
         return title + " (" + rating + ") " + durationMin + "min - BDT " + String.format("%.2f", basePrice);
