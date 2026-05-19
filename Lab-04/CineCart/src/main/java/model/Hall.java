@@ -42,5 +42,21 @@ public class Hall
         return count;
     }
 
+    public int getId()
+    {
+        return id;
+    }
+    public int getRows()
+    {
+        return rows;
+    }
+    public int getCols()
+    {
+        return cols;
+    }
+    public Seat[][] getGrid()
+    {
+        return grid;
+    }
 
 }
