@@ -29,4 +29,7 @@ public class Customer {
     public String getLoyaltyTier() {
         return loyaltyTier;
     }
+    public String toString(){
+        return String.format("%s : %s", name, loyaltyTier);
+    }
 }
