@@ -12,10 +12,12 @@ public class Cart {
     private int[] qtys;
     private int itemCount;
     //constructor
-    public Cart(Customer owner){
-        this.owner=owner;
+    public Cart(Customer owner) {
+        this.owner = owner;
         tickets = new Ticket[MAX_TICKETS];
         items = new ConcessionItem[MAX_ITEMS];
-        qtys= new int[MAX_ITEMS];
+        qtys = new int[MAX_ITEMS];
+        ticketCount = 0;
+        itemCount = 0;
     }
 }
