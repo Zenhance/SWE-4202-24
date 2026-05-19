@@ -1,5 +1,7 @@
 package mode;
 
+import model.Seat;
+
 public class Hall {
     private int id;
     private int rows;
@@ -10,10 +12,10 @@ public class Hall {
         this.id = id;
         this.rows = rows;
         this.cols = cols;
-        this.grid = new Seat[rows][cols]
+        this.grid = new Seat[rows][cols];
 
 
-        for(int r = 0; r < rows, r++){
+        for(int r = 0; r < rows; r++){
             for (int c = 0; c < cols; c++){
                 grid[r][c] = new Seat(r, c, r < premiumRows);
             }
@@ -33,10 +35,27 @@ public class Hall {
         for (int r = 0; r < rows; r++){
             for(int c = 0; c < cols; c++){
                 if((grid[r][c]).isAvailable())
-                    count++
+                    count++;
 
             }
         }
         return count;
+    }
+
+    public void displayLayout(){
+        for (int r = 0; r < rows; r++){
+            for(int c = 0; c < cols; c++){
+                if((grid[r][c]).isAvailable())
+                    System.out.println(".");
+
+                if(!grid[r][c].isAvailable())
+                    System.out.println("#");
+
+                if(grid[r][c].isPremium())
+                    System.out.println("*");
+
+
+            }
+        }
     }
 }
