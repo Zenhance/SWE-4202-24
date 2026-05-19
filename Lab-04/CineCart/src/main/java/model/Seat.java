@@ -23,7 +23,7 @@ public class Seat {
         return isPremium;
     }
     public boolean isBooked() {
-        return !isBooked;
+        return isBooked;
     }
 
     public void book(){
@@ -35,7 +35,7 @@ public class Seat {
     }
 
     public boolean isAvailable(){
-        return isBooked;
+        return !isBooked;
     }
 
     public String toString(){
