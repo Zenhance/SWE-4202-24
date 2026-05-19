@@ -1,15 +1,14 @@
 package model;
-import model.Hall;
 
 public class Showtime {
     private int id;
     private Movie movie;
-    private Hall hall;
+    private mode.Hall hall;
     private int startHour;
     private String dateTag;
 
 
-    public Showtime(int id, Movie movie, Hall hall, int startHour,
+    public Showtime(int id, Movie movie, mode.Hall hall, int startHour,
                     String dateTag){
         this.id = id;
         this.hall = hall;
@@ -21,7 +20,7 @@ public class Showtime {
         return id;
     }
 
-    public Hall getHall() {
+    public mode.Hall getHall() {
         return hall;
     }
 
@@ -35,5 +34,9 @@ public class Showtime {
 
     public boolean isPeak(){
         return startHour >= 18 && startHour <= 21;
+    }
+
+    public String toString(){
+        return String.format("[T%d] %s @ Hall %d - %d:00 (%s)", id, movie.getTitle(), startHour, dateTag);
     }
 }
