@@ -20,7 +20,21 @@ public class Hall {
             }
             }
         }
+    }
+    public int getid(){
+        return id;
+    }
+    public int getRows(){
+        return rows;
+    }
+    public int getCols(){
+        return cols;
+    }
+    public Seat[][] getGrid() {
+        return grid;
+    }
 
-
+    public Seat getSeat(int rows, int cols){
+        return grid[rows][cols];
     }
 }
