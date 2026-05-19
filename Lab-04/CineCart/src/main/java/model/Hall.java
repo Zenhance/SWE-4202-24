@@ -50,6 +50,24 @@ public class Hall {
         return count;
     }
 
+    public void displayLayout(){
+        for(int r=0;r<rows;r++){
+            for(int c=0;c<cols;c++){
+                if(grid[r][c].isBooked()){
+                    System.out.println("#");
+                }
+                else if (grid[r][c].isPremium()) {
+                    System.out.println("*");
+
+                }
+                else{
+                    System.out.println(".");
+                }
+            }
+        }
+    }
+
+
 
 
 
