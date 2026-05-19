@@ -22,7 +22,7 @@ public class Ticket {
     public int getCol(){
         return col;
     }
-    public double getpricePaid(){
+    public double getPricePaid(){
         return pricePaid;
     }
 
