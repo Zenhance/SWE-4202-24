@@ -25,8 +25,8 @@ public class Cart {
     public void addTicket(Ticket t){
         if(ticketCount < MAX_TICKETS){
             tickets[ticketCount] = t;
+            ticketCount++;
         }
-        ticketCount++;
     }
 
     public void addItem(ConcessionItem c, int qty){
