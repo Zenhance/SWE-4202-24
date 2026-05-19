@@ -34,5 +34,8 @@ public class Showtime
     {
         return startHour >= 18 && startHour <= 21;
     }
-
+    public String toString()
+    {
+        return String.format("[T%d] %s @ Hall %d - %d:00 (%s)", id, movie.getTitle(), hall.getId(), startHour, dateTag);
+    }
 }
