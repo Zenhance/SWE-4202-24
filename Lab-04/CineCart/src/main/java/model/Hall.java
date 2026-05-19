@@ -44,4 +44,26 @@ public class Hall {
         return count;
     }
 
+    // void displayLayout() — prints an ASCII map of the hall: . for available, # for booked, * for
+    // premium-available.
+
+        public void displayLayout() {
+            for (int r=0; r<rows; r++) {
+                for (int c=0; c<cols; c++) {
+
+                    if(grid[r][c].isAvailable()) {
+                        System.out.print(". ");
+                    }
+
+                    if(grid[r][c].isBooked()) {
+                        System.out.print("# ");
+                    }
+
+                    if(grid[r][c].isPremium()) {
+                        System.out.print("* ");
+                    }
+                }
+                System.out.printf("%n");
+            }
+        }
     }
