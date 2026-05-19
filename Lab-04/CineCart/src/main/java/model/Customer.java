@@ -12,7 +12,13 @@ public class Customer {
         this.age=age;
         this.loyaltyTier="BASIC";
     }
-
+//getters
+    public int getId(){
+        return id;
+    }
+    public String getName(){
+        return name;
+    }
 
 
 
