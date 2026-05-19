@@ -41,4 +41,9 @@ public class Showtime
     {
         return dateTag;
     }
+
+    public String toString()
+    {
+        return "T"+id+" "+movie+" @ Hall "+getHall()+" - "+startHour+":00 "+dateTag;
+    }
 }
