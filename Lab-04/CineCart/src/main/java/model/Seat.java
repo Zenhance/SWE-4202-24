@@ -50,6 +50,19 @@ public boolean isAvailable(){
 
 }
 
+public String toString(){
+
+
+    String trailing="#";
+
+    if (isPremium) trailing="*";
+
+    String res="R"+row+"C"+col+trailing;
+
+    return res;
+
+}
+
 
 
 
