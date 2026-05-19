@@ -35,5 +35,10 @@ public class Seat
         return isBooked;
     }
 
+    public boolean isAvailable()
+    {
+        return !isBooked;
+    }
+
 
 }
