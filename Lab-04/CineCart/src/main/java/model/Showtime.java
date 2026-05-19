@@ -3,11 +3,11 @@ package model;
 public class Showtime {
     // Fields: int id, Movie movie, Hall hall, int startHour (0–23), String dateTag.
 
-    public int id;
-    public Movie movie;
-    public Hall hall;
-    public int startHour;
-    public String dateTag;
+    private int id;
+    private Movie movie;
+    private Hall hall;
+    private int startHour;
+    private String dateTag;
 
 
     //Constructor: full five-argument constructor.
@@ -51,6 +51,7 @@ public class Showtime {
     }
 
 
-
     //toString() e.g. "[T17] Inception @ Hall 2 - 19:00 (Fri)".
+
+
 }
