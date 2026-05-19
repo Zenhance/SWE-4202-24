@@ -28,8 +28,7 @@ public class Ticket {
         return pricePaid;
     }
     public String toString() {
-        Seat s = showtime.getHall().getSeat(row, col);
-        String out = String.format("T%d - %s @ BDT %lf", showtime.getId(), s.toString(), pricePaid);
+        String out = String.format("T%d - R%dC%d @ BDT %lf", showtime.getId(), row, col, pricePaid);
         return out;
     }
 }
