@@ -26,6 +26,6 @@ public class Ticket {
         return this.pricePaid;
     }
     public String toString(){
-        return "T"+showtime.id+" - R"+row+"C"+col+" @ BDT "+pricePaid;
+        return "T"+showtime.getId()+" - R"+row+"C"+col+" @ BDT "+pricePaid;
     }
 }
