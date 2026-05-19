@@ -6,7 +6,7 @@ public class ConcessionItem {
     private double unitPrice;
 
     //constructor
-    public ConcessionItem{
+    public ConcessionItem(String code,String name,double unitPrice){
         this.code=code;
         this.name=name;
         this.unitPrice=unitPrice;
@@ -21,10 +21,8 @@ public class ConcessionItem {
     public double getUnitPrice(){
         return unitPrice;
     }
-
-
-
-
-
+    public String toString(){
+        return code + "-" + name + " - BDT " +String.format("%.2f",unitPrice);
+    }
 
 }
