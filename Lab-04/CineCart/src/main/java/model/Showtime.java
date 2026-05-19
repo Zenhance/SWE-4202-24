@@ -1,6 +1,6 @@
 package model;
 
-public class Showtime {
+public class Showtime{
     private int id;
     private Movie movie;
     private Hall hall;
@@ -19,7 +19,7 @@ public class Showtime {
     public int getId() {
         return id;
     }
-}
+
 
     public Movie getMovie() {
         return movie;
@@ -38,14 +38,15 @@ public class Showtime {
     }
     public boolean isPeak() {
         return startHour >=18 && startHour <=21;
-        //return true;
-        //return false;
+       // return true;
+       // return false;
    }
 
-}
+
 
 @Override
 public String toString() {
-     String out=String.format("[T%d] %s @ Hall %d %02d:00 (%s)", id, movie.getTitle(), hall.getId(), startHour, dateTag);
+   return String.format("[T%d] %s @ Hall %d %02d:00 (%s)", id, movie.getTitle(),getId(), startHour, dateTag);
 
+}
 }
