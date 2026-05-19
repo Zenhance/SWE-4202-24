@@ -46,8 +46,25 @@ public class Hall
 
     public void displayLayout()
     {
-
+        for(int r=0;r<rows;r++)
+        {
+            for(int c=0;c<cols;c++)
+            {
+                Seat seat = grid[r][c];
+                if(seat.isPremium())
+                {
+                    System.out.print("*");
+                }
+                if(seat.isBooked())
+                {
+                    System.out.print("#");
+                }
+                if(seat.isAvailable())
+                {
+                    System.out.print(".");
+                }
+            }
+            System.out.println();
+        }
     }
-
-
 }
