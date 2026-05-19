@@ -6,4 +6,8 @@ public class Hall {
     private int cols;
     private Seat[][] grid;
 
+    public Hall(int id, int rows, int cols, int premiumRows) {
+
+    }
+
 }
