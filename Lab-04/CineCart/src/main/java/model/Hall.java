@@ -63,6 +63,7 @@ public class Hall {
                 }
             }
             System.out.println();
+
         }
     }
 }
