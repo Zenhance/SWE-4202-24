@@ -2,15 +2,15 @@ package model;
 
 public class Showtime {
     private int id;
-    private Movie m;
-    private Hall h;
+    private Movie movie;
+    private Hall hall;
     private int startHour;
     private String dateTag;
 
-    public Showtime(int id, Movie m, Hall h, int startHour, String dateTag) {
+    public Showtime(int id, Movie movie, Hall hall, int startHour, String dateTag) {
         this.id = id;
-        this.m = m;
-        this.h = h;
+        this.movie = movie;
+        this.hall = hall;
         this.startHour = startHour;
         this.dateTag = dateTag;
     }
@@ -19,12 +19,12 @@ public class Showtime {
         return id;
     }
 
-    public Hall getH() {
-        return h;
+    public Hall getHall() {
+        return hall;
     }
 
-    public Movie getM() {
-        return m;
+    public Movie getMovie() {
+        return movie;
     }
 
     public String getDateTag() {
@@ -34,4 +34,8 @@ public class Showtime {
     public int getStartHour() {
         return startHour;
     }
+
+
+
+
 }
