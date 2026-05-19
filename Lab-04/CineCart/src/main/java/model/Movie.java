@@ -32,8 +32,8 @@ public class Movie{
       public double getBasePrice(){
           return baseprice; }
 
-      public int getMinAge(){
-          switch(rating){
+      public int getMinAge() {
+          switch (rating) {
               case "G":
                   return 0;
               case "PG":
@@ -41,5 +41,13 @@ public class Movie{
               case "PG-13":
                   return 13;
               case "R":
-                  return 18;}
-       return 0;
+                  return 18;
+
+              default:
+                  return 0;
+          }
+      }
+      public String toString(){
+
+             return String.format("%s (%s) %dmin - BDT %.2f",title,rating,durationMin,basePrice);
+}
