@@ -41,6 +41,11 @@ public class Customer {
         };
     }
 
+    public String toString(){
+        String out = String.format("[T%d] %s (%d yrs) [%s]", id, name, age, loyaltyTier);
+        return out;
+    }
+
 }
 
 
