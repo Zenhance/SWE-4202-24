@@ -13,3 +13,15 @@ public ConcessionItem(String code, String name, double unitPrice){
     this.unitPrice=unitPrice;
 }
 
+public String getCode(){
+    return code;
+}
+
+public String getName(){
+    return name;
+}
+
+public double getUnitPrice(){
+    return unitPrice;
+}
+
