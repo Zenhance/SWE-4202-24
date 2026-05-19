@@ -50,7 +50,5 @@ public String toString(){  //"[T17] Inception @ Hall 2 - 19:00 (Fri)".
         String res=String.format("[%d] %s @ Hall %d - %d (%s)",id,movie.getTitle(),hall.getID(),startHour,dateTag);
 
         return res;
-
-
     }
 }
