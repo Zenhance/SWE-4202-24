@@ -15,6 +15,10 @@ public class Showtime {
         this.startHour=startHour;
         this.dateTag=dateTag;
     }
+    //getters
+    public int getId{
+        return id;
+    }
 
 
 
