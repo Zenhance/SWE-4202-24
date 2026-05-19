@@ -1,3 +1,5 @@
+package module;
+
 public class Movie{
     private int id;
     private int durationMin;
