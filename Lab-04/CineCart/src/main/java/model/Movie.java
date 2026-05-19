@@ -7,7 +7,7 @@ public class Movie {
     private final int durationMin;
     private final double basePrice;
 
-    Movie(int id, String title, String rating, int durationMin, double basePrice) {
+    public Movie(int id, String title, String rating, int durationMin, double basePrice) {
         this.id = id;
         this.title = title;
         this.rating = rating;
