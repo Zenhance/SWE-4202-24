@@ -30,5 +30,26 @@ public class Seat {
         return isBooked;
     }
 
+    // Implementing other functions
+    public void book() {
+        isBooked = true;
+    }
 
+    public void release() {
+        isBooked = false;
+    }
+
+    public boolean isAvailable() {
+        if (isBooked) {
+            return false;
+        } else return true;
+    }
+
+    @Override
+    public String toString() {
+        String trailing = "#";
+
+        if (isPremium) trailing = "*";
+        return String.format("R%d C%d %s", row, col, trailing);
+    }
 }
