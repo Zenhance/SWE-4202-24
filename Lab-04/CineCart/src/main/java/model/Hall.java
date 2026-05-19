@@ -24,4 +24,53 @@ public Hall(int id, int rows, int cols, int premiumRows){
         }
     }
 }
+
+    public int getId() {
+        return id;
+    }
+
+    public int getRows() {
+        return rows;
+    }
+
+    public int getCols() {
+        return cols;
+    }
+
+    public Seat[][] getGrid() {
+        return grid;
+    }
+    public Seat getSeat(int row, int col) {
+        return grid[row][col];
+    }
+
+    public int countAvailable() {
+        int count = 0;
+        for (int r = 0; r < rows; r++) {
+            for (int c = 0; c < cols; c++) {
+                if (grid[r][c].isAvailable()) {
+                    count++;
+                }
+            }
+        }
+    return count;
+    }
+
+    public void displayLayout(){
+        for (int r = 0; r < rows; r++) {
+            for (int c = 0; c < cols; c++) {
+                Seat seat = grid[r][c];
+                if(!seat.isAvailable()){
+                    System.out.print("# ");
+                }
+                else if (seat.isPremium()){
+                    System.out.print("* ");
+                }
+
+                else {
+                    System.out.print(". ");
+                }
+            }
+    }
+}
 }
