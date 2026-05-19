@@ -14,4 +14,39 @@ public Showtime( int id, Movie movie, Hall hall, int startHour, String dateTag){
     this.dateTag = dateTag;
 }
 
+    public int getId() {
+        return id;
+    }
+
+    public Movie getMovie() {
+        return movie;
+    }
+
+    public Hall getHall() {
+        return hall;
+    }
+
+    public int getStartHour() {
+        return startHour;
+    }
+
+    public String getDateTag() {
+        return dateTag;
+    }
+
+    public boolean isPeak(){
+    return
+    }
+
+    public String toString(){
+
+        String seat = "[T" + id + "] "
+                + movie.getTitle()
+                + "@Hall "
+                + hall.getId()
+                + "-" +
+                startHour + ":00 (" +
+                dateTag + ")";
+        return seat;
+}
 }
