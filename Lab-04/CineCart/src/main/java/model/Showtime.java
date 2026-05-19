@@ -30,4 +30,13 @@ public class Showtime {
     public String getDateTag() {
         return dateTag;
     }
+
+    public boolean isPeak() {
+        if(startHour >= 18 && startHour <= 21)
+            return true;
+    }
+
+    public String toString() {
+        return String.format("[%d] %s @ Hall %d - %d (%s)", id, movie, hall, startHour, dateTag);
+    }
 }
