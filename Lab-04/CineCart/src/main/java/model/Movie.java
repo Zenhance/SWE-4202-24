@@ -1,4 +1,7 @@
 package model;
+
+import java.time.Duration;
+
 public class Movie {
     private int id;
     private String title;
@@ -16,10 +19,6 @@ public class Movie {
     }
 
 
-    public int getMinAge() {
-        return
-    }
-
     public int getId() {
         return id;
     }
@@ -32,5 +31,11 @@ public class Movie {
         return rating;
     }
 
+    public int getDurationMin(){
+        return durationMin;
+    }
 
+    public double getBesePrice() {
+        return besePrice;
+    }
 }
