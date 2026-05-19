@@ -28,4 +28,21 @@ public class Hall {
         }
         return cnt;
     }
+
+    public void displayLayout(){
+        for(int i = 0; i < rows; i++){
+            for(int j = 0; j < cols; j++){
+                if(grid[i][j].isAvailable()){
+                    System.out.print(".");
+                }
+                else if(grid[i][j].isBooked()){
+                    System.out.print("#");
+                }
+                else if(grid[i][j].isPremium()){
+                    System.out.print("*");
+                }
+            }
+            System.out.println();
+        }
+    }
 }
