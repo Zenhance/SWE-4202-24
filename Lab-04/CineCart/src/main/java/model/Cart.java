@@ -1,10 +1,21 @@
 package model;
 
 public class Cart {
-    public Customer owner;
-    public Ticket[] tickets;
-    public int ticketCount;
-    public ConcessionItem[] items;
-    public int[] qtys;
-    public int itemCount;
+public static final int MAX_TICKETS=20;
+public static final int MAX_ITEMS=20;
+private Customer owner;
+private Ticket[] tickets;
+private int TicketCount;
+private int ItemCount;
+private ConcessionItem[] items;
+private int[] qtys;
+private int itemCount;
+public Cart(Customer owner){
+    this.owner=owner;
+    tickets=new Ticket[MAX_TICKETS];
+    items=new ConsessionItem[MAX_ITEMS];
+    qtys=new int[MAX_ITEMS];
+    TicketCount=0;
+    itemCount=0;
+}
 }
