@@ -45,6 +45,10 @@ public class Showtime {
 
     //Methods: getters; boolean isPeak() returning true when startHour is between 18 and 21 inclusive;
 
+    public boolean isPeak() {
+        if (startHour >= 18 && startHour <=21 ) return true;
+        return false;
+    }
 
 
 
