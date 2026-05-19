@@ -29,5 +29,19 @@ public class Hall {
             return grid[row][col];
         }
 
+    // int countAvailable() — nested loop over the grid, counting seats whose isAvailable() is true.
+
+    public int countAvailable() {
+        int count = 0;
+        for (int r=0; r<rows; r++) {
+            for (int c=0; c<cols; c++) {
+                if (grid[r][c].isAvailable()) {
+                    count++;
+                }
+            }
+        }
+
+        return count;
+    }
 
     }
