@@ -48,6 +48,17 @@ int[] qtys;
 public Ticket[] getTickets() {
     return tickets;
 }
+   public void addItem(ConcessionItem c, int qty){
 
+    }
+    public double sumTicketsPaid(){
+
+    }
+    public double sumConcessionsRaw(){
+
+    }
+    public boolean hasItem(String code){
+
+    }
 
 }
