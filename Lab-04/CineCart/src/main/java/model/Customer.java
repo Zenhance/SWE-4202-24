@@ -12,6 +12,7 @@ public class Customer {
         this.age=age;
         this.loyaltyTier="BASIC";
     }
+    //2nd constructor
     public Customer{
         this.id=id;
         this.name=name;
@@ -44,15 +45,5 @@ public class Customer {
     public String toString(){
         return "Customer ID:"+ id + ",Name:"+ name +",Age:" + age + ",Tier:"+ loyaltyTier;
     }
-
-
-
-
-
-
-
-
-
-
 
 }
