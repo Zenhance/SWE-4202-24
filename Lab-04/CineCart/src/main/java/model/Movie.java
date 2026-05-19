@@ -3,11 +3,11 @@ package model;
 import java.util.Objects;
 
 public class Movie {
-    int id;
-    String title;
-    String rating;
-    int durationMin;
-    double basePrice;
+    private int id;
+    private String title;
+    private String rating;
+    private int durationMin;
+    private double basePrice;
 
     public Movie(int id, String title, String rating, int durationMin, double basePrice) {
         this.id = id;
@@ -53,6 +53,6 @@ public class Movie {
     }
 
     public String toString() {
-        return String.format("%s (%s) %d - BDT %.2f",title , rating, durationMin,basePrice);
+        return String.format("%s (%s) %d - BDT %.2f", title, rating, durationMin, basePrice);
     }
 }
