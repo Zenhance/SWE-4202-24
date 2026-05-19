@@ -1,10 +1,10 @@
 package model;
 
 public class Hall {
-    int id;
-    int rows;
-    int cols;
-    int premiumRows;
+    private int id;
+    private int rows;
+    private int cols;
+    private int premiumRows;
 
     public Hall(int id, int rows, int cols, int premiumRows) {
         this.id = id;

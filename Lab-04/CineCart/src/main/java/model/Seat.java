@@ -12,4 +12,23 @@ public class Seat {
         this.isPremium = isPremium;
         this.isBooked = isBooked;
     }
+
+    // implementing the getter methods
+    public int getRow() {
+        return row;
+    }
+
+    public int getCol() {
+        return col;
+    }
+
+    public boolean isPremium() {
+        return isPremium;
+    }
+
+    public boolean isBooked() {
+        return isBooked;
+    }
+
+
 }
