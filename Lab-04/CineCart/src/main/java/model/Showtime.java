@@ -20,5 +20,10 @@ public class Showtime {
     public Movie getMovie(){
         return this.movie;
     }
-    public
+    public Hall getHall(){
+        return this.hall;
+    }
+    public int getStartHour(){
+        return this.startHour;
+    }
 }
