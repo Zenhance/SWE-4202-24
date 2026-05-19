@@ -46,6 +46,7 @@ public class Customer {
     public String toString()
     {
         String s;
-        s="Customer ID : " + getName() +
+        s="Customer ID : " + getId() + " name: " + getName() + " age: "+ getAge() +" loyalty status: "+ getLoyaltyTier();
+        return s;
     }
 }
