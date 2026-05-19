@@ -10,6 +10,9 @@ public class Showtime {
     Showtime(int id, Movie movie, Hall hall, int startHour, String dateTag){
         this.id = id;
         this.movie = movie;
-        Hall hall = new Hall
+        hall = new Hall();
+        this.startHour = startHour;
+        this.dateTag = dateTag;
     }
+
 }
