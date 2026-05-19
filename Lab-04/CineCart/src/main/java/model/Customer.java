@@ -36,5 +36,14 @@ public class Customer {
         return loyaltyTier;
     }
 
+    public double getTierDiscount(){
+        switch (loyaltyTier){
+            case "GOLD": return 0.15;
+            case "SILVER": return 0.08;
+            default: return 0.00;
+        }
+    }
+
+
 
 }
