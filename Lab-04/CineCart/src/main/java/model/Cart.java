@@ -5,7 +5,7 @@ public static final int MAX_TICKETS=20;
 public static final int MAX_ITEMS=20;
 private Customer owner;
 private Ticket[] tickets;
-private int TicketCount;
+private int ticketCount;
 private int ItemCount;
 private ConcessionItem[] items;
 private int[] qtys;
@@ -15,13 +15,13 @@ public Cart(Customer owner){
     tickets=new Ticket[MAX_TICKETS];
     items=new ConsessionItem[MAX_ITEMS];
     qtys=new int[MAX_ITEMS];
-    TicketCount=0;
+    ticketCount=0;
     itemCount=0;
 }
 public void addTicket(Ticket t){
-    if(TicketCount<MAX_TICKETS){
-        tickets[TicketCount]=1;
-        TicketCount++;
+    if(ticketCount<MAX_TICKETS){
+        tickets[ticketCount]=1;
+        ticketCount++;
     }
 }
 public void addItem(ConsessionItem c, int qty){
@@ -31,5 +31,25 @@ public void addItem(ConsessionItem c, int qty){
         itemCount++;
     }
 }
-
+public Customer getOwner(){
+    return owner;
+}
+public Ticket[] tickets(){
+    return tickets;
+}
+public int getTicketCount(){
+    return ticketCount;
+}
+public ConcessionItem[] getItems() {
+        return items;
+    }
+    public int getItemCount() {
+        return ItemCount;
+    }
+    public int[] getQtys() {
+        return qtys;
+    }
+public int getitemCount(){
+    return itemCount;
+}
 }
