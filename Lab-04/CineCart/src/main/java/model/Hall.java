@@ -34,6 +34,12 @@ public class Hall {
         return this.grid[rows][cols];
     }
 
+    public Seat getSeat(int row, int col){
+        return this.grid[row][col];
+    }
+
+
+
 
 
 
