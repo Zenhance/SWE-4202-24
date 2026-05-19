@@ -9,6 +9,7 @@ public class Seat {int row;
         this.row=row;
         this.col=col;
         this.isPremium=isPremium;
+        this.isBooked=false;
     }
 
     public boolean isBooked() {
@@ -26,4 +27,24 @@ public class Seat {int row;
     public int getCol() {
         return col;
     }
+
+  public void book(){
+     this.isBooked=true;
+  }
+  public void release(){
+    this.isBooked=false;
+  }
+  public boolean isAvailable(){
+        return !isBooked;
+  }
+  public String toString(){
+        String label="R"+row+"C"+col;
+        if (isPremium){
+            label+="*";
+        }
+        if (isBooked){
+            label+="#";
+        }
+        return label;
+}
 }
