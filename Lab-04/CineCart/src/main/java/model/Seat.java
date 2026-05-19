@@ -33,5 +33,17 @@ public class Seat {
         isBooked =true;
     }
 
+    public void release(){ isBooked =false; }
+
+    public boolean isAvailable(){ return isBooked;}
+
+
+    public String toString(){
+        String base ="R" + row + "C" + col;
+        if(isPremium) base += "*";
+        if(isBooked) base += "#";
+        return base;
+    }
+
 
 }
