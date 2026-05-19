@@ -20,4 +20,17 @@ public class Cart {
         ticketCount = 0;
         itemCount = 0;
     }
+    //methods
+    public void addTicket(Ticket t){
+        if(ticketCount<MAX_TICKETS)
+            tickets[ticketCount]=t;
+            ticketCount++;
+    }
+    public addItem(ConcessionItem c,int qty){
+        if(itemCount>=MAX_ITEMS || qty<=0){
+            return;
+        }
+        items[itemCount]=c;
+        qtys[itemCount]=qty;
+    }
 }
