@@ -50,6 +50,7 @@ public class Customer {
     }
 
     public String toString(){
-
+        String res= id+name+age+loyaltyTier;
+        return res;
     }
 }
