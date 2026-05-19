@@ -28,4 +28,8 @@ public int getCol(){
     return col;
 }
 
+public double getPricePaid(){
+    return pricePaid;
+}
+
 
