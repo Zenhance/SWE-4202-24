@@ -12,12 +12,24 @@ public class Customer {
         this.age=age;
         this.loyaltyTier="BASIC";
     }
+    public Customer{
+        this.id=id;
+        this.name=name;
+        this.age=age;
+        this.loyaltyTier="tier";
+    }
 //getters
     public int getId(){
         return id;
     }
     public String getName(){
         return name;
+    }
+    public int getAge(){
+        return age;
+    }
+    public String getLoyaltyTier(){
+        return loyaltyTier;
     }
 
 
