@@ -34,6 +34,9 @@ public class Seat {
     public void Release(){
         isBooked=false;
     }
+    boolean isAvailable(){
+        return isBooked;
+    }
     public String toString(){
         return "R"+row+"C"+col+(isPremium?"*":"#");
     }
