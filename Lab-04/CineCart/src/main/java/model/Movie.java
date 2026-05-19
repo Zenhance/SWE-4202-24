@@ -3,7 +3,7 @@ package model;
 public class Movie {
     private int id,durationMin;
     private String title,rating;
-    private double baseprize;
+    private double basePrize;
 
 
     public Movie(int id, String title, String rating, int durationMin, double basePrice){
@@ -11,24 +11,40 @@ public class Movie {
         this.title=title;
         this.rating=rating;
         this.durationMin=durationMin;
-        this.baseprize=basePrice;
+        this.basePrize=basePrice;
     }
-
-    int getMinAge()
+    public int getId() {
+        return id;
+    }
+    public int getDurationMin() {
+        return durationMin;
+    }
+    public double getBasePrize() {
+        return basePrize;
+    }
+    public String getRating() {
+        return rating;
+    }
+    public String getTitle() {
+        return title;
+    }
+    public double getBasePrice() {
+        return basePrize;
+    }
+    public int getMinAge()
     {
-        if(rating=="G")
-            return 0;
-        if(rating=="PG")
-            return 7;
-        if(rating=="PG-13")
-            return 13;
-        if(rating=="r")
-            return 18;
-        return 0;
+        return switch (rating) {
+            case "G" -> 0;
+            case "PG" -> 7;
+            case "PG-13" -> 13;
+            case "r" -> 18;
+            default -> 0;
+        };
     }
 
-//    String toString()
-//    {
-//    return String.format("%s (%s) %dmin - BDT %f");
-//    }
+    public String toString()
+    {
+    return String.format("%s (%s) %dmin - BDT %.2f",title,rating,durationMin,basePrize);
+    }
+
 }
