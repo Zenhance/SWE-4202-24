@@ -15,5 +15,8 @@ public class Ticket
         this.pricePaid = pricePaid;
     }
 
-
+    public String toString()
+    {
+        return "T"+showtime.getId()+" - "+"R"+row+"C"+col+" @ BDT "+String.format("%.2f",pricePaid);
+    }
 }
