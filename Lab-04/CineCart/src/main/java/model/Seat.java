@@ -51,17 +51,15 @@ public class Seat
 
     public String toString()
     {
-        String booked=" ";
-        String premium=" ";
-        if(isBooked)
-        {
-            booked="#";
-        }
+        String str="R"+row+"C"+col;
         if(isPremium)
         {
-            premium="*";
+            str=str+"*";
         }
-
-        return "R"+row+"C"+col+premium+booked;
+        if(isBooked)
+        {
+            str=str+"#";
+        }
+        return str;
     }
 }
