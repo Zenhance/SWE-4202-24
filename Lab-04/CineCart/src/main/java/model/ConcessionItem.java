@@ -8,6 +8,8 @@ public class ConcessionItem {
 
 public ConcessionItem(String code, String name, double unitPrice){
 
-
+    this.code=code;
+    this.name=name;
+    this.unitPrice=unitPrice;
 }
 
