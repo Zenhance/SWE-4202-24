@@ -46,7 +46,7 @@ public class Showtime {
             return peak;
     }
     public String toString(){
-    return "[T17]"+movie.getTitle()+" @ Hall "+hall.getId()+" - "+startHour+":00 (Fri)";
+    return "[T"+id+"]"+movie.getTitle()+" @ Hall "+hall.getId()+" - "+startHour+":00 ("+ dateTag +")";
 
         }
 
