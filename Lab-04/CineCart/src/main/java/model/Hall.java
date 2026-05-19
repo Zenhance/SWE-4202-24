@@ -46,10 +46,10 @@ public class Hall {
         for(int r=0;r<rows;r++){
             for(int c=0;c<cols;c++){
                 Seat s= grid[r][c];
-                if(s.isBooked){
+                if(s.isBooked()){
                     System.out.println("# ");
                 }
-                else if(s.isPremium){
+                else if(s.isPremium()){
                     System.out.println("* ");
                 }
                 else{
