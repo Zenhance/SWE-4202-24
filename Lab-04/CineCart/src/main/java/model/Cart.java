@@ -18,4 +18,18 @@ public Cart(Customer owner){
     TicketCount=0;
     itemCount=0;
 }
+public void addTicket(Ticket t){
+    if(TicketCount<MAX_TICKETS){
+        tickets[TicketCount]=1;
+        TicketCount++;
+    }
+}
+public void addItem(ConsessionItem c, int qty){
+    if(itemCount<MAX_ITEMS && qty>0){
+        items[itemCount]=c;
+        qtys[itemCount]=qty;
+        itemCount++;
+    }
+}
+
 }
