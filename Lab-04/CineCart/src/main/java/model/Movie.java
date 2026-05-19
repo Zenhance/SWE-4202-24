@@ -37,13 +37,13 @@ public class Movie {
     }
 
     public int getMinAge() {
-        if(this.rating == "G") {
+        if(rating == "G") {
             return 0;
         }
-        else if(this.rating=="PG") {
+        else if(rating=="PG") {
             return 7;
         }
-        else if(this.rating == "PG-13") {
+        else if(rating == "PG-13") {
             return 13;
         }
         else
