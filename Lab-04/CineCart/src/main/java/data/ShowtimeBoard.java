@@ -9,6 +9,8 @@ public class ShowtimeBoard {
     private int count = 0;
 
     public void add(Showtime s){
+        if(count >= MAX)
+            throw new IllegalArgumentException("MAX shows exceeded");
         shows[count] = s;
         count++;
     }
