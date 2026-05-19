@@ -29,4 +29,8 @@ public class Ticket {
     public int getRow() {
         return row;
     }
+
+    public String toString(){
+        return String.format("T%d - R%dC%d @ BDT %f",showtime.getid(), row, col, pricePaid)
+    }
 }
