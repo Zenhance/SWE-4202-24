@@ -1,10 +1,10 @@
 package model;
 
 public class Hall {
-    public int id;
-    public int rows;
-    public int cols;
-    public Seat[][] grid;
+    private int id;
+    private int rows;
+    private int cols;
+    private Seat[][] grid;
 
     public Hall(int id, int rows, int cols, int premiumRows){
         this.id=id;
@@ -22,6 +22,12 @@ public class Hall {
             }
         }
     }
+    public int getId(){
+        return id;
+    }
+    public int getRows(){return rows;}
+    public int getCols(){return cols;};
+    public Seat getSeat(){return grid;}
 
     public Seat getSeat(int row,int col){
         return grid[row][col];
