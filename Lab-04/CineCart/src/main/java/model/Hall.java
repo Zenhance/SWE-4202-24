@@ -1,6 +1,4 @@
-package mode;
-
-import model.Seat;
+package model;
 
 public class Hall {
     private int id;

@@ -3,12 +3,12 @@ package model;
 public class Showtime {
     private int id;
     private Movie movie;
-    private mode.Hall hall;
+    private Hall hall;
     private int startHour;
     private String dateTag;
 
 
-    public Showtime(int id, Movie movie, mode.Hall hall, int startHour,
+    public Showtime(int id, Movie movie, Hall hall, int startHour,
                     String dateTag){
         this.id = id;
         this.hall = hall;
@@ -20,7 +20,7 @@ public class Showtime {
         return id;
     }
 
-    public mode.Hall getHall() {
+    public Hall getHall() {
         return hall;
     }
 
