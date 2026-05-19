@@ -12,11 +12,11 @@ public class Hall {
         grid=new Seat[rows][cols];
         for(int i=0;i<rows;i++){
             for(int j=0;j<cols;j++){
-                boolean isPremium=(i<premiumRows);
-                grid[i][j];
+                grid[i][j]=new Seat(i,j,i<premiumRows);
             }
         }
     }
+
     public Seat getSeat(int rows,int cols){
         return grid[rows][cols]
     }
