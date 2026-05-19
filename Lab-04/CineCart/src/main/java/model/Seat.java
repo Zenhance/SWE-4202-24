@@ -29,4 +29,8 @@ public class Seat {
     public void release() {
         isBooked = false;
     }
+    public boolean isAvailable() {
+        return !isBooked;
+    }
+
 }
