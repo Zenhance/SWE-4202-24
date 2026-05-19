@@ -15,5 +15,8 @@ public class ConcessionItem {
     public String getName(){
         return this.name;
     }
-
+    public double getUnitPrice(){
+        return this.unitPrice;
+    }
+    public String
 }
