@@ -15,9 +15,10 @@ public class Hall {
         for (int r = 0; r < rows; r++) {
             for (int c = 0; c < cols; c++) {
                 boolean premium;
-                if (r < premiumRows) {
+                if( r < premiumRows){
                     premium = true;
-                } else {
+                }
+                else {
                     premium = false;
                 }
                 grid[r][c] = new Seat(r, c, premium);
@@ -52,18 +53,20 @@ public class Hall {
         }
         return count;
     }
-public void displayLayout() {
-    for (int r = 0; r < rows; r++) {
-        for (int c = 0; c < cols; c++) {
-            Seat seat = grid[r][c];
-            if (seat.isBooked()) {
-                System.out.print("#");
-            } else if (seat.isPremium()) {
-                System.out.print("*");
-            } else if (seat.isAvailable()) {
-                System.out.print(".");
+
+    public void displayLayout() {
+        for (int r = 0; r < rows; r++) {
+            for (int c = 0; c < cols; c++) {
+                Seat seat = grid[r][c];
+                if (seat.isBooked()) {
+                    System.out.print("#");
+                } else if (seat.isPremium()) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(".");
+                }
             }
+            System.out.println();
         }
     }
-}
 }
