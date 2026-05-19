@@ -12,4 +12,10 @@ public class Hall {
         this.cols = cols;
 
     }
+
+    public Seat getSeat(int row, int col){
+        return grid[row][col];
+    }
+
+   
 }
