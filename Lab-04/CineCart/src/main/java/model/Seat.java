@@ -32,9 +32,18 @@ public class Seat {
         isBooked=false;
     }
     public boolean isAvailable(){
-        return isBooked;
+        if(isBooked){
+            return false;
+        }
+        else{
+            return true;
+        }
     }
     public String toString(){
-        return isPremium? "R3C5*" :"R3C5#";
+        String trailing="#";
+        if(isPremium){
+            trailing="*";
+        }
+        return "R"+row+"C"+col+trailing;
     }
 }
