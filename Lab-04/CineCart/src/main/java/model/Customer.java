@@ -20,5 +20,19 @@ public class Customer {
         this.loyaltyTier = tier;
     }
 
+    public int getId() {
+        return id;
+    }
 
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getLoyaltyTier() {
+        return loyaltyTier;
+    }
 }
