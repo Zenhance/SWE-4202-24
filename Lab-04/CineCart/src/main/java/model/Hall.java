@@ -12,4 +12,16 @@ public class Hall {
         this.cols=cols;
         grid=new Seat[rows][cols];
     }
+
+    public Seat getSeat(int row, int col) {
+        return row;
+    }
+
+    public int countAvailable() {
+
+    }
+
+    public void displayLayout() {
+
+    }
 }
