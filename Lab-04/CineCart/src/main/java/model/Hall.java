@@ -37,6 +37,8 @@ public class Hall {
         return grid[rows][cols];
     }
 
+    public int countAvailable(){
 
+    }
 
 }
