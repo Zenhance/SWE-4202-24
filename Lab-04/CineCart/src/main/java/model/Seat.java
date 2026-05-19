@@ -1,4 +1,4 @@
-package module;
+package model;
 
 public class Seat {
     private int row;
