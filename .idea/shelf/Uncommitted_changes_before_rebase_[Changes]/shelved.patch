@@ -1,0 +1,19 @@
+Index: Lab-04/CineCart/src/main/java/model/Ticket.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package model;\n\npublic class Ticket {\n\n   private Showtime showtime;\n   private int row;\n   private int col;\n   private double pricePaid;\n}\n\npublic Ticket(Showtime showtime, int row, int col, double pricePaid){\n\n    this.showtime=showtime;\n    this.row=row;\n    this.col=col;\n    this.pricePaid=pricePaid;\n}\n\npublic Showtime getShowtime(){\n    return showtime;\n}\n\npublic int getRow(){\n    return row;\n}\n\npublic int getCol(){\n    return col;\n}\n\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Lab-04/CineCart/src/main/java/model/Ticket.java b/Lab-04/CineCart/src/main/java/model/Ticket.java
+--- a/Lab-04/CineCart/src/main/java/model/Ticket.java	(revision 4a1465cee5508b4fda1dc2d0d61b163181a9ddd2)
++++ b/Lab-04/CineCart/src/main/java/model/Ticket.java	(date 1779169536549)
+@@ -28,4 +28,8 @@
+     return col;
+ }
+ 
++public double getPricePaid(){
++    return pricePaid;
++}
++
+ 
