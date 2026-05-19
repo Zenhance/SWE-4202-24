@@ -40,5 +40,16 @@ public class Seat
         return !isBooked;
     }
 
+    public void book()
+    {
+        isBooked = true;
+    }
+
+    public void release()
+    {
+        isBooked = false;
+    }
+
+
 
 }
