@@ -32,5 +32,8 @@ public class Seat {
     public boolean isAvailable() {
         return !isBooked;
     }
-
+    public String toString() {
+        String result = "R" + row + "C" + col;
+        return result;
+    }
 }
