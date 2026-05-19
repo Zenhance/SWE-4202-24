@@ -11,6 +11,16 @@ public class ConcessionItem {
         this.name=name;
         this.unitPrice=unitPrice;
     }
+    //getters
+    public String getCode(){
+        return code;
+    }
+    public String getName(){
+        return name;
+    }
+    public double getUnitPrice(){
+        return unitPrice;
+    }
 
 
 
