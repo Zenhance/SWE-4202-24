@@ -16,7 +16,7 @@ public class Customer {
         this.id=id;
         this.name=name;
         this.age=age;
-        this.loyaltyTier="tier";
+        this.loyaltyTier=tier;
     }
 //getters
     public int getId(){
@@ -29,7 +29,18 @@ public class Customer {
         return age;
     }
     public String getLoyaltyTier(){
-        return loyaltyTier;
+        return tier;
+    }
+    public double getTierDiscount() {
+        if(loyaltyTier.equals("GOLD")) ;
+        {
+            return 0.15;
+        }
+        if(loyaltyTier.equals("SILVER")) ;
+        {
+            return 0.08;
+        }
+        return 0.0;
     }
 
 
