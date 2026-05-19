@@ -21,6 +21,20 @@ public class Hall {
         }
     }
 
+    public int getId(){
+        return this.id;
+    }
+    public int getRows(){
+        return this.rows;
+    }
+    public int getCols(){
+        return this.cols;
+    }
+    public Seat getGrid(){
+        return this.grid[rows][cols];
+    }
+
+
 
 
 }
