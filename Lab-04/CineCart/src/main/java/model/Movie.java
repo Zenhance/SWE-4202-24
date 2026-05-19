@@ -9,7 +9,7 @@ public class Movie{
 
 
     public Movie(int id, String title, int durationMin,
-                 double basePrice, String Rating){
+                 double basePrice, String rating){
         this.id = id;
         this.title = title;
         this.durationMin = durationMin;
@@ -38,19 +38,19 @@ public class Movie{
     }
 
     public int getMinAge() {
-        if (rating == "G") {
+        if (rating.equals("G")) {
             return 0;
-        } else if (rating == "PG") {
+        } else if (rating.equals("PG")) {
             return 7;
-        } else if (rating == "PG-13") {
+        } else if (rating.equals("PG-13")) {
             return 13;
-        } else if (rating == "R") {
+        } else if (rating.equals("R")) {
             return 18;
         }
     }
 
     public String toString(){
-        return title+ "("+rating+")" +durationMin+"min - BDT "+basePrice;
+        return String.format("%s (%s) %d/min - BDT %.2f", title, rating, durationMin, basePrice);
     }
 
 }
