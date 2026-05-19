@@ -4,7 +4,6 @@ public class ShowtimeBoard {
     private Showtime[] shows;
     private int count;
     private static final int MAX=30;
-}
 
 public ShowtimeBoard(){
     shows = new Showtime[MAX];
@@ -29,5 +28,4 @@ public void displayAll(){
         System.out.println(shows[i]);
     }
     }
-
 }
