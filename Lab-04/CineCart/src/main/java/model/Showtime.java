@@ -25,6 +25,12 @@ public class Showtime {
     public getHall(){
         return hall;
     }
+    public getStartHour(){
+        return startHour;
+    }
+    public String getDateTag(){
+        return dateTag;
+    }
 
 
 
