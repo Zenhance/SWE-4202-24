@@ -6,4 +6,32 @@ public class Showtime {
     private Hall hall;
     private int startHour;
     private String dateTag;
+
+    Showtime(int id, Movie movie, Hall hall, int startHour, String dateTag){
+        this.id = id;
+        this.movie = movie;
+        this.hall = hall;
+        this.startHour = startHour;
+        this.dateTag = dateTag;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public Movie getMovie() {
+        return movie;
+    }
+
+    public Hall getHall() {
+        return hall;
+    }
+
+    public int getStartHour() {
+        return startHour;
+    }
+
+    public String getDateTag() {
+        return dateTag;
+    }
 }
