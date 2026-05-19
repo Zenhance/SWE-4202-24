@@ -1,3 +1,5 @@
+package model;
+
 public class Hall {
     private int id;
     private int rows;
@@ -5,3 +7,4 @@ public class Hall {
     private int Seat[][];
     private int grid;
 }
+
