@@ -19,4 +19,29 @@ public class Customer {
         this.age = age;
         this.loyaltyTier = loyaltyTier;
     }
+    public int getId(){
+        return id;
+    }
+    public String getName(){
+        return name;
+    }
+    public int getAge(){
+        return age;
+    }
+    public String getLoyaltyTier(){
+        return loyaltyTier;
+    }
+    public double getTierDiscount(){
+        if (loyaltyTier.compareTo("GOLD")==0){
+            return 0.15;
+        } else if (loyaltyTier.compareTo("SILVER")==0){
+            return 0.08;
+        }
+        else {
+            return 0.00;
+        }
+    }
+    public String toString(){
+        return name + " ("+ age +") -" + loyaltyTier;
+    }
 }
