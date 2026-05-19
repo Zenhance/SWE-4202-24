@@ -1,4 +1,37 @@
 package model;
 
 public class Showtime {
+
+    private int id;
+    private Movie movie;
+    private Hall hall;
+    private int startHour;
+    private String dateTag;
+
+    Showtime(int id,Movie movie,Hall hall,int startHour,String dataTag){
+
+
+        this.id = id;
+        this.movie = movie;
+        this.hall = hall;
+        this.startHour = startHour;
+        this.dateTag = dataTag;
+
+
+    }
+
+
+
+    boolean isPeak() {
+        if(startHour >= 18 && startHour <= 21){
+            return true;
+        }
+        else{
+        return false;}
+
+    }
+
+    }
+
+
 }
