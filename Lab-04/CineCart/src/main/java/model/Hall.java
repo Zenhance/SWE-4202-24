@@ -5,10 +5,26 @@ public class Hall {
     // Constructor: Hall(int id, int rows, int cols, int premiumRows) — builds the grid; for each
     // row index r and column index c, create a Seat with isPremium = (r < premiumRows).
 
-    public int id;
-    public int rows;
-    public int cols;
-    public Seat[][] grid;
+    private int id;
+    private int rows;
+    private int cols;
+    private Seat[][] grid;
+
+    public int getId() {
+        return id;
+    }
+
+    public int getRows() {
+        return rows;
+    }
+
+    public int getCols() {
+        return cols;
+    }
+
+    public Seat[][] getGrid() {
+        return grid;
+    }
 
     public Hall(int id, int rows, int cols, int premiumRows) {
         this.id = id;
