@@ -56,5 +56,8 @@ public class Customer
         return 0.0;
     }
 
-
+    public String toString()
+    {
+        return id+" -"+name+" - "+age+" - "+loyaltyTier;
+    }
 }
