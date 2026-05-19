@@ -12,4 +12,5 @@ public class Ticket {
             this.col=col;
             this.pricePaid=pricePaid;
     }
+
 }
