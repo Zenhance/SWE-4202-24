@@ -15,4 +15,11 @@ public class ConcessionMenu {
         count++;
     }
 
+    public ConcessionItem findByCode(String code){
+        for(int i = 0; i < count; i++){
+            String itemCode = items[i].getCode();
+            if(code.equals(itemCode)) return items[i];
+        }
+        return null;
+    }
 }
