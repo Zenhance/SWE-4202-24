@@ -12,4 +12,27 @@ public class Ticket {
         this.col = col;
         this.pricePaid = pricePaid;
     }
+
+    public Showtime getShowtime() {
+        return showtime;
+    }
+
+    public int getRow() {
+        return row;
+    }
+
+    public int getCol() {
+        return col;
+    }
+
+    public double getPricePaid() {
+        return pricePaid;
+    }
+
+    public String toString() {
+        String string = String.format("T%d - R%dC%d @ BDT %.2f", showtime.getId(),
+                    row, col, pricePaid);
+
+        return string;
+    }
 }
