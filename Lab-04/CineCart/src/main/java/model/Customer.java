@@ -40,4 +40,7 @@ public class Customer {
         }
         else return 0.00d;
     }
+//    public String toString(){
+//
+//    }
 }
