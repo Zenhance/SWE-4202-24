@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="seat class">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/model/Seat.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/model/Seat.java" afterDir="false" />
+    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="showtime class">
+      <change beforePath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/model/Showtime.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/model/Showtime.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -399,7 +398,39 @@
       <option name="project" value="LOCAL" />
       <updated>1779166673807</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="seat class completion">
+      <option name="closed" value="true" />
+      <created>1779167052186</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1779167052186</updated>
+    </task>
+    <task id="LOCAL-00043" summary="class">
+      <option name="closed" value="true" />
+      <created>1779167132007</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1779167132007</updated>
+    </task>
+    <task id="LOCAL-00044" summary="showtime class constructor">
+      <option name="closed" value="true" />
+      <created>1779167279676</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1779167279676</updated>
+    </task>
+    <task id="LOCAL-00045" summary="showtime class">
+      <option name="closed" value="true" />
+      <created>1779167365322</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1779167365322</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -429,10 +460,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="student queue completion" />
-    <MESSAGE value="student queue fixing" />
-    <MESSAGE value="student stack" />
-    <MESSAGE value="student stack fixing code" />
     <MESSAGE value="main file" />
     <MESSAGE value="part c answer" />
     <MESSAGE value="completed the ans of part c" />
@@ -454,6 +481,10 @@
     <MESSAGE value="fixing location class" />
     <MESSAGE value="intellij fix" />
     <MESSAGE value="seat class" />
-    <option name="LAST_COMMIT_MESSAGE" value="seat class" />
+    <MESSAGE value="seat class completion" />
+    <MESSAGE value="class" />
+    <MESSAGE value="showtime class constructor" />
+    <MESSAGE value="showtime class" />
+    <option name="LAST_COMMIT_MESSAGE" value="showtime class" />
   </component>
 </project>

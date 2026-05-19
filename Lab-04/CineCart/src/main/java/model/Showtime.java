@@ -29,4 +29,12 @@ public Movie getMovie(){
 public Hall getHall(){
     return hall;
 }
+
+public int getStartHour(){
+    return startHour;
+}
+
+public String getDateTag(){
+    return getDateTag();
+}
 }
