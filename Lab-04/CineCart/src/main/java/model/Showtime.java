@@ -30,4 +30,9 @@ public class Showtime
         return hall;
     }
 
+    public boolean isPeak()
+    {
+        return startHour >= 18 && startHour <= 21;
+    }
+
 }
