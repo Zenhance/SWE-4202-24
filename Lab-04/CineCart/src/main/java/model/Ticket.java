@@ -16,4 +16,16 @@ public Ticket(Showtime showtime, int row, int col, double pricePaid){
     this.pricePaid=pricePaid;
 }
 
+public Showtime getShowtime(){
+    return showtime;
+}
+
+public int getRow(){
+    return row;
+}
+
+public int getCol(){
+    return col;
+}
+
 
