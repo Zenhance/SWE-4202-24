@@ -10,4 +10,8 @@ public class ConcessionItem {
         this.name = name;
         this.unitPrice = unitPrice;
     }
+
+    public String toString(){
+        return code+" - "+name+" - "+String.format("%.2f",unitPrice);
+    }
 }
