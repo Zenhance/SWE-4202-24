@@ -14,9 +14,23 @@ public class Showtime {
        this.startHour = startHour;
        this.dateTag = dateTag;
     }
+   public int getId(){
+        return id;}
 
-    boolean isPeak() {
-        if (startHour <= 18 && startHour >= 21) {
+    public String getDateTag() {
+        return dateTag;
+    }
+
+    public int getStartHour(){
+        return startHour;}
+
+    public Hall getHall(){return hall;}
+
+    public Movie getMovie(){
+        return movie;}
+
+    public boolean isPeak() {
+        if (startHour >= 18 && startHour <= 21) {
             return true;
         }
         return false;
@@ -25,4 +39,4 @@ public class Showtime {
          return "[T" + id + "]" + movie.getName() + "@ Hall " + hall.getId() + "-" + dateTag;
     }
 }
-}
+
