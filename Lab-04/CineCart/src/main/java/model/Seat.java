@@ -6,11 +6,11 @@ public class Seat {
     private boolean isPremium;
     private boolean isBooked;
 
-    Seat(int row, int col, boolean isPremium, boolean isBooked){
+    Seat(int row, int col, boolean isPremium){
         this.row = row;
         this.col = col;
         this.isPremium = isPremium;
-        this.isBooked = isBooked;
+        this.isBooked = false;
     }
 
     public int getRow(){
@@ -25,13 +25,13 @@ public class Seat {
     public boolean isBooked(){
         return this.isBooked;
     }
-    void book(){
+    public void book(){
         isBooked = true;
     }
-    void release(){
+    public void release(){
         isBooked = false;
     }
-    boolean isAvailabe(){
+    public boolean isAvailable(){
         if(isBooked = true){return false;}
         else return true;
     }
