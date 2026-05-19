@@ -35,5 +35,7 @@ public class Showtime {
         }
         return false;
     }
-    public
+    public String toString(){
+       return String.format("");
+    }
 }
