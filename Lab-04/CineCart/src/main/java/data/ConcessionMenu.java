@@ -1,6 +1,5 @@
 package data;
-import
-import model.ConcessionItem;.model.ConcessionItem;
+import model.ConcessionItem;
 
 public class ConcessionMenu {
     private static final int MAX=30;
@@ -8,8 +7,9 @@ public class ConcessionMenu {
     private int count;
 
     //constructor
-    public ConcessionMenu(){}
-    items= new ConcessionItem[MAX];
-    count=0;
+    public ConcessionMenu() {
+        items = new ConcessionItem[MAX];
+        count = 0;
+    }
 
 }
