@@ -39,5 +39,6 @@ public class Showtime {
     public String toString(){
         String string = String.format("[T%d] %s @ Hall %d - %d:00 %s",id,movie.getTitle(),hall.getId(),dateTag);
         return string;
+
     }
 }
