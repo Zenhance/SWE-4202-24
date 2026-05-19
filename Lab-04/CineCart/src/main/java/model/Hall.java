@@ -13,8 +13,8 @@ public class Hall {
 
         for(int r = 0; r < rows; r++) {
             for(int c = 0; c < cols; c++) {
-                if(r < premiumRows) grid[r][c] = new Seat(r, c, true, false);
-                else grid[r][c] = new Seat(r, c, false, false);
+                if(r < premiumRows) grid[r][c] = new Seat(r, c, true);
+
 
             }
         }
