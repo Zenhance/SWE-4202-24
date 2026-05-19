@@ -27,4 +27,8 @@ public class Customer
     {
         return name;
     }
+    public int getAge()
+    {
+        return age;
+    }
 }
