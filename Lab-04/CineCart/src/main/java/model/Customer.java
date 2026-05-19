@@ -36,4 +36,9 @@ public class Customer {
     public String getLoyaltyTier() {
         return loyaltyTier;
     }
+
+    public double getTierDiscount(){
+        double state = 0.0;
+
+    }
 }
