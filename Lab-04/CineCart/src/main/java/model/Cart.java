@@ -40,6 +40,31 @@ public class Cart {
     public int getItemCount() {return itemCount;}
 
 
+    public double sumTicketsPaid() {
+        double sum = 0;
+        for(int i = 0; i < MAX_TICKETS; i++){
+            sum += tickets[i].getPricePaid();
+        }
+        return sum;
+    }
+
+    public double sumConcessionRaw() {
+        double sum = 0;
+        for(int i = 0; i < MAX_ITEMS; i++){
+            sum += qtys[i]*items[i].getUnitPrice();
+        }
+        return sum;
+    }
+
+    public boolean hasItem(String code) {
+        for(int i = 0; i < MAX_ITEMS; i++){
+            if(items[i].getCode().equals(code)){
+                return true;
+            }
+
+        }
+        return false;
+    }
 
 
 
