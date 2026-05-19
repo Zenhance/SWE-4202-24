@@ -14,16 +14,22 @@ public class Movie {
        this.basePrice = basePrice;
     }
     public String getName(){
+
         return this.title;
     }
+    public int getDurationMin(){return durationMin;}
+
+    public double getBasePrice(){
+        return basePrice;
+    }
     public int getMinAge(){
-        if (rating == "G"){
+        if (rating.equals("G")){
             return 0;
         }
-        if(rating == "PG"){
+        if(rating.equals("PG")){
             return 7;
         }
-        if(rating == "PG-13"){
+        if(rating.equals("PG-13")){
             return 13;
         }
         else
