@@ -38,13 +38,15 @@ public void book(){
 
 public void release(){
 
-isbooked=false;
+isBooked=false;
 }
 
 public boolean isAvailable(){
 
-
-
+    if(isBooked){
+        return false;
+    }
+    else return true;
 
 }
 
