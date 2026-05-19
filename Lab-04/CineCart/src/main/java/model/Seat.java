@@ -20,6 +20,11 @@ public class Seat
         return row;
     }
 
+    public int getCol()
+    {
+        return col;
+    }
+
     public boolean isPremium()
     {
         return isPremium;
@@ -29,4 +34,6 @@ public class Seat
     {
         return isBooked;
     }
+
+
 }
