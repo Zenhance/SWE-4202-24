@@ -1,11 +1,11 @@
 package model;
 
 public class Movie {
-    int id;
-    String title;
-    String rating;
-    int durationMin;
-    double basePrice;
+    private int id;
+    private String title;
+    private String rating;
+    private int durationMin;
+    private double basePrice;
 
 
     public Movie(int id, String title, String rating, int
@@ -39,15 +39,18 @@ public class Movie {
     }
 
     public int getMinAge() {
+         int age=0;
          if(rating=="G"){
-             return 0;
+             age=0;
          }else if(rating=="PG"){
-             return 7;
+             age=7;
          }else if(rating=="PG-13"){
-             return 13;
+             age=13;
          }else if(rating=="R"){
-             return 18;
+             age=18;
          }
+
+         return age;
 
     }
 
