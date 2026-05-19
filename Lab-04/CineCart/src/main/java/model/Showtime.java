@@ -30,12 +30,12 @@ public class Showtime {
         return this.dateTag;
     }
     public boolean isPeak(){
-        if(startHour>=18&&startHour<=21){
+        if(startHour>=18 && startHour<=21){
             return true;
         }
         return false;
     }
     public String toString(){
-       return String.format("");
+       return "[T"+id+"] "+movie.getTitle()+" @Hall "+hall+" - "+startHour+":00 "+"("+dateTag+")";
     }
 }
