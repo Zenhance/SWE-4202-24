@@ -14,9 +14,15 @@ public class Ticket {
     }
     //getters
     public Showtime getShowtime() {
-        return Showtime;
+        return showtime;
     }
     public int getRow(){
         return row;
+    }
+    public int getCol(){
+        return col;
+    }
+    public double getPricePaid(){
+        return pricePaid;
     }
 }
