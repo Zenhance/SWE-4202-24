@@ -26,12 +26,16 @@ public class Customer {
     public String getLoyaltyTier() { return loyaltyTier; }
 
     public double getTierDiscount() {
-        if(loyaltyTier.equals("GOLD"))
+        if (loyaltyTier.equals("GOLD"))
             return 0.15;
-        else if(loyaltyTier.equals("SILVER"))
+        else if (loyaltyTier.equals("SILVER"))
             return 0.08;
         else
             return 0.00;
+    }
+
+    public String toString() {
+
     }
 }
 
