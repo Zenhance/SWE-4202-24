@@ -1,11 +1,11 @@
 package model;
 
 public class Showtime {
-    int id;
-    Movie m;
-    Hall h;
-    int startHour;
-    String dateTag;
+    private int id;
+    private Movie m;
+    private Hall h;
+    private int startHour;
+    private String dateTag;
 
     public Showtime(int id, Movie m, Hall h, int startHour, String dateTag) {
         this.id = id;
@@ -13,5 +13,25 @@ public class Showtime {
         this.h = h;
         this.startHour = startHour;
         this.dateTag = dateTag;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public Hall getH() {
+        return h;
+    }
+
+    public Movie getM() {
+        return m;
+    }
+
+    public String getDateTag() {
+        return dateTag;
+    }
+
+    public int getStartHour() {
+        return startHour;
     }
 }
