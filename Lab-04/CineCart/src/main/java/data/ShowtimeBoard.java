@@ -4,7 +4,7 @@ import model.Showtime;
 
 public class ShowtimeBoard {
     private static final int MAX = 30;
-    private int count;
+    private int count = 0;
     private Showtime[] shows = new Showtime[MAX];
 
     public void add(Showtime s) {
