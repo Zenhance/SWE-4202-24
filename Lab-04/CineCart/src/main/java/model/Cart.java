@@ -19,4 +19,19 @@ public class Cart {
         this.qtys = new int[MAX_ITEMS];
         this.itemCount = 0;
     }
+
+    public void addTicket(Ticket t) {
+        if (ticketCount < MAX_TICKETS) {
+            tickets[ticketCount] = t;
+            ticketCount++;
+        }
+    }
+
+    public void addTicket(ConcessionItem c, int qty) {
+        if (itemCount < MAX_ITEMS && qty > 0) {
+            items[itemCount] = c;
+            qtys[itemCount] = qty;
+            itemCount++;
+        }
+    }
 }
