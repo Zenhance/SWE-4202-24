@@ -40,7 +40,8 @@ public class Movie {
             case "G" -> 0;
             case "PG" -> 7;
             case "PG-13" -> 13;
-            default -> 18;
+            case "R" -> 18;
+            default -> 0;
         };
     }
 
