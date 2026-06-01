@@ -45,4 +45,8 @@ public class Customer {
             return 0.0;
         }
     }
+
+    public String toString() {
+        return String.format("Name: %s\nAge: %d\nCustomer ID: %d\nLoyalty Tier: %s", name, age, id, loyaltyTier);
+    }
 }
