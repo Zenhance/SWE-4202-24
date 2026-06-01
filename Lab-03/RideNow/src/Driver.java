@@ -1,31 +1,45 @@
 public class Driver {
     private int id;
     private String name;
-    private String licensePlate;
-    private boolean setAvailable;
+    private String LicensePlate;
+    private boolean isAvailable;
 
-    public Driver(int id, String name, String licensePlate){
+    public Driver(int id, String name, String LicensePlate,boolean isAvailable){
         this.id=id;
         this.name=name;
-        this.licensePlate=licensePlate;
-        this.setAvailable=setAvailable;
+        this.LicensePlate=LicensePlate;
+        this.isAvailable=isAvailable;
+    }
+    public Driver(int id, String name, String LicensePlate){
+        this.id=id;
+        this.name=name;
+        this.LicensePlate=LicensePlate;
+        this.isAvailable=true ;
     }
 
 
     public int getId(){
+
         return id;
     }
-    public String getname(){
+    public String getName(){
+
         return name;
     }
-    public String getLicensePlate(){
-        return licensePlate;
+
+    public boolean isAvailable(){
+
+        return isAvailable;
     }
-    public boolean setAvailable(boolean isavailable){
-        return setAvailable;
+    public void setAvailable(boolean isAvailable){
+        this.isAvailable=isAvailable;
     }
 
     public String toString(){
-        return String.format("Driver[%d] %s (%s) [%s]", id, name ,licensePlate ,setAvailable ? "Available" : "Busy");
+        return String.format("Driver[%d] %s (%s) [%s]", id, name ,LicensePlate ,isAvailable ? "Available" : "Busy");
+    }
+
+    public String getLicencePlate() {
+        return LicensePlate;
     }
 }

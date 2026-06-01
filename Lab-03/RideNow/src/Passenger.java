@@ -24,6 +24,7 @@ public class Passenger {
         return rating;
     }
     public void updateRating( double newRating){
+
         this.rating=newRating;
     }
     public String toString(){
