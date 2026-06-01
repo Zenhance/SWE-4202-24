@@ -7,4 +7,12 @@ public class ConcessionMenu {
     private int count;
     private static final int MAX = 30;
 
+    public void add(Showtime s) {
+        if (count < MAX) {
+            shows[count] = s;
+            count++;
+        }
+    }
+
+
 }
