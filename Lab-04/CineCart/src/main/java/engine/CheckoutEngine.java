@@ -79,5 +79,8 @@ public class CheckoutEngine {
         // [5]
         double group = 0.0;
         if (cart.getTicketCount() >= 4) group = 0.10 * preDiscount;
+
+        // [6]
+        double tier = cart.getOwner().getTierDiscount() * preDiscount;
     }
 }
