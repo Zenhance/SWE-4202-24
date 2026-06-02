@@ -7,6 +7,8 @@ import model.Movie;
 import model.Showtime;
 
 
+
+
 public class CheckoutEngine {
     private ShowtimeBoard board;
     private ConcessionMenu menu;
@@ -51,7 +53,29 @@ public class CheckoutEngine {
         double ticketSubtotal = cart.sumTicketsPaid();
         double concessionSubtotal = cart.sumConcessionRaw();
 
+
+        double combo;
+        if(cart.hasItem(POP) && cart.hasItem(SODA)) combo = 50.0;
+        else combo = 0.0;
+
+        double preDiscount = ticketSubtotal +concessionSubtotal - combo;
+
+        double groupDiscount = 0.10 * preDiscount;
+
+        double tierDiscount = cart.getOwner().getTierDiscount() * preDiscount;
+
+        double afterDiscount = preDiscount - groupDiscount - tierDiscount;
+
+        double tax = 0.05 * afterDiscount;
+
+
+        return afterDiscount+tax;
+
+
+
     }
+
+
 
 
 
