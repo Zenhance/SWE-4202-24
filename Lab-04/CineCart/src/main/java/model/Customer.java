@@ -5,7 +5,7 @@ public class Customer {
     private String name;
     private int age;
     private String loyaltyTier;
-    private Ticket[] tickets;
+    private Ticket[] ticket;
 
     public Customer(int id,String name,int age){
         this.id=id;
@@ -44,6 +44,6 @@ public String getLoyaltyTier(){
         return name;
     }
     public Ticket[] getTickets(){
-        return tickets;
+        return ticket;
     }
 }
