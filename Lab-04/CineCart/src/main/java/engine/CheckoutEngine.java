@@ -2,10 +2,7 @@ package engine;
 
 import data.ConcessionMenu;
 import data.ShowtimeBoard;
-import model.Cart;
-import model.Seat;
-import model.Showtime;
-import model.Ticket;
+import model.*;
 
 public class CheckoutEngine {
     private ShowtimeBoard board;
@@ -17,7 +14,7 @@ public class CheckoutEngine {
     }
 
     public String bookTicket(Cart cart, int showtimeId, int row, int col){
-        Showtime s = (board.findByID(showtimeId));
+        Showtime s = (board.findById(showtimeId));
 
         if(s == null){
             System.out.println("Showtime not found");
@@ -52,5 +49,20 @@ public class CheckoutEngine {
 
         return "OK";
 
+    }
+
+
+    public String addConcession(Cart cart, String code, int qty){
+        ConcessionItem item = menu.findByCode(code);
+
+        if(item == null){
+            return "Item not found";
+        }
+
+        if(qty <= 0){
+            return "Invalid quantity";
+        }
+        cart.addItem(item, qty);
+        return "OK";
     }
 }
