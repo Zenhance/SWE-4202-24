@@ -3,10 +3,10 @@ package model;
 public class Seat {
 
 
-  private int row;
+    private int row;
     private int col;
-    boolean isPremium;
-    boolean isBooked;
+    private boolean isPremium;
+    private boolean isBooked;
 
     public Seat(int row, int col, boolean isPremium) {
         this.row = row;
@@ -22,35 +22,32 @@ public class Seat {
     public int getCol() {
         return col;
     }
-    public boolean getPremium() {
+    public boolean isPremium() {
         return isPremium;
     }
-    public boolean getBooked() {
+    public boolean isBooked() {
         return isBooked;
     }
 
 
     public void book() {
-
+         isBooked = true;
     }
     public void release() {
-
+        isBooked = false;
     }
-    public void isAvailable() {
-
+    public boolean isAvailable() {
+        return !isBooked;
     }
-
 
     @Override
-    public String toString() {
+    public String toString(){
         String suffix = "";
-        if(isPremium){
+        if (isPremium) {
             suffix = "*";
-        }
-        else if(isBooked) {
+        } else if (isBooked) {
             suffix = "#";
         }
-        else
-            return "R" + row + "C" + col;
+            return "R" + row + "C" + col + suffix;
     }
 }
