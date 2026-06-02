@@ -7,6 +7,15 @@ public class ConcessionItem {
     private final double unitPrice;
 
     public ConcessionItem(String code, String name, double unitPrice){
+        if(code == null||code.isBlank()){
+            throw new IllegalArgumentException("code cannot be null or blank");
+        }
+        if(name == null||name.isBlank()){
+            throw new IllegalArgumentException("name cannot be null or blank");
+        }
+        if(unitPrice < 0){
+            throw new IllegalArgumentException("unitPrice cannot be negative");
+        }
         this.code = code;
         this.name = name;
         this.unitPrice = unitPrice;
