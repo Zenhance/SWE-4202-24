@@ -46,6 +46,11 @@ public class CheckoutEngine {
         ConcessionItem item = menu.findByCode(code);
         if(item == null) return "Item not found";
 
+        if (qty <= 0) return "Invalid quantity";
+
+
         return null;
+
+
     }
 }
