@@ -17,6 +17,10 @@ public Hall(int id, int rows, int cols, int premiumRows){
 
     for (int r=0;r<rows;r++){
         for(int c=0;c<column;c++){
+            if (r<premiumRows) grid[r][c] = new Seat()(r, c, true);
+
+            else grid[r][c] = new Seat()(r,c,false);
+        }
 
 
         }
