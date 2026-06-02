@@ -11,16 +11,16 @@ public class Seat {
         this.isPremium=isPremium;
         isBooked=false;
     }
-    public int getrow(){
+    public int getRow(){
         return row;
     }
-    public int getcol(){
+    public int getCol(){
         return col;
     }
-    public boolean getisPremium(){
+    public boolean isPremium(){
         return isPremium;
     }
-    public boolean getisBooked(){
+    public boolean isBooked(){
         return isBooked;
     }
     public void book(){
