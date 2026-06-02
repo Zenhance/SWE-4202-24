@@ -19,5 +19,19 @@ public class ConcessionMenu {
             count++;
         }
     }
-
+    public ConcessionItem findByCode(String code) {
+        for (int i = 0; i < count; i++) {
+            if (items[i].getCode() == code) {
+                return items[i];
+            }
+        }
+        return null;
+    }
+    public void displayAll() {
+        for (int i = 0; i < count; i++) {
+            System.out.println(items[i]);
+        }
+    }
 }
+
+
