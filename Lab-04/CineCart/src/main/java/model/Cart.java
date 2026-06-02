@@ -9,6 +9,15 @@ private int ticketCount;
 private int itemCount;
 private ConcessionItem[] items;
 private int[] qtys;
+    public double sumConcessionsRaw() {
+        double sum = 0;
+
+        for (int i = 0; i < itemCount; i++) {
+            sum += items[i].getUnitPrice() * qtys[i];
+        }
+
+        return sum;
+    }
 public Cart(Customer owner){
     this.owner=owner;
     tickets=new Ticket[MAX_TICKETS];
@@ -33,7 +42,7 @@ public void addItem(ConcessionItem c, int qty){
 public Customer getOwner(){
     return owner;
 }
-public Ticket[] tickets(){
+public Ticket[] getTickets(){
     return tickets;
 }
 public int getTicketCount(){
@@ -48,13 +57,10 @@ public ConcessionItem[] getItems() {
     public int[] getQtys() {
         return qtys;
     }
-public int getitemCount(){
-    return itemCount;
-}
 public double sumTicketsPaid(){
     double sum=0;
-    for(int i=0;i<itemCount;i++){
-        sum+=items[i].getUnitPrice()*qtys[i];
+    for(int i=0;i<ticketCount;i++){
+        sum+=tickets[i].getPricePaid();
     }
     return sum;
 }
