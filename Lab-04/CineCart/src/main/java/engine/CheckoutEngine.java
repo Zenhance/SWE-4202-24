@@ -49,6 +49,7 @@ public class CheckoutEngine {
     }
 
     public double checkout(Cart cart) {
+        //this part shows error however I do it.
         double ticketSubtotal = cart.sumTicketsPaid();
         double concessionSubtotal = cart.sumConcessionsRaw();
         double combo = 0;
