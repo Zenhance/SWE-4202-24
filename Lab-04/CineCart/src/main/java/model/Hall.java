@@ -12,12 +12,13 @@ public Hall (int id, int rows, int cols, int premiumRows)
  this.id=id;
  this.rows=rows;
  this.cols = cols;
-
+    grid = new Seat[rows][cols];
  for (int r=0; r<rows; r++)
     {
 for (int c=0; c<cols; c++)
 {
-    if (r<premiumRows) grid [r] [c] = new Seat ( r, c , true);
+    grid[r][c] = new Seat(r, c, r < premiumRows);
+
 }    }
 }
 
@@ -29,11 +30,8 @@ public int countAvailable() {
     int count = 0;
     for (int r = 0; r < rows; r++) {
         for (int c = 0; c < cols; c++) {
-            if (grid[r][c].isAvailable()) System.out.println(".");
-            if (grid[r][c].getIsBooked()) System.out.println("#");
-            if (grid[r][c].getIsPremium() && grid[r][c].isAvailable()) System.out.println("*");
-
-
+            if (grid[r][c].isAvailable()) {
+                count++;
         }
 
 
@@ -41,17 +39,26 @@ public int countAvailable() {
 return count;
 }
     public void displayLayout() {
-        for(int r = 0; r < rows; r++) {
-            for(int c = 0; c < cols; c++) {
-                if(grid[r][c].isAvailable()) System.out.println(".");
-                if(grid[r][c].isBooked()) System.out.println("#");
-                if(grid[r][c].isPremium() && grid[r][c].isAvailable()) System.out.println("*");
 
+        for (int r = 0; r < rows; r++) {
+
+            for (int c = 0; c < cols; c++) {
+
+                if (grid[r][c].isBooked()) {
+                    System.out.print("# ");
+                }
+                else if (grid[r][c].isPremium()) {
+                    System.out.print("* ");
+                }
+                else {
+                    System.out.print(". ");
+                }
 
             }
+
+            System.out.println();
         }
     }
-
 public int getRows()
 {
     return rows;

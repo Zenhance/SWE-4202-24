@@ -46,7 +46,7 @@ public void release()
 }
 public boolean isAvailable ()
 {
-    return isBooked;
+    return !isBooked;
 }
     public String toString() {
         String result = "R" + row + "C" + col;
