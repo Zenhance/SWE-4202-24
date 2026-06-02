@@ -82,5 +82,8 @@ public class CheckoutEngine {
 
         // [6]
         double tier = cart.getOwner().getTierDiscount() * preDiscount;
+
+        // [7]
+        double afterDiscounts = preDiscount - group - tier;
     }
 }
