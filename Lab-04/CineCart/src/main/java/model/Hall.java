@@ -54,4 +54,8 @@ public class Hall {
         System.out.print("\n");
     }
 
+    public int getId(){
+        return id;
+    }
+
 }
