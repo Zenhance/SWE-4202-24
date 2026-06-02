@@ -9,4 +9,12 @@ public class Cart {
     private ConcessionItem[] items;
     private int[] qtys;
     private int itemCount;
+    public Cart(Customer owner){
+        this.owner = owner;
+        tickets = new Ticket[MAX_TICKETS];
+        items = new ConcessionItem[MAX_ITEMS];
+        qtys = new int[MAX_ITEMS];
+        ticketCount = 0;
+        itemCount = 0;
+    }
 }
