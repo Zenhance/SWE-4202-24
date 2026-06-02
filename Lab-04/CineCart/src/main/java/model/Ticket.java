@@ -25,6 +25,12 @@ public class Ticket {
     public double getPricePaid(){
         return this.pricePaid;
     }
+    public Ticket[] getTickets(){
+        return ticket;
+    }
+    public int getId(){
+        return id;
+    }
     public String toString(){
         return "T"+showtime.getId()+" - R"+row+"C"+col+" @ BDT "+pricePaid;
     }
