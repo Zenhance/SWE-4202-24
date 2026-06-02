@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="getreceipt cart">
-      <change beforePath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/model/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/model/Cart.java" afterDir="false" />
+    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="Cart.java line 76 fix">
+      <change beforePath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/model/Customer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,14 +126,6 @@
       <workItem from="1778092688155" duration="94000" />
       <workItem from="1778092809585" duration="6679000" />
       <workItem from="1778163384097" duration="3333000" />
-    </task>
-    <task id="LOCAL-00022" summary="part c answer">
-      <option name="closed" value="true" />
-      <created>1777590236360</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1777590236360</updated>
     </task>
     <task id="LOCAL-00023" summary="part c answer 2">
       <option name="closed" value="true" />
@@ -519,7 +511,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780400713218</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="Cart.java line 76 fix">
+      <option name="closed" value="true" />
+      <created>1780400991937</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1780400991937</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -559,7 +559,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value=" trip class methods fix" />
     <MESSAGE value="continuing trip class method writing" />
     <MESSAGE value=" trip class method writing" />
     <MESSAGE value=" trip class method writing 2" />
@@ -584,6 +583,7 @@
     <MESSAGE value="signature" />
     <MESSAGE value="checkout cart" />
     <MESSAGE value="getreceipt cart" />
-    <option name="LAST_COMMIT_MESSAGE" value="getreceipt cart" />
+    <MESSAGE value="Cart.java line 76 fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cart.java line 76 fix" />
   </component>
 </project>
