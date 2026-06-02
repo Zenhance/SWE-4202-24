@@ -48,17 +48,19 @@ public boolean isAvailable ()
 {
     return isBooked;
 }
-public String toString ()
-{
-if (isPremium)
-{
-    return  "R3C5*";
-}
-elseif(isBooked);
-    { return "R3C5#";
+    public String toString() {
+        String result = "R" + row + "C" + col;
+
+        if (isPremium) {
+            result += "*";
+        }
+
+        if (isBooked) {
+            result += "#";
+        }
+
+        return result;
     }
-return "";
-}
 
 }
 
