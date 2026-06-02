@@ -7,6 +7,13 @@ public class Hall {
     private final Seat[][] grid;
 
     public Hall(int id, int rows, int cols, int premiumRows){
+        if(rows <= 0 || cols <= 0) {
+            throw new IllegalArgumentException("rows and cols should be positive");
+        }
+        if(premiumRows < 0 || premiumRows > rows){
+            throw new IllegalArgumentException("premium rows should be between 0 and " + rows);
+        }
+
         this.id = id;
         this.rows = rows;
         this.cols = cols;
