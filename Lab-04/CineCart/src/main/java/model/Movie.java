@@ -4,6 +4,7 @@ public class Movie {
     int id;
     String Title;
 
+
     public int getId() {
         return id;
     }
@@ -18,19 +19,16 @@ public class Movie {
         this.durationMin=durationMin;
         this.basePrice=basePrice;
     }
-    public int id(){
-        return id;
-    }
     public String getTitle(){
         return Title;
     }
-    public String rating(){
+    public String getRating(){
         return rating;
     }
-    public int durationMin(){
+    public int getDurationMin(){
         return durationMin;
     }
-    public double basePrice(){
+    public double getBasePrice(){
         return basePrice;
     }
     public int getMinAge() {
@@ -43,8 +41,9 @@ public class Movie {
         } else if (rating.equals("R")) {
             return 18;
         }
+        return 0;
     }
     public String toString(){
-        return String.format("%s (%s) %dmin - BDT %.2lf", Title,rating,durationMin,basePrice);
+        return String.format(Title+"("+rating+")"+durationMin+"min"+"- BDT "+basePrice);
     }
 }
