@@ -7,7 +7,7 @@ import model.*;
 public class CheckoutEngine {
     private ShowtimeBoard board;
     private ConcessionMenu menu;
-    CheckoutEngine(ShowtimeBoard board, ConcessionMenu menu){
+    public CheckoutEngine(ShowtimeBoard board, ConcessionMenu menu){
         this.board=board;
         this.menu=menu;
     }
@@ -19,26 +19,27 @@ public class CheckoutEngine {
 
             return nf;
         }
-        if(cart.getOwner().getAge()<showtime.getMovie().getMinAge()){
-            return "Underage for rating "+ showtime.getMovie().getRating();
+        Movie movie=showtime.getMovie();
+        if(cart.getOwner().getAge()<movie.getMinAge()){
+            return "Underage for rating "+ movie.getRating();
         }
-        Seat seat=showtime.getHall().getSeat(row,col);
-        if(seat.isBooked()){
+        Hall hall=showtime.getHall();
+        Seat seat=hall.getSeat(row,col);
+        if(!seat.isBooked()){
             return "Seat is unavailable";
         }
-        if(showtime.getMovie().getBasePrice()*(seat.isPremium()==true)){
-            double price=1.30*(showtime.isPeak() ? 1.20 : 1.00);
-        }
-        else{
-            double price = 1.00*(showtime.isPeak() ? 1.20 : 1.00);
-        }
+        double basePrice=showtime.getMovie().getBasePrice();
+        double premiumFactor=seat.isPremium() ? 1.30 : 1.00;
+        double peakFactor=showtime.isPeak() ? 1.20 : 1.00;
+        double price=basePrice*premiumFactor * peakFactor;
         seat.book();
-        Ticket ticket=new Ticket(showtime,row,col, double price);
+
+        Ticket ticket=new Ticket(showtime,row,col, price);
 
         cart.addTicket(ticket);
         return "OK";
-        String code;
-        public String addConcession(Cart cart,code,int qty) {
+    }
+        public String addConcession(Cart cart,String code,int qty){
             ConcessionItem item = menu.findByCode(code);
             if (item==null) {
                 return "Item not found";
@@ -48,5 +49,11 @@ public class CheckoutEngine {
             }
             cart.addItem(item, qty);
             return "OK";
+        }
+        public double checkout(Cart cart){
+        return 1.0;
+        }
+        public String getReceipt(Cart cart){
+        return "R";
         }
 }

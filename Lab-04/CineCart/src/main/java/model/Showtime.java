@@ -32,7 +32,7 @@ public class Showtime {
     public String getDateTag(){
         return dateTag;
     }
-    boolean isPeak() {
+    public boolean isPeak() {
         if (startHour >= 18 && startHour <= 21)
             return true;
         else return false;
@@ -43,4 +43,6 @@ public class Showtime {
     s=""+" Inception @ Hall 2 - "+getStartHour()+ ":00 (" + getDateTag() + ")";
     return s;
     }
+
+
 }
