@@ -25,4 +25,8 @@ public class CheckoutEngine {
     public double checkout(Cart cart){
         return 0.00;
     }
+
+    public String getReceipt(Cart cart){
+        return "idk";
+    }
 }
