@@ -1,7 +1,6 @@
 package model;
 
 public class Showtime {
-
     private int id;
     private Movie movie;
     private Hall hall;
@@ -36,14 +35,8 @@ public class Showtime {
 
 
    public boolean isPeak() {
-        if(startHour >= 18 && startHour <= 21){
-            return true;
-        }
-        else{
-        return false;}
-
+        return startHour >= 18 && startHour <= 21;
     }
-
     @Override
     public String toString() {
         return "Showtime{" +
