@@ -9,16 +9,58 @@ public class Cart {
     private  ConcessionItem[] items;
     private int[] qtys;
     private int itemCount;
+
     public Cart(Customer owner){
     this.owner=owner;
     tickets=new Ticket[MAX_TICKETS];
     items=new ConcessionItem[MAX_ITEMS];
     qtys= new int[MAX_ITEMS];
-
-
-
+    ticketCount=0;
+    itemCount=0;
+}
+public void addTicket(Ticket t){
+        if(ticketCount>=MAX_TICKETS)
+            return;
+        else{
+            tickets[ticketCount]=t;
+            ticketCount++;
+        }
 }
 
+public void addItem(ConcessionItem c, int qty){
+        if(itemCount>=MAX_ITEMS){
+            return;
+        }
+        else if(qty==0){
+            return ;
+        }
+        else {
+            items[itemCount]=c;
+            qtys[itemCount]=qty;
+            itemCount++;
+        }
+}
+
+public Customer getOwner(){
+        return owner;
+}
+public Ticket[] getTickets(){
+        return tickets;
+}
+public int getTicketCount(){
+        return ticketCount;
+}
+
+    public ConcessionItem[] getItems() {
+        return this.items;
+    }
+
+    public int[] getQtys(){
+        return qtys;
+    }
+    public int  getItemCount(){
+        return itemCount;
+    }
 
 
 }
