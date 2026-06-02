@@ -28,12 +28,7 @@ Customer[]customers = CsvLoader.loadConcessions("concessions.csv");
             System.out.println();
             double total= engine.checkout(cart);
             System.out.println("Final Total: BDT "+ String.format("%.2f",total));
-
-
-
-
-
-
+            System.out.println(engine.getReceipt(cart));
         }
     }
 }
