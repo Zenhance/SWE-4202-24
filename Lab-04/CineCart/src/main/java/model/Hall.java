@@ -16,10 +16,10 @@ public Hall(int id, int rows, int cols, int premiumRows){
     Seat[][] grid=new Seat[rows][cols];
 
     for (int r=0;r<rows;r++){
-        for(int c=0;c<column;c++){
-            if (r<premiumRows) grid[r][c] = new Seat()(r, c, true);
+        for(int c=0;c<cols;c++){
+            if (r<premiumRows) grid[r][c] = new Seat(r, c, true);
 
-            else grid[r][c] = new Seat()(r,c,false);
+            else grid[r][c] = new Seat(r,c,false);
         }
     } this.grid=grid;
 }
@@ -56,7 +56,7 @@ public void displayLayout(){
     for(int i=0;i<rows;i++){
         for(int j=0;j<cols;j++){
             if (grid[i][j].isAvailable()){
-                if (grid[i][j].isPremium()) {System.out.println("*"); }
+                if (grid[i][j].isPremium()) System.out.println("*");
                 else System.out.println(".");
             }   else System.out.println("#");
             }
