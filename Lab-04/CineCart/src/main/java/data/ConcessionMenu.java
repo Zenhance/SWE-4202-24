@@ -26,4 +26,10 @@ public class ConcessionMenu {
 
         return null;
     }
+
+    public void displayAll() {
+        for (int i=0; i<count; i++) {
+            System.out.println(items[i].toString());
+        }
+    }
 }
