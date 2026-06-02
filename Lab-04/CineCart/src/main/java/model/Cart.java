@@ -10,8 +10,7 @@ public class Cart {
     private int[] qtys;
     private int itemCount;
 
-    public Cart(Customer owner,Ticket[] tickets,int ticketCount,ConcessionItem[] items,int[] qtys
-    ,int itemCount){
+    public Cart(Customer owner){
         this.owner=owner;
         this.tickets=new Ticket[MAX_TICKETS];
         this.ticketCount=0;
