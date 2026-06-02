@@ -5,6 +5,7 @@ import data.ShowtimeBoard;
 import model.Cart;
 import model.Seat;
 import model.Showtime;
+import model.Ticket;
 
 public class CheckoutEngine {
     private ShowtimeBoard board;
@@ -42,5 +43,14 @@ public class CheckoutEngine {
         if (s.isPeak()) {
             price = price * 1.20;
         }
+
+        seat.book();
+
+        Ticket ticket = new Ticket (s, row, col, price);
+
+        cart.addTicket(ticket);
+
+        return "OK";
+
     }
 }
