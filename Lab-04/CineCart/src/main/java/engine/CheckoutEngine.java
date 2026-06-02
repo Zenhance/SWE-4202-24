@@ -35,8 +35,6 @@ public class CheckoutEngine {
       menu.findByCode(code);
       if (menu.findByCode(code)==null)return "Item not found";
       if (qty<=0)return "Invalid quantity";
-       ConcessionItem c=new ConcessionItem(code,, cart.getItemCount()).getUnitPrice();
-      cart.addItem(c,qty);
       return "OK";
    }
    public double checkout(Cart cart) {
@@ -54,8 +52,8 @@ public class CheckoutEngine {
        return round2;
    }
    public String getReceipt(Cart cart){
-      String msg="BDT"+
-   }
+      String msg="Total cost BDT: "+cart.sumTicketsPaid();
+      return msg;}
 
 
 
