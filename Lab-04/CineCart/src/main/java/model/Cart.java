@@ -19,24 +19,28 @@ public class Cart {
         qtys = new int[MAX_ITEMS];
     }
 
-    public void addTicket(Ticket t){
-        if(ticketCount<MAX_TICKETS)
+    public boolean addTicket(Ticket t){
+        if(ticketCount<MAX_TICKETS) {
             tickets[ticketCount] = t;
-        ticketCount++;
+            ticketCount++;
+        return true;
+        }
+        return false;
     }
 
-    public void addItem(ConcessionItem c, int qty){
+    public boolean addItem(ConcessionItem c, int qty){
         if (itemCount >= MAX_ITEMS) {
             System.out.println("Your cart is full!");
-            return;
+            return false;
         }
         if (qty <= 0) {
             System.out.println("Invalid quantity");
-            return;
+            return false;
         }
         items[itemCount] = c;
         qtys[itemCount] = qty;
         itemCount++;
+    return true;
     }
 
     public Customer getOwner() {
