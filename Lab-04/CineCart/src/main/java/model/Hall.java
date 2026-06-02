@@ -24,9 +24,23 @@ public int countAvailable(){
         int count=0;
         for (int i=0;i<rows;i++){
             for (int j=0;j<cols;j++){
-
+            if (s[i][j].isAvailable())count++;
+            }
+        }
+        return count;
+}
+public void displayLayout(){
+        for (int i=0;i<rows;i++){
+            for (int j=0;j<cols;j++){
+                if (s[i][j].isAvailable()) System.out.println(".");
+                else if (s[i][j].isBooked) {
+                    System.out.println("#");
+                    
+                } else if (s[i][j].isPremium()&&s[i][j].isAvailable()) {
+                    System.out.println("*");
+                    
+                }
             }
         }
 }
-
 }
