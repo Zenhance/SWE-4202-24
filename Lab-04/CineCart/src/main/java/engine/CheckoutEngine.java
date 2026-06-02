@@ -5,6 +5,8 @@ import data.ShowtimeBoard;
 import model.Cart;
 import model.Seat;
 import model.Showtime;
+import model.Ticket;
+
 import java.lang.String;
 
 public class CheckoutEngine {
@@ -21,7 +23,7 @@ public class CheckoutEngine {
         if (showtime == null)
             return "Showtime not found";
         if (cart.getOwner().getAge() < showtime.getMovie().getMinAge()) {
-            String mod = String.format("Underage for rating <%s>", show.getMovie().getRating());
+            String mod = String.format("Underage for rating <%s>", showtime.getMovie().getRating());
             return mod;
         }
 
@@ -29,6 +31,14 @@ public class CheckoutEngine {
         if (seat.isBooked())
             return "Seat unavailable";
 
-
+        double price = showtime.getMovie().getBasePrice()
+                * ((seat.isPremium()? 1.30 : 1.00))
+                * ((showtime.isPeak()? 1.20 : 1.00));
+        seat.book();
+        Ticket t = new Ticket(showtime,row,col,price);
+        cart.addTicket(t);
+    return "OK";
     }
+
+
 }
