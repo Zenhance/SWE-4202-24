@@ -22,5 +22,13 @@ public class Showtime {
     public Hall getHall(){
         return hall;
     }
-
+public String getStartHour(){
+        return dateTag;
+}
+public boolean isPeak() {
+    return startHour >= 18 && startHour <= 21;
+}
+public String toString(){
+        return "["+id+"]"+movie.getTitle()+" @Hall "+hall.getId()+" - "+String.format("%.02d:00",startHour)+"("+dateTag+")";
+}
 }
