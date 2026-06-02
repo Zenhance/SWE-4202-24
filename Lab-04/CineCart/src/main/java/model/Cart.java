@@ -29,7 +29,7 @@ public class Cart {
 
     void addItem(ConcessionItem c, int qty){
         if(itemCount == MAX_ITEMS) return;
-
+        if(qty<=0) return;
 
         items[itemCount] = c;
         qtys[itemCount++] = qty;
