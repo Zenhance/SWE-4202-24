@@ -22,10 +22,14 @@ public class Showtime {
          return hall;
     }
 
+    public int getStartHour() {
+        return startHour;
+    }
+
     public String getDateTag() {
         return dateTag;
     }
-    boolean isPeak(int startHour) {
+   public boolean isPeak() {
         if (startHour >= 18 && startHour <= 21) {
             return true;
         }
