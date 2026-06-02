@@ -19,6 +19,11 @@ public class Cart {
         this.qtys = new int[MAX_ITEMS];
         this.itemCount = 0;
     }
+    public void addItem(ConcessionItem c, int qty){
+       if(itemCount<MAX_ITEMS && qty>0){
+           qtys[itemCount] = qty;
+           itemCount++
+    }
 
 
 }
