@@ -22,7 +22,7 @@ public class Ticket {
     public int getCol(){
         return this.col;
     }
-    public double pricePaid(){
+    public double getPricePaid(){
         return this.pricePaid;
     }
     public String toString(){
