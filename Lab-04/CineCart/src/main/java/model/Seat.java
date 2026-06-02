@@ -22,7 +22,7 @@ public class Seat {
     public int getCol() {
         return col;
     }
-    public boolean isPremium() {
+    public boolean getPremium() {
         return isPremium;
     }
     public boolean isBooked() {
