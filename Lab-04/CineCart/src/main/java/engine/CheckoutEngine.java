@@ -2,9 +2,7 @@ package engine;
 
 import data.ConcessionMenu;
 import data.ShowtimeBoard;
-import model.Cart;
-import model.Showtime;
-import model.Seat;
+import model.*;
 
 public class CheckoutEngine {
     private ShowtimeBoard board;
@@ -29,6 +27,11 @@ public class CheckoutEngine {
 
         Seat seat = showtime.getHall().getSeat(row, col);
         if(seat.isBooked()) return "Seat unavailable";
+
+        Movie movie = showtime.getMovie();
+        double price = movie.getBasePrice() *
+                (seat.isPremium() ? 1.30 : 1.00) *
+                (showtime.isPeak() ? 1.20 : 1.00);
 
         return null;
     }
