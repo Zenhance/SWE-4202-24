@@ -16,19 +16,28 @@ public class Cart {
   this.ticketCount = 0;
   items = new ConcessionItem[MAX_ITEMS];
   this.itemCount = 0;
+  qtys=new int[MAX_ITEMS];
 
  }
 
- public void addTicket(Ticket t) {
-  tickets[ticketCount] = t;
-  ticketCount++;
- }
+ public boolean addTicket(Ticket t){
+  boolean res = false;
+  if (ticketCount < MAX_TICKETS){
+   tickets[ticketCount] = t;
+   ticketCount++;
+   res = true;
+  }
+  return res;}
 
- public void addItem(ConcessionItem c, int qty) {
+ public boolean addItem(ConcessionItem c, int qty) {
+  boolean state=false;
+  if (itemCount <MAX_ITEMS ){;
   items[itemCount] = c;
   qtys[itemCount] = qty;
   itemCount++;
-  if (itemCount == MAX_ITEMS || qty <= 0) System.out.println("FULL");
+  state=true;
+ }
+ return state;
  }
 
  public Customer getOwner() {
@@ -66,16 +75,18 @@ public class Cart {
  public double sumConcessionsRaw(){
       double sum=0;
   for (int i=0;i<MAX_ITEMS;i++){
-    sum+=qtys[i]+items[i].getUnitPrice();
+    sum+=qtys[i]*items[i].getUnitPrice();
   }
   return sum;
  }
  public boolean hasItem(String code){
+    boolean found=false;
      for(int i=0;i<MAX_ITEMS;i++){
          if (items[i].getCode().equals(code));
-         return true;
+         found=true;
+         break;
      }
-     return false;
+     return found;
  }
  }
 

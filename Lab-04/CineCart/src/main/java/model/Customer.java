@@ -16,13 +16,13 @@ public class Customer {
     public Customer(int id, int age, String tier) {
         this.id = id;
         this.age = age;
-        tier = "BASIC";
+        this.loyaltyTier = tier;
     }
 public  Customer (int id,String name,int age ){
         this.id=id;
         this.age=age;
         this.name=name;
-
+        loyaltyTier = "BASIC";
 }
 
     public int getId() {
