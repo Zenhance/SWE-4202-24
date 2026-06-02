@@ -27,7 +27,7 @@ public class Cart {
         }
     }
 
-    public void addTicket(ConcessionItem c, int qty) {
+    public void addItem(ConcessionItem c, int qty) {
         if (itemCount < MAX_ITEMS && qty > 0) {
             items[itemCount] = c;
             qtys[itemCount] = qty;
@@ -67,7 +67,7 @@ public class Cart {
         return sum;
     }
 
-    public double sumConcession() {
+    public double sumConcessionsRaw() {
         double sum = 0.0;
         for (int i = 0; i < itemCount; i++) {
             sum += items[i].getUnitPrice() * qtys[i];
