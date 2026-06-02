@@ -50,7 +50,7 @@ public class Cart {
 
     public double sumConcessionsRaw() {
         double sum = 0;
-        for (int i = 0; i < itemCount; i++)
+        for (int i = 0; i < itemCount; i++){
             sum += items[i].getUnitPrice() * qtys[i];
         return sum;
     }
