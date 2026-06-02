@@ -18,10 +18,8 @@ public class ShowtimeBoard {
             if(shows[i].getId()==id) {
                 return shows[i];
             }
-            else {
-                return null;
-            }
         }
+        return null;
     }
 
     public void displayAll() {
