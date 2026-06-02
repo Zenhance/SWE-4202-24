@@ -21,9 +21,16 @@ public class Hall {
     }
     public int countAvailable(){
         int count = 0;
+
         for(int r=0; r<rows; r++){
+            for (int c = 0; c< cols; c++){
+                if (getSeat( r,c).isAvailable()){
+                    count++ ;
+                }
+            }
 
         }
 
+        return count;
     }
 }
