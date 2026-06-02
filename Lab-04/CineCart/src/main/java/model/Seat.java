@@ -14,8 +14,8 @@ public class Seat {
     }
     public int getRow(){return row;}
     public int getCol() {return col;}
-    public boolean getIsPremium(){return isPremium;}
-    public boolean getIsBooked(){return isBooked;}
+    public boolean isPremium(){return isPremium;}
+    public boolean isBooked(){return isBooked;}
 
     public void book(){ isBooked=true;}
 
