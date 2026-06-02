@@ -16,6 +16,15 @@ public class ShowtimeBoard {
             count++;
         }
     }
+    public  Showtime findById(int id){
+        for(int i=1;i<=count;i++){
+            if(shows[i].getId()==id){
+                return shows[i];
+            }
+        }
+        return null;
+    }
+
 }
 
 
