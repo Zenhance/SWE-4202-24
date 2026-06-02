@@ -16,6 +16,11 @@ public class CheckoutEngine {
         if (showtime == null) {
             return "Showtime not found";
         }
+        Customer customer = cart.getOwner();
+        if(customer.getAge()<showtime.getMovie().getMinAge()){
+            return "Underage for rating" + showtime.getMovie().getRating();
+        }
+        Seat seat = showtime.getHall().getSeat(row,col);
 
 
     }
