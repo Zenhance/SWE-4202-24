@@ -56,6 +56,19 @@ public class CheckoutEngine {
     double checkout(Cart cart){
         double ticketSubtotal = cart.sumTicketsPaid();
         double concessionSubtotal = cart.sumConcessionsRaw();
+
+        boolean pop = false;
+        boolean soda = false;
+
+        ConcessionItem[] items = cart.getItems();
+        for (int i = 0; i < cart.getItemCount(); i++) {
+            ConcessionItem k = items[i];
+
+            if (k.getCode().equals("POP")) pop = true;
+            if (k.getCode().equals("SODA")) soda = true;
+        }
+
+
         double combo = 0;
         double preDiscount = ticketSubtotal + concessionSubtotal - combo;
         double group = 0.10 * preDiscount;
