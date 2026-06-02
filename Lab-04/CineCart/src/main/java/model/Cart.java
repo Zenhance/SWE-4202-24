@@ -9,7 +9,7 @@ public class Cart {
     ConcessionItem[] items;
     int[] qtys;
     int itemCount;
-    Cart(Customer owner){
+    public  Cart(Customer owner){
         this.owner = owner;
         this.tickets = new Ticket[MAX_TICKETS];
         this.items = new ConcessionItem[MAX_ITEMS];
@@ -41,10 +41,10 @@ public class Cart {
     public int[] getQtys() {
         return qtys;
     }
-    void addTicket(Ticket t){
+    public void addTicket(Ticket t){
         if(ticketCount<MAX_TICKETS){
-            this.tickets[this.ticketCount] = t;
-            this.ticketCount++;
+            tickets[ticketCount] = t;
+            ticketCount++;
         }
     }
 

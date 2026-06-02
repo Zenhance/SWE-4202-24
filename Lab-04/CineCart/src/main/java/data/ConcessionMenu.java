@@ -6,7 +6,7 @@ public class ConcessionMenu {
     ConcessionItem[] items;
     int count;
     private static final int MAX = 30;
-    void add(ConcessionItem c){
+    public void add(ConcessionItem c){
         items[count++]=c;
     }
     public ConcessionItem findByCode(String code){

@@ -7,13 +7,13 @@ public class Customer {
     String name;
     int age;
     String loyaltyTier;
-    Customer(int id, String name, int age){
+    public Customer(int id, String name, int age){
         this.id=id;
         this.name=name;
         this.age=age;
         loyaltyTier="BASIC";
     }
-    Customer(int id, String name, int age, String tier){
+    public Customer(int id, String name, int age, String tier){
         this.id=id;
         this.name=name;
         this.age=age;
@@ -35,6 +35,7 @@ public class Customer {
     public String getName() {
         return name;
     }
+
     public double getTierDiscount(){
         if(Objects.equals(loyaltyTier, "SILVER")) return 0.08;
         else if(Objects.equals(loyaltyTier, "GOLD")) return 0.15;

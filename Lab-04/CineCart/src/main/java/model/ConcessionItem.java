@@ -4,7 +4,7 @@ public class ConcessionItem {
     String code;
     String name;
     Double unitPrice;
-    ConcessionItem(String code, String name, Double unitPrice) {
+    public ConcessionItem(String code, String name, Double unitPrice) {
         this.code = code;
         this.name = name;
         this.unitPrice = unitPrice;

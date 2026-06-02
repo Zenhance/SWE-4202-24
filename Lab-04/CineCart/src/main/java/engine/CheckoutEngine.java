@@ -4,16 +4,13 @@ import data.ConcessionMenu;
 import data.ShowtimeBoard;
 import model.*;
 
-import java.awt.font.TextHitInfo;
-import java.security.PublicKey;
-import java.time.Duration;
-
 import static java.lang.Math.round;
 
 public class CheckoutEngine {
     ShowtimeBoard board;
     ConcessionMenu menu;
-    CheckoutEngine(ShowtimeBoard board, ConcessionMenu menu){
+    public double discount=0;
+    public CheckoutEngine(ShowtimeBoard board, ConcessionMenu menu){
         this.board = board;
         this.menu = menu;
     }
@@ -21,7 +18,7 @@ public class CheckoutEngine {
         if(board.findById(showtimeId)==null) return "Showtime not found";
         Showtime show=board.findById(showtimeId);
         if(cart.getOwner().getAge()<show.getMovie().getMinAge()) return String.format("Underage for rating %s",show.getMovie().getRating());
-        if(show.getHall().getSeat(row, col).isAvilable()) return "Seat unavailable";
+        if(show.getHall().getSeat(row, col).isAvailable()) return "Seat unavailable";
         Seat seat=show.getHall().getSeat(row, col);
         double price= show.getMovie().getBasePrice()*(seat.isPremium?1.30:1.0)*(show.isPeak()?1.2:1.0);
         seat.book();
@@ -43,13 +40,13 @@ public class CheckoutEngine {
         double group=0;
         if(cart.getTicketCount()>=4) group = 0.10 * preDiscount;
         double Tier_discount= cart.getOwner().getTierDiscount()*preDiscount;
-        //double dis= group+Tier_discount;
-        double afterDiscounts = preDiscount - group -Tier_discount;
+        discount= group+Tier_discount;
+        double afterDiscounts = preDiscount-discount;
         double tax=  0.05 * afterDiscounts;
         return round(afterDiscounts+tax);
     }
-    String getReceipt(Cart cart){
-        return String.format("Receipt %s Total:BDT %.2f Discount: ",cart.getOwner().getName(),checkout(cart));
+    public String getReceipt(Cart cart){
+        return String.format("Receipt %s Total:BDT %.2f Discount: %.2f",cart.getOwner().getName(),checkout(cart),discount);
 
     }
 

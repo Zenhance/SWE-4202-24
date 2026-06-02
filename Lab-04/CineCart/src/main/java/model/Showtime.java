@@ -6,7 +6,7 @@ public class Showtime {
     Hall hall;
     int startHour;
     String dateTag;
-    Showtime(int id, Movie movie, Hall hall, int startHour, String dateTag){
+    public Showtime(int id, Movie movie, Hall hall, int startHour, String dateTag){
         this.id=id;
         this.movie=movie;
         this.hall=hall;
