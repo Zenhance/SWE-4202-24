@@ -13,6 +13,7 @@ public class CheckoutEngine {
         this.menu = menu;
     }
 
+    //E.1
     String bookTicket(Cart cart, int showtimeId, int row, int col){
         Showtime showtime = board.findById(showtimeId);
         if(showtime == null) return "Showtime not found";
@@ -38,5 +39,13 @@ public class CheckoutEngine {
         cart.addTicket(ticket);
 
         return "OK";
+    }
+
+    //E.2
+    String addConcession(Cart cart, String code, int qty){
+        ConcessionItem item = menu.findByCode(code);
+        if(item == null) return "Item not found";
+
+        return null;
     }
 }
