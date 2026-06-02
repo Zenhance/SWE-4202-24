@@ -12,5 +12,11 @@ public class ShowtimeBoard {
         count = 0;
     }
 
+    public void add(Showtime s){
+        if (count < MAX){
+            shows [count] = s;
+            count ++;
+        }
+    }
 
 }
