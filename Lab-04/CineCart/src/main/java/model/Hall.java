@@ -4,7 +4,7 @@ public class Hall {
     int id;
     int rows;
     int cols;
-    Seat s[][];
+    Seat[][] s;
     int premiumRows;
 
     public Hall(int id, int rows, int cols, int premiumRows) {
@@ -12,9 +12,21 @@ public class Hall {
         this.rows=rows;
         this.cols=cols;
         this.premiumRows=premiumRows;
-    }
+        for(int r=0;r<rows;r++)
+            for(int c=0;c<cols;c++)
+                s[r][c]=new Seat(r,c,r<premiumRows);
 
-    public int getId() {
-        return id;
     }
+    public Seat getSeat(int row,int col){
+        return s[row][col];
+    }
+public int countAvailable(){
+        int count=0;
+        for (int i=0;i<rows;i++){
+            for (int j=0;j<cols;j++){
+
+            }
+        }
+}
+
 }
