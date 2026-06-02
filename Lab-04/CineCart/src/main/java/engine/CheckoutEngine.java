@@ -8,7 +8,7 @@ public class CheckoutEngine {
   private ShowtimeBoard board;
   private ConcessionMenu menu;
 
-  CheckoutEngine(ShowtimeBoard board, ConcessionMenu menu){
+  public CheckoutEngine(ShowtimeBoard board, ConcessionMenu menu){
       this.board=board;
       this.menu=menu;
   }
