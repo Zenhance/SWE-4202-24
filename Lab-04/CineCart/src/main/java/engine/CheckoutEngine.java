@@ -18,7 +18,7 @@ public class CheckoutEngine {
         return "OK";
     }
 
-    public String addConsession(Cart cart,String code, int qty){
+    public String addConcession(Cart cart,String code, int qty){
         return "OK";
     }
 
