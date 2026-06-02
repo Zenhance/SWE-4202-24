@@ -26,6 +26,10 @@ public String getLoyaltyTier() {
 public int getAge() {
     return age;
 }
+    public String getName() {
+        return name;
+    }
+
 
     public double getTierDiscount(){
     if(loyaltyTier.equals ("GOLD")) {
