@@ -38,6 +38,9 @@ return "OK";
 
     public double checkout(Cart cart){
 
+        double res=0.0;
+        return res;
+
 
     }
 
