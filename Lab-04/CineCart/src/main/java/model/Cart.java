@@ -20,19 +20,18 @@ public class Cart {
         this.qtys = new int[MAX_ITEMS];
     }
 
-    public void addTicket(Ticket t){
-        if(ticketcount < MAX_TICKETS){
-            tickets[ticketcount] = t;
-            ticketcount++;
-        }
+    public boolean addTicket(Ticket t){
+        if (ticketcount >= MAX_TICKETS) return false;
+        tickets[ticketcount++] = t;
+        return true;
     }
 
-    public void addItem(ConcessionItem c, int qty){
-        if(itemCount < MAX_ITEMS){
-            items[itemCount] = c;
-            qtys[itemCount] = qty;
-            itemCount++;
-        }
+    public boolean addItem(ConcessionItem c, int qty){
+        if (qty <= 0 || itemCount >= MAX_ITEMS) return false;
+        items[itemCount] = c;
+        qtys[itemCount] = qty;
+        itemCount++;
+        return true;
     }
 
     public Customer getOwner() {
@@ -43,7 +42,7 @@ public class Cart {
         return tickets;
     }
 
-    public int getTicketcount() {
+    public int getTicketCount() {
         return ticketcount;
     }
 
