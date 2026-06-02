@@ -90,8 +90,8 @@ public class CheckoutEngine
             receipt=receipt+cart.getItems()[i].getName()+" x "+cart.getQtys()[i];
         }
         receipt=receipt+"\nPayable : ";
-        double amt = checkout(cart);
-        receipt=receipt+amt;
+        double amount = checkout(cart);
+        receipt=receipt+amount;
 
         return receipt;
     }
