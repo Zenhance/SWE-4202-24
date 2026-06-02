@@ -11,8 +11,8 @@ public class CheckoutEngine {
         this.menu = menu;
     }
 
-    String bookTicket(Cart cart, int showtimeId, int row, int col) {
-        Showtime showtime = board.findById(showtimeId) {
+    public String bookTicket(Cart cart, int showtimeId, int row, int col) {
+        Showtime showtime = board.findById(showtimeId);
             if (showtime == null) {
                 return "Showtime not found";
             }
@@ -31,10 +31,10 @@ public class CheckoutEngine {
                 price *= 1.20;
             }
             seat.book();
-            Ticket tickets = new Ticket(showtime, row, col, price)
-                cart.addTicket(tickets);
+            Ticket ticket = new Ticket(showtime, row, col, price);
+                cart.addTicket(ticket);
+                return "OK";
         }
-    }
 
     public String addConcession(Cart cart, String code, int qty) {
         ConcessionItem item = menu.findByCode(code);
@@ -67,7 +67,7 @@ public class CheckoutEngine {
         double afterDiscounts = preDiscount - group - tier;
         double tax = 0.05 * afterDiscounts;
         double total = afterDiscounts + tax;
-        return Math.round(total * 100.00 / 100);
+        return Math.round(total * 100.00) / 100.0;
     }
 
         public String getReceipt(Cart cart){
