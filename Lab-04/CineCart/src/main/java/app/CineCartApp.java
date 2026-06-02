@@ -22,6 +22,10 @@ Customer[]customers = CsvLoader.loadConcessions("concessions.csv");
 
             System.out.println(engine.bookTicket(cart,17,0,0));
             System.out.println(engine.bookTicket(cart,17,1,1));
+            System.out.println(engine.bookTicket(cart,999,1,1));
+            System.out.println();
+            System.out.println(engine.addConcession(cart,"POP",1));
+
 
 
 
