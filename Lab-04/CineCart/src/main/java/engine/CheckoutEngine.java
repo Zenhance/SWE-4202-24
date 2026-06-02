@@ -100,6 +100,30 @@ public class CheckoutEngine {
     private double round2(double value) {
         return Math.round(value * 100.0) / 100.0;
     }
+    private double calculateDiscount(Cart cart) {
+        double ticketSubtotal = cart.sumTicketsPaid();
+        double concessionSubtotal = cart.sumConcessionsRaw();
+
+        double combo = 0.0;
+        if (cart.hasItem("POP") && cart.hasItem("SODA")) {
+            combo = 50.0;
+        }
+
+        double preDiscount = ticketSubtotal + concessionSubtotal - combo;
+
+        double group = 0.0;
+        if (cart.getTicketCount() >= 4) {
+            group = 0.10 * preDiscount;
+        }
+
+        double tier = cart.getOwner().getTierDiscount() * preDiscount;
+
+        return combo+group+tier;
+    }
+
+
+
+
 
 
 
