@@ -10,4 +10,11 @@ public class ShowtimeBoard {
         shows = new Showtime[MAX];
         count = 0;
     }
+    public void add(Showtime s){
+        if(count<MAX){
+            shows[count] = s;
+            count++;
+        }
+    }
+    public Showtime find
 }
