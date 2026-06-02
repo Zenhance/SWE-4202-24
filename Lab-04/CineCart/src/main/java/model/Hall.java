@@ -9,6 +9,7 @@ public class Hall {
         this.id=id;
         this.rows=rows;
         this.cols=cols;
+        this.grid=new Seat[rows][cols];
         for(int r=0;r<rows;r++){
             for(int c=0;c<cols;c++){
                 if(r<premiumRows){
@@ -28,7 +29,7 @@ public class Hall {
         int count=0;
         for(int r=0;r<rows;r++){
             for(int c=0;c<cols;c++){
-                if(grid[r][c].isBooked()){
+                if(!grid[r][c].isBooked()){
                     count++;
                 }
             }
@@ -54,17 +55,18 @@ public class Hall {
             for (int j = 0; j < cols; j++) {
                 if (grid[i][j].isAvailable()) {
                     if (grid[i][j].isPremium()) {
-                        System.out.println("*");
+                        System.out.print("* ");
                     }
                     else{
-                        System.out.println(".");
+                        System.out.print(". ");
                     }
                 }
                 else {
-                    System.out.println("#");
+                    System.out.print("# ");
                 }
             }
+            System.out.println();
         }
-        System.out.println("");
+        System.out.println();
     }
 }
