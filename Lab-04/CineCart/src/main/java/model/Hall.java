@@ -12,6 +12,7 @@ public class Hall {
         this.rows=rows;
         this.cols=cols;
         this.premiumRows=premiumRows;
+        Seat[][] s = new Seat[rows][cols];
         for(int r=0;r<rows;r++)
             for(int c=0;c<cols;c++)
                 s[r][c]=new Seat(r,c,r<premiumRows);
@@ -42,6 +43,10 @@ public int countAvailable(){
         }
         return count;
 }
+    public Seat[][] getGrid() {
+        return s;
+    }
+
 public void displayLayout(){
         for (int i=0;i<rows;i++){
             for (int j=0;j<cols;j++){

@@ -21,10 +21,10 @@ public class CheckoutEngine {
       board.findById(showtimeId);
       if (board.findById(showtimeId)==null) return "Showtime not found";
       if (cart.getOwner().getAge()<s.getM().getMinAge()) return "Underage for rating "+s.getM().getRating() ;
-      s.getH().getSeat(row, col);
-      if (s.getH().getSeat(row, col).isBooked())return "Seat unavailable";
-     double price= m.getBasePrice()*(s.getH().getSeat(row, col).isPremium()?1.30:1.00)*(s.isPeak()?1.20:1.00);
-     s.getH().getSeat(row, col).isBooked();
+      this.s.getH().getSeat(row, col);
+      if (this.s.getH().getSeat(row, col).isBooked())return "Seat unavailable";
+     double price= m.getBasePrice()*(this.s.getH().getSeat(row, col).isPremium()?1.30:1.00)*(s.isPeak()?1.20:1.00);
+     this.s.getH().getSeat(row, col).isBooked();
      Ticket t=new Ticket(s,row,col,price);
      cart.addTicket(t);
 

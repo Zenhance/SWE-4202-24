@@ -3,7 +3,7 @@ package data;
 import model.Showtime;
 
 public class ShowtimeBoard {
-    Showtime[] shows;
+    private Showtime[] shows = new Showtime[MAX];
     int count;
     private static final int MAX =30;
     public void add(Showtime s) {
