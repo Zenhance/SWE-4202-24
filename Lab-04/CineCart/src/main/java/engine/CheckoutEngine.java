@@ -56,6 +56,10 @@ public class CheckoutEngine {
             combo=50.0;
         }
         double preDiscount = ticketSubtotal + concessionSubtotal - combo;
+        double group= 0.0;
+        if(cart.getTicketCount()>=4){
+            group=0.10*preDiscount;
+        }
 
 
 
