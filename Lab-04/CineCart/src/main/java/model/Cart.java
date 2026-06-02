@@ -30,7 +30,7 @@ public class Cart {
 
     }
 
-    public void addItems(ConcessionItem c, int qty){
+    public void addItem(ConcessionItem c, int qty){
         if(itemCount>=20){
             return;
         }
@@ -60,7 +60,7 @@ public class Cart {
         return itemCount; }
 
 
-    public double sumsTicketsPaid(){
+    public double sumTicketsPaid(){
         double total=0;
         for(int i=0;i<itemCount;i++){
             total+=tickets[i].getPricePaid();
