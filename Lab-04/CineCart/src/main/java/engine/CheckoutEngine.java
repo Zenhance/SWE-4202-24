@@ -84,7 +84,7 @@ public class CheckoutEngine {
 
         double total = afterDiscounts + tax;
 
-        double rounded = round(total*100)/100;
+        double rounded = Math.round(total*100.0)/100.0;
 
         return rounded;
     }
