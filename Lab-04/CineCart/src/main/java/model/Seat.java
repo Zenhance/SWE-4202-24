@@ -33,8 +33,10 @@ public class Seat {
         this.isBooked=false;
     }
     public boolean isAvailable(){
-            if(this.isBooked)return false;
-            else {return true;}
+            if(this.isBooked){
+                return false;
+            }
+            return true;
     }
     public String toString(){
            if(this.isPremimum){
@@ -43,6 +45,7 @@ public class Seat {
          else  if(this.isBooked){
              return "R3C5"+"#";
            }
+         return null;
     }
 
 
