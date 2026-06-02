@@ -2,6 +2,7 @@ package Model;
 
 public class ConcessionItem {
 
+
         private String code;
         private String name;
         private double unitPrice;
@@ -27,6 +28,7 @@ public class ConcessionItem {
         public String toString() {
             return code + " - " + name + " - BDT " + String.format("%.2f", unitPrice);
         }
+
 
     }
 
