@@ -20,5 +20,9 @@ public class ShowtimeBoard {
         return null;
     }
 
+    public void displayAll() {
+        System.out.println(shows.toString());
+    }
+
 
 }
