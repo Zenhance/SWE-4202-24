@@ -8,7 +8,7 @@ public class Showtime {
     private String dateTag;
 
     //constructor
-    public Showtime {
+    public Showtime(int id, Movie movie,Hall hall, int startHour, String dateTag) {
         this.id = id;
         this.movie = movie;
         this.hall = hall;
@@ -17,21 +17,19 @@ public class Showtime {
     }
 
     //getters
-    public int getId
-
-    {
+    public int getId(){
         return id;
     }
 
-    public getMovie() {
+    public Movie getMovie() {
         return movie;
     }
 
-    public getHall() {
+    public Hall getHall() {
         return hall;
     }
 
-    public getStartHour() {
+    public int getStartHour() {
         return startHour;
     }
 
@@ -43,6 +41,7 @@ public class Showtime {
         return startHour >= 18 && startHour <= 21;
     }
 
+    @Override
     public String toString() {
         return " [T" + id + "]" + movie.getTitle() + " @ Hall" + hall.getId() + " - " + String.format("%02d:00", startHour) + "(" + dateTag + ")";
     }
