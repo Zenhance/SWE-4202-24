@@ -6,5 +6,8 @@ import data.ShowtimeBoard;
 public class CheckoutEngine {
     private ShowtimeBoard board;
     ConcessionMenu menu;
-
+    public CheckoutEngine(ShowtimeBoard board, ConcessionMenu menu){
+        this.board = board;
+        this.menu = menu;
+    }
 }
