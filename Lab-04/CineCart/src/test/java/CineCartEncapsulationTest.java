@@ -10,7 +10,6 @@ import model.Customer;
 import model.Hall;
 import model.Movie;
 import model.Seat;
-import model.Showtime;
 import model.Ticket;
 
 /**
@@ -142,11 +141,11 @@ public class CineCartEncapsulationTest {
     void seat_book_returnsTrueOnFreshSeat_andFalseIfAlreadyBooked() {
         Seat s = new Seat(0, 0, false);
         assertTrue(s.book(),
-                "book() on a fresh seat must return true");
+                "book() on a fresh Seat must return true");
         assertFalse(s.book(),
-                "book() on an already-booked seat must return false");
+                "book() on an already-booked Seat must return false");
         assertTrue(s.isBooked(),
-                "an already-booked seat must remain booked after a redundant book() call");
+                "an already-booked Seat must remain booked after a redundant book() call");
     }
 
     @Test

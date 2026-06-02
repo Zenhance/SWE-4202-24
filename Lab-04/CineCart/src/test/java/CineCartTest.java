@@ -10,7 +10,6 @@ import model.Customer;
 import model.Hall;
 import model.Movie;
 import model.Seat;
-import model.Showtime;
 import model.Ticket;
 import data.ConcessionMenu;
 import data.ShowtimeBoard;
@@ -285,7 +284,7 @@ public class CineCartTest {
         Cart cartB = new Cart(f.carol);
         // First booking: legitimate (Toy Story is G-rated, all OK)
         assertEquals("OK", f.engine.bookTicket(cartA, 19, 1, 0));
-        // Second booking by another customer for the SAME seat: must fail
+        // Second booking by another customer for the SAME Seat: must fail
         String r2 = f.engine.bookTicket(cartB, 19, 1, 0);
         assertTrue(r2.toLowerCase().contains("unavailable"),
                 "Expected 'Seat unavailable' style message, got: " + r2);
