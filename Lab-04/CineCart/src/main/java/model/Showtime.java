@@ -36,7 +36,7 @@ public class Showtime {
     }
 
     public boolean isPeak() {
-        if(startHour>18 && startHour<21) {
+        if(this.startHour>=18 && this.startHour<=21) {
             return true;
         }
         else
@@ -44,6 +44,6 @@ public class Showtime {
     }
 
     public String toString() {
-        return String.format("[%d] Inception @ Hall 2 - %d (%s)",id,startHour,dateTag);
+        return String.format("[%d] movie @ Hall hall - %d (%s)",id,startHour,dateTag);
     }
 }
