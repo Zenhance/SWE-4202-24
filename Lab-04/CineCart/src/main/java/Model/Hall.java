@@ -2,7 +2,7 @@ package Model;
 
 public class Hall {
     private int id;
-    private int row;
+    private int rows;
     private int cols;
     private Seat[][] grid;
 
@@ -71,4 +71,4 @@ public class Hall {
             }
         }
     }
-}
+
