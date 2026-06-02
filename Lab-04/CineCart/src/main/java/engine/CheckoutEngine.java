@@ -128,7 +128,8 @@ public class CheckoutEngine {
         reciept += "Concessions:\n";
             for (int i = 0; i < cart.getItemCount(); i++) {
                 reciept+= cart.getItems()[i].getName()
-                        + " x " + cart.getQtys()[i] + " = BDT " + String.format("%.2f", cart.getItems()[i].getUnitPrice() * cart.getQtys()[i]) + "\n";
+                        + " x " + cart.getQtys()[i] + " = BDT " +
+                        String.format("%.2f", cart.getItems()[i].getUnitPrice() * cart.getQtys()[i]) + "\n";
             }
             double discount = calculateDiscount(cart);
 
