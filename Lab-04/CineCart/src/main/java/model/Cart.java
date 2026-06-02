@@ -64,7 +64,7 @@ public class Cart {
         return sum;
     }
 
-    public double sumConcessionRaw(){
+    public double sumConcessionsRaw(){
         double sum=0;
 
         for(int i=0;i<itemCount;i++){
