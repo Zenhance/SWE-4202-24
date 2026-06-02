@@ -20,6 +20,7 @@ public class Hall {
         }
     }
 
+
     public int getId() {
         return id;
     }
