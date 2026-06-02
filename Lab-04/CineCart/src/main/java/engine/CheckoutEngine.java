@@ -77,6 +77,13 @@ public class CheckoutEngine
 
     public String getReceipt(Cart cart)
     {
-        return "=== Receipt ===\n"+"BDT "+"Total "+"Discount"+ cart.getOwner();
+        String receipt="=== Receipt ===\n";
+        receipt=receipt+cart.getOwner().getName();
+        receipt="\nTickets\n";
+        receipt=receipt+"\nConcessions\n";
+        receipt=receipt+"\nTotal\n";
+        receipt=receipt+"\nDiscount\n";
+        receipt=receipt+"\nPayable : ";
+        return receipt;
     }
 }
