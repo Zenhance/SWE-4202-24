@@ -7,7 +7,7 @@ public class Movie {
     private int durationMin;
     private double basePrice;
 
-    Movie(int id, String title, String rating, int durationMin, double basePrice){
+    public Movie(int id, String title, String rating, int durationMin, double basePrice){
         this.id = id;
         this.title = title;
         this.rating = rating;
@@ -44,7 +44,8 @@ public class Movie {
             return 18;
     return 0;
     }
-//    public String toString(){
-//
-//    }
+    public String toString(){
+        String ans2 = String.format("%s (%s) %dmin - BDT %.2lf", title, rating, durationMin, basePrice);
+        return ans2;
+    }
 }
