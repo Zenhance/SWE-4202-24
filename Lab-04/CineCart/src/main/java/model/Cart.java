@@ -18,6 +18,13 @@ public class Cart {
     public int itemCount;
 
 
+    //constructor
+    public Cart(Customer owner) {
+        int ticketcount = 0;
+
+        int itemcount = 0;
+    }
+
 
 
 }
