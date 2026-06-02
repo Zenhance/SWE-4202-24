@@ -12,4 +12,12 @@ public class ConcessionMenu {
         count = 0;
     }
 
+    public void add(ConcessionItem c){
+        if(count<MAX){
+            items[count]=c;
+            count++;
+        }
+    }
+    public ConcessionItem findById
+
 }
