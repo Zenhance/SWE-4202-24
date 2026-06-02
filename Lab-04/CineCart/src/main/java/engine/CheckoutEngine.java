@@ -92,5 +92,7 @@ public class CheckoutEngine {
 
     public String getReceipt(Cart cart){
         return "Receipt" + "BDT" + "Total" + "Discount" + cart.getOwner();
+
+
     }
 }
