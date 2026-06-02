@@ -21,4 +21,9 @@ public class ConcessionMenu {
         }
         return null;
     }
+    public void displayAll(){
+        for(int m=0; m<count; m++){
+            System.out.println(items[m]);
+        };
+    }
 }
