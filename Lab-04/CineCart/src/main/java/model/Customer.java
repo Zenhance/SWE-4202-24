@@ -23,6 +23,9 @@ public Customer(int id, String name, int age) {
 public String getLoyaltyTier() {
     return loyaltyTier;
 }
+    public int getId() {
+        return id;
+    }
 public int getAge() {
     return age;
 }
