@@ -20,8 +20,6 @@ public class Showtime {
 
     }
 
-
-
     boolean isPeak() {
         if(startHour >= 18 && startHour <= 21){
             return true;
@@ -31,7 +29,18 @@ public class Showtime {
 
     }
 
+    @Override
+    public String toString() {
+        return "Showtime{" +
+                "id=" + id +
+                ", movie=" + movie +
+                ", hall=" + hall +
+                ", startHour=" + startHour +
+                ", dateTag='" + dateTag + '\'' +
+                '}';
     }
-
-
 }
+
+
+
+
