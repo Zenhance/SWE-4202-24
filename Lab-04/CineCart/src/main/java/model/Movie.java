@@ -47,6 +47,9 @@ public class Movie{
         } else if (rating.equals("R")) {
             return 18;
         }
+        else{
+            return 0;
+        }
     }
 
     public String toString(){
