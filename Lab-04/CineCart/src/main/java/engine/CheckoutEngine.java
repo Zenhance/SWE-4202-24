@@ -45,6 +45,7 @@ return "OK";
     }
 
     public String getReceipt(Cart cart){
+        return "Receipt" + "BDT" + "Total" + "Discount";
 
 
 

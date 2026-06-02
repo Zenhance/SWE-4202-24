@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="signature">
+    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="getreceipt cart">
       <change beforePath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/engine/CheckoutEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/engine/CheckoutEngine.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -126,46 +126,6 @@
       <workItem from="1778092688155" duration="94000" />
       <workItem from="1778092809585" duration="6679000" />
       <workItem from="1778163384097" duration="3333000" />
-    </task>
-    <task id="LOCAL-00016" summary="creating classes">
-      <option name="closed" value="true" />
-      <created>1777586746984</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1777586746984</updated>
-    </task>
-    <task id="LOCAL-00017" summary="student queue completion">
-      <option name="closed" value="true" />
-      <created>1777587152478</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1777587152478</updated>
-    </task>
-    <task id="LOCAL-00018" summary="student queue fixing">
-      <option name="closed" value="true" />
-      <created>1777587620023</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1777587620023</updated>
-    </task>
-    <task id="LOCAL-00019" summary="student stack">
-      <option name="closed" value="true" />
-      <created>1777588545857</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1777588545857</updated>
-    </task>
-    <task id="LOCAL-00020" summary="student stack fixing code">
-      <option name="closed" value="true" />
-      <created>1777588900883</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1777588900883</updated>
     </task>
     <task id="LOCAL-00021" summary="main file">
       <option name="closed" value="true" />
@@ -519,13 +479,58 @@
       <option name="project" value="LOCAL" />
       <updated>1780400189019</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="signature">
+      <option name="closed" value="true" />
+      <created>1780400264232</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1780400264232</updated>
+    </task>
+    <task id="LOCAL-00066" summary="signature">
+      <option name="closed" value="true" />
+      <created>1780400308993</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1780400308993</updated>
+    </task>
+    <task id="LOCAL-00067" summary="checkout cart">
+      <option name="closed" value="true" />
+      <created>1780400388071</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1780400388071</updated>
+    </task>
+    <task id="LOCAL-00068" summary="checkout cart">
+      <option name="closed" value="true" />
+      <created>1780400481867</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1780400481867</updated>
+    </task>
+    <task id="LOCAL-00069" summary="getreceipt cart">
+      <option name="closed" value="true" />
+      <created>1780400565266</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1780400565266</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="f59b21f3-1780-444b-ab38-ac906cc389e9" value="TOOL_WINDOW" />
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -545,12 +550,15 @@
             </State>
           </value>
         </entry>
+        <entry key="f59b21f3-1780-444b-ab38-ac906cc389e9">
+          <value>
+            <State />
+          </value>
+        </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="writing trip class" />
-    <MESSAGE value="writing trip class methods" />
     <MESSAGE value=" trip class methods fix" />
     <MESSAGE value="continuing trip class method writing" />
     <MESSAGE value=" trip class method writing" />
@@ -574,6 +582,8 @@
     <MESSAGE value="writing the skeleton of checkout engine to prevent compilation error 2" />
     <MESSAGE value="constructor" />
     <MESSAGE value="signature" />
-    <option name="LAST_COMMIT_MESSAGE" value="signature" />
+    <MESSAGE value="checkout cart" />
+    <MESSAGE value="getreceipt cart" />
+    <option name="LAST_COMMIT_MESSAGE" value="getreceipt cart" />
   </component>
 </project>
