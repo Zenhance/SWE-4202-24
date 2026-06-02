@@ -43,5 +43,12 @@ public int getTicketCount(){
     return ticketCount;
 }
 
-public
+public Ticket getTicket(){
+    return tickets;
+}
+
+public Customer getOwner(){
+    return owner;
+}
+
 }
