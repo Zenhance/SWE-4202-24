@@ -48,4 +48,10 @@ public class CheckoutEngine {
         return "OK";
 
     }
+    public double checkout(Cart cart){
+        double ticketSubtotal= cart.sumTicketsPaid();
+
+
+
+    }
 }
