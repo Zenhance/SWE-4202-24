@@ -10,20 +10,22 @@ public class ConcessionMenu {
         this.items=new ConcessionItem[MAX];
         this.count=0;
     }
-    public void add(ConcessionItem c){
-        if(count>=MAX){
+    public void add(ConcessionItem c) {
+        if (count >= MAX) {
             return;
-        }else{
-            items[count]=c;
+        } else {
+            items[count] = c;
             count++;
         }
+    }
       public ConcessionItem findByCode(String code){
-            for(int i=0;i<count;i++){
-            if(items[i].getCode().equals(code)){
-                return items[i];
+            for(int i=0;i<count;i++) {
+                if (items[i].getCode() == code) {
+                    return items[i];
+                }
             }
             return null;
-            }
+
         }
 
         public void displayAll(){
