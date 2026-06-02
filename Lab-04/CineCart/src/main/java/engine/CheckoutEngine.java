@@ -45,8 +45,8 @@ public class CheckoutEngine {
     }
 
     public double checkout(Cart cart){
-        double ticketSubtotal= cart.sumTicketPaid();
-        double concessionSubtotal= cart.sumConcessionRaw();
+        double ticketSubtotal= cart.sumTicketsPaid();
+        double concessionSubtotal= cart.sumConcessionsRaw();
         double combo=0;
         if(cart.hasItem("POP")&& cart.hasItem("SODA")){
             combo=50;
@@ -64,5 +64,14 @@ public class CheckoutEngine {
 
         double tax=0.05*afterDiscount;
         return Math.round((afterDiscount+tax)*100.0)/100.0;
+    }
+
+    public String getReceipt(Cart cart){
+        double total = checkout(cart);
+        String receipt = "Receipt\n";
+        receipt += "Customer: " + cart.getOwner().getName() + "\n";
+        receipt += "Discount applied\n";
+        receipt += String.format("Total: BDT %.2f\n", total);
+        return receipt;
     }
 }

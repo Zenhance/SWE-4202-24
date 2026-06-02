@@ -17,7 +17,7 @@ public class Cart {
         this.items = new ConcessionItem[MAX_ITEMS];
         this.itemcount=0;
         this.ticketCount=0;
-        qtys=new int[MAX_ITEMS];
+        this.qtys=new int[MAX_ITEMS];
     }
 
     public void addTicket(Ticket t){
@@ -31,7 +31,8 @@ public class Cart {
     public void addItem(ConcessionItem c,int qty){
         if(itemcount<MAX_ITEMS && qty>0){
             items[itemcount]=c;
-            itemcount+=qty;
+            qtys[itemcount]=qty;
+            itemcount++;
         }
     }
 
