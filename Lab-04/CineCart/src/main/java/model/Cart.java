@@ -15,13 +15,13 @@ public class Cart {
         ticketCount=0;
         itemCount=0;
     }
-    void addTicket(Ticket t){
+    public void addTicket(Ticket t){
         if (ticketCount<MAX_TICKETS){
             tickets[ticketCount]=t;
             ticketCount++;
         }
     }
-        void addItem(ConcessionItem c,int qty)
+    public void addItem(ConcessionItem c,int qty)
         {
             if (itemCount<MAX_ITEMS&&qty>0)
             {
