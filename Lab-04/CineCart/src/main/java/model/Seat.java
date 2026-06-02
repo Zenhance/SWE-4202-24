@@ -6,7 +6,7 @@ public class Seat {
     private boolean isPremium;
     private boolean isBooked;
 
-    Seat(int row, int col, boolean isPremium){
+    public Seat(int row, int col, boolean isPremium){
         this.row = row;
         this.col = col;
         this.isPremium = isPremium;
