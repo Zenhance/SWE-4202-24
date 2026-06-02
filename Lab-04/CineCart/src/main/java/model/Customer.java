@@ -37,7 +37,7 @@ public class Customer {
         return loyaltyTier;
     }
 
-    public double getTierDiscount(String loyaltyTier){
+    public double getTierDiscount(){
         double  discountAmount=0;
         if(loyaltyTier=="GOLD"){
             discountAmount=0.15;

@@ -13,7 +13,7 @@ public class ConcessionMenu {
         this.count = 0;
     }
 
-    void add(ConcessionItem c){
+   public  void add(ConcessionItem c){
         if(count<MAX){
             items[count]=c;
             count++;

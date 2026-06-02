@@ -47,7 +47,7 @@ public class Hall {
     }
 
     //int count=0;
-    int countAvailable(){
+    public int countAvailable(){
         int count=0;
         for(int r=0; r<rows; r++){
             for(int c=0; c<cols; c++){

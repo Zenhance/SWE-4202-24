@@ -67,12 +67,28 @@ public class CheckoutEngine {
     double checkout (Cart cart){
       double ticketSubtotal=cart.sumTicketsPaid();
       double concessionSubtotal=cart.sumConcessionRaw();
+      double combo=0;
       if(cart.hasItem("POP") && cart.hasItem("SODA")){
-          double combo=50.0;
+          combo=50.0;
       }else{
-          double combo=0.0;
+          combo=0.0;
       }
 
+      double preDiscount = ticketSubtotal+concessionSubtotal-combo;
+      double group=0;
+      if(cart.getTicketCount()>=4){
+          group=0.10*preDiscount;
+      }else{
+          group=0;
+      }
+
+      double  tier=cart.getOwner().getTierDiscount()*preDiscount;
+      double afterDiscounts=preDiscount-group-tier;
+      double tax=0.05*afterDiscounts;
+
+
+      double final_res=afterDiscounts+tax;
+      return final_res;
 
 
 

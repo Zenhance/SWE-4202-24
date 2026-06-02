@@ -50,8 +50,8 @@ public class Cart {
         return ticketCount;
     }
 
-    public int getConcessionItem() {
-        return ConcessionItem;
+    public ConcessionItem[] getItems() {
+        return items;
     }
 
     public int[] getQtys() {
@@ -66,7 +66,7 @@ public class Cart {
     public double sumTicketsPaid(){
         double sum=0;
         for(int i=0; i<ticketCount; i++){
-            sum+=tickets[i].getpricePaid(); /*So, basically, this thing will be applicable for every arrays
+            sum+=tickets[i].getPricePaid(); /*So, basically, this thing will be applicable for every arrays
              in OOP. so, while calculating the total price, at first, we will need to get to the array
              where each of the tickets has been stored as a separate object. and since, those objetcs
              are private, you will need a getter (getpricePaid()) to access to these. */
@@ -79,7 +79,7 @@ public class Cart {
     public double  sumConcessionRaw(){
         double sum_of_items=0;
         for(int i=0; i<itemCount;i++){
-            sum_of_items+=(items[i].getunitPrice())*(qtys[i]);
+            sum_of_items+=(items[i].getUnitPrice()*(qtys[i]));
         }
 
         return sum_of_items;
@@ -89,5 +89,6 @@ public class Cart {
         for(int i=0; i<itemCount; i++){
             return (items[i].getCode()).equals(code);
         }
+        return false;
     }
 }
