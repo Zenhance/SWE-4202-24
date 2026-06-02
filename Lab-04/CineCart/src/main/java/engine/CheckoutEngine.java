@@ -32,7 +32,7 @@ public class CheckoutEngine {
             price *=1.20;
         }
         seat.book();
-        Ticket ticket= new Ticket();
+        Ticket ticket= new Ticket(showtime,row,col,price);
         cart.addTicket(ticket);
         return "OK";
     }
