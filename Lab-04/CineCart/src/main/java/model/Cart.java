@@ -60,8 +60,8 @@ public Ticket[] getTickets() {
 
     public double sumTicketsPaid(){
                  double totalPrice=0.0;
-                 for(int i=0;i<itemCount;i++){
-                     totalPrice+= items[i].getUnitPrice() * qtys[i];
+                 for(int i=0;i<ticketCount;i++){
+                     totalPrice+= tickets[i].getPricePaid();
 
                  }return totalPrice;
     }
