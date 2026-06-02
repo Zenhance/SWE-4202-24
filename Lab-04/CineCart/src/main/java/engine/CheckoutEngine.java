@@ -91,7 +91,8 @@ public class CheckoutEngine {
 
     //F.2
     public String getReceipt(Cart cart){
-        String out = "Receipt : " + cart.getOwner().getName() + " BDT Total Discount ";
+        String out = "Receipt : \n Name: " + cart.getOwner().getName()
+                + "\nTotal Price: " + String.format("%.2f", checkout(cart))+ " BDT (with Discount)\nList:";
 
         Ticket[] tickets = cart.getTickets();
         for (int i = 0; i < cart.getTicketCount(); i++) {
