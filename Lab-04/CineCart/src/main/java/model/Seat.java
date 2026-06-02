@@ -17,10 +17,10 @@ public class Seat {
     public void release(){
       isBooked = false;
     }
-    boolean isAvailable(){
+    public boolean isAvailable(){
         return !isBooked;
     }
-    boolean isPremium(){
+    public boolean isPremium(){
         return isPremium;
     }
     public String toString(){

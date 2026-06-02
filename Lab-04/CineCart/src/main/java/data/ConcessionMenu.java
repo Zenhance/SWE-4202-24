@@ -4,7 +4,7 @@ import model.ConcessionItem;
 
 public class ConcessionMenu {
 
-    private static final int MAX = 30;
+    private static final int MAX = 30;    // deya ase
 
     private ConcessionItem[] items;
     private int count;
@@ -23,7 +23,7 @@ public class ConcessionMenu {
         }
     }
 
-    // find by code
+
     public ConcessionItem findByCode(String code) {
 
         for(int i = 0; i < count; i++) {
