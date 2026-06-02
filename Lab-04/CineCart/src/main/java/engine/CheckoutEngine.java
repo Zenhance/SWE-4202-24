@@ -91,5 +91,10 @@ public class CheckoutEngine {
 
         // [9]
         return round2(afterDiscounts + tax);
+
+    }
+
+    private double round2(double value) {
+        return Math.round(value * 100.0) / 100.0;
     }
 }
