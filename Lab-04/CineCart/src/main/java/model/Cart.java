@@ -6,25 +6,24 @@ public static final int MAX_ITEMS=20;
 private Customer owner;
 private Ticket[] tickets;
 private int ticketCount;
-private int ItemCount;
+private int itemCount;
 private ConcessionItem[] items;
 private int[] qtys;
-private int itemCount;
 public Cart(Customer owner){
     this.owner=owner;
     tickets=new Ticket[MAX_TICKETS];
-    items=new ConsessionItem[MAX_ITEMS];
+    items=new ConcessionItem[MAX_ITEMS];
     qtys=new int[MAX_ITEMS];
     ticketCount=0;
     itemCount=0;
 }
 public void addTicket(Ticket t){
     if(ticketCount<MAX_TICKETS){
-        tickets[ticketCount]=1;
+        tickets[ticketCount]=t;
         ticketCount++;
     }
 }
-public void addItem(ConsessionItem c, int qty){
+public void addItem(ConcessionItem c, int qty){
     if(itemCount<MAX_ITEMS && qty>0){
         items[itemCount]=c;
         qtys[itemCount]=qty;
@@ -44,7 +43,7 @@ public ConcessionItem[] getItems() {
         return items;
     }
     public int getItemCount() {
-        return ItemCount;
+        return itemCount;
     }
     public int[] getQtys() {
         return qtys;
