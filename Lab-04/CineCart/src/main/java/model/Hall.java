@@ -33,11 +33,19 @@ public int countAvailable(){
     int count=0;
     for(int i=0;i<rows;i++){
         for(int j=0;j<cols;j++){
-
-            if(grid)
-        }
+            if(grid[i][j].isAvailable()) count++;
+        } return count;
     }
 
+public int getId(){
+        return id;
+    }
+public int getRows(){
+        return rows;
+    }
+public int getCols(){
+        return cols;
+    }
 
 
 }
