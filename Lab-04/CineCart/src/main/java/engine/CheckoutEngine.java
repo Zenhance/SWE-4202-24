@@ -13,6 +13,11 @@ public class CheckoutEngine {
         this.menu=menu;
     }
 
+
+    public String getReceipt(Cart cart) {
+        return null;
+    }
+
     public String bookTicket(Cart cart,int showtimeId,int row,int col){
         return null;
     }
