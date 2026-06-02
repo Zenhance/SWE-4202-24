@@ -1,17 +1,17 @@
 package engine;
 
+import data.ConcessionMenu;
 import data.ShowtimeBoard;
 import model.Showtime;
-import model.Customer;
 import model.ConcessionItem;
 import model.*;
 
 public class CheckoutEngine {
     private ShowtimeBoard board;
-    private ConcessionItem menu;
+    private ConcessionMenu menu;
 
 
-    public CheckoutEngine(ShowtimeBoard board, ConcessionItem menu) {
+    public CheckoutEngine(ShowtimeBoard board, ConcessionMenu menu) {
         this.board = board;
         this.menu = menu;
     }
@@ -62,6 +62,7 @@ public class CheckoutEngine {
         double tax       = 0.05 * after;
         return Math.round((after + tax) * 100.0) / 100.0;
     }
+
 
 
 
