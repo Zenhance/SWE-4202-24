@@ -27,11 +27,12 @@ public class Seat {
         return this.isBooked;
     }
 
-    public void book(){
+    public boolean book(){
         if(!this.isBooked){
             this.isBooked=true;
         }
 
+        return false;
     }
     public void release(){
         this.isPremium=true;

@@ -20,27 +20,29 @@ public class Cart {
         this.ticketCount = 0;
         this.itemCount = 0;
     }
-    public void addTicket(Ticket t) {
+    public boolean addTicket(Ticket t) {
         if (ticketCount >= 20) {
-            return;
+            return false;
 
         }
         tickets[ticketCount] = t;
         ticketCount++;
 
+        return false;
     }
 
-    public void addItem(ConcessionItem c, int qty){
+    public boolean addItem(ConcessionItem c, int qty){
         if(itemCount>=20){
-            return;
+            return false;
         }
         if(qty<=20){
-            return;
+            return false;
         }
         items[itemCount]=c;
         qtys[itemCount]=qty;
         itemCount++;
 
+        return false;
     }
 
 
