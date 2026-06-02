@@ -6,9 +6,9 @@ import model.Showtime;
 import model.Cart;
 
 public class CheckoutEngine {
-    private final ShowtimeBoard;
-    private ConcessionMenu;
-    public checkoutEngine(ShowtimeBoard board,ConcessionMenu menu){
+    private final ShowtimeBoard board;
+    private ConcessionMenu menu;
+    public CheckoutEngine(ShowtimeBoard board,ConcessionMenu menu){
         this.board=board;
         this.menu=menu;
     }
