@@ -16,7 +16,7 @@ public class Showtime {
     public int getId(){
         return id;
     }
-    public Movie getmovie(){
+    public Movie getMovie(){
         return movie;
     }
 
