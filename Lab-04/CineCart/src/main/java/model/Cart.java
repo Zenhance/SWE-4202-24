@@ -66,4 +66,6 @@ public class Cart {
         return false;
         }
 
+    public void addTicket(Ticket ticket) {
+    }
 }
