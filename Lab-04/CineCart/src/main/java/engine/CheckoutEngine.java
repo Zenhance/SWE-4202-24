@@ -4,6 +4,8 @@ import data.ConcessionMenu;
 import data.ShowtimeBoard;
 import model.*;
 
+import static java.lang.Math.round;
+
 public class CheckoutEngine {
     private ShowtimeBoard board;
     private ConcessionMenu menu;
@@ -77,8 +79,11 @@ public class CheckoutEngine {
         double tier = cart.getOwner().getTierDiscount() * preDiscount;
         double afterDiscounts = preDiscount - group - tier;
         double tax = 0.05 * afterDiscounts;
-        double rounded;
 
-        return null;
+        double total = afterDiscounts + tax;
+
+        double rounded = round(total*100)/100;
+
+        return rounded;
     }
 }
