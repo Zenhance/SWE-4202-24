@@ -34,7 +34,7 @@ public class Seat {
     public void Release(){
         isBooked=false;
     }
-    boolean isAvailable(){
+    public boolean isAvailable(){
         return isBooked;
     }
     public String toString(){

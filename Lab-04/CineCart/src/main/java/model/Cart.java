@@ -9,6 +9,11 @@ public class Cart {
     int itemCount;
     public Cart(Customer owner){
         this.owner=owner;
+        tickets = new Ticket[MAX_TICKETS];
+        items = new ConcessionItem[MAX_ITEMS];
+        qtys = new int[MAX_ITEMS];
+        ticketCount = 0;
+        itemCount = 0;
     }
     void addTicket(Ticket t) {
         if (ticketCount < MAX_TICKETS) {
@@ -16,7 +21,7 @@ public class Cart {
             ticketCount++;
         }
     }
-        void addItems(ConcessionItem c,int qty)
+        void addItem(ConcessionItem c,int qty)
         {
             if (itemCount < MAX_ITEMS && qty > 0)
             {
@@ -49,6 +54,7 @@ public class Cart {
     public ConcessionItem[] getItems() {
         return items;
     }
+
     double sumTicketsPaid(){
         double sum=0;
     for(int i=0;i<ticketCount;i++){
