@@ -18,6 +18,12 @@ public void add(ConcessionItem c){
 }
 
 
+public ConcessionItem findByCode(String code){
+
+
+}
+
+
 
 
 }
