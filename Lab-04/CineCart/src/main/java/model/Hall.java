@@ -44,10 +44,10 @@ return count;
 
             for (int c = 0; c < cols; c++) {
 
-                if (grid[r][c].isBooked()) {
+                if (grid[r][c].getIsBooked()) {
                     System.out.print("# ");
                 }
-                else if (grid[r][c].isPremium()) {
+                else if (grid[r][c].getIsPremium()) {
                     System.out.print("* ");
                 }
                 else {
