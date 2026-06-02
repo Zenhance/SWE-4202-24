@@ -43,7 +43,7 @@ public class Hall {
     public int countAvailable(){
         for(int i=0;i<rows;i++){
             for(int j=0;j<cols;j++){
-                if(grid[rows][cols].isAvailable()) {
+                if(grid[i][j].isAvailable()) {
                     count++;
                 }
             }
@@ -64,6 +64,4 @@ public class Hall {
             }
         }
     }
-
-
 }

@@ -47,7 +47,4 @@ public class Seat {
            }
          return null;
     }
-
-
-
 }
