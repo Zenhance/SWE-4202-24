@@ -9,18 +9,34 @@ public class Hall {
         this.id=id;
         this.rows=rows;
         this.cols=cols;
-        grid = new Seat[rows][cols];
+        this.grid = new Seat[rows][cols];
 
         for(int r=0;r<rows;r++){
             for(int c=0;c<cols;c++){
-                boolean premium = r<premiumRows;
-                grid[r][c]=new Seat(r,c,premium);
+                boolean isPremium = r<premiumRows;
+                grid[r][c]=new Seat(r,c,isPremium);
             }
         }
 
     }
-    public Seat getSeat(int rows,int cols){
-        return Seat[rows][cols];
+
+    public int getId() {
+        return id;
+    }
+
+    public int getCols() {
+        return cols;
+    }
+
+    public int getRows() {
+        return rows;
+    }
+    public Seat[][] getGrid(){
+        return grid;
+    }
+
+    public Seat getSeat(int rows, int cols){
+        return grid[rows][cols];
 
     }
     int count=0;
