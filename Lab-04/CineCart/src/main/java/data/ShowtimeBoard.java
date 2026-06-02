@@ -13,23 +13,20 @@ public ShowtimeBoard() {
 }
 
 public void add(Showtime s) {
-    for(int i = 0; i < MAX;i++){
+   if(count < MAX){
         shows[count] = s;
             count++;
         }
     }
 
-
-public Showtime findById(int id) {
-    for (int i = 0; i < count; i++) {
-        if (shows[i].getId() == id) {
-            return shows[i];
+    public Showtime findById(int id) {
+        for(int i = 0; i < count; i++){
+            if(shows[i].getId() == id){
+                return shows[i];
+            }
         }
-        else{
-            return null;
+        return null;
     }
-}}
-
 public void displayAll() {
     for(int i = 0 ; i < count ; i++){
         System.out.println(shows[i]);
