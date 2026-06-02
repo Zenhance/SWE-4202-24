@@ -53,12 +53,14 @@ public class Cart {
         return (ticketCount < MAX_TICKETS)? true : false;
     }
 
-    public void addItem(ConcessionItem c, int qty){
-        if (itemCount >= MAX_ITEMS || qty <= 0)
-            throw new IllegalArgumentException("MAX ITEMS exceeded OR Qty is too low");
+    public boolean addItem(ConcessionItem c, int qty){
+        if (itemCount >= MAX_ITEMS || qty <= 0) return false;
+            //throw new IllegalArgumentException("MAX ITEMS exceeded OR Qty is too low");
         items[itemCount] = c;
         qtys[itemCount] = qty;
         itemCount++;
+
+        return (qty <= MAX_ITEMS && qty >= 0) ? true : false;
     }
 
     public double sumTicketsPaid(){
