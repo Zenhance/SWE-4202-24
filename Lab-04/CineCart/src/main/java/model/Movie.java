@@ -19,7 +19,7 @@ public class Movie {
     String getTitle(){
         return title;
     }
-    String getRating(){
+    public String getRating(){
         return rating;
     }
     int getDurationMin(){

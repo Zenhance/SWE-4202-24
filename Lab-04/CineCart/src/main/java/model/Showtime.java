@@ -15,8 +15,8 @@ public class Showtime {
     public Movie getMovie(){
         return movie;
     }
-    Hall hall(){
-        return hall;
+    public Hall getHall(){
+        return this.hall;
     }
     int getStartHour(){
         return startHour;

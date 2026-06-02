@@ -26,7 +26,7 @@ public class Hall {
     Seat[][] getGrid(){
         return grid;
     }
-    Seat getSeat(int rows,int cols){
+    public Seat getSeat(int rows,int cols){
         return grid[rows][cols];
     }
     int countAvailable(){
