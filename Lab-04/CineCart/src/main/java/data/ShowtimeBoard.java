@@ -25,5 +25,11 @@ public class ShowtimeBoard {
             count++;
         }
     }
+    public void displayAll() {
+        System.out.println("=== Available Showtimes ===");
+        for (int i = 0; i < count; i++) {
+            System.out.println(shows[i]);
+        }
+    }
 }
 
