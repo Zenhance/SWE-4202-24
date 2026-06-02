@@ -96,60 +96,6 @@ public class CheckoutEngine {
         double afterDiscounts = preDiscount - group - tier;
         double tax = 0.05 * afterDiscounts;
 
-        return round2(afterDiscounts + tax);
     }
 
-    private double round2(double value) {
-        return Math.round(value * 100.0) / 100.0;
-    }
-
-    public String getReceipt(Cart cart) {
-        String receipt = "";
-
-        receipt += "Receipt\n";
-        receipt += "Customer: " + cart.getOwner().getName() + "\n";
-        receipt += "-------------------------\n";
-
-        receipt += "Tickets:\n";
-        for (int i = 0; i < cart.getTicketCount(); i++) {
-            receipt += cart.getTickets()[i].toString() + "\n";
-        }
-
-        receipt += "Concessions:\n";
-        for (int i = 0; i < cart.getItemCount(); i++) {
-            receipt += cart.getItems()[i].getName()
-                    + " x " + cart.getQtys()[i]
-                    + " = BDT "
-                    + String.format("%.2f", cart.getItems()[i].getUnitPrice() * cart.getQtys()[i])
-                    + "\n";
-        }
-
-        double discount = calculateDiscount(cart);
-
-        receipt += "Discount: BDT " + String.format("%.2f", discount) + "\n";
-        receipt += "Total: BDT " + String.format("%.2f", checkout(cart)) + "\n";
-
-        return receipt;
-    }
-
-    private double calculateDiscount(Cart cart) {
-        double ticketSubtotal = cart.sumTicketsPaid();
-        double concessionSubtotal = cart.sumConcessionsRaw();
-
-        double combo = 0.0;
-        if (cart.hasItem("POP") && cart.hasItem("SODA")) {
-            combo = 50.0;
-        }
-
-        double preDiscount = ticketSubtotal + concessionSubtotal - combo;
-
-        double group = 0.0;
-        if (cart.getTicketCount() >= 4) {
-            group = 0.10 * preDiscount;
-        }
-
-        double tier = cart.getOwner().getTierDiscount() * preDiscount;
-
-        return combo + group + tier;
-    }
 }
