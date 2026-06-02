@@ -7,11 +7,11 @@ public class Seat {
     boolean isBooked = false;
     double basePrice;
 
-    public Seat(int row, int col, boolean isPremium, boolean isBooked) {
+    public Seat(int row, int col, boolean isPremium) {
         this.row = row;
         this.col = col;
         this.isPremium = isPremium;
-        this.isBooked = isBooked;
+        this.isBooked = false;
     }
 
     public int row() {
@@ -56,5 +56,7 @@ public class Seat {
         }
         if (isBooked) {
             return "#" + "R" + row + "C" + col;
-        }}
+        }
+        else return "";
+    }
 }
