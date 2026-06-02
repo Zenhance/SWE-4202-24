@@ -66,10 +66,18 @@ public Ticket[] getTickets() {
                  }return totalPrice;
     }
     public double sumConcessionsRaw(){
-
+     double totalSum=0.0;
+     for(int i=0;i<itemCount;i++){
+         totalSum+= items[i].getUnitPrice() * qtys[i];
+     }
+     return totalSum;
     }
     public boolean hasItem(String code){
-
+          for(int i=0;i<itemCount;i++){
+              if(items[i].getCode().equals(code)){
+                  return true;
+              }
+          }return false;
     }
 
 }
