@@ -15,8 +15,9 @@ public class CheckoutEngine {
         this.menu = menu;
     }
 
+    //E. Booking Flow
     //E.1
-    String bookTicket(Cart cart, int showtimeId, int row, int col){
+    public String bookTicket(Cart cart, int showtimeId, int row, int col){
         Showtime showtime = board.findById(showtimeId);
         if(showtime == null) return "Showtime not found";
 
@@ -44,7 +45,7 @@ public class CheckoutEngine {
     }
 
     //E.2
-    String addConcession(Cart cart, String code, int qty){
+    public String addConcession(Cart cart, String code, int qty){
         ConcessionItem item = menu.findByCode(code);
         if(item == null) return "Item not found";
 
@@ -54,8 +55,9 @@ public class CheckoutEngine {
         return "OK";
     }
 
+    //F. Checkout Pipeline
     //F.1
-    double checkout(Cart cart){
+    public double checkout(Cart cart){
         double ticketSubtotal = cart.sumTicketsPaid();
         double concessionSubtotal = cart.sumConcessionsRaw();
 
@@ -88,7 +90,7 @@ public class CheckoutEngine {
     }
 
     //F.2
-    String getReceipt(Cart cart){
+    public String getReceipt(Cart cart){
         String out = "Receipt BDT Total Discount " + cart.getOwner().getName();
         return out;
     }
