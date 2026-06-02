@@ -42,5 +42,27 @@ public class Cart{
         itemCount++;
     }
 
+    public Customer getOwner() {
+        return owner;
+    }
 
+    public Ticket[] getTickets() {
+        return tickets;
+    }
+
+    public ConcessionItem[] getItems() {
+        return items;
+    }
+
+    public int[] getQtys() {
+        return qtys;
+    }
+
+    public int getItemCount() {
+        return itemCount;
+    }
+
+    public int getTicketCount() {
+        return ticketCount;
+    }
 }
