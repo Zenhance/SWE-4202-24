@@ -10,7 +10,7 @@ public class ShowtimeBoard {
     public void add(Showtime s){
         if (count <MAX ){
             shows[count] =s ;
-            count++
+            count++;
         }
     }
 
