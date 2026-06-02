@@ -22,11 +22,11 @@ public class Seat {
         return col;
     }
 
-    public boolean getIsPremium() {
+    public boolean isPremium() {
         return isPremium;
     }
 
-    public boolean getIsBooked() {
+    public boolean isBooked() {
         return this.isBooked;
     }
 
