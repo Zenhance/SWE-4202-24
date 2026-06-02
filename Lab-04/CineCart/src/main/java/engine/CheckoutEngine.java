@@ -52,6 +52,18 @@ public class CheckoutEngine {
         else combo = 0.0;
 
         double preDiscount = ticketSubtotal + concessionSubtotal - combo;
-        return preDiscount;
+
+        double group;
+        if (cart.getTicketCount() >= 4)  group = 0.10 * preDiscount;
+        else group = 0.0;
+
+        double tier = cart.getOwner().getTierDiscount() * preDiscount;
+
+        double afterDiscounts = preDiscount - group - tier;
+        double tax = 0.05 * afterDiscounts;
+
+        double round = afterDiscounts + tax;
+
+        return Math.round(round * 100.0) / 100.0;
     }
 }
