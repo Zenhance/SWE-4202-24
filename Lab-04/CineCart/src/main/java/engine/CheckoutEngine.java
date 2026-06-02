@@ -79,6 +79,9 @@ public class CheckoutEngine {
         else{
             group = 0.0;
         }
-
+double tier = cart.getOwner().getTierDiscount()*preDiscount;
+        double afterDiscounts = preDiscount-group-tier;
+        double tax= 0.05*afterDiscounts;
+        return round2(afterDiscounts+tax);
     }
 }
