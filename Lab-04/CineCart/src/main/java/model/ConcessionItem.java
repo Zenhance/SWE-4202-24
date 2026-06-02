@@ -25,6 +25,17 @@ public String getName() {
 }
     public double getUnitPrice() {
         return unitPrice;
+    }
+
+
+    @Override
+    public String toString() {
+        return "ConcessionItem{" +
+                "code='" + code + '\'' +
+                ", name='" + name + '\'' +
+                ", unitPrice=" + unitPrice +
+                '}';
+    }
 
 
 
@@ -34,5 +45,3 @@ public String getName() {
 
 
 
-
-}
