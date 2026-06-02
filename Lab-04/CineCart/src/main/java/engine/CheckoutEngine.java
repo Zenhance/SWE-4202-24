@@ -22,5 +22,18 @@ public class CheckoutEngine {
         if(cart.getOwner().getAge()<showtime.getMovie().getMinAge()){
             return "Underage for rating "+ showtime.getMovie().getRating();
         }
-    }
+        Seat seat=showtime.getHall().getSeat(row,col);
+        if(seat.isBooked()){
+            return "Seat is unavailable";
+        }
+        if(showtime.getMovie().getBasePrice()*(seat.isPremium()==true){
+            double price=1.30*(showtime.isPeak() ? 1.20 : 1.00);
+        }
+        else{
+            double price = 1.00*(showtime.isPeak() ? 1.20 : 1.00);
+        }
+        seat.book();
+        Ticket ticket=new Ticket(showtime,row,col,double price);
+        cart.addTicket(ticket);
+        return "OK";
 }
