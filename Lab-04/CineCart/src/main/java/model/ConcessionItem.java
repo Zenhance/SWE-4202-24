@@ -15,7 +15,7 @@ public class ConcessionItem {
 
       public String getCode()
       {return code;}
-    return String getName()
+    public String getName()
     {
         return name;
     }

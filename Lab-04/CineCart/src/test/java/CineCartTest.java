@@ -13,7 +13,6 @@ import model.Seat;
 import model.Showtime;
 import model.Ticket;
 import data.ConcessionMenu;
-import data.ShowtimeBoard;
 import engine.CheckoutEngine;
 import io.CsvLoader;
 
