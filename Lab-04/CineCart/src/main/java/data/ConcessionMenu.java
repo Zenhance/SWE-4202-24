@@ -12,11 +12,22 @@ public class ConcessionMenu {
         count = 0;
     }
 
-    public void add(ConcessionItem c){
-        if (count < MAX){
-            items [count] = c;
+    public void add(ConcessionItem c) {
+        if (count < MAX) {
+            items[count] = c;
             count++;
         }
     }
 
-}
+    public ConcessionItem findByCode(String code){
+        if (code == null)
+            return null;
+        for (int i = 0; i<count; i++){
+            if (items[i].getCode().equals(code))
+                return items[i];
+        }
+    return null;
+    }
+
+
+    }
