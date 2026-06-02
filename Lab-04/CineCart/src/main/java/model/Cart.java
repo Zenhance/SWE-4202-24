@@ -35,7 +35,7 @@ public class Cart {
        public Customer getOwner() {
             return owner;
         }
-       public Ticket[] getTicket(){
+       public Ticket[] getTickets(){
            return tickets;
         }
        public int getTicketCount(){

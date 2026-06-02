@@ -34,6 +34,7 @@ public class Customer {
     public int getAge(){
         return age;
     }
+    public int getId(){return id;}
     public String toString(){
         return id+" "+name+" "+age+" "+loyaltyTier;
     }
@@ -42,8 +43,5 @@ public String getLoyaltyTier(){
 }
     public String getName() {
         return name;
-    }
-    public Ticket[] getTickets(){
-        return ticket;
     }
 }

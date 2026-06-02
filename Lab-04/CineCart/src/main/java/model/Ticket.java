@@ -5,8 +5,10 @@ public class Ticket {
     private int row;
     private int col;
     private double pricePaid;
+    private int id;
 
     public Ticket(Showtime showtime, int row, int col, double pricePaid){
+        this.id = id;
         this.showtime = showtime;
         this.row = row;
         this.col = col;
@@ -22,14 +24,9 @@ public class Ticket {
     public int getCol(){
         return this.col;
     }
+    public int getId(){return this.id;}
     public double getPricePaid(){
         return this.pricePaid;
-    }
-    public Ticket[] getTickets(){
-        return ticket;
-    }
-    public int getId(){
-        return id;
     }
     public String toString(){
         return "T"+showtime.getId()+" - R"+row+"C"+col+" @ BDT "+pricePaid;
