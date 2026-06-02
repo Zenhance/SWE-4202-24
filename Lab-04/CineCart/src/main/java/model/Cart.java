@@ -10,4 +10,25 @@ public class Cart {
     private ConcessionItem[] items;
     private int[] qtys;
     private int itemCount;
+
+    public Cart(Customer owner){
+        this.tickets = new Ticket[MAX_TICKETS];
+        this.items = new Item[MAX_ITEMS];
+        this.owner = owner;
+        ticketCount = 0;
+        itemCount = 0;
+        qtys = new int[MAX_ITEMS];
+    }
+
+    void addTicket(Ticket t){
+        if(ticketCount==MAX_TICKETS){
+
+        }else{
+        ticketCount++;}
+    }
+
+    void addItem(ConcessionItem c, int qty){
+        if(itemcount == MAX_ITEMS)
+
+    }
 }
