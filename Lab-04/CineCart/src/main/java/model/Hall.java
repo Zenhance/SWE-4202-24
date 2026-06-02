@@ -19,7 +19,7 @@ public Hall(int id, int rows, int cols, int premiumRows){
         for(int c=0;c<cols;c++){
             if (r<premiumRows) grid[r][c] = new Seat(r, c, true);
 
-            else grid[r][c] = new Seat(r,c,false);
+            else grid[r][c] = new Seat(r, c, false);
         }
     } this.grid=grid;
 }
