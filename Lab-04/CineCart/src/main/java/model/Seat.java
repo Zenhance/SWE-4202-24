@@ -39,7 +39,7 @@ public class Seat {
     }
 
     public boolean isAvailable() {
-
+        return isBooked;
     }
 
     public String toString() {
