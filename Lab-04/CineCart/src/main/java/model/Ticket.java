@@ -13,6 +13,7 @@ public class Ticket {
 
     }
 
+
     public Showtime getShowtime() {
         return showtime;
     }
