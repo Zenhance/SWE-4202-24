@@ -33,10 +33,10 @@ public class Customer {
         return loyaltyTier;
     }
     public double getTierDiscount(){
-        if(loyaltyTier=="GOLD"){
+        if(loyaltyTier.equals("GOLD")){
             return 0.15;
         }
-        else if(loyaltyTier=="SILVER"){
+        else if(loyaltyTier.equals("SILVER"){
             return 0.08;
         }
         else{
