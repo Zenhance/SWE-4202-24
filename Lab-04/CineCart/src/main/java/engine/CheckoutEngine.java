@@ -35,7 +35,7 @@ public class CheckoutEngine {
 
         Ticket ticket=new Ticket(showtime,row,col,price);
         cart.addTicket(ticket);
-        return "Ok";
+        return "OK";
     }
 
     public String addConcession(Cart cart, String code, int qty){
@@ -47,7 +47,29 @@ public class CheckoutEngine {
             return "Invalid quantity ";
         }
         cart.addItem(item,qty);
-        return "Ok";
+        return "OK";
+    }
+
+    public double checkout(Cart cart){
+        double ticketSubtotal= cart.sumTicketsPaid();
+        double concessionSubtotal= cart.sumConcessionsRaw();
+        double combo=0;
+        if(cart.hasItem("POP") && cart.hasItem("SODA")){
+            combo=50;
+        }
+        double preDiscount= ticketSubtotal+concessionSubtotal-combo;
+
+        double group=0;
+        if(cart.getTicketCount() >=4){
+            group=preDiscount * 0.10;
+        }
+
+        double tier= cart.getOwner().getTierDiscount() * preDiscount;
+
+        double afterDiscount= preDiscount-group-tier;
+        double tax= 0.05 * afterDiscount;
+
+        return Math.round((afterDiscount+tax)*100)/100.0;
     }
 
 
