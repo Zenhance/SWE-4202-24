@@ -32,7 +32,7 @@ public class CheckoutEngine {
             price*=1.20;
         }
         seat.book();
-        Ticket ticket = new Ticket(showtime,row,col, price);
+        Ticket ticket = new Ticket(showtime,row,col,price);
         cart.addTicket(ticket);
         return "OK";
     }
@@ -79,5 +79,6 @@ public class CheckoutEngine {
         result += "\nDiscount applied\n";
         result += "Total:BDT " + String.format("%.2f", total) + "\n";
         return result;
+
     }
 }
