@@ -31,7 +31,7 @@ public class Customer {
         return age;
     }
 
-    public String getTier() {
+    public String getLoyaltyTier() {
         return loyaltyTier;
     }
     public double getTierDiscount(){

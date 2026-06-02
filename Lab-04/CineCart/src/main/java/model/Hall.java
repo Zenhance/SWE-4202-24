@@ -17,7 +17,20 @@ public class Hall {
                 s[r][c]=new Seat(r,c,r<premiumRows);
 
     }
-    public Seat getSeat(int row,int col){
+
+    public int getId() {
+        return id;
+    }
+
+    public int getRows() {
+        return rows;
+    }
+
+    public int getCols() {
+        return cols;
+    }
+
+    public Seat getSeat(int row, int col){
         return s[row][col];
     }
 public int countAvailable(){
