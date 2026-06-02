@@ -21,9 +21,14 @@ public class Showtime {
         this.hall = hall;
         this.startHour = startHour;
         this.dateTag = dateTag;
-
-
     }
 
+    //methods
+    public int getId() {
+        return this.id;
+    }
 
+    public String getName() {
+        return this.name;
+    }
 }
