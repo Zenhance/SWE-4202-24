@@ -1,0 +1,59 @@
+package engine;
+
+import data.ShowtimeBoard;
+import data.ConcessionMenu;
+import model.Cart;
+import model.ConcessionItem;
+import model.Seat;
+import model.Showtime;
+import model.Ticket;
+
+public class CheckoutEngine {
+    private ShowtimeBoard board;
+    private ConcessionMenu menu;
+
+    public CheckoutEngine(ShowtimeBoard board, ConcessionMenu menu) {
+        this.board = board;
+        this.menu = menu;
+    }
+
+    public String bookTicket(Cart cart, int showtimeId, int row, int col) {
+        Showtime showtime = board.findById(showtimeId);
+
+        if (showtime == null) {
+            return "Showtime not found";
+        }
+
+        int customerAge = cart.getOwner().getAge();
+        int minAge = showtime.getMovie().getMinAge();
+
+        if (customerAge < minAge) {
+            return "Underage for rating " + showtime.getMovie().getRating();
+        }
+
+        Seat seat = showtime.getHall().getSeat(row, col);
+
+        if (seat.isBooked()) {
+            return "Seat unavailable";
+        }
+
+        double price = showtime.getMovie().getBasePrice();
+
+        if (seat.isPremium()) {
+            price *= 1.30;
+        }
+
+        if (showtime.isPeak()) {
+            price *= 1.20;
+        }
+
+        seat.book();
+
+        Ticket ticket = new Ticket(showtime, row, col, price);
+        cart.addTicket(ticket);
+
+        return "OK";
+    }
+
+
+}
