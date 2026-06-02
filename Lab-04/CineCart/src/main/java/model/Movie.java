@@ -40,7 +40,7 @@ public class Movie {
         if(rating == "G") {
             return 0;
         }
-        else if(rating=="PG") {
+        else if(rating == "PG") {
             return 7;
         }
         else if(rating == "PG-13") {
@@ -51,6 +51,6 @@ public class Movie {
     }
 
     public String toString() {
-        return String.format("Inception (%s) %d min - BDT %.2f",rating,durationMin,basePrice);
+        return String.format("%s (%s) %d min - BDT %.2f",title,rating,durationMin,basePrice);
     }
 }
