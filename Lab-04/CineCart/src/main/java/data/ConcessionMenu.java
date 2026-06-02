@@ -6,6 +6,9 @@ public class ConcessionMenu {
     ConcessionItem[] items;
     int count=0;
     static final int MAX = 30;
+    public ConcessionMenu(){
+        items=new ConcessionItem[MAX];
+    }
      public void add(ConcessionItem c){
          if(count<MAX){
              items[count]=c;
