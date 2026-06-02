@@ -20,5 +20,27 @@ public class Cart{
         this.itemCount   = 0;
     }
 
+    public void addTicket(Ticket t) {
+        if (ticketCount >= MAX_TICKETS) {
+            System.out.println("Cart is full.");
+            return;
+        }
+        tickets[ticketCount++] = t;
+    }
+
+    public void addItem(ConcessionItem c, int qty) {
+        if (itemCount >= MAX_ITEMS) {
+            System.out.println("Cart is full.");
+            return;
+        }
+        if (qty <= 0) {
+            System.out.println("Invalid quantity.");
+            return;
+        }
+        items[itemCount] = c;
+        qtys[itemCount]  = qty;
+        itemCount++;
+    }
+
 
 }
