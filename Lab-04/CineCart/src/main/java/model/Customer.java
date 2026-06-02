@@ -17,6 +17,11 @@ public class Customer {
         this.age = age;
         this.loyaltyTier =tier;
     }
+    public double getTierDiscount() {
+        if (loyaltyTier.equals("GOLD")) return 0.15;
+        if (loyaltyTier.equals("SILVER")) return 0.08;
+        return 0.00;
+    }
     public int getId() {
         return id;
     }
