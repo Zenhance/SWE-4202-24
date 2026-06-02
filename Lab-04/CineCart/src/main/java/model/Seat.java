@@ -16,4 +16,28 @@ public class Seat {
 
 
     }
+    public int getRow() {
+            return row;
+    }
+    public int getCol() {
+        return col;
+    }
+    public boolean getPremium() {
+        return isPremium;
+    }
+    public boolean getBooked() {
+        return isBooked;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 }
