@@ -11,4 +11,14 @@ import model.Hall;
 import model.Movie;
 
 public class CheckoutEngine {
+    private ShowtimeBoard board;
+    private ConcessionMenu menu;
+
+    public CheckoutEngine(ShowtimeBoard board, ConcessionMenu menu) {
+        this.board = board;
+        this.menu = menu;
+    }
+
+    // Implementing E.1 bookTicket
+
 }
