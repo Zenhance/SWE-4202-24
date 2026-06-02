@@ -43,12 +43,24 @@ public int getTicketCount(){
     return ticketCount;
 }
 
-public Ticket getTicket(){
+public Ticket[] getTicket(){
     return tickets;
 }
 
 public Customer getOwner(){
     return owner;
+}
+
+public ConcessionItem[] getItems(){
+    return items;
+}
+
+public int getItemCount(){
+    return itemCount;
+}
+
+public int[] getQtys(){
+    return qyts;
 }
 
 }
