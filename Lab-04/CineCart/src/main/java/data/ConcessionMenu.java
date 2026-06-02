@@ -8,5 +8,11 @@ public class ConcessionMenu {
     private int count;
     private static final int MAX = 30;
 
+    public ConcessionMenu() {
+        this.items = new ConcessionItem[MAX];
+        this.count = 0;
+    }
+
+
 
 }
