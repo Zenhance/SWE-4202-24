@@ -41,5 +41,8 @@ public class CheckoutEngine {
         if(showtime.isPeak()){
             price = price * 1.20;
         }
+
+        seat.book();
+        Ticket ticket = new Ticket()
     }
 }
