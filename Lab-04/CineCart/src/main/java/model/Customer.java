@@ -5,31 +5,31 @@ public class Customer {
     String name;
     int age;
     String loyaltyTier;
-    Customer(int id,String name, int age){
+    public Customer(int id,String name, int age){
         this.id=id;
         this.name=name;
         this.age=age;
         this.loyaltyTier="BASIC";
     }
-    Customer(int id,String name, int age, String loyaltyTier){
+    public Customer(int id,String name, int age, String loyaltyTier){
         this.id=id;
         this.name=name;
         this.age=age;
         this.loyaltyTier=loyaltyTier;
     }
-    int getId(){
+    public int getId(){
         return id;
     }
-    String getName(){
+    public String getName(){
         return name;
     }
     public int getAge(){
         return age;
     }
-    String getLoyaltyTier(){
+    public String getLoyaltyTier(){
         return loyaltyTier;
     }
-    double getTierDiscount(){
+    public  double getTierDiscount(){
         if(loyaltyTier.equals("GOLD")){
             return 0.15;
         }

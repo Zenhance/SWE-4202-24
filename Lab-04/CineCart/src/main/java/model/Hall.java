@@ -5,7 +5,7 @@ public class Hall {
     int rows;
     int cols;
     Seat [][] grid;
-    Hall(int id, int rows, int cols, int premiumRows){
+    public Hall(int id, int rows, int cols, int premiumRows){
         this.id=id;
         this.rows=rows;
         this.cols=cols;
@@ -17,7 +17,7 @@ public class Hall {
             }
         }
     }
-    int getId(){
+    public int getId(){
         return id;
     }
     int getCols(){
