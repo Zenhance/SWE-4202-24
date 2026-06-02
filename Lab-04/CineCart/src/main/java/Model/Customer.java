@@ -46,6 +46,7 @@ public class Customer {
         }
   }
 
+
   public String toString(){
           return name + " (" + age + ") - " + loyaltyTier;
 
