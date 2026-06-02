@@ -9,11 +9,24 @@ public class Movie{
 
     public Movie(int id, String title, String rating, int durationMin, double basePrice){
         this.id = id;
+        if(title == null|| title.isBlank()){
+            throw new IllegalArgumentException("title is required");
+        }
         this.title = title;
+        if(!rating.equals("G") && !rating.equals("PG") &&!rating.equals("PG-13") &&!rating.equals("R")){
+            throw new IllegalArgumentException("rating is invalid");
+        }
         this.rating = rating;
+        if(durationMin <= 0){
+            throw new IllegalArgumentException("durationMin is invalid");
+        }
         this.durationMin = durationMin;
+        if(basePrice < 0){
+            throw new IllegalArgumentException("basePrice is invalid");
+        }
         this.basePrice = basePrice;
     }
+
     public int getId(){
         return this.id;
     }
