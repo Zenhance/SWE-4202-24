@@ -38,9 +38,10 @@ public class Showtime {
             return false;
     }
 
-//    public String toString(){
-//        return
-//    }
+    public String toString(){
+        String ans = String.format("[T%d] %s @ Hall %d - %02d:00 (%s)", getId(), movie.getTitle(), hall.getId(), getStartHour(), getDateTag());
+        return ans;
+    }
 
 }
 
