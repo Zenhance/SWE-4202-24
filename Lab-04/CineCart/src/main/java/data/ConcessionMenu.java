@@ -18,9 +18,8 @@ public class ConcessionMenu {
             if(items[i].getCode().equals(code)) {
                 return items[i];
             }
-            else
-                return null;
         }
+        return null;
     }
 
     void displayAll() {
