@@ -36,5 +36,11 @@ public class CheckoutEngine {
         Seat seat = showtime.getHall().getSeat(row, col);
         if (seat.isBooked()) return "Seat unavailable";
 
+        // [4]
+        double basePrice = movie.getBasePrice();
+        double premiumMultiplier = seat.isPremium() ? 1.30 : 1.00;
+        double peakMultiplier = showtime.isPeak() ? 1.20 : 1.00;
+
+        double price = basePrice * premiumMultiplier * peakMultiplier;
     }
 }
