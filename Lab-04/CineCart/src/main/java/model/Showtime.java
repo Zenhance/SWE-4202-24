@@ -12,7 +12,7 @@ public class Showtime {
     public int getId(){
         return id;
     }
-    Movie getMovie(){
+    public Movie getMovie(){
         return movie;
     }
     Hall hall(){
