@@ -73,5 +73,7 @@ public class CheckoutEngine {
         double combo = 0.0;
         if (cart.hasItem("SODA") && cart.hasItem("POP")) combo = 50.0;
 
+        // [4]
+        double preDiscount = ticketSubtotal + concessionSubtotal - combo;
     }
 }
