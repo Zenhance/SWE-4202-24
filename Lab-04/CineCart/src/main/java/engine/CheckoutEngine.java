@@ -71,4 +71,8 @@ public class CheckoutEngine {
 
         return "OK";
     }
+
+    public String addConcession(Cart cart, String code, int qty) {
+
+    }
 }
