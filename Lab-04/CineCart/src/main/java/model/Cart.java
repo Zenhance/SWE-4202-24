@@ -19,6 +19,35 @@ public class Cart {
         this.items=new ConcessionItem[MAX_ITEMS];
         this.qtys=new int[MAX_ITEMS];
         this.itemCount=0;
+    }
+    public void addTicket(Ticket t){
 
     }
+    public void addItem(ConcessionItem c,int qty){
+
+    }
+
+    public Customer getOwner() {
+        return owner;
+    }
+
+    public Ticket[] getTickets() {
+        return tickets;
+    }
+
+    public int getTicketCount() {
+        return ticketCount;
+    }
+    public ConcessionItem[] getItems(){
+        return items;
+    }
+
+    public int[] getQtys() {
+        return qtys;
+    }
+
+    public int getItemCount() {
+        return itemCount;
+    }
+
 }
