@@ -6,7 +6,7 @@ public class Hall {
     private int id;
     private int rows;
     private int cols;
-    private int Seat[][];
+    private int Seat[][] grid;
 
 
     //constructors
@@ -15,6 +15,20 @@ public class Hall {
         this.id = id;
         this.rows = rows;
         this.cols = cols;
+        this.grid = new Seat [rows][cols];
+
+        for (int r = 0; r < rows; r++)
+        {
+            boolean isPremium = (r < premiumRows);
+
+            for (int c = 0; c < cols; c++) {
+                grid [r][c] = new Seat(r, c, isPremium);
+
+            }
+        }
+
+
+
     }
 
     //methods
