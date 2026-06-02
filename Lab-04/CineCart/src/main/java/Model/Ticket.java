@@ -1,6 +1,7 @@
 package Model;
 
 public class Ticket {
+
     private  Showtime showtime;
     private int row;
     private int col;
@@ -33,7 +34,9 @@ private double pricePaid;
     public String toString() {
         return "T" + showtime.getId() + " -  R" + row + "C" + col
                 + " @ BDT " + String.format("%.2f", pricePaid);
+
     }
+
 }
 
 

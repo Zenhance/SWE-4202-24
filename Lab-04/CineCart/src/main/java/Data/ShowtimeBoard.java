@@ -34,6 +34,7 @@ public class ShowtimeBoard {
             for (int i = 0; i < count; i++) {
                  System.out.println(shows[i]);
             }
+
         }
     }
 

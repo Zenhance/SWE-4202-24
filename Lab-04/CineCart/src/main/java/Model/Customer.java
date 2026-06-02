@@ -1,10 +1,12 @@
 package Model;
 
+
 public class Customer {
     private int id;
     private String name;
     private int age;
     private String loyaltyTier;
+
 
     public Customer(int id, String name, int age) {
         this.id = id;
@@ -46,9 +48,11 @@ public class Customer {
 
   public String toString(){
           return name + " (" + age + ") - " + loyaltyTier;
+
       }
 
-  }
+
+}
 
 
 
