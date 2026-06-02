@@ -32,7 +32,9 @@ public class Hall {
         }
         return count;
     }
-
+public int getId(){
+        return id;
+}
     void displayLayout(){
     for(int r=0;r<rows;r++){
         for(int c=0;c<cols;c++){
