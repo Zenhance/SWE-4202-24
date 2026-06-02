@@ -31,6 +31,7 @@ public Movie getMovie(){
         return startHour;
   }
 
+
   public String getDateTag() {
       return dateTag;
   }
