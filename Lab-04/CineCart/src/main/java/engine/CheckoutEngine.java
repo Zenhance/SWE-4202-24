@@ -5,7 +5,7 @@ import data.ShowtimeBoard;
 import model.Showtime;
 import model.Ticket;
 import model.Cart;
-import
+import model.ConcessionItem;
 
 
 public class CheckoutEngine {
@@ -29,6 +29,7 @@ public class CheckoutEngine {
 
 
     public String addConcession(Cart cart, String code, int qty){
+        ConcessionItem item = menu.findByCode(code);
 
 
 return "OK";
