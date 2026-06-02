@@ -55,7 +55,7 @@ public class CheckoutEngine {
 
 
         double combo;
-        if(cart.hasItem(POP) && cart.hasItem(SODA)) combo = 50.0;
+        if(cart.hasItem("POP") && cart.hasItem("SODA")) combo = 50.0;
         else combo = 0.0;
 
         double preDiscount = ticketSubtotal +concessionSubtotal - combo;

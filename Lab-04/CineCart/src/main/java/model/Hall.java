@@ -50,11 +50,15 @@ public class Hall {
     }
 
 
+    public int getRows() {
+        return rows;
+    }
 
+    public int getCols() {
+        return cols;
+    }
 
-
-
-
-
-
+    public int getId() {
+        return id;
+    }
 }
