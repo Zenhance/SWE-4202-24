@@ -43,12 +43,12 @@ public class Seat {
     }
 
     public String toString() {
-        String seatName=  "R"+ row + "C" + col;
+        String seatName= "R"+row+"C"+col;
         if(isPremium) {
-            seatName="*";
+            seatName=seatName+"*";
         }
         else {
-            seatName="#";
+            seatName=seatName+"#";
         }
 
         return seatName;
