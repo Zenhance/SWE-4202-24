@@ -4,12 +4,15 @@ import model.Showtime;
 
 public class ShowtimeBoard {
     Showtime[] shows;
-    int count;
+    int count=0;
     static final int MAX=30;
    public void add(Showtime s){
           shows= new Showtime[MAX];
-          count++;
+          if(count<MAX){
+              count++;
+          }
    }
+
   public Showtime findById(int id){
        for(int i=0;i<count;i++){
            if(shows[i].getId()==id){
