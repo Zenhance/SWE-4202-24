@@ -79,6 +79,7 @@ public class CheckoutEngine {
             return "Invalid quantity";
         }
 
-
+        cart.addItem(item, qty);
+        return "OK";
     }
 }
