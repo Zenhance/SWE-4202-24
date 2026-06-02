@@ -1,4 +1,5 @@
 package app;
+import engine.CheckoutEngine;
 import io.CsvLoader;
 import model.*;
 import data.*;
@@ -12,6 +13,9 @@ public class CineCartApp {
             "showtimes.csv",movies,halls);
 ConcessionMenu menu =CsvLoader.loadConcessions("concessions.csv");
 Customer[]customers = CsvLoader.loadConcessions("concessions.csv");
+            CheckoutEngine engine = new CheckoutEngine(board,menu);
+            Customer customer = customers[0];
+            Cart cart = new Cart(customer);
         }
     }
 }
