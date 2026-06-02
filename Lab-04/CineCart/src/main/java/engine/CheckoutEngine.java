@@ -38,25 +38,34 @@ public class CheckoutEngine {
         }
     }
 
-            public String addConcession(Cart cart,String code,int qty){
-                ConcessionItem item=menu.findByCode(code);
-                if(item==null){
-                    return "Item not found";
-                }
-                if(qty<=0){
-                    return "Invalid quantity";
-                }
-              cart.addItem(item,qty);
-                return "OK";
-            }
-            public double checkout(Cart cart){
-                double ticketSubtotal = cart.sumTicketsPaid();
-                double concessionSubtotal = cart.sumConcessionsRaw();
-                double combo=0;
-                if(cart.hasItem("POP") && cart.hasItem("SODA")){
-                    combo=50;
-                }
-            }
+    public String addConcession(Cart cart, String code, int qty) {
+        ConcessionItem item = menu.findByCode(code);
+        if (item == null) {
+            return "Item not found";
         }
+        if (qty <= 0) {
+            return "Invalid quantity";
+        }
+        cart.addItem(item, qty);
+        return "OK";
+    }
+
+    public double checkout(Cart cart) {
+        double ticketSubtotal = cart.sumTicketsPaid();
+        double concessionSubtotal = cart.sumConcessionsRaw();
+        double combo = 0;
+        if (cart.hasItem("POP") && cart.hasItem("SODA")) {
+            combo = 50;
+        }
+        double preDiscount = ticketSubtotal + concessionSubtotal - combo;
+         double group = 0;
+        if (cart.getTicketCount() >= 4) {
+          group=0.10*preDiscount;
+            }
+        else{
+            System.out.println("0");
+        }
+        double tier = cart.getOwner().getTierDiscount() * preDiscount;
+        double afterDiscounts = preDiscount -group- tier.
     }
 }
