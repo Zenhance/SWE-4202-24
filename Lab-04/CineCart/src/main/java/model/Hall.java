@@ -34,6 +34,8 @@ public class Hall {
     //methods
     public Seat getSeat(int row, int col) {
 
+
+
     }
 
     public int countAvailable() {
