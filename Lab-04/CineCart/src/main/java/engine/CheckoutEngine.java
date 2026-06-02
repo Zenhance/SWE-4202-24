@@ -10,11 +10,13 @@ public class CheckoutEngine {
   public  String bookTicket(Cart cart, int showtimeId, int row, int col){
         return null;
     }
-    public String checkoutEngine(ShowtimeBoard board, ConcessionMenu menu){
+    public  checkoutEngine(ShowtimeBoard board, ConcessionMenu menu){
         return null;
     }
     public String bookTicket(){
       return null;
     }
-
+  public String addConcession(){
+      return null;
+  }
 }
