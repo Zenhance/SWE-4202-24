@@ -66,7 +66,7 @@ public class Cart {
         return sum;
     }
 
-    double sumConcessionsRaw() {
+    public double sumConcessionsRaw() {
         double sum=0;
         for(int i=0;i<itemCount;i++) {
             sum=sum+items[i].getUnitPrice();
