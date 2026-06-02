@@ -67,4 +67,10 @@ public class CheckoutEngine {
         double total = afterDiscounts + tax;
         return Math.round(total*100.0)/100.0;
     }
+    public String getReceipt(Cart cart){
+        String result = "";
+        result+="===== Receipt =====\n";
+        result+="Customer: " + cart.getOwner().getName()+"\n\n";
+        result += "Tickets:\n";
+    }
 }
