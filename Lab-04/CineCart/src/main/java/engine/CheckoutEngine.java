@@ -3,6 +3,7 @@ package engine;
 import data.ConcessionMenu;
 import data.ShowtimeBoard;
 import model.Cart;
+import model.ConcessionItem;
 
 public class CheckoutEngine
 {
@@ -21,5 +22,18 @@ public class CheckoutEngine
         return "OK";
     }
 
-
+    public String addConcession(Cart cart, String code, int qty)
+    {
+        ConcessionItem item = menu.findByCode(code);
+        if(item==null)
+        {
+            return "Item not found";
+        }
+        if(qty<=0)
+        {
+            return "Invalid quantity";
+        }
+        cart.addItem(item,qty);
+        return "OK";
+    }
 }
