@@ -4,6 +4,7 @@ import data.ConcessionMenu;
 import data.ShowtimeBoard;
 import model.ConcessionItem;
 import model.Showtime;
+import model.Ticket;
 
 public class CheckoutEngine {
     ShowtimeBoard board;
@@ -28,6 +29,10 @@ public class CheckoutEngine {
         double seatMultiplier = seat.isPremium() ? 1.30 : 1.00;
         double peakMultiplier = showtime.isPeak()?1.20:1.00;
         double finalPrice = basePrice*seatMultiplier*peakMultiplier;
-        
+
+        seat.book();
+        Ticket ticket = new Ticket(showtime, row, col, finalPrice);
+        cart.addTicket(ticket);
+        return "OK";
     }
 }
