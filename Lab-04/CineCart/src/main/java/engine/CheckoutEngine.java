@@ -31,10 +31,8 @@ public class CheckoutEngine {
                 price *= 1.20;
             }
             seat.book();
-            Ticket tickets = new Ticket(showtime, row, col, price) {
+            Ticket tickets = new Ticket(showtime, row, col, price)
                 cart.addTicket(tickets);
-                return"OK";
-            }
         }
     }
 
@@ -70,6 +68,7 @@ public class CheckoutEngine {
         double total = afterDiscounts + tax;
         return Math.round(total * 100.00 / 100);
     }
+
         public String getReceipt(Cart cart){
              double total=checkout(cart);
             String receipt="";
@@ -81,4 +80,3 @@ public class CheckoutEngine {
 
         }
     }
-}
