@@ -61,6 +61,23 @@ public int getTicketCount(){
     public int  getItemCount(){
         return itemCount;
     }
+    public double  sumTicketsPaid(){
+        double totall=0;
+        for(int i=0;i<ticketCount;i++){
+            totall=totall+tickets[i].getPricePaid();
+        }
+        return totall;
+    }
+    public double sumConcessionsRaw(){
+        double sum=0;
+        for(int i=0;i<itemCount;i++){
+            sum+=items[i].getUnitPrice()*qtys[i];
+        }
+        return sum;
+    }
+    public boolean hasItem(String code){
+
+    }
 
 
 }
