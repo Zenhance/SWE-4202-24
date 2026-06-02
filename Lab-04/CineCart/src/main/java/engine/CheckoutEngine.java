@@ -67,19 +67,17 @@ public class CheckoutEngine {
         double total = afterDiscounts + tax;
         return Math.round(total*100.0)/100.0;
     }
-    public String getReceipt(Cart cart){
+    public String getReceipt(Cart cart) {
         String result = "";
-        result+="===== Receipt =====\n";
-        result+="Customer: " + cart.getOwner().getName()+"\n\n";
-        result+= "Tickets:\n";
-        for(int i=0;i<cart.getItemCount();i++){
-            result+= cart.getItems()[i].getName()+"x"+cart.getQtys()[i]+ "\n";
-
+        result += "===== Receipt =====\n";
+        result += "Customer: " + cart.getOwner().getName() + "\n\n";
+        result += "Tickets:\n";
+        for (int i = 0; i < cart.getItemCount(); i++) {
+            result += cart.getItems()[i].getName() + "x" + cart.getQtys()[i] + "\n";
         }
-
-
-
-
-
+        double total = checkout(cart);
+        result += "\nDiscount applied\n";
+        result += "Total:BDT " + String.format("%.2f", total) + "\n";
+        return result;
     }
 }
