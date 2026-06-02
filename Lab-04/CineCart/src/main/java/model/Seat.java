@@ -13,7 +13,6 @@ public class Seat {
         this.isPremium=isPremium;
 
     }
-
     public int getRow(){
         return this.row;
     }
