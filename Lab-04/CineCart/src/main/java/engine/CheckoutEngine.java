@@ -58,17 +58,24 @@ public class CheckoutEngine {
             combo = 50;
         }
         double preDiscount = ticketSubtotal + concessionSubtotal - combo;
-         double group = 0;
+        double group = 0;
         if (cart.getTicketCount() >= 4) {
-          group=0.10*preDiscount;
-            }
-        else{
+            group = 0.10 * preDiscount;
+        } else {
             System.out.println("0");
         }
         double tier = cart.getOwner().getTierDiscount() * preDiscount;
-        double afterDiscounts = preDiscount -group- tier;
-        double tax=0.05 * afterDiscounts;
-        double total=afterDiscounts+tax;
-        return Math.round(total*100.00/100);
+        double afterDiscounts = preDiscount - group - tier;
+        double tax = 0.05 * afterDiscounts;
+        double total = afterDiscounts + tax;
+        return Math.round(total * 100.00 / 100);
+    }
+        public String getReceipt(Cart cart){
+             double total=checkout(cart);
+            String receipt="";
+            receipt+="Receipt\n";
+            receipt+="Customer: "+cart.getOwner().getName()+"\n";
+
+        }
     }
 }
