@@ -28,6 +28,7 @@ public class Hall {
         return grid[row][col];
     }
 
+
     public int countAvailable(){
         int count = 0;
         for (int r = 0; r < rows; r++){
