@@ -44,7 +44,9 @@ public class CheckoutEngine {
 
         if (qty <= 0)
             return "Invalid quantity";
-
-
+        cart.addItem(item,qty);
+    return "OK";
     }
+
+
 }
