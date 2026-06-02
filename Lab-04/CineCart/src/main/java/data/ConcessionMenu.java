@@ -24,7 +24,7 @@ public ConcessionItem findByCode(String code){
     for(int i=0;i<count;i++){
 
         if(code.equals(items[i].getCode())){
-            res=items[];
+            res=items[i];
         break;
         }
     } return res;
