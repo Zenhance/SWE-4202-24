@@ -25,5 +25,6 @@ public class CheckoutEngine {
             String msg = "Underage for rating <"+rating+">";
             return msg;
         }
+        return null;
     }
 }
