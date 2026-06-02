@@ -63,4 +63,21 @@ public class CheckoutEngine {
         return  Math.round(total*100.0)/100.0;
     }
 
+    public String getReceipt(Cart cart){
+        String receipt="=== Receipt ===\n";
+        receipt=receipt+cart.getOwner().getName();
+        receipt="\nTickets\n";
+        for(int i=0;i<cart.getTicketCount();i++){
+            receipt=receipt+cart.getTickets()[i];
+        }
+        receipt=receipt+"\nConcessions\n";
+        for (int i=0;i< cart.getItemCount();i++){
+            receipt=receipt+cart.getItems()[i].getName()+" x "+cart.getQtys()[i];
+        }
+        receipt=receipt+"\nPayable : ";
+        double amount=checkout(cart);
+        receipt=receipt+amount;
+        return receipt;
+    }
+
 }
