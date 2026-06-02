@@ -18,6 +18,12 @@ public class Customer {
         this.age = age;
         tier = "BASIC";
     }
+public  Customer (int id,String name,int age ){
+        this.id=id;
+        this.age=age;
+        this.name=name;
+
+}
 
     public int getId() {
         return id;
