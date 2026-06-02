@@ -11,3 +11,29 @@ public class Customer {
         this.age = age;
         this.loyaltyTier = loyaltyTier;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getLoyaltyTier() {
+        return loyaltyTier;
+    }
+    public double getTierDiscount(){
+        if (loyaltyTier.equals("GOLD")) {return 0.15;}
+        else if (loyaltyTier.equals("SILVER")) {return 0.08;}
+        return 0.00;
+    }
+    @Override
+    public String toString(){
+        return name + " (" + loyaltyTier + ")";
+    }
+}
