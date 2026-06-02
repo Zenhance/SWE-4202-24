@@ -59,4 +59,13 @@ public class CheckoutEngine {
         cart.addItem(item, qty);
         return "OK";
     }
+
+    // F.1 checkout
+    public double checkout(Cart cart) {
+
+        // [1]
+        double ticketSubtotal = cart.sumTicketsPaid();
+
+
+    }
 }
