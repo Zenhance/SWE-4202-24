@@ -19,11 +19,11 @@ public class ConcessionItem {
         return name;
     }
 
-    public double getUnitprice() {
+    public double getUnitPrice() {
         return unitPrice;
     }
 
     public String toString() {
-        return String.format("code - name () - BDT %2f unitPrice");
+        return String.format("code - name () - BDT %2f",unitPrice);
     }
 }
