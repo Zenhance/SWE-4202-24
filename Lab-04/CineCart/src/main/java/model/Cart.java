@@ -9,5 +9,5 @@ public class Cart {
     private int ticketCount;
     private ConcessionItem[] items;
     private int[] qtys;
-    private int itemCount;
+    private int itemCount ;
 }
