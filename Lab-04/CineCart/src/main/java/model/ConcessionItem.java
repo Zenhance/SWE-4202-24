@@ -5,23 +5,21 @@ public class ConcessionItem {
     private String name;
     private double unitPrice;
 
-}
-public concessionItem(string code,string name,double unitPrice){
-    this.code=code;
-    this.name=name;
-    this.unitPrice=unitPrice;
-}
-public String getCode(){
-    return code;
-}
-public String getName(){
-    return name;
-}
+    public ConcessionItem(String code,String name,double unitPrice){
+        this.code=code;
+        this.name=name;
+        this.unitPrice=unitPrice;
+    }
+    public String getCode(){
+        return code;
+    }
+    public String getName(){
+        return name;
+    }
 
-double getUnitPrice(){
-    return unitPrice;
+    public double getUnitPrice(){
+        return unitPrice;
+    }
+    public String toString(){
+        return String.format("%s - %s - BDT %.2f",code,name,unitPrice);}
 }
-public String toString(){
-    return String.format("%s - %s - BDT %.2f",code,name,unitPrice);}
-}
-
