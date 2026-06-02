@@ -8,7 +8,7 @@ public class Movie {
     private double basePrice;
 
 
-    public Movie() {
+    public Movie(int id,String title,String rating,int durationMin,double basePrice) {
         this.id=id;
         this.title=title;
         this.rating=rating;
