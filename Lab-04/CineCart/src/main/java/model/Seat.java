@@ -28,4 +28,9 @@ public class Seat {
             return true;
         }
     }
+
+    public String toString(){
+        String p=(isPremium)?"*":"#";
+        return String.format("R%dC%d%s",row,col,p);
+    }
 }
