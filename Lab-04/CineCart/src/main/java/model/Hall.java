@@ -32,9 +32,9 @@ public int countAvailable() {
         for (int c = 0; c < cols; c++) {
             if (grid[r][c].isAvailable()) {
                 count++;
+            }
+
         }
-
-
     }
 return count;
 }
