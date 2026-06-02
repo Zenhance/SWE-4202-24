@@ -41,5 +41,8 @@ public class CheckoutEngine {
         seat.book();
         Ticket ticket = new Ticket(showtime, row, col, price);
         cart.addTicket(ticket);
+
+        // [6]
+        return "OK";
     }
 }
