@@ -58,7 +58,7 @@ public class Cart {
         }
     }
 
-    public double sumTicketspaid() {
+    public double sumTicketsPaid() {
         double sum=0;
         for(int i=0;i<ticketCount;i++) {
             sum=sum+tickets[i].getPricePaid();
