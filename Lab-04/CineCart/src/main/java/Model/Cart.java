@@ -64,6 +64,7 @@ public class Cart {
         }
 
 
+
         public double sumTicketsPaid() {
             double sum = 0.0;
 
@@ -75,6 +76,7 @@ public class Cart {
         }
 
 
+
         public double sumConcessionsRaw() {
             double sum = 0.0;
 
@@ -84,6 +86,7 @@ public class Cart {
 
             return sum;
         }
+
 
 
         public boolean hasItem(String code) {
