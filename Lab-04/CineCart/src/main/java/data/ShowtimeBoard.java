@@ -7,17 +7,18 @@ public class ShowtimeBoard {
     private Showtime[] shows;
     private int count;
 
-    public ShowtimeBoard(){
+    public ShowtimeBoard() {
         this.shows = new Showtime[MAX];
-        count =0;
+        count = 0;
     }
 
-    public void add(Showtime s){
-        if ( count < MAX){
+    public void add(Showtime s) {
+        if (count < MAX) {
             shows[count] = s;
             count++;
         }
     }
+
     public Showtime findById(int id) {
         for (int i = 0; i < count; i++) {
             if (shows[i].getId() == id) {
@@ -27,8 +28,9 @@ public class ShowtimeBoard {
         return null;
     }
 
-    public void displayAll(){
-        for(int i = 0; i < count; i++){
+    public void displayAll() {
+        for (int i = 0; i < count; i++) {
             System.out.println(shows[i]);
         }
-
+    }
+}
