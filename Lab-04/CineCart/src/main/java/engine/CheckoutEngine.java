@@ -50,6 +50,8 @@ public class CheckoutEngine {
     }
     public double checkout(Cart cart){
         double ticketSubtotal= cart.sumTicketsPaid();
+        double concessionSubtotal=cart.sumConcessionsRaw();
+        double combo=0.0;
 
 
 
