@@ -55,11 +55,19 @@ public class Cart {
         return itemCount;
     }
     public double sumTicketPaid(){
-        double sumTicketsPaid=0;
+        double sum=0;
         for(int i=0;i<ticketCount;i++){
-            sumTicketsPaid+=tickets[i].getPricePaid();
+            sum+=tickets[i].getPricePaid();
         }
-        return sumTicketsPaid;
+        return sum;
     }
+    public double sumConcessionRaw(){
+        double sum=0;
+        for(int i=0;i<itemCount;i++){
+            sum+=items[i].getUnitPrice()*qtys[i];
+        }
+        return sum;
+    }
+
 
 }
