@@ -1,7 +1,7 @@
 package model;
 
 public class Movie {
-    int id;
+   private int id;
     String title;
     String rating;
     int durationMin;
@@ -34,11 +34,11 @@ public class Movie {
         else if(rating.equals("PG")){
             return 7;}
         else if(rating.equals("PG-13")){return 13;}
-        else if(rating.equals("18")){
+        else if(rating.equals("R")){
             return 18;
         }return 0;
     }
     public String toString(){
-        return "Inception "+"("+"PG-13"+") "+this.durationMin+" -BDT "+String.format(".02%f",this.basePrice);
+        return title+"("+this.rating+") "+this.durationMin+" -BDT "+String.format(".02%f",this.basePrice);
     }
 }
