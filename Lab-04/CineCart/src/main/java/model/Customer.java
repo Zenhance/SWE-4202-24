@@ -30,7 +30,7 @@ public class Customer {
         }
     }
 
-    public getAge(){
+    public int getAge(){
         return age;
     }
     public String toString(){
