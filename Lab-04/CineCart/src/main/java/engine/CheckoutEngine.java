@@ -20,5 +20,11 @@ public class CheckoutEngine {
     }
 
     // Implementing E.1 bookTicket
+    public String bookTicket(Cart cart, int showtimeId, int row, int col) {
+        // [1]
+        Showtime showtime = board.findById(showtimeId);
+        if (showtime == null) return "Showtime not found";
 
+
+    }
 }
