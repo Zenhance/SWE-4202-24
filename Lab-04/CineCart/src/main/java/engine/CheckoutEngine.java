@@ -6,6 +6,7 @@ import model.ConcessionItem;
 import model.Seat;
 import model.Showtime;
 import model.Ticket;
+import model.Movie;
 
 public class CheckoutEngine {
     private ShowtimeBoard board;
