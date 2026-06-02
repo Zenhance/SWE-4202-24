@@ -75,5 +75,9 @@ public class CheckoutEngine {
 
         // [4]
         double preDiscount = ticketSubtotal + concessionSubtotal - combo;
+
+        // [5]
+        double group = 0.0;
+        if (cart.getTicketCount() >= 4) group = 0.10 * preDiscount;
     }
 }
