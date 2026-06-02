@@ -58,4 +58,12 @@ public class Cart {
     public int getItemCount() {
         return itemCount;
     }
+
+    double sumTicketsPaid() {
+        double total = 0;
+        for (int i = 0; i < ticketCount; i++) {
+            total += tickets[i].getPricePaid();
+        }
+        return total;
+    }
 }
