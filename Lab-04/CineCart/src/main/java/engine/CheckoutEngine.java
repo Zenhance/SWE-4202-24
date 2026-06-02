@@ -88,5 +88,8 @@ public class CheckoutEngine {
 
         // [8]
         double tax = 0.05 * afterDiscounts;
+
+        // [9]
+        return round2(afterDiscounts + tax);
     }
 }
