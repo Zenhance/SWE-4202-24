@@ -12,7 +12,10 @@ public class Cart {
 
     public Cart(Customer owner){
         this.owner = owner;
+        tickets = new Ticket[MAX_TICKETS];
         ticketCount = 0;
+        items = new ConcessionItem[MAX_ITEMS];
         itemCount = 0;
+        qtys = new int[MAX_ITEMS];
     }
 }
