@@ -52,9 +52,7 @@ public class Seat {
 
 
 
-    public void setPremium(boolean premium) {
-        this.premium = premium;
-    }
+
 
 }
 

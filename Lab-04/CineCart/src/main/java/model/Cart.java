@@ -61,23 +61,23 @@ public class Cart {
     }
 
     public double sumTicketsPaid(){
-        double sum 0;
+        double sum = 0;
 
-        for(i = 0; i<ticketCount;i++){
+        for(int i = 0; i<ticketCount;i++){
             sum += tickets[i].getPricePaid();
         }
         return sum;
     }
     public double sumConcessionsRaw(){
         double sum = 0;
-        for(i =0; i<itemCount;i++){
+        for(int i =0; i<itemCount;i++){
             sum += items[i].getUnitPrice()*qtys[i];
         }
         return sum;
     }
 
     public boolean hasItem(String code){
-        for(i =0; i<itemCount;i++){
+        for(int i =0; i<itemCount;i++){
             if(code.equals(items[i].getCode()))
                 return true;
         }
