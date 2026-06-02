@@ -11,6 +11,7 @@ public class Seat {
         this.row=row;
         this.col=col;
         this.isPremium=isPremium;
+        this.isBooked=false;
     }
 
     public int getRow() {
@@ -26,31 +27,36 @@ public class Seat {
     }
 
     public boolean getIsBooked() {
-        return isBooked;
+        return this.isBooked;
     }
 
     public void book() {
-        isBooked=true;
+        this.isBooked=true;
     }
 
     public void release() {
-        isBooked=false;
+        this.isBooked=false;
     }
 
     public boolean isAvailable() {
-        return isBooked;
+        if(this.isBooked) {
+            return false;
+        }
+        return true;
     }
 
     public String toString() {
         String seatName= "R"+row+"C"+col;
-        if(isPremium) {
+        if(this.isPremium) {
             seatName=seatName+"*";
+            return seatName;
         }
-        else {
+        else if(this.isBooked){
             seatName=seatName+"#";
+            return seatName;
         }
-
-        return seatName;
+        else
+            return null;
     }
 
 }
