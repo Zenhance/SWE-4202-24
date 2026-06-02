@@ -44,16 +44,20 @@ public class Cart {
         return owner;
     }
     public Ticket[] getTickets(){
-        return tickets;
+            Ticket[] newTickets = new Ticket[ticketCount];
+            System.arraycopy(tickets, 0, newTickets, 0, ticketCount);
+            return newTickets;
     }
     public int getTicketCount(){
         return ticketCount;
     }
     public ConcessionItem[] getItems(){
-        return items;
+            ConcessionItem[] newItems = new ConcessionItem[itemCount];
+            System.arraycopy(items, 0, newItems, 0, itemCount);
+        return newItems;
     }
     public int[] getQtys(){
-        return qtys;
+        return new  int[itemCount];
     }
     public int getItemCount(){
         return itemCount;
