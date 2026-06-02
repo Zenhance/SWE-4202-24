@@ -8,7 +8,7 @@ public class ShowtimeBoard {
     private static final int MAX = 30;
 
     public ShowtimeBoard(){
-        Showtime[] showtime = new Showtime[MAX];
+        Showtime[] shows = new Showtime[MAX];
         this.count = 0;
     }
 
