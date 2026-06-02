@@ -37,5 +37,11 @@ public class CheckoutEngine {
         if(item== null){
             return "Item not found";
         }
+        if(qty<=0){
+            return "Invalid quantity";
+        }
+        cart.addItem(item,qty);
+        return "OK";
     }
+
 }
