@@ -30,14 +30,27 @@ public class Seat {
     }
 
 
+    public void book() {
+
+    }
+    public void release() {
+
+    }
+    public void isAvailable() {
+
+    }
 
 
-
-
-
-
-
-
-
-
+    @Override
+    public String toString() {
+        String suffix = "";
+        if(isPremium){
+            suffix = "*";
+        }
+        else if(isBooked) {
+            suffix = "#";
+        }
+        else
+            return "R" + row + "C" + col;
+    }
 }
