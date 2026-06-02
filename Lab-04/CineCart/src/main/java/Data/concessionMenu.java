@@ -6,11 +6,16 @@ public class concessionMenu {
     concessionItem[] items;
     int count;
     static final int MAX=30;
+    public concessionMenu(){
+        this.items=new concessionItem[MAX];
+        this.count=0;
+    }
 
     public void add(concessionItem c){
-        count=0;
-        items[count]=c;
-        count++;
+        if(count<MAX) {
+            items[count] = c;
+            count++;
+        }
     }
 
     public concessionItem findByCode(String code){

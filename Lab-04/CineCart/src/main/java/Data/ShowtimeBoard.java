@@ -7,10 +7,15 @@ public class ShowtimeBoard {
     int count;
     private static final int MAX = 30;
 
+    public ShowtimeBoard(){
+        this.shows=new Showtime[MAX];
+        this.count=0;
+    }
     public void add(Showtime s) {
-        count = 0;
-        shows[count] = s;
-        count++;
+        if(count<MAX) {
+            shows[count] = s;
+            count++;
+        }
     }
 
     public Showtime findByID(int id) {
