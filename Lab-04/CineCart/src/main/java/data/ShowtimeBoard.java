@@ -19,4 +19,11 @@ public class ShowtimeBoard {
         }
         return null; // not found
     }
+    public void add(Showtime s) {
+        if (count < MAX) {
+            shows[count] = s;
+            count++;
+        }
+    }
 }
+
