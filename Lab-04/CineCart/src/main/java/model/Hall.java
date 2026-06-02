@@ -10,6 +10,7 @@ public class Hall {
         this.id = id;
         this.rows = rows;
         this.cols = cols;
+
         grid = new Seat[rows][cols];
         for (int r = 0; r < rows; r++) {
             for (int c = 0; c < cols; c++) {
@@ -18,9 +19,13 @@ public class Hall {
             }
         }
     }
+    public int getId(){
+    return id;
+    }
+}
         //methods
-    public Seat getSeat(int rows,int cols){
-        return grid[rows][cols];
+    public Seat getSeat(int row,int col){
+        return grid[row][col];
     }
     public int countAvailable() {
         int count = 0;
@@ -32,18 +37,22 @@ public class Hall {
             }
         }
         return count;
+    }
         public void displayLayout() {
             for (int r = 0; r < rows; r++) {
                 for (int c = 0; c < cols; c++) {
                     Seat seat = grid[r][c];
                     if (seat.isBooked()) {
                         System.out.println("# ");
-                    } else if (seat.isPremium()) {
+                    }
+                    else if (seat.isPremium()) {
                         System.out.println("* ");
-                    } else {
+                    }
+                    else {
                         System.out.println(". ");
                     }
                 }
                 System.out.println();
             }
+        }
         }
