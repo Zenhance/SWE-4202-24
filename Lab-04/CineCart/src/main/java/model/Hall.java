@@ -28,6 +28,12 @@ public class Hall {
         return grid[row][col];
     }
 
+    public int getId() {
+        return id;
+    }
+
+
+
 
     public int countAvailable(){
         int count = 0;
