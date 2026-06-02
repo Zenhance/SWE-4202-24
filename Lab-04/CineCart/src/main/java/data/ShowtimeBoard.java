@@ -3,12 +3,15 @@ package data;
 import model.Showtime;
 
 public class ShowtimeBoard {
-    Showtime[] shows;
+    Showtime[] shows= new Showtime[MAX];
     int count=0;
     private static final int MAX = 30;
+
     public void add(Showtime s){
-        shows[count++]=s;
+        shows[count]=s;
+        count++;
     }
+
     public Showtime findById(int id){
         for(int i=0;i<count;i++){
             if(shows[i].getId()==id){

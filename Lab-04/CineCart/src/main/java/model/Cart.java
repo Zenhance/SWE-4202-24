@@ -50,9 +50,9 @@ public class Cart {
 
     public void addItem(ConcessionItem c, int qty){
         if (itemCount < MAX_ITEMS && qty > 0) {
-            this.items[this.itemCount] = c;
-            this.qtys[this.itemCount] = qty;
-            this.itemCount++;
+            items[itemCount] = c;
+            qtys[itemCount] = qty;
+            itemCount++;
         }
     }
     public double sumTicketsPaid(){
@@ -71,7 +71,7 @@ public class Cart {
     }
     public boolean hasItem(String code){
         for(int i=0;i<itemCount;i++){
-            if(items[i].getName().equals(code)){
+            if(items[i].getCode().equals(code)){
                 return true;
             }
         }

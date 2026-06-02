@@ -43,7 +43,7 @@ public class CheckoutEngine {
         discount= group+Tier_discount;
         double afterDiscounts = preDiscount-discount;
         double tax=  0.05 * afterDiscounts;
-        return round(afterDiscounts+tax);
+        return (afterDiscounts+tax);
     }
     public String getReceipt(Cart cart){
         return String.format("Receipt %s Total:BDT %.2f Discount: %.2f",cart.getOwner().getName(),checkout(cart),discount);
