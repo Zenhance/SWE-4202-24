@@ -54,7 +54,7 @@ if (isPremium)
 {
     return  "R3C5*";
 }
-elseif(isBooked)
+elseif(isBooked);
     { return "R3C5#";
     }
 return "";
