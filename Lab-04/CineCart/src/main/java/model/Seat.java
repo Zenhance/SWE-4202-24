@@ -39,14 +39,15 @@ public class Seat {
     }
 
     public String toString() {
-        System.out.println("R" + row + "C" + col);
+        String seat = "R" + row + "C" + col;
 
-        if (isPremium = true)
-            System.out.println("*");
+        if (isPremium = true) {
+            return s + "*";
+        }
+
+
         if (isBooked = true)
-            System.out.println("#");
-
-
+            return s + "#";
     }
 
 }
