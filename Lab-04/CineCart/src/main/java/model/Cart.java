@@ -24,6 +24,12 @@ public class Cart {
             ticketCount++;
         }
     }
+    public void addItem(ConcessionItem c,int qty){
+        if(qty<MAX_ITEMS && qty>0){
+            items[itemCount]=c;
+            itemCount++;
+        }
+    }
 
 
 }
