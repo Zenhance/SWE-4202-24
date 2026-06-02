@@ -87,7 +87,7 @@ public final class CsvLoader {
                         "Showtime " + id + " refers to unknown movieId " + movieId);
                 if (h == null) throw new RuntimeException(
                         "Showtime " + id + " refers to unknown hallId " + hallId);
-                board.wait(new Showtime(id, m, h, startHour, dateTag));
+                board.add(new Showtime(id, m, h, startHour, dateTag));
             }
             return board;
         } catch (IOException e) {
