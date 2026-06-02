@@ -8,6 +8,15 @@ public class Customer {
     private final String loyaltyTier;
 
     public Customer(int id, String name, int age, String tier){
+        if(name == null || name.isBlank()){
+            throw new IllegalArgumentException("name cannot be null or blank");
+        }
+        if(age < 0 || age > 130){
+            throw new IllegalArgumentException("age should be between 0 and 130");
+        }
+        if(!tier.equals("BASIC")&&!tier.equals("SILVER")&&!tier.equals("GOLD")){
+            throw new IllegalArgumentException("tier should be either BASIC or SILVER or GOLD");
+        }
         this.id = id;
         this.name = name;
         this.age = age;
