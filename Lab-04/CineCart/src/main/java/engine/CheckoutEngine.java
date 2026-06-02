@@ -70,8 +70,8 @@ public class CheckoutEngine {
     public String getReceipt(Cart cart) {
         return String.format("Receipt\n" +
                 "%s" +
-                "BDT" +
                 "Total" +
+                "BDT" +
                 "Disount",
                 cart.getOwner().getName());
     }
