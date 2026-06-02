@@ -30,4 +30,8 @@ public class Cart {
        public Ticket[] getTicket{
            return tickets;
         }
+       public int getTicketCount{
+           return ticketCount;
+        }
+
 }
