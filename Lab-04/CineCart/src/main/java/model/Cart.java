@@ -26,10 +26,16 @@ public class Cart {
     }
 
     public void addItem(ConcessionItem c, int qty){
-        if(itemCount > MAX_ITEMS || qty <= 0 )
-            return "Items full";
-        items [itemCount] = c;
-        qtys [itemCount] = qty;
+        if (itemCount >= MAX_ITEMS) {
+            System.out.println("Your cart is full!");
+            return;
+        }
+        if (qty <= 0) {
+            System.out.println("Invalid quantity");
+            return;
+        }
+        items[itemCount] = c;
+        qtys[itemCount] = qty;
         itemCount++;
     }
 
@@ -57,5 +63,11 @@ public class Cart {
         return itemCount;
     }
 
+    public double sumTicketsPaid(){
+        double sum = 0;
+        for (int i = 0 ; i<ticketCount; i++){
+           sum+= tickets[i].getPricePaid();
+        }
+    }
 
 }
