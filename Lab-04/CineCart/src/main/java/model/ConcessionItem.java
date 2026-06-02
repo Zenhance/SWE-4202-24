@@ -9,7 +9,7 @@ public class ConcessionItem {
         this.name=name;
         this.unitPrice=unitPrice;
     }
-    String getCode(){
+    public String getCode(){
         return code;
     }
     String getName(){
