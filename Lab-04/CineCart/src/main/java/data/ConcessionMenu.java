@@ -1,16 +1,37 @@
 package data;
 
-import model.Showtime;
+import model.ConcessionItem;
 
 public class ConcessionMenu {
-    private Showtime[] shows;
+    private ConcessionItem[] items;
     private int count;
     private static final int MAX = 30;
-
-    public ConcessionMenu(Showtime[] shows,int count){
-        this.shows=shows;
-        this.count=count;
+    public ConcessionMenu(){
+        this.items=new ConcessionItem[MAX];
+        this.count=0;
     }
-    public void
+    public void add(ConcessionItem c){
+        if(count>=MAX){
+            return;
+        }else{
+            items[count]=c;
+            count++;
+        }
+      public ConcessionItem findByCode(String code){
+            for(int i=0;i<count;i++){
+            if(items[i].getCode().equals(code)){
+                return items[i];
+            }
+            return null;
+            }
+        }
+
+        public void displayAll(){
+            for(int i=0;i<count;i++){
+                System.out.println(items[i].toString());
+            }
+    }
+
+
 
 }
