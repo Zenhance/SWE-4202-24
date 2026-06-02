@@ -18,8 +18,8 @@ public class CheckoutEngine {
 
 
     public String bookTicket(Cart cart,int showtimeId,int row,int col) {
-      board.findbyId(showtimeId);
-      if (board.findbyId(showtimeId)==null) return "Showtime not found";
+      board.findById(showtimeId);
+      if (board.findById(showtimeId)==null) return "Showtime not found";
       if (cart.getOwner().getAge()<s.getM().getMinAge()) return "Underage for rating "+s.getM().getRating() ;
       s.getH().getSeat(row, col);
       if (s.getH().getSeat(row, col).isBooked())return "Seat unavailable";
