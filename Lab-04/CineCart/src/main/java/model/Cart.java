@@ -3,11 +3,11 @@ package model;
 public class Cart {
     public static final int MAX_TICKETS=20;
     public static final int MAX_ITEMS=20;
+    private final ConcessionItem[] items;
 
     private Customer owner; //--> 'owner' will contain everything of the class "Customer"
     private Ticket[] tickets;
     private int ticketCount;
-    private int ConcessionItem[] items;
     private int[] qtys;
     private int itemCount;
 
