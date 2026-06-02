@@ -2,6 +2,7 @@ package engine;
 
 import data.ConcessionMenu;
 import data.ShowtimeBoard;
+import model.Cart;
 import model.ConcessionItem;
 import model.Showtime;
 import model.Ticket;
@@ -13,7 +14,7 @@ public class CheckoutEngine {
         this.board=board;
         this.menu=menu;
     }
-    public String bookTicket(cart cart, int showtimeId, int row,int col){
+    public String bookTicket(Cart cart, int showtimeId, int row, int col){
         Showtime showtime = board.findByID(showtimeId);
         if(showtime==null){
             return "Showtime not found";
