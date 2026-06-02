@@ -5,27 +5,30 @@ public class Hall {
     private int rows;
     private int cols;
     private Seat[][] grid;
-    public Hall(int id, int rows, int cols, int premiumRows){
+
+    public Hall(int id, int rows, int cols, int premiumRows) {
         this.id = id;
-        this.rows= rows;
-        this.cols= cols;
+        this.rows = rows;
+        this.cols = cols;
         this.grid = new Seat[rows][cols];
-        for (int r=0; r<rows; r++){
-            for(int c=0; c<cols; c++){
-                grid[r][c] = new Seat(r, c, r<premiumRows);
+        for (int r = 0; r < rows; r++) {
+            for (int c = 0; c < cols; c++) {
+                grid[r][c] = new Seat(r, c, r < premiumRows);
             }
         }
     }
-    public Seat getSeat(int row, int col){
+
+    public Seat getSeat(int row, int col) {
         return grid[row][col];
     }
-    public int countAvailable(){
+
+    public int countAvailable() {
         int count = 0;
 
-        for(int r=0; r<rows; r++){
-            for (int c = 0; c< cols; c++){
-                if (getSeat( r,c).isAvailable()){
-                    count++ ;
+        for (int r = 0; r < rows; r++) {
+            for (int c = 0; c < cols; c++) {
+                if (getSeat(r, c).isAvailable()) {
+                    count++;
                 }
             }
 
@@ -33,19 +36,31 @@ public class Hall {
 
         return count;
     }
-}
 
-public void displayLayout(){
-    for (int r= 0; r< rows; r++){
-        for (int c = 0; c<cols; c++){
-            if (!grid[r][c].isavailable()){
-                System.out.print("*");
+
+    public void displayLayout() {
+        for (int r = 0; r < rows; r++) {
+            for (int c = 0; c < cols; c++) {
+                if (!grid[r][c].isavailable()) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(".");
+                }
             }
-            else {
-                System.out.print(".");
-            }
+            System.out.println();
         }
-        System.out.println();
+    }
+
+    public int getRows() {
+        return rows;
+    }
+
+    public int getCols() {
+        return cols;
+    }
+
+    public int getId() {
+        return id;
     }
 }
 
