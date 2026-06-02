@@ -14,7 +14,7 @@ int[] qtys;
      this.itemCount=itemCount;
      this.owner=owner;
      this.tickets= new Ticket[MAX_TICKETS];
-     this.qtys=qtys;
+     this.qtys=new int[MAX_ITEMS];
      this.items=new ConcessionItem[MAX_ITEMS];
      this.ticketCount=0;
 

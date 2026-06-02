@@ -30,6 +30,6 @@ public class Ticket {
 
     @Override
     public String toString() {
-        return "Ticket["+showtime.getMovie().getTitle()+"Row"+row+"Col"+col+"|BDt"+String.format("%.2f",pricePaid)+"]";
+        return "Ticket["+showtime.getMovie().getTitle()+" | Row"+row+" Col"+col+" | BDT"+String.format("%.2f",pricePaid)+"]";
     }
 }
