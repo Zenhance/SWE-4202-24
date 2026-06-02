@@ -51,24 +51,42 @@ public String addConcession(Cart cart, String code, int qty){
         }
 }
 
-public double checkout(Cart cart){
+public double checkout(Cart cart) {
+    double ticketSubtotal = cart.sumTicketsPaid();
+    double concessionSubtotal = cart.sumConcessionsRaw();
+    double combo = 0.0;
+    if (cart.hasItem("POP") && cart.hasItem("SODA")) {
+        combo = 50.0;
+    }
+    double preDiscount = ticketSubtotal + concessionSubtotal - combo;
+    double grp = 0;
+    if (cart.getTicketCount() >= 4) {
+        grp = 0.10 * preDiscount;
+    }
+    double tier = cart.getOwner().getTierDiscount() * preDiscount;
+    double afterDiscounts = preDiscount - grp - tier;
+    double tax = 0.05 * afterDiscounts;
+    double total = afterDiscounts + tax;
+    return Math.round(total * 100.0) / 100.0;
+}
+
+    public String getReceipt (Cart cart){
         double ticketSubtotal = cart.sumTicketsPaid();
-        double concessionSubtotal = cart.sumConcessionRaw();
+        double concessionSubtotal = cart.sumConcessionsRaw();
         double combo = 0.0;
-        if(cart.hasItem("POP") && cart.hasItem("SODA")){
+        if (cart.hasItem("POP") && cart.hasItem("SODA")) {
             combo = 50.0;
         }
         double preDiscount = ticketSubtotal + concessionSubtotal - combo;
         double grp = 0;
-        if(cart.getTicketCount()>=4){
-            grp = 0.10* preDiscount;
+        if (cart.getTicketCount() >= 4) {
+            grp = 0.10 * preDiscount;
         }
-        double tier = cart.getOwner().getTierDiscount()*preDiscount;
+        double tier = cart.getOwner().getTierDiscount() * preDiscount;
         double afterDiscounts = preDiscount - grp - tier;
         double tax = 0.05 * afterDiscounts;
-        double total = afterDiscounts+tax;
-        return Math.round(total*100.0)/100.0;
+        double total = afterDiscounts + tax;
+        return "Receipt " + cart.getOwner() + " " + total + "BDT" + tier + "BDT";
+    }
 }
 
-
-}
