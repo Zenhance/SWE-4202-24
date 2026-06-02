@@ -7,11 +7,12 @@ public class ShowtimeBoard {
     private int count;
     private static final int MAX = 30;
 
-    public ShowtimeBoard(Showtime[] shows,int count){
-        this.shows=shows;
-        this.count=count;
+    public ShowtimeBoard(){
+        this.shows=new Showtime[MAX];
+        this.count=0;
     }
     public void add(Showtime s){
+
 
     }
 }
