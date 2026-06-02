@@ -21,8 +21,17 @@ int[] qtys;
  }
  public void addTicket(Ticket t){
              if(ticketCount<MAX_TICKETS){
-
+             tickets[ticketCount]=t;
+             ticketCount++;
              }
+ }
+ public void addItem(ConcessionItem c,int qty){
+     if(ticketCount<MAX_ITEMS && qty>0){
+        items[itemCount] =c;
+        qtys[itemCount]=qty;
+        itemCount++;
+
+     }
  }
  public Customer getOwner(){
      return owner;
@@ -48,11 +57,13 @@ int[] qtys;
 public Ticket[] getTickets() {
     return tickets;
 }
-   public void addItem(ConcessionItem c, int qty){
 
-    }
     public double sumTicketsPaid(){
+                 double totalPrice=0.0;
+                 for(int i=0;i<itemCount;i++){
+                     totalPrice+= items[i].getUnitPrice() * qtys[i];
 
+                 }return totalPrice;
     }
     public double sumConcessionsRaw(){
 
