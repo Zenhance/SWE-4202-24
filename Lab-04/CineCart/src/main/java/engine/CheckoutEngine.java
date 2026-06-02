@@ -31,11 +31,7 @@ package engine;
 
 import data.ConcessionMenu;
 import data.ShowtimeBoard;
-import model.Cart;
-import model.Ticket;
-import model.Showtime;
-import model.Seat;
-import model.ConcessionItem;
+import model.*;
 
 public class CheckoutEngine {
     private ShowtimeBoard board;
@@ -77,6 +73,10 @@ public class CheckoutEngine {
 
         if (item == null) {
             return "Item not found";
+        }
+
+        if (qty <= 0) {
+            return "Invalid quantity";
         }
     }
 }
