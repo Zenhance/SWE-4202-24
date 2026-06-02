@@ -6,17 +6,17 @@ public class Customer {
     private int age;
     private String loyaltyTier="BASIC";
 
-    Customer(int id, String name, int age) {
-        this.id=id;
-        this.name=name;
-        this.age=age;
-    }
-
     public Customer(int id, String name, int age, String tier) {
         this.id=id;
         this.name=name;
         this.age=age;
         this.loyaltyTier=tier;
+    }
+
+    public Customer(int id, String name, int age) {
+        this.id=id;
+        this.name=name;
+        this.age=age;
     }
 
     public int getId() {
