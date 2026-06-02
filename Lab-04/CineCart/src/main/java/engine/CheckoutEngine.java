@@ -95,7 +95,7 @@ public class CheckoutEngine {
         result += "Customer: " + cart.getOwner().getName() + "\n\n";
         result += "Tickets:\n";
         for (int i = 0; i < cart.getItemCount(); i++) {
-            result += cart.getItems()[i].getName + "x" + cart.getQtys()[i] + "\n";
+            result += cart.getItems()[i].getName()+ "x" + cart.getQtys()[i] + "\n";
         }
         double total = checkout(cart);
         result += "\nDiscount applied\n";
