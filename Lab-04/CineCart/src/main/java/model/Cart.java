@@ -10,7 +10,7 @@ public class Cart {
     private int ticketCount;
     private ConcessionItem[] items;
     private int[] qtys;
-    int itemCount;
+    private int itemCount;
 
     public Cart(Customer owner){
         this.owner = owner;

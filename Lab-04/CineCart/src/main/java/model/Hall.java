@@ -10,7 +10,7 @@ public class Hall {
         this.id = id;
         this.rows = rows;
         this.cols = cols;
-
+        Seat[][] grid = new Seat[rows][cols];
         for (int r = 0; r < rows; r++)
         {
             for (int c = 0; c < cols; c++)
@@ -19,6 +19,8 @@ public class Hall {
                 else grid[r][c] = new Seat(r, c, false);
             }
         }
+
+        this.grid = grid;
     }
 
     public Seat getSeat(int row, int col){
