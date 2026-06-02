@@ -33,7 +33,7 @@ public class Hall {
         {
             for (int j = 0; j < cols; j++)
             {
-                if(grid[i][j].isBooked()) count++;
+                if(grid[i][j].isAvailable()) count++;
             }
         }
         return count;
