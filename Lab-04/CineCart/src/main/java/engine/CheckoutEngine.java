@@ -13,7 +13,7 @@ public class CheckoutEngine {
       this.menu=menu;
   }
 
-  String bookTicket(Cart cart, int showtimeId, int row, int col){
+  public String bookTicket(Cart cart, int showtimeId, int row, int col){
    Showtime found=board.findById(showtimeId);   /*This was initally shown wrong as, the board couldnt
                                                 find the findById as it was package private. after i made the methods inside the
                                                 Showtimeboard public, the erorr got fixed*/
@@ -49,7 +49,7 @@ public class CheckoutEngine {
 
   }
 
-    String addConcession(Cart cart, String code, int qty){
+    public String addConcession(Cart cart, String code, int qty){
         ConcessionItem item=menu.findByCode(code);
         if(item==null){
             System.out.println("Item not found");
@@ -64,7 +64,7 @@ public class CheckoutEngine {
     }
 
 
-    double checkout (Cart cart){
+    public double checkout (Cart cart){
       double ticketSubtotal=cart.sumTicketsPaid();
       double concessionSubtotal=cart.sumConcessionRaw();
       double combo=0;
