@@ -21,6 +21,16 @@ public class CheckoutEngine {
             return "Underage for rating" + showtime.getMovie().getRating();
         }
         Seat seat = showtime.getHall().getSeat(row,col);
+        if(!seat.isAvailable()){
+            return "Seat unavailable";
+        }
+        double price = showtime.getMovie().getBasePrice();
+        if(seat.isPremium()){
+            price*=1.30;
+        }
+        if(showtime.isPeak()){
+            price*=1.20;
+        }
 
 
     }
