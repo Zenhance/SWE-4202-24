@@ -20,4 +20,20 @@ public class Hall {
             grid[r][c]=Seat(r,c,premium);
         }
     }
+
+    Seat getSeat(int row,int col){
+        return
+    }
+
+    int count=0;
+    int countAvailable(){
+        for(int r=0;r<rows;r++)
+            for(int c=0;c<cols;c++)
+            {
+                if(grid[r][c].isAvailable()==true)
+                {
+                    count++;
+                }
+            }
+    }
 }
