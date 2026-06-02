@@ -28,6 +28,6 @@ public class ShowtimeBoard {
 
     public void displayAll() {
         for (int i = 0; i < count; i++) {
-            System.out.println(shows[i].toString())
+            System.out.println(shows[i].toString()) ;
         }
     } }
