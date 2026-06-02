@@ -1,9 +1,9 @@
 package data;
 import model.Showtime;
 public class ShowtimeBoard {
-    Showtime[] shows;
-    int count;
-    static final int MAX = 30;
+    private Showtime[] shows;
+    private int count;
+    public static final int MAX = 30;
 
     public ShowtimeBoard(){
         this.shows=new Showtime[MAX];
