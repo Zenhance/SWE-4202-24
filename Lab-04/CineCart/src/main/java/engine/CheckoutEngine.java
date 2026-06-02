@@ -71,6 +71,15 @@ public class CheckoutEngine {
         String result = "";
         result+="===== Receipt =====\n";
         result+="Customer: " + cart.getOwner().getName()+"\n\n";
-        result += "Tickets:\n";
+        result+= "Tickets:\n";
+        for(int i=0;i<cart.getItemCount();i++){
+            result+= cart.getItems()[i].getName()+"x"+cart.getQtys()[i]+ "\n";
+
+        }
+
+
+
+
+
     }
 }
