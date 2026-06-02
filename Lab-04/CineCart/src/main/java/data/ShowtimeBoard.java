@@ -5,14 +5,14 @@ import model.Showtime;
 public class ShowtimeBoard {
     private Showtime[] shows;
     private int count;
-    private static final int MAX = 30;
+    private static final int MAX;
 
     public ShowtimeBoard() {
-        shows = new Showtime[MAX];
-        count = 0;
+        shows=new Showtime[MAX=30];
+        count=0;
     }
     public void add(Showtime s) {
-        if (count < MAX) {
+        if (count<MAX) {
             shows[count] = s;
             count++;
         }
