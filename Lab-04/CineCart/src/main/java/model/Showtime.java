@@ -20,6 +20,10 @@ public class Showtime {
         return id;
     }
 
+    public Movie getMovie() {
+        return movie;
+    }
+
     public Hall getHall() {
         return hall;
     }
