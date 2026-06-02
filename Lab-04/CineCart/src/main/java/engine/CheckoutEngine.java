@@ -88,7 +88,9 @@ public class CheckoutEngine {
 
 
         return new BigDecimal(Double.toString(afterDiscounts+tax)).setScale(2, RoundingMode.HALF_UP).doubleValue();
+    }
 
-
+    public String getReceipt(Cart cart){
+        return "Receipt" + "BDT" + "Total" + "Discount" + cart.getOwner();
     }
 }
