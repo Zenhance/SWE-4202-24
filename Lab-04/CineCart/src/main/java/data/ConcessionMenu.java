@@ -20,6 +20,15 @@ public void add(ConcessionItem c){
 
 public ConcessionItem findByCode(String code){
 
+    ConcessionItem res = null;
+    for(int i=0;i<count;i++){
+
+        if(code.equals(items[i].getCode())){
+            res=items[];
+        break;
+        }
+    }
+
 
 }
 
