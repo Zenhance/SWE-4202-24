@@ -66,6 +66,9 @@ public class CheckoutEngine {
         // [1]
         double ticketSubtotal = cart.sumTicketsPaid();
 
+        // [2]
+        double concessionSubtotal = cart.sumConcessionsRaw();
+
 
     }
 }
