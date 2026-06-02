@@ -34,6 +34,9 @@ public boolean addItem(ConcessionItem c,int qty){
     if(itemCount<MAX_ITEMS){
         items[itemCount]= c;
         qtys[itemCount] = qty;
-    }
+        itemCount++;
+        res = true;
+    }  return res;
 }
+
 }
