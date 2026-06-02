@@ -35,6 +35,7 @@ public class Movie {
         return basePrice;
     }
 
+
     public int getMinAge() {
         if (rating.equals("G")) {
             return 0;
