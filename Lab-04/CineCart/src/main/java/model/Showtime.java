@@ -9,14 +9,11 @@ public class Showtime {
     private String dateTag;
 
    public Showtime(int id,Movie movie,Hall hall,int startHour,String dataTag){
-
-
         this.id = id;
         this.movie = movie;
         this.hall = hall;
         this.startHour = startHour;
         this.dateTag = dataTag;
-
 
     }
 
@@ -24,7 +21,8 @@ public class Showtime {
         return id;
     }
     public Hall getHall() {
-    return hall;
+        return hall;
+    }
     public Movie getMovie() {
         return movie;
     }
