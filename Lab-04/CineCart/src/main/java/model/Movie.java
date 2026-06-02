@@ -18,7 +18,7 @@ public class Movie {
     public int getId(){return id;}
     public String getTitle(){return title;}
     public String getRating(){return rating;}
-    public int getDurationMin(){return durationMin};
+    public int getDurationMin(){return durationMin;}
     public double getBasePrice() {return basePrice;}
     public int getMinAge(){
         if(rating.equals("G")){

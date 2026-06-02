@@ -10,5 +10,13 @@ public class Cart {
     private int[] qtys;
     private int itemCount;
 
+    public Cart(Customer owner) {
+        this.owner = owner;
+        this.tickets=new Ticket[MAX_TICKETS];
+        this.items=new ConcessionItem[MAX_ITEMS];
+        this.qtys=new int[0];
+        this.itemCount=0;
+        this.ticketCount=0;
+    }
 
 }
