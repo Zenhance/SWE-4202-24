@@ -12,7 +12,12 @@ public class ShowtimeBoard {
         this.count=0;
     }
     public void add(Showtime s){
-
+        if(count>=MAX)
+            return ;
+        else {
+            shows[count]=s;
+            count++;
+        }
 
     }
     public Showtime findById(int id){
