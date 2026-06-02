@@ -26,5 +26,9 @@ public class Cart {
     }
 
 
+    //methods
+    public void addTicket(Ticket t) {
+
+    }
 
 }
