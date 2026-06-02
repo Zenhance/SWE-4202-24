@@ -20,6 +20,31 @@ public class Cart {
         this.ticketCount = 0;
         this.itemCount = 0;
     }
+    public void addTicket(Ticket t) {
+        if (ticketCount >= 20) {
+            return;
+
+        }
+        tickets[ticketCount] = t;
+        ticketCount++;
+
+    }
+
+    public void addItems(ConcessionItem c, int qty){
+        if(itemCount>=20){
+            return;
+        }
+        if(qty<=20){
+            return;
+        }
+        items[itemCount]=c;
+        qtys[itemCount]=qty;
+        itemCount++;
+
+    }
+
+
+
     public Customer getOwner()
     { return owner;
     }
@@ -34,5 +59,11 @@ public class Cart {
     public int getItemCount()           {
         return itemCount; }
 }
+
+
+
+
+
+
 
 
