@@ -4,6 +4,7 @@ package engine;
 import data.ConcessionMenu;
 import data.ShowtimeBoard;
 import model.Cart;
+import model.Showtime;
 
 public class CheckoutEngine {
     private final ShowtimeBoard board;
@@ -13,7 +14,11 @@ public class CheckoutEngine {
       this.menu=menu;
   }
   public  String bookTicket(Cart cart, int showtimeId, int row, int col){
-        return null;
+      Showtime showtime=board.findById(showtimeId);
+      if (showtime.equals(null)) {
+      return "Showtime not found";
+
+      }
     }
     public double checkout(Cart cart){
         return 0.0;
