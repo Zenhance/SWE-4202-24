@@ -15,7 +15,7 @@ public class Hall {
         this.id = id;
         this.rows = rows;
         this.cols = cols;
-        this.grid = new Seat [rows][cols];
+        this.Seat = new Seat [rows][cols];
 
         for (int r = 0; r < rows; r++)
         {
@@ -39,6 +39,15 @@ public class Hall {
     }
 
     public int countAvailable() {
+
+        int count = 0;
+
+        for (int r = 0; r < rows; r++) {
+            for (int c = 0; c < cols; c++)
+            {
+
+            }
+        }
 
     }
 
