@@ -29,7 +29,7 @@ public class CheckoutEngine {
         }
 
         showtime.getHall().getSeat(row, col);
-        if(showtime.getHall().getSeat(row, col).getIsBooked()){
+        if(showtime.getHall().getSeat(row, col).isBooked()){
             System.out.println("Seat unavailable");
         }
 
@@ -51,7 +51,7 @@ public class CheckoutEngine {
 
     public double checkout(Cart cart) {
         double ticketSubtotal = cart.sumTicketsPaid();
-        double concessionSubtotal = cart.sumConcessionRaw();
+        double concessionSubtotal = cart.sumConcessionsRaw();
 
 
         double combo;
@@ -71,8 +71,10 @@ public class CheckoutEngine {
 
         return afterDiscount+tax;
 
+    }
 
-
+    public String getReceipt(Cart cart) {
+        return (cart.getOwner().getName());
     }
 
 
