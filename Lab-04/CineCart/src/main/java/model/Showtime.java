@@ -9,7 +9,7 @@ public class Showtime {
         this.startHour=startHour;
         this.dateTag=dateTag;
     }
-    int getId(){
+    public int getId(){
         return id;
     }
     Movie getMovie(){
