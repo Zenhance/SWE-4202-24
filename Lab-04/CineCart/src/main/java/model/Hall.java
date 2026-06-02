@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Arrays;
+
 public class Hall {
 
 private int id;
@@ -8,28 +10,53 @@ private int cols;
 private Seat[][] grid;
 
 
+    @Override
+    public String toString() {
+        return "Hall{" +
+                "id=" + id +
+                ", rows=" + rows +
+                ", cols=" + cols +
+                ", grid=" + Arrays.toString(grid) +
+                '}';
+    }
+
     Hall(int id, int rows, int cols, int premiumRows) {
+
 
         this.id = id;
         this.rows = rows;
         this.cols = cols;
         this.grid = new Seat[rows][cols];
 
-        for(int i = 0; i < rows; i++){
-            boolean premium = (r < premiumRows);
-            for(int j = 0;j < cols;j++){
-                grid[r][c] = new Seat(r,c, premium);
+
+        for (int i = 0; i < rows; i++) {
+            boolean premium = (rows < premiumRows);
+            for (int j = 0; j < cols; j++) {
+                grid[i][j] = new Seat(rows, cols, premium);
             }
         }
-
-
-
-
-
-
-
     }
 
+    public int getId() {
+            return id;
+        }
+        public int getRows() {
+            return rows;
+        }
+        public int getCols() {
+            return cols;
+        }
+        public  Seat getSeat(int row , int col) {
+            for (int i = 0; i < rows; i++) {
+                for (int j = 0; j < cols; j++) {
+                    if (row >= 0 && row < rows || col >= 0 && col < cols) {
+                        return grid[row][col];
+                    }
+                    return null;
+                }
+
+            }
+    }
 
 
 
