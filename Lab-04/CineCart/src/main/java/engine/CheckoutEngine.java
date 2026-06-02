@@ -1,5 +1,5 @@
 package engine;
-
+import model.Seat;
 import data.ConcessionMenu;
 import data.ShowtimeBoard;
 import model.Cart;
@@ -23,7 +23,7 @@ public class CheckoutEngine {
             return "Underage for rating " + showtime.getMovie().getRating();
         }
         Seat seat = showtime.getHall().getSeat(row, col);
-        if(!=seat.isAvailable()){
+        if(!seat.isAvailable()){
             return "Seat unavailable";
         }
         double basePrice = showtime.getMovie().getBasePrice();
