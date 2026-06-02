@@ -2,9 +2,9 @@ package model;
 
 public class Hall {
     private final int id;
-    private int rows;
-    private int cols;
-    private Seat[][] grid;
+    private final int rows;
+    private final int cols;
+    private final Seat[][] grid;
 
     public Hall(int id, int rows, int cols, int premiumRows) {
         this.id = id;
