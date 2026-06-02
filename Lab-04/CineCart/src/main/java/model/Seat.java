@@ -5,10 +5,10 @@ public class Seat {
     int col;
     boolean isPremimum;
     boolean isBooked;
-    public Seat(int row, int col, boolean isPremium, boolean isBooked){
+    public Seat(int row, int col, boolean isPremium){
         this.row=row;
         this.col=col;
-        this.isBooked=isBooked;
+        this.isBooked=false;
         this.isPremimum=isPremium;
 
     }
@@ -20,11 +20,11 @@ public class Seat {
     }
 
     public boolean isBooked() {
-        return isBooked;
+        return this.isBooked;
     }
 
-    public boolean isPremimum() {
-        return isPremimum;
+    public boolean isPremium() {
+        return this.isPremimum;
     }
     public void book(){
         this.isBooked=true;
@@ -47,6 +47,7 @@ public class Seat {
            }
          return null;
     }
+
 
 
 }

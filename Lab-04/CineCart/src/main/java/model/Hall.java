@@ -43,13 +43,13 @@ public class Hall {
     public int countAvailable(){
         for(int i=0;i<rows;i++){
             for(int j=0;j<cols;j++){
-                if(grid[rows][cols].isAvailable()){
+                if(grid[rows][cols].isAvailable()) {
                     count++;
                 }
             }
-        }
+        }return count;
     }
-    public void displayLayout(){
+     void displayLayout(){
         for(int r=0;r<rows;r++){
             for(int c=0;c<cols;c++){
                 if(grid[r][c].isAvailable()){
@@ -58,7 +58,7 @@ public class Hall {
                 else if(grid[r][c].isBooked()){
                     System.out.println("#");
                 }
-                else if(grid[r][c].isPremimum()){
+                else if(grid[r][c].isPremium()){
                     System.out.println("*");
                 }
             }

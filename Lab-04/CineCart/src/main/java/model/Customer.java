@@ -44,6 +44,6 @@ public class Customer {
         }
     }
     public String toString(){
-        System.out.println("["+id+"] "+name+"[ "+loyaltyTier+"]");
+        return "["+id+"] "+name+"[ "+loyaltyTier+"]";
     }
 }

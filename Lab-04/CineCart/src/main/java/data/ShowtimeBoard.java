@@ -6,7 +6,7 @@ public class ShowtimeBoard {
     Showtime[] shows;
     int count;
     static final int MAX=30;
-   void add(Showtime s){
+   public void add(Showtime s){
           shows= new Showtime[MAX];
           count++;
    }
