@@ -31,8 +31,9 @@ public class Seat {
         return isBooked;
     }
 
-    public void book() {
-        isBooked=true;
+    public boolean book() {
+        if (isBooked) return true;
+        return false;
     }
 
     public void release() {

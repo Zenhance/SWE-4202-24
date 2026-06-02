@@ -19,18 +19,20 @@ public class Cart {
         itemCount = 0;
     }
 
-    public void addTicket(Ticket t) {
-        if (ticketCount>=MAX_TICKETS) return;
+    public boolean addTicket(Ticket t) {
+        if (ticketCount>=MAX_TICKETS) return false;
 
         tickets[ticketCount++] = t;
+        return true;
     }
 
-    public void addItem(ConcessionItem c, int qty) {
-        if (itemCount>=MAX_ITEMS) return;
-        if (qty<=0) return;
+    public boolean addItem(ConcessionItem c, int qty) {
+        if (itemCount>=MAX_ITEMS) return false;
+        if (qty<=0) return false;
 
         items[itemCount] = c;
         qtys[itemCount++] = qty;
+        return true;
     }
 
     public Customer getOwner() {
