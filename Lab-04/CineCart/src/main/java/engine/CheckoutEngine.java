@@ -121,11 +121,21 @@ public class CheckoutEngine {
         return combo+group+tier;
     }
 
+    public String getReceipt(Cart cart){
+        String reciept ="";
 
 
+        reciept += "Concessions:\n";
+            for (int i = 0; i < cart.getItemCount(); i++) {
+                reciept+= cart.getItems()[i].getName()
+                        + " x " + cart.getQtys()[i] + " = BDT " + String.format("%.2f", cart.getItems()[i].getUnitPrice() * cart.getQtys()[i]) + "\n";
+            }
+            double discount = calculateDiscount(cart);
 
+            reciept += "Discount: BDT " + String.format("%.2f", discount) + "\n";
+            reciept += "Total: BDT " + String.format("%.2f", checkout(cart)) + "\n";
 
-
-
+            return reciept;
+        }
 
 }
