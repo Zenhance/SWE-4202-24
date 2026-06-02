@@ -58,5 +58,25 @@ public class Cart {
         }
     }
 
+    public double sumTicketspaid() {
+        double sum=0;
+        for(int i=0;i<ticketCount;i++) {
+            sum=sum+tickets[i];
+        }
+        return sum;
+    }
 
+    double sumConcessionsRaw() {
+        double sum=0;
+        for(int i=0;i<itemCount;i++) {
+            sum=sum+items[i];
+        }
+        return sum;
+    }
+
+    public boolean hasItem(String code) {
+        for(int i=0;i<itemCount;i++) {
+            if()
+        }
+    }
 }
