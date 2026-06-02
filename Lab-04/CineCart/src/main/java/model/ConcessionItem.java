@@ -22,4 +22,9 @@ public class ConcessionItem {
     public double getUnitPrice() {
         return unitPrice;
     }
+
+    public String toString(){
+        String string = String.format("%s - %s (Large) - BDT %.2f", code, name, unitPrice);
+        return string;
+    }
 }
