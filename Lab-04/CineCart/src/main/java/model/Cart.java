@@ -16,7 +16,7 @@ public class  Cart {
         this.owner = owner;
         tickets = new Ticket[MAX_TICKETS];
         items = new ConcessionItem[MAX_ITEMS];
-        qyts = new int[MAX_ITEMS];
+        qtys = new int[MAX_ITEMS];
     }
 
     public boolean addTicket(Ticket t) {
@@ -45,7 +45,7 @@ public class  Cart {
         return ticketCount;
     }
 
-    public Ticket[] getTicket() {
+    public Ticket[] getTickets() {
         return tickets;
     }
 
@@ -62,7 +62,7 @@ public class  Cart {
     }
 
     public int[] getQtys() {
-        return qyts;
+        return qtys;
     }
 
     public double sumTicketsPaid() {
@@ -76,7 +76,7 @@ public class  Cart {
     public double sumConcessionRaw() {
         double sum = 0.0;
         for (int i = 0; i < itemCount; i++) {
-            sum += tickets[i].getUnitPrice() * qtys[i];
+            sum += items[i].getUnitPrice() * qtys[i];
         }
         return sum;
     }
