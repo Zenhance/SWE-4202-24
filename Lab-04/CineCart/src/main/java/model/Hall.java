@@ -23,5 +23,6 @@ public class Hall {
 
     public void displayLayout() {
 
+        }
     }
 }
