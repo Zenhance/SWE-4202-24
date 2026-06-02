@@ -32,7 +32,7 @@ public class Seat {
         isBooked = false;
     }
     public boolean isAvailable(){
-        if(isBooked = true){return false;}
+        if(isBooked==true){return false;}
         else return true;
     }
     public String toString(){
