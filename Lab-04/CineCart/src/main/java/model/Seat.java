@@ -19,13 +19,13 @@ public class Seat {
     int getCol(){
         return col;
     }
-    boolean isPremium(){
+    public boolean isPremium(){
         return isPremium;
     }
     boolean isBooked(){
         return isBooked;
     }
-    void book(){
+    public void book(){
         this.isBooked=true;
     }
     void release(){

@@ -24,7 +24,7 @@ public class Showtime {
     String getDateTag(){
         return dateTag;
     }
-    boolean isPeak(){
+    public boolean isPeak(){
         if(startHour>=18 && startHour<=21)return true;
         else return false;
     }

@@ -18,7 +18,7 @@ public class Cart {
         this.qtys = new int[MAX_ITEMS];
         this.itemCount = 0;
     }
-    void addTicket(Ticket t){
+    public void addTicket(Ticket t){
         if(ticketCount<MAX_ITEMS){
             tickets[ticketCount]=t;
             this.itemCount=0;
