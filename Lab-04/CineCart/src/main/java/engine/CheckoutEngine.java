@@ -58,7 +58,27 @@ public class CheckoutEngine {
         if(qty<=0){
             System.out.println("Invalid Quantity");
         }
+        return "OK";
 
 
     }
+
+
+    double checkout (Cart cart){
+      double ticketSubtotal=cart.sumTicketsPaid();
+      double concessionSubtotal=cart.sumConcessionRaw();
+      if(cart.hasItem("POP") && cart.hasItem("SODA")){
+          double combo=50.0;
+      }else{
+          double combo=0.0;
+      }
+
+
+
+
+
+    }
+
+
+
 }

@@ -63,7 +63,7 @@ public class Cart {
     }
 
 
-    double sumTicketsPaid(){
+    public double sumTicketsPaid(){
         double sum=0;
         for(int i=0; i<ticketCount; i++){
             sum+=tickets[i].getpricePaid(); /*So, basically, this thing will be applicable for every arrays
@@ -76,7 +76,7 @@ public class Cart {
 
 
 
-    double  sumConcessionRaw(){
+    public double  sumConcessionRaw(){
         double sum_of_items=0;
         for(int i=0; i<itemCount;i++){
             sum_of_items+=(items[i].getunitPrice())*(qtys[i]);
@@ -85,7 +85,7 @@ public class Cart {
         return sum_of_items;
     }
 
-    boolean  hasItem(String code){
+    public boolean  hasItem(String code){
         for(int i=0; i<itemCount; i++){
             return (items[i].getCode()).equals(code);
         }
