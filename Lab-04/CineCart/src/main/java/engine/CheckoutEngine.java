@@ -106,7 +106,7 @@ public class CheckoutEngine {
         double tier = cart.getOwner().getTierDiscount() * preDiscount;
         double discountTotal = combo + group + tier;
         sb.append("\nDiscount Applied: ").append(Math.round(discountTotal)).append("\n");
-        sb.append("Total: BDT ").append(String.format("%d", checkout(cart))).append("\n");
+        sb.append("Total: BDT ").append(String.format("%.2f", checkout(cart))).append("\n");
         sb.append("---------------");
         return sb.toString();
     }
