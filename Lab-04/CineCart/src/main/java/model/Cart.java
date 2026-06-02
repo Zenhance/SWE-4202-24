@@ -68,4 +68,11 @@ public class Cart {
         }
         return sum;
     }
+    public double sumConcessionsRaw(){
+        double sum = 0;
+        for(i =0; i<itemCount;i++){
+            sum += items[i].getUnitPrice()*qtys[i];
+        }
+        return sum;
+    }
 }
