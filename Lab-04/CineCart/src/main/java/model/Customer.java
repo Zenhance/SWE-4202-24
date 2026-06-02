@@ -15,7 +15,7 @@ public class Customer {
         this.id=id;
         this.name=name;
         this.age=age;
-        this.loyaltyTier=tier;
+        this.loyaltyTier="BASIC";
     }
 
     public int getId() {
