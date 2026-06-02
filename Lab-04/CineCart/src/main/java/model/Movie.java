@@ -1,11 +1,11 @@
 package model;
 
 public class Movie {
-    int id;
-    String title;
-    String rating;
-    int durationMin;
-    double basePrice;
+    private int id;
+    private String title;
+    private String rating;
+    private int durationMin;
+    private double basePrice;
     public Movie(int id,String title,String rating,int durationMin,double basePrice){
         this.id=id;
         this.title=title;

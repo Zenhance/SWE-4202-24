@@ -1,10 +1,10 @@
 package model;
 
 public class Customer {
-    int id;
-    String name;
-    int age;
-    String loyaltyTier;
+    private int id;
+    private String name;
+    private int age;
+    private String loyaltyTier;
     public Customer(int id,String name, int age){
         this.id=id;
         this.name=name;

@@ -1,10 +1,10 @@
 package model;
 
 public class Seat {
-    int row;
-    int col;
-    boolean isPremium;
-    boolean isBooked;
+    private int row;
+    private int col;
+    private boolean isPremium;
+    private boolean isBooked;
 
     public Seat(int row,int col,boolean isPremium){
         this.row=row;
