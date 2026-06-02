@@ -46,4 +46,12 @@ public class Cart {
         }
         return total;
     }
+    public double sumConcessionsRaw() {
+        double total = 0;
+        for (int i = 0; i < itemCount; i++) {
+            total += items[i].getUnitPrice() * qtys[i];
+        }
+        return total;
+
+     }
 }
