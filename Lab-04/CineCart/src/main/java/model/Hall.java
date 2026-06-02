@@ -17,12 +17,12 @@ public class Hall {
             for(int c=0;c<cols;c++)
         {
             boolean premium=(r<premiumRows);
-            grid[r][c]=Seat(r,c,premium);
+            grid[r][c]=new Seat(r,c,premium);
         }
     }
 
     Seat getSeat(int row,int col){
-        return
+        return grid[row][col];
     }
 
     int count=0;
@@ -35,5 +35,6 @@ public class Hall {
                     count++;
                 }
             }
+        return count;
     }
 }
