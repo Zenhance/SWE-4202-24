@@ -27,5 +27,7 @@ public class Ticket {
         return pricePaid;
     }
     @Override
-
+    public String toString(){
+        return "T" + showtime.getId() + " -R" + row +"C" + col + " @ BDT " + String.format("%.2f", pricePaid);
+    }
 }
