@@ -39,8 +39,9 @@ public class Hall {
         return grid[rows][cols];
 
     }
-    int count=0;
+
     public int countAvailable(){
+        int count=0;
         for(int i=0;i<rows;i++){
             for(int j=0;j<cols;j++){
                 if(grid[i][j].isAvailable()) {
@@ -49,7 +50,7 @@ public class Hall {
             }
         }return count;
     }
-     void displayLayout(){
+    void displayLayout(){
         for(int r=0;r<rows;r++){
             for(int c=0;c<cols;c++){
                 if(grid[r][c].isAvailable()){
