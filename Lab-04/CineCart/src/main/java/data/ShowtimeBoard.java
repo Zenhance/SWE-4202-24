@@ -11,15 +11,16 @@ public class ShowtimeBoard {
         shows=new Showtime[MAX=30];
         count=0;
     }
-    public void add(Showtime s) {
-        if (count<MAX) {
+    public void add(Showtime s)
+    {
+        if (count<=MAX) {
             shows[count] = s;
             count++;
         }
     }
 
     public Showtime findById(int id) {
-        for (int i = 0; i < count; i++) {
+        for (int i = 0; i <=count; i++) {
             if (shows[i].getId() == id) {
                 return shows[i];
             }
@@ -29,7 +30,7 @@ public class ShowtimeBoard {
     }
 
     public void displayAll() {
-        for (int i = 0; i < count; i++) {
+        for (int i = 0; i <=count; i++) {
             System.out.println(shows[i]);
         }
     }
