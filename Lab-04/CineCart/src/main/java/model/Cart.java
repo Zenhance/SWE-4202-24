@@ -80,7 +80,8 @@ public class Cart {
     }
     public boolean hasItem(String code) {
         for (int i=0; i<itemCount; i++) {
-            if (code.equals(items[i].getCode())) return true;
+            if (code.equals(items[i].getCode()))
+                return true;
         }
         return false;
     }
