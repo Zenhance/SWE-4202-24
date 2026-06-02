@@ -24,6 +24,7 @@ public class CheckoutEngine {
             return "Showtime not found";
         }
 
+
         int customerAge = cart.getOwner().getAge();
         int minimumAge = showtime.getMovie().getMinAge();
 
