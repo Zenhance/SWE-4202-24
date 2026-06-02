@@ -37,9 +37,11 @@ public class Seat {
             isBooked = false;
         }
 
+
         public boolean isAvailable() {
             return !isBooked;
         }
+
 
         public String toString() {
             String result = "R" + row + "C" + col;
