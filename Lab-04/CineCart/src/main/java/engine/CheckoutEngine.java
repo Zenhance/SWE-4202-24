@@ -31,7 +31,6 @@ public class CheckoutEngine {
         if (customerAge < minimumAge) {
             return "Underage for rating " + showtime.getMovie().getRating();
         }
-
         Seat seat = showtime.getHall().getSeat(row, col);
 
         if (!seat.isAvailable()) {
