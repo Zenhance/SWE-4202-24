@@ -11,8 +11,9 @@ public class CheckoutEngine {
         this.menu = menu;
     }
 
-    public String bookTicket(Cart cart, int showtimeId, int row, int col) {
-        if (show == null) {
+    public String bookTicket(Cart cart, int showtimeId, int row, int col)
+    Showtime showtime = board.findById(showtimeId){
+        if (showtime == null) {
             return "Showtime not found";
         }
 
