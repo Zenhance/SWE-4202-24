@@ -55,21 +55,21 @@ public class Cart {
         return items;
     }
 
-    double sumTicketsPaid(){
+    public double sumTicketsPaid(){
         double sum=0;
     for(int i=0;i<ticketCount;i++){
         sum+=tickets[i].getPricePaid();
     }
     return sum;
     }
-    double sumConcessionsRaw(){
+    public double sumConcessionsRaw(){
         double sum=0;
         for(int i=0;i<ticketCount;i++){
             sum+=items[i].getUnitPrice()*qtys[i];
         }
         return sum;
     }
-    boolean hasItem(String code) {
+    public boolean hasItem(String code) {
         for( int i=0;i<ticketCount;i++){
         if(items[i].getCode().equals(code))
             return true;
