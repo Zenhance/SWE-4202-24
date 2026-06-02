@@ -24,7 +24,7 @@ public Customer(int id, String name, int age, String loyaltyTier){
     this.loyaltyTier=loyaltyTier;
 }
 
-public int getID(){
+public int getId(){
     return id;
 }
 
