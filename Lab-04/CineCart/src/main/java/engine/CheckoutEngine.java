@@ -2,6 +2,7 @@ package engine;
 
 import data.ConcessionMenu;
 import data.ShowtimeBoard;
+import model.Showtime;
 import model.Ticket;
 import model.Cart;
 import
@@ -18,6 +19,8 @@ public class CheckoutEngine {
 
     public String bookTicket(Cart cart, int showtimeId, int row, int col){
 
+        Showtime showtime = board.findById(showtimeId);
+
         return "OK";
 
 
@@ -26,6 +29,7 @@ public class CheckoutEngine {
 
 
     public String addConcession(Cart cart, String code, int qty){
+
 
 return "OK";
 
