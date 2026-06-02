@@ -6,10 +6,35 @@ public class Cart {
 
     private Customer owner;
     private Ticket[] tickets;
+
+    public int getTicketCount() {
+        return ticketCount;
+    }
+
     private int ticketCount=0;
     private ConcessionItem[] items;
     private int[] qtys;
     private int itemCount=0;
+
+    public Customer getOwner() {
+        return owner;
+    }
+
+    public Ticket[] getTickets() {
+        return tickets;
+    }
+
+    public ConcessionItem[] getItems() {
+        return items;
+    }
+
+    public int[] getQtys() {
+        return qtys;
+    }
+
+    public int getItemCount() {
+        return itemCount;
+    }
 
     public Cart(Customer owner) {
         this.owner=owner;
@@ -32,4 +57,6 @@ public class Cart {
             itemCount++;
         }
     }
+
+
 }
