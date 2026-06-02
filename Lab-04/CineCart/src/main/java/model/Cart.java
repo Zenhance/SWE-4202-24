@@ -11,7 +11,7 @@ public class Cart {
     private int[] qtys;
     private int itemCount;
 
-    Cart(Customer owner){
+    public Cart(Customer owner){
          this.tickets= new Ticket[ticketCount];
          this.items= new ConcessionItem[itemCount];
          this.ticketCount=0;
@@ -19,14 +19,14 @@ public class Cart {
     }
 
 
-    void addTicket(Ticket t){
+    public void addTicket(Ticket t){
          if(ticketCount<MAX_TICKETS){ //--> while use korsilam first e, but while use korle, same loop will be applicable to all other objects. but we dont want it.
              tickets[ticketCount]=t;
              ticketCount++;
          }
     }
 
-   void addItem(ConcessionItem c, int qty ){
+   public void addItem(ConcessionItem c, int qty ){
         if(itemCount<MAX_ITEMS && qty>20){
             items[itemCount]=c;
             qtys[itemCount]=qty;
