@@ -3,6 +3,7 @@ package engine;
 import data.ConcessionMenu;
 import data.ShowtimeBoard;
 import model.Cart;
+import model.Seat;
 import model.Showtime;
 
 public class CheckoutEngine {
@@ -26,6 +27,20 @@ public class CheckoutEngine {
         if(cart.getOwner().getAge() < minAge){
             String.format("Underage for rating <%s>", s.getMovie().getRating());
 
+        }
+
+        Seat seat = s.getHall().getSeat(row, col);
+
+        if(seat.isBooked()){
+            System.out.println("Seat unavailable");
+        }
+
+        double price = s.getMovie().getBasePrice();
+        if (seat.isPremium()) {
+            price = price * 1.30;
+        }
+        if (s.isPeak()) {
+            price = price * 1.20;
         }
     }
 }
