@@ -16,13 +16,13 @@ public class Movie {
     public int getId(){
         return id;
     }
-    String getTitle(){
+    public String getTitle(){
         return title;
     }
     public String getRating(){
         return rating;
     }
-    int getDurationMin(){
+    public int getDurationMin(){
         return durationMin;
     }
     public double getBasePrice(){

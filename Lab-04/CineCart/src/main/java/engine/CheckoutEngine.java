@@ -55,6 +55,8 @@ public class CheckoutEngine {
             combo=50.0;
         }
         double preDiscount=ticketSubtotal+concessionSubtotal-combo;
+        double group = 0.0;
 
+        return group;
     }
 }

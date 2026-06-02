@@ -18,10 +18,10 @@ public class Showtime {
     public Hall getHall(){
         return this.hall;
     }
-    int getStartHour(){
+    public int getStartHour(){
         return startHour;
     }
-    String getDateTag(){
+    public String getDateTag(){
         return dateTag;
     }
     public boolean isPeak(){

@@ -13,22 +13,22 @@ public class Seat {
         this.isBooked=false;
     }
 
-    int getRow(){
+    public int getRow(){
         return row;
     }
-    int getCol(){
+    public int getCol(){
         return col;
     }
     public boolean isPremium(){
         return isPremium;
     }
-    boolean isBooked(){
+    public boolean isBooked(){
         return isBooked;
     }
     public void book(){
         this.isBooked=true;
     }
-    void release(){
+    public void release(){
         this.isBooked=false;
     }
     public boolean isAvailable(){

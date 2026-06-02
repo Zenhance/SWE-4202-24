@@ -8,16 +8,16 @@ public class Ticket {
         this.col=col;
         this.pricePaid=pricePaid;
     }
-    Showtime getShowtime(){
+    public Showtime getShowtime(){
         return showtime;
     }
-    int getRow(){
+    public int getRow(){
         return row;
     }
-    int getCol(){
+    public int getCol(){
         return col;
     }
-    double getPricePaid(){
+    public double getPricePaid(){
         return pricePaid;
     }
     public String toString(){

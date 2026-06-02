@@ -20,16 +20,21 @@ public class Hall {
     public int getId(){
         return id;
     }
-    int getCols(){
+    public int getCols(){
         return cols;
     }
-    Seat[][] getGrid(){
+    public Seat[][] getGrid(){
         return grid;
     }
     public Seat getSeat(int rows,int cols){
         return grid[rows][cols];
     }
-    int countAvailable(){
+
+    public int getRows() {
+        return rows;
+    }
+
+    public int countAvailable(){
         int count=0;
         for(int r=0;r<rows;r++){
             for(int c=0;r<cols;c++){
@@ -40,7 +45,7 @@ public class Hall {
         }
         return count;
     }
-    void displayLayout(){
+    public void displayLayout(){
         for(int r=0;r<rows;r++){
             for(int c=0;r<cols;c++){
                 System.out.printf(grid[r][c].toString()+" ");

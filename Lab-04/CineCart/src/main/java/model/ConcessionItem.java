@@ -12,10 +12,10 @@ public class ConcessionItem {
     public String getCode(){
         return code;
     }
-    String getName(){
+    public String getName(){
         return name;
     }
-    double getUnitPrice(){
+    public double getUnitPrice(){
         return unitPrice;
     }
     public String toString(){
