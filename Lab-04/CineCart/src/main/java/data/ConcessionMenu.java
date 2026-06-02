@@ -9,7 +9,7 @@ public class ConcessionMenu {
         count = 0;
     }
     public void add(ConcessionItem c){
-        if (count>=MAX){return;;}
+        if (count>=MAX){return;}
         items[count]=c;
         count++;
     }
