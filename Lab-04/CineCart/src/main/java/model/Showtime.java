@@ -39,13 +39,13 @@ public class Showtime {
     }
     @Override
     public String toString() {
-        return "Showtime{" +
-                "id=" + id +
-                ", movie=" + movie +
-                ", hall=" + hall +
-                ", startHour=" + startHour +
-                ", dateTag='" + dateTag + '\'' +
-                '}';
+        return "[T" + id + "] "
+                + movie.getTitle()
+                + " @ Hall "
+                + hall.getId()
+                + " - "
+                + String.format("%02d:00", startHour)
+                + " (" + dateTag + ")";
     }
 }
 
