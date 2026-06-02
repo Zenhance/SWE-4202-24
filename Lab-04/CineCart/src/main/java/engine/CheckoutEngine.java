@@ -45,4 +45,18 @@ public class CheckoutEngine {
         // [6]
         return "OK";
     }
+
+    // Implementing E.2 addConcession
+    public String addConcession(Cart cart, String code, int qty) {
+        ConcessionItem item = menu.findByCode(code);
+        // [1]
+        if (item == null) return null;
+
+        // [2]
+        if (qty <= 0) return "Invalid quantity";
+
+        // [3]
+        cart.addItem(item, qty);
+        return "OK";
+    }
 }
