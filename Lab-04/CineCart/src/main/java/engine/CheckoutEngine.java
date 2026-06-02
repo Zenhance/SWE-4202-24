@@ -49,8 +49,7 @@ public class CheckoutEngine {
     }
     public double checkout(Cart cart){
         double ticketSubtotal = cart.sumTicketsPaid();
-        double concessionSubtotal=cart.sumConcessionsRaw();
-
+        double concessionSubtotal=cart.sumConcessionraw();
         double combo=0.0;
         if(cart.hasItem("POP") && cart.hasItem("SODA")){
             combo=50.0;

@@ -55,6 +55,13 @@ public class Cart {
     public int getItemCount() {
         return itemCount;
     }
+    public double sumConcessionraw(){
+        double sum=0;
+        for(int i=0;i<itemCount;i++){
+            sum+=items[i].getUnitPrice()*qtys[i];
+        }
+        return sum;
+    }
     public double sumTicketsPaid(){
         double sum  = 0.0;
         for(int i=0; i<itemCount ; i++){
@@ -62,7 +69,7 @@ public class Cart {
         }
         return sum;
     }
-    boolean hasItem(String code){
+    public boolean hasItem(String code){
         for(int i=0;i<itemCount;i++){
             if(items[i].getCode().equals(code)){
                 return true;
