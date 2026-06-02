@@ -49,5 +49,13 @@ public class Cart {
     public int getItemCount() {
         return itemCount;
     }
-
+    public double sumTicketspaid(){
+        return 0.00;
+    }
+    public double sumConsessionsRaw(){
+        return 0.00;
+    }
+    public boolean hasItem(String code){
+        return true;
+    }
 }
