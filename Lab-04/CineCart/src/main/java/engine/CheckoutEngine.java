@@ -80,10 +80,19 @@ public class CheckoutEngine
         String receipt="=== Receipt ===\n";
         receipt=receipt+cart.getOwner().getName();
         receipt="\nTickets\n";
+        for(int i=0;i<cart.getTicketCount();i++)
+        {
+            receipt=receipt+cart.getTickets()[i];
+        }
         receipt=receipt+"\nConcessions\n";
-        receipt=receipt+"\nTotal\n";
-        receipt=receipt+"\nDiscount\n";
+        for(int i=0;i<cart.getItemCount();i++)
+        {
+            receipt=receipt+cart.getItems()[i].getName()+" x "+cart.getQtys()[i];
+        }
         receipt=receipt+"\nPayable : ";
+        double amt = checkout(cart);
+        receipt=receipt+amt;
+
         return receipt;
     }
 }
