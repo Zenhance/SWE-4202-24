@@ -4,13 +4,13 @@ public class Ticket {
     private Showtime showtime;
     private int row;
     private int col;
-    private double pricepaid;
+    private double PricePaid;
 
-    public Ticket(Showtime showtime, int row, int col, double pricepaid) {
+    public Ticket(Showtime showtime, int row, int col, double PricePaid) {
         this.showtime = showtime;
         this.row = row;
         this.col = col;
-        this.pricepaid = pricepaid;
+        this.PricePaid = PricePaid;
     }
 
     public Showtime getShowtime() {
@@ -25,8 +25,8 @@ public class Ticket {
         return col;
     }
 
-    public double getPricepaid() {
-        return pricepaid;
+    public double getPricePaid() {
+        return PricePaid;
     }
     public String toString(){
         return "T"+
@@ -36,6 +36,6 @@ public class Ticket {
                 "C"+
                 col+
                 " @ BDT "+
-                String.format("%.2f",pricepaid);
+                String.format("%.2f",PricePaid);
     }
 }
