@@ -69,6 +69,9 @@ public class CheckoutEngine {
         // [2]
         double concessionSubtotal = cart.sumConcessionsRaw();
 
+        // [3]
+        double combo = 0.0;
+        if (cart.hasItem("SODA") && cart.hasItem("POP")) combo = 50.0;
 
     }
 }
