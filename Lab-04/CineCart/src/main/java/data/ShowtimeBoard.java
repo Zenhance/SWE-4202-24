@@ -8,9 +8,10 @@ public class ShowtimeBoard {
     private Showtime[] shows = new Showtime[MAX];
 
     public void add(Showtime s){
-
-
-
+        if (count <MAX ){
+            shows[count] =s ;
+            count++
+        }
     }
 
 
