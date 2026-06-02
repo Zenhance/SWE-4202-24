@@ -19,11 +19,12 @@ public class Cart {
         this.qtys = new int[MAX_ITEMS];
         this.itemCount = 0;
     }
-    public void addItem(ConcessionItem c, int qty){
-       if(itemCount<MAX_ITEMS && qty>0) {
-           qtys[itemCount] = qty;
-           itemCount++;
-       }
+    public void addItem(ConcessionItem c, int qty) {
+        if (itemCount < MAX_ITEMS && qty > 0) {
+            qtys[itemCount] = qty;
+            itemCount++;
+        }
+    }
        public Customer getOwner() {
             return owner;
         }
@@ -49,7 +50,20 @@ public class Cart {
            }
            return sum;
         }
-
+        public double sumConcessionsRaw(){
+        double sum = 0.0;
+        for(int i=0;i<itemCount;i++){
+            sum+=items[i].getUnitPrice()*qtys[i];
+        }
+        return sum;
+        }
+        public boolean hasItem(String code){
+        for(int i=0;i<itemCount;i++){
+            if(items[i].getCode().equals(code)){
+                return true;
+            }
+        }
+        return false;
         }
 
 }
