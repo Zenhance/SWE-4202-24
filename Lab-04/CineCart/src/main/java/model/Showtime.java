@@ -1,6 +1,7 @@
 package model;
 
 public class Showtime {
+    public int getId;
     private int id;
     private  Movie movie;
     private Hall hall;
