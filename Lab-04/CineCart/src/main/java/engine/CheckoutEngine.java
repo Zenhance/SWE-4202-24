@@ -66,4 +66,13 @@ public class CheckoutEngine {
 
         return Math.round(round * 100.0) / 100.0;
     }
+
+    public String getReceipt(Cart cart) {
+        return String.format("Receipt\n" +
+                "%s" +
+                "BDT" +
+                "Total" +
+                "Disount",
+                cart.getOwner().getName());
+    }
 }
