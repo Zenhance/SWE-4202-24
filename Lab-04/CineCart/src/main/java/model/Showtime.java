@@ -41,5 +41,6 @@ public class Showtime {
     public String toString(){
     return "[T"+movie.getId()+"]"+" "+movie+"@ Hall"+hall.getId()+"-"+startHour+"("+dateTag+")";
 
+
     }
     }

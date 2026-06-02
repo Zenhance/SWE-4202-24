@@ -23,10 +23,14 @@ public class Customer {
         return age;
     }
 
+    public String getLoyaltyTier() {
+        return loyaltyTier;
+    }
+
     public String getName() {
         return name;
     }
-    double getTierDiscount(){
+    public double getTierDiscount(){
         if(loyaltyTier.equals("GOLD"))
             return 0.15;
         else if(loyaltyTier.equals("Silver"))
@@ -34,6 +38,9 @@ public class Customer {
         else return 0.00;
     }
 
+    public String toString(){
+        return id+name+age+loyaltyTier;
+  }
 
 
 }
