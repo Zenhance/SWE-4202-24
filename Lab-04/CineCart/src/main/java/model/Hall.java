@@ -20,7 +20,7 @@ public class Hall {
                 '}';
     }
 
-    public Hall(int id, int rows, int cols, int premiumRows) {
+    public Hall (int id, int rows, int cols, int premiumRows) {
 
         this.id = id;
         this.rows = rows;
@@ -51,17 +51,17 @@ public class Hall {
     public Seat getSeat(int row, int col) {
         return grid[row][col];
     }
-}
-public int countAvailable() {
 
-    int count = 0;
-    for(int i = 0; i < row;i++) {
-        for (int j = 0; j < col; j++) {
-            if (grid[i][j].isAvailable()) {
-                count++;
+    public int countAvailable() {
+
+        int count = 0;
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                if (grid[i][j].isAvailable()) {
+                    count++;
+                }
             }
         }
+        return count;
     }
-return count;
-
 }
