@@ -32,7 +32,7 @@ public class Showtime {
         return startHour>=18 && startHour<=21;
     }
     public String toString(){
-        return "[T"+id+"]"+movie.getTitle()+"@ Hall "+hall.getId()+"-"+String .format("%02:00",startHour)+
+        return "[T"+id+"]"+movie.getTitle()+"@ Hall "+hall.getId()+"-"+String.format("startHour")+
                 "("+ dataTag+ ")";
     }
 
