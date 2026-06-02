@@ -36,8 +36,11 @@ public class Cart {
        public ConcessionItem[] getItems(){
            return items;
         }
-       public int getQtys(){
-
+       public int[] getQtys(){
+           return qtys;
         }
+       public int getItemCount() {
+       return itemCount;
+       }
 
 }
