@@ -17,4 +17,9 @@ public class CheckoutEngine {
     public String bookTicket(Cart cart, int showtimeId, int row, int col){
         return "OK";
     }
+
+    public String addConsession(Cart cart,String code, int qty){
+        return "OK";
+    }
+
 }
