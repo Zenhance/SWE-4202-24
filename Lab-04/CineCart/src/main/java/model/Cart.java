@@ -40,4 +40,26 @@ public class Cart {
     public int[] getQtys() {
         return qtys;
     }
+
+    public void addTicket(Ticket t){
+        if(ticketCount<MAX_TICKETS){
+            tickets[ticketCount]=t;
+            ticketCount++;
+        }
+    }
+    public void addItem(ConcessionItem c,int qty){
+        if(itemCount<MAX_ITEMS && qty>0){
+            items[itemCount]=c;
+            qtys[itemCount]=qty;
+            itemCount++;
+        }
+
+    }
+    public double sumTicketsPaid(){
+        double sum=0;
+        for(int i=0;i<ticketCount; i++){
+            sum+=tickets[i].getPricePaid();
+            return sum;
+        }
+    }
 }
