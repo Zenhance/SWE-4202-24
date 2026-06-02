@@ -88,7 +88,17 @@ public class CheckoutEngine {
 
         double afterDiscounts = preDiscount - group - tier;
 
+        return combo;
 
+
+
+
+    }
+    public String getReceipt(Cart cart){
+
+        String receipt = "";
+
+        return receipt;
 
 
     }
