@@ -26,7 +26,7 @@ public class Seat {
 
     public int getCol() {
 
-        return col;
+        return this.col;
     }
 
     public void book() {
