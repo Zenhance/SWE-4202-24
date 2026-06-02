@@ -48,5 +48,14 @@ public class CheckoutEngine {
     return "OK";
     }
 
+    double checkout(Cart cart){
+        double ticketSubtotal = cart.sumTicketsPaid();
+        double concessionSubtotal = cart.sumConcessionsRaw();
+        double combo;
+        if(cart.hasItem("POP") && cart.hasItem("SODA"))
+            combo = 50.0;
+        else combo = 0.0;
+
+    }
 
 }
