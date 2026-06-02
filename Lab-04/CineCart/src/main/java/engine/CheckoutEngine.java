@@ -29,8 +29,12 @@ public class CheckoutEngine {
         // [2]
         Movie movie = showtime.getMovie();
         if (cart.getOwner().getAge() < movie.getMinAge()) {
-            return String.format("Underage for rating <%s> ",movie.getRating());
+            return String.format("Underage for rating <%s> ", movie.getRating());
         }
+
+        // [3]
+        Seat seat = showtime.getHall().getSeat(row, col);
+        if (seat.isBooked()) return "Seat unavailable";
 
     }
 }
