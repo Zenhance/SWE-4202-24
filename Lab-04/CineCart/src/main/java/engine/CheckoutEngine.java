@@ -32,5 +32,9 @@ public class CheckoutEngine {
         if(seat.isBooked()){
             return "Seat Unavailable";
         }
+        double price = showtime.getMovie().getBasePrice();
+        if(seat.isPremium()){
+
+        }
     }
 }
