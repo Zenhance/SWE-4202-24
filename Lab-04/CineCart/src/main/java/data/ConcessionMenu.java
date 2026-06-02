@@ -4,22 +4,23 @@ package data;
 import model.ConcessionItem;
 
 public class ConcessionMenu {
-    private ConcessionItem[] items;
     private int count;
     private static final int MAX = 30;
+    private ConcessionItem[] items = new ConcessionItem[MAX];
 
     public void add(ConcessionItem c){
         if (count < MAX){
             items[count] = c;
+            count++;
         }
     }
 
     public ConcessionItem findByCode(String code){
         ConcessionItem res = null;
 
-        for (ConcessionItem c : items){
-            if(code.equals(c.getCode())){
-                res = c;
+        for (int i = 0; i < count; i++){
+            if(code.equals(items[i].getCode())){
+                res = items[i];
                 break;
             }
         }

@@ -68,7 +68,7 @@ public class CheckoutEngine {
         double combo = 0.0;
 
         boolean pop = cart.hasItem("POP");
-        boolean soda = cart.hasItem("soda");
+        boolean soda = cart.hasItem("SODA");
 
         if (pop && soda){
             combo = 50.0;
@@ -85,7 +85,6 @@ public class CheckoutEngine {
         double afterDiscounts = preDiscount - group - tier;
 
         double tax = 0.05*afterDiscounts;
-
 
         return new BigDecimal(Double.toString(afterDiscounts+tax)).setScale(2, RoundingMode.HALF_UP).doubleValue();
     }
