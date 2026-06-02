@@ -26,11 +26,17 @@ public Hall(int id, int rows, int cols, int premiumRows){
 
 public Seat getSeat(int row,int col){
     return grid[row][col];
-
 }
 
 
 public int countAvailable(){
+    int count=0;
+    for(int i=0;i<rows;i++){
+        for(int j=0;j<cols;j++){
+
+            if(grid)
+        }
+    }
 
 
 
