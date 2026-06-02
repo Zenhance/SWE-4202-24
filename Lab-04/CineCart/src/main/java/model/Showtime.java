@@ -8,7 +8,7 @@ public class Showtime {
     private int startHour;
     private String dateTag;
 
-    Showtime(int id,Movie movie,Hall hall,int startHour,String dataTag){
+   public Showtime(int id,Movie movie,Hall hall,int startHour,String dataTag){
 
 
         this.id = id;
@@ -19,6 +19,23 @@ public class Showtime {
 
 
     }
+
+    public int getId() {
+        return id;
+    }
+    public Hall getHall() {
+    return hall;
+    public Movie getMovie() {
+        return movie;
+    }
+    public String getDateTag() {
+        return dateTag;
+    }
+
+    public int getStartHour() {
+        return startHour;
+    }
+
 
     boolean isPeak() {
         if(startHour >= 18 && startHour <= 21){
