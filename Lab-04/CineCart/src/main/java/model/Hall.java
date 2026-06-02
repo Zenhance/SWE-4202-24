@@ -10,6 +10,14 @@ public class Hall {
         this.id = id;
         this.rows = rows;
         this.cols = cols;
+        this.grid = new Seat[rows][cols];
+        for(int r = 0; r < rows; r++){
+            for(int c = 0; c < cols; c++){
+                boolean isPremium = (r < premiumRows);
+                grid[r][c] = new Seat(r, c, isPremium);
+            }
+        }
+    }
 
     }
 
