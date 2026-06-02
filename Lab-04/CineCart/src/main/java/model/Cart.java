@@ -7,7 +7,7 @@ public class Cart {
 
     private final Customer owner;
     private final Ticket[] tickets;
-    private final int ticketCount;
+    private int ticketCount;
     private final ConcessionItem[] items;
     private final int[] qtys;
     private final int itemCount;
