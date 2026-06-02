@@ -14,7 +14,7 @@ public class CheckoutEngine {
 
     public String bookTicket(Cart cart, int showtimeId, int row, int col){
         Showtime showtime=board.findById(showtimeId);
-        if(showtime==null){
+        if(showtime.equals(null)){
             return "Showtime not found";
         }
         if(cart.getOwner().getAge()<showtime.getMovie().getMinAge()){
@@ -40,7 +40,7 @@ public class CheckoutEngine {
 
     public String addConcession(Cart cart,String code,int qty){
         ConcessionItem item=menu.findByCode(code);
-        if(item==null){
+        if(item.equals(null)){
             return "Item not found";
         }
         if(qty<=0){
@@ -65,23 +65,23 @@ public class CheckoutEngine {
         }
         double tier=cart.getOwner().getTierDiscount()*preDiscount;
         double afterDiscounts= preDiscount-group-tier;
-        double tax = 0.0*afterDiscounts;
+        double tax = 0.05*afterDiscounts;
         double total=afterDiscounts+tax;
         return Math.round(total*100.0)/100.0;
     }
     public String getReceipt(Cart cart){
         double total=checkout(cart);
         String receipt="Receipt";
-        receipt+="Customer: " + cart.getOwner().getName() +"\n";
-        receipt+="\nTickets:\n";
+        receipt+="Customer: " + cart.getOwner().getName()+"\n";
+        receipt+="Tickets: ";
         for(int i=0;i<cart.getTicketCount();i++){
-            receipt+=cart.getTickets()[i]+"\n";
+            receipt+=cart.getTickets()[i];
         }
-        receipt+="\nConcessions:\n";
+        receipt+="Concessions: ";
         for(int i=0;i<cart.getItemCount();i++){
-            receipt+=cart.getItems()[i].getName() + "x" + cart.getQtys()[i] + "\n";
+            receipt+=cart.getItems()[i].getName() + "x" + cart.getQtys()[i];
         }
-        receipt+="\nDiscount Applied:\n";
+        receipt+="Discount Applied: ";
         receipt+="Total: BDT " + String.format("%.2f",total);
         return receipt;
     }
