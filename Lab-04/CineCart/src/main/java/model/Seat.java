@@ -39,11 +39,12 @@ public class Seat {
 
     public boolean isAvailable(){
         if (isBooked) return false;
-        if (!isBooked) return true;
+        return true;
+
     }
 
     public String toString(){
-        String string = new String.format("R%dC%d",row,col);
+        String string = String.format("R%dC%d",row,col);
         if (isPremium) string = string + "*";
         if (isBooked) string = string + "#";
         return string;
