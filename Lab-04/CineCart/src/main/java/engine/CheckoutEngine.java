@@ -86,7 +86,8 @@ public class CheckoutEngine {
 
         double tax = 0.05*afterDiscounts;
 
-        return new BigDecimal(Double.toString(afterDiscounts+tax)).setScale(2, RoundingMode.HALF_UP).doubleValue();
+        double res = Math.round((afterDiscounts+tax) * 100) / 100.0;
+        return res;
     }
 
     public String getReceipt(Cart cart){
