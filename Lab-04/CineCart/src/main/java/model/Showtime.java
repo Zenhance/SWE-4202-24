@@ -5,14 +5,14 @@ public class Showtime {
     Movie movie;
     Hall hall;
     int starHour;
-    String dataTag;
+    String dateTag;
 
-    public Showtime(int id, Movie movie, Hall hall, int starHour, String dataTag){
+    public Showtime(int id, Movie movie, Hall hall, int starHour, String dateTag){
         this.id=id;
         this.movie=movie;
         this.hall=hall;
         this.starHour=starHour;
-        this.dataTag=dataTag;
+        this.dateTag=dateTag;
     }
     public int getId(){
         return id;
@@ -26,9 +26,18 @@ public class Showtime {
     public int getStarHour(){
         return starHour;
     }
-    public String getDataTag(){
-        return dataTag;
+    public String getDateTag(){
+        return dateTag;
     }
 
+    public boolean isPeak(){
+      if(starHour>=18&&starHour<=21){
+          return true;
+      }
+      return false;
+   }
 
+   public String toString(){
+        return "[T"+id+"] "+movie+" @ Hall "+hall+" - "+starHour+":00 ("+dateTag+")";
+   }
 }
