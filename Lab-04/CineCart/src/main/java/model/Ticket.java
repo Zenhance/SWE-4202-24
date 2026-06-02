@@ -34,7 +34,7 @@ public double getPricePaid(){
 
 public String toString(){
 
-    String res=String.format("T%d - R%dC%d @ BDT %.2f",showtime.getID(),row,col,pricePaid);
+    String res=String.format("T%d - R%dC%d @ BDT %.2f",showtime.getId(),row,col,pricePaid);
    return res;
 }  }
 

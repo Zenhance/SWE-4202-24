@@ -47,7 +47,7 @@ public boolean isPeak(){
 
 public String toString(){
 
-        String res=String.format("[T%d] %s @ Hall %d - %d:00 (%s)",id,movie.getTitle(),hall.getID(),startHour,dateTag);
+        String res=String.format("[T%d] %s @ Hall %d - %d:00 (%s)",id,movie.getTitle(),hall.getId(),startHour,dateTag);
 
         return res;
     }
