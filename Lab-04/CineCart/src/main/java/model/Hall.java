@@ -19,7 +19,7 @@ public class Hall {
             }
         }
     }
-    Seat getSeat(int row,int col){
+    public Seat getSeat(int row,int col){
         return grid[row][col];
     }
     int countAvailable(){
