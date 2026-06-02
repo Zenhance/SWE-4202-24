@@ -22,6 +22,7 @@ public class Cart {
     public void addItem(ConcessionItem c, int qty) {
         if (itemCount < MAX_ITEMS && qty > 0) {
             qtys[itemCount] = qty;
+            items[itemCount]=c;
             itemCount++;
         }
     }
@@ -60,13 +61,14 @@ public class Cart {
         public double sumConcessionsRaw(){
         double sum = 0.0;
         for(int i=0;i<itemCount;i++){
-            sum+=items[i].getUnitPrice()*qtys[i];
+            if(items[i]!=null){
+            sum+=items[i].getUnitPrice()*qtys[i];}
         }
         return sum;
         }
         public boolean hasItem(String code){
         for(int i=0;i<itemCount;i++){
-            if(items[i].getCode().equals(code)){
+            if(items[i]!=null&&items[i].getCode().equals(code)){
                 return true;
             }
         }
