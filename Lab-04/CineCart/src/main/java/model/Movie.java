@@ -15,8 +15,8 @@ public Movie(){
     this.id=id;
     this.title=title;
     this.rating=rating;
-    this durationMin=durationMin;
-    this basePrice=basePrice;
+    this.durationMin=durationMin;
+    this.basePrice=basePrice;
 }
 
 public int getId(){
@@ -41,20 +41,20 @@ public double getBasePrice(){
 
 public int getMinAge(){
     int ret=0;
-    if rating=="G"{
+    if (rating=="G"){
         ret = 0;
     }
 
-    if rating=="PG"{
+    if (rating=="PG"){
         ret = 7;
     }
 
-    if rating=="PG-13"{
-        ret 13;
+    if (rating=="PG-13"){
+        ret = 13;
     }
 
-    if rating=="R"{
-        ret 18;
+    if (rating=="R"){
+        ret = 18;
       }
 
     return ret;

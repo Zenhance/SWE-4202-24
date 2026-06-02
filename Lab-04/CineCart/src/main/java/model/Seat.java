@@ -33,7 +33,7 @@ public boolean getIsBooked(){
 }
 
 public void book(){
-  isBooked=true
+  isBooked=true;
 }
 
 public void release(){
