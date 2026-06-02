@@ -9,6 +9,7 @@ import model.Seat;
 import model.Customer;
 import model.Hall;
 import model.Movie;
+import model.Cart;
 
 public class CheckoutEngine {
     private ShowtimeBoard board;
@@ -25,6 +26,11 @@ public class CheckoutEngine {
         Showtime showtime = board.findById(showtimeId);
         if (showtime == null) return "Showtime not found";
 
+        // [2]
+        Movie movie = showtime.getMovie();
+        if (cart.getOwner().getAge() < movie.getMinAge()) {
+            return String.format("Underage for rating <%s> ",movie.getRating());
+        }
 
     }
 }
