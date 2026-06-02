@@ -80,7 +80,9 @@ public double sumConcessionRaw(){
 public boolean hasItem(String code){
     boolean found = false;
     for(int i=0;i<itemCount;i++){
-        if(code)
+        if(code.equals(items[i].getCode())){
+            found = true;
+            break;
     }
 }
 }
