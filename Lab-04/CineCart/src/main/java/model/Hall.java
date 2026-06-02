@@ -34,7 +34,8 @@ public int countAvailable(){
     for(int i=0;i<rows;i++){
         for(int j=0;j<cols;j++){
             if(grid[i][j].isAvailable()) count++;
-        } return count;
+        } }
+        return count;
     }
 
 public int getId(){
@@ -46,11 +47,14 @@ public int getRows(){
 public int getCols(){
         return cols;
     }
+public Seat[][] getGrid(){
+        return grid;
+    }
 
-
-}
 
 public void displayLayout(){
+    for(int i=0;i<rows;i++){
+        for(int j=0;j<cols;j++){
 
 
 }
