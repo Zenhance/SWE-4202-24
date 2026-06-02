@@ -13,7 +13,7 @@ public class Cart {
 
     public Cart(Customer owner){
         this.tickets = new Ticket[MAX_TICKETS];
-        this.items = new Item[MAX_ITEMS];
+        this.items = new Items[MAX_ITEMS];
         this.owner = owner;
         ticketCount = 0;
         itemCount = 0;
@@ -29,7 +29,7 @@ public class Cart {
 
     void addItem(ConcessionItem c, int qty){
         if(itemCount == MAX_ITEMS) return;
-        if(qtys<=0) return;
+
 
         items[itemCount] = c;
         qtys[itemCount++] = qty;
