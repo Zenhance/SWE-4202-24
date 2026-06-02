@@ -25,16 +25,50 @@ public class Cart {
         tickets [ticketCount]=t;
         ticketCount++;
     }
-    public void addItem (ConcessionItem c, int qty)
-    {
-        items [itemCount] =c;
-        qtys [itemCount] = qty;
+    public void addItem (ConcessionItem c, int qty) {
+        items[itemCount] = c;
+        qtys[itemCount] = qty;
         itemCount++;
-        if (itemCount == MAX_ITEMS || qty<=0)
-        {
+        if (itemCount == MAX_ITEMS || qty <= 0) {
             return;
         }
-
-
     }
+      public Customer getOwner ()
+        {
+            return owner;
+        }
+    public Ticket[] getTickets() {return tickets;}
+    public int getTicketCount() {return ticketCount;}
+    public ConcessionItem[] getItems(){return items;}
+
+    public int[] getQtys() {return qtys;}
+    public int getItemCount() {return itemCount;}
+
+    public double sumTicketsPaid() {
+        double sum = 0;
+        for(int i = 0; i < MAX_TICKETS; i++){
+            sum += tickets[i].getPricePaid();
+        }
+        return sum;
+    }
+
+    public double sumConcessionRaw() {
+        double sum = 0;
+        for(int i = 0; i < MAX_ITEMS; i++){
+            sum += qtys[i]*items[i].getUnitPrice();
+        }
+        return sum;
+    }
+
+    public boolean hasItem(String code) {
+        for(int i = 0; i < MAX_ITEMS; i++){
+            if(items[i].getCode().equals(code)){
+                return true;
+            }
+
+        }
+        return false;
+    }
+
+
 }
