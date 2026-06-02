@@ -19,4 +19,11 @@ public class Cart {
         this.ticketCount = 0;
         this.itemCount = 0;
     }
+
+    void addTicket(Ticket t) {
+        if (ticketCount < MAX_TICKETS) {
+            tickets[ticketCount] = t;
+            ticketCount++;
+        }
+    }
 }
