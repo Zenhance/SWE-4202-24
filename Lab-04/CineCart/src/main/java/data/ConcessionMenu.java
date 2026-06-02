@@ -19,7 +19,7 @@ public class ConcessionMenu {
     }
     public void displayAll(){
         for(int i=0;i<count;i++){
-            items[i].toString();
+            System.out.println(items[i].toString());
         }
     }
 }
