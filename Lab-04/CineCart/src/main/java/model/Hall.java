@@ -48,4 +48,15 @@ public class Hall {
         }
             return count;
     }
+
+    public void displayLayout() {
+        for(int r=0;r<rows;r++) {
+            for(int c=0;c<cols;c++) {
+                Seat s= grid[r][c];
+                if(s.isBooked()) {
+                    System.out.println(" * ");
+                }
+            }
+        }
+    }
 }
