@@ -13,19 +13,19 @@ public class Movie {
         this.durationMin=durationMin;
         this.basePrice=basePrice;
     }
-    public int getid(){
+    public int getId(){
         return id;
     }
-    public String gettitle(){
+    public String getTitle(){
         return title;
     }
-    public String getrating(){
+    public String getRating(){
         return rating;
     }
-    public int getdurationMin(){
+    public int getDurationMin(){
         return durationMin;
     }
-    public double getbasePrice(){
+    public double getBasePrice(){
         return basePrice;
     }
     public int getMinAge(){
@@ -43,7 +43,7 @@ public class Movie {
         }
     }
     public String toString(){
-        return title+" ("+getMinAge()+") "+durationMin+
-                "min - BDT"+basePrice;
+        return title+" ("+rating+")"+durationMin+"min - BDT"+String.format(".2f",basePrice);
+
     }
 }
