@@ -33,6 +33,10 @@ public class CheckoutEngine {
                 (seat.isPremium() ? 1.30 : 1.00) *
                 (showtime.isPeak() ? 1.20 : 1.00);
 
-        return null;
+        seat.book();
+        Ticket ticket = new Ticket(showtime, row, col, price);
+        cart.addTicket(ticket);
+
+        return "OK";
     }
 }
