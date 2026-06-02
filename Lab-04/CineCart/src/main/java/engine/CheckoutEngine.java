@@ -130,5 +130,7 @@ public class CheckoutEngine {
         } else {
             group = 0.0;
         }
+
+        double tier = cart.getOwner().getTierDiscount() * preDiscount;
     }
 }
