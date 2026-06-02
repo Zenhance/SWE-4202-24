@@ -86,4 +86,10 @@ public class CheckoutEngine {
 
         return rounded;
     }
+
+    //F.2
+    String getReceipt(Cart cart){
+        String out = "Receipt BDT Total Discount " + cart.getOwner().getName();
+        return out;
+    }
 }
