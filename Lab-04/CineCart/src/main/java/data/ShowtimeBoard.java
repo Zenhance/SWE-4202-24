@@ -18,4 +18,13 @@ public class ShowtimeBoard {
             count++;
         }
     }
+
+    public Showtime findById(int id) {
+        for (Showtime s : shows) {
+            if (s != null) {
+                if (id == s.getId()) return s;
+            }
+        }
+        return null;
+    }
 }
