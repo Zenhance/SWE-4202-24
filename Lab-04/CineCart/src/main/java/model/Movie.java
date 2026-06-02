@@ -30,12 +30,12 @@ public class Movie {
     }
 
     public int getMinAge(){
-        if(this.title =="G")return 0;
-        else if(this.title =="PG")return 7;
-        else if(this.title =="PG-13")return 13;
-        else if(this.title=="R")return 18;
+        if(rating.equals("G"))return 0;
+        else if(rating.equals("PG"))return 7;
+        else if(rating.equals("PG-13"))return 13;
+        else if(rating.equals("18"))return 18;
     }
     public String toString(){
-        return "Inception "+"("+"PG-13"+") "+this.durationMin+" -BDT "+String.format(.02%f,this.basePrice);
+        return "Inception "+"("+"PG-13"+") "+this.durationMin+" -BDT "+String.format(".02%f",this.basePrice);
     }
 }
