@@ -13,7 +13,7 @@ public class Ticket {
         this.pricePaid=pricePaid;
     }
 
-    public Showtime showtime(){
+    public Showtime getShowtime(){
         return showtime;
     }
     public int getRow(){
@@ -27,7 +27,7 @@ public class Ticket {
     }
 
     public String toString(){
-        return String.format("[T%d] - R%dC%d @ BDT %lf",showtime.getId(),row,col,pricePaid);
+        return String.format("[T%d] - R%dC%d @ BDT %.2f",showtime.getId(),row,col,pricePaid);
     }
 
 }
