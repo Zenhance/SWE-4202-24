@@ -41,7 +41,7 @@ public class CheckoutEngine {
         return "OK";
     }
 
-    double discount;
+    private double discount;
 
     public double checkout(Cart cart){
         double ticketSubtotal = cart.sumTicketsPaid();
@@ -62,7 +62,7 @@ public class CheckoutEngine {
 
         double tax = 0.05 * afterDiscounts;
 
-        return Math.round(afterDiscounts+tax);
+        return Math.round((afterDiscounts+tax)*100.0)/100.0;
     }
 
     public String getReceipt(Cart cart){
