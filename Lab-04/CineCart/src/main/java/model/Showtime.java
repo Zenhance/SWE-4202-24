@@ -43,6 +43,7 @@ public class Showtime {
             return false;
     }
 
+
     public String toString() {
         return String.format("[%d] movie @ Hall hall - %d (%s)",id,startHour,dateTag);
     }
