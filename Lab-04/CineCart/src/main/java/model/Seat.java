@@ -11,7 +11,7 @@ public class Seat {
 
         this.row = row;
         this.col = col;
-        this.isBooked = isBooked;
+        this.isBooked = false;
         this.isPremium;
 
 
@@ -19,23 +19,26 @@ public class Seat {
 
     //methods
     //getters
-    public int getRow(int row) {
-        return row;
+    public int getRow() {
+
+        return this.row;
     }
 
-    public int getCol(int col) {
+    public int getCol() {
+
         return col;
     }
 
-    public void book(boolean isBooked) {
-        isBooked = true;
+    public void book() {
+
+        this.isBooked = true;
     }
 
     public void release(boolean isBooked) {
         isBooked = false;
     }
 
-    public String toString(int row, int col) {
+    public String toString() {
         System.out.println("R" + row + "C" + col);
 
         if (isPremium = true)
