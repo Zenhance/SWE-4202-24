@@ -18,4 +18,12 @@ public class Cart {
         itemCount = 0;
         qtys = new int[MAX_ITEMS];
     }
+
+    public void addTicket(Ticket t){
+        if(ticketCount<MAX_TICKETS)
+            tickets[ticketCount] = t;
+        ticketCount++;
+    }
+
+
 }
