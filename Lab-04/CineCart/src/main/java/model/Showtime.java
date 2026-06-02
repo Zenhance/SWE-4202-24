@@ -37,7 +37,7 @@ public class Showtime {
     }
 
 
-    public boolean isPeak(int startHour){
+    public boolean isPeak(){
         if(startHour>=18 && startHour<=21){
             return true;
         }else{
