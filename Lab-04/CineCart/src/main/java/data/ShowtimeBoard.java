@@ -1,7 +1,5 @@
 package data;
 
-import model.ConcessionItem;
-import model.ConcessionMenu;
 import model.Showtime;
 public class ShowtimeBoard {
     private static final int MAX=30;

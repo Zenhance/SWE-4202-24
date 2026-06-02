@@ -33,11 +33,12 @@ public class CheckoutEngine {
             double price = 1.00*(showtime.isPeak() ? 1.20 : 1.00);
         }
         seat.book();
-        Ticket ticket=new Ticket(showtime,row,col, double price) ;
+        Ticket ticket=new Ticket(showtime,row,col, double price);
+
         cart.addTicket(ticket);
         return "OK";
-        public String addConcession(Cart cart,String String code;
-        code,int qty) {
+        String code;
+        public String addConcession(Cart cart,code,int qty) {
             ConcessionItem item = menu.findByCode(code);
             if (item==null) {
                 return "Item not found";
