@@ -3,10 +3,12 @@ package data;
 import model.Showtime;
 
 public class ShowtimeBoard {
-    public void add(Showtime showtime) {
-        int id;
-        int movieId;
-        int hallId;
-        int startHour;
+    private Showtime[] shows;
+    private int count;
+    private static final int MAX = 30;
+
+    public ShowtimeBoard(Showtime[] shows, int count) {
+        this.shows = new Showtime[MAX];
+        this.count = 0;
     }
 }
