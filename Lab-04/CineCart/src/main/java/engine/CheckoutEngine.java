@@ -75,6 +75,9 @@ public class CheckoutEngine {
             String receipt="";
             receipt+="Receipt\n";
             receipt+="Customer: "+cart.getOwner().getName()+"\n";
+            receipt+="Discount Applied\n";
+            receipt+="Total: BDT"+String.format("%.2f",total)+"\n";
+            return receipt;
 
         }
     }
