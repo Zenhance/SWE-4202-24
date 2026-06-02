@@ -41,4 +41,9 @@ public class Showtime {
         return false;
     }
 
+    @Override
+    public String toString() {
+        String string = String.format("[T%d] %s @ Hall %d - %d.00 (%s)",id,getMovie().getId(),getHall().getId(),startHour,dateTag);
+        return super.toString();
+    }
 }
