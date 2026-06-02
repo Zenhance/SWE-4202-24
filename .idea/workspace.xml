@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="constructor">
+    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="signature">
       <change beforePath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/engine/CheckoutEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/engine/CheckoutEngine.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -126,38 +126,6 @@
       <workItem from="1778092688155" duration="94000" />
       <workItem from="1778092809585" duration="6679000" />
       <workItem from="1778163384097" duration="3333000" />
-    </task>
-    <task id="LOCAL-00012" summary="completing part c">
-      <option name="closed" value="true" />
-      <created>1777480327298</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1777480327298</updated>
-    </task>
-    <task id="LOCAL-00013" summary="amending part c">
-      <option name="closed" value="true" />
-      <created>1777480628308</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1777480628308</updated>
-    </task>
-    <task id="LOCAL-00014" summary="amending main">
-      <option name="closed" value="true" />
-      <created>1777480986236</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1777480986236</updated>
-    </task>
-    <task id="LOCAL-00015" summary="creating classes">
-      <option name="closed" value="true" />
-      <created>1777577940699</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1777577940700</updated>
     </task>
     <task id="LOCAL-00016" summary="creating classes">
       <option name="closed" value="true" />
@@ -519,7 +487,39 @@
       <option name="project" value="LOCAL" />
       <updated>1780399703097</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="signature">
+      <option name="closed" value="true" />
+      <created>1780399946915</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1780399946915</updated>
+    </task>
+    <task id="LOCAL-00062" summary="signature">
+      <option name="closed" value="true" />
+      <created>1780400000769</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1780400000769</updated>
+    </task>
+    <task id="LOCAL-00063" summary="signature">
+      <option name="closed" value="true" />
+      <created>1780400136323</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1780400136323</updated>
+    </task>
+    <task id="LOCAL-00064" summary="signature">
+      <option name="closed" value="true" />
+      <created>1780400189019</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1780400189019</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -549,7 +549,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="passenger class completion" />
     <MESSAGE value="writing trip class" />
     <MESSAGE value="writing trip class methods" />
     <MESSAGE value=" trip class methods fix" />
@@ -574,6 +573,7 @@
     <MESSAGE value="writing the skeleton of checkout engine to prevent compilation error" />
     <MESSAGE value="writing the skeleton of checkout engine to prevent compilation error 2" />
     <MESSAGE value="constructor" />
-    <option name="LAST_COMMIT_MESSAGE" value="constructor" />
+    <MESSAGE value="signature" />
+    <option name="LAST_COMMIT_MESSAGE" value="signature" />
   </component>
 </project>
