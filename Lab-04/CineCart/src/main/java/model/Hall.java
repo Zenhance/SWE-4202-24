@@ -10,12 +10,25 @@ public class Hall {
         this.id = id;
         this.rows = rows;
         this.cols = cols;
+        this.grid = new Seat[rows][cols];
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
                 grid[i][j] = new Seat(i, j, i < premiumRows);
 
             }
         }
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public int getRows() {
+        return rows;
+    }
+
+    public int getCols() {
+        return cols;
     }
 
     public Seat getSeat(int row, int col) {
@@ -30,6 +43,17 @@ public class Hall {
             }
         }
         return count;
+    }
+    public void displayLayout() {
+        for (int r = 0; r < rows; r++) {
+            for (int c = 0; c < cols; c++) {
+                Seat s = grid[r][c];
+                if (!s.isAvailable())   System.out.print('#');
+                else if (s.isPremium()) System.out.print('*');
+                else                    System.out.print('.');
+            }
+            System.out.println();
+        }
     }
 
 
