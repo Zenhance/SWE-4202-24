@@ -11,31 +11,43 @@ public class CheckoutEngine {
     private ShowtimeBoard board;
     private ConcessionMenu menu;
 
-    public CheckoutEngine( ShowtimeBoard board, ConcessionMenu menu){
+    public CheckoutEngine(ShowtimeBoard board, ConcessionMenu menu) {
         this.board = board;
         this.menu = menu;
     }
-     public  String bookTicket(Cart cart, int showtimeId, int row, int col) {
-         Showtime show = board.findById(showtimeId);
-         if (show == null) {
-             return " Showtime not found";
-         }
 
-         Seat seat = show.getHall().getSeat(row, col);
-         if (!seat.isAvailable()) {
-             return "Seat unavailable";
-         }
+    public String bookTicket(Cart cart, int showtimeId, int row, int col) {
+        Showtime show = board.findById(showtimeId);
+        if (show == null) {
+            return " Showtime not found";
+        }
 
-         double price = show.getMovie().getBasePrice();
-         if (seat.isPremium()) {
-             price *= 1.30;
-         }
-         if (show.isPeak()) {
-             price *= 1.20;
-         }
+        Seat seat = show.getHall().getSeat(row, col);
+        if (!seat.isAvailable()) {
+            return "Seat unavailable";
+        }
 
-         Ticket ticket = new Ticket(show, row, col, price);
-     }
+        double price = show.getMovie().getBasePrice();
+        if (seat.isPremium()) {
+            price *= 1.30;
+        }
+        if (show.isPeak()) {
+            price *= 1.20;
+        }
+        return "";
+    }
+    public String addConcession(Cart cart, String code, int qty ){
+    return "OK";
+    }
+    public double checkout(Cart cart){
+        return 0.0;
+    }
+    public String getReceipt(Cart cart){
+        return "";
+    }
+}
+
+
 
 
 

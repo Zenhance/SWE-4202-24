@@ -35,5 +35,6 @@ public Ticket( Showtime showtime, int row, int col, double pricePaid){
         ticket = "T" + showtime.getId() +
                 " -R" + row + "C" + col +
                 "@ BDT" + String.format(" %.2f", pricePaid);
+        return ticket;
     }
 }
