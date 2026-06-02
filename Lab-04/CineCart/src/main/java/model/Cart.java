@@ -42,7 +42,7 @@ public class Cart {
 
     public double sumTicketsPaid() {
         double sum = 0;
-        for (int i = 0; i < ticketCount; i++)
+        for (int i = 0; i < ticketCount; i++){
             sum += tickets[i].getPricePaid();
         return sum;
     }
