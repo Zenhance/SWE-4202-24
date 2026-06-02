@@ -2,10 +2,7 @@ package engine;
 
 import data.ConcessionMenu;
 import data.ShowtimeBoard;
-import model.Cart;
-import model.Seat;
-import model.Showtime;
-import model.Ticket;
+import model.*;
 
 public class CheckoutEngine {
     private ShowtimeBoard board;
@@ -34,5 +31,11 @@ public class CheckoutEngine {
         Ticket ticket=new Ticket(showtime,row,col,price);
         cart.addTicket(ticket);
         return "OK";
+    }
+    public String addConcession(Cart cart,String code,int qty){
+        ConcessionItem item=menu.findByCode(code);
+        if(item== null){
+            return "Item not found";
+        }
     }
 }
