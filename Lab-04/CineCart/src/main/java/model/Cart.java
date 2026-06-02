@@ -20,12 +20,14 @@ public class Cart {
         this.itemCount = 0;
     }
     public void addItem(ConcessionItem c, int qty){
-       if(itemCount<MAX_ITEMS && qty>0){
+       if(itemCount<MAX_ITEMS && qty>0) {
            qtys[itemCount] = qty;
-           itemCount++
-    }
-       public Customer getOwner(){
-           return owner;
-
-
+           itemCount++;
+       }
+       public Customer getOwner() {
+            return owner;
+        }
+       public Ticket[] getTicket{
+           return tickets;
+        }
 }
