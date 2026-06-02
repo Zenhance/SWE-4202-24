@@ -74,8 +74,13 @@ public double sumConcessionRaw(){
     double sum=0.0;
     for(int i = 0;i< itemCount;i++){
         sum += tickets[i].getUnitPrice()* qtys[i];
+    } return sum;
+}
+
+public boolean hasItem(String code){
+    boolean found = false;
+    for(int i=0;i<itemCount;i++){
+        if(code)
     }
-
-
-
+}
 }
