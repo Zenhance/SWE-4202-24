@@ -4,11 +4,11 @@ public class Cart {
     public static final int MAX_TICKETS = 20;
     public static final int MAX_ITEMS = 20;
 
-    private Customer owner;
-    private  Ticket[] tickets;
-    private  int ticketCount;
-    private  ConcessionItem[] items;
-    private  int[] qtys = new int[MAX_ITEMS];
+    private final Customer owner;
+    private final Ticket[] tickets;
+    private int ticketCount;
+    private  final ConcessionItem[] items;
+    private final  int[] qtys = new int[MAX_ITEMS];
     private  int itemCount;
 
     public Cart(Customer owner){
