@@ -50,5 +50,11 @@ public class Seat {
         return string;
     }
 
+
+
+    public void setPremium(boolean premium) {
+        this.premium = premium;
+    }
+
 }
 
