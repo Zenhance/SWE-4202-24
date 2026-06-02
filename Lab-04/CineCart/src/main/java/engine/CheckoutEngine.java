@@ -34,4 +34,13 @@ public class CheckoutEngine {
 
         return "OK";
     }
+
+    public String addConcession(Cart cart, String code, int qty) {
+        if (menu.findByCode(code) == null) return "Item not found";
+        if (qty <= 0) return "Invalid quantity";
+
+        cart.addItem(menu.findByCode(code), qty);
+
+        return "OK";
+    }
 }
