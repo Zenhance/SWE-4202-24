@@ -97,4 +97,10 @@ public class CheckoutEngine {
     private double round2(double value) {
         return Math.round(value * 100.0) / 100.0;
     }
+
+    // F.2 checkout
+    public String getReceipt(Cart cart) {
+    }
+
+
 }
