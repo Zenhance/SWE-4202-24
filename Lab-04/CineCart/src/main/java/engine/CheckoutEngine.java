@@ -71,7 +71,9 @@ public class CheckoutEngine {
         double combo = (soda && pop) ? 50.0 : 0.0;
 
         double preDiscount = ticketSubtotal + concessionSubtotal - combo;
-        double group = 0.10 * preDiscount;
+
+        double group = (cart.getTicketCount() >= 4) ? 0.10 * preDiscount : 0;
+
         double tier = cart.getOwner().getTierDiscount() * preDiscount;
         double afterDiscounts = preDiscount - group - tier;
         double tax = 0.05 * afterDiscounts;
