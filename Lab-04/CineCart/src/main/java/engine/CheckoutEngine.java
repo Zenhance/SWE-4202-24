@@ -27,10 +27,28 @@ public class CheckoutEngine {
 
 
 }
-      Seat seat =showtime.getHall().getSeat(row,col);
+      Seat seat =Showtime.getHall().getSeat(row,col);
 
- if(!seat. isAvailable())
+ if(!seat.isAvailable())
 
     {
         return "Seat unavailable";
     }
+ double price=movie.getBasePrice(){
+ if(seat.isPremium()){
+     price=price*1.30;
+ }
+  if(showtime.isPeak()){
+      price=price*1.20;
+  }
+  seat.book();
+  Ticket ticket=new Ticket(Showtime,row,col,price);
+  Cart.addTicket(ticket);
+
+
+}
+ public String addConcession(Cart cart,String code,int qty){
+     ConcessionItem iem=menu.findByCode(code);
+
+
+}

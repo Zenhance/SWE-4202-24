@@ -7,7 +7,7 @@ public class ShowtimeBoard {
     private Showtime[] shows;
     private int count;
 
-    public ShowTimeBoard(){
+    public ShowtimeBoard(){
         shows=new Showtime[MAX];
         count=0;
     }

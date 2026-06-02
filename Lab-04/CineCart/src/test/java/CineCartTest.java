@@ -10,7 +10,6 @@ import model.Customer;
 import model.Hall;
 import model.Movie;
 import model.Seat;
-import model.Showtime;
 import model.Ticket;
 import data.ConcessionMenu;
 import data.ShowtimeBoard;
