@@ -22,4 +22,7 @@ public class CheckoutEngine {
         return "OK";
     }
 
+    public double checkout(Cart cart){
+        return 0.00;
+    }
 }
