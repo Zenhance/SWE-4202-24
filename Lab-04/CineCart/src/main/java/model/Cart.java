@@ -37,6 +37,35 @@ public class Cart {
         }
     }
 
+    public Customer getOwner(){
+        return owner;
+    }
+
+    public Ticket[] getTickets(){
+        return tickets;
+    }
+    public int getTicketCount(){
+        return ticketCount;
+    }
+    public concessionItem[] getItems(){
+        return items;
+    }
+    public int[] getQtys(){
+        return qtys;
+    }
+    public int getItemCount(){
+        return itemCount;
+    }
+    public double sumTicketsPaid(){
+        double sum=0.0;
+        for(int i=0;i<ticketCount;i++){
+            sum+=tickets[i].getPricePaid();
+        }
+        return sum;
+    }
+
+
+
 
 
 }
