@@ -52,11 +52,18 @@ public class Hall {
     public void displayLayout() {
         for(int r=0;r<rows;r++) {
             for(int c=0;c<cols;c++) {
-                Seat s= grid[r][c];
-                if(s.isBooked()) {
+                Seat s = grid[r][c];
+                if(s.isAvailable()) {
+                    System.out.println(" . ");
+                }
+                else if(s.isBooked) {
+                    System.out.println(" # ");
+                }
+                else {
                     System.out.println(" * ");
                 }
             }
+            System.out.println();
         }
     }
 }
