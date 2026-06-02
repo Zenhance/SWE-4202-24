@@ -9,5 +9,10 @@ public class Ticket {
     int col;
     double pricePaid;
 
+    //constructor
+    public Ticket(Showtime showtime, int row, int col, double pricePaid) {
+
+    }
+
 
 }
