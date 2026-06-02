@@ -50,7 +50,20 @@ public class CheckoutEngine {
 
         cart.addItem(item, qty);
         return "OK";
+    }
 
+    //F.1
+    double checkout(Cart cart){
+        double ticketSubtotal = cart.sumTicketsPaid();
+        double concessionSubtotal = cart.sumConcessionsRaw();
+        double combo = 0;
+        double preDiscount = ticketSubtotal + concessionSubtotal - combo;
+        double group = 0.10 * preDiscount;
+        double tier = cart.getOwner().getTierDiscount() * preDiscount;
+        double afterDiscounts = preDiscount - group - tier;
+        double tax = 0.05 * afterDiscounts;
+        double rounded;
 
+        return null;
     }
 }
