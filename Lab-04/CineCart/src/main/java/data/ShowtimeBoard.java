@@ -18,11 +18,14 @@ public class ShowtimeBoard {
         Showtime res = null;
         for(int i=0;i<count;i++){
 
-        }
+            if(id == shows[i].getId()){
+                res=shows[i];
+                break;
+            }
+
+        } return res; }
 
 
-
-    }
 
 
 
