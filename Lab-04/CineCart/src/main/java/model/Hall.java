@@ -35,6 +35,12 @@ public class Hall {
 public int getId(){
         return id;
 }
+public int getRows(){
+        return rows;
+}
+    public int getCols(){
+        return cols;
+    }
     public void displayLayout(){
     for(int r=0;r<rows;r++){
         for(int c=0;c<cols;c++){
