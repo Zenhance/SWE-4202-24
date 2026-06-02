@@ -17,6 +17,7 @@ public class Cart {
         this.items = new ConcessionItem[MAX_ITEMS];
         this.ticketcount = 0;
         this.itemCount = 0;
+        this.qtys = new int[MAX_ITEMS];
     }
 
     public void addTicket(Ticket t){
