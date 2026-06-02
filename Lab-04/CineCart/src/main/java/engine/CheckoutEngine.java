@@ -36,4 +36,9 @@ return "OK";
 
     }
 
+    public double checkout(Cart cart){
+
+
+    }
+
 }
