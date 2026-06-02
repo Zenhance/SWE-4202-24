@@ -18,6 +18,12 @@ public class CheckoutEngine {
         Showtime showtime = board.findById(showtimeId);
         if(showtime == null) return "Showtime not found";
 
-
+        int age = cart.getOwner().getAge();
+        int req_age = showtime.getMovie().getMinAge();
+        if(age<req_age){
+            String rating = showtime.getMovie().getRating();
+            String msg = "Underage for rating <"+rating+">";
+            return msg;
+        }
     }
 }
