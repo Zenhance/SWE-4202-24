@@ -100,7 +100,16 @@ public class CheckoutEngine {
 
     // F.2 checkout
     public String getReceipt(Cart cart) {
+        double totalAmount = checkout(cart);
+        double ticketSubtotal = cart.sumTicketsPaid();
+        double concessionsSubtotal = cart.sumConcessionsRaw();
+        double combo = (cart.hasItem("POP") && cart.hasItem("SODA")) ? 50.0 : 0.0;
+        double preDiscount = ticketSubtotal + concessionsSubtotal - combo;
+        double group = (cart.getTicketCount() >= 4) ? (0.10 * preDiscount) : 0.0;
+        double tier = cart.getOwner().getTierDiscount() * preDiscount;
+        double totalDiscount = group + tier;
+
+
+
     }
-
-
 }
