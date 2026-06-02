@@ -9,5 +9,10 @@ import model.Ticket;
 
 public class CheckoutEngine {
     private ShowtimeBoard board;
-    private
+    private ConcessionMenu menu;
+
+    public CheckoutEngine(ShowtimeBoard board, ConcessionMenu menu){
+        this.board = board;
+        this.menu = menu;
+    }
 }
