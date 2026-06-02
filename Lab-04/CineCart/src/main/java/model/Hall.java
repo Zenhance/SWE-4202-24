@@ -1,10 +1,10 @@
 package model;
 
 public class Hall {
-    private int id;
-    private int rows;
-    private int cols;
-    private Seat[][] grid;
+    private final int id;
+    private final int rows;
+    private final int cols;
+    private final Seat[][] grid;
     private int availCount = 0;
 
     public Hall(int id, int rows, int cols, int premiumRows){
