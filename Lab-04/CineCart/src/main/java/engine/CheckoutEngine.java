@@ -120,5 +120,7 @@ public class CheckoutEngine {
         } else {
             combo = 0.0;
         }
+
+        double preDiscount = ticketSubtotal + concessionSubtotal - combo;
     }
 }
