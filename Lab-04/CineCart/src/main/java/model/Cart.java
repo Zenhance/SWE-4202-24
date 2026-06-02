@@ -61,7 +61,7 @@ public class Cart {
     public double sumTicketspaid() {
         double sum=0;
         for(int i=0;i<ticketCount;i++) {
-            sum=sum+tickets[i];
+            sum=sum+tickets[i].getPricePaid();
         }
         return sum;
     }
@@ -69,14 +69,17 @@ public class Cart {
     double sumConcessionsRaw() {
         double sum=0;
         for(int i=0;i<itemCount;i++) {
-            sum=sum+items[i];
+            sum=sum+items[i].getUnitPrice();
         }
         return sum;
     }
 
     public boolean hasItem(String code) {
         for(int i=0;i<itemCount;i++) {
-            if()
+            if(items[i].getCode().equals(code)) {
+                return true;
+            }
         }
+        return false;
     }
 }
