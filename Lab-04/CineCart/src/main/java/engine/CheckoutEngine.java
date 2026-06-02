@@ -143,6 +143,6 @@ public class CheckoutEngine {
     }
 
     public String getReceipt(Cart cart) {
-
+        return "";
     }
 }
