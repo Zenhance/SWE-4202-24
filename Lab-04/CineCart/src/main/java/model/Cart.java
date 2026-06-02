@@ -73,8 +73,11 @@ public class Cart {
         return total;
     }
     public boolean hasItem(String code){
+        if(code== null){
+            return  false;
+        }
         for(int i=0;i<itemCount;i++){
-            if(items[i].getCode().equals(code)){
+            if(code.equals(items[i].getCode())){
                 return true;
             }
         }
