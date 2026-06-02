@@ -41,6 +41,8 @@ public class CheckoutEngine {
         return "OK";
     }
 
+    double discount;
+
     public double checkout(Cart cart){
         double ticketSubtotal = cart.sumTicketsPaid();
         double concessionSubtotal = cart.sumConcessionsRaw();
@@ -56,6 +58,7 @@ public class CheckoutEngine {
 
         double tier = cart.getOwner().getTierDiscount()*preDiscount;
         double afterDiscounts = preDiscount - group - tier;
+        discount = group+tier;
 
         double tax = 0.05 * afterDiscounts;
 
@@ -63,7 +66,7 @@ public class CheckoutEngine {
     }
 
     public String getReceipt(Cart cart){
-
+        return String.format("Receipt:\nName: %s\nTotal: %f BDT\nDiscount: %f\n", cart.getOwner(),checkout(cart),discount);
     }
 }
 
