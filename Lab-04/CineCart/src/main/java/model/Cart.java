@@ -65,10 +65,16 @@ public int[] getQtys(){
 
 public double sumTicketsPaid(){
     double sum=0.0;
-    for(int i=0;i<ticketCount;i++){
+    for(int i = 0;i< ticketCount;i++){
         sum += tickets[i].getPricePaid();
     } return sum;
 }
+
+public double sumConcessionRaw(){
+    double sum=0.0;
+    for(int i = 0;i< itemCount;i++){
+        sum += tickets[i].getUnitPrice()* qtys[i];
+    }
 
 
 
