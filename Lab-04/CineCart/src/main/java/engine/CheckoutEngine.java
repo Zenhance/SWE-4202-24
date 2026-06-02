@@ -3,13 +3,7 @@ package engine;
 import data.ConcessionMenu;
 import data.ShowtimeBoard;
 
-import model.ConcessionItem;
-import model.Showtime;
-import model.Seat;
-import model.Customer;
-import model.Hall;
-import model.Movie;
-import model.Cart;
+import model.*;
 
 public class CheckoutEngine {
     private ShowtimeBoard board;
@@ -42,5 +36,10 @@ public class CheckoutEngine {
         double peakMultiplier = showtime.isPeak() ? 1.20 : 1.00;
 
         double price = basePrice * premiumMultiplier * peakMultiplier;
+
+        // [5]
+        seat.book();
+        Ticket ticket = new Ticket(showtime, row, col, price);
+        cart.addTicket(ticket);
     }
 }

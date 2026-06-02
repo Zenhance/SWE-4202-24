@@ -20,14 +20,14 @@ public class Cart {
         this.itemCount = 0;
     }
 
-    void addTicket(Ticket t) {
+    public void addTicket(Ticket t) {
         if (ticketCount < MAX_TICKETS) {
             tickets[ticketCount] = t;
             ticketCount++;
         }
     }
 
-    void addItem(ConcessionItem c, int qty) {
+    public void addItem(ConcessionItem c, int qty) {
         if (itemCount < MAX_ITEMS && qty > 0) {
             items[itemCount] = c;
             qtys[itemCount] = qty;
@@ -59,7 +59,7 @@ public class Cart {
         return itemCount;
     }
 
-    double sumTicketsPaid() {
+    public double sumTicketsPaid() {
         double total = 0;
         for (int i = 0; i < ticketCount; i++) {
             total += tickets[i].getPricePaid();
@@ -67,7 +67,7 @@ public class Cart {
         return total;
     }
 
-    double sumConcessionsRaw() {
+    public double sumConcessionsRaw() {
         double total = 0;
         for (int i = 0; i < itemCount; i++) {
             total += items[i].getUnitPrice() * qtys[i];
