@@ -38,9 +38,11 @@ public class Seat {
             return false;
         return true;
     }
-
     public String toString(){
+        String string = String.format("R%dC%d",row,col);
+        if (isPremium) string = string + "*";
+        if (isBooked) string = string + "#";
 
+        return string;
     }
-
 }
