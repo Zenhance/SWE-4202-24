@@ -10,10 +10,21 @@ public class Cart {
     public Cart(Customer owner){
         this.owner=owner;
     }
-    void addTicket(){
-
+    void addTicket(Ticket t) {
+        if (ticketCount < MAX_TICKETS) {
+            tickets[ticketCount] = t;
+            ticketCount++;
+        }
     }
-    void addItems(){}
+        void addItems(ConcessionItem c,int qty)
+        {
+            if (itemCount < MAX_ITEMS && qty > 0)
+            {
+                items[itemCount] = c;
+                qtys[itemCount] = qty;
+                itemCount++;
+            }
+        }
 
     public Customer getOwner() {
         return owner;
@@ -37,5 +48,14 @@ public class Cart {
 
     public ConcessionItem[] getItems() {
         return items;
+    }
+    double sumTicketsPaid(){
+
+    }
+    double sumConcessionsRaw(){
+
+    }
+    boolean hasItem(String code){
+
     }
 }
