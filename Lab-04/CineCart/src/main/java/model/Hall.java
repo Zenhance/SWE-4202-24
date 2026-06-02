@@ -57,11 +57,11 @@ public class Hall {
             for(int j=0;j<cols;j++){
 
                 if(grid[i][j].isBooked()){
-                    System.out.println("#");
+                    System.out.print("# ");
                 }else if(grid[i][j].isPremium()){
-                    System.out.println("*");
+                    System.out.print("* ");
                 }else{
-                    System.out.println(".");
+                    System.out.print(". ");
                 }
             }
             System.out.println();
