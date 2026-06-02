@@ -26,17 +26,18 @@ public class CheckoutEngine {
         if(seat.isBooked()){
             return "Seat is unavailable";
         }
-        if(showtime.getMovie().getBasePrice()*(seat.isPremium()==true){
+        if(showtime.getMovie().getBasePrice()*(seat.isPremium()==true)){
             double price=1.30*(showtime.isPeak() ? 1.20 : 1.00);
         }
         else{
             double price = 1.00*(showtime.isPeak() ? 1.20 : 1.00);
         }
         seat.book();
-        Ticket ticket=new Ticket(showtime,row,col,double price);
+        Ticket ticket=new Ticket(showtime,row,col, double price) ;
         cart.addTicket(ticket);
         return "OK";
-        public String addConcession(Cart cart,String code,int qty) {
+        public String addConcession(Cart cart,String String code;
+        code,int qty) {
             ConcessionItem item = menu.findByCode(code);
             if (item==null) {
                 return "Item not found";
