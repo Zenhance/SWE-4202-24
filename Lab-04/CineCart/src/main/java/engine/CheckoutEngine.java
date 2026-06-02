@@ -15,20 +15,20 @@ public class CheckoutEngine {
     }
 
     public String bookTicket(Cart cart, int showtimeId, int row, int col) {
-        if (board.findbyId(showtimeId) == null) return "Showtime not found";
-        if (cart.getOwner().getAge() < board.findbyId(showtimeId).getMovie().getMinAge()) {
-            return String.format("Underage for rating %s", board.findbyId(showtimeId).getMovie().getRating());
+        if (board.findById(showtimeId) == null) return "Showtime not found";
+        if (cart.getOwner().getAge() < board.findById(showtimeId).getMovie().getMinAge()) {
+            return String.format("Underage for rating %s", board.findById(showtimeId).getMovie().getRating());
         }
-        if (board.findbyId(showtimeId).getHall().getSeat(row,col).isBooked() == true)
+        if (board.findById(showtimeId).getHall().getSeat(row,col).isBooked() == true)
             return "Seat unavailable";
 
-        double price = board.findbyId(showtimeId).getMovie().getBasePrice()
-                * (board.findbyId(showtimeId).getHall().getSeat(row, col).isPremium() ? 1.30 : 1.00)
-                * (board.findbyId(showtimeId).isPeak() ? 1.20 : 1.00);
+        double price = board.findById(showtimeId).getMovie().getBasePrice()
+                * (board.findById(showtimeId).getHall().getSeat(row, col).isPremium() ? 1.30 : 1.00)
+                * (board.findById(showtimeId).isPeak() ? 1.20 : 1.00);
 
-        board.findbyId(showtimeId).getHall().getSeat(row,col).book();
+        board.findById(showtimeId).getHall().getSeat(row,col).book();
 
-        Ticket t = new Ticket(board.findbyId(showtimeId), row, col, price);
+        Ticket t = new Ticket(board.findById(showtimeId), row, col, price);
 
         cart.addTicket(t);
 
