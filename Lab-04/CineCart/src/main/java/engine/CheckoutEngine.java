@@ -3,6 +3,7 @@ package engine;
 import data.ConcessionMenu;
 import data.ShowtimeBoard;
 import model.Cart;
+import model.Ticket;
 
 public class CheckoutEngine {
     private ShowtimeBoard board;
@@ -20,6 +21,16 @@ public class CheckoutEngine {
         }
         if (board.findbyId(showtimeId).getHall().getSeat(row,col).isBooked() == true)
             return "Seat unavailable";
+
+        double price = board.findbyId(showtimeId).getMovie().getBasePrice()
+                * (board.findbyId(showtimeId).getHall().getSeat(row, col).isPremium() ? 1.30 : 1.00)
+                * (board.findbyId(showtimeId).isPeak() ? 1.20 : 1.00);
+
+        board.findbyId(showtimeId).getHall().getSeat(row,col).book();
+
+        Ticket t = new Ticket(board.findbyId(showtimeId), row, col, price);
+
+        cart.addTicket(t);
 
         return "OK";
     }
