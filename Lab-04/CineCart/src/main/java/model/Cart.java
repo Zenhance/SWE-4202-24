@@ -24,6 +24,8 @@ public class Cart {
            qtys[itemCount] = qty;
            itemCount++
     }
+       public Customer getOwner(){
+           return owner;
 
 
 }
