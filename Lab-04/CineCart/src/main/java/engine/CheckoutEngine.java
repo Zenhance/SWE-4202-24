@@ -44,4 +44,10 @@ return "OK";
 
     }
 
+    public String getReceipt(Cart cart){
+
+
+
+    }
+
 }
