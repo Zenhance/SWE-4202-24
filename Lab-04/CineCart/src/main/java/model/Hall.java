@@ -23,7 +23,7 @@ public class Hall {
         }
     }
 
-    public int getid(){
+    public int getId(){
         return id;
     }
     public int getRows(){

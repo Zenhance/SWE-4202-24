@@ -1,12 +1,12 @@
-package Data;
+package data;
 
 import model.ConcessionItem;
 
-public class concessionMenu {
+public class ConcessionMenu {
     ConcessionItem[] items;
     int count;
     static final int MAX=30;
-    public concessionMenu(){
+    public ConcessionMenu(){
         this.items=new ConcessionItem[MAX];
         this.count=0;
     }
