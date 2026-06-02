@@ -85,5 +85,8 @@ public class CheckoutEngine {
 
         // [7]
         double afterDiscounts = preDiscount - group - tier;
+
+        // [8]
+        double tax = 0.05 * afterDiscounts;
     }
 }
