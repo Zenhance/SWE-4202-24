@@ -107,6 +107,6 @@ public class CheckoutEngine {
     }
 
     public double checkout(Cart cart) {
-
+        double ticketSubtotal = cart.sumTicketsPaid();
     }
 }
