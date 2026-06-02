@@ -12,7 +12,7 @@ public class ShowtimeBoard {
         count++;
     }
 
-    Showtime findById(int id){
+    public Showtime findById(int id){
         for(int i=0;i<MAX;i++){
             if(shows[i].getId() == id)
                 return shows[i];

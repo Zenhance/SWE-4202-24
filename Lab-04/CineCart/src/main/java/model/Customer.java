@@ -32,6 +32,7 @@ public class Customer {
     public String getLoyaltyTier() {
         return loyaltyTier;
     }
+    public int getAge() {return age;}
 
     public double getTierDiscount() {
         if(loyaltyTier.equals("GOLD")){return 0.15;}
