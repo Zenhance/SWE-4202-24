@@ -22,12 +22,11 @@ public class Hall {
     public int getId(){
     return id;
     }
-}
-        //methods
+    //methods
     public Seat getSeat(int row,int col){
         return grid[row][col];
     }
-    public int countAvailable() {
+    int countAvailable() {
         int count = 0;
         for (int r = 0; r < rows; r++) {
             for (int c = 0; c < cols; c++) {
@@ -42,10 +41,10 @@ public class Hall {
             for (int r = 0; r < rows; r++) {
                 for (int c = 0; c < cols; c++) {
                     Seat seat = grid[r][c];
-                    if (seat.isBooked()) {
+                    if (seat.isBooked) {
                         System.out.println("# ");
                     }
-                    else if (seat.isPremium()) {
+                    else if (seat.isPremium) {
                         System.out.println("* ");
                     }
                     else {
