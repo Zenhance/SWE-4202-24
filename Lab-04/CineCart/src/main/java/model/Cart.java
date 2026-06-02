@@ -14,6 +14,13 @@ public class  Cart {
 
 public Cart (Customer owner){
     this.owner=owner;
+    tickets= new Ticket[MAX_TICKETS];
+    items= new ConcessionItem[MAX_ITEMS];
+    qyts= new int[MAX_ITEMS];
+}
 
+public boolean addTicket(Ticket t){
+
+    boolean res=false;
 }
 }
