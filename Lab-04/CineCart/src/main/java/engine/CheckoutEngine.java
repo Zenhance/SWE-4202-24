@@ -24,7 +24,9 @@ E.2 addConcession
 Signature: String addConcession(Cart cart, String code, int qty).
 1. Look up the item via menu.findByCode(code). If null, return "Item not found".
 2. If qty <= 0, return "Invalid quantity".
-3. Otherwise add the item to the cart and return "OK".F.1 checkout
+3. Otherwise add the item to the cart and return "OK".
+
+F.1 checkout
 Signature: double checkout(Cart cart).
 Apply every rule below in this order; the method must return the final amount rounded to two
 decimal places.
@@ -38,6 +40,7 @@ decimal places.
 7. afterDiscounts = preDiscount − group − tier.
 8. tax = 0.05 × afterDiscounts.
 9. Return round2(afterDiscounts + tax).
+
 F.2 getReceipt
 Signature: String getReceipt(Cart cart).
 Return a multi-line string. The exact wording is up to you, but the test will check that the string contains all the following substrings: "Receipt", the customer’s name, "BDT", "Total", and "Discount".
@@ -109,5 +112,13 @@ public class CheckoutEngine {
     public double checkout(Cart cart) {
         double ticketSubtotal = cart.sumTicketsPaid();
         double concessionSubtotal = cart.sumConcessionsRaw();
+
+        double combo;
+
+        if (cart.hasItem("POP") & cart.hasItem("SODA")) {
+            combo = 50.0;
+        } else {
+            combo = 0.0;
+        }
     }
 }
