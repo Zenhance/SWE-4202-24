@@ -22,5 +22,11 @@ public Cart (Customer owner){
 public boolean addTicket(Ticket t){
 
     boolean res=false;
+    if (ticketCount < MAX_TICKETS){
+        tickets[ticketCount] = t;
+
+
+
+    }
 }
 }
