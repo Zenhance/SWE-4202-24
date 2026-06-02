@@ -18,6 +18,14 @@ public class ConcessionMenu {
             count++;
         }
     }
-    public ConcessionItem findById
+    public ConcessionItem findByCode(String code){
+        for(int i=0;i<count;i++){
+            if(items[i].getCode().equals(code)){
+                return items[i];
+            }
+        }
+        return null;
+    }
+
 
 }
