@@ -13,29 +13,34 @@ public class Showtime {
         this.startHour=startHour;
         this.dateTag=dateTag;
     }
-    public getId(){
+    public int getId(){
+
         return id;
     }
-    public getMovie(){
+    public Movie getMovie(){
+
         return movie;
     }
-    public getHall(){
+    public Hall getHall(){
+
         return hall;
     }
-    public getStartHour(){
+    public int getStartHour(){
+
         return startHour;
     }
-    public dateTag(){
+    public String getDateTag(){
         return dateTag;
     }
-    boolean isPeak(){
-        if(startHour>=18&&startHour<=21){
+    boolean isPeak() {
+        if (startHour >= 18 && startHour <= 21)
             return true;
-        }
+        else return false;
     }
-    String toString(){
+    @Override
+    public String toString(){
     String s;
-    s=""+" Inception @ Hall 2 - "+startHour+":00 (Fri)";
+    s=""+" Inception @ Hall 2 - "+getStartHour()+ ":00 (" + getDateTag() + ")";
     return s;
     }
 }

@@ -11,10 +11,10 @@ public class Seat {
         this.isBooked =false;
     }
 
-    public int getRow(){
+    public int getRows(){
         return row;
     }
-    public int getCol(){
+    public int getCols(){
         return col;
 
     }
