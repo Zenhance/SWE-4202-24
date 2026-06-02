@@ -30,6 +30,6 @@ public class Ticket {
     }
 
     public String toString() {
-        return String.format("");
+        return String.format(".");
     }
 }
