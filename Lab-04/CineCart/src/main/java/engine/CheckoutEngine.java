@@ -36,4 +36,15 @@ public class CheckoutEngine {
         cart.addTicket(ticket);
         return "OK";
     }
+    public String addConcession(Cart cart, String code, int qty){
+        ConcessionItem item = menu.findByCode(code);
+        if(item==null){
+            return "Item not found";
+        }
+        if(qty<=0){
+            return "Invalid quantity";
+        }
+        cart.addItem(item,qty);
+        return "OK";
+    }
 }
