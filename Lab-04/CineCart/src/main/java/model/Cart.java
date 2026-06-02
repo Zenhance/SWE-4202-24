@@ -44,11 +44,13 @@ public class Cart {
         return itemCount;
     }
 
-    public void addTicket(Ticket t){
+    public boolean addTicket(Ticket t){
         if (ticketCount >= MAX_TICKETS)
             throw new IllegalArgumentException("MAX TICKETS exceeded");
         tickets[ticketCount] = t;
         ticketCount++;
+
+        return (ticketCount < MAX_TICKETS)? true : false;
     }
 
     public void addItem(ConcessionItem c, int qty){

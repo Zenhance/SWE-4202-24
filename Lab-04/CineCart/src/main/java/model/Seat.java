@@ -30,8 +30,11 @@ public class Seat {
     public boolean isAvailable(){
         return (isBooked==true) ? false : true ;}  // just trying ternary
 
-    public void book(){
-        isBooked = true;}
+    public boolean book(){
+        boolean temp = isBooked;
+        isBooked = true;
+        return (temp==true) ? false : true;
+    }
 
     public void release(){
         isBooked = false;}
