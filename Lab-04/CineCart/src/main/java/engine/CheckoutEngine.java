@@ -4,6 +4,7 @@ import data.ConcessionMenu;
 import data.ShowtimeBoard;
 import model.Cart;
 import model.Showtime;
+import model.Seat;
 
 public class CheckoutEngine {
     private ShowtimeBoard board;
@@ -25,6 +26,10 @@ public class CheckoutEngine {
             String msg = "Underage for rating <"+rating+">";
             return msg;
         }
+
+        Seat seat = showtime.getHall().getSeat(row, col);
+        if(seat.isBooked()) return "Seat unavailable";
+
         return null;
     }
 }
