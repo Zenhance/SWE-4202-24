@@ -7,7 +7,7 @@ public class Seat {
     boolean isPremium;
     boolean isBooked;
 
-public Seat(){
+public Seat(int row,int col,boolean isPremium){
 
     this.row=row;
     this.col=col;
