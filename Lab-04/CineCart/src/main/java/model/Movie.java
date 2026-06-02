@@ -14,7 +14,23 @@ public class Movie {
         this.basePrice=basePrice;
 
     }
-    public int getMinAge() {
+
+    public int getId() {
+        return id;
+    }
+    public String getTitle(){
+        return title;
+    }
+    public String getRating(){
+        return rating;
+    }
+    public int getDurationMin(){
+        return durationMin;
+    }
+    public double getBasePrice(){
+        return basePrice;
+    }
+    public int getMinAge(){
         if (rating == "G") {
             return 0;
         }
