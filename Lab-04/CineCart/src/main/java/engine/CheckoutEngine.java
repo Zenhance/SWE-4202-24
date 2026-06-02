@@ -10,7 +10,7 @@ public class CheckoutEngine {
     private ShowtimeBoard board;
     private ConcessionMenu menu;
 
-    public CheckoutEngine(ShowtimeBoard board, ConcessionMenu menu){
+    public CheckoutEngine(ShowtimeBoard board, ConcessionMenu menu) {
         this.board = board;
         this.menu = menu;
     }
@@ -29,36 +29,36 @@ public class CheckoutEngine {
             return "Seat unavailable";
 
         double price = showtime.getMovie().getBasePrice()
-                * ((seat.isPremium()? 1.30 : 1.00))
-                * ((showtime.isPeak()? 1.20 : 1.00));
+                * ((seat.isPremium() ? 1.30 : 1.00))
+                * ((showtime.isPeak() ? 1.20 : 1.00));
         seat.book();
-        Ticket t = new Ticket(showtime,row,col,price);
+        Ticket t = new Ticket(showtime, row, col, price);
         cart.addTicket(t);
-    return "OK";
+        return "OK";
     }
 
-    public String addConcession(Cart cart, String code, int qty){
+    public String addConcession(Cart cart, String code, int qty) {
         ConcessionItem item = menu.findByCode(code);
         if (item == null)
             return "Item not found";
 
         if (qty <= 0)
             return "Invalid quantity";
-        cart.addItem(item,qty);
-    return "OK";
+        cart.addItem(item, qty);
+        return "OK";
     }
 
-    double checkout(Cart cart){
+    public double checkout(Cart cart) {
         double ticketSubtotal = cart.sumTicketsPaid();
         double concessionSubtotal = cart.sumConcessionsRaw();
         double combo;
-        if(cart.hasItem("POP") && cart.hasItem("SODA"))
+        if (cart.hasItem("POP") && cart.hasItem("SODA"))
             combo = 50.0;
         else combo = 0.0;
 
         double preDiscount = ticketSubtotal + concessionSubtotal - combo;
         double group;
-        if(cart.getTicketCount() >= 4)
+        if (cart.getTicketCount() >= 4)
             group = 0.10 * preDiscount;
         else group = 0.0;
 
@@ -69,5 +69,12 @@ public class CheckoutEngine {
         return Math.round((afterDiscounts + tax) * 100.0) / 100.0;
     }
 
+    public String getReceipt(Cart cart) {
 
+        String string = String.format("Receipt " + "%s " + "BDT " + "Total " + "Discount ",
+                cart.getOwner().getName()
+        );
+
+        return string;
+    }
 }

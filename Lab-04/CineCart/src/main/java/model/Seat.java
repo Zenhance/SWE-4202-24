@@ -37,7 +37,7 @@ public class Seat {
         isBooked = false;
     }
 
-    boolean isAvailable(){
+    public boolean isAvailable(){
         if(isBooked)
             return false;
         else return true;
