@@ -18,7 +18,7 @@ public class ShowtimeBoard{
             count++;
         }
     }
-    public Showtime findByID(int id){
+    public Showtime findById(int id){
         for (int i=0;i<count;i++) {
             if (shows[i].getId()==id) {
                 return shows[i];
@@ -28,7 +28,7 @@ public class ShowtimeBoard{
     }
 
     public void displayAll(){
-        for (int i=0;i<count;i++) {
+        for (int i=0;i<count;i++){
             System.out.println(shows[i]);
         }
     }
