@@ -12,7 +12,7 @@ public class Movie{
       this.title=title;
       this.rating=rating;
       this.durationMin=durationMin;
-      this.baseprice=baseprice;}
+      this.basePrice=basePrice;}
 
 
       public int getId(){
@@ -30,7 +30,7 @@ public class Movie{
       }
 
       public double getBasePrice(){
-          return baseprice; }
+          return basePrice; }
 
       public int getMinAge() {
           switch (rating) {
