@@ -3,7 +3,7 @@ package model;
 public class Cart {
     public static final int MAX_TICKETS = 20;
     public static final int MAX_ITEMS = 20;
-    private Customer owner;
+    private Customer Owner;
     private Ticket[] tickets;
     private int ticketCount;
     private ConcessionItem[] items;
@@ -11,7 +11,7 @@ public class Cart {
     private int itemCount;
 
     public Cart(Customer Owner) {
-        this.owner = owner;
+        this.Owner = Owner;
         tickets = new Ticket[MAX_TICKETS];
         this.ticketCount = 0;
         items = new ConcessionItem[MAX_ITEMS];
@@ -35,7 +35,7 @@ public class Cart {
     }
       public Customer getOwner ()
         {
-            return owner;
+            return Owner;
         }
     public Ticket[] getTickets() {return tickets;}
     public int getTicketCount() {return ticketCount;}
