@@ -24,6 +24,6 @@ public class ConcessionItem {
 
     @Override
     public String toString() {
-        return "code"+" - "+name+" - "+"BDT "+unitPrice;
+        return code+" - "+name+" - "+"BDT "+unitPrice;
     }
 }
