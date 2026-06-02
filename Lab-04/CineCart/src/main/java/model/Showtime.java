@@ -41,11 +41,11 @@ public String getDateTag(){
 public boolean isPeak(){
 
     if (startHour>=18 && startHour<=21){
-        return true;
-    else return false;
-}
+        return true; }
+    else {return false;
+} }
 
-public String toString(){  //"[T17] Inception @ Hall 2 - 19:00 (Fri)".
+public String toString(){
 
         String res=String.format("[T%d] %s @ Hall %d - %d:00 (%s)",id,movie.getTitle(),hall.getID(),startHour,dateTag);
 
