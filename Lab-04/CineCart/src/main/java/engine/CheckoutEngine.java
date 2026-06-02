@@ -24,7 +24,30 @@ E.2 addConcession
 Signature: String addConcession(Cart cart, String code, int qty).
 1. Look up the item via menu.findByCode(code). If null, return "Item not found".
 2. If qty <= 0, return "Invalid quantity".
-3. Otherwise add the item to the cart and return "OK".
+3. Otherwise add the item to the cart and return "OK".F.1 checkout
+Signature: double checkout(Cart cart).
+Apply every rule below in this order; the method must return the final amount rounded to two
+decimal places.
+1. ticketSubtotal = cart.sumTicketsPaid().
+2. concessionSubtotal = cart.sumConcessionsRaw().
+3. Combo deal: if the cart contains both POP and SODA, set combo = 50.0, otherwise combo = 0.0.
+4. preDiscount = ticketSubtotal + concessionSubtotal − combo.
+5. Group discount: if the cart contains four or more tickets, group = 0.10 × preDiscount, otherwise
+0.
+6. Tier discount: tier = cart.getOwner().getTierDiscount() × preDiscount.
+7. afterDiscounts = preDiscount − group − tier.
+8. tax = 0.05 × afterDiscounts.
+9. Return round2(afterDiscounts + tax).
+F.2 getReceipt
+Signature: String getReceipt(Cart cart).
+Return a multi-line string. The exact wording is up to you, but the test will check that the string contains all the following substrings: "Receipt", the customer’s name, "BDT", "Total", and "Discount".
+Listing each ticket and each concession line is recommended.
+
+⊳ Notice
+You may notice that checkout and bookTicket are getting long. That is fine for this lab —
+focus on getting the rules right and the tests passing. Resist the urge to introduce inheritance,
+interfaces, or design patterns; you have not been taught those yet, and this lab does not need
+them.
 */
 
 package engine;
@@ -81,5 +104,9 @@ public class CheckoutEngine {
 
         cart.addItem(item, qty);
         return "OK";
+    }
+
+    public double checkout(Cart cart) {
+
     }
 }
