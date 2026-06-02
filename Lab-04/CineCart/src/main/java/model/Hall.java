@@ -28,6 +28,16 @@ public class Hall
         return id;
     }
 
+    public int getRows()
+    {
+        return rows;
+    }
+
+    public int getCols()
+    {
+        return cols;
+    }
+
     public Seat getSeat(int row, int col)
     {
         return grid[row][col];
