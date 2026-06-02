@@ -65,5 +65,6 @@ public class CheckoutEngine {
 
         price *= (seat.isPremium() ? 1.30 : 1.00) * (showtime.isPeak() ? 1.20 : 1.00);
 
+        seat.book();
     }
 }
