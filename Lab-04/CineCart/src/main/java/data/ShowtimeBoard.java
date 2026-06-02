@@ -4,8 +4,13 @@ import model.Showtime;
 
 public class ShowtimeBoard {
     private Showtime[] shows;
-    private int count = 0;
+    private int count;
     private static final int MAX = 30;
+
+    public ShowtimeBoard(){
+        Showtime[] showtime = new Showtime[MAX];
+        this.count = 0;
+    }
 
     public void add(Showtime s){
         if(count < MAX){
