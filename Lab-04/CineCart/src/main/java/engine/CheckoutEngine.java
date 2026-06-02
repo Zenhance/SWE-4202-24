@@ -38,10 +38,10 @@ import model.Seat;
 import model.ConcessionItem;
 
 public class CheckoutEngine {
-    private Showtime board;
+    private ShowtimeBoard board;
     private ConcessionMenu menu;
 
-    public CheckoutEngine(Showtime board, ConcessionMenu menu) {
+    public CheckoutEngine(ShowtimeBoard board, ConcessionMenu menu) {
         this.board = board;
         this.menu = menu;
     }
