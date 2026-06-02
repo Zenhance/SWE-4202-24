@@ -23,7 +23,7 @@ public class Customer {
     String getName(){
         return name;
     }
-    int getAge(){
+    public int getAge(){
         return age;
     }
     String getLoyaltyTier(){
