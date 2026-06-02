@@ -39,4 +39,9 @@ public boolean addItem(ConcessionItem c,int qty){
     }  return res;
 }
 
+public int getTicketCount(){
+    return ticketCount;
+}
+
+public
 }

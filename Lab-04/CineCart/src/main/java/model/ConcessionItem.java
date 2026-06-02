@@ -4,7 +4,7 @@ public class ConcessionItem {
     private String code;
     private String name;
     private double unitPrice;
-}
+
 
 public ConcessionItem(String code, String name, double unitPrice){
 
@@ -31,5 +31,4 @@ public String toString(){  //"POP - Popcorn (Large) - BDT 220.00".
 
     return res;
 
-}
-
+} }
