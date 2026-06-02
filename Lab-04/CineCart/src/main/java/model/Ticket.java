@@ -30,4 +30,7 @@ public class Ticket {
     }
 
 
+    public String toString() {
+        return String.format("T%d - R%dC%d @ BDT %.2f",showtime.getId(),row,col,pricePaid);
+    }
 }
