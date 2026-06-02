@@ -31,4 +31,15 @@ public class Showtime {
     public String getName() {
         return this.name;
     }
+
+    public Hall getHall() {
+        return this.hall;
+    }
+
+    public int getStartHour() {
+        return this.startHour;
+
+    }
+
+
 }
