@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="ticket class 2">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab-03/RideNow/src/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-03/RideNow/src/Driver.java" afterDir="false" />
+    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="writing the skeleton of checkout engine to prevent compilation error">
+      <change beforePath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/engine/CheckoutEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/engine/CheckoutEngine.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,14 +123,6 @@
       <workItem from="1778092688155" duration="94000" />
       <workItem from="1778092809585" duration="6679000" />
       <workItem from="1778163384097" duration="3333000" />
-    </task>
-    <task id="LOCAL-00009" summary="creating main method,adding printstatement">
-      <option name="closed" value="true" />
-      <created>1777479067115</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1777479067115</updated>
     </task>
     <task id="LOCAL-00010" summary="completed main method">
       <option name="closed" value="true" />
@@ -518,7 +508,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779169138921</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="writing the skeleton of checkout engine to prevent compilation error">
+      <option name="closed" value="true" />
+      <created>1780399553503</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1780399553504</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -548,7 +546,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="location class" />
     <MESSAGE value="location class fix" />
     <MESSAGE value="passenger class completion" />
     <MESSAGE value="passenger class completion" />
@@ -573,6 +570,7 @@
     <MESSAGE value="customer class completion" />
     <MESSAGE value="ticket class 1" />
     <MESSAGE value="ticket class 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="ticket class 2" />
+    <MESSAGE value="writing the skeleton of checkout engine to prevent compilation error" />
+    <option name="LAST_COMMIT_MESSAGE" value="writing the skeleton of checkout engine to prevent compilation error" />
   </component>
 </project>
