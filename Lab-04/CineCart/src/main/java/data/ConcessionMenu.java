@@ -17,6 +17,11 @@ public class ConcessionMenu {
                 return items[i];
         }
         return null;
+
     }
+    public void displayAll(){
+        System.out.println(toString());
+    }
+
 }
 
