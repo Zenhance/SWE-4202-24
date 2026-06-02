@@ -8,6 +8,7 @@ public class Hall {
 
 
 
+
         public Hall(int id, int rows, int cols, int premiumRows) {
             this.id = id;
             this.rows = rows;
@@ -68,7 +69,9 @@ public class Hall {
                 }
 
                 System.out.println();
+
             }
+
 
         }
 
