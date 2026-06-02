@@ -36,7 +36,7 @@ public class CheckoutEngine {
 
       double price_value=(found.getMovie().getBasePrice());
       double premiumValue=(found.getHall().getSeat(row,col).isPremium()?1.30:1.00);
-      double peakValue=(found.isPeak(found.getStartHour())?1.20:1.00);
+      double peakValue=(found.isPeak()?1.20:1.00);
 
       double basePrice=price_value*premiumValue*peakValue;
 
