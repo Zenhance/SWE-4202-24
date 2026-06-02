@@ -19,19 +19,26 @@ public class Cart {
         qtys = new int[MAX_ITEMS];
     }
 
-    public void addTicket(Ticket t){
+    public boolean addTicket(Ticket t){
+        boolean res = false;
         if (ticketCount < MAX_TICKETS){
             tickets[ticketCount] = t;
             ticketCount++;
+            res = true;
         }
+        return res;
     }
 
-    public void addItem(ConcessionItem c, int qty){
+    public boolean addItem(ConcessionItem c, int qty){
+
+        boolean res = false;
         if(itemCount < MAX_ITEMS){
             items[itemCount] = c;
             qtys[itemCount] = qty;
             itemCount++;
+            res = true;
         }
+        return res;
     }
 
     public int getTicketCount() {

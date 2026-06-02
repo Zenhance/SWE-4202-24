@@ -32,8 +32,20 @@ public class Seat {
     }
 
     // others
-    public void book(){
-        isBooked = true;
+    public boolean book(){
+        boolean res = false;
+
+        if (isBooked == true)
+        {
+            res = true;
+        }
+        else
+        {
+            res = false;
+            isBooked = true;
+        }
+
+        return res;
     }
 
     public void release(){
