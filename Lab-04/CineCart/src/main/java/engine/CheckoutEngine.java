@@ -19,7 +19,12 @@ change nothing – in particular, the seat must not be booked.
 price = movie.basePrice × (seat.isPremium ? 1.30 ∶ 1.00) × (showtime.isPeak() ? 1.20 ∶ 1.00).
 5. Mark the seat booked, build a Ticket with the computed price, and add it to the cart.
 6. Return the string "OK".
- At first, let's do E.1
+
+E.2 addConcession
+Signature: String addConcession(Cart cart, String code, int qty).
+1. Look up the item via menu.findByCode(code). If null, return "Item not found".
+2. If qty <= 0, return "Invalid quantity".
+3. Otherwise add the item to the cart and return "OK".
 */
 
 package engine;
@@ -36,4 +41,8 @@ public class CheckoutEngine {
     private Showtime board;
     private ConcessionMenu menu;
 
+    public CheckoutEngine(Showtime board, ConcessionMenu menu) {
+        this.board = board;
+        this.menu = menu;
+    }
 }
