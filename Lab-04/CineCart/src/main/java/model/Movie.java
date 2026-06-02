@@ -30,10 +30,13 @@ public class Movie {
     }
 
     public int getMinAge(){
-        if(rating.equals("G"))return 0;
-        else if(rating.equals("PG"))return 7;
-        else if(rating.equals("PG-13"))return 13;
-        else if(rating.equals("18"))return 18;
+        if(rating.equals("G")){return 0;}
+        else if(rating.equals("PG")){
+            return 7;}
+        else if(rating.equals("PG-13")){return 13;}
+        else if(rating.equals("18")){
+            return 18;
+        }return 0;
     }
     public String toString(){
         return "Inception "+"("+"PG-13"+") "+this.durationMin+" -BDT "+String.format(".02%f",this.basePrice);
