@@ -1,5 +1,7 @@
 package engine;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import data.ConcessionMenu;
 import data.ShowtimeBoard;
 import model.Cart;
@@ -57,5 +59,36 @@ public class CheckoutEngine {
         }
 
         return "OK";
+    }
+
+    public double checkout(Cart cart){
+        double ticketSubtotal = cart.sumTicketsPaid();
+        double concessionSubtotal = cart.sumConcessionsRaw();
+
+        double combo = 0.0;
+
+        boolean pop = cart.hasItem("POP");
+        boolean soda = cart.hasItem("soda");
+
+        if (pop && soda){
+            combo = 50.0;
+        }
+
+        double preDiscount = ticketSubtotal + concessionSubtotal - combo;
+
+        double group = 0.0;
+
+        if (cart.getTicketCount() >= 4) group = 0.10*preDiscount;
+
+        double tier = cart.getOwner().getTierDiscount()*preDiscount;
+
+        double afterDiscounts = preDiscount - group - tier;
+
+        double tax = 0.05*afterDiscounts;
+
+
+        return new BigDecimal(Double.toString(afterDiscounts+tax)).setScale(2, RoundingMode.HALF_UP).doubleValue();
+
+
     }
 }
