@@ -51,4 +51,20 @@ public class CheckoutEngine {
         return "OK";
 
     }
+    public double checkout(Cart cart) {
+        double ticketSub = cart.sumTicketsPaid();
+        double concSub   = cart.sumConcessionsRaw();
+        double combo     = (cart.hasItem("POP") && cart.hasItem("SODA")) ? 50.0 : 0.0;
+        double pre       = ticketSub + concSub - combo;
+        double group     = (cart.getTicketCount() >= 4) ? 0.10 * pre : 0.0;
+        double tier      = cart.getOwner().getTierDiscount() * pre;
+        double after     = pre - group - tier;
+        double tax       = 0.05 * after;
+        return Math.round((after + tax) * 100.0) / 100.0;
+    }
+
+
+
+
+
 }
