@@ -29,6 +29,10 @@ public class Customer {
             return 0.00;
         }
     }
+
+    public getAge(){
+        return age;
+    }
     public String toString(){
         return id+" "+name+" "+age+" "+loyaltyTier;
     }
