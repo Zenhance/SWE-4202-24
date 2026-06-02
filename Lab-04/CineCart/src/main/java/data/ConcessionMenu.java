@@ -7,5 +7,10 @@ public class ConcessionMenu {
     private int count;
     private static final int MAX = 30;
 
+    public ConcessionMenu(){
+        items = new ConcessionItem[MAX];
+        count = 0;
+    }
+
 
 }
