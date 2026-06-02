@@ -68,8 +68,8 @@ public class CheckoutEngine {
             if (k.getCode().equals("SODA")) soda = true;
         }
 
+        double combo = (soda && pop) ? 50.0 : 0.0;
 
-        double combo = 0;
         double preDiscount = ticketSubtotal + concessionSubtotal - combo;
         double group = 0.10 * preDiscount;
         double tier = cart.getOwner().getTierDiscount() * preDiscount;
