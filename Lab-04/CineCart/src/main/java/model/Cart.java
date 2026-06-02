@@ -18,6 +18,16 @@ public class Cart {
         this.qtys = new int[MAX_ITEMS];
         this.ticketCount = 0;
         this.itemCount = 0;
+
+    }
+
+    public Cart(Customer owner) {
+        this.owner = owner;
+        this.tickets = new Ticket[MAX_TICKETS];
+        this.items = new ConcessionItem[MAX_ITEMS];
+        this.qtys = new int[MAX_ITEMS];
+        this.ticketCount = 0;
+        this.itemCount = 0;
     }
 
     public void addTicket(Ticket t) {

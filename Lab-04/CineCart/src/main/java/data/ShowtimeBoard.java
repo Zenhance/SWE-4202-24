@@ -12,6 +12,10 @@ public class ShowtimeBoard {
         this.count = 0;
     }
 
+    public ShowtimeBoard() {
+
+    }
+
     public void add(Showtime s) {
         if (count < MAX) {
             shows[count] = s;
