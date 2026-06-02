@@ -21,4 +21,9 @@ public class ShowtimeBoard {
         }
         return null;
     }
+    public void displayAll(){
+        for (int d=0; d<count; d++){
+            System.out.println(shows[d]);
+        };
+    }
 }
