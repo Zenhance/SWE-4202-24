@@ -33,5 +33,7 @@ import model.Seat;
 import model.ConcessionItem;
 
 public class CheckoutEngine {
+    private Showtime board;
+    private ConcessionMenu menu;
 
 }
