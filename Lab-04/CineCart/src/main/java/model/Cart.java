@@ -17,4 +17,9 @@ public class Cart {
         ticketCount = 0;
         itemCount = 0;
     }
+    public void addTicket(Ticket t){
+        if (ticketCount>=MAX_TICKETS){return;}
+        tickets[ticketCount] = t;
+        ticketCount++;
+    }
 }
