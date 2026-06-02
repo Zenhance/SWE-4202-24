@@ -34,8 +34,8 @@ public class Seat {
         this.isBooked = true;
     }
 
-    public void release(boolean isBooked) {
-        isBooked = false;
+    public void release() {
+        this.isBooked = false;
     }
 
     public String toString() {
