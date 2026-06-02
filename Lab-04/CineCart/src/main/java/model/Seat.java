@@ -40,7 +40,12 @@ public class Seat {
         return true;
     }
 
-//    public String toString(){
-//        return "R3C5"
-//    }
+    public String toString(){
+        String ans = String.format("R%dC%d", row, col);
+        if(isPremium)
+            ans += "*";
+        if(isBooked)
+            ans += "#";
+        return ans;
+    }
 }
