@@ -13,6 +13,7 @@ public class ConcessionItem {
         return code;
     }
     public String getName(){
+
         return name;
     }
     public double getUnitPrice(){
