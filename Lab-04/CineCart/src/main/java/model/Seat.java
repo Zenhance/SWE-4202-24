@@ -31,7 +31,7 @@ public class Seat {
     void release(){
         this.isBooked=false;
     }
-    boolean isAvailable(){
+    public boolean isAvailable(){
         return !isBooked;
     }
     public String toString(){
