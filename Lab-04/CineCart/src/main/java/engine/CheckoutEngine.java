@@ -68,7 +68,10 @@ public class CheckoutEngine
         {
             group=0.10*preDiscount;
         }
-
-        return 0.0;
+        double tier = cart.getOwner().getTierDiscount()*preDiscount;
+        double afterDiscount = preDiscount-group-tier;
+        double tax = 0.05*afterDiscount;
+        double total = afterDiscount+tax;
+        return Math.round(total*100.0)/100.0;
     }
 }
