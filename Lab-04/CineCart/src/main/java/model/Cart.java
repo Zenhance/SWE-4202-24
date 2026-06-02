@@ -25,6 +25,13 @@ public class Cart {
             itemCount++;
         }
     }
+    public void addTicket(Ticket t) {
+        if(ticketCount<MAX_TICKETS){
+            tickets[ticketCount]=t;
+            ticketCount++;
+        }
+
+    }
        public Customer getOwner() {
             return owner;
         }
@@ -66,6 +73,6 @@ public class Cart {
         return false;
         }
 
-    public void addTicket(Ticket ticket) {
-    }
+
+
 }
