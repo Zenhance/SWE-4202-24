@@ -51,5 +51,9 @@ public class CheckoutEngine {
         if (showtime == null) {
             return "Showtime not found";
         }
+
+        if (cart.getOwner().getAge() < showtime.getMovie().getMinAge()) {
+            return String.format("Underage for rating %s", showtime.getMovie().getRating());
+        }
     }
 }
