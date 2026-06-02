@@ -54,11 +54,11 @@ public class Cart {
         return qtys;
     }
 
-    public int getItemcount() {
+    public int getItemCount() {
         return itemcount;
     }
 
-    public double sumTicketPaid(){
+    public double sumTicketsPaid(){
         double sum =0;
         for(int i=0;i<MAX_TICKET;i++){
             sum+=tickets[i].getPricePaid();
@@ -66,7 +66,7 @@ public class Cart {
         return sum;
     }
 
-    public double sumConcessionRaw(){
+    public double sumConcessionsRaw(){
         double sum =0;
         for(int i=0;i<MAX_ITEMS;i++){
             sum+=items[i].getUnitPrice()*qtys[i];
