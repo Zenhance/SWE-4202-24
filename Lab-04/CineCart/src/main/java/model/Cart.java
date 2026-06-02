@@ -63,4 +63,19 @@ public class Cart {
         }
         return sum;
     }
+    public double sumConcessionsRaw(){
+        double total= 0;
+        for (int i= 0; i<itemCount;i++) {
+            total+=items[i].getUnitPrice()*qtys[i];
+        }
+        return total;
+    }
+    public boolean hasItem(String code){
+        for (int i=0;i<itemCount;i++) {
+            if(items[i].getCode().equals(code)){
+                return true;
+            }
+        }
+        return false;
+    }
 }
