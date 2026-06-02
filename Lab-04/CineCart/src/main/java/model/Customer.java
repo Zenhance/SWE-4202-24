@@ -43,6 +43,9 @@ public class Customer {
             default: return 0.00;
         }
     }
+    public String toString() {
+        return String.format("Customer{id=%d, name='%s', age=%d, tier=%s}", id, name, age, loyaltyTier);
+    }
 
 
 
