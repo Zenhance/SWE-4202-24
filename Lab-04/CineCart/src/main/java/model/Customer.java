@@ -41,7 +41,8 @@ public class Customer {
         }
         else return 0.00d;
     }
-//    public String toString(){
-//
-//    }
+
+    public String toString(){
+    return String.format("Customer[%d] %s (age %d) - %s", id, name, age, loyaltyTier);
+    }
 }
