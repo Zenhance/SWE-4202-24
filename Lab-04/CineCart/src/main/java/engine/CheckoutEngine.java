@@ -100,7 +100,7 @@ public class CheckoutEngine {
         }
         double total = checkout(cart);
         result += "\nDiscount applied\n";
-        result+="Total:BDT " + String.format("%.2f,total") + "\n";
+        result+="Total:BDT " + String.format("%.2f",total) + "\n";
                 return result;
     }
 }
