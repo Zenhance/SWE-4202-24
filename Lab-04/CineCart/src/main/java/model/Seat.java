@@ -7,6 +7,9 @@ public class Seat {
     private boolean isBooked;
 
     public Seat(int row, int col, boolean isPremium){
+        if(row < 0 || col < 0){
+            throw new IllegalArgumentException("row and col should be non-negative");
+        }
         this.row = row;
         this.col = col;
         this.isPremium = isPremium;
