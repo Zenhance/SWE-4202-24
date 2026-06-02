@@ -32,11 +32,11 @@ public class Cart {
         qtys[itemCount++] = qty;
     }
 
-    public Customer getOwner(){
+    public Customer getOwner() {
         return owner;
     }
 
-    public Ticket[] getTickets(){
+    public Ticket[] getTickets() {
         return tickets;
     }
 
@@ -54,5 +54,15 @@ public class Cart {
 
     public int getItemCount() {
         return itemCount;
+    }
+
+    public double sumTicketsPaid() {
+        double sum = 0;
+
+        for (int i=0; i<ticketCount; i++) {
+            sum += tickets[i].getPricePaid();
+        }
+
+        return sum;
     }
 }
