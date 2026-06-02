@@ -27,6 +27,7 @@ public class ConcessionItem {
 
 
     public String toString(){
-        String final=String.format("%s - %s - BDT %0.2f", code, name, unitPrice);
+        final String result =String.format("%s - %s - BDT %0.2f", code, name, unitPrice);
+        return result;
     }
 }
