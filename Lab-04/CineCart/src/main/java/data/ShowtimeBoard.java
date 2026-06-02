@@ -18,7 +18,26 @@ public class ShowtimeBoard {
     public static int getMAX() {
         return MAX;
     }
+
+
+    public void add(Showtime s){
+        if(count>= MAX){
+            return;
+        }
+        shows[count]=s;
+        count++;
+    }
+    public Showtime findById(int id){
+        for(int i=0;i<count;i++){
+            if(shows[i].getId() == id){
+                return shows[i];
+            }
+
+        }
+        return null;
+    }
 }
+
 
 
 
