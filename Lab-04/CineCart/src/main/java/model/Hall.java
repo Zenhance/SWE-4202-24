@@ -21,12 +21,12 @@ public class Hall {
         }
     }
 
-    Seat getSeat(int row,int col){
+    public Seat getSeat(int row,int col){
         return grid[row][col];
     }
 
     int count=0;
-    int countAvailable(){
+    public int countAvailable(){
         for(int r=0;r<rows;r++)
             for(int c=0;c<cols;c++)
             {
@@ -37,4 +37,21 @@ public class Hall {
             }
         return count;
     }
+
+    public void displayLayout(){
+        for(int r=0;r<rows;r++)
+            for(int c=0;c<cols;c++)
+            {
+                if(grid[r][c].isAvailable())
+                {
+                    System.out.println(" .");
+                }
+                if(!grid[r][c].isAvailable())
+                {
+                    System.out.println(" #");
+                }
+            }
+        System.out.print("\n");
+    }
+
 }
