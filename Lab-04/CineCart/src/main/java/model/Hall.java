@@ -6,7 +6,7 @@ public class Hall {
     private int rows;
     private int cols;
     private Seat[][] grid;
-}
+
 
 public Hall(int id, int rows, int cols, int premiumRows){
 
@@ -63,6 +63,4 @@ public void displayLayout(){
 
             } System.out.println("");
         }
-
-
 }
