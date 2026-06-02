@@ -6,7 +6,7 @@ public class Customer {
     private int age;
     private String loyaltyTier;
     //constructor
-    public Customer{
+    public Customer {
         this.id=id;
         this.name=name;
         this.age=age;

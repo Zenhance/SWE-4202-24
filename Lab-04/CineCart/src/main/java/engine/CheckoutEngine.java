@@ -1,4 +1,21 @@
 package engine;
-
+import data.*;
+import model.*;
 public class CheckoutEngine {
+    private ShowtimeBoard board;
+    private ConcessionMenu menu;
+
+    //constructor
+    public CheckoutEngine(ShowtimeBoard board, ConcessionMenu menu) {
+        this.board = board;
+        this.menu = menu;
+    }
+
+    public String bookTicket(Cart cart, int showtimeId, int row, int col) {
+        if (show == null) {
+            return "Showtime not found";
+        }
+
+
+    }
 }
