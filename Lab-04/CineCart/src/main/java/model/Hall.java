@@ -6,7 +6,7 @@ public class Hall {
     private int id;
     private int rows;
     private int cols;
-    private int Seat[][] grid;
+    private int[][] Seat;
 
 
     //constructors
@@ -22,7 +22,7 @@ public class Hall {
             boolean isPremium = (r < premiumRows);
 
             for (int c = 0; c < cols; c++) {
-                grid [r][c] = new Seat(r, c, isPremium);
+
 
             }
         }
