@@ -36,12 +36,15 @@ public class Movie {
         return basePrice;
     }
 
-    public int getMinAge(String ageStatus){
-        switch (ageStatus){
-            case "G" : return 0;
-            case "PG" : return 7;
-            case "PG-13" : return  13;
-            case "R" : return 18;
+    public int getMinAge() {
+        if (rating.equals("G")) {
+            return 0;
+        } else if (rating.equals("PG")) {
+            return 7;
+        } else if (rating.equals("PG-13")) {
+            return 13;
+        } else if (rating.equals("R")) {
+            return 18;
         }
         return 0;
     }
