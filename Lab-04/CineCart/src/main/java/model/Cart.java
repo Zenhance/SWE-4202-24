@@ -9,49 +9,49 @@ public class Cart {
     int itemCount;
     public Cart(Customer owner){
         this.owner=owner;
-        tickets = new Ticket[MAX_TICKETS];
-        items = new ConcessionItem[MAX_ITEMS];
-        qtys = new int[MAX_ITEMS];
-        ticketCount = 0;
-        itemCount = 0;
+        tickets=new Ticket[MAX_TICKETS];
+        items=new ConcessionItem[MAX_ITEMS];
+        qtys=new int[MAX_ITEMS];
+        ticketCount=0;
+        itemCount=0;
     }
-    void addTicket(Ticket t) {
-        if (ticketCount < MAX_TICKETS) {
-            tickets[ticketCount] = t;
+    void addTicket(Ticket t){
+        if (ticketCount<MAX_TICKETS){
+            tickets[ticketCount]=t;
             ticketCount++;
         }
     }
         void addItem(ConcessionItem c,int qty)
         {
-            if (itemCount < MAX_ITEMS && qty > 0)
+            if (itemCount<MAX_ITEMS&&qty>0)
             {
-                items[itemCount] = c;
-                qtys[itemCount] = qty;
+                items[itemCount]=c;
+                qtys[itemCount]=qty;
                 itemCount++;
             }
         }
 
-    public Customer getOwner() {
+    public Customer getOwner(){
         return owner;
     }
 
-    public int getItemCount() {
+    public int getItemCount(){
         return itemCount;
     }
 
-    public int[] getQtys() {
+    public int[] getQtys(){
         return qtys;
     }
 
-    public int getTicketCount() {
+    public int getTicketCount(){
         return ticketCount;
     }
 
-    public Ticket[] getTickets() {
+    public Ticket[] getTickets(){
         return tickets;
     }
 
-    public ConcessionItem[] getItems() {
+    public ConcessionItem[] getItems(){
         return items;
     }
 
@@ -70,7 +70,7 @@ public class Cart {
         return sum;
     }
     boolean hasItem(String code) {
-        for( int i = 0;i < ticketCount;i++){
+        for( int i=0;i<ticketCount;i++){
         if(items[i].getCode().equals(code))
             return true;
         }
