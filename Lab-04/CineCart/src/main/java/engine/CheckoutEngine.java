@@ -60,6 +60,9 @@ public class CheckoutEngine {
         if(cart.getTicketCount()>=4){
             group=0.10*preDiscount;
         }
+        double tier= cart.getOwner().getTierDiscount()*preDiscount;
+
+        double afterDiscounts = preDiscount - group - tier;
 
 
 
