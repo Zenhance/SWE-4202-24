@@ -1,7 +1,7 @@
 package engine;
 
-import data.ShowtimeBoard;
 import data.ConcessionMenu;
+import data.ShowtimeBoard;
 import model.Cart;
 import model.ConcessionItem;
 import model.Seat;
@@ -25,26 +25,26 @@ public class CheckoutEngine {
         }
 
         int customerAge = cart.getOwner().getAge();
-        int minAge = showtime.getMovie().getMinAge();
+        int minimumAge = showtime.getMovie().getMinAge();
 
-        if (customerAge < minAge) {
+        if (customerAge < minimumAge) {
             return "Underage for rating " + showtime.getMovie().getRating();
         }
 
         Seat seat = showtime.getHall().getSeat(row, col);
 
-        if (seat.isBooked()) {
-            return "Seat unavailable";
+        if (!seat.isAvailable()) {
+            return "Seat not available";
         }
 
         double price = showtime.getMovie().getBasePrice();
 
         if (seat.isPremium()) {
-            price *= 1.30;
+            price = price * 1.30;
         }
 
         if (showtime.isPeak()) {
-            price *= 1.20;
+            price = price * 1.20;
         }
 
         seat.book();
@@ -64,7 +64,6 @@ public class CheckoutEngine {
 
         if (qty <= 0) {
             return "Invalid quantity";
-
         }
 
         cart.addItem(item, qty);
@@ -74,28 +73,22 @@ public class CheckoutEngine {
     public double checkout(Cart cart) {
         double ticketSubtotal = cart.sumTicketsPaid();
         double concessionSubtotal = cart.sumConcessionsRaw();
-
-        double combo;
-        if (cart.hasItem("POP") && cart.hasItem("SODA")) {
-            combo = 50.0;
-        } else {
-            combo = 0.0;
+        double preDiscount = ticketSubtotal + concessionSubtotal;
+        double groupDiscount = 0;
+        if (cart.getTicketCount() >= 8) {
+            groupDiscount = 10 * preDiscount;
         }
-
-        double preDiscount = ticketSubtotal + concessionSubtotal - combo;
-
-        double group;
-        if (cart.getTicketCount() >= 4) {
-            group = 0.10 * preDiscount;
-        } else {
-            group = 0.0;
-        }
-
-        double tier = cart.getOwner().getTierDiscount() * preDiscount;
-
-        double afterDiscounts = preDiscount - group - tier;
-        double tax = 0.05 * afterDiscounts;
-
+        double tierDiscount = cart.getOwner().getTierDiscount() * preDiscount;
+        double afterDiscounts = preDiscount - groupDiscount - tierDiscount;
+        double tax = 5 * afterDiscounts;
+        double finalAmount = afterDiscounts + tax;
+        return Math.round(finalAmount * 100) / 100;
     }
 
+    public String getReceipt(Cart cart) {
+        String receipt = "Receipt";
+        receipt += "Customer: " + cart.getOwner().getName() ;
+        receipt += "BDT Total: " + String.format("%.2f", checkout(cart));
+        return receipt;
+    }
 }
