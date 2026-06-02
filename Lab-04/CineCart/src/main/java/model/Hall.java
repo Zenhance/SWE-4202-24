@@ -1,5 +1,6 @@
 package model;
 
+
 public class Hall {
     private int id;
     private int rows;
@@ -22,8 +23,28 @@ public class Hall {
     public Seat getSeat(int row,int col){
         return grid[row][col];
     }
-    public int countAvailable{
+    public int countAvailable(){
         int count=0;
-        for(Seat)
+        for(int i=0;i<rows;i++){
+            for(int j=0;j<cols;j++){
+
+                if(grid[i][j].isAvailable()) {
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
+    public void displayLayout(){
+        for(int i=0;i<rows;i++){
+            for(int j=0;j<cols;j++){
+                Seat s=grid[i][j];
+                if(s.isBooked()) System.out.print("#");
+                else if(s.isPremium()) System.out.print("*");
+                else System.out.println(".");
+
+            }
+            System.out.println();
+        }
     }
 }
