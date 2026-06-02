@@ -10,6 +10,8 @@ public class CineCartApp {
         Hall[] halls= CsvLoader.loadHalls("halls.csv");
         ShowtimeBoard board =CsvLoader.loadShowtimes{
             "showtimes.csv",movies,halls);
+ConcessionMenu menu =CsvLoader.loadConcessions("concessions.csv");
+Customer[]customers = CsvLoader.loadConcessions("concessions.csv");
         }
     }
 }
