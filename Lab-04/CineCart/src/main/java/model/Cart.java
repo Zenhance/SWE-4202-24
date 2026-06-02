@@ -27,11 +27,17 @@ public class Cart {
        public Customer getOwner() {
             return owner;
         }
-       public Ticket[] getTicket{
+       public Ticket[] getTicket(){
            return tickets;
         }
-       public int getTicketCount{
+       public int getTicketCount(){
            return ticketCount;
+        }
+       public ConcessionItem[] getItems(){
+           return items;
+        }
+       public int getQtys(){
+
         }
 
 }
