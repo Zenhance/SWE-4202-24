@@ -55,4 +55,14 @@ public class CheckoutEngine {
         }
         return "OK";
     }
+
+    public double checkout(Cart cart){
+        double ticketSubtotal = cart.sumTicketsPaid();
+        double concessionSubtotal = cart.sumConcessionsRaw();
+        if(cart.hasItem())
+    }
+
+    public String getReceipt(Cart cart){
+    
+    }
 }
