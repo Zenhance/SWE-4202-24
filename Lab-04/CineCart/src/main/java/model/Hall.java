@@ -5,7 +5,7 @@ public class Hall {
     private int rows;
     private int cols;
     private Seat[][] grid;
-    int availCount = 0;
+    private int availCount = 0;
 
     public Hall(int id, int rows, int cols, int premiumRows){
         this.id = id;
