@@ -18,24 +18,24 @@ public class Movie {
     }
 
     //getters
-    public int getId(int id){
-        return id;
+    public int getId(){
+        return this.id;
     }
 
-    public String getTitle(String title) {
-        return title;
+    public String getTitle() {
+        return this.title;
     }
 
-    public String getRating(int durationMin) {
-        return rating;
+    public String getRating() {
+        return this.rating;
     }
 
-    public int getDurationMin(int durationMin) {
-        return durationMin;
+    public int getDurationMin() {
+        return this.durationMin;
     }
 
-    public double getBasePrice(double basePrice) {
-        return basePrice;
+    public double getBasePrice() {
+        return this.basePrice;
     }
 
     //methods
