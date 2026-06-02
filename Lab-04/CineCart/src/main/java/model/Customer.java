@@ -23,8 +23,9 @@ public Customer(int id, String name, int age) {
 public String getLoyaltyTier() {
     return loyaltyTier;
 }
-
-
+public int getAge() {
+    return age;
+}
 
     public double getTierDiscount(){
     if(loyaltyTier.equals ("GOLD")) {
