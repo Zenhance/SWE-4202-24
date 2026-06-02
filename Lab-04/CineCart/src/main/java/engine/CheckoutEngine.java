@@ -134,5 +134,11 @@ public class CheckoutEngine {
         double tier = cart.getOwner().getTierDiscount() * preDiscount;
         double afterDiscounts = preDiscount - group - tier;
         double tax = 0.05 * afterDiscounts;
+
+        return round2(afterDiscounts + tax);
+    }
+
+    private double round2(double v) {
+        return Math.round(v * 100.0) / 100.0;
     }
 }
