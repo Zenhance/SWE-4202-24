@@ -1,0 +1,27 @@
+package data;
+
+import model.ConcessionItem;
+import model.ConcessionMenu;
+import model.Showtime;
+public class ShowtimeBoard {
+    private static final int MAX=30;
+    private Showtime[] shows;
+    private int count;
+
+    public void add(Showtime s) {
+        if (count < MAX) {
+            shows[count++] = s;
+        }
+    }
+    public Showtime findById(int id) {
+        for (int i = 0; i < count; i++) {
+            if (shows[i].getId() == id) return shows[i];
+        }
+        return null;
+    }
+    public void displayAll() {
+        for (int i = 0; i < count; i++) {
+            System.out.println(shows[i].toString());
+        }
+    }
+}
