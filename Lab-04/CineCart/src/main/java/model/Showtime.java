@@ -1,11 +1,11 @@
 package model;
 
 public class Showtime {
-    public int id;
-    public Movie movie;
-    public Hall hall;
-    public int startHour;
-    public String dateTag;
+    private int id;
+    private Movie movie;
+    private Hall hall;
+    private int startHour;
+    private String dateTag;
     public Showtime(int id,Movie movie,Hall hall,int startHour,String dateTag){
         this.id=id;
         this.movie=movie;
@@ -35,6 +35,7 @@ public class Showtime {
         return startHour>=18 && startHour<=21;
     }
     public String toString(){
-        return "[T"+id+"]"+movie.getTitle()+" @ Hall"+hall.getId()+" - "+startHour.format("%02d:00",startHour)+"("+dateTag+")";
+        return "[T" + id + "] " + movie.getTitle() + " @ Hall " + hall.getId() + " - "
+                + startHour + ":00" + " (" + dateTag + ")";
     }
 }
