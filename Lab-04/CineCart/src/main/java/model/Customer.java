@@ -5,6 +5,7 @@ public class Customer {
     public String name;
     public int age;
     public String loyaltyTier;
+
     public Customer(int id,String name,int age){
         this.id=id;
         this.name=name;
@@ -27,6 +28,9 @@ public class Customer {
         return age;
     }
     public String getloyaltyTier(){
+        return loyaltyTier;
+    }
+    public String getLoyaltyTier() {
         return loyaltyTier;
     }
     public double getTierDiscount(){
