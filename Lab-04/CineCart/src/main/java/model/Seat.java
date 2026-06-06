@@ -28,8 +28,10 @@ public class Seat {
         return isPremium;
     }
 
-    public void book() {
-        isBooked=true ;
+    public boolean book() {
+        if(isBooked)
+            return true;
+        return false;
     }
     public void release(){
         isBooked=false;
