@@ -12,8 +12,8 @@ public class CheckoutEngine {
     private ConcessionMenu menu;
 
     public CheckoutEngine(ShowtimeBoard board, ConcessionMenu menu) {
-        this.board = board;
-        this.menu = menu;
+        this.board=board;
+        this.menu=menu;
     }
 
     public String bookTicket(Cart cart, int showtimeId, int row, int col) {
@@ -33,8 +33,8 @@ public class CheckoutEngine {
         return "OK";
     }
 public String addConcession(Cart cart, String code, int qty) {
-    if (menu.findByCode(code) == null) return "Item not found";
-    if (qty <= 0) return "Invalid quantity";
+    if (menu.findByCode(code)==null) return "Item not found";
+    if (qty<=0) return "Invalid quantity";
 
     cart.addItem(menu.findByCode(code), qty);
 
@@ -44,8 +44,8 @@ public double checkout(Cart cart) {
     double ticketSubtotal=cart.sumTicketsPaid();
     double concessionSubtotal=cart.sumConcessionsRaw();
     double combo;
-    if (cart.hasItem("POP") && cart.hasItem("SODA")) combo = 50.0;
-    else combo = 0.0;
+    if (cart.hasItem("POP") && cart.hasItem("SODA")) combo=50.0;
+    else combo=0.0;
 
     double preDiscount=ticketSubtotal+concessionSubtotal-combo;
 
@@ -58,7 +58,7 @@ public double checkout(Cart cart) {
     double afterDiscounts=preDiscount-group-tier;
     double tax=0.05*afterDiscounts;
     double round=afterDiscounts+tax;
-    return Math.round(round * 100.0) / 100.0;
+    return Math.round(round*100.0)/100.0;
 }
 public String getReceipt(Cart cart) {
     return String.format("Receipt\n"+"%s"+"Total"+"BDT"+"Disount", cart.getOwner().getName());

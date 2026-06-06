@@ -7,8 +7,8 @@ public class Seat {
 
 
     public Seat(int row, int col, boolean isPremium) {
-        this.row = row;
-        this.col = col;
+        this.row=row;
+        this.col=col;
         this.isPremium=isPremium;
     }
 
@@ -29,13 +29,13 @@ public class Seat {
     }
 
     public void book() {
-        isBooked = true ;
+        isBooked=true ;
     }
     public void release(){
         isBooked=false;
     }
     public boolean isAvailable(){
-        return isBooked;
+        return !isBooked;
     }
     public String toString(){
         return "R"+row+"C"+col+(isPremium?"*":"#");

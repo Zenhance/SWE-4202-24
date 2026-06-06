@@ -8,6 +8,7 @@ public class Customer {
         this.id=id;
         this.age=age;
         this.name=name;
+        loyaltyTier="BASIC";
     }
     public Customer(int id, String name, int age, String tier){
         this.id=id;
@@ -33,7 +34,7 @@ public class Customer {
     public double getTierDiscount(){
         if(loyaltyTier.equals("GOLD"))
             return 0.15;
-        else if(loyaltyTier.equals("Silver"))
+        else if(loyaltyTier.equals("SILVER"))
             return 0.08;
         else return 0.00;
     }
