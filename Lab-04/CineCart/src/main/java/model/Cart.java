@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Arrays;
+
 public class Cart {
     public static final int MAX_TICKETS = 20;
     public static final int MAX_ITEMS = 20;
@@ -41,7 +43,7 @@ public class Cart {
     }
 
     public Ticket[] getTickets() {
-        return tickets;
+        return Arrays.copyOf(tickets, ticketCount);
     }
 
     public int getTicketCount() {
@@ -49,11 +51,11 @@ public class Cart {
     }
 
     public ConcessionItem[] getItems() {
-        return items;
+        return Arrays.copyOf(items, itemCount);
     }
 
     public int[] getQtys() {
-        return qtys;
+        return Arrays.copyOf(qtys, itemCount);
     }
 
     public int getItemCount() {
