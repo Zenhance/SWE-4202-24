@@ -1,14 +1,16 @@
 package model;
 
 public class ConcessionItem {
-    private String code;
-    private String name;
-    private double unitPrice;
+    private final String code;
+    private final String name;
+    private final double unitPrice;
 
     public ConcessionItem(String code, String name, double unitPrice) {
           this.code = code;
           this.name = name;
-          if (unitPrice>=0) this.unitPrice = unitPrice;
+          if (unitPrice<0)
+              throw new IllegalArgumentException("Invalid unitPrice");
+          this.unitPrice = unitPrice;
     }
 
     public String getCode() {
