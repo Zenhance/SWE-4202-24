@@ -11,7 +11,7 @@ public class Showtime {
         this.id = id;
         this.movie = movie;
         this.hall = hall;
-        if (startHour>=0 && startHour<=23)
+        if (startHour<0 && startHour>23)
             throw new IllegalArgumentException("Invalid startHour");
         this.startHour = startHour;
         this.dateTag = dateTag;
