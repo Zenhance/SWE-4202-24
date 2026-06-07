@@ -32,7 +32,10 @@ public class Seat {
     }
 
     public boolean book() {
-        if (isBooked) return true;
+        if (!isBooked) {
+            isBooked = true;
+            return true;
+        }
         return false;
     }
 

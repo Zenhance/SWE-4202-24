@@ -72,7 +72,7 @@ public class CheckoutEngine {
                 "%s" +
                 "Total" +
                 "BDT" +
-                "Disount",
+                "Discount",
                 cart.getOwner().getName());
     }
 
