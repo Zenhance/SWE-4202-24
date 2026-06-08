@@ -47,13 +47,13 @@ public class CheckoutEngine {
     public double checkout(Cart cart){
         double ticketSubtotal= cart.sumTicketsPaid();
         double concessionSubtotal= cart.sumConcessionsRaw();
-        double combo=0;
+        double combo=0.0;
         if(cart.hasItem("POP")&& cart.hasItem("SODA")){
-            combo=50;
+            combo=50.0;
         }
         double preDiscount= ticketSubtotal+concessionSubtotal-combo;
 
-        double group=0;
+        double group=0.0;
         if(cart.getTicketCount()>=4){
             group=preDiscount*0.10;
         }

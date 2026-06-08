@@ -9,13 +9,13 @@ public class Cart {
     private int ticketCount;
     private ConcessionItem[] items;
     private int[] qtys;
-    private int itemcount;
+    private int itemCount;
 
     public Cart(Customer owner){
         this.owner = owner;
         this.tickets = new Ticket[MAX_TICKET];
         this.items = new ConcessionItem[MAX_ITEMS];
-        this.itemcount=0;
+        this.itemCount=0;
         this.ticketCount=0;
         this.qtys=new int[MAX_ITEMS];
     }
@@ -29,10 +29,10 @@ public class Cart {
     }
 
     public void addItem(ConcessionItem c,int qty){
-        if(itemcount<MAX_ITEMS && qty>0){
-            items[itemcount]=c;
-            qtys[itemcount]=qty;
-            itemcount++;
+        if(itemCount<MAX_ITEMS && qty>0){
+            items[itemCount]=c;
+            qtys[itemCount]=qty;
+            itemCount++;
         }
     }
 
@@ -57,12 +57,12 @@ public class Cart {
     }
 
     public int getItemCount() {
-        return itemcount;
+        return itemCount;
     }
 
     public double sumTicketsPaid(){
-        double sum =0;
-        for(int i=0;i<MAX_TICKET;i++){
+        double sum =0.0;
+        for(int i=0;i<ticketCount;i++){
             sum+=tickets[i].getPricePaid();
         }
         return sum;
@@ -71,14 +71,14 @@ public class Cart {
     public double sumConcessionsRaw(){
         double sum =0;
         int [] qtys = getQtys();
-        for(int i=0;i<MAX_ITEMS;i++){
+        for(int i=0;i<itemCount;i++){
             sum+=items[i].getUnitPrice()*qtys[i];
         }
         return sum;
     }
 
     public boolean hasItem(String code){
-        for(int i=0;i<MAX_ITEMS;i++){
+        for(int i=0;i<itemCount;i++){
             if(items[i].getCode().equals(code)){
                 return true;
             }
