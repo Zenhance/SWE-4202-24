@@ -1,28 +1,43 @@
 package model;
 
 public class Showtime {
-    private int id;
-    private Movie movie;
-    private Hall hall;
-    private int startHour;
-    private String dateTag;
+    private final int id;
+    private final Movie movie;
+    private final Hall hall;
+    private final int startHour;
+    private final String dateTag;
 
-    public Showtime(int id, Movie movie, Hall hall, int startHour, String dateTag){
+    public Showtime(int id, Movie movie, Hall hall, int startHour, String dateTag) {
         this.id = id;
-        this.movie =movie;
-        this.hall =hall;
-        this.startHour=startHour;
-        this.dateTag=dateTag;
-
+        this.movie = movie;
+        this.hall = hall;
+        this.startHour = startHour;
+        this.dateTag = dateTag;
     }
 
-    public int getId(){
+    public int getId() {
         return id;
     }
 
-    public Movie getMovie(){
+    public Movie getMovie() {
         return movie;
     }
 
+    public Hall getHall() {
+        return hall;
+    }
+
+    public int getStartHour() {
+        return startHour;
+    }
+
+    public String getDateTag() {
+        return dateTag;
+    }
+
+
 
 }
+
+
+
