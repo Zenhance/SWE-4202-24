@@ -1,7 +1,5 @@
 package model;
 
-import java.util.Arrays;
-
 public class Cart {
     public static final int MAX_TICKETS = 20;
     public static final int MAX_ITEMS = 20;
@@ -43,7 +41,9 @@ public class Cart {
     }
 
     public Ticket[] getTickets() {
-        return Arrays.copyOf(tickets, ticketCount);
+        Ticket[] tickets = new Ticket[ticketCount];
+        System.arraycopy(this.tickets, 0, tickets, 0, ticketCount);
+        return tickets;
     }
 
     public int getTicketCount() {
@@ -51,11 +51,15 @@ public class Cart {
     }
 
     public ConcessionItem[] getItems() {
-        return Arrays.copyOf(items, itemCount);
+        ConcessionItem[] items = new ConcessionItem[itemCount];
+        System.arraycopy(this.items, 0, items, 0, itemCount);
+        return items;
     }
 
     public int[] getQtys() {
-        return Arrays.copyOf(qtys, itemCount);
+        int[] qtys = new int[itemCount];
+        System.arraycopy(this.qtys, 0, qtys, 0, itemCount);
+        return qtys;
     }
 
     public int getItemCount() {
