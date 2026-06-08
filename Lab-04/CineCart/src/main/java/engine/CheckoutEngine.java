@@ -40,6 +40,39 @@ public class CheckoutEngine {
         return "OK";
     }
 
+    public String addConcession(Cart cart, String code, int qty){
+        ConcessionItem item = menu.findByCode(code);
+        if(item == null){
+            return "Item not found";
+        }
+        if(qty <= 0){
+            return "Invalid quantity";
+        }
+        cart.addItem(item, qty);
+        return "OK";
+
+    }
+    public double checkout(Cart cart) {
+        double ticketSub = cart.sumTicketsPaid();
+        double concSub   = cart.sumConcessionsRaw();
+        double combo     = (cart.hasItem("POP") && cart.hasItem("SODA")) ? 50.0 : 0.0;
+        double pre       = ticketSub + concSub - combo;
+        double group     = (cart.getTicketCount() >= 4) ? 0.10 * pre : 0.0;
+        double tier      = cart.getOwner().getTierDiscount() * pre;
+        double after     = pre - group - tier;
+        double tax       = 0.05 * after;
+        return Math.round((after + tax) * 100.0) / 100.0;
+    }
+
+    public String getReceipt(Cart cart){
+        double total = checkout(cart);
+        String receipt = "Receipt\n";
+        receipt += "Customer: " + cart.getOwner().getName() + "\n";
+        receipt += "Discount applied\n";
+        receipt += String.format("Total: BDT %.2f\n", total);
+        return receipt;
+    }
+
 
 
 
