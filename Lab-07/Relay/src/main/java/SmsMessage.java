@@ -6,6 +6,23 @@ public class SmsMessage extends Message {
         super(recipient, body);
     }
 
+    private int segmentCount() {
+        int len = getBody().length();
+        return len/SMS_SEGMENT_SIZE;
+    }
+
+    public String deliver() {
+        return ("SMS " + "Total segments " + segmentCount() + " " + getBody());
+    }
+
+    public double cost() {
+        return segmentCount() * SMS_PER_SEGMENT;
+    }
+
+    public String describe() {
+        return ("SMS send to " + getRecipient().getName() + " " + getRecipient().getAddress());
+    }
+
 
 
 }

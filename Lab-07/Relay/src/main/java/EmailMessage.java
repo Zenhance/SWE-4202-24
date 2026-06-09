@@ -12,6 +12,6 @@ public class EmailMessage extends Message {
     }
 
     public String describe() {
-        return ("Mail send to " + getRecipient().getName() + getRecipient().getAddress());
+        return ("Mail send to " + getRecipient().getName() + " " + getRecipient().getAddress());
     }
 }
