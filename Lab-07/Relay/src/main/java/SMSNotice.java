@@ -5,4 +5,8 @@ public class SMSNotice extends Notice{
     private int segments(){
         return (text.length()+159)/160;
     }
+    @Override
+    public String deliver(){
+        return "SMS ( " +segments() + "segments):" + text;
+    }
 }
