@@ -5,4 +5,12 @@ public class SMSNotice extends Notice{
     public SMSNotice(Recipient recipient,String text){
         super(recipient,text);
     }
+
+    private int getSmsSegmentSize(){
+        int length = getText().length();
+
+        if(length == 0){return 1;}
+
+        return (length+SMS_SEGMENT_SIZE-1)/SMS_SEGMENT_SIZE;
+    }
 }
