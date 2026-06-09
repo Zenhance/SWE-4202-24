@@ -18,7 +18,7 @@ public class BankAccount {
         return balance;}
     }
     public void printstatement(){
-        System.out.println("Account Name" + name);
-        System.out.println("Balance" + balance);
+        System.out.println("Account Name - " + name);
+        System.out.println("Balance -  " + balance);
     }
 }
