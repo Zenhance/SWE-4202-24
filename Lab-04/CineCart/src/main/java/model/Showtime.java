@@ -23,6 +23,7 @@ public class Showtime {
 
     public int getStartHour() {
         return startHour;
+
     }
 
     public Movie getMovie() {
