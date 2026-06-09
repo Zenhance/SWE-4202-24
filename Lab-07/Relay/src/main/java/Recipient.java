@@ -11,14 +11,14 @@ public class Recipient {
         return name;
     }
 
-    public String getEmail() {
+    public String getAddress() {
         return email;
     }
 
     public void setName(String name) {
         this.name = name;
     }
-    public void setEmail(String email) {
+    public void setAddress(String email) {
         this.email = email;
     }
 

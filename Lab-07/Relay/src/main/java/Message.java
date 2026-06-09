@@ -1,8 +1,10 @@
 public abstract class Message {
-    private String message;
+    protected Recipient recipient;
+    protected String body;
 
-    public Message(String message) {
-        this.message = message;
+    public Message(Recipient recipient, String body) {
+        this.recipient = recipient;
+        this.body = body;
     }
 
     public String getMessage() {
@@ -12,5 +14,14 @@ public abstract class Message {
     public void setMessage(String message) {
         this.message = message;
     }
+
+    public abstract double cost();
+
+    public abstract String deliver();
+
+    public abstract String send();
+
+    public abstract String describe();
+
 
 }
