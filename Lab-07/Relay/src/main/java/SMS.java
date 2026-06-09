@@ -4,4 +4,20 @@ public class SMS extends Message{
         super(recipient,bodytext);
     }
 
+    public String deliver(){
+
+
+    }
+
+    public double cost(){
+
+
+    }
+
+    public String describe(){
+
+
+    }
+}
+
 
