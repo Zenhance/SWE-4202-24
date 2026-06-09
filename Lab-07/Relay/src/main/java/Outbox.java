@@ -17,3 +17,6 @@ public void queue(Notice notice,int repeat){
 public int waiting(){
     return count;
 }
+public double totalCost(){
+    double total=0;
+}
