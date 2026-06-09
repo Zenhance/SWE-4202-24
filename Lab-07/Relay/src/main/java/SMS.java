@@ -1,5 +1,5 @@
 public class SMS extends Notice {
-    private final double costPerSegment = 0.05;
+    private final double costPerSegment = 0.50;
     public SMS(Recipient recipient, String text) {
         super(recipient, text);
     }
