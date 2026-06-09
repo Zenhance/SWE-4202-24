@@ -7,5 +7,15 @@ public abstract class Notice {
     this.recipient=recipient;
     this.str=str;
 }
+    public Recipient getRecipient() {
+        return recipient;
+    }
+
+    public String getStr() {
+        return str;
+    }
+    public abstract String deliver();
+    public abstract double cost();
+    public abstract String describe();
 
 }
