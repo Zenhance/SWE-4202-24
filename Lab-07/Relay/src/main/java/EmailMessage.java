@@ -4,5 +4,7 @@ public class EmailMessage extends Notices {
         super(r,text);
     }
 
-
+    public String deliver(){
+        return "Email to" + recipient.getName();
+    }
 }
