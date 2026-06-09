@@ -4,7 +4,9 @@ public class SmsMessage extends Notice{
     }
     @Override
     public String deliver() {
-        return "";
+        int segments = txt.length()/160;
+        String msg = segments + txt;
+        return msg;
     }
 
     @Override
