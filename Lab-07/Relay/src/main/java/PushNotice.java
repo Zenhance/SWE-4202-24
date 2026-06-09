@@ -18,12 +18,12 @@ public class PushNotice extends Notice{
 
     @Override
     public double cost() {
-        return 0;
+        return FLAT_COST;
     }
 
     @Override
     public String describe() {
-        return "";
+        return "PUSH notice to "+getRecipient().getName();
     }
 
 
