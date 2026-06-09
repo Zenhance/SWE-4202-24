@@ -14,5 +14,11 @@ public class Message {
     public String getBodytext() {
         return bodytext;
     }
+
+    public String deliver();
+    public double cost();
+    public String describe();
+
+
 }
 
