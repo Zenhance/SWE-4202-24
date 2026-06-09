@@ -9,5 +9,17 @@ public abstract class Notice
         this.text = text;
     }
 
+    public Recipient getRecipient()
+    {
+        return recipient;
+    }
 
+    public String getText()
+    {
+        return text;
+    }
+
+    public abstract void deliver();
+
+    public abstract void cost();
 }
