@@ -21,5 +21,5 @@ public abstract class Notice
 
     public abstract void deliver();
 
-    public abstract void cost();
+    public abstract double cost();
 }
