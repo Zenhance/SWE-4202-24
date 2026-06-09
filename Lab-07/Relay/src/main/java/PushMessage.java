@@ -1,8 +1,8 @@
-public class PushNotice extends Notice{
+public class PushMessage extends Notice{
     private static final double PUSH_FLAT          = 0.10;
     private static final int    PUSH_PREVIEW_CHARS = 40;
 
-    public PushNotice(Recipient recipient,String text){
+    public PushMessage(Recipient recipient, String text){
         super(recipient,text);
     }
 
@@ -10,6 +10,7 @@ public class PushNotice extends Notice{
         if(getText().length()<= PUSH_PREVIEW_CHARS){return getText();}
         return getText().substring(0,PUSH_PREVIEW_CHARS);
     }
+
 
 
 }
