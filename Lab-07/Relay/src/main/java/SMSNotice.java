@@ -13,4 +13,10 @@ public class SMSNotice extends Notice{
 
         return (length+SMS_SEGMENT_SIZE-1)/SMS_SEGMENT_SIZE;
     }
+
+    @Override
+    public String deliver(){
+        return "SMS to "+getRecipient().getAddress()+" ["+getSmsSegmentSize()+" segment(s)]: "+getText();
+    }
+
 }
