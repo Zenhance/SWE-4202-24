@@ -19,5 +19,9 @@ public class PushMessage extends Notice{
     public double cost(){
         return PUSH_FLAT;
     }
+    @Override
+    public String describe(){
+        return "Push notice to "+getRecipient().getName();
+    }
 
 }
