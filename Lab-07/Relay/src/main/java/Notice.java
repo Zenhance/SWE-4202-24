@@ -15,5 +15,7 @@ abstract class Notice {
         return this.text;
     }
 
-
+    public abstract String deliver();
+    public abstract double cost();
+    public abstract String describe();
 }
