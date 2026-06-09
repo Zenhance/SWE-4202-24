@@ -4,4 +4,14 @@ public class EmailMessage extends Notice{
      public EmailMessage(Recipient r,String msg){
          super(r,msg);
     }
+
+    @Override
+    public String deliver() {
+        return msg;
+    }
+
+    @Override
+    public double cost() {
+        return 0;
+    }
 }

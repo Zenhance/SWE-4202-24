@@ -7,5 +7,7 @@ public abstract class Notice {
         this.msg=msg;
         this.r=r;
     }
-    public void deliver(){}
+    public abstract String deliver();
+    public abstract double cost();
+    public abstract String describe();
 }
