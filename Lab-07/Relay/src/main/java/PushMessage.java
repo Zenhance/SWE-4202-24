@@ -1,8 +1,8 @@
-public class PushNotice extends Notice{
+public class PushMessage extends Message {
     private static final int PREVIEW_SIZE=40;
     private static final double FLAT_COST=1.00;
 
-    public PushNotice(Recipient recipient,String text){
+    public PushMessage(Recipient recipient, String text){
         super(recipient,text);
     }
   private String preview(){
