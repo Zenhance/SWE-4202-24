@@ -1,13 +1,12 @@
-public class SmsMessage extends Notice{
+public class SmsMessage extends Message {
 
     public static final double COST_PER_SEGMENT = 0.1;
     public SmsMessage(Recipient recipient,String text) {
-
         super(recipient,text);
     }
 
-    public int segment(){
-        return (text.length()+159)/160;
+    public double segment(){
+        return Math.ceil((double) text.length() /160);
     }
     @Override
     public String deliver() {
@@ -17,6 +16,12 @@ public class SmsMessage extends Notice{
     @Override
     public double cost() {
         return segment()*COST_PER_SEGMENT;
+
+    }
+
+    @Override
+    public String describe() {
+        return "SMS";
     }
 }
 
