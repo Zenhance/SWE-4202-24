@@ -17,6 +17,7 @@ public class Cart {
          this.qtys= new int[MAX_ITEMS];
          this.ticketCount=0;
          this.itemCount=0;
+         this.owner=owner;
     }
 
 

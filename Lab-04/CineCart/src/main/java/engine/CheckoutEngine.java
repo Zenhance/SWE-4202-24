@@ -43,6 +43,7 @@ public class CheckoutEngine {
       found.getHall().getSeat(row,col).book();
 
       Ticket t = new Ticket(found,row, col, basePrice );
+      cart.addTicket(t);
 
       return "OK";
 
@@ -52,12 +53,13 @@ public class CheckoutEngine {
     public String addConcession(Cart cart, String code, int qty){
         ConcessionItem item=menu.findByCode(code);
         if(item==null){
-            System.out.println("Item not found");
+            return ("Item not found");
         }
 
         if(qty<=0){
-            System.out.println("Invalid Quantity");
+            return ("Invalid Quantity");
         }
+        cart.addItem(item,qty);
         return "OK";
 
 
