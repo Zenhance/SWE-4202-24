@@ -6,5 +6,13 @@ public class Message {
         this.recipient=recipient;
         this.bodytext=bodytext;
     }
+
+    public Recipient getRecipient() {
+        return recipient;
+    }
+
+    public String getBodytext() {
+        return bodytext;
+    }
 }
 
