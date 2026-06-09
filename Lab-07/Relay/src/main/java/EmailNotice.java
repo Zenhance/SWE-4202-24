@@ -7,4 +7,12 @@ public class EmailNotice extends Notice {
         super(text, recipient);
 
     }
+
+    String medium(){
+        return "EMAIL";
+    }
+
+    double cost(){
+        return 0.0; //no cost for email
+    }
 }
