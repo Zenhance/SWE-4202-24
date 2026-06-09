@@ -11,6 +11,9 @@ public class PushMessage extends Notice{
         return getText().substring(0,PUSH_PREVIEW_CHARS);
     }
 
-
+    @Override
+    public String deliver(){
+        return "PUSH to "+getRecipient().getName()+": "+preview();
+    }
 
 }
