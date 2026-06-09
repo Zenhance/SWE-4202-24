@@ -2,16 +2,14 @@ public abstract class Notice {
     protected Recipient r;
     protected String txt;
 
-    public Notice (r, txt){
+    public Notice (Recipient r, String txt){
         if(txt == null || txt.isBlank())
             throw new IllegalArgumentException("No text");
-        }
         this.txt = txt;
         this.r = r;
     }
 
     public abstract String deliver();
-
     public abstract double cost();
 
 }
