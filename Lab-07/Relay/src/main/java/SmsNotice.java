@@ -20,4 +20,8 @@ public class SmsNotice extends Notice {
         return charge;
     }
 
+    public String read() {
+        
+    }
+
 }
