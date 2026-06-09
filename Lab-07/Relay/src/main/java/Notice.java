@@ -1,4 +1,4 @@
-public class Notice {
+public abstract class Notice {
      private Recipient recipient;
      private String text;
      public Notice(Recipient recipient, String text) {
@@ -11,4 +11,8 @@ public class Notice {
      public String getText() {
          return text;
      }
+     public abstract String deliver();
+     public abstract double cost();
+     public abstract String describe();
+
 }
