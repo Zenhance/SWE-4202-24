@@ -1,2 +1,3 @@
-public class EmailNotice {
+public class EmailNotice extends Notice {
+
 }
