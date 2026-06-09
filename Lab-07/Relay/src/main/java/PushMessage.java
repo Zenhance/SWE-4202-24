@@ -1,5 +1,8 @@
 public class PushMessage extends Notice
 {
+    private static final int PREVIEW_LENGTH = 40;
+    private static final double COST_PER_TRIMMED = 0.50;
+
     public PushMessage(Recipient recipient, String text)
     {
         super(recipient,text);
@@ -8,12 +11,17 @@ public class PushMessage extends Notice
     @Override
     public String deliver()
     {
-        return "PUSH to "+recipient.getName()+" "+recipient.getAddress()+" "+text;
+        String preview="";
+        if(text.length()<=PREVIEW_LENGTH)
+        {
+            preview=text;
+        }
+        return "PUSH : "+preview;
     }
 
     @Override
     public double cost()
     {
-        return 0.0;
+        return COST_PER_TRIMMED;
     }
 }
