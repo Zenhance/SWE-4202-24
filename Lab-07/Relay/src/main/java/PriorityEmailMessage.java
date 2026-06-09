@@ -5,5 +5,17 @@ public class PriorityEmailMessage extends EmailMessage {
         super(recipient, body);
     }
 
+    public String deliver() {
+        return ("Priority mail " + super.deliver());
+    }
+
+    public double cost() {
+        return (super.cost() + PRIORITY_SURCHARGE);
+    }
+
+    public String describe() {
+        return ("Email send to " +getRecipient().getName() + " " + getRecipient().getAddress());
+    }
+
 
 }
