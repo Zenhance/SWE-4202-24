@@ -1,4 +1,13 @@
-public class Recipient
+class Recipient
 {
+    String name;
+    String address;
+
+    public Recipient(String name, String address)
+    {
+        this.name = name;
+        this.address = address;
+    }
+
 
 }
