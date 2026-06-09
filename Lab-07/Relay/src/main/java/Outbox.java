@@ -31,6 +31,15 @@ public double totalCost(){
 }
 
 public String flush(){
+String log = "";
+for(int i=0;i<count;i++){
+    log+=notices[i].deliver();
 
+    if(i<count-1){
+        log+="\n"
+    }
+}
+count = 0;
+return log;
 }
 }
