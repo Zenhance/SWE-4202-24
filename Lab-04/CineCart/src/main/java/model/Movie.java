@@ -18,8 +18,8 @@ public class Movie{
     public int getid(){return id;}
     public String gettitle(){return title;}
     public String getrating(){return rating;}
-    public int getdurationMin(){return durationMin}
+    public int getdurationMin(){return durationMin;}
     public double basePrice(){return basePrice;}
 
-    }
+
 }
