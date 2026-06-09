@@ -1,6 +1,6 @@
-public class EmailNotice extends Notice{
+public class EmailMessage extends Message{
 
-    public EmailNotice(Recipient recipient, String text) {
+    public EmailMessage(Recipient recipient, String text) {
         super(recipient, text);
     }
 

@@ -1,9 +1,9 @@
-public class SMSNotice extends Notice {
+public class SmsMessage extends Message {
 
     private static final int SIZE = 160;
     private static final double COST= 0.50;
 
-    public SMSNotice(Recipient recipient, String text) {
+    public SmsMessage(Recipient recipient, String text) {
         super(recipient, text);
     }
 

@@ -1,52 +1,36 @@
 public class Outbox {
-
-    private static final int CAPACITY = 100;
-    private final Notice[] notices;
-    private int count;
+    private final Message[] queue;
+    private int size;
 
     public Outbox() {
-        this(CAPACITY);
+        this.queue = new Message[100];
     }
 
-    public Outbox(int capacity) {
-        notices = new Notice[capacity];
-        count = 0;
+    public void enqueue(Message m) {
+        enqueue(m, 1);
     }
 
-    public void queue(Notice notice) {
-        queue(notice, 1);
-    }
-
-    public void queue(Notice notice, int repeatCount) {
-        for (int i = 0; i < repeatCount; i++) {
-            if (count >= notices.length) {
-                throw new IllegalStateException("Outbox is full");
-            }
-            notices[count] = notice;
-            count++;
+    public void enqueue(Message m, int repeat) {
+        for (int i = 0; i < repeat; i++) {
+            queue[size++] = m;
         }
+    }
+
+    public int size() { return size; }
+
+    public double totalCost() {
+        double total = 0;
+        for (int i = 0; i < size; i++) total += queue[i].cost();
+        return total;
     }
 
     public String flush() {
-        String log = "";
-        for (int i = 0; i < count; i++) {
-            log += notices[i].deliver();
-            if (i < count - 1) {
-                log += "\n";
-            }
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < size; i++) {
+            if (i > 0) sb.append("\n");
+            sb.append(queue[i].deliver());
         }
-        count = 0;
-        return log;
-    }
-
-    public double totalCost() {
-        double total = 0.0;
-        for (int i = 0; i < count; i++) {
-            total += notices[i].cost();
-        }
-        return total;
-    }
-    public int waitingCount() {
-        return count;
+        size = 0;
+        return sb.toString();
     }
 }

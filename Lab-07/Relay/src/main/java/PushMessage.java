@@ -1,9 +1,9 @@
-public class PushNotice extends Notice {
+public class PushMessage extends Message {
 
     private static final int LENGTH = 40;
     private static final double COST = 0.10;
 
-    public PushNotice(Recipient recipient, String text) {
+    public PushMessage(Recipient recipient, String text) {
         super(recipient, text);
     }
 
