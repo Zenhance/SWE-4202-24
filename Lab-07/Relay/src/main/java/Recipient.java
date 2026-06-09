@@ -7,4 +7,12 @@ public class Recipient {
         this.name = name;
         this.address = address;
     }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getName() {
+        return name;
+    }
 }
