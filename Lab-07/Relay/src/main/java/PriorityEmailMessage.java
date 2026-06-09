@@ -10,7 +10,7 @@ public class PriorityEmailMessage extends EmailMessage{
     }
     @Override
     public double cost(){
-        return super.cost();
+        return super.cost()+PRIORITY_SURCHARGE;
     }
     @Override
 public String describe(){
