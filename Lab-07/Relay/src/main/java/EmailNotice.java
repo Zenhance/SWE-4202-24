@@ -3,7 +3,7 @@ public class EmailNotice extends Notice {
     private double cost;
 
     //constructor
-    public EmailNotice (Recipient recipient, String text, String cost) {
+    public EmailNotice (Recipient recipient, String text) {
         super(text, recipient);
 
         this.cost = 0.0;

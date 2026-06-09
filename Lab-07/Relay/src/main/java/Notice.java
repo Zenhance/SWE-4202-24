@@ -10,4 +10,8 @@ public abstract class Notice {
         this.recipient = recipient;
     }
 
+    public abstract String medium();
+    public abstract double cost();
+    public abstract String read();
+
 }

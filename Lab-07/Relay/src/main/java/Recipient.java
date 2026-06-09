@@ -12,12 +12,9 @@ public class Recipient {
     }
 
     //getter
-
-
     public String getName() {
         return name;
     }
-
     public String getAddess() {
         return addess;
     }
