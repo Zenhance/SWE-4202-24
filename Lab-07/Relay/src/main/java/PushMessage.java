@@ -5,11 +5,11 @@ public class PushMessage extends Notice{
     }
     @Override
     public String deliver() {
-        return "";
+        return txt.substring(0, 40);
     }
 
     @Override
     public double cost() {
-        return 0;
+        return 50;
     }
 }
