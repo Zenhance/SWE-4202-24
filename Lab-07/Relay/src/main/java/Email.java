@@ -6,7 +6,7 @@ public class Email extends Message{
 
 
     public String deliver(){
-
+        return "EMAIL IS SENT TO"+recipient.getName()+"ADDRESS"+recipient.getAddress()+bodytext;
 
     }
 

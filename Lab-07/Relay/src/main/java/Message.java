@@ -1,4 +1,4 @@
-public class Message {
+public abstract class Message {
     private Recipient recipient;
     private String bodytext;
 
@@ -15,9 +15,9 @@ public class Message {
         return bodytext;
     }
 
-    public String deliver();
-    public double cost();
-    public String describe();
+    public abstract String deliver();
+    public abstract double cost();
+    public abstract String describe();
 
 
 }
