@@ -10,4 +10,8 @@ public class Emali extends Notice{
     public double price(){
         return 0.0;
     }
+    @Override
+    public String describe(){
+        return "Email notice to: " + recipient.getName();
+    }
 }
