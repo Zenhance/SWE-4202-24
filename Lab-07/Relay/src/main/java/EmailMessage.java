@@ -6,7 +6,7 @@ public class EmailMessage extends Message {
 
     @Override
     public String deliver() {
-        return "";
+        return "To: " + getRecipient().getName() + " <" + getRecipient().getAddress() + ">\n" + getText();
     }
 
     @Override
@@ -16,6 +16,6 @@ public class EmailMessage extends Message {
 
     @Override
     public String describe() {
-        return "Email for " + getRecipient().getName();
+        return "EMAIL" + getRecipient().getAddress();
     }
 }
