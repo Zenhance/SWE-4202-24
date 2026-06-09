@@ -12,8 +12,10 @@ public class PushNotice extends Notice {
         else{
             return text.substring(0,40);
         }
-
-
+    @Override
+     public double cost(){
+            return 0.50;
         }
+
 
 }
