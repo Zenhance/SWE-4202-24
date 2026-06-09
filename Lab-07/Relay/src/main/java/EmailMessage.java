@@ -14,5 +14,6 @@ public class EmailMessage extends Message{
     @Override
     public String describe(){
         String s="Email to "+ recipient.getAddress();
+        return s;
     }
 }

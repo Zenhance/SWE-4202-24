@@ -14,7 +14,10 @@ public class SmsMessage extends Message{
     @Override
     public String deliver(){
         int segments=countSegments();
-        return text+"\n[SMS: Sent as "+ segments+" segment"+(segments==1?"]":"s]";
+        String s= text+"\n[SMS: Sent as "+ segments+" segment";
+                if(segments==1) s+="]";
+                else s+="s]";
+        return s;
     }
     @Override
     public double cost(){
