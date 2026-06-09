@@ -1,6 +1,6 @@
-public class EmailMessage extends Notice{
-    public EmailMessage (Recipient recipient, String text){
-        super(recipient,text);
+public class EmailMessage extends Notice {
+    public EmailMessage(Recipient recipient, String text) {
+        super(recipient, text);
     }
 
     @Override
@@ -10,10 +10,11 @@ public class EmailMessage extends Notice{
 
     @Override
     public String deliver() {
-        return String.format("%s\n %s",recipient.getName());
+        return String.format("%s\n %s", recipient.getName());
     }
 
     @Override
     public String describe() {
         return "Email";
     }
+}
