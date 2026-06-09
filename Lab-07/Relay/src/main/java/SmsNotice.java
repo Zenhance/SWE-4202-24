@@ -5,8 +5,12 @@ public class SmsNotice extends Notice {
 
     public SmsNotice(String text, Recipient recipient) {
         super(recipient, text);
-
-
     }
+
+    public String medium() {
+        return "SMS";
+    }
+
+    
 
 }
