@@ -21,4 +21,12 @@ public class Recipient {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    @Override
+    public String toString() {
+        String str = "";
+        str += "Name: " + name + "\n";
+        str += "Email: " + email + "\n";
+        return str;
+    }
 }
