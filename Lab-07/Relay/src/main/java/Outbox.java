@@ -12,5 +12,9 @@ public class Outbox {
       count++;
   }
 
-
+    public void queue(Notice notice, int repeat){
+      for(int i=0;i<repeat;i++){
+          queue(notice);
+      }
+}
 }
