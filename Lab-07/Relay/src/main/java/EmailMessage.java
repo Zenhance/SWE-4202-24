@@ -14,6 +14,6 @@ public class EmailMessage extends Message {
 
     @Override
     public String describe() {
-        return "E-mail";
+        return "EMAIL";
     }
 }

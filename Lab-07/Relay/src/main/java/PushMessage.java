@@ -19,6 +19,6 @@ public class PushMessage extends Message {
 
     @Override
     public String describe() {
-        return "Push";
+        return "PUSH";
     }
 }
