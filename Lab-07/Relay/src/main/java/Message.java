@@ -6,4 +6,10 @@ public abstract class Message {
         this.recipient = recipient;
         this.body = body;
     }
+
+    public abstract double cost();
+
+    public abstract String deliver();
+
+    public abstract String describe();
 }
