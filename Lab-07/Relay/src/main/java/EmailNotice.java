@@ -4,7 +4,7 @@ public class EmailNotice extends Notice{
     }
     @Override
     public String deliver() {
-        return "Email to "+recipient.getName;
+        return "Email to "+recipient.getName();
     }
 
     @Override
