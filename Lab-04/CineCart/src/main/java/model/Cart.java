@@ -37,9 +37,16 @@ public class Cart {
         return owner;
     }
 
+
     public Ticket[] getTickets() {
-        return tickets;
-    }
+            Ticket[] snapshot = new Ticket[ticketcount];
+            for (int i = 0; i < ticketcount; i++) {
+                snapshot[i] = tickets[i];
+            }
+            return snapshot;
+        }
+
+
 
     public int getTicketCount() {
         return ticketcount;
