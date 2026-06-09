@@ -18,7 +18,7 @@ public class Outbox {
       }
 }
 
-public int Size(){
+public int size(){
       return count;
 }
 public double totalCost(){
