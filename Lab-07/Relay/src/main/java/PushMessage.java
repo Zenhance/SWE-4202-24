@@ -1,6 +1,6 @@
 public class PushMessage extends Message {
     private static final int PREVIEW_SIZE=40;
-    private static final double FLAT_COST=1.00;
+    private static final double FLAT_COST=0.1;
 
     public PushMessage(Recipient recipient, String text){
         super(recipient,text);
@@ -18,7 +18,7 @@ public class PushMessage extends Message {
 
     @Override
     public double cost() {
-        return 0.25;
+        return FLAT_COST;
     }
 
     @Override
