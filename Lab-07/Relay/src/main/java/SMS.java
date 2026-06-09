@@ -1,6 +1,5 @@
 public class SMS extends Notice {
-    private final double costPerSegment = 0.05; // Adjust according to your test file specifications
-
+    private final double costPerSegment = 0.05;
     public SMS(Recipient recipient, String text) {
         super(recipient, text);
     }
