@@ -1,4 +1,4 @@
-public class EmailMessage extends Notice {
+public class EmailMessage extends Message {
     public EmailMessage(Recipient r, String txt){
         super(r,txt);
     }

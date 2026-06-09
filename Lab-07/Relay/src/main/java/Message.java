@@ -1,8 +1,8 @@
-public abstract class Notice {
+public abstract class Message {
     protected Recipient r;
     protected String txt;
 
-    public Notice (Recipient r, String txt){
+    public Message (Recipient r, String txt){
         if(txt == null || txt.isBlank())
             throw new IllegalArgumentException("No text");
         this.txt = txt;
