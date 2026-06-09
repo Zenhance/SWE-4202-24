@@ -12,7 +12,6 @@ public class ShowtimeBoard {
         shows = new Showtime[MAX];
     }
 
-
     public void add(Showtime s){
         if(count < MAX){
             shows[count++] = s;
@@ -32,6 +31,5 @@ public class ShowtimeBoard {
             System.out.println(shows[i]);
         }
     }
-
 
 }

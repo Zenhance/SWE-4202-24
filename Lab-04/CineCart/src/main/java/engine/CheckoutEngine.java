@@ -16,7 +16,6 @@ public class CheckoutEngine {
         this.menu = menu;
     }
 
-
     public String bookTicket(Cart cart, int showtimeId, int row, int col){
         Showtime showtime = board.findById(showtimeId);
         if(showtime == null){
@@ -72,8 +71,6 @@ public class CheckoutEngine {
         receipt += String.format("Total: BDT %.2f\n", total);
         return receipt;
     }
-
-
 
 
 }

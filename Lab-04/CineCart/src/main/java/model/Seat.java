@@ -46,6 +46,4 @@ public class Seat {
         return "R"+ row +"C"+ col + ""+ premium + booked;
     }
 
-
-
 }

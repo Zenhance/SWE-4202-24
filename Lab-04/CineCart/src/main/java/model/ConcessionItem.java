@@ -11,7 +11,6 @@ public class ConcessionItem {
         this.unitPrice = unitPrice;
     }
 
-
     public String getCode() {
         return code;
     }
