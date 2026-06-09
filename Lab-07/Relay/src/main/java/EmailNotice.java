@@ -1,8 +1,10 @@
 public class EmailNotice extends Notice{
-
+    public EmailNotice(Recipient r,String text){
+        super(r,text);
+    }
     @Override
     public String deliver() {
-        return "";
+        return "Email to "+recipient.getName;
     }
 
     @Override
