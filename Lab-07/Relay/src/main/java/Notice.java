@@ -1,12 +1,9 @@
-public class Notice{
+public abstract class Notice{
     public String channel;
     public String body;
+    public
     protected static int noticeCount = 0;
 
-    public Notice(String channel, String body) {
-        this.channel = channel;
-        this.body = body;
-        noticeCount++;
-    }
+
 
 }
