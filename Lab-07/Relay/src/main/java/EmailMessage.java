@@ -10,6 +10,6 @@ public class EmailMessage extends Message{
         return 0.0;
     }
     public String describe(){
-        return "Email sent to "+getRecipient().getName();
+        return "Email has been sent to "+getRecipient().getName();
     }
 }

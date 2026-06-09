@@ -6,19 +6,33 @@ public class PushMessage extends Message{
         super(recipient,body);
     }
 
+    @Override
+    public String getBody() {
+        return super.getBody();
+    }
 
-    public String deliver() {
-        return "";
+    public String shortTxt(){
+        String x=getBody();
+        if(getBody().length()<=PUSH_PREVIEW_CHARS){
+            return x;
+        }
+        else{
+            return getBody().substring(0,PUSH_PREVIEW_CHARS);
+        }
+    }
+    public String deliver(){
+        return shortTxt();
     }
 
 
     public double cost() {
-        return 0;
+        return PUSH_FLAT;
     }
 
 
     public String describe() {
-        return "";
+        return "Push note has been sent to"+getRecipient().getName();
     }
+
 
 }
