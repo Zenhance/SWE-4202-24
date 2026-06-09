@@ -1,8 +1,8 @@
 public abstract class Notice {
-    private String text;
-    private Recipient recipient;
+    protected String text;
+    protected Recipient recipient;
 
-    public Notice(String text, Recipient recipient) {
+    public Notice(Recipient recipient,String text) {
         this.text = text;
         this.recipient = recipient;
     }
@@ -15,4 +15,7 @@ public abstract class Notice {
         return recipient;
     }
 
+    public abstract String deliver();
+    public abstract double cost();
 }
+

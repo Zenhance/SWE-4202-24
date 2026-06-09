@@ -1,10 +1,10 @@
 public class EmailMessage extends Notice{
-    public EmailMessage(String text, Recipient recipient) {
-        super(text, recipient);
+    public EmailMessage(Recipient recipient,String text) {
+        super(recipient,text);
     }
     @Override
     public String deliver() {
-        return "Email to " + getRecipient().getName() + " at " + getRecipient().getAddress()+getText();
+        return "Email to " + recipient.getName() + " " + recipient.getAddress()+" "+text;
     }
     @Override
     public double cost() {
