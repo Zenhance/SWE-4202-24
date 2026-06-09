@@ -78,11 +78,11 @@ public class CheckoutEngine
     public String getReceipt(Cart cart)
     {
         String receipt="=== Receipt ===\n";
-        receipt=receipt+cart.getOwner().getName();
-        receipt="\nTickets\n";
+        receipt=receipt+"Customer : "+cart.getOwner().getName();
+        receipt=receipt+"\nTickets\n";
         for(int i=0;i<cart.getTicketCount();i++)
         {
-            receipt=receipt+cart.getTickets()[i];
+            receipt=receipt+cart.getTickets()[i].toString();
         }
         receipt=receipt+"\nConcessions\n";
         for(int i=0;i<cart.getItemCount();i++)
@@ -91,8 +91,7 @@ public class CheckoutEngine
         }
         receipt=receipt+"\nPayable : ";
         double amount = checkout(cart);
-        receipt=receipt+amount;
-
+        receipt=receipt+"BDT : "+String.format("%.2f",amount);
         return receipt;
     }
 }

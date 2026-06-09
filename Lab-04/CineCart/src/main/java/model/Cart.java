@@ -54,12 +54,15 @@ public class Cart
 
     public void addTicket(Ticket t)
     {
-        tickets[ticketCount]=t;
-        ticketCount++;
+        if(ticketCount<MAX_TICKETS)
+        {
+            tickets[ticketCount]=t;
+            ticketCount++;
+        }
     }
     public void addItem(ConcessionItem c, int qty)
     {
-        if(itemCount<MAX_ITEMS && qty<0)
+        if(itemCount<MAX_ITEMS && qty>0)
         {
             items[itemCount]=c;
             qtys[itemCount]=qty;
@@ -91,7 +94,7 @@ public class Cart
     {
         for(int i=0;i<itemCount;i++)
         {
-            if(items[i].equals(code))
+            if(items[i].getCode().equals(code))
             {
                 return true;
             }
