@@ -6,4 +6,8 @@ public class PriorityEmailNotice extends EmailNotice{
     public String deliver(){
         return "[PRIORITY] " + super.deliver();
     }
+    @Override
+    public double cost(){
+        return super.cost()+0.50;
+    }
 }
