@@ -12,6 +12,9 @@ public class SMSNotice extends Notice{
     @Override
     public double cost(){
         return segments() * 0.50;
-
+    }
+    @Override
+    public String describe(){
+        return "SMS NOTICE ";
     }
 }
