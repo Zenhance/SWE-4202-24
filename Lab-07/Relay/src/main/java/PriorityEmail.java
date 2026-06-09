@@ -4,4 +4,19 @@ class PriorityEmail extends Email {
     public PriorityEmail(Recipient recipient, String text) {
         super(recipient, text);
     }
+
+    @Override
+    public String deliver() {
+        return "[PRIORITY] " + super.deliver();
+    }
+
+    @Override
+    public double cost() {
+        return super.cost() + surcharge;
+    }
+
+    @Override
+    public String describe() {
+        return "Priority " + super.describe();
+    }
 }
