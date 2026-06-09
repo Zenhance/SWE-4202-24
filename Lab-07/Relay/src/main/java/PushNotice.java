@@ -6,11 +6,13 @@ public class PushNotice extends Notice {
     }
     @Override
     public String deliver(){
-        String preview;
         if(text.length()<=40){
-            preview=text;
+            return text;
         }
         else{
+            return text.substring(0,40);
+        }
+
 
         }
 
