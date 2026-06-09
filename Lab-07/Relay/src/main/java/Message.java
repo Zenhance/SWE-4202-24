@@ -3,9 +3,8 @@ public class Message {
     private String bodytext;
 
     public Message(Recipient recipient,String bodytext){
-
-
-
+        this.recipient=recipient;
+        this.bodytext=bodytext;
     }
 }
 
