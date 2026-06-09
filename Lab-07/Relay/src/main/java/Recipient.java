@@ -10,4 +10,7 @@ public class Recipient {
     public String getName() {
         return name;
     }
+    public String getAddress(){
+        return address;
+    }
 }
