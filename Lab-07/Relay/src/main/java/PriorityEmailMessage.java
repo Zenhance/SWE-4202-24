@@ -1,12 +1,12 @@
 public class PriorityEmailMessage extends EmailMessage {
-    private static final double SURCHARGE=5.00;
+    private static final double SURCHARGE=0.5;
 
     public PriorityEmailMessage(Recipient recipient, String text){
         super(recipient,text);
     }
     @Override
 public String deliver(){
-        return "[Priority] "+ super.deliver();
+        return "[PRIORITY] "+ super.deliver();
 }
 @Override
 public double cost(){
@@ -14,6 +14,6 @@ public double cost(){
 }
 @Override
     public String describe(){
-        return "PRIORITY "+super.describe();
+        return "PRIORITY "+ super.describe();
 }
 }

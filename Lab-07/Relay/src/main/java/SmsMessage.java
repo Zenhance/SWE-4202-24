@@ -1,6 +1,6 @@
 public class SmsMessage extends Message {
     private static  final int SEGMENT_SIZE=160;
-    private static final double COST_PER_SEGMENT=2.50;
+    private static final double COST_PER_SEGMENT=0.5;
 
     public SmsMessage(Recipient recipient, String text){
         super(recipient,text);
@@ -25,7 +25,7 @@ public class SmsMessage extends Message {
 
     @Override
     public String describe() {
-        return "SMS notice to "+getRecipient().getName()+" using "+ segmentCount()+" segment(s)";
+        return "SMS message to "+getRecipient().getName()+" with "+ segmentCount()+" segment(s)";
     }
 
 }

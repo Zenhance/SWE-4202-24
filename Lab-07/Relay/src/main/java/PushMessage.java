@@ -13,12 +13,12 @@ public class PushMessage extends Message {
   }
     @Override
     public String deliver() {
-        return "Push to "+getRecipient().getName()+": "+preview();
+        return "PUSH message to "+getRecipient().getName()+": "+preview();
     }
 
     @Override
     public double cost() {
-        return FLAT_COST;
+        return 0.25;
     }
 
     @Override
