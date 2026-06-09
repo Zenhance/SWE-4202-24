@@ -14,4 +14,5 @@ public abstract class Notice {
     public Recipient getRecipient() {
         return recipient;
     }
+
 }
