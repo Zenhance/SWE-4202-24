@@ -14,7 +14,7 @@ public class PushMessage extends Message {
     }
     @Override
     public double cost() {
-        return 10.0;
+        return 0.1;
     }
 
     @Override
