@@ -9,4 +9,9 @@ public class SMSNotice extends Notice{
     public String deliver(){
         return "SMS ( " +segments() + "segments):" + text;
     }
+    @Override
+    public double cost(){
+        return segments() * 0.50;
+
+    }
 }
