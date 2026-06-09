@@ -7,5 +7,13 @@ abstract class Notice {
         this.text = text;
     }
 
+    public Recipient getRecipient(){
+        return this.recipient;
+    }
+
+    public String getString(){
+        return this.text;
+    }
+
 
 }
