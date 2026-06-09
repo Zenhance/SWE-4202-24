@@ -9,7 +9,4 @@ public class Notice{
         noticeCount++;
     }
 
-    public void addRecipient(){
-
-    }
 }
