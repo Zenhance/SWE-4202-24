@@ -13,12 +13,9 @@ public class EmailMessage extends Message {
         return 0;
     }
     public String describe() {
-        String s = "Email to " + name.getName();
+        String s = "Email to " + this.name;
         return s;
     }
-
-
-
 
 
 }

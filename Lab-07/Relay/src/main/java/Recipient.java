@@ -1,4 +1,4 @@
-public abstract class Recipient {
+public class Recipient {
     private final String name, address ;
 
     public Recipient(String name,String address){
@@ -13,9 +13,5 @@ public abstract class Recipient {
     public String getAddress() {
         return address;
     }
-    public abstract String deliver();
 
-    public abstract double cost();
-
-    public abstract String describe();
 }
