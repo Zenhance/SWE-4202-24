@@ -5,5 +5,7 @@ public abstract class Notice{
     protected static int noticeCount = 0;
 
 
-
+    int findBodyLength(body){
+        return body.length();
+    }
 }
