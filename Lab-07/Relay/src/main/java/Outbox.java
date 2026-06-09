@@ -5,10 +5,10 @@ public class Outbox {
         notices=new Message[100];
         count=0;
     }
-    public void queue(Message n){
+    public void enqueue(Message n){
        notices[count++]=n;
     }
-    public void queue(Message n, int repeat){
+    public void enqueue(Message n, int repeat){
         for(int i=0;i<repeat;i++){
             notices[count++]=n;
         }
