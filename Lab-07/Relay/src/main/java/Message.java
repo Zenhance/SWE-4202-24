@@ -7,4 +7,16 @@ public class Message {
         this.text = text;
     }
 
+    public String deliver(){
+        return "";
+    }
+
+    public double cost(){
+        return 0.0;
+    }
+
+    public String describe(){
+        return "";
+    }
+
 }
