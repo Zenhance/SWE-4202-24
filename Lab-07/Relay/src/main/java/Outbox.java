@@ -21,4 +21,12 @@ public class Outbox {
 public int waitingCount(){
       return count;
 }
+public double totalCost(){
+      double total = 0.0;
+
+      for(int i=0;i<count;i++){
+          total+=notices[i].cost();
+      }
+      return total;
+}
 }
