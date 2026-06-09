@@ -23,6 +23,4 @@ public class SmsMessage extends Message {
         return ("SMS send to " + getRecipient().getName() + " " + getRecipient().getAddress());
     }
 
-
-
 }
