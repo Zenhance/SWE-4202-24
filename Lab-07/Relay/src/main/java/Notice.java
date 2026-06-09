@@ -1,7 +1,7 @@
 public abstract class Notice
 {
-    private Recipient recipient;
-    private String text;
+    protected Recipient recipient;
+    protected String text;
 
     public Notice(Recipient recipient, String text)
     {
@@ -19,7 +19,7 @@ public abstract class Notice
         return text;
     }
 
-    public abstract void deliver();
+    public abstract String deliver();
 
     public abstract double cost();
 }
