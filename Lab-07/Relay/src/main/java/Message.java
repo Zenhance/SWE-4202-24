@@ -1,10 +1,10 @@
 public abstract class Message {
     protected Recipient recipient;
-    protected String body;
+    protected String message;
 
     public Message(Recipient recipient, String body) {
         this.recipient = recipient;
-        this.body = body;
+        this.message = message;
     }
 
     public String getMessage() {
