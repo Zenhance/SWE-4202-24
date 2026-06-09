@@ -1,8 +1,8 @@
-public abstract class Notice {
+public abstract class Message {
     protected String text;
     protected Recipient recipient;
 
-    public Notice(Recipient recipient,String text) {
+    public Message(Recipient recipient, String text) {
         this.text = text;
         this.recipient = recipient;
     }
