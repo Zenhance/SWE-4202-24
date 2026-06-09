@@ -11,5 +11,5 @@ public abstract class Notice {
 
     public abstract String describe();
 
-    public abstract String process();
+    public abstract String deliver();
 }
