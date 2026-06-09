@@ -19,4 +19,8 @@ public class SMSNotice extends Notice{
         return "SMS to "+getRecipient().getAddress()+" ["+getSmsSegmentSize()+" segment(s)]: "+getText();
     }
 
+    @Override
+    public double cost(){
+        return getSmsSegmentSize()*SMS_PER_SEGMENT;
+    }
 }
