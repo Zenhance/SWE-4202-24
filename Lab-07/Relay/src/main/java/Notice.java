@@ -10,6 +10,10 @@ public abstract class Notice {
         this.recipient = recipient;
     }
 
+    public String getText() {
+        return text;
+    }
+
     public abstract String medium();
     public abstract double cost();
     public abstract String read();

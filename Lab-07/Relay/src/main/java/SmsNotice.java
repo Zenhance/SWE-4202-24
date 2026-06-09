@@ -4,6 +4,8 @@ public class SmsNotice extends Notice {
     private static final double CHARGE_PER_SEGMENT = 0.5;
 
     public SmsNotice(String text, Recipient recipient) {
+        super(recipient, text);
+
 
     }
 
