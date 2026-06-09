@@ -1,21 +1,21 @@
 public class Recipient {
     private String name;
-    private String email;
+    private String address;
 
-    public Recipient(String name, String email) {
+    public Recipient(String name, String address) {
         this.name = name;
-        this.email = email;
+        this.address = address;
     }
 
     public String getName() {
         return name;
     }
 
-    public String getEmail() {
-        return email;
+    public String getAddress() {
+        return address;
     }
 
     public String toString() {
-        return ("Name: " + name + " Email: " + email);
+        return ("Name: " + name + " Email: " + address);
     }
 }
