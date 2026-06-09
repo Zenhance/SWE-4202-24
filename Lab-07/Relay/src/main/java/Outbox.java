@@ -13,6 +13,7 @@ public class Outbox {
             notices[count++]=n;
         }
     }
+
     public int waitingCount(){
         return count;
     }
@@ -22,6 +23,9 @@ public class Outbox {
             total+=notices[i].cost();
         }
         return total;
+    }
+    public int size(){
+        return count;
     }
     public String flush(){
         String log="";
