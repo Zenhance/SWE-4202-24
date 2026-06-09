@@ -10,5 +10,10 @@ public Recipient(String name,String address){
     this.address=address;
 }
 
+    public String getName() {
+        return name;
+    }
+
+
 }
 
