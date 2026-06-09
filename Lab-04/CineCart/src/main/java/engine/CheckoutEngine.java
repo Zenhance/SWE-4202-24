@@ -2,10 +2,7 @@ package engine;
 
 import data.ShowtimeBoard;
 import data.ConcessionMenu;
-import model.Cart;
-import model.Showtime;
-import model.Seat;
-import model.Ticket;
+import model.*;
 
 public class CheckoutEngine {
     private ShowtimeBoard board;
@@ -28,16 +25,16 @@ public class CheckoutEngine {
         double price=board.findById(showtimeId).getMovie().getBasePrice()*(board.findById(showtimeId).getHall().getSeat(row, col).isPremium() ? 1.30 : 1.00)
                 * (board.findById(showtimeId).isPeak() ? 1.20 : 1.00);
 
+        board.findById(showtimeId).getHall().getSeat(row, col).book();
+
         Ticket t=new Ticket(board.findById(showtimeId), row, col, price);
         cart.addTicket(t);
         return "OK";
     }
-public String addConcession(Cart cart, String code, int qty) {
+    public String addConcession(Cart cart, String code, int qty) {
     if (menu.findByCode(code)==null) return "Item not found";
     if (qty<=0) return "Invalid quantity";
-
     cart.addItem(menu.findByCode(code), qty);
-
     return "OK";
 }
 public double checkout(Cart cart) {
@@ -61,7 +58,7 @@ public double checkout(Cart cart) {
     return Math.round(round*100.0)/100.0;
 }
 public String getReceipt(Cart cart) {
-    return String.format("Receipt\n"+"%s"+"Total"+"BDT"+"Disount", cart.getOwner().getName());
+    return String.format("Receipt\n"+"%s"+"Total"+"BDT"+"Discount", cart.getOwner().getName());
 }
 }
 

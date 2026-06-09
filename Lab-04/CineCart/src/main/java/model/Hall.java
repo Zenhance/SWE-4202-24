@@ -1,7 +1,7 @@
 package model;
 public class Hall {
-    private int id ,rows ,cols;
-    private Seat[][] grid;
+    private final int id ,rows ,cols;
+    private final Seat[][] grid;
 
 
 

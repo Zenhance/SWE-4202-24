@@ -1,8 +1,8 @@
 package model;
 
 public class Customer {
-    private int id ,age;
-    private String name ,loyaltyTier;
+    private final int id ,age;
+    private final String name ,loyaltyTier;
 
     public Customer(int id, String name, int age){
         this.id=id;
