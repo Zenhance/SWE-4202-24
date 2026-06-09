@@ -1,5 +1,5 @@
-public class SMSMessage extends Notice{
-    public SMSMessage(Recipient recipient, String text){
+public class SmsMessage extends Message {
+    public SmsMessage(Recipient recipient, String text){
         super (recipient,text);
     }
     private int segments(){

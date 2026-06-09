@@ -1,4 +1,4 @@
-public class PushMessage extends Notice {
+public class PushMessage extends Message {
     public PushMessage(Recipient recipient, String text) {
         super(recipient, text);
     }

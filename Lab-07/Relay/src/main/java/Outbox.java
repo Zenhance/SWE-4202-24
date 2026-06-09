@@ -1,14 +1,14 @@
 public class Outbox {
-    private Notice[] notices;
+    private Message[] notices;
     private int count;
     public Outbox(){
-        notices= new Notice[100];
+        notices= new Message[100];
         count = 0;
     }
-    public void enqueue(Notice notice){
+    public void enqueue(Message notice){
         notices[count++]=notice;
     }
-public void enqueue(Notice notice,int repeat){
+public void enqueue(Message notice, int repeat){
     for(int i=0;i<repeat;i++){
         notices[count++]=notice;
     }
@@ -31,4 +31,7 @@ for (int i=0;i<count;i++){
 count = 0;
 return result;
 }
+    public int size(){
+        return count;
+    }
 }
