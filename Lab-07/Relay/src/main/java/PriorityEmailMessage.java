@@ -14,6 +14,6 @@ public class PriorityEmailMessage extends EmailMessage{
     }
     @Override
 public String describe(){
-        return "PRIORITY "+super.describe();
+        return "priority email notice to "+super.describe();
     }
 }

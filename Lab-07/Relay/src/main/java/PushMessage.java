@@ -21,7 +21,7 @@ public class PushMessage extends Message {
     }
     @Override
     public String describe(){
-        return "Push notice to "+getRecipient().getName();
+        return "push notice to "+getRecipient().getName();
     }
 
 }

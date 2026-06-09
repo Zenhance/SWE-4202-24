@@ -13,6 +13,6 @@ public EmailMessage(Recipient recipient, String text){
 }
 @Override
     public String describe(){
-    return "E-mail notice to "+getRecipient().getName();
+    return "email notice to "+getRecipient().getName();
 }
 }

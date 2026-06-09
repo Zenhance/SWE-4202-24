@@ -26,6 +26,6 @@ public class SmsMessage extends Message {
 
     @Override
     public String describe(){
-        return "SMS notice to "+getRecipient().getName()+" using "+getSmsSegmentSize()+"segment(s)";
+        return "sms notice to "+getRecipient().getName();
     }
 }
