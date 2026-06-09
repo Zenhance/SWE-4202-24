@@ -3,8 +3,8 @@ public class Outbox {
   private int count;
 
   public Outbox(){
-      notices = new Notice[100];
-      count = 0;
+      this.notices = new Notice[100];
+      this.count = 0;
   }
 
   public void queue(Notice notice){
@@ -16,5 +16,9 @@ public class Outbox {
       for(int i=0;i<repeat;i++){
           queue(notice);
       }
+}
+
+public int waitingCount(){
+      return count;
 }
 }
