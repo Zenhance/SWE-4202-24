@@ -8,6 +8,9 @@ public class Outbox {
   }
 
   public void queue(Notice notice){
-      notices[count]
+      notices[count] = notice;
+      count++;
   }
+
+
 }
