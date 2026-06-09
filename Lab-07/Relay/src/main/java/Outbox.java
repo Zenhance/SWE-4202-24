@@ -18,7 +18,13 @@ public class Outbox {
         return cost;
     }
 
-    public void flush(){
+    public String flush(){
+            return "";
+    }
 
+    public void enqueue(Message m,int a){
+        for(int i=0;i<a;i++){
+            enqueue(m);
+        }
     }
 }
