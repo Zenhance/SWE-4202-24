@@ -6,7 +6,7 @@ public class Cart {
 
     private final Customer owner;
     private final Ticket[] tickets;
-    private int ticketcount;
+    private int ticketCount;
     private final ConcessionItem[] items;
     private final int[] qtys;
     private int itemCount;
@@ -15,13 +15,13 @@ public class Cart {
         this.owner = owner;
         this.tickets = new Ticket[MAX_TICKETS];
         this.items = new ConcessionItem[MAX_ITEMS];
-        this.ticketcount = 0;
+        this.ticketCount = 0;
         this.itemCount = 0;
         this.qtys = new int[MAX_ITEMS];
     }
     public boolean addTicket(Ticket t){
-        if (ticketcount >= MAX_TICKETS) return false;
-        tickets[ticketcount++] = t;
+        if (ticketCount >= MAX_TICKETS) return false;
+        tickets[ticketCount++] = t;
         return true;
     }
 
@@ -39,8 +39,8 @@ public class Cart {
 
 
     public Ticket[] getTickets() {
-            Ticket[] snapshot = new Ticket[ticketcount];
-            for (int i = 0; i < ticketcount; i++) {
+            Ticket[] snapshot = new Ticket[ticketCount];
+            for (int i = 0; i < ticketCount; i++) {
                 snapshot[i] = tickets[i];
             }
             return snapshot;
@@ -49,16 +49,28 @@ public class Cart {
 
 
     public int getTicketCount() {
-        return ticketcount;
+        return ticketCount;
     }
+
 
     public ConcessionItem[] getItems() {
-        return items;
-    }
+            ConcessionItem[] snapshot = new ConcessionItem[itemCount];
+            for (int i = 0; i < itemCount; i++) {
+                snapshot[i] = items[i];
+            }
+            return snapshot;
+        }
 
-    public int[] getQtys() {
-        return qtys;
-    }
+
+        public int[] getQtys() {
+            int[] snapshot = new int[itemCount];
+            for (int i = 0; i < itemCount; i++) {
+                snapshot[i] = qtys[i];
+            }
+            return snapshot;
+        }
+
+
 
     public int getItemCount() {
         return itemCount;
@@ -66,7 +78,7 @@ public class Cart {
 
     public double sumTicketsPaid(){
         int sum = 0;
-        for(int i = 0; i < ticketcount; i++){
+        for(int i = 0; i < ticketCount; i++){
             sum += tickets[i].getPricePaid();
         }
         return sum;
