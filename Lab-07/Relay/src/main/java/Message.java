@@ -7,14 +7,6 @@ public abstract class Message {
         this.recipient = recipient;
     }
 
-    public String getText() {
-        return text;
-    }
-
-    public Recipient getRecipient() {
-        return recipient;
-    }
-
     public abstract String deliver();
     public abstract double cost();
     public abstract String describe();
