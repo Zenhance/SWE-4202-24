@@ -23,4 +23,9 @@ public class SMSNotice extends Notice{
     public double cost(){
         return getSmsSegmentSize()*SMS_PER_SEGMENT;
     }
+
+    @Override
+    public String describe(){
+        return "SMS notice to "+getRecipient().getName()+" using "+getSmsSegmentSize()+"segment(s)";
+    }
 }
