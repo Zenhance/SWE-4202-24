@@ -8,7 +8,6 @@ public class Outbox {
     public void enqueue(Notice notice){
         notices[count++]=notice;
     }
-}
 public void enqueue(Notice notice,int repeat){
     for(int i=0;i<repeat;i++){
         notices[count++]=notice;
@@ -26,5 +25,10 @@ public double totalCost(){
 }
 public String flush(){
     String result = "";
-
+for (int i=0;i<count;i++){
+    result += notices[i].deliver()+"\n";
+}
+count = 0;
+return result;
+}
 }
