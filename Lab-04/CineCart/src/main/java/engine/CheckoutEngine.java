@@ -20,10 +20,10 @@ public class CheckoutEngine {
             return "Showtime not found";
         }
         if (cart.getOwner().getAge() < showtime.getMovie().getMinAge()) {
-            return "Underage for rating <" + showtime.getMovie().getRating() + ">";
+            return "Underage for rating" + showtime.getMovie().getRating();
         }
         Seat seat = showtime.getHall().getSeat(row, col);
-          if(seat.isBooked()){
+          if(!seat.isBooked()){
               return "Seat unavailable";
           }
         double price = showtime.getMovie().getBasePrice()*(seat.isPremium()?1.30:1.00)*(showtime.isPeak()?1.20:1.00);
