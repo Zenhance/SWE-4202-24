@@ -27,7 +27,7 @@ public class Outbox {
           return total;
       }
 
-      public String f(){
+      public String flush(){
           String result = "";
           for(int i = 0; i < count; i++){
               result += queue[i].deliver();
