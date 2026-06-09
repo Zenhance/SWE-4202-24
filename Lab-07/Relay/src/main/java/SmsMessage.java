@@ -1,8 +1,8 @@
-public class SMSMessage extends Notice{
+public class SmsMessage extends Notice{
     private static final int    SMS_SEGMENT_SIZE   = 160;
     private static final double SMS_PER_SEGMENT    = 0.50;
 
-    public SMSMessage(Recipient recipient, String text){
+    public SmsMessage(Recipient recipient, String text){
         super(recipient,text);
     }
 
