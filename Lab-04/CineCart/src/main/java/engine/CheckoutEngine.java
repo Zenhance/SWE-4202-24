@@ -50,7 +50,7 @@ public class CheckoutEngine {
     public String addConcession(Cart cart, String code, int qty) {
         ConcessionItem item = menu.findByCode(code);
         // [1]
-        if (item == null) return null;
+        if (item == null) return "Not found";
 
         // [2]
         if (qty <= 0) return "Invalid quantity";
@@ -109,6 +109,18 @@ public class CheckoutEngine {
         double tier = cart.getOwner().getTierDiscount() * preDiscount;
         double totalDiscount = group + tier;
 
-        return String.format("");
+        // F.2 Receipt
+        StringBuilder receipt = new StringBuilder();
+        receipt.append("=== Receipt ===\n");
+        receipt.append("Customer: ").append(cart.getOwner().getName()).append("\n");
+        receipt.append("-----------------------------\n");
+        receipt.append("Total Tickets: ").append(cart.getTicketCount()).append("\n");
+        receipt.append("Total Items: ").append(cart.getItemCount()).append("\n");
+        receipt.append("-----------------------------\n");
+        receipt.append("Discount Applied: ").append(round2(totalDiscount)).append(" BDT\n");
+        receipt.append("Total Amount Due: ").append(totalAmount).append(" BDT\n");
+        receipt.append("=============================");
+
+        return receipt.toString();
     }
 }
