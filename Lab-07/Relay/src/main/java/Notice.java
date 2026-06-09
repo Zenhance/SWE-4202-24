@@ -3,8 +3,6 @@ public abstract class Notice {
     protected String txt;
 
     public Notice (r, txt){
-        if(r == null || r.isBlank()){
-            throw new IllegalArgumentException("No recipient");
         if(txt == null || txt.isBlank())
             throw new IllegalArgumentException("No text");
         }
