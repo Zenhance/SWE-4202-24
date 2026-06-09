@@ -1,5 +1,5 @@
-public class PushNotice extends Notice{
-    public PushNotice(Recipient recipient, String text) {
+public class PushMessage extends Message {
+    public PushMessage(Recipient recipient, String text) {
         super(recipient, text);
     }
 @Override

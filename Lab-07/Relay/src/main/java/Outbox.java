@@ -1,14 +1,14 @@
 public class Outbox {
-    private Notice[] notices;
+    private Message[] notices;
     private int count;
     public Outbox(){
-        notices=new Notice[100];
+        notices=new Message[100];
         count=0;
     }
-    public void queue(Notice n){
+    public void queue(Message n){
        notices[count++]=n;
     }
-    public void queue(Notice n,int repeat){
+    public void queue(Message n, int repeat){
         for(int i=0;i<repeat;i++){
             notices[count++]=n;
         }
@@ -16,5 +16,19 @@ public class Outbox {
     public int waitingCount(){
         return count;
     }
-
+    public double totalCost(){
+        double total=0;
+        for(int i=0;i<count;i++){
+            total+=notices[i].cost();
+        }
+        return total;
+    }
+    public String flush(){
+        String log="";
+        for(int i=0;i<count;i++){
+            log+=notices[i].deliver()+ "\n";
+        }
+        count=0;
+        return log;
+    }
 }

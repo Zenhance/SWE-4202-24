@@ -1,6 +1,6 @@
-public class PriorityEmailNotice extends EmailNotice{
+public class PriorityEmailMessage extends EmailMessage {
     private static final double SURCHARGE=1.0;
-    public PriorityEmailNotice(Recipient recipient, String text) {
+    public PriorityEmailMessage(Recipient recipient, String text) {
         super(recipient, text);
     }
     @Override

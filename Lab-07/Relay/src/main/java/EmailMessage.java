@@ -1,5 +1,5 @@
-public class EmailNotice extends Notice{
-    public EmailNotice(Recipient r,String text){
+public class EmailMessage extends Message {
+    public EmailMessage(Recipient r, String text){
         super(r,text);
     }
     @Override
