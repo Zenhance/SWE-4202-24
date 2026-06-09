@@ -1,19 +1,27 @@
 public class SmsMessage extends Notice
 {
+    private static final double COST_PER_SEGMENT = 0.10;
+
     public SmsMessage(Recipient recipient, String text)
     {
         super(recipient,text);
     }
 
+    private int segment()
+    {
+        return (text.length()+159)/160;
+    }
+
     @Override
     public String deliver()
     {
-        return "SMS to "+recipient.getName()+" "+recipient.getAddress()+" "+text;
+        return "SMS ( "+segment()+" segments ) "+text;
     }
 
     @Override
     public double cost()
     {
-        return 0.0;
+        return segment()*COST_PER_SEGMENT;
     }
+
 }
