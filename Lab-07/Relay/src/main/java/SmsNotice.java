@@ -1,4 +1,4 @@
-public class SmsNotice {
+public class SmsNotice extends Notice {
 
     private static final int SMS_SEGMENT_SIZE = 160;
     private static final double CHARGE_PER_SEGMENT = 0.5;
