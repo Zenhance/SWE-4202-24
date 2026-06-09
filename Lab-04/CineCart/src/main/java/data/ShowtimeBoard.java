@@ -6,6 +6,11 @@ public class ShowtimeBoard {
     private Showtime[] shows;
     private int count;
 
+    public ShowtimeBoard( ){
+        shows=new Showtime[MAX];
+        this.count=0;
+    }
+
     public void add(Showtime s) {
         if (count < MAX) {
             shows[count++] = s;
