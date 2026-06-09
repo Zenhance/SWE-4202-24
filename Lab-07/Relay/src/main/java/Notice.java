@@ -6,4 +6,12 @@ public abstract class Notice {
         this.recipient = recipient;
         this.text = text;
     }
+
+    public Recipient getRecipient() {
+        return recipient;
+    }
+
+    public String getText() {
+        return text;
+    }
 }
