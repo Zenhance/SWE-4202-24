@@ -4,6 +4,8 @@ public class Message {
 
     public Message(Recipient recipient,String bodytext){
 
+
+
     }
 }
 
