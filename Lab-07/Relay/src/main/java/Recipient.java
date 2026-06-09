@@ -7,7 +7,6 @@ public class Recipient {
         }
         this.name = name;
         this.address = address ;
-
     }
 
 }
