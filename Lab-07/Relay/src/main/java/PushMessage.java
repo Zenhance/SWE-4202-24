@@ -1,4 +1,4 @@
-public class PushMessage extends Notice
+public class PushMessage extends Message
 {
     private static final int PREVIEW_LENGTH = 40;
     private static final double COST_PER_TRIMMED = 0.50;
@@ -23,5 +23,11 @@ public class PushMessage extends Notice
     public double cost()
     {
         return COST_PER_TRIMMED;
+    }
+
+    @Override
+    public String describe()
+    {
+        return "PUSH";
     }
 }

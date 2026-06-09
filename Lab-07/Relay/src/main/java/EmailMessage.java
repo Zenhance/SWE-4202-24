@@ -1,4 +1,4 @@
-public class EmailMessage extends Notice
+public class EmailMessage extends Message
 {
     public EmailMessage(Recipient recipient, String text)
     {
@@ -15,6 +15,12 @@ public class EmailMessage extends Notice
     public double cost()
     {
         return 0.0;
+    }
+
+    @Override
+    public String describe()
+    {
+        return "EMAIL";
     }
 
 }

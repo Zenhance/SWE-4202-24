@@ -1,4 +1,4 @@
-public class SmsMessage extends Notice
+public class SmsMessage extends Message
 {
     private static final double COST_PER_SEGMENT = 0.10;
 
@@ -24,4 +24,9 @@ public class SmsMessage extends Notice
         return segment()*COST_PER_SEGMENT;
     }
 
+    @Override
+    public String describe()
+    {
+        return "SMS";
+    }
 }
