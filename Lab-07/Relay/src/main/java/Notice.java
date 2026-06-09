@@ -6,3 +6,10 @@ public abstract class Notice {
         this.recipient = recipient;
         this.text = text;
     }
+
+    public abstract double cost();
+
+    public abstract String describe();
+
+    public abstract String process();
+}
