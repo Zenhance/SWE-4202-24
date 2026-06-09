@@ -11,6 +11,13 @@ public class SmsNotice extends Notice {
         return "SMS";
     }
 
-    
+    public double cost() {
+        int textLength = text.length();
+
+        int segmentCount = textLength/SMS_SEGMENT_SIZE;
+        double charge = segmentCount*CHARGE_PER_SEGMENT;
+
+        return charge;
+    }
 
 }
