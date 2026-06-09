@@ -7,4 +7,12 @@ public class EmailMessage extends Notices {
     public String deliver(){
         return "Email to" + recipient.getName();
     }
+
+    public int cost(){
+        return 0;
+    }
+
+    public String describe() {
+        return "Email Notice";
+    }
 }
