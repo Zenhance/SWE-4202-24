@@ -11,8 +11,12 @@ public abstract class Notices {
         return recipient;
     }
 
-    public String gettext() {
+    public String getText() {
         return text;
     }
+
+    public abstract String deliver();
+    public abstract int cost();
+    public abstract String describe();
 
 }
