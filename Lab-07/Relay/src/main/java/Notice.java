@@ -1,12 +1,12 @@
-public class Notice
+public abstract class Notice
 {
-    private String channel;
-    private String body;
+    private Recipient recipient;
+    private String text;
 
-    public Notice(String channel, String body)
+    public Notice(Recipient recipient, String text)
     {
-        this.channel = channel;
-        this.body = body;
+        this.recipient = recipient;
+        this.text = text;
     }
 
 
