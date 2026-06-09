@@ -8,5 +8,8 @@ public class PushNotice extends Notice{
 
     private String preview(){
         if(getText().length()<= PUSH_PREVIEW_CHARS){return getText();}
+        return getText().substring(0,PUSH_PREVIEW_CHARS);
     }
+
+
 }
