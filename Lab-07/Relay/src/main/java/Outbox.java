@@ -9,3 +9,11 @@ public class Outbox {
         notices[count++]=notice;
     }
 }
+public void queue(Notice notice,int repeat){
+    for(int i=0;i<repeat;i++){
+        notices[count++]=notice;
+    }
+}
+public int waiting(){
+    return count;
+}
