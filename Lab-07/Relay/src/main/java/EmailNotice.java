@@ -10,4 +10,8 @@ public class EmailNotice extends Notice {
     public double cost(){
         return 0.0;
     }
+    @Override
+    public String describe(){
+        return "Email Notice";
+    }
 }
