@@ -39,9 +39,9 @@ public class Customer {
 
     public double getTierDiscount(){
         double  discountAmount=0;
-        if(loyaltyTier=="GOLD"){
+        if("GOLD".equals(loyaltyTier)){
             discountAmount=0.15;
-        }else if(loyaltyTier=="SILVER"){
+        }else if( "SILVER".equals(loyaltyTier)){
             discountAmount=0.08;
         }else{
             discountAmount=0.00;

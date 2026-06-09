@@ -1,9 +1,9 @@
 package model;
 
 public class ConcessionItem {
-    public String code;
-    public String name;
-    public double unitPrice;
+    private String code;
+    private String name;
+    private double unitPrice;
 
 
     public ConcessionItem(String code, String name, double unitPrice) {
