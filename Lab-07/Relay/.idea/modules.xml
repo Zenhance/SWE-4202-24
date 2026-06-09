@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Relay.iml" filepath="$PROJECT_DIR$/.idea/modules/Relay.iml" group="Relay" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Relay.iml" filepath="$PROJECT_DIR$/.idea/modules/Relay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Relay.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Relay.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Relay.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Relay.test.iml" />
     </modules>
   </component>
 </project>
