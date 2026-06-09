@@ -14,4 +14,8 @@ public abstract class Notice {
     public String getText() {
         return text;
     }
+
+    public abstract String deliver();
+    public abstract double cost();
+    public abstract String describe();
 }
