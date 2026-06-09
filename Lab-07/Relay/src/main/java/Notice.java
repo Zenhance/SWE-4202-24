@@ -11,7 +11,7 @@ abstract class Notice {
         return this.recipient;
     }
 
-    public String getString(){
+    public String getText(){
         return this.text;
     }
 
