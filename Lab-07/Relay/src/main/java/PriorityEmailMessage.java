@@ -1,5 +1,5 @@
-public class PriorityEmailNotice extends EmailNotice{
-    public PriorityEmailNotice(Recipient recipient,String text){
+public class PriorityEmailMessage extends EmailMessage {
+    public PriorityEmailMessage(Recipient recipient, String text){
         super(recipient,text);
     }
     @Override

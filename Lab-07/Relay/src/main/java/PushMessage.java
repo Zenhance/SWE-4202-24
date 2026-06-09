@@ -1,7 +1,5 @@
-import com.sun.jdi.event.StepEvent;
-
-public class PushNotice extends Notice {
-    public PushNotice(Recipient recipient, String text) {
+public class PushMessage extends Notice {
+    public PushMessage(Recipient recipient, String text) {
         super(recipient, text);
     }
     @Override
