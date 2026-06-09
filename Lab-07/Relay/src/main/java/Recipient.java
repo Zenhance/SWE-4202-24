@@ -9,7 +9,16 @@ public class Recipient {
     public Recipient(String name, String address) {
         this.name = name;
         this.addess = address;
-
     }
 
+    //getter
+
+
+    public String getName() {
+        return name;
+    }
+
+    public String getAddess() {
+        return addess;
+    }
 }
