@@ -14,4 +14,5 @@ public abstract class Notices {
     public String gettext() {
         return text;
     }
+
 }
