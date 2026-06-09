@@ -3,4 +3,6 @@ public class SMS extends Notice{
         super(String channel, String body);
         noticeCount++;
     }
+
+
 }
