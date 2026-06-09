@@ -1,7 +1,7 @@
-class Recipient
+public class Recipient
 {
-    String name;
-    String address;
+    private String name;
+    private String address;
 
     public Recipient(String name, String address)
     {
@@ -9,5 +9,13 @@ class Recipient
         this.address = address;
     }
 
+    public String getName()
+    {
+        return name;
+    }
 
+    public String getAddress()
+    {
+        return address;
+    }
 }
