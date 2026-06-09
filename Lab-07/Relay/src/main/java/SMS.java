@@ -5,18 +5,3 @@ public class SMS extends Message{
     }
 
 
-    public String deliver(){
-
-
-    }
-
-    public double cost(){
-
-
-    }
-
-    public String describe(){
-
-
-    }
-}
