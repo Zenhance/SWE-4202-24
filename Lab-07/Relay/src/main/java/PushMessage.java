@@ -4,7 +4,13 @@ public class PushMessage extends Message {
     }
     @Override
     public String deliver() {
-        return "Push to " + recipient.getName() + " " + recipient.getAddress()+" "+text;
+        if(text.length()>=40){
+            text=text.substring(0,40);// don't know why work on 40 and not 39
+            return "Push to " + recipient.getName() + " " + recipient.getAddress()+" "+text;
+        }
+        else {
+            return "Push to " + recipient.getName() + " " + recipient.getAddress() + " " + text;
+        }
     }
     @Override
     public double cost() {
