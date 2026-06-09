@@ -5,5 +5,12 @@ public class SmsMessage extends Message {
         super(recipient, text);
     }
 
+    private int calculateSegments() {
+        int length = getText().length();
+        if (length == 0) {
+            return 1;
+        }
+        return (length + 159) / 160;
+    }
 
 }
