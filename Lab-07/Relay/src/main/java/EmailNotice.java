@@ -6,6 +6,5 @@ public class EmailNotice extends Notice {
     public EmailNotice (Recipient recipient, String text) {
         super(text, recipient);
 
-        this.cost = 0.0;
     }
 }
