@@ -12,3 +12,8 @@ public class EmailMessage extends Notice{
     public String deliver() {
         return String.format("%s\n %s",recipient.getName());
     }
+
+    @Override
+    public String describe() {
+        return "Email";
+    }
