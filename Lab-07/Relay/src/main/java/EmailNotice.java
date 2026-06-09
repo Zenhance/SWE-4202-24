@@ -15,6 +15,6 @@ public class EmailNotice extends Notice{
 
     @Override
     public String describe() {
-        return "";
+        return "Email Notice";
     }
 }
