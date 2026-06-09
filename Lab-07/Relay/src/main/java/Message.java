@@ -7,5 +7,16 @@ public class Message {
         this.body = body;
     }
 
+    public Recipient getRecipient() {
+        return recipient;
+    }
+    public String getBody() {
+        return body;
+    }
+
+    public abstract String deliver();
+    public abstract double cost();
+    public abstract String describe();
+
 
 }
