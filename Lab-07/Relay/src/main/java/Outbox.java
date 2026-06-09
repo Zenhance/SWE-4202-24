@@ -12,7 +12,7 @@ public class Outbox {
       count++;
   }
 
-    public void queue(Notice notice, int repeat){
+    public void enqueue(Notice notice, int repeat){
       for(int i=0;i<repeat;i++){
           queue(notice);
       }
@@ -36,7 +36,7 @@ for(int i=0;i<count;i++){
     log+=notices[i].deliver();
 
     if(i<count-1){
-        log+="\n"
+        log+="\n";
     }
 }
 count = 0;
