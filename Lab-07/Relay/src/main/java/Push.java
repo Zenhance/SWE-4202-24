@@ -12,4 +12,18 @@ public class Push extends Notice {
         return text.substring(0, 40);
     }
 
+    @Override
+    public String deliver() {
+        return "[Push Preview] " + getPreviewText();
+    }
+
+    @Override
+    public double cost() {
+        return flatRate;
+    }
+
+    @Override
+    public String describe() {
+        return "Push notification to " + recipient.getName();
+    }
 }
