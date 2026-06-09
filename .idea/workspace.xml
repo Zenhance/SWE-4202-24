@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dfcbdcd4-310d-4487-b279-635bf3e2eecf" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Lab-04/CineCart/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab-04/CineCart/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab-04/CineCart/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab-04/CineCart/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab-04/CineCart/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab-04/CineCart/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab-04/CineCart/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab-04/CineCart/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab-04/CineCart/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab-04/CineCart/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab-04/CineCart/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/io/CsvLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab-04/CineCart/src/main/resources/concessions.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab-04/CineCart/src/main/resources/customers.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab-04/CineCart/src/main/resources/halls.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab-04/CineCart/src/main/resources/movies.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab-04/CineCart/src/main/resources/showtimes.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab-04/CineCart/src/test/java/CineCartTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "xenonono36-ctrl"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Zenhance/SWE-4202-24.git",
+    "accountId": "a40ace16-fa49-4aa9-a54a-9105e5510a52"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7,
+  "fromUser": false
+}]]></component>
+  <component name="ProjectId" id="3DbbBT1txRDXs5dvmvW0jUDPJro" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "Merging 36__Tanvir",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/User/Documents/LAB/SWE-4202-24",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dfcbdcd4-310d-4487-b279-635bf3e2eecf" name="Changes" comment="" />
+      <created>1778553580958</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1778553580958</updated>
+      <workItem from="1778553581981" duration="483000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
