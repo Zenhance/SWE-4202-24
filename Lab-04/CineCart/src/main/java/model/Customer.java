@@ -20,12 +20,15 @@ public class Customer {
 
     }
     public int getId(){
+
         return id;
     }
     public String getName(){
+
         return name;
     }
     public int getAge(){
+
         return age;
     }
     public String getLoyaltyTier(){
@@ -40,10 +43,10 @@ public class Customer {
             return 0.08;
         }
         else{
-            return 0;
+            return 0.0;
         }
     }
-
+    @Override
     public String toString()
     {
         String s;
