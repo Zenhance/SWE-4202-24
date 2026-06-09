@@ -9,6 +9,6 @@ public class SmsMessage extends Notice{
 
     @Override
     public double cost() {
-        return 0;
+        return (double) txt.length()/160.0 * 50.0;
     }
 }

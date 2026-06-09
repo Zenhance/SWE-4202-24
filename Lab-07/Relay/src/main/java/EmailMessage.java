@@ -4,7 +4,8 @@ public class EmailMessage extends Notice {
     }
     @Override
     public String deliver() {
-        return "";
+        String header = r.getName();
+        return header + txt;
     }
 
     @Override
