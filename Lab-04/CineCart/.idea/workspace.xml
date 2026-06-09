@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f9cd8f1a-14c0-4b54-b5fd-16e9b575cad7" name="Changes" comment="Post lab changes" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="CineCart" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
+    {
+      &quot;assignee&quot;: &quot;xenonono36-ctrl&quot;
+    }
+  ],
+  &quot;lastFilter&quot;: {
+    &quot;assignee&quot;: &quot;xenonono36-ctrl&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Zenhance/SWE-4202-24.git&quot;,
+    &quot;accountId&quot;: &quot;a40ace16-fa49-4aa9-a54a-9105e5510a52&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3DbcAepF90elsURVQG3qjBYYRvv" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.CineCartTest.addConcession_unknownCode_returnsErrorAndDoesNotChangeCart.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CineCartTest.concessionMenu_findByCode_returnsHitOrNull.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CineCartTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CineCartTest.hall_buildsGridAndMarksFirstRowsPremium.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CineCartTest.hall_countAvailable_decrementsAfterBooking.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CineCartTest.movie_getMinAge_returnsCorrectValueForEachRating.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CineCartTest.movie_storesAllFieldsViaGetters.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Upgrade Gradle wrapper.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;36__Tanvir&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Documents/LAB/SWE-4202-24/Lab-04/CineCart/src/main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Documents\LAB\SWE-4202-24\Lab-04\CineCart\src\main" />
+      <recent name="C:\Users\User\Documents\LAB\SWE-4202-24\Lab-04\CineCart\src" />
+      <recent name="C:\Users\User\Documents\LAB\SWE-4202-24\Lab-04\CineCart" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.CineCartTest">
+    <configuration name="CineCartTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;CineCartTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CineCartTest.addConcession_unknownCode_returnsErrorAndDoesNotChangeCart" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;CineCartTest.addConcession_unknownCode_returnsErrorAndDoesNotChangeCart&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CineCartTest.concessionMenu_findByCode_returnsHitOrNull" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;CineCartTest.concessionMenu_findByCode_returnsHitOrNull&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CineCartTest.hall_buildsGridAndMarksFirstRowsPremium" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;CineCartTest.hall_buildsGridAndMarksFirstRowsPremium&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CineCartTest.hall_countAvailable_decrementsAfterBooking" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;CineCartTest.hall_countAvailable_decrementsAfterBooking&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.CineCartTest" />
+        <item itemvalue="Gradle.CineCartTest.addConcession_unknownCode_returnsErrorAndDoesNotChangeCart" />
+        <item itemvalue="Gradle.CineCartTest.hall_countAvailable_decrementsAfterBooking" />
+        <item itemvalue="Gradle.CineCartTest.hall_buildsGridAndMarksFirstRowsPremium" />
+        <item itemvalue="Gradle.CineCartTest.concessionMenu_findByCode_returnsHitOrNull" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f9cd8f1a-14c0-4b54-b5fd-16e9b575cad7" name="Changes" comment="" />
+      <created>1778554067496</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1778554067496</updated>
+      <workItem from="1778554068595" duration="398000" />
+      <workItem from="1778554507360" duration="5615000" />
+      <workItem from="1778589888938" duration="120000" />
+      <workItem from="1778590053006" duration="603000" />
+      <workItem from="1779117170977" duration="2503000" />
+      <workItem from="1779157514475" duration="1969000" />
+      <workItem from="1779162012286" duration="3460000" />
+      <workItem from="1780313819911" duration="57000" />
+      <workItem from="1780335351913" duration="390000" />
+      <workItem from="1780335762746" duration="19000" />
+      <workItem from="1780366313728" duration="8999000" />
+      <workItem from="1780376152411" duration="1732000" />
+      <workItem from="1780378178297" duration="915000" />
+      <workItem from="1780406086967" duration="2109000" />
+      <workItem from="1780408877202" duration="40000" />
+      <workItem from="1780971753551" duration="13000" />
+    </task>
+    <task id="LOCAL-00016" summary="Implemented getters in Showtime">
+      <option name="closed" value="true" />
+      <created>1779164425123</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1779164425123</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Minor fixed">
+      <option name="closed" value="true" />
+      <created>1779164654259</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1779164654259</updated>
+    </task>
+    <task id="LOCAL-00018" summary="SHowtime implemented">
+      <option name="closed" value="true" />
+      <created>1779165000774</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1779165000774</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Change : Customer page updated">
+      <option name="closed" value="true" />
+      <created>1780366623526</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1780366623526</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Change : Add variables and constructors to the ticket section">
+      <option name="closed" value="true" />
+      <created>1780366809802</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1780366809802</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Change : Add getters">
+      <option name="closed" value="true" />
+      <created>1780366851229</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1780366851229</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Change : Add toString">
+      <option name="closed" value="true" />
+      <created>1780366949372</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1780366949372</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Change : Add getters to ConcessionItem class">
+      <option name="closed" value="true" />
+      <created>1780367041736</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1780367041736</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Change : Add toString to ConcessionItem class">
+      <option name="closed" value="true" />
+      <created>1780367168222</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1780367168222</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Change : Add Variables to Cart class">
+      <option name="closed" value="true" />
+      <created>1780367293088</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1780367293088</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Change : Add Constructors to Cart class">
+      <option name="closed" value="true" />
+      <created>1780367419775</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1780367419775</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Change : Add addTicket method to Cart class">
+      <option name="closed" value="true" />
+      <created>1780367550287</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1780367550287</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Change : Add addItem method to Cart class">
+      <option name="closed" value="true" />
+      <created>1780367752678</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1780367752678</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Change : Add getters method to Cart class">
+      <option name="closed" value="true" />
+      <created>1780367808919</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1780367808919</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Change : Add sumTicketsPaid method to Cart class">
+      <option name="closed" value="true" />
+      <created>1780367923896</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1780367923896</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Change : Add sumConcessionsRaw method to Cart class">
+      <option name="closed" value="true" />
+      <created>1780368116139</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1780368116139</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Change : Add hasItem method to Cart class">
+      <option name="closed" value="true" />
+      <created>1780368236204</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1780368236204</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Change : Add variables and constructor to ShowtimeBoard class">
+      <option name="closed" value="true" />
+      <created>1780368406003</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1780368406003</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Change : Add void add(Showtime s) to ShowtimeBoard class">
+      <option name="closed" value="true" />
+      <created>1780368492088</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1780368492088</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Change : Add void Showtime findById(int id) to ShowtimeBoard class">
+      <option name="closed" value="true" />
+      <created>1780368627304</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1780368627304</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Change : Add void displayAll() method to ShowtimeBoard class">
+      <option name="closed" value="true" />
+      <created>1780368722167</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1780368722167</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Change : Add void add variables , constructors and (ConcessionItem c) method to ConcessionMenu class">
+      <option name="closed" value="true" />
+      <created>1780368968138</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1780368968138</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Change : Add void add ConcessionItem findByCode method to ConcessionMenu class">
+      <option name="closed" value="true" />
+      <created>1780369124182</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1780369124182</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Change : Add void displayAll method to ConcessionMenu class">
+      <option name="closed" value="true" />
+      <created>1780369263027</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1780369263027</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Change : import datas to CheckoutEngine class">
+      <option name="closed" value="true" />
+      <created>1780369487804</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1780369487804</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Change : add variables and contstructor to CheckoutEngine class">
+      <option name="closed" value="true" />
+      <created>1780369623166</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1780369623166</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Change : add variables and contstructor to CheckoutEngine class">
+      <option name="closed" value="true" />
+      <created>1780369765124</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1780369765124</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Change : add bookTicket method [2] to CheckoutEngine class">
+      <option name="closed" value="true" />
+      <created>1780370248315</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1780370248315</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Change : add bookTicket method [3] to CheckoutEngine class">
+      <option name="closed" value="true" />
+      <created>1780370386169</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1780370386169</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Change : add bookTicket method [3] to CheckoutEngine class">
+      <option name="closed" value="true" />
+      <created>1780370485970</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1780370485970</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Change : add bookTicket method [4] to CheckoutEngine class">
+      <option name="closed" value="true" />
+      <created>1780371082320</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1780371082320</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Change : add bookTicket method [5] to CheckoutEngine class and make methods public in Cart class">
+      <option name="closed" value="true" />
+      <created>1780372469098</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1780372469098</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Change : add bookTicket method [6] to CheckoutEngine class">
+      <option name="closed" value="true" />
+      <created>1780372523070</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1780372523070</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Change : add addConcession method [1,2,3] to CheckoutEngine class">
+      <option name="closed" value="true" />
+      <created>1780372902413</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1780372902414</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Change : add  checkout method [1] to CheckoutEngine class">
+      <option name="closed" value="true" />
+      <created>1780373100094</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1780373100095</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Change : add  checkout method [2] to CheckoutEngine class">
+      <option name="closed" value="true" />
+      <created>1780373138083</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1780373138083</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Change : add  checkout method [3] to CheckoutEngine class">
+      <option name="closed" value="true" />
+      <created>1780373339082</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1780373339082</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Change : add  checkout method [4] to CheckoutEngine class">
+      <option name="closed" value="true" />
+      <created>1780373431838</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1780373431838</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Change : add  checkout method [5] to CheckoutEngine class">
+      <option name="closed" value="true" />
+      <created>1780373564879</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1780373564879</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Change : add  checkout method [6] to CheckoutEngine class">
+      <option name="closed" value="true" />
+      <created>1780373810994</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1780373810994</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Change : add  checkout method [7] to CheckoutEngine class">
+      <option name="closed" value="true" />
+      <created>1780373858538</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1780373858538</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Change : add  checkout method [8] to CheckoutEngine class">
+      <option name="closed" value="true" />
+      <created>1780373899845</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1780373899845</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Change : add  checkout method [9] to CheckoutEngine class">
+      <option name="closed" value="true" />
+      <created>1780373968630</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1780373968630</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Change : add  roundby2 to CheckoutEngine class">
+      <option name="closed" value="true" />
+      <created>1780374039446</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1780374039447</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Change : add getReceipt to CheckoutEngine class">
+      <option name="closed" value="true" />
+      <created>1780374119748</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1780374119748</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Change : add required values to CheckoutEngine class">
+      <option name="closed" value="true" />
+      <created>1780374395601</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1780374395601</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Change : Fix the compilation errors and argument errors">
+      <option name="closed" value="true" />
+      <created>1780377676529</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1780377676530</updated>
+    </task>
+    <task id="LOCAL-00063" summary="Final changes to LAB - 04">
+      <option name="closed" value="true" />
+      <created>1780378996566</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1780378996567</updated>
+    </task>
+    <task id="LOCAL-00064" summary="Post lab changes">
+      <option name="closed" value="true" />
+      <created>1780971870167</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1780971870168</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Change : Add void displayAll method to ConcessionMenu class" />
+    <MESSAGE value="Change : import datas to CheckoutEngine class" />
+    <MESSAGE value="Change : add variables and contstructor to CheckoutEngine class" />
+    <MESSAGE value="Change : add bookTicket [1] method to CheckoutEngine class" />
+    <MESSAGE value="Change : add bookTicket method [2] to CheckoutEngine class" />
+    <MESSAGE value="Change : add bookTicket method [3] to CheckoutEngine class" />
+    <MESSAGE value="Change : add bookTicket method [4] to CheckoutEngine class" />
+    <MESSAGE value="Change : add bookTicket method [5] to CheckoutEngine class and make methods public in Cart class" />
+    <MESSAGE value="Change : add bookTicket method [6] to CheckoutEngine class" />
+    <MESSAGE value="Change : add addConcession method [1,2,3] to CheckoutEngine class" />
+    <MESSAGE value="Change : add  checkout method [1] to CheckoutEngine class" />
+    <MESSAGE value="Change : add  checkout method [2] to CheckoutEngine class" />
+    <MESSAGE value="Change : add  checkout method [3] to CheckoutEngine class" />
+    <MESSAGE value="Change : add  checkout method [4] to CheckoutEngine class" />
+    <MESSAGE value="Change : add  checkout method [5] to CheckoutEngine class" />
+    <MESSAGE value="Change : add  checkout method [6] to CheckoutEngine class" />
+    <MESSAGE value="Change : add  checkout method [7] to CheckoutEngine class" />
+    <MESSAGE value="Change : add  checkout method [8] to CheckoutEngine class" />
+    <MESSAGE value="Change : add  checkout method [9] to CheckoutEngine class" />
+    <MESSAGE value="Change : add  roundby2 to CheckoutEngine class" />
+    <MESSAGE value="Change : add getReceipt to CheckoutEngine class" />
+    <MESSAGE value="Change : add required values to CheckoutEngine class" />
+    <MESSAGE value="Change : Fix the compilation errors and argument errors" />
+    <MESSAGE value="Final changes to LAB - 04" />
+    <MESSAGE value="Post lab changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Post lab changes" />
+  </component>
+</project>
