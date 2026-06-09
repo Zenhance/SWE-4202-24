@@ -1,4 +1,4 @@
 public class Outbox{
-    Notice[] notices = new Notice[100];
+    public Notice[] notices = new Notice[100];
 
 }

@@ -1,6 +1,6 @@
 public class Recipient{
-    String name;
-    String address;
+    public String name;
+    public String address;
 
     public Recipient(String name, String address) {
         this.name = name;

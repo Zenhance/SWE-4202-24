@@ -1,5 +1,5 @@
 public class PriorityEmail extends Email{
-    PriorityEmail(){
+    public PriorityEmail(){
         super(String channel, String body);
     }
 }

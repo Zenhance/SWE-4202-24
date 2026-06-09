@@ -1,5 +1,5 @@
 public class Push extends Notice{
-    Push(){
+    public Push(){
         super(String channel, String body);
     }
 }

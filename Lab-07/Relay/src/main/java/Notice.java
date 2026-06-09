@@ -1,7 +1,7 @@
 public class Notice{
-    String channel;
-    String body;
-    static int noticeCount = 0;
+    public String channel;
+    public String body;
+    protected static int noticeCount = 0;
 
     public Notice(String channel, String body) {
         this.channel = channel;

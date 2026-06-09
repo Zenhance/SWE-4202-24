@@ -1,5 +1,5 @@
 public class SMS extends Notice{
-    SMS(){
+    public SMS(){
         super(String channel, String body);
     }
 }
