@@ -29,4 +29,8 @@ public double totalCost(){
       }
       return total;
 }
+
+public String flush(){
+
+}
 }
