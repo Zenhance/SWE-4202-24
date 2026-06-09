@@ -1,5 +1,5 @@
 public class Outbox {
-  private final Notice[] notices;
+  private final Message[] notices;
   private int count;
 
   public Outbox(){
