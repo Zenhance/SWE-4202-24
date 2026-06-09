@@ -3,6 +3,9 @@ public abstract class Notice {
         String body;
 
         public Notice(Recipient r, String body) {
+            if(body.isBlank()){
+                throw new IllegalArgumentException("Text cannot be empty.");
+            }
             this.r = r;
             this.body = body;
         }
