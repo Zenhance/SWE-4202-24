@@ -5,11 +5,21 @@ public class PushMessage extends Message{
     }
     @Override
     public String deliver() {
-        return txt.substring(0, 40);
+        String res = "";
+        if (txt.length() >= 40)
+        res = txt.substring(0,40);
+        else res = txt.substring(0);
+
+        return res;
     }
 
     @Override
     public double cost() {
-        return 50;
+        return 0.1;
+    }
+
+    @Override
+    public String describe() {
+        return "PUSH";
     }
 }

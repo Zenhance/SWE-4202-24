@@ -18,7 +18,7 @@ public class Outbox {
     public int size(){return count;}
 
     public double totalCost(){
-        double total;
+        double total= 0;
         for (int i = 0; i < count; i++)
         {
             total += msgs[i].cost();

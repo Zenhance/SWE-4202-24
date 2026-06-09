@@ -4,13 +4,19 @@ public class SmsMessage extends Message{
     }
     @Override
     public String deliver() {
-        int segments = txt.length()/160;
-        String msg = segments + txt;
+        double segments = Math.ceil(txt.length()/(double)160);
+        String msg = segments +""+ txt;
         return msg;
     }
 
     @Override
     public double cost() {
-        return (double) txt.length()/160.0 * 50.0;
+        double segments = Math.ceil(txt.length()/(double)160);
+        return (double) segments * 0.5;
+    }
+
+    @Override
+    public String describe() {
+        return "SMS";
     }
 }

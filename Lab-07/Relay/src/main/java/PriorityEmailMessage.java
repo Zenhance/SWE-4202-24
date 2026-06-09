@@ -7,11 +7,16 @@ public class PriorityEmailMessage extends EmailMessage {
 
     @Override
     public String deliver(){
-        return priorityFlag+txt;
+        return priorityFlag + r.getName() + r.getAddress() + txt;
     }
 
     @Override
     public double cost(){
-        return 10;
+        return 0.3;
+    }
+
+    @Override
+    public String describe(){
+        return "PRIORITY";
     }
 }
