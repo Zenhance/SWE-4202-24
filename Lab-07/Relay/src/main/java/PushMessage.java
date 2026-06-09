@@ -1,4 +1,4 @@
-public class PushMessage extends Notice{
+public class PushMessage extends Message {
     public PushMessage(Recipient recipient,String text) {
         super(recipient,text);
     }
@@ -9,5 +9,10 @@ public class PushMessage extends Notice{
     @Override
     public double cost() {
         return 10.0;
+    }
+
+    @Override
+    public String describe() {
+        return "Push";
     }
 }
