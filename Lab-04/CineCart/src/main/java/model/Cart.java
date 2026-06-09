@@ -52,7 +52,14 @@ public class Cart {
     public int getItemCount(){
         return itemCount;
     }
-    public double SumConcessionsRaw(){
+    public double sumTicketsPaid(){
+        double sum=0;
+        for(int i=0;i<ticketCount;i++){
+            sum+=tickets[i].getPricePaid();
+        }
+        return sum;
+    }
+    public double sumConcessionsRaw(){
         double sum=0;
         for(int i=0; i<itemCount;i++){
             sum+=items[i].getUnitPrice()*qtys[i];

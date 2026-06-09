@@ -6,14 +6,11 @@ public class Customer {
     private int age;
     private String loyaltyTier;
     //constructor
-    public Customer {
-        this.id=id;
-        this.name=name;
-        this.age=age;
-        this.loyaltyTier="BASIC";
+    public Customer(int id,String name,int age){
+       this(id,name,age,"BASIC");
     }
     //2nd constructor
-    public Customer{
+    public Customer(int id,String name,int age,String loyaltyTier){
         this.id=id;
         this.name=name;
         this.age=age;

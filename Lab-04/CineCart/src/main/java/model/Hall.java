@@ -1,10 +1,11 @@
 package model;
 
 public class Hall {
-    public int id;
-    public int rows;
-    public int cols;
-    public Seat[][]grid;
+    private int id;
+    private int rows;
+    private int cols;
+    private Seat[][] grid;
+
     //constructor
     public Hall(int id, int rows, int cols, int premiumRows) {
         this.id = id;
@@ -19,14 +20,25 @@ public class Hall {
             }
         }
     }
-    public int getId(){
-    return id;
+
+    public int getId() {
+        return id;
     }
+
+    public int getRows() {
+        return rows;
+    }
+
+    public int getCols() {
+        return cols;
+    }
+
     //methods
-    public Seat getSeat(int row,int col){
+    public Seat getSeat(int row, int col) {
         return grid[row][col];
     }
-    int countAvailable() {
+
+    public int countAvailable() {
         int count = 0;
         for (int r = 0; r < rows; r++) {
             for (int c = 0; c < cols; c++) {
@@ -37,21 +49,20 @@ public class Hall {
         }
         return count;
     }
-        public void displayLayout() {
-            for (int r = 0; r < rows; r++) {
-                for (int c = 0; c < cols; c++) {
-                    Seat seat = grid[r][c];
-                    if (seat.isBooked) {
-                        System.out.println("# ");
-                    }
-                    else if (seat.isPremium) {
-                        System.out.println("* ");
-                    }
-                    else {
-                        System.out.println(". ");
-                    }
+
+    public void displayLayout() {
+        for (int r = 0; r < rows; r++) {
+            for (int c = 0; c < cols; c++) {
+                Seat seat = grid[r][c];
+                if (seat.isBooked()) {
+                    System.out.println("# ");
+                } else if (seat.isPremium()) {
+                    System.out.println("* ");
+                } else {
+                    System.out.println(". ");
                 }
-                System.out.println();
             }
+            System.out.println();
         }
-        }
+    }
+}

@@ -1,10 +1,10 @@
 package model;
 
 public class Seat {
-    public int row;
-    public int col;
-    public boolean isPremium;
-    public boolean isBooked;
+    private int row;
+    private int col;
+    private boolean isPremium;
+    private boolean isBooked;
 //constructor
 public Seat(int row,int col,boolean isPremium){
     this.row=row;
@@ -19,10 +19,10 @@ public int getRow(){
 public int getCol(){
     return col;
 }
-public boolean getIsPremium(){
+public boolean isPremium(){
     return isPremium;
 }
-public boolean getIsBooked(){
+public boolean isBooked(){
     return isBooked;
 }
 public void book(){
