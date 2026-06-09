@@ -1,9 +1,7 @@
 import java.util.stream.Stream;
 
-public class EmailMessage {
-    Recipient r;
-    String Message;
-    public EmailMessage(Recipient r, String Message){
-
+public class EmailMessage extends Notice{
+     public EmailMessage(Recipient r,String msg){
+         super(r,msg);
     }
 }
