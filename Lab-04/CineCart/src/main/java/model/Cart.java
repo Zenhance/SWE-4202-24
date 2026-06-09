@@ -12,8 +12,9 @@ public class Cart {
     private int itemCount;
 
     public Cart(Customer owner){
-         this.tickets= new Ticket[ticketCount];
-         this.items= new ConcessionItem[itemCount];
+         this.tickets= new Ticket[MAX_TICKETS];
+         this.items= new ConcessionItem[MAX_ITEMS];
+         this.qtys= new int[MAX_ITEMS];
          this.ticketCount=0;
          this.itemCount=0;
     }
@@ -27,7 +28,7 @@ public class Cart {
     }
 
    public void addItem(ConcessionItem c, int qty ){
-        if(itemCount<MAX_ITEMS && qty>20){
+        if(itemCount<MAX_ITEMS && qty>0){
             items[itemCount]=c;
             qtys[itemCount]=qty;
 
@@ -87,7 +88,9 @@ public class Cart {
 
     public boolean  hasItem(String code){
         for(int i=0; i<itemCount; i++){
-            return (items[i].getCode()).equals(code);
+            if(items[i].getCode().equals(code)){
+                return true;
+            }
         }
         return false;
     }
