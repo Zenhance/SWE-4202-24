@@ -14,6 +14,8 @@ public Recipient(String name,String address){
         return name;
     }
 
-
+    public String getAddress() {
+        return address;
+    }
 }
 
