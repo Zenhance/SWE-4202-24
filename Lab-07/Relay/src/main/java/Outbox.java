@@ -9,5 +9,17 @@ public class Outbox
         count=0;
     }
 
+    public void enqueue(Message message)
+    {
+        messages[count]=message;
+        count++;
+    }
 
+    public void enqueue(Message message, int repeat)
+    {
+        for(int i=0;i<count;i++)
+        {
+            enqueue(message);
+        }
+    }
 }
