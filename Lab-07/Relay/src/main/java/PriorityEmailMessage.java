@@ -9,4 +9,9 @@ public class PriorityEmailMessage extends EmailMessage {
     public String deliver(){
         return priorityFlag+txt;
     }
+
+    @Override
+    public double cost(){
+        return 10;
+    }
 }
