@@ -4,7 +4,7 @@ public class Recipient {
 
     public Recipient(String name, String email) {
         this.name = name;
-        this. = email;
+        this.email = email;
     }
 
     public String getName() {
