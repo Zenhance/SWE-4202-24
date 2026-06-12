@@ -19,7 +19,11 @@ public class Outbox {
     }
 
     public String flush(){
-            return "";
+        String queue = "";
+        for(int i=0;i<cnt;i++){
+            queue+=message[i].deliver();
+        }
+        return queue;
     }
 
     public void enqueue(Message m,int a){
