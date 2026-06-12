@@ -1,4 +1,4 @@
-public class Message {
+public abstract class Message {
     private Recipient recipient;
     private String body;
 

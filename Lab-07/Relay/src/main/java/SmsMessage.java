@@ -1,6 +1,6 @@
 public class SmsMessage extends Message {
-    private static final int    SMS_SEGMENT_SIZE   = 160;   // chars per SMS segment
-    private static final double SMS_PER_SEGMENT    = 0.50;
+    private static final int SMS_SEGMENT_SIZE = 160;   // chars per SMS segment
+    private static final double SMS_PER_SEGMENT = 0.50;
 
     public SmsMessage(Recipient recipient, String body) {
         super(recipient, body);
@@ -8,7 +8,7 @@ public class SmsMessage extends Message {
 
     private int segmentCount() {
         int len = getBody().length();
-        return len/SMS_SEGMENT_SIZE;
+        return len / SMS_SEGMENT_SIZE;
     }
 
     public String deliver() {
@@ -22,5 +22,6 @@ public class SmsMessage extends Message {
     public String describe() {
         return ("SMS send to " + getRecipient().getName() + " " + getRecipient().getAddress());
     }
+
 
 }
