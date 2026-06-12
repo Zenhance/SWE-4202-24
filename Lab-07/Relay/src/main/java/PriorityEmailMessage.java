@@ -23,6 +23,6 @@ public class PriorityEmailMessage extends EmailMessage
     @Override
     public String deliver()
     {
-        return priorityFlag+" "+recipient.getName()+" "+recipient.getAddress()+" "+text;
+        return priorityFlag+" E-MAIL to "+recipient.getName()+" "+recipient.getAddress()+" "+text;
     }
 }
