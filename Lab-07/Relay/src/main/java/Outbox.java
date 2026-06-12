@@ -31,4 +31,14 @@ public class Outbox
     {
         return count;
     }
+
+    public  String flush()
+    {
+        String chat="";
+        for(int i=0;i<count;i++)
+        {
+            chat=chat+messages[i].deliver();
+        }
+        return chat;
+    }
 }
