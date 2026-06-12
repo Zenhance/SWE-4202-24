@@ -1,13 +1,7 @@
 public class Outbox
 {
-    private Message[] messages;
-    private int count;
-
-    public Outbox(Message[] messages, int count)
-    {
-        messages = new Message[30];
-        this.count=0;
-    }
+    private Message[] messages = new Message[30];
+    private int count = 0;
 
     public void enqueue(Message message)
     {
