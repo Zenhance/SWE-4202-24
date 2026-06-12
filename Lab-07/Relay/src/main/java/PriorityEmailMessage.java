@@ -1,6 +1,6 @@
 public class PriorityEmailMessage extends EmailMessage
 {
-    private static final double SURCHARGE = 0.25;
+    private static final double SURCHARGE = 0.30;
     String priorityFlag = "PRIORITY";
 
     public PriorityEmailMessage(Recipient recipient, String text)
