@@ -1,6 +1,6 @@
 public class SmsMessage extends Message
 {
-    private static final double COST_PER_SEGMENT = 0.10;
+    private static final double COST_PER_SEGMENT = 0.50;
 
     public SmsMessage(Recipient recipient, String text)
     {
