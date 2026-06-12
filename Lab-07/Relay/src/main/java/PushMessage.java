@@ -11,12 +11,15 @@ public class PushMessage extends Message
     @Override
     public String deliver()
     {
-        String preview="";
-        if(text.length()<=PREVIEW_LENGTH)
+        if(text.length()>=PREVIEW_LENGTH)
         {
-            preview=text;
+            text=text.substring(0,40);
+            return "PUSH to "+recipient.getName()+" "+recipient.getAddress()+" "+text;
         }
-        return "PUSH : "+preview;
+        else
+        {
+            return "PUSH to "+recipient.getName()+" "+recipient.getAddress()+" "+text;
+        }
     }
 
     @Override
