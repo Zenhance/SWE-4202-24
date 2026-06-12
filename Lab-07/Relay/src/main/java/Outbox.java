@@ -6,7 +6,7 @@ public class Outbox
     public Outbox(Message[] messages, int count)
     {
         messages = new Message[30];
-        count=0;
+        this.count=0;
     }
 
     public void enqueue(Message message)
@@ -17,7 +17,7 @@ public class Outbox
 
     public void enqueue(Message message, int repeat)
     {
-        for(int i=0;i<count;i++)
+        for(int i=0;i<repeat;i++)
         {
             enqueue(message);
         }
@@ -31,11 +31,6 @@ public class Outbox
             total=total+messages[i].cost();
         }
         return total;
-    }
-
-    public String flush()
-    {
-        return "";
     }
 
     public int size()
