@@ -22,4 +22,24 @@ public class Outbox
             enqueue(message);
         }
     }
+
+    public double totalCost()
+    {
+        double total=0.0;
+        for(int i=0;i<count;i++)
+        {
+            total=total+messages[i].cost();
+        }
+        return total;
+    }
+
+    public String flush()
+    {
+        return "";
+    }
+
+    public int size()
+    {
+        return count;
+    }
 }
