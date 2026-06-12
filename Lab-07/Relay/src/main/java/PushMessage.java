@@ -1,7 +1,7 @@
 public class PushMessage extends Message
 {
     private static final int PREVIEW_LENGTH = 40;
-    private static final double COST_PER_TRIMMED = 0.50;
+    private static final double COST_PER_TRIMMED = 0.10;
 
     public PushMessage(Recipient recipient, String text)
     {
