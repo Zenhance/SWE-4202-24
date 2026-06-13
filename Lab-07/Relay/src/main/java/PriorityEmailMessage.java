@@ -3,7 +3,19 @@ public class PriorityEmailMessage extends EmailMessage {
         super(name, text);
     }
 
+
     public double cost() {
-        return 1.0;
+        return 0.9;
+
+    }
+
+    @Override
+    public String deliver() {
+        return "PRIORITY"+super.deliver();
+    }
+
+    @Override
+    public String describe() {
+        return "PriorityEmailMessage";
     }
 }
