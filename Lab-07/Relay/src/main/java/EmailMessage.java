@@ -16,5 +16,4 @@ public class EmailMessage extends Message {
         return "Email to "+this.name;
     }
 
-
 }

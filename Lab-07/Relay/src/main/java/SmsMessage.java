@@ -4,7 +4,7 @@ public class SmsMessage extends Message {
 
     private String name;
     private String text;
-    private static final double COST_PER_SEGMENT = 0.05; // Example per-segment cost
+    private static final double COST_PER_SEGMENT = 0.5;
 
     public SmsMessage(Recipient name, String text) {
         super(name, text);
