@@ -13,7 +13,7 @@ public class EmailMessage extends Message {
         return 0.0;
     }
     public String describe() {
-        return "Email to "+this.name;
+        return "EMAIL";
     }
 
 }

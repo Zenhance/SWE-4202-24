@@ -24,7 +24,7 @@ public class Outbox {
     public double totalCost(){
         double total=0;
         for(int i=0; i<count; i++){
-            total=messages[i].cost();
+            total+=messages[i].cost();
         }
         return total;
     }

@@ -2,8 +2,6 @@ import javax.xml.namespace.QName;
 
 public class SmsMessage extends Message {
 
-    private String name;
-    private String text;
     private static final double COST_PER_SEGMENT = 0.5;
 
     public SmsMessage(Recipient name, String text) {
@@ -28,6 +26,6 @@ public class SmsMessage extends Message {
     }
 
     public String describe() {
-        return  "SMS" + this.name;
+        return  "SMS" ;
     }
 }
