@@ -33,4 +33,14 @@ public class Outbox {
         }
         return total;
     }
+
+    public String flush() {
+        String log = "";
+        for (int i = 0; i < count; i++) {
+            log += queue[i].deliver() + "\n";
+            queue[i] = null;
+        }
+        count = 0;
+        return log;
+    }
 }
