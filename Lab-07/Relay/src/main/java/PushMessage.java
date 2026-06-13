@@ -5,4 +5,13 @@ public class PushMessage extends Message {
     public PushMessage(Recipient recipient, String text) {
         super(recipient, text);
     }
+
+    @Override
+    public String deliver() {
+        String originalText = getText();
+        if (originalText.length() > PREVIEW_LIMIT) {
+            return originalText.substring(0, PREVIEW_LIMIT) + "...";
+        }
+        return originalText;
+    }
 }
