@@ -15,4 +15,14 @@ public class Outbox {
         queue[count] = message;
         count++;
     }
+
+    public void enqueue(Message message, int repeatCount) {
+        for (int i = 0; i < repeatCount; i++) {
+            this.enqueue(message);
+        }
+    }
+
+    public int size() {
+        return count;
+    }
 }
