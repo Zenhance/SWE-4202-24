@@ -10,11 +10,10 @@ public class EmailMessage extends Message {
         return text;
     }
     public double cost(){
-        return 0;
+        return 0.0;
     }
     public String describe() {
-        String s = "Email to " + this.name;
-        return s;
+        return "Email to "+this.name;
     }
 
 

@@ -15,11 +15,19 @@ public class SmsMessage extends Message {
     }
 
     public double cost() {
-        return 0.05;
+        int count;
+        if (text.length()%160 == 0)
+        {
+            count=text.length()/160;
+        }
+        else
+        {
+            count=text.length()/160+1;
+        }
+        return 0.5*count;
     }
 
     public String describe() {
-        String s = "Email to " + this.name;
-        return s;
+        return  "SMS" + this.name;
     }
 }
