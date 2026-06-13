@@ -14,4 +14,14 @@ public class PushMessage extends Message {
         }
         return originalText;
     }
+
+    @Override
+    public double cost() {
+        return FLAT_RATE;
+    }
+
+    @Override
+    public String describe() {
+        return "PUSH" + getRecipient().getName();
+    }
 }
