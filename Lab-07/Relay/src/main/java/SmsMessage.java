@@ -13,4 +13,18 @@ public class SmsMessage extends Message {
         return (length + 159) / 160;
     }
 
+    @Override
+    public String deliver() {
+        return getText() + " (Sent as " + calculateSegments() + " segments)";
+    }
+
+    @Override
+    public double cost() {
+        return calculateSegments() * COST_PER_SEGMENT;
+    }
+
+    @Override
+    public String describe() {
+        return "SMS" + getRecipient().getName();
+    }
 }
