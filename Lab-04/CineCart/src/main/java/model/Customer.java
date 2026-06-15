@@ -33,6 +33,7 @@ public class Customer
     }
     public String getLoyaltyTier()
     {
-        return loyaltyTier
+        return loyaltyTier;
     }
+
 }
