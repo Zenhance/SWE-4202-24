@@ -9,4 +9,11 @@ public abstract class Message {
         this.recipient = recipient;
         this.message = message;
     }
+
+    public Recipient getRecipient(){
+        return recipient;
+    }
+    public String getMessage(){
+        return message;
+    }
 }
