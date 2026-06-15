@@ -52,7 +52,7 @@ public class Movie {
 
     }
     public String toString(){
-        return title+("+this.rating+")+this.durationMin+"min"+"-BDT"+String.format("%2f",basePrice);
+        return title+"("+this.rating+")"+this.durationMin+"min"+"-BDT"+String.format("%2f",basePrice);
     }
 
 }

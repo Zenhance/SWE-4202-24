@@ -29,8 +29,10 @@ public class Seat {
         return isBooked;
     }
 
-    public void book() {
+    public boolean book() {
         isBooked = true;
+
+        return false;
     }
 
     public void release() {
@@ -38,10 +40,17 @@ public class Seat {
     }
 
     public boolean isAvailable() {
-        return isBooked;
+        return !isBooked;
     }
 
     public String toString() {
-        return isPremium ? "R3C5*" : "R3C5#";
+        String rs="R"+row+"C"+col;
+        if(isPremium){
+            rs=rs+"*";
+        }
+        if(isBooked){
+            rs=rs+"#";
+        }
+        return rs;
     }
 }

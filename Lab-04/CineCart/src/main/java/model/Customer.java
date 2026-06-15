@@ -10,7 +10,7 @@ public class Customer {
         this.id=id;
         this.name=name;
         this.age=age;
-        this.loyaltyTier="Basic";
+        this.loyaltyTier="BASIC";
     }
     public Customer(int id,String name,int age,String tier){
         this.id=id;
@@ -31,6 +31,7 @@ public class Customer {
     }
 
     public String getLoyaltyTier() {
+
         return loyaltyTier;
     }
     public double getTierDiscount(){

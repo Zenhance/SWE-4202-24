@@ -7,7 +7,7 @@ public class ShowtimeBoard {
     private Showtime[] shows;
     private int count;
 public ShowtimeBoard(){
-    shows=new Showtime[MAX];
+    shows=new Showtime[30];
     count=0;
 }
 public void add(Showtime s){
@@ -24,7 +24,7 @@ public void add(Showtime s){
     }
     return null;
     }
-    public void display(){
+    public void displayAll(){
     for(int i=0;i<count;i++){
         System.out.println(shows[i]);
     }

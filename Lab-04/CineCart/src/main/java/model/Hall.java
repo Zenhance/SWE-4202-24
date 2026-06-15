@@ -12,8 +12,8 @@ public class Hall {
         grid=new Seat[rows][cols];
         for(int r=0;r<rows;r++){
             for(int c=0;c<cols;c++){
-                boolean premium=r<premiumRows;
-                grid[r][c]=new Seat(r,c,premium);
+                boolean ispremium=r<premiumRows;
+                grid[r][c]=new Seat(r,c,ispremium);
             }
         }
     }
@@ -26,9 +26,6 @@ public class Hall {
     }
     public int getcols(){
         return cols;
-    }
-    public Seat[][]getGrid(){
-        return grid;
     }
     public Seat getSeat(int rows,int cols){
         return grid[rows][cols];
@@ -50,13 +47,13 @@ public class Hall {
             for(int c=0;c<cols;c++){
                 Seat s=grid[r][c];
                 if(s.isBooked()){
-                    System.out.println("# ");;
+                    System.out.print("# ");;
                     }
                 else if(s.isPremium()){
-                    System.out.println("* ");
+                    System.out.print("* ");
                 }
                 else{
-                    System.out.println(". ");
+                    System.out.print(". ");
                 }
             }
             System.out.println();
