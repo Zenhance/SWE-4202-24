@@ -68,4 +68,13 @@ public class CheckoutEngine
         return Math.round((afterDiscounts + tax) * 100.0) / 100.0;
     }
 
+    public String getReceipt(Cart cart)
+    {
+        double total = checkout(cart);
+        String receipt = "Receipt\n";
+        receipt += "Customer: " + cart.getOwner().getName() + "\n";
+        receipt += "Discount applied\n";
+        receipt += String.format("Total: BDT %.2f\n", total);
+        return receipt;
+    }
 }
