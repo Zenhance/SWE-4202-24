@@ -1,6 +1,7 @@
 package model;
 
-public class Movie2 {
+public class Movie {
+
     private int id;
     private String title;
     private String rating;
@@ -8,47 +9,55 @@ public class Movie2 {
     private double basePrice;
 
 
-
-    private Movie2(int id, String title, String rating, int durationMin, double basePrice){
-        this.id=id;
-        this.title=title;
-        this.rating=rating;
-        this.durationMin=durationMin;
-        this.basePrice=basePrice;
+    public Movie(int id, String title, String rating, int durationMin,
+                 double basePrice) {
+        this.id = id;
+        this.title = title;
+        this.rating = rating;
+        this.durationMin = durationMin;
+        this.basePrice = basePrice;
 
     }
-    public int getId(){
+
+    public int getId() {
         return id;
-
     }
-    public String getTitle(){
+
+    public String getTitle() {
         return title;
     }
 
-    public String getRating(){
+    public String getRating() {
         return rating;
     }
 
-    public int getDurationMin(){
+    public int getDurationMin() {
         return durationMin;
     }
-    public double getBasePrice(){
+
+    public double getBasePrice() {
         return basePrice;
     }
 
-    public int getMinAge(){
-        switch(rating){
-            case "G": return 0;
-            case "PG": return 7;
-            case "PG-13": return 13;
-            case "R": return 18;
-            default: return -1;
+    public int getMinAge() {
+        switch (rating) {
+            case "G":
+                return 0;
+            case "PG":
+                return 7;
+            case "PG-13":
+                return 13;
+            case "R":
+                return 18;
+            default:
+                return -1;
 
         }
 
-    }
+
+        }
+
     public String toString(){
         return title +"("+ rating +")"+ durationMin + "- BDT" + basePrice ;
     }
-
 }
