@@ -55,4 +55,17 @@ public class CheckoutEngine
         return "OK";
     }
 
+    public double checkout(Cart cart)
+    {
+        double ticketSubtotal = cart.sumTicketPaid();
+        double concessionSubtotal = cart.sumConcessionsRaw();
+        double combo = (cart.hasItem("POP") && cart.hasItem("SODA")) ? 50.0 : 0.0;
+        double preDiscount = ticketSubtotal + concessionSubtotal - combo;
+        double groupDiscount = (cart.getTicketCount() >= 4) ? 0.10 * preDiscount : 0.0;
+        double TierDiscount = cart.getOwner().getTierDiscount() * preDiscount;
+        double afterDiscounts = preDiscount - groupDiscount - TierDiscount;
+        double tax = 0.05 * afterDiscounts;
+        return Math.round((afterDiscounts + tax) * 100.0) / 100.0;
+    }
+
 }
