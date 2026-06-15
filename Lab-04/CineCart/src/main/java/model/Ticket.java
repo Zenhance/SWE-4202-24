@@ -24,8 +24,8 @@ public class Ticket {
         return col;
     }
 
-    public void setPricePaid(double pricePaid) {
-        this.pricePaid = pricePaid;
+    public double getPricePaid() {
+        return pricePaid;
     }
     public String toString(){
         return "T"+showtime.getId()+"-"+"R"+row+"C"+col+"@ BDT"+String.format("%.2f",pricePaid);
