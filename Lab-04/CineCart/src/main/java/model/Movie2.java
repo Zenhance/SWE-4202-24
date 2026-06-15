@@ -9,7 +9,7 @@ public class Movie2 {
 
 
 
-    private movie(int id, String title, String rating, int durationMin, double basePrice){
+    private Movie2(int id, String title, String rating, int durationMin, double basePrice){
         this.id=id;
         this.title=title;
         this.rating=rating;
