@@ -37,6 +37,6 @@ public class Showtime {
     }
 
     public String toString() {
-        return String.format("[%d] %s @ Hall %d - %d (%s)", id, movie, hall, startHour, dateTag);
+        return String.format("[T%d] %s @ Hall %d - %d:00 (%s)", id, movie, hall, startHour, dateTag);
     }
 }
