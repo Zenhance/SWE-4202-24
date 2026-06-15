@@ -20,14 +20,32 @@ public class Hall {
     }
 
     Seat getSeat(int row, int col) {
-
+        return grid[row][col];
     }
 
     int countAvailable() {
-
+        int count = 0;
+        for(int i = 0; i < rows; i++) {
+            for(int j = 0; j < cols; j++) {
+                if(grid[i][j].isAvailable()) {
+                    count++;
+                }
+            }
+        }
+        return count;
     }
 
     void displayLayout() {
-
+        for(int i = 0; i < rows; i++) {
+            for(int j = 0; j < cols; j++) {
+                Seat s = grid[i][j];
+                if(s.isAvailable())
+                    System.out.println(".");
+                if(s.isBooked())
+                    System.out.println("#");
+                if(s.isPremium())
+                    System.out.println("*");
+            }
+        }
     }
 }
