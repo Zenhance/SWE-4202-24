@@ -24,7 +24,7 @@ public class Hall {
     public int getRows(){
         return rows;
     }
-    public int getcols(){
+    public int getCols(){
         return cols;
     }
     public Seat getSeat(int rows,int cols){
