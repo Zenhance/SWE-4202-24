@@ -1,13 +1,4 @@
-/**
- * Relay — the outbound message hub in action.
- *
- * This entry point wires the pieces together the way a real caller would: it
- * builds a handful of notices across every channel, audits them, then drops
- * them into a single {@link Outbox} and asks the outbox to price and send the
- * whole batch. Notice that nothing below ever asks a message "what channel are
- * you?" — every item is held as a {@link Message} and decides for itself how to
- * describe, cost, and deliver. That is the entire point of the design.
- */
+
 public class Relay {
 
     public static void main(String[] args) {
