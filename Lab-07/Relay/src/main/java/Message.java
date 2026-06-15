@@ -16,4 +16,8 @@ public abstract class Message {
     public String getMessage(){
         return message;
     }
+
+    public abstract String deliver();
+    public abstract double cost();
+    public abstract String describe();
 }
