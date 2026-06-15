@@ -46,5 +46,8 @@ public class Customer
         }
     }
 
-
+    public String toString()
+    {
+        return id+name+age+loyaltyTier;
+    }
 }
