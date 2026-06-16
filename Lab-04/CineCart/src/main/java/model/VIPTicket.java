@@ -9,4 +9,13 @@ public class VIPTicket extends PremiumTicket{
     public double subtotal() {
         return super.subtotal() + 200.00;
     }
+
+    @Override
+    public String describe() {
+        String string = String.format("VIP\n" +
+                "Premium\n" +
+                "subtotal : %f BDT", subtotal());
+
+        return string;
+    }
 }
