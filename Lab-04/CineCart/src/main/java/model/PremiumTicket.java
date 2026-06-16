@@ -1,4 +1,9 @@
 package model;
 
-public class PremiumTicket {
+public class PremiumTicket extends AbstractTicket {
+    public PremiumTicket(Showtime showtime,int row,int col){
+        super(showtime, row, col);
+    }
+
+
 }
