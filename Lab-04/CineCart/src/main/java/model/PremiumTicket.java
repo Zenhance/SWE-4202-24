@@ -6,7 +6,7 @@ public class PremiumTicket extends AbstractTicket{
     }
     @Override
     public double subtotal(){
-        return (base*1.3)*peakMultiplier();
+        return (basePrice*1.3)*getPeakMultiplier();
     }
     @Override
     public String describe(){
