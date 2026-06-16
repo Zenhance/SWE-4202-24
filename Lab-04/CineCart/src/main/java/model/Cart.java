@@ -19,6 +19,10 @@ public void add(LineItem line){
     public void add(ConcessionItem item,int qty){
         add(new ConcessionLine(item,qty));
     }
+    //overloading
+    public void add(ConcessionItem item){
+        add(new ConcessionLine(item,1));
+    }
 
 }
 
