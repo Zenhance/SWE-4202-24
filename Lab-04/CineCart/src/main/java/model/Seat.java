@@ -48,16 +48,17 @@ public class Seat {
         return !isBooked;
     }
 
+    @Override
     public String toString() {
-        String result = "R" + row + "C" + col;
-        if (isPremium) {
-            result += "*";
-        }
-        if (isBooked) {
-            result += "#";
-        }
-        return result;
+
+        String s = "R" + row + "C" + col;
+
+        if (isPremium) s += "*";
+        if (isBooked) s += "#";
+
+        return s;
     }
+
 }
 
 
