@@ -1,7 +1,12 @@
 package model;
 
 public class StudentTicket extends AbstractTicket{
-    public StudentTicket(Showtime showtime, int row, int col, double pricePaid) {
-        super(showtime, row, col, pricePaid);
+    public StudentTicket(Showtime showtime, int row, int col) {
+        super(showtime, row, col);
+    }
+
+    @Override
+    public double subtotal() {
+        return (getShowtime().isPeak() ? 350.00 * 0.50 * 1.20 : 200.00 * 0.50);
     }
 }

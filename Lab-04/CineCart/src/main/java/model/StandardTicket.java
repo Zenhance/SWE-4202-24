@@ -7,6 +7,6 @@ public class StandardTicket extends AbstractTicket{
 
     @Override
     public double subtotal() {
-        return (getShowtime().isPeak() ? 350.00 * 1.20 : 200.0);
+        return (getShowtime().isPeak() ? 350.00 * 1.20 : 200.00);
     }
 }
