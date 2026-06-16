@@ -9,4 +9,12 @@ public class StandardTicket extends AbstractTicket{
     public double subtotal() {
         return (getShowtime().isPeak() ? 350.00 * 1.20 : 200.00);
     }
+
+    @Override
+    public String describe() {
+        String string = String.format("Standard\n" +
+                "subtotal : %f BDT", subtotal());
+
+        return string;
+    }
 }
