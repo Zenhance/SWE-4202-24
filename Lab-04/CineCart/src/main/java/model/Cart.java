@@ -90,4 +90,8 @@ public class Cart {
         if(qty<=0){return false;}
         return add(new ConcessionLine(item,qty));
         }
+        public boolean add(ConcessionItem item){
+        return add(item,1);
+        }
+
 }
