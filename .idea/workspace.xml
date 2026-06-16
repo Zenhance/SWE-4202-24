@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="concessionline">
+    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="cart">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/model/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/model/Cart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab-04/CineCart/src/test/java/CineCartEncapsulationTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab-04/CineCart/src/test/java/CineCartTest.java" beforeDir="false" />
     </list>
@@ -93,7 +95,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.CineCartTest">
+  <component name="RunManager" selected="Gradle.CineCartEncapsulationTest">
     <configuration name="CineCartEncapsulationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -108,6 +110,30 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;CineCartEncapsulationTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="CineCartPolymorphismTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Lab-04/CineCart" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;CineCartPolymorphismTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -166,9 +192,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.CineCartTest" />
         <item itemvalue="Gradle.CineCartEncapsulationTest" />
+        <item itemvalue="Gradle.CineCartPolymorphismTest" />
         <item itemvalue="Gradle.Tests in 'CineCart.test'" />
+        <item itemvalue="Gradle.CineCartTest" />
       </list>
     </recent_temporary>
   </component>
@@ -184,22 +211,6 @@
       <workItem from="1778092688155" duration="94000" />
       <workItem from="1778092809585" duration="6679000" />
       <workItem from="1778163384097" duration="3333000" />
-    </task>
-    <task id="LOCAL-00055" summary="customer class completion">
-      <option name="closed" value="true" />
-      <created>1779168955220</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1779168955220</updated>
-    </task>
-    <task id="LOCAL-00056" summary="ticket class 1">
-      <option name="closed" value="true" />
-      <created>1779169038647</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1779169038647</updated>
     </task>
     <task id="LOCAL-00057" summary="ticket class 2">
       <option name="closed" value="true" />
@@ -577,7 +588,23 @@
       <option name="project" value="LOCAL" />
       <updated>1781590788774</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="changing cart">
+      <option name="closed" value="true" />
+      <created>1781591825746</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1781591825746</updated>
+    </task>
+    <task id="LOCAL-00105" summary="cart">
+      <option name="closed" value="true" />
+      <created>1781592154763</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1781592154763</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -617,8 +644,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="signature" />
-    <MESSAGE value="checkout cart" />
     <MESSAGE value="getreceipt cart" />
     <MESSAGE value="Cart.java line 76 fix" />
     <MESSAGE value="." />
@@ -642,6 +667,8 @@
     <MESSAGE value="vipticket" />
     <MESSAGE value="concession item" />
     <MESSAGE value="concessionline" />
-    <option name="LAST_COMMIT_MESSAGE" value="concessionline" />
+    <MESSAGE value="changing cart" />
+    <MESSAGE value="cart" />
+    <option name="LAST_COMMIT_MESSAGE" value="cart" />
   </component>
 </project>

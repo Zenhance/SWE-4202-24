@@ -7,7 +7,7 @@ public class  Cart {
 
     private Customer owner;
     private LineItem[] lineItems;
-    // private Ticket[] tickets;
+     private AbstractTicket[] tickets;
     private int lineCount;
     private int ticketCount;
     private ConcessionItem[] items;
@@ -38,7 +38,7 @@ public class  Cart {
 
 
 
-   /* public boolean addTicket(Ticket t) {
+   /*public boolean addTicket(AbstractTicket t) {
 
         boolean res = false;
         if (ticketCount < MAX_TICKETS) {
