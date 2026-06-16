@@ -34,6 +34,8 @@ public double getPricePaid(){
 
 
     public abstract double Subtotal();
+    public abstract String describe();
+
 
 
     public String toString(){
