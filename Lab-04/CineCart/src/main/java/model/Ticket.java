@@ -1,4 +1,4 @@
-package model
+package model;
 
 public abstract class Ticket extends LineItem
 {
@@ -15,4 +15,24 @@ public abstract class Ticket extends LineItem
         this.basePrice = showtime.getMovie().getBasePrice();
     }
 
+    public Showtime getShowtime()
+    {
+        return showtime();
+    }
+    public int getRow()
+    {
+        return row;
+    }
+    public int getCol()
+    {
+        return col;
+    }
+    public boolean isTicket()
+    {
+        return true;
+    }
+    public String describe()
+    {
+        return "T" + showtime.getId() + " - R" + row + "C" + col;
+    }
 }
