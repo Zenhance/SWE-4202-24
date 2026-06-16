@@ -26,7 +26,7 @@ public abstract class Ticket extends LineItem {
     }
 
     public double getPricePaid() {
-        return pricePaid;
+        return base;
     }
 
 
@@ -34,3 +34,9 @@ public abstract class Ticket extends LineItem {
         return String.format("T%d - R%dC%d @ BDT %.2f",showtime.getId(),row,col,pricePaid);
     }
 }
+    public double PeakTime(){
+    if(showtime.isPeak){
+        return base*1.20;
+    }
+    return base;
+    }
