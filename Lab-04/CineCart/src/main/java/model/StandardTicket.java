@@ -2,7 +2,7 @@ package model;
 
 public class StandardTicket extends AbstractTicket {
     public StandardTicket(Showtime showtime, int row, int col){
-        super();
+        super(showtime,row,col);
     }
 
     public double subtotal() {
