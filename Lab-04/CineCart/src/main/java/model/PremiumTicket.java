@@ -8,6 +8,8 @@ public class PremiumTicket extends Ticket{
 
     @Override
     public double getCharge() {
-
+        if (showtime.isPeak())
+            return pricePaid*peak*1.3;
+        else return pricePaid*1.3;
     }
 }
