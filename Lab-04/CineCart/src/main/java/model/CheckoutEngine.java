@@ -28,6 +28,8 @@ public class CheckoutEngine {
 
         if(showtime.isPeak()) price = price * 1.20;
         else price = price * 1.00;
+
+
     }
 
     public String addConcession(Cart cart, String code, int qty) {
