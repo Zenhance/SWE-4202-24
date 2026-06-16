@@ -1,46 +1,30 @@
 package model;
 
 public class Cart{
-    public static final int MAX_TICKETS = 20;
-    public static final int MAX_ITEMS = 20;
+    public static final int MAX_LINES = 50;
 
     private Customer owner;
-    private Ticket[] tickets;
-    private ConcessionItem[] items;
-    private int ticketCount;
-    private int[] qtys;
-    private int itemCount;
+    private LineItem[] lines;
+    private int lineCount;
 
     public Cart(Customer owner) {
-        this.owner       = owner;
-        this.tickets     = new Ticket[MAX_TICKETS];
-        this.ticketCount = 0;
-        this.items       = new ConcessionItem[MAX_ITEMS];
-        this.qtys        = new int[MAX_ITEMS];
-        this.itemCount   = 0;
+        this.owner = owner;
+        this.lines = new LineItem[MAX_LINES];
+        this.lineCount = 0;
     }
 
-    public void addTicket(Ticket t) {
-        if (ticketCount >= MAX_TICKETS) {
+    public void add(LineItem line) {
+        if (lineCount >= MAX_LINES) {
             System.out.println("Cart is full.");
             return;
         }
-        tickets[ticketCount++] = t;
+        lines[lineCount] = line;
+        lineCount++;
     }
 
-    public void addItem(ConcessionItem c, int qty) {
-        if (itemCount >= MAX_ITEMS) {
-            System.out.println("Cart is full.");
-            return;
-        }
-        if (qty <= 0) {
-            System.out.println("Invalid quantity.");
-            return;
-        }
-        items[itemCount] = c;
-        qtys[itemCount]  = qty;
-        itemCount++;
-    }
+
+
+
 
     public Customer getOwner() {
         return owner;
@@ -66,25 +50,8 @@ public class Cart{
         return ticketCount;
     }
 
-    public double sumTicketsPaid() {
-        double sum = 0;
-        for (int i = 0; i < ticketCount; i++)
-            sum += tickets[i].getPricePaid();
-        return sum;
-    }
 
-    public double sumConcessionsRaw() {
-        double sum = 0;
-        for (int i = 0; i < itemCount; i++)
-            sum += items[i].getUnitPrice() * qtys[i];
-        return sum;
-    }
 
-    public boolean hasItem(String code) {
-        for (int i = 0; i < itemCount; i++)
-            if ((items[i].getCode()).equals(code)) {
-                return true;
-            }
-        return false;
-    }
+
+
 }
