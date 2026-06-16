@@ -5,10 +5,13 @@ public class StudentTicket extends AbstractTicket {
         super(showtime, row, col);
     }
 
+    @Override
     public double subtotal() {
-        return 0;}
+        return calculateBase() * 0.50;
+    }
 
+    @Override
     public String describe() {
-        return null;
+        return super.describe() + " (Student Discount)";
     }
 }
