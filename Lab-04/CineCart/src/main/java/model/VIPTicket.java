@@ -6,4 +6,5 @@ public class VIPTicket extends PremiumTicket {
     }
 
 
+
 }
