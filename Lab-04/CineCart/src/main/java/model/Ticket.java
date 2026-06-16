@@ -35,7 +35,7 @@ public abstract class Ticket extends LineItem {
     }
 
     public double PeakTime() {
-        if (showtime.isPeak) {
+        if (showtime.isPeak()) {
             return base * 1.20;
         }
         return base;
