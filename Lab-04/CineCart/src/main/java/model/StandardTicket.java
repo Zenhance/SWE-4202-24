@@ -12,8 +12,7 @@ public class StandardTicket extends AbstractTicket{
 
     @Override
     public String describe() {
-        String string = String.format("Standard\n" +
-                "subtotal : %f BDT", subtotal());
+        String string = String.format("subtotal : %f BDT", subtotal());
 
         return string;
     }
