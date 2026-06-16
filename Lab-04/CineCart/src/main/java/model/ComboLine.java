@@ -18,6 +18,6 @@ public class ComboLine extends LineItem{
     }
     @Override
     public boolean hasCode(String code){
-        return itemA.getCode().equals(code)||itemB.getCode().equals(code)
+        return itemA.getCode().equals(code)||itemB.getCode().equals(code);
     }
 }
