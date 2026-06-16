@@ -9,5 +9,15 @@ public class ConcessionLine extends LineItem {
         this.qty=qty;
     }
 
+    public double subtotal(){
+        return 0.0;
+    }
 
+    public String describe() {
+        return null;
+    }
+
+    public boolean hasCode(String code){
+        return false;
+    }
 }
