@@ -48,11 +48,11 @@ public class Cart {
     public int ticketCount() {
         int tickets = 0;
         for (int i = 0; i < count; i++) {
-            if (lines[i].hasCode(code)) {
-                return true;
+            if (lines[i].isTicket()) {
+                tickets++;
             }
         }
-        return false;
+        return tickets;
     }
 
     public Customer getOwner() {
