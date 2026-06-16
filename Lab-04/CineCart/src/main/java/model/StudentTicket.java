@@ -14,4 +14,5 @@ public class StudentTicket extends Ticket
     {
         return base*STUDENT*peakTime();
     }
+
 }
