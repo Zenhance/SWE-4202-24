@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="Cart.java line 76 fix">
-      <change beforePath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/model/Customer.java" afterDir="false" />
-    </list>
+    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="..." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,12 +23,7 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="CineCart" type="f1a62948:ProjectNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
@@ -61,27 +54,28 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="3CyMD6qQNKvkJkZK8rIpMSPRC5g" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Tests in 'CineCart.test'.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "39-riju",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Tests in 'CineCart.test'.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;39-riju&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Tests in 'CineCart.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -101,11 +95,8 @@
       </ExternalSystemSettings>
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
       <DebugAllEnabled>false</DebugAllEnabled>
       <RunAsTest>true</RunAsTest>
-      <GradleProfilingDisabled>false</GradleProfilingDisabled>
-      <GradleCoverageDisabled>false</GradleCoverageDisabled>
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -126,150 +117,6 @@
       <workItem from="1778092688155" duration="94000" />
       <workItem from="1778092809585" duration="6679000" />
       <workItem from="1778163384097" duration="3333000" />
-    </task>
-    <task id="LOCAL-00023" summary="part c answer 2">
-      <option name="closed" value="true" />
-      <created>1777590966053</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1777590966053</updated>
-    </task>
-    <task id="LOCAL-00024" summary="location class">
-      <option name="closed" value="true" />
-      <created>1778096583250</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1778096583250</updated>
-    </task>
-    <task id="LOCAL-00025" summary="location class">
-      <option name="closed" value="true" />
-      <created>1778100316478</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1778100316478</updated>
-    </task>
-    <task id="LOCAL-00026" summary="location class fix">
-      <option name="closed" value="true" />
-      <created>1778100820014</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1778100820014</updated>
-    </task>
-    <task id="LOCAL-00027" summary="passenger class">
-      <option name="closed" value="true" />
-      <created>1778101162507</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1778101162507</updated>
-    </task>
-    <task id="LOCAL-00028" summary="passenger class">
-      <option name="closed" value="true" />
-      <created>1778101202262</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1778101202262</updated>
-    </task>
-    <task id="LOCAL-00029" summary="passenger class">
-      <option name="closed" value="true" />
-      <created>1778101962270</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1778101962270</updated>
-    </task>
-    <task id="LOCAL-00030" summary="writing trip class">
-      <option name="closed" value="true" />
-      <created>1778102366907</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1778102366907</updated>
-    </task>
-    <task id="LOCAL-00031" summary="writing trip class">
-      <option name="closed" value="true" />
-      <created>1778102467966</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1778102467966</updated>
-    </task>
-    <task id="LOCAL-00032" summary="writing trip class methods">
-      <option name="closed" value="true" />
-      <created>1778102818670</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1778102818670</updated>
-    </task>
-    <task id="LOCAL-00033" summary=" trip class methods fix">
-      <option name="closed" value="true" />
-      <created>1778103073490</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1778103073490</updated>
-    </task>
-    <task id="LOCAL-00034" summary=" trip class method writing">
-      <option name="closed" value="true" />
-      <created>1778164837408</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1778164837408</updated>
-    </task>
-    <task id="LOCAL-00035" summary=" trip class method writing">
-      <option name="closed" value="true" />
-      <created>1778165057798</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1778165057798</updated>
-    </task>
-    <task id="LOCAL-00036" summary=" trip class method writing 2">
-      <option name="closed" value="true" />
-      <created>1778166340724</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1778166340724</updated>
-    </task>
-    <task id="LOCAL-00037" summary="trip completion">
-      <option name="closed" value="true" />
-      <created>1778167036731</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1778167036731</updated>
-    </task>
-    <task id="LOCAL-00038" summary="fixing location class">
-      <option name="closed" value="true" />
-      <created>1778167334946</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1778167334946</updated>
-    </task>
-    <task id="LOCAL-00039" summary="seat class">
-      <option name="closed" value="true" />
-      <created>1779166422771</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1779166422771</updated>
-    </task>
-    <task id="LOCAL-00040" summary="seat class">
-      <option name="closed" value="true" />
-      <created>1779166514982</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1779166514982</updated>
     </task>
     <task id="LOCAL-00041" summary="seat class">
       <option name="closed" value="true" />
@@ -519,7 +366,151 @@
       <option name="project" value="LOCAL" />
       <updated>1780400991937</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="creating classes">
+      <option name="closed" value="true" />
+      <created>1780986398404</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1780986398405</updated>
+    </task>
+    <task id="LOCAL-00073" summary="recipient">
+      <option name="closed" value="true" />
+      <created>1780986488757</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1780986488757</updated>
+    </task>
+    <task id="LOCAL-00074" summary="recipient">
+      <option name="closed" value="true" />
+      <created>1780986543261</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1780986543261</updated>
+    </task>
+    <task id="LOCAL-00075" summary="recipient methods">
+      <option name="closed" value="true" />
+      <created>1780986585550</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1780986585550</updated>
+    </task>
+    <task id="LOCAL-00076" summary="recipient methods">
+      <option name="closed" value="true" />
+      <created>1780986627175</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1780986627175</updated>
+    </task>
+    <task id="LOCAL-00077" summary="message writing">
+      <option name="closed" value="true" />
+      <created>1780987114357</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1780987114357</updated>
+    </task>
+    <task id="LOCAL-00078" summary="message writing">
+      <option name="closed" value="true" />
+      <created>1780987150054</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1780987150054</updated>
+    </task>
+    <task id="LOCAL-00079" summary="message writing">
+      <option name="closed" value="true" />
+      <created>1780987230087</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1780987230087</updated>
+    </task>
+    <task id="LOCAL-00080" summary="message writing">
+      <option name="closed" value="true" />
+      <created>1780987346312</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1780987346312</updated>
+    </task>
+    <task id="LOCAL-00081" summary="message methods">
+      <option name="closed" value="true" />
+      <created>1780987385952</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1780987385952</updated>
+    </task>
+    <task id="LOCAL-00082" summary="message">
+      <option name="closed" value="true" />
+      <created>1780987498266</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1780987498266</updated>
+    </task>
+    <task id="LOCAL-00083" summary="email extends message">
+      <option name="closed" value="true" />
+      <created>1780987627978</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1780987627979</updated>
+    </task>
+    <task id="LOCAL-00084" summary="email methods">
+      <option name="closed" value="true" />
+      <created>1780987708669</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1780987708669</updated>
+    </task>
+    <task id="LOCAL-00085" summary="sms skeleton writing">
+      <option name="closed" value="true" />
+      <created>1780987862318</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1780987862318</updated>
+    </task>
+    <task id="LOCAL-00086" summary="sms skeleton writing">
+      <option name="closed" value="true" />
+      <created>1780987873078</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1780987873078</updated>
+    </task>
+    <task id="LOCAL-00087" summary="sms methods">
+      <option name="closed" value="true" />
+      <created>1780987906231</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1780987906231</updated>
+    </task>
+    <task id="LOCAL-00088" summary="...">
+      <option name="closed" value="true" />
+      <created>1780988554205</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1780988554205</updated>
+    </task>
+    <task id="LOCAL-00089" summary="...">
+      <option name="closed" value="true" />
+      <created>1780988685385</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1780988685385</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -559,18 +550,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="continuing trip class method writing" />
-    <MESSAGE value=" trip class method writing" />
-    <MESSAGE value=" trip class method writing 2" />
-    <MESSAGE value=" trip class method writing getsummary" />
-    <MESSAGE value="trip completion" />
-    <MESSAGE value="fixing location class" />
-    <MESSAGE value="intellij fix" />
-    <MESSAGE value="seat class" />
-    <MESSAGE value="seat class completion" />
-    <MESSAGE value="class" />
-    <MESSAGE value="showtime class constructor" />
-    <MESSAGE value="showtime class" />
     <MESSAGE value="showtime class completion" />
     <MESSAGE value="customer class constructor" />
     <MESSAGE value="customer class" />
@@ -584,6 +563,18 @@
     <MESSAGE value="checkout cart" />
     <MESSAGE value="getreceipt cart" />
     <MESSAGE value="Cart.java line 76 fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cart.java line 76 fix" />
+    <MESSAGE value="." />
+    <MESSAGE value="creating classes" />
+    <MESSAGE value="recipient" />
+    <MESSAGE value="recipient methods" />
+    <MESSAGE value="message writing" />
+    <MESSAGE value="message methods" />
+    <MESSAGE value="message" />
+    <MESSAGE value="email extends message" />
+    <MESSAGE value="email methods" />
+    <MESSAGE value="sms skeleton writing" />
+    <MESSAGE value="sms methods" />
+    <MESSAGE value="..." />
+    <option name="LAST_COMMIT_MESSAGE" value="..." />
   </component>
 </project>
