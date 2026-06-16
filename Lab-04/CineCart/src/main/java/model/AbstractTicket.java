@@ -8,7 +8,7 @@ public abstract  class AbstractTicket extends LineItem {
     protected final double basePrice;
 
 
-    protected AbstractTicket(Showtime showtime, int row, int col){
+    public AbstractTicket(Showtime showtime, int row, int col){
         this.showtime = showtime;
         this.row = row;
         this.col = col;
@@ -17,5 +17,15 @@ public abstract  class AbstractTicket extends LineItem {
 
     protected double peakMultiplier(){
         return (showtime.isPeak()?1.20:1.00);
+    }
+
+    @Override
+    public boolean isTicket(){
+        return true;
+    }
+
+    @Override
+    public String describe(){
+        return "Ticket";
     }
 }
