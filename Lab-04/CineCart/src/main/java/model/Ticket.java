@@ -14,6 +14,12 @@ public abstract class Ticket extends LineItem{
     protected double peakMultiplier(){
         return showtime.isPeak() ? 1.20:1.00;
     }
+    public boolean isTicket(){
+        return true;
+    }
+    public String describe(){
+        return "Seat("+row+","+col+")";
+    }
     public Showtime getShowtime(){
         return showtime;
     }
