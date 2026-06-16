@@ -1,16 +1,16 @@
 package model;
 
-public class Ticket {
+public abstract class Ticket extends LineItem {
     Showtime showtime;
     int row;
     int col;
-    double pricePaid;
+    double base;
 
     public Ticket(Showtime showtime, int row, int col, double pricePaid){
         this.showtime=showtime;
         this.row=row;
         this.col=col;
-        this.pricePaid=pricePaid;
+        this.base=showtime.getMovie().getBasePrice();
     }
 
     public Showtime getShowtime() {
