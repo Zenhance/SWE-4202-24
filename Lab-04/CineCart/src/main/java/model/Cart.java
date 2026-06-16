@@ -80,6 +80,10 @@ public class Cart {
         }
         public boolean add(LineItem line){
         if(lineCount>=lines.length){
-            return false;}
+            return false;
+        }
+        lines[lineCount] =line;
+        lineCount++;
+        return true;
         }
 }
