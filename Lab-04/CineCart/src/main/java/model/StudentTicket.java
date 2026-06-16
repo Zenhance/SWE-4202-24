@@ -1,7 +1,8 @@
 package model;
 
-public class StudentTicket extends LineItem {
-    public StudentTicket(Showtime showtime, int i, int i1) {
+public class StudentTicket extends AbstractTicket {
+    public StudentTicket(Showtime showtime, int row, int col) {
+        super(showtime, row, col);
     }
 
     public double subtotal() {
