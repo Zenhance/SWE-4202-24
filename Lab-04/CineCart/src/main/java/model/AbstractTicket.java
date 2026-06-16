@@ -1,20 +1,16 @@
 package model;
 
-public class Ticket {
-    Showtime showtime;
+public class AbstractTicket { Showtime showtime;
     int row;
     int col;
     double pricePaid;
 
-    public Ticket(Showtime showtime,int row,int col,double pricePaid)
+    public AbstractTicket()
     {
         this.showtime=showtime;
         this.row=row;
         this.col=col;
         this.pricePaid=pricePaid;
-    }
-
-    public Ticket(Showtime showtime, int row, int col) {
     }
 
     public int getCol() {
@@ -36,3 +32,5 @@ public class Ticket {
         return showtime.getId()+" - R"+row+"C"+col+" @ BDT "+pricePaid;
     }
 }
+
+
