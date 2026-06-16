@@ -107,5 +107,9 @@ public class Cart {
     }
 
     public boolean hasCode(String pop) {
+        return false;
+    }
+
+    public void add(PremiumTicket premiumTicket) {
     }
 }
