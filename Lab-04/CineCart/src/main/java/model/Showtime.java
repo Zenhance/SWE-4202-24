@@ -14,6 +14,7 @@ public class Showtime {
         this.hall = hall;
         this.startHour = startHour;
         this.dateTag = dateTag;
+        this.movie = movie;
 
     }
     public int getId(){
