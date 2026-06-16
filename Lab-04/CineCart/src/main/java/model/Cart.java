@@ -45,6 +45,17 @@ public class Cart {
         }
         return total;
     }
+    public int ticketCount(){
+        int tickets=0;
+        for(int i=0;i<count;i++){
+            if(lines[i].hasCode(code)){
+                return true;
+            }
+        }
+    }
+
+
+
 }
 
 
