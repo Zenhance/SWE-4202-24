@@ -54,7 +54,13 @@ public class Cart {
         }
         return tickets;
     }
-
+    public boolean hasCode(String code){
+        for(int i=0;i<count;i++){
+            if(lines[i].hasCode(code))
+                return true;
+        }
+        return false;
+    }
     public Customer getOwner() {
         return owner;
     }
