@@ -7,6 +7,10 @@ public class ComboLine extends LineItem {
         this.itemA=itemA;
         this.itemB=itemB;
     }
+    @Override
+    public double subtotal(){
+        return itemA.getUnitPrice()+itemB.getUnitPrice()-50.0;
+    }
 
 
 }
