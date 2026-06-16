@@ -13,7 +13,7 @@ public class Showtime {
         this.hall = hall;
         this.startHour = startHour;
         this.dateTag = dateTag;
-    }6
+    }
 
 
     public int getId() {
