@@ -7,11 +7,11 @@ public class StudentTicket extends AbstractTicket{
 
     @Override
     public double subtotal() {
-        return 0;
+        return 450;
     }
 
     @Override
     public String describe() {
-        return "";
+        return "lounge";
     }
 }

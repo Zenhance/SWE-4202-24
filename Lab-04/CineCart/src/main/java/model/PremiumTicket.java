@@ -8,12 +8,12 @@ public class PremiumTicket extends AbstractTicket{
     }
     public double subtotal(){
 
-        return 0;
+        return 1200;
     }
 
     @Override
     public String describe() {
-        return "";
+        return "lounge";
     }
 
 }

@@ -8,6 +8,10 @@ public class Cart {
     private final ConcessionItem[] items;
     private final int[] qtys;
     private int itemCount;
+    private StudentTicket S;
+    private PremiumTicket P;
+    private StandardTicket SD;
+    private LineItem[] lineitems;
 
     public Cart(Customer owner){
         this.owner=owner;
@@ -97,10 +101,6 @@ public class Cart {
         return false;
     }
 
-    public void add(PremiumTicket premiumTicket) {
-
-    }
-
     public void add(ConcessionItem pop, int i) {
 
     }
@@ -118,11 +118,19 @@ public class Cart {
 
     }
 
+    public void add(PremiumTicket premiumTicket) {
+        this.P=premiumTicket;
+        ticketCount++;
+    }
+
     public void add(StudentTicket studentTicket) {
+        this.S=studentTicket;
+        ticketCount++;
     }
 
     public void add(StandardTicket standardTicket) {
-
+        this.SD=standardTicket;
+        ticketCount++;
     }
 
     public double grandSubtotal() {
@@ -131,19 +139,18 @@ public class Cart {
 
     public LineItem[] getLines() {
 
-        return null;
+        return lineitems;
     }
-
     public int ticketCount() {
 
-        return 0;
+        return ticketCount;
     }
-
     public void add(ConcessionItem pop) {
 
     }
 
 
     public void add(LineItem a) {
+
     }
 }
