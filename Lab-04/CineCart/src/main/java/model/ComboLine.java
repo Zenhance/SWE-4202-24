@@ -11,4 +11,6 @@ public abstract class ComboLine extends LineItem{
         this.b=b;
     }
 
+
+
 }
