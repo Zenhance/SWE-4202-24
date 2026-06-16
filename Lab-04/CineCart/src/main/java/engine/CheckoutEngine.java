@@ -26,8 +26,9 @@ public class CheckoutEngine {
         }
 
         Seat seat = showtime.getHall().getSeat(row, col);
-        if (seat.isAvailable()){
-            return "Seat unavailable";
+        if (!seat.isAvailable()){
+            String S = "Seat unavailable";
+            return S;
         }
 
         double price = movie.getBasePrice()
