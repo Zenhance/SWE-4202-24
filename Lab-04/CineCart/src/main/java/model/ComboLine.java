@@ -1,6 +1,6 @@
 package model;
 
-public class ComboLine {
+public class ComboLine extends LineItem {
     public ComboLine(ConcessionItem pop, ConcessionItem soda) {
     }
 
