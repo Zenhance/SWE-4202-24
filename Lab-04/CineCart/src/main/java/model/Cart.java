@@ -5,14 +5,14 @@ public class Cart {
     public static final int MAX_ITEMS = 20;
 
     private Customer owner;
-    private Ticket[] tickets;
+    private AbstractTicket[] tickets;
     private int ticketCount;
     private ConcessionItem[] items;
     private int[] qtys;
     private int itemCount;
 
     public Cart(Customer owner){
-        this.tickets = new Ticket[MAX_TICKETS];
+        this.tickets = new AbstractTicket[MAX_TICKETS];
         this.items = new ConcessionItem[MAX_ITEMS];
         this.owner = owner;
         ticketCount = 0;
@@ -20,7 +20,7 @@ public class Cart {
         qtys = new int[MAX_ITEMS];
     }
 
-    void addTicket(Ticket t){
+    void addTicket(AbstractTicket t){
         if(ticketCount==MAX_TICKETS){
 
         }else{
@@ -40,7 +40,7 @@ public class Cart {
         return owner;
     }
 
-    public Ticket[] getTickets() {
+    public AbstractTicket[] getTickets() {
         return tickets;
     }
 

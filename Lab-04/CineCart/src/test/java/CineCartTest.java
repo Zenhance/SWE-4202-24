@@ -11,7 +11,7 @@ import model.Hall;
 import model.Movie;
 import model.Seat;
 import model.Showtime;
-import model.Ticket;
+import model.AbstractTicket;
 import data.ConcessionMenu;
 import data.ShowtimeBoard;
 import engine.CheckoutEngine;
@@ -120,7 +120,7 @@ public class CineCartTest {
     void ticket_storesAllFields() {
         Movie m = new Movie(1, "Inception", "PG-13", 148, 350.00);
         Showtime st = new Showtime(17, m, new Hall(2, 6, 10, 2), 19, "Fri");
-        Ticket t = new Ticket(st, 0, 0, 546.00);
+        AbstractTicket t = new AbstractTicket(st, 0, 0, 546.00);
         assertSame  (st,     t.getShowtime());
         assertEquals(0,      t.getRow());
         assertEquals(0,      t.getCol());
@@ -148,8 +148,8 @@ public class CineCartTest {
 
         Movie m  = new Movie(1, "Inception", "PG-13", 148, 350.00);
         Showtime st = new Showtime(17, m, new Hall(2, 6, 10, 2), 19, "Fri");
-        cart.addTicket(new Ticket(st, 0, 0, 546.00));
-        cart.addTicket(new Ticket(st, 0, 1, 546.00));
+        cart.addTicket(new AbstractTicket(st, 0, 0, 546.00));
+        cart.addTicket(new AbstractTicket(st, 0, 1, 546.00));
         assertEquals(2, cart.getTicketCount());
 
         cart.addItem(new ConcessionItem("POP",  "Popcorn", 220.00), 1);
@@ -166,8 +166,8 @@ public class CineCartTest {
         Cart cart = new Cart(alice);
         Movie m  = new Movie(1, "X", "G", 90, 100);
         Showtime st = new Showtime(1, m, new Hall(1, 3, 3, 1), 14, "Sat");
-        cart.addTicket(new Ticket(st, 0, 0, 100.00));
-        cart.addTicket(new Ticket(st, 0, 1, 200.00));
+        cart.addTicket(new AbstractTicket(st, 0, 0, 100.00));
+        cart.addTicket(new AbstractTicket(st, 0, 1, 200.00));
         assertEquals(300.00, cart.sumTicketsPaid(), 1e-9);
 
         cart.addItem(new ConcessionItem("POP",   "P", 220.00), 2);
@@ -299,7 +299,7 @@ public class CineCartTest {
         Cart cart = new Cart(f.alice);
         // Inception @ peak hall 2 row 0 (premium): 350 * 1.30 * 1.20
         assertEquals("OK", f.engine.bookTicket(cart, 17, 0, 0));
-        Ticket t = cart.getTickets()[0];
+        AbstractTicket t = cart.getTickets()[0];
         assertEquals(350.00 * 1.30 * 1.20, t.getPricePaid(), 1e-6);
     }
 
@@ -461,7 +461,7 @@ public class CineCartTest {
     void allClasses_haveOnlyPrivateInstanceFields() {
         Class<?>[] classes = {
             Movie.class, Seat.class, Hall.class, Showtime.class,
-            Customer.class, Ticket.class, ConcessionItem.class, Cart.class,
+            Customer.class, AbstractTicket.class, ConcessionItem.class, Cart.class,
             ShowtimeBoard.class, ConcessionMenu.class, CheckoutEngine.class
         };
         for (Class<?> cls : classes) {

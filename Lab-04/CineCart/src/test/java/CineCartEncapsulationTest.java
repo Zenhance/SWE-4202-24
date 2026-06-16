@@ -11,7 +11,7 @@ import model.Hall;
 import model.Movie;
 import model.Seat;
 import model.Showtime;
-import model.Ticket;
+import model.AbstractTicket;
 
 /**
  * CineCartEncapsulationTest.java
@@ -36,10 +36,10 @@ public class CineCartEncapsulationTest {
     void cart_getTickets_lengthEqualsTicketCount() {
         Cart cart = freshCartFor(new Customer(1, "Alice", 28, "GOLD"));
         Showtime st = sampleShowtime();
-        cart.addTicket(new Ticket(st, 0, 0, 100.00));
-        cart.addTicket(new Ticket(st, 0, 1, 100.00));
+        cart.addTicket(new AbstractTicket(st, 0, 0, 100.00));
+        cart.addTicket(new AbstractTicket(st, 0, 1, 100.00));
 
-        Ticket[] snapshot = cart.getTickets();
+        AbstractTicket[] snapshot = cart.getTickets();
         assertEquals(2, snapshot.length,
                 "getTickets() must return an array sized to ticketCount, not MAX_TICKETS");
     }
@@ -48,13 +48,13 @@ public class CineCartEncapsulationTest {
     void cart_getTickets_isDefensiveCopy_writingToItDoesNotChangeCart() {
         Cart cart = freshCartFor(new Customer(1, "Alice", 28, "GOLD"));
         Showtime st = sampleShowtime();
-        cart.addTicket(new Ticket(st, 0, 0, 100.00));
-        cart.addTicket(new Ticket(st, 0, 1, 200.00));
+        cart.addTicket(new AbstractTicket(st, 0, 0, 100.00));
+        cart.addTicket(new AbstractTicket(st, 0, 1, 200.00));
 
-        Ticket[] snapshot = cart.getTickets();
+        AbstractTicket[] snapshot = cart.getTickets();
         snapshot[0] = null; // an outsider tries to corrupt the cart
 
-        Ticket[] after = cart.getTickets();
+        AbstractTicket[] after = cart.getTickets();
         assertEquals(2, after.length, "cart must still contain two tickets");
         assertNotNull(after[0], "writing null into the snapshot must not affect the cart");
         assertNotNull(after[1]);
@@ -116,7 +116,7 @@ public class CineCartEncapsulationTest {
                 "id", "movie", "hall", "startHour", "dateTag");
         assertFieldsAreFinal(Customer.class,
                 "id", "name", "age", "loyaltyTier");
-        assertFieldsAreFinal(Ticket.class,
+        assertFieldsAreFinal(AbstractTicket.class,
                 "showtime", "row", "col", "pricePaid");
         assertFieldsAreFinal(ConcessionItem.class,
                 "code", "name", "unitPrice");
@@ -154,10 +154,10 @@ public class CineCartEncapsulationTest {
         Cart cart = freshCartFor(new Customer(1, "Alice", 28, "GOLD"));
         Showtime st = sampleShowtime();
         for (int i = 0; i < Cart.MAX_TICKETS; i++) {
-            assertTrue(cart.addTicket(new Ticket(st, 0, 0, 100.00)),
+            assertTrue(cart.addTicket(new AbstractTicket(st, 0, 0, 100.00)),
                     "addTicket #" + (i + 1) + " must return true while cart has room");
         }
-        assertFalse(cart.addTicket(new Ticket(st, 0, 0, 100.00)),
+        assertFalse(cart.addTicket(new AbstractTicket(st, 0, 0, 100.00)),
                 "addTicket beyond MAX_TICKETS must return false");
         assertEquals(Cart.MAX_TICKETS, cart.getTicketCount(),
                 "ticketCount must not exceed MAX_TICKETS even after a rejected call");
