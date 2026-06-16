@@ -6,7 +6,7 @@ public class PremiumTicket extends Ticket{
     }
 
     public double subtotal(){
-        return basePrice + 1.30 + peakMultiplier();
+        return basePrice * 1.30 * peakMultiplier();
     }
 
     public String describe(){
