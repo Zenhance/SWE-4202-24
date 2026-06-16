@@ -1,36 +1,30 @@
 package model;
 
-import javax.sound.sampled.Line;
+public abstract class AbstractTicket extends LineItem {
 
-public abstract class AbstractTicket extends LineItem{
-    private Showtime showtime;
-    private int row;
-    private int col;
-    private double pricePaid;
+    private final Showtime showtime;
+    private final int row;
+    private final int col;
+    private final double base;
 
-
-
-    public AbstractTicket(Showtime showtime, int row, int col, double pricePaid){
-        this.showtime=showtime;
-        this.row=row;
-        this.col=col;
-        this.pricePaid=pricePaid;
-    }
-    public Showtime getShowtime(){
-        return this.showtime;
-    }
-    public int getRow(){
-        return this.row;
-    }
-    public int getCol(){
-        return this.col;
-    }
-    public double getPricePaid(){
-        return this.pricePaid;
+    public AbstractTicket(Showtime showtime, int row, int col) {
+        this.showtime = showtime;
+        this.row = row;
+        this.col = col;
+        this.base = showtime.getMovie().getBasePrice();
     }
 
-    public String toString(){
-        return "T" + showtime.getId() + " - R" + row + "C" + col + " @ BDT " + String.format("%.2f", pricePaid);
+    public double peakMultiplier() {
+        return showtime.isPeak() ? 1.20 : 1.00;
     }
 
+    @Override
+    public String describe() {
+        return "Seat R" + row + "C" + col;
+    }
+
+    @Override
+    public boolean isTicket() {
+        return true;
+    }
 }
