@@ -1,23 +1,10 @@
+import model.*;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 
-import model.AbstractTicket;
-import model.Cart;
-import model.ComboLine;
-import model.ConcessionItem;
-import model.ConcessionLine;
-import model.Customer;
-import model.Hall;
-import model.LineItem;
-import model.Movie;
-import model.PremiumTicket;
-import model.Showtime;
-import model.StandardTicket;
-import model.StudentTicket;
-import model.VIPTicket;
 import data.ConcessionMenu;
 import data.ShowtimeBoard;
 import engine.CheckoutEngine;
