@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="..">
-      <change beforePath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/model/AbstractTicket.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/model/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/model/Ticket.java" afterDir="false" />
+    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="renamed ticket and made it abstractticket">
+      <change beforePath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/model/ComboLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/model/ComboLine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab-04/CineCart/src/test/java/CineCartEncapsulationTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab-04/CineCart/src/test/java/CineCartTest.java" beforeDir="false" />
     </list>
@@ -186,14 +185,6 @@
       <workItem from="1778092688155" duration="94000" />
       <workItem from="1778092809585" duration="6679000" />
       <workItem from="1778163384097" duration="3333000" />
-    </task>
-    <task id="LOCAL-00045" summary="showtime class">
-      <option name="closed" value="true" />
-      <created>1779167365322</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1779167365322</updated>
     </task>
     <task id="LOCAL-00046" summary="showtime class">
       <option name="closed" value="true" />
@@ -579,7 +570,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781588723908</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="renamed ticket and made it abstractticket">
+      <option name="closed" value="true" />
+      <created>1781588871754</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1781588871754</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -619,7 +618,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="customer class constructor" />
     <MESSAGE value="customer class" />
     <MESSAGE value="customer class completion" />
     <MESSAGE value="ticket class 1" />
@@ -644,6 +642,7 @@
     <MESSAGE value="sms methods" />
     <MESSAGE value="..." />
     <MESSAGE value=".." />
-    <option name="LAST_COMMIT_MESSAGE" value=".." />
+    <MESSAGE value="renamed ticket and made it abstractticket" />
+    <option name="LAST_COMMIT_MESSAGE" value="renamed ticket and made it abstractticket" />
   </component>
 </project>
