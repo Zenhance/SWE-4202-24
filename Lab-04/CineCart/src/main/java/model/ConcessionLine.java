@@ -16,5 +16,10 @@ public class ConcessionLine extends LineItem{
     @Override
     public String describe(){
         return item.getName()+ " x "+qty;
+
+    }
+    @Override
+    public boolean hasCode(String code){
+        return item.getCode().equals(code);
     }
 }
