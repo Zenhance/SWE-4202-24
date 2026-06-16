@@ -4,13 +4,13 @@ public abstract class AbstractTicket extends LineItem {
     protected Showtime showtime;
     protected int row;
     protected int col;
-    protected double basePrice;
+    protected final double basePrice;
 
-    public AbstractTicket(Showtime showtime ,int row,int col,double basePrice){
+    public AbstractTicket(Showtime showtime ,int row,int col){
         this.showtime=showtime;
         this.row=row;
         this.col=col;
-        this.basePrice=basePrice;
+        this.basePrice=showtime.getMovie().getBasePrice();
     }
     protected double getPeakMultiplier(){
         return 1.00;
