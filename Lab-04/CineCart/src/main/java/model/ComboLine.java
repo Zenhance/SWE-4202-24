@@ -11,6 +11,10 @@ public class ComboLine extends LineItem {
     public double subtotal(){
         return itemA.getUnitPrice()+itemB.getUnitPrice()-50.0;
     }
+    @Override
+    public String describe(){
+        return itemA.getName() + " + " + itemB.getName() + "Combo";
+    }
 
 
 }
