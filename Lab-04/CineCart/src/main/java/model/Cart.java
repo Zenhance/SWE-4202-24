@@ -105,4 +105,7 @@ public class Cart {
 
     public void add(StudentTicket studentTicket) {
     }
+
+    public boolean hasCode(String pop) {
+    }
 }
