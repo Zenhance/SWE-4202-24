@@ -3,10 +3,10 @@ package model;
 import java.io.LineNumberInputStream;
 
 public abstract class Ticket extends LineItem {
-    private Showtime showtime;
-    private int row;
-    private int col;
-    private double pricePaid;
+    protected Showtime showtime;
+    protected int row;
+    protected int col;
+    protected double basePrice;
     //constructor
     public Ticket(Showtime showtime, int row, int col, double pricePaid){
         this.showtime=showtime;
