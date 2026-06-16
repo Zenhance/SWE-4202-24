@@ -23,4 +23,12 @@ public abstract class Ticket extends lineItem {
     public double getPricePaid() {
         return base;
     }
+    public double peakTime()
+    {
+        if(showtime.isPeak())
+        {
+            base=base*1.20;
+        }
+        return base;
+    }
 }
