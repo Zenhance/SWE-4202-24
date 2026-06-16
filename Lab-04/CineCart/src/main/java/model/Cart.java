@@ -88,7 +88,27 @@ public class Cart {
    }
    return found;
   }
+
+    public void add(StandardTicket standardTicket) {
+    }
+
+ public double grandSubtotal() {
+ return 0.00;}
+
+ public void add(ConcessionItem pop, int i) {
+
  }
+
+ public void add(PremiumTicket premiumTicket) {
+ }
+
+ public boolean hasCode(String pop) {
+  return false;
+ }
+
+ public void add(VIPTicket vipTicket) {
+ }
+}
 
 
 

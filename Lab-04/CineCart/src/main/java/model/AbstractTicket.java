@@ -31,6 +31,10 @@ public class AbstractTicket { Showtime showtime;
     public String toString(){
         return showtime.getId()+" - R"+row+"C"+col+" @ BDT "+pricePaid;
     }
+
+    public String describe() {
+        return "premium";
+    }
 }
 
 

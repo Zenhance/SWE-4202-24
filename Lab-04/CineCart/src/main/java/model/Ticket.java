@@ -35,4 +35,8 @@ public class Ticket {
     public String toString(){
         return showtime.getId()+" - R"+row+"C"+col+" @ BDT "+pricePaid;
     }
+
+    public String describe() {
+        return "premium";
+    }
 }

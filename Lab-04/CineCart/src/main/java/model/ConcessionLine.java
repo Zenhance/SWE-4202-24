@@ -1,4 +1,11 @@
 package model;
 
-public class ConcessionLine {
+public class ConcessionLine extends LineItem {
+    public ConcessionLine(ConcessionItem pop, int i) {
+        super();
+    }
+
+    public double subtotal() {
+        return 0.0;
+    }
 }
