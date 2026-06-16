@@ -10,14 +10,10 @@ public Comboline(ConcessionItem itemA, ConcessionItem itemB) {
 }
 
 public String describe() {
-    return qty + "x " + item.getName();
+    return qty + "x " + itemA.getName();
 }
 
-public String describe() {
-    return itemA.getName() + " + " + itemB.getName() + " Combo";
+public String describe(){
+    return qty + "x " + itemB.getName();
 }
-
-public String describe() {
-    return itemA.getName() + " + " + itemB.getName() + " Combo";
 }
-        }
