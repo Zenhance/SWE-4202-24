@@ -93,5 +93,11 @@ public class Cart {
         public boolean add(ConcessionItem item){
         return add(item,1);
         }
-
+        public LineItem[] getLines(){
+        LineItem[] copy = new LineItem[lineCount];
+        for(int i=0; i<lineCount;i++){
+            copy[i] = lines[i];
+        }
+        return copy;
+        }
 }
