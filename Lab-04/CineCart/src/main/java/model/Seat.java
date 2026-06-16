@@ -29,8 +29,15 @@ public class Seat {
         return isBooked;
     }
 
-    public void book() {
-        isBooked = true;
+    public boolean book() {
+
+        if(!isBooked){
+            isBooked = true;
+            return false;
+        }else{
+            return true;
+        }
+
     }
 
     public void release() {
@@ -43,19 +50,12 @@ public class Seat {
 
     public String toString() {
         String result = "R" + row + "C" + col;
-
         if (isPremium) {
             result += "*";
         }
-
         if (isBooked) {
             result += "#";
         }
-
         return result;
     }
 }
-
-
-
-
