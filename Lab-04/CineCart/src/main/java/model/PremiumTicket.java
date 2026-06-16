@@ -15,7 +15,7 @@ super (showtime, row, col);
         return super.getPricePaid();
     }
 @Override
-    public double subTotal()
+    public double subtotal()
 {
     return base*PREMIUM*peakTime();
 

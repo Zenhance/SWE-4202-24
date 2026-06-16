@@ -10,7 +10,7 @@ public StudentTicket (Showtime showtime, int row, int col)
 
 }
 @Override
-    public double subTotal ()
+    public double subtotal ()
 {
     return base*STUDENT*peakTime();
 
