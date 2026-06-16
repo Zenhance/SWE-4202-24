@@ -21,4 +21,7 @@ public abstract class Ticket extends LineItem {
     public boolean isTicket(){
         return true;
     }
+    @Override
+    public String describe(){}
+    return "Seat(" + row + "," + col + ")";
 }
