@@ -20,6 +20,8 @@ public class Cart {
         this.items = new ConcessionItem[MAX_ITEMS];
         this.qtys = new int[MAX_ITEMS];
         this.itemCount = 0;
+        this.lines = new LineItem[MAX_TICKETS+MAX_ITEMS];
+        this.lineCount = 0;
     }
     public void addItem(ConcessionItem c, int qty) {
         if (itemCount < MAX_ITEMS && qty > 0) {
@@ -76,7 +78,8 @@ public class Cart {
         }
         return false;
         }
-
-
-
+        public boolean add(LineItem line){
+        if(lineCount>=lines.length){
+            return false;}
+        }
 }
