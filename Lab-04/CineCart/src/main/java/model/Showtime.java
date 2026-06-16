@@ -6,29 +6,36 @@ public class Showtime {
     private Hall hall;
     private int startHour;
     private String dateTag;
-    public ShowTime(int id,Movie movie,Hall hall,int startHour,String dateTag){
-      this.id=id;
-      this.movie=movie;
-      this.hall=hall;
-      this.startHour=startHour;
-      this.dateTag=dateTag;
+
+    public Showtime(int id, Movie movie, Hall hall, int startHour, String dateTag){
+        this.id = id;
+        this.movie = movie;
+        this.hall = hall;
+        this.startHour = startHour;
+        this.dateTag = dateTag;
     }
     public int getId(){
-        return id;
+        return this.id;
     }
     public Movie getMovie(){
-        return movie;
+        return this.movie;
     }
     public Hall getHall(){
-        return hall;
+        return this.hall;
     }
-public String getStartHour(){
-        return dateTag;
-}
-public boolean isPeak() {
-    return startHour >= 18 && startHour <= 21;
-}
-public String toString(){
-        return "["+id+"]"+movie.getTitle()+" @Hall "+hall.getId()+" - "+String.format("%.02d:00",startHour)+"("+dateTag+")";
-}
+    public int getStartHour(){
+        return this.startHour;
+    }
+    public String getDateTag(){
+        return this.dateTag;
+    }
+    public boolean isPeak(){
+        if(startHour>=18 && startHour<=21){
+            return true;
+        }
+        return false;
+    }
+    public String toString(){
+        return "[T"+id+"] "+movie.getTitle()+" @Hall "+hall+" - "+startHour+":00 "+"("+dateTag+")";
+    }
 }

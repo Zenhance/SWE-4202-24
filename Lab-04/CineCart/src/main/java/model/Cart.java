@@ -59,7 +59,7 @@ public class Cart {
         return itemCount;
     }
 
-    public double sumTicektsPaid() {
+    public double sumTicketsPaid() {
         double total = 0.0;
 
         for (int i = 0; i < ticketCount; i++) {

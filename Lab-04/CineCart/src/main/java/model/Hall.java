@@ -1,9 +1,9 @@
 package model;
 
 public class Hall {
-    private int id;
-    private int rows;
-    private int cols;
+    private final int id;
+    private final int rows;
+    private final int cols;
     private Seat[][] grid;
 
     public Hall(int id, int rows, int cols, int premiumRows) {
