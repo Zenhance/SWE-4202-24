@@ -1,13 +1,13 @@
 public class Notice {
-    private  String recipient;
+    private  Recipient recipient;
     private  String text;
 
-    public Notice(String recipient,String text){
+    public Notice(Recipient recipient,String text){
         this.recipient=recipient;
         this.text=text;
     }
 
-    public String getRecipient() {
+    public Recipient getRecipient() {
         return recipient;
     }
     public String getText(){

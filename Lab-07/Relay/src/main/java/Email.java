@@ -1,10 +1,13 @@
 public class Email extends Notice{
 
-    public Email(String recipient, String text) {
+    public Email(Recipient recipient, String text) {
         super(recipient, text);
     }
 
-    public String getName(){
-        return String.format()
+    public String deliver(){
+        String header= getRecipient().name;
+        String address= getRecipient().getAddress();
+        String s = header + address + getText();
+        return s;
     }
 }
