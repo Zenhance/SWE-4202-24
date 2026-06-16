@@ -1,6 +1,6 @@
 package model;
 
-public class VIPTicket extends Premium {
+public class VIPTicket extends PremiumTicket {
     private String premium;
     private int id;
 

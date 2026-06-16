@@ -8,12 +8,10 @@ public abstract class AbstractTicket extends LineItem {
     private double price;
 
 
-    public AbstractTicket(Showtime showtime, int row, int col, double pricePaid) {
+    public AbstractTicket(Showtime showtime, int row, int col) {
         this.showtime = showtime;
         this.row = row;
         this.col = col;
-        this.pricePaid = pricePaid;
-        this.price = pricePaid;
     }
 
     public Showtime getShowtime() {
@@ -28,9 +26,9 @@ public abstract class AbstractTicket extends LineItem {
         return col;
     }
 
-    public double getPricePaid() {
-        return pricePaid;
-    }
+    //public double getPricePaid() {
+    //    return pricePaid;
+    //}
 
 
 
