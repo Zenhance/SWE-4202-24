@@ -19,6 +19,15 @@ public class StudentTicket extends AbstractTicket {
     public void setId(int id) {
         this.id = id;
     }
-    public int getStudentId() {}
+    public int getStudentId() {
+        return studentId;
+    }
+    public void setStudentId(int studentId) {
+        this.studentId = studentId;
+    }
+    @Override
+    public String toString() {
+        return "StudentTicket{" + "id=" + id + ", studentId=" + studentId + '}';
+    }
 
 }
