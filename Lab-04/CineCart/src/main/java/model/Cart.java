@@ -100,4 +100,28 @@ public class Cart {
         }
         return copy;
         }
+        public double grandSubtotal(){
+        double total = 0;
+        for(int i=0;i<lineCount;i++){
+            total+=lines[i].subtotal();
+            }
+        return total;
+        }
+        public int ticketCount() {
+            int total = 0;
+            for (int i = 0; i < lineCount; i++) {
+                if (lines[i].isTicket()) {
+                    total++;
+                }
+            }
+            return total;
+        }
+        public  boolean hasCode(String code){
+        for(int i=0; i < lineCount; i++){
+            if(lines[i].hasCode(code)){
+                return true;
+            }
+        }
+        return false;
+        }
 }
