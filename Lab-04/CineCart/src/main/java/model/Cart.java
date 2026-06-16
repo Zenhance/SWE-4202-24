@@ -83,4 +83,7 @@ public class Cart {
         }
         return false;
     }
+
+    public void add(StandardTicket standardTicket) {
+    }
 }
