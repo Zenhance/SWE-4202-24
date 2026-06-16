@@ -7,4 +7,8 @@ public class PremiumTicket extends AbstractTicket{
     public double subtotal(){
         return baseprice*1.3*peak();
     }
+    public String describe(){
+        return ("Total price:" + baseprice*1.3*peak());
+
+    }
 }

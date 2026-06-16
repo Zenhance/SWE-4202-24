@@ -7,4 +7,8 @@ public class StudentTicket extends AbstractTicket {
     public double subtotal(){
         return baseprice*0.50*peak();
     }
+    public String describe(){
+           return ("Total price:" + baseprice*0.50*peak());
+
+    }
 }
