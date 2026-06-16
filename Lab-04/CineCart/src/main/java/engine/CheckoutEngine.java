@@ -3,7 +3,7 @@ package engine;
 import data.ConcessionMenu;
 import data.ShowtimeBoard;
 import model.Showtime;
-import model.Ticket;
+import model.AbstractTicket;
 import model.Cart;
 import model.ConcessionItem;
 
