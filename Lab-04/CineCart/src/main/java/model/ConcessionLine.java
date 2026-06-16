@@ -1,6 +1,6 @@
 package model;
 
-public class ConcessionLine {
+public class ConcessionLine extends LineItem {
     public ConcessionLine(ConcessionItem pop, int i) {
     }
 
