@@ -9,6 +9,8 @@ private int ticketCount;
 private int itemCount;
 private ConcessionItem[] items;
 private int[] qtys;
+private LineItem[] lines;
+private int count;
     public double sumConcessionsRaw() {
         double sum = 0;
 
@@ -20,13 +22,44 @@ private int[] qtys;
     }
 public Cart(Customer owner){
     this.owner=owner;
+    lines=new LineItem[100];
     tickets=new Ticket[MAX_TICKETS];
     items=new ConcessionItem[MAX_ITEMS];
     qtys=new int[MAX_ITEMS];
     ticketCount=0;
     itemCount=0;
+    count =0;
 }
-public void addTicket(Ticket t){
+public void add(LineItem line){
+        lines[count++]=line;
+}
+    public void add(ConcessionItem item,int qty){
+    add(new ConcessionLine(item,qty));
+    }
+    public void add(ConcessionItem item,int qty){
+        add(new ConcessionLine(item,1));
+      }
+      public LineItem[] getLines(){
+        LineItem[] copy=new LineItem[count];
+        for(int i=0;i<count;i++){
+            copy[i]=lines[i];
+        }
+        return copy;
+      }
+      return double grandSubtotal(){
+        double total=0;
+        for(int i=0;i<count;i++){
+            total+=lines[i].subtotal();
+        }
+        return total;
+    }
+    public int ticketCount(){
+        int tickets=0;
+        for(int i=0;i<count;i++){
+
+        }
+    }
+    public void addTicket(Ticket t){
     if(ticketCount<MAX_TICKETS){
         tickets[ticketCount]=t;
         ticketCount++;
