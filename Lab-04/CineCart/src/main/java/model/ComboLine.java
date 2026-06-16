@@ -1,9 +1,9 @@
 package model;
 
-public class ComboLIne extends LineItem{
+public class ComboLine extends LineItem{
     private ConcessionItem itemA;
     private ConcessionItem itemB;
-    public ComboLIne(ConcessionItem itemA,ConcessionItem itemB) {
+    public ComboLine(ConcessionItem itemA,ConcessionItem itemB) {
         this.itemA = itemA;
         this.itemB = itemB;
     }
