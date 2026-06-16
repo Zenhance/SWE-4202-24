@@ -8,7 +8,7 @@ public class MoviePolymorphism
     private int durationMin;
     private double basePrice;
 
-    public oviePolymorphism(int id, String title, String rating,
+    public MoviePolymorphism(int id, String title, String rating,
                  int durationMin, double basePrice) {
         this.id = id;
         this.title = title;
