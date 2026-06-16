@@ -16,3 +16,4 @@ public class StudentTicket extends AbstractTicket{
         return super.describe() + " Student";
     }
 }
+
