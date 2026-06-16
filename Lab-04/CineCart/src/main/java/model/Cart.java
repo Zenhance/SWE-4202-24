@@ -90,4 +90,7 @@ public class Cart {
     public double grandSubtotal() {
         return 0.0;
     }
+
+    public void add(ConcessionItem pop, int i) {
+    }
 }
