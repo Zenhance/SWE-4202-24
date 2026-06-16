@@ -55,7 +55,7 @@ public class Showtime {
     }
 
     public String toString() {
-        String s = "[T " id + "] " + name + " @ Hall " + hall + " - " + startHour + " (" + dateTag + ")";
+        String s = "[T " + getId() + "] " + getName() + " @ Hall " + getHall() + " - " + getStartHour() + " (" + getDateTag() + ")";
 
         return s;
     }
