@@ -4,7 +4,7 @@ public abstract class Ticket extends LineItem{
     protected final Showtime showtime;
     protected final int row;
     protected final int col;
-    protected final double basePrice;
+    protected double basePrice;
 
     public Ticket(Showtime showtime,int row,int col,double basePrice){
         this.showtime=showtime;
