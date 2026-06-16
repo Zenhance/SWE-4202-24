@@ -4,7 +4,7 @@ public class Cart {
     public static final int MAX_TICKETS = 20;
     public static final int MAX_ITEMS = 20;
     private Customer owner;
-    private Ticket[] tickets;
+    private AbstractTicket[] tickets = new AbstractTicket[MAX_TICKETS];
     private int ticketCount;
     private ConcessionItem[] items;
     private int[] qtys;
@@ -13,14 +13,13 @@ public class Cart {
 
     public Cart(Customer owner) {
         this.owner = owner;
-        tickets = new Ticket[MAX_TICKETS];
         this.ticketCount = 0;
         items = new ConcessionItem[MAX_ITEMS];
         qtys = new int[MAX_ITEMS];
         this.itemCount = 0;
     }
 
-    public boolean addTicket(Ticket t) {
+    public boolean addTicket(AbstractTicket t) {
         boolean res = false;
         if (ticketCount < MAX_TICKETS) {
             tickets[ticketCount] = t;
@@ -45,7 +44,7 @@ public class Cart {
         return owner;
     }
 
-    public Ticket[] getTickets() {
+    public AbstractTicket[] getTickets() {
         return tickets;
     }
 
