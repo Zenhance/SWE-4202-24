@@ -7,7 +7,5 @@ public abstract class LineItem {
     public boolean isTicket() {
         return false;
     }
-    public boolean hasCode() {
-        return false;
-    }
+    public abstract boolean hasCode(String code);
 }
