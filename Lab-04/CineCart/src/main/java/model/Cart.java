@@ -98,11 +98,23 @@ public class Cart {
     }
 
     public Object getLines() {
+        return 0;
     }
 
     public double grandSubtotal() {
+        return 0;
     }
 
     public boolean hasCode(String pop) {
+        return true;
+    }
+
+    public void add(StandardTicket standardTicket) {
+    }
+
+    public void add(ConcessionLine concessionLine) {
+    }
+
+    public void add(ComboLine comboLine) {
     }
 }
