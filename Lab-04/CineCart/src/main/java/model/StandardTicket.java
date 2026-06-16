@@ -8,7 +8,7 @@ public class StandardTicket extends Ticket
     }
 
     @Override
-    public double subTotal()
+    public double subtotal()
     {
         return base*peakTime();
     }

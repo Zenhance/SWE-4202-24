@@ -10,7 +10,7 @@ public class StudentTicket extends Ticket
     }
 
     @Override
-    public double subTotal()
+    public double subtotal()
     {
         return base*STUDENT*peakTime();
     }

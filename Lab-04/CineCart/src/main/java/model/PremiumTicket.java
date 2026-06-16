@@ -10,7 +10,7 @@ public class PremiumTicket extends Ticket
     }
 
     @Override
-    public double subTotal()
+    public double subtotal()
     {
         return base*PREMIUM*peakTime();
     }
