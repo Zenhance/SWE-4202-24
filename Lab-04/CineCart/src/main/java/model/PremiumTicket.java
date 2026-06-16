@@ -2,14 +2,14 @@ package model;
 
 public class PremiumTicket extends Ticket{
 
-    public PremiumTicket(Showtime showtime, int row, int col, double pricePaid, double peak) {
-        super(showtime, row, col, pricePaid, peak);
+    public PremiumTicket(Showtime showtime, int row, int col, double basePrice, double peak) {
+        super(showtime, row, col, basePrice, peak);
     }
 
     @Override
     public double getCharge() {
         if (showtime.isPeak())
-            return pricePaid*peak*1.3;
-        else return pricePaid*1.3;
+            return basePrice *peak*1.3;
+        else return basePrice *1.3;
     }
 }

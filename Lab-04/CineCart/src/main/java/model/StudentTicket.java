@@ -10,7 +10,7 @@ public class StudentTicket extends Ticket{
     @Override
     public double getCharge() {
         if (showtime.isPeak())
-            return pricePaid*0.5*peak;
-        else return pricePaid*0.5;
+            return basePrice *0.5*peak;
+        else return basePrice *0.5;
     }
 }
