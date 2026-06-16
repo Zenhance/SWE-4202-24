@@ -20,6 +20,17 @@ public class ConcessionLine extends LineItem {
     public int getQty() {
         return qty;
     }
+    @Override
+    public double subtotal()
+    {
+        return item.getUnitPrice()*qty;
+    }
+
+    @Override
+    public String describe()
+    {
+        return String.format(item.toString()+" x "+qty+"\n BDT : "+subtotal());
+    }
 }
 
 
@@ -30,4 +41,4 @@ public class ConcessionLine extends LineItem {
 
 
 
-}
+
