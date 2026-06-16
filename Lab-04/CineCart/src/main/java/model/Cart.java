@@ -119,4 +119,7 @@ public class Cart {
 
     public void add(LineItem a) {
     }
+
+    public void add(ConcessionItem pop) {
+    }
 }
