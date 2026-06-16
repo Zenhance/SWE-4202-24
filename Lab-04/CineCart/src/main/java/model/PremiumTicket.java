@@ -2,7 +2,7 @@ package model;
 
 public class PremiumTicket extends AbstractTicket{
     public PremiumTicket(Showtime showtime,int row, int col) {
-        super();
+        super(showtime,row,col);
     }
 
     public double subtotal(){
@@ -12,4 +12,5 @@ public class PremiumTicket extends AbstractTicket{
     public String describe() {
         return null;
     }
+
 }
