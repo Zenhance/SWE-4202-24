@@ -1,6 +1,6 @@
 package model;
 
-public class Ticket {
+public abstract class Ticket {
 
 
     //fields
