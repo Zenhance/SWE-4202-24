@@ -93,4 +93,10 @@ public class Cart {
         }
         return false;
     }
+
+    public void add(VIPTicket vipTicket) {
+    }
+
+    public Object getLines() {
+    }
 }
