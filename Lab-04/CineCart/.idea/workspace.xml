@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9cd8f1a-14c0-4b54-b5fd-16e9b575cad7" name="Changes" comment="Post lab changes" />
+    <list default="true" id="f9cd8f1a-14c0-4b54-b5fd-16e9b575cad7" name="Changes" comment="Post lab changes">
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/AbstractTicket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/ComboLine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/ConcessionLine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/LineItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/PremiumTicket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/StandardTicket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/StudentTicket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/VIPTicket.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,38 +85,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.CineCartTest.addConcession_unknownCode_returnsErrorAndDoesNotChangeCart.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CineCartTest.concessionMenu_findByCode_returnsHitOrNull.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CineCartTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CineCartTest.hall_buildsGridAndMarksFirstRowsPremium.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CineCartTest.hall_countAvailable_decrementsAfterBooking.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CineCartTest.movie_getMinAge_returnsCorrectValueForEachRating.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CineCartTest.movie_storesAllFieldsViaGetters.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Upgrade Gradle wrapper.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;36__Tanvir&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Documents/LAB/SWE-4202-24/Lab-04/CineCart/src/main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.CineCartPolymorphismTest.executor": "Run",
+    "Gradle.CineCartTest.addConcession_unknownCode_returnsErrorAndDoesNotChangeCart.executor": "Run",
+    "Gradle.CineCartTest.bookTicket_unknownShowtime_returnsErrorAndDoesNotChangeCart.executor": "Run",
+    "Gradle.CineCartTest.concessionMenu_findByCode_returnsHitOrNull.executor": "Run",
+    "Gradle.CineCartTest.executor": "Run",
+    "Gradle.CineCartTest.hall_buildsGridAndMarksFirstRowsPremium.executor": "Run",
+    "Gradle.CineCartTest.hall_countAvailable_decrementsAfterBooking.executor": "Run",
+    "Gradle.CineCartTest.movie_getMinAge_returnsCorrectValueForEachRating.executor": "Run",
+    "Gradle.CineCartTest.movie_storesAllFieldsViaGetters.executor": "Run",
+    "Gradle.Upgrade Gradle wrapper.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "36__Tanvir",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/User/Documents/LAB/SWE-4202-24/Lab-04/CineCart/src/main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\Documents\LAB\SWE-4202-24\Lab-04\CineCart\src\main" />
@@ -115,7 +126,34 @@
       <recent name="C:\Users\User\Documents\LAB\SWE-4202-24\Lab-04\CineCart" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.CineCartTest">
+  <component name="RunManager" selected="Gradle.CineCartTest.bookTicket_unknownShowtime_returnsErrorAndDoesNotChangeCart">
+    <configuration name="CineCartPolymorphismTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;CineCartPolymorphismTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
+    </configuration>
     <configuration name="CineCartTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -170,7 +208,7 @@
       <GradleCoverageDisabled>false</GradleCoverageDisabled>
       <method v="2" />
     </configuration>
-    <configuration name="CineCartTest.concessionMenu_findByCode_returnsHitOrNull" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CineCartTest.bookTicket_unknownShowtime_returnsErrorAndDoesNotChangeCart" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -183,34 +221,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;CineCartTest.concessionMenu_findByCode_returnsHitOrNull&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <GradleProfilingDisabled>false</GradleProfilingDisabled>
-      <GradleCoverageDisabled>false</GradleCoverageDisabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="CineCartTest.hall_buildsGridAndMarksFirstRowsPremium" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;CineCartTest.hall_buildsGridAndMarksFirstRowsPremium&quot;" />
+            <option value="&quot;CineCartTest.bookTicket_unknownShowtime_returnsErrorAndDoesNotChangeCart&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -253,11 +264,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CineCartTest.bookTicket_unknownShowtime_returnsErrorAndDoesNotChangeCart" />
         <item itemvalue="Gradle.CineCartTest" />
+        <item itemvalue="Gradle.CineCartPolymorphismTest" />
         <item itemvalue="Gradle.CineCartTest.addConcession_unknownCode_returnsErrorAndDoesNotChangeCart" />
         <item itemvalue="Gradle.CineCartTest.hall_countAvailable_decrementsAfterBooking" />
-        <item itemvalue="Gradle.CineCartTest.hall_buildsGridAndMarksFirstRowsPremium" />
-        <item itemvalue="Gradle.CineCartTest.concessionMenu_findByCode_returnsHitOrNull" />
       </list>
     </recent_temporary>
   </component>
