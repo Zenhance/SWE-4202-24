@@ -7,5 +7,7 @@ public class StudentTicket {
     public double subtotal(){
         return basePrice*0.50*peakMultiplier();
     }
-
+    public String describe(){
+        return "Student "+super.describe();
+    }
 }
