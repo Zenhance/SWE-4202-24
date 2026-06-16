@@ -97,8 +97,8 @@ public class Cart {
     public void add(VIPTicket vipTicket) {
     }
 
-    public Object getLines() {
-        return 0;
+    public LineItem[] getLines() {
+        return null;
     }
 
     public double grandSubtotal() {
@@ -125,5 +125,8 @@ public class Cart {
     }
 
     public void add(ConcessionItem pop) {
+    }
+    public int ticketCount() {
+        return 0;
     }
 }
