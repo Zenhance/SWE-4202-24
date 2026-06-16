@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 
-import model.AbstractTicket;
+import model.Ticket;
 import model.Cart;
 import model.ComboLine;
 import model.ConcessionItem;
@@ -284,7 +284,7 @@ public class CineCartPolymorphismTest {
     void design_commonTypesAreAbstract_soNoRuleLessLineCanExist() {
         assertTrue(Modifier.isAbstract(LineItem.class.getModifiers()),
                 "LineItem must be abstract: a charge-less line must not be instantiable");
-        assertTrue(Modifier.isAbstract(AbstractTicket.class.getModifiers()),
+        assertTrue(Modifier.isAbstract(Ticket.class.getModifiers()),
                 "The shared ticket base must be abstract: a rule-less ticket must not exist");
     }
 
@@ -314,7 +314,7 @@ public class CineCartPolymorphismTest {
 
     @Test
     void design_baseFigureIsSealedToTheTicketFamily() throws Exception {
-        Field base = AbstractTicket.class.getDeclaredField("base");
+        Field base = Ticket.class.getDeclaredField("base");
         int mod = base.getModifiers();
         assertTrue(Modifier.isProtected(mod),
                 "base must be protected: reachable by descendants, sealed against outsiders");
