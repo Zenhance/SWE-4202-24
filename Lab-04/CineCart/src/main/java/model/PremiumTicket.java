@@ -1,6 +1,6 @@
 package model;
 
-public class PremiumTicket extends Ticket
+public class PremiumTicket extends AbstractTicket
 {
     protected static final double PREMIUM = 1.30;
 

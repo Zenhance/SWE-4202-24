@@ -1,6 +1,6 @@
 package model;
 
-public class StandardTicket extends Ticket
+public class StandardTicket extends AbstractTicket
 {
     public StandardTicket(Showtime showtime, int row, int col)
     {
