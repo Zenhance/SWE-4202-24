@@ -24,4 +24,19 @@ public abstract class AbstractTicket extends LineItem {
         return col;
     }
 
+    protected double getBasePrice() {
+        return base.getMovie().getBasePrice();
+    }
+
+    protected double applyPeak(double amount) {
+        if(base.isPeak()) {
+            amount *= 1.20;
+        }
+        return amount;
+    }
+
+    @Override
+    public boolean isTicket() {
+        return true;
+    }
 }
