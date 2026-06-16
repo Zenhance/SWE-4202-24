@@ -1,35 +1,104 @@
 package model;
 
-public class Ticket {
-     Showtime showtime;
-     int row;
-     int col;
-     double pricePaid;
+public abstract class Ticket extends LineItem {
 
-     public Ticket(Showtime showtime, int row, int col, double pricePaid){
-         this.showtime = showtime;
-         this.row = row;
-         this.col = col;
-         this.pricePaid = pricePaid;
-     }
+    protected Showtime showtime;
+    protected int row;
+    protected int col;
+    protected double basePrice;
 
-     public Showtime getShowtime(){
-         return showtime;
-     }
+    public Ticket(Showtime showtime, int row, int col) {
 
-     public int getRow(){
-         return row;
-     }
+        this.showtime = showtime;
+        this.row = row;
+        this.col = col;
 
-     public int getCol(){
-         return col;
-     }
+        this.basePrice =
+                showtime.getMovie().getBasePrice();
+    }
 
-     public double getPricePaid(){
-         return pricePaid;
-     }
+    protected double peakMultiplier() {
 
-     public String toString(){
-         return "T" + showtime.getId() + " - R"+row+"C" +col +" @ BDT "+String.format("%.2f",pricePaid);
-     }
+        if(showtime.isPeak()) {
+            return 1.20;
+        }
+
+        return 1.0;
+    }
+
+    public Showtime getShowtime() {
+        return showtime;
+    }
+
+    public int getRow() {
+        return row;
+    }
+
+    public int getCol() {
+        return col;
+    }
+
+
+    public boolean isTicket() {
+        return true;
+    }
+
+    package model;
+
+    public abstract class Ticket extends LineItem {
+
+        protected Showtime showtime;
+        protected int row;
+        protected int col;
+        protected double basePrice;
+
+        public Ticket(Showtime showtime,
+                      int row,
+                      int col) {
+
+            this.showtime = showtime;
+            this.row = row;
+            this.col = col;
+
+            this.basePrice =
+                    showtime.getMovie().getBasePrice();
+        }
+
+        protected double peakMultiplier() {
+
+            if (showtime.isPeak()) {
+                return 1.20;
+            }
+
+            return 1.00;
+        }
+
+        public Showtime getShowtime() {
+            return showtime;
+        }
+
+        public int getRow() {
+            return row;
+        }
+
+        public int getCol() {
+            return col;
+        }
+
+        @Override
+        public boolean isTicket() {
+            return true;
+        }
+
+
+        public String describe() {
+
+            return "T" + showtime.getId() + " - R" + row + "C" + col;
+        }
+
+
+        public String toString() {
+            return describe();
+        }
+    }
 }
