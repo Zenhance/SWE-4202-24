@@ -10,4 +10,8 @@ public class VIPTicket extends PremiumTicket{
     public double subtotal(){
         return super.subtotal()+200.0;
     }
+    @Override
+    public String describe(){
+        return super.describe()+" +Lounge Access";
+    }
 }
