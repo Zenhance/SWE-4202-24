@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="comboline.java">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/model/ComboLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/model/ComboLine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/model/PremiumTicket.java" beforeDir="false" />
+    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="premiumticket methods">
+      <change beforePath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/model/StandardTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/model/StandardTicket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/model/StudentTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/model/StudentTicket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab-04/CineCart/src/test/java/CineCartEncapsulationTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab-04/CineCart/src/test/java/CineCartTest.java" beforeDir="false" />
     </list>
@@ -187,22 +186,6 @@
       <workItem from="1778092688155" duration="94000" />
       <workItem from="1778092809585" duration="6679000" />
       <workItem from="1778163384097" duration="3333000" />
-    </task>
-    <task id="LOCAL-00048" summary="showtime class">
-      <option name="closed" value="true" />
-      <created>1779167972694</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1779167972694</updated>
-    </task>
-    <task id="LOCAL-00049" summary="showtime class completion">
-      <option name="closed" value="true" />
-      <created>1779168073828</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1779168073828</updated>
     </task>
     <task id="LOCAL-00050" summary="customer class constructor">
       <option name="closed" value="true" />
@@ -580,7 +563,23 @@
       <option name="project" value="LOCAL" />
       <updated>1781589879136</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="premiumticket">
+      <option name="closed" value="true" />
+      <created>1781590014051</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1781590014051</updated>
+    </task>
+    <task id="LOCAL-00098" summary="premiumticket methods">
+      <option name="closed" value="true" />
+      <created>1781590074099</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1781590074099</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -620,8 +619,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="customer class completion" />
-    <MESSAGE value="ticket class 1" />
     <MESSAGE value="ticket class 2" />
     <MESSAGE value="writing the skeleton of checkout engine to prevent compilation error" />
     <MESSAGE value="writing the skeleton of checkout engine to prevent compilation error 2" />
@@ -645,6 +642,8 @@
     <MESSAGE value=".." />
     <MESSAGE value="renamed ticket and made it abstractticket" />
     <MESSAGE value="comboline.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="comboline.java" />
+    <MESSAGE value="premiumticket" />
+    <MESSAGE value="premiumticket methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="premiumticket methods" />
   </component>
 </project>
