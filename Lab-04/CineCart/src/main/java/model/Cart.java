@@ -12,5 +12,8 @@ public class Cart {
        lines= new LineItem[100];
        count= 0;
     }
-
+public void add(LineItem line){
+    lines[count++]=line;
+    }
+}
     //methods
