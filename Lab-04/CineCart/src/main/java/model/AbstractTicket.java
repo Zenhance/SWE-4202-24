@@ -8,6 +8,7 @@ public abstract class AbstractTicket extends LineItem{
     private int col;
     private double pricePaid;
 
+
     public AbstractTicket(Showtime showtime, int row, int col, double pricePaid){
         this.showtime=showtime;
         this.row=row;
