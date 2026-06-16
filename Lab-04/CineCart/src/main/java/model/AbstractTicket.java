@@ -14,7 +14,7 @@ public AbstractTicket(Showtime showtime , int row , int col){
     this.showtime = showtime;
     this.row = row;
     this.col = col;
-    this.base = Showtime.getMovie().getBasePrice();
+    this.base = showtime.getMovie().getBasePrice();
 }
 
     protected double peakMultiplier(){
