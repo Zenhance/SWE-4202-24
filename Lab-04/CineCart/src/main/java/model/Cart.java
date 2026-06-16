@@ -1,82 +1,72 @@
 package model;
 
 public class Cart {
-    public static final int MAX_TICKETS =20;
-    public static final int MAX_ITEMS=20;
+    public static final int MAX_LINES=50;
 
-    private Customer owner;
-    private Ticket[] tickets;
-    private int ticketCount;
-    private ConcessionItem[] items;
-    private int[] qtys;
-    private int itemCount;
+    private final Customer owner;
+    private final LineItem[] lines;
+
+    private int count;
 
     public Cart(Customer owner){
         this.owner=owner;
-
-        tickets= new Ticket[MAX_TICKETS];
-        items= new ConcessionItem[MAX_ITEMS];
-        qtys= new int[MAX_ITEMS];
-
-        ticketCount =0;
-        itemCount =0;
-    }
-
-    public void addTicket(Ticket t){
-        if(ticketCount<MAX_TICKETS){
-            tickets[ticketCount]=t;
-            ticketCount++;
-        }
-    }
-
-    public void addItem(ConcessionItem c, int qty){
-        if(itemCount<MAX_ITEMS && qty>0){
-            items[itemCount]=c;
-            qtys[itemCount]=qty;
-            itemCount++;
-        }
+        lines= new LineItem[MAX_LINES];
+        count=0;
     }
 
     public Customer getOwner(){
         return owner;
     }
-    public Ticket[] getTickets(){
-        return tickets;
-    }
-    public int getTicketCount(){
-        return ticketCount;
-    }
-    public ConcessionItem[] getItems(){
-        return items;
-    }
-    public int[] getQtys(){
-        return qtys;
-    }
-    public int getItemCount(){
-        return itemCount;
-    }
-    public double sumTicketsPaid(){
-        double sum=0;
-        for(int i=0;i<ticketCount;i++){
-            sum+=tickets[i].getPricePaid();
+
+    public boolean add(LineItem line){
+        if(count>=MAX_LINES){
+            return false;
         }
-        return sum;
+        lines[count]=line;
+        count++;
+
+        return true;
     }
 
-    public double sumConcessionsRaw(){
-        double sum=0;
-        for(int i=0;i<itemCount;i++){
-            sum+=items[i].getUnitPrice();
-        }
-        return sum;
+    public boolean add(ConcessionItem item,int qty){
+        return add(new ConcessionLine(item,1));
     }
 
-    public boolean hasItem(String code){
-        for(int i=0;i<itemCount;i++){
-            if(items[i].getCode().equals(code)){
+    public LineItem[] getLines(){
+        LineItem[] copy = new LineItem[count];
+        for(int i=0;i<count;i++){
+            copy[i]=lines[i];
+        }
+        return copy;
+    }
+     public int getCount(){
+        return count;
+     }
+
+     public double grandSubtotal(){
+        double sum=0;
+        for(int i=0;i<count;i++){
+            sum+=lines[i].subtotal();
+        }
+        return sum;
+     }
+
+     public int ticketCount(){
+        int total=0;
+        for(int i=0;i<count;i++){
+            if(lines[i].isTicket()){
+                total++;
+            }
+        }
+        return total;
+     }
+
+     public boolean hasCode(String code){
+        for(int i=0;i<count;i++){
+            if(lines[i].hasCode(code)){
                 return true;
             }
         }
         return false;
-    }
+     }
 }
