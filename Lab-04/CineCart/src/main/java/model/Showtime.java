@@ -1,18 +1,19 @@
 package model;
 
 public class Showtime {
-    private int id;
-    private Movie movie;
-    private Hall hall;
-    private int startHour;
-    private String dateTag;
+    private final int id;
+    private final Movie movie;
+    private final Hall hall;
+    private final int startHour;
+    private final String dateTag;
 
     public Showtime(int id, Movie movie, Hall hall, int startHour, String dateTag) {
         this.id = id;
         this.movie = movie;
         this.hall = hall;
-        if (startHour>=0 && startHour<=23)
-            this.startHour = startHour;
+        if (startHour<0 || startHour>23)
+            throw new IllegalArgumentException("Invalid startHour");
+        this.startHour = startHour;
         this.dateTag = dateTag;
     }
 
@@ -41,9 +42,11 @@ public class Showtime {
         return false;
     }
 
-
     public String toString() {
-        String string = String.format("[T%d] %s @ Hall %d - %d.00 (%s)",id,getMovie().getId(),getHall().getId(),startHour,dateTag);
-        return super.toString();
+        String string = String.format("[T%d] %s @ Hall %d - %d:00 (%s)", id,
+                getMovie().getTitle(), getHall().getId(), startHour, dateTag);
+
+        return string;
     }
+
 }
