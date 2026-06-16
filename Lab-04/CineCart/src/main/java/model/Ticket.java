@@ -1,6 +1,8 @@
 package model;
 
-public class Ticket {
+import java.io.LineNumberInputStream;
+
+public abstract class Ticket extends LineItem {
     private Showtime showtime;
     private int row;
     private int col;
