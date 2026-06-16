@@ -1,7 +1,5 @@
 package model;
 
-import java.util.Objects;
-
 public class ConcessionLine extends LineItem{
     private ConcessionItem item;
     private final int qty;
