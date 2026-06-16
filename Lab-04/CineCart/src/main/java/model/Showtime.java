@@ -50,6 +50,8 @@ public class Showtime {
         {
             return true;
         }
+
+        else return false;
     }
 
     public String toString() {
