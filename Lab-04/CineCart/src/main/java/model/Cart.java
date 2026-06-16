@@ -116,4 +116,7 @@ public class Cart {
     public LineItem[] getLines() {
         return null;
     }
+
+    public void add(LineItem a) {
+    }
 }
