@@ -42,11 +42,52 @@ public class Cart {
         return add(item,1);
     }
     public LineItem[] getLines(){
-        LineItem[] copy=new LineItem[count]
+        LineItem[] copy=new LineItem[count];
+        for(int i=0;i<count;i++){
+            copy[i]=lines[i];
+            return copy;
+        }
     }
-//    public Customer getOwner() {
-//        return owner;
-//    }
+    public int getCount(){
+        return count;
+    }
+    public double grandSubtotal(){
+        double total=0.0;
+        for(int i=0;i<count;i++){
+            total+=lines[i].subtotal();
+        }
+        return total;
+    }
+    public ticketCount(){
+        int n=0;
+        for(int i=0;i<count ;i++){
+            if(lines[i] instanceof AbstractTicket){
+                n++;
+            }
+            return n;
+        }
+    }
+    public boolean hasCode(String code) {
+        for (int i = 0; i < count; i++) {
+            LineItem line = lines[i];
+            if (line instanceof ConcessionLine) {
+                if (((ConcessionLine) line).getItem().getCode().equals(code)) {
+                    return true;
+                } else if (line instanceof ComboLine) {
+                    if (((ComboLine) line).containsCode(code)) {
+                        return true;
+                    }
+
+                }
+            }
+        }
+        return false;
+    }
+
+
+    public Customer getOwner() {
+       return owner;
+    }
 //
 //    public Ticket[] getTickets() {
 //        return tickets;
