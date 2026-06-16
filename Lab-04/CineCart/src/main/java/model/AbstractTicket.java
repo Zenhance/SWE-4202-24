@@ -22,6 +22,6 @@ public abstract class AbstractTicket extends LineItem{
     }
     @Override
     public String describe(){
-        return "T"+showtime.getId()+" - R"+row+col
+        return "T"+showtime.getId()+" - R"+row+"C"+col;
     }
 }
