@@ -6,7 +6,7 @@ public class Cart {
 
     private final Customer owner;
     private LineItem[] lineItems;
-//    private int ticketCount;
+    private int ticketCount;
 //    private final ConcessionItem[] items;
 //    private final int[] qtys;
     private int lineCount;
@@ -41,6 +41,21 @@ public class Cart {
         if (lineCount >= MAX_ITEMS) return;;
         if (a == null) return;
         lineItems[lineCount++] = a;
+    }
+
+    public void add(ConcessionItem c) {
+        ConcessionLine c1 = new ConcessionLine(c, 1);
+        if (lineCount >= MAX_ITEMS) return;;
+        if (c == null) return;
+        lineItems[lineCount++] = c1;
+    }
+
+    public void add(ConcessionItem c, int qty) {
+        ConcessionLine c1 = new ConcessionLine(c, qty);
+        if (lineCount >= MAX_ITEMS) return;
+        if(qty<0) return;
+        if (c == null) return;
+        lineItems[lineCount++] = c1;
     }
 
     public Customer getOwner() {
@@ -79,6 +94,9 @@ public class Cart {
         return lines;
     }
 
+    public double grandSubtotal() {
+        return 0.0;
+    }
 //    public double sumTicketsPaid() {
 //        double sum = 0;
 //
