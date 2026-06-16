@@ -1,5 +1,7 @@
 package model;
 
+import javax.sound.sampled.Line;
+
 public class Cart {
     //constants
     //public static final int MAX_TICKETS=20;
@@ -23,6 +25,12 @@ public void add(LineItem line){
     public void add(ConcessionItem item){
         add(new ConcessionLine(item,1));
     }
-
+    public LineItem[] getLines(){}
+    LineItem[] copy = new LineItem[count];
+    for(int i=0;i<count;i++){
+        copy[i]=lines[i];
+    }
+    return copy;
 }
+
 
