@@ -113,7 +113,7 @@ public class Cart {
     public void add(PremiumTicket premiumTicket) {
     }
 
-    public Object getLines() {
+    public LineItem[] getLines() {
         return null;
     }
 }
