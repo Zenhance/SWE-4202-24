@@ -1,4 +1,4 @@
 package model;
 
-public class AbstractTicket  {
+public abstract class AbstractTicket extends LineItem {
 }
