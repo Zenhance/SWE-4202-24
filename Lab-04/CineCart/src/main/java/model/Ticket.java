@@ -5,10 +5,8 @@ public class Ticket {
     private final int row;
     private final int col;
     private final double pricePaid;
-    private final int id;
 
     public Ticket(Showtime showtime, int row, int col, double pricePaid){
-        this.id = id;
         this.showtime = showtime;
         this.row = row;
         this.col = col;
@@ -24,7 +22,6 @@ public class Ticket {
     public int getCol(){
         return this.col;
     }
-    public int getId(){return this.id;}
     public double getPricePaid(){
         return this.pricePaid;
     }
