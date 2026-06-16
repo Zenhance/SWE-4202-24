@@ -69,7 +69,7 @@ public class Cart {
     public double sumTicketsPaid() {
         double sum = 0;
         for (int i = 0; i < MAX_TICKETS; i++) {
-            sum += tickets[i].getPricePaid();
+            sum += tickets[i].getBase();
         }
         return sum;
     }

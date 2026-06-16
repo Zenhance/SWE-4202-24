@@ -1,17 +1,15 @@
 package model;
 
 public class StandardTicket extends Ticket {
-    private double basePrice;
 
 
-    public StandardTicket(Showtime showtime, int row, int col, double pricePaid) {
-        super(showtime, row, col, pricePaid);
+
+    public StandardTicket(Showtime showtime, int row, int col) {
+        super(showtime, row, col);
     }
 
     public double subtotal() {
-
-
-
+        return getBase() * isPeak();
     }
 
 
