@@ -96,4 +96,7 @@ public class Cart {
 
     public void add(VIPTicket vipTicket) {
     }
+
+    public void add(ConcessionLine concessionLine) {
+    }
 }
