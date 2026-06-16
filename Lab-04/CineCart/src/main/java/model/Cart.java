@@ -1,9 +1,9 @@
 package model;
 
 public class Cart {
-    public static final int MAX_TICKETS=20;
-    public static final int MAX_ITEMS=20;
 
+    public static final int MAX_TICKETS = 20;
+    public static final int MAX_ITEMS = 20;
 
     private Customer owner;
     private Ticket[] tickets;
@@ -14,89 +14,85 @@ public class Cart {
 
     public Cart(Customer owner){
         this.owner = owner;
-        this.tickets = new Ticket[MAX_TICKETS];
-        this.items = new ConcessionItem[MAX_ITEMS];
-        this.qtys = new int[MAX_ITEMS];
-        this.ticketCount = 0;
-        this.itemCount = 0;
+        tickets = new Ticket[MAX_TICKETS];
+        items = new ConcessionItem[MAX_ITEMS];
+        qtys = new int[MAX_ITEMS];
     }
-    public boolean addTicket(Ticket t) {
-        if (ticketCount >= 20) {
-            return false;
 
+    public boolean addTicket(Ticket t){
+        boolean res = false;
+        if (ticketCount < MAX_TICKETS){
+            tickets[ticketCount] = t;
+            ticketCount++;
+            res = true;
         }
-        tickets[ticketCount] = t;
-        ticketCount++;
-
-        return false;
+        return res;
     }
 
     public boolean addItem(ConcessionItem c, int qty){
-        if(itemCount>=20){
-            return false;
-        }
-        if(qty<=20){
-            return false;
-        }
-        items[itemCount]=c;
-        qtys[itemCount]=qty;
-        itemCount++;
 
-        return false;
+        boolean res = false;
+        if(itemCount < MAX_ITEMS){
+            items[itemCount] = c;
+            qtys[itemCount] = qty;
+            itemCount++;
+            res = true;
+        }
+        return res;
     }
 
-
-
-    public Customer getOwner()
-    { return owner;
+    public int getTicketCount() {
+        return ticketCount;
     }
-    public Ticket[] getTickets()        {
-        return tickets; }
-    public int getTicketCount()         {
-        return ticketCount; }
-    public ConcessionItem[] getItems()  {
-        return items; }
-    public int[] getQtys()              {
-        return qtys; }
-    public int getItemCount()           {
-        return itemCount; }
 
+    public Ticket[] getTickets() {
+        return tickets;
+    }
+
+    public Customer getOwner() {
+        return owner;
+    }
+
+    public ConcessionItem[] getItems() {
+        return items;
+    }
+
+    public int getItemCount() {
+        return itemCount;
+    }
+
+    public int[] getQtys() {
+        return qtys;
+    }
 
     public double sumTicketsPaid(){
-        double total=0;
-        for(int i=0;i<itemCount;i++){
-            total+=tickets[i].getPricePaid();
-
+        double sum = 0.0;
+        for (int i = 0; i < ticketCount; i++){
+            sum += tickets[i].getPricePaid();
         }
-        return total;
+
+        return sum;
     }
 
     public double sumConcessionsRaw(){
-        double total=0;
-        for(int i=0;i<itemCount;i++){
-            total+=items[i].getUnitPrice()*qtys[i];
-
+        double sum = 0.0;
+        for (int i = 0; i < itemCount; i++){
+            sum += items[i].getUnitPrice() * qtys[i];
         }
-        return total;
+
+        return sum;
     }
 
     public boolean hasItem(String code){
-        for(int i=0;i<itemCount;i++){
-            if (items[i].getCode().equals(code)) return true;
-        }
-        return false;
+
+        boolean found = false;
+        for (int i = 0; i < itemCount; i++){
+            if(code.equals(items[i].getCode())){
+                found = true;
+                break;
+            }
         }
 
+        return found;
     }
-
-
-
-
-
-
-
-
-
-
-
-
+}
