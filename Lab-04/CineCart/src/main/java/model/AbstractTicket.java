@@ -1,16 +1,16 @@
 package model;
 
-public abstract class AbstractTicket {
+public abstract class AbstractTicket extends LineItem {
     private final Showtime showtime;
     private final int row;
     private final int col;
-    private final double pricePaid;
+    private double pricePaid;
 
     public AbstractTicket(Showtime showtime, int row, int col, double pricePaid) {
+        super(pricePaid);
         this.showtime = showtime;
         this.row = row;
         this.col = col;
-        this.pricePaid = pricePaid;
     }
 
     public Showtime getShowtime() {
