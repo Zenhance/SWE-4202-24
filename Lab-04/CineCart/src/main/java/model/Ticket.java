@@ -38,13 +38,13 @@ public class StandardTicket extends Ticket{
 }
 public class PremiumTicket extends Ticket{
         double price = showtime.getMovie().getBasePrice();
-        double charge;
+        double charge = price * 1.30;
         if(showtime.isPeak())
-            charge = price * 1.30 * 1.20;
+            charge = charge * 1.20;
         else
-            charge = price * 1.30;
+            charge = charge;
 }
-public class StudentTicket extend Ticket{
+public class StudentTicket extends Ticket{
         double price = showtime.getMovie().getBasePrice();
         double charge;
         if(showtime.isPeak())
@@ -52,12 +52,10 @@ public class StudentTicket extend Ticket{
         else
             charge = price * 0.50;
 }
-public class VIPTicket extends Ticket{
-        double price = showtime.getMovie().getBasePrice();
-        double charge;
+public class VIPTicket extends PremiumTicket{
         if(showtime.isPeak())
-            charge = price * 1.30 * 1.20 + 200.0;
+            charge = charge * 1.20 + 200.00;
         else
-            charge = price * 1.30 + 200.0;
+            charge = charge + 200.00;
     }
 }
