@@ -12,4 +12,29 @@ public class LineItem {
         this.quantity = quantity;
         this.ticket = ticket;
     }
+    public int getId() {
+        return id;
+    }
+    public int getPrice() {
+        return price;
+    }
+    public int getQuantity() {
+        return quantity;
+    }
+    public StandardTicket getTicket() {
+        return ticket;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    public void setPrice(int price) {
+        this.price = price;
+    }
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+    public void setTicket(StandardTicket ticket) {
+        this.ticket = ticket;
+    }
+
 }
