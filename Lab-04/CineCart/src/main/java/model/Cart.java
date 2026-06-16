@@ -43,6 +43,7 @@ public class Cart {
         for (int i = 0; i < count; i++) {
             total = total + lines[i].subtotal();
         }
+        return total;
     }
 }
 
