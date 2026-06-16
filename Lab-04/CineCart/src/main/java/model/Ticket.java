@@ -17,4 +17,8 @@ public abstract class Ticket extends LineItem {
     protected double peakMultiplier(){
     return showtime.isPeak() ? 1.20 : 1.00;
     }
+    @Override
+    public boolean isTicket(){
+        return true;
+    }
 }
