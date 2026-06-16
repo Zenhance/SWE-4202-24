@@ -1,7 +1,5 @@
 package model;
 
-import javax.sound.sampled.Line;
-
 public class Cart {
     //constants
     //public static final int MAX_TICKETS=20;
@@ -9,6 +7,7 @@ public class Cart {
     //fields
     private Customer owner;
     private LineItem[] lines;
+    private int count;
 
     public Cart(Customer owner) {
         this.owner = owner;
@@ -45,18 +44,20 @@ public class Cart {
         }
         return total;
     }
-    public int ticketCount(){
-        int tickets=0;
-        for(int i=0;i<count;i++){
-            if(lines[i].hasCode(code)){
+
+    public int ticketCount() {
+        int tickets = 0;
+        for (int i = 0; i < count; i++) {
+            if (lines[i].hasCode(code)) {
                 return true;
             }
         }
         return false;
     }
 
-
-
+    public Customer getOwner() {
+        return owner;
+    }
 }
 
 
