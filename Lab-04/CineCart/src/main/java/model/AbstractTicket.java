@@ -1,6 +1,8 @@
 package model;
 
-public abstract class AbstractTicket {
+import javax.sound.sampled.Line;
+
+public abstract class AbstractTicket extends LineItem{
     private Showtime showtime;
     private int row;
     private int col;
