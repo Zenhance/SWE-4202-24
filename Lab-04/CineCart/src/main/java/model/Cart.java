@@ -4,7 +4,7 @@ public class Cart {
     public static final int MAX_TICKETS=20,MAX_ITEMS=20;
     private final Customer owner;
     private final Ticket[] tickets;
-    private int ticketCount;
+    public int ticketCount;
     private final ConcessionItem[] items;
     private final int[] qtys;
     private int itemCount;
@@ -95,5 +95,47 @@ public class Cart {
             return true;
         }
         return false;
+    }
+
+    public void add(PremiumTicket premiumTicket) {
+
+    }
+
+    public void add(ConcessionItem pop, int i) {
+
+    }
+
+    public boolean hasCode(String soda) {
+
+        return false;
+    }
+
+    public void add(ComboLine comboLine) {
+
+    }
+
+    public void add(ConcessionLine concessionLine) {
+
+    }
+
+    public void add(StudentTicket studentTicket) {
+    }
+
+    public void add(StandardTicket standardTicket) {
+
+    }
+
+    public double grandSubtotal() {
+        return 0;
+    }
+
+    public LineItem[] getLines() {
+
+        return null;
+    }
+
+    public int ticketCount() {
+
+        return 0;
     }
 }
