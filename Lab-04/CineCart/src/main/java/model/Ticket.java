@@ -8,6 +8,7 @@ public abstract class Ticket {
     int row;
     int col;
     double pricePaid;
+    double peak = 1.20;
 
     //constructor
     public Ticket(Showtime showtime, int row, int col, double pricePaid) {
