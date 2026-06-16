@@ -6,6 +6,7 @@ public class Showtime {
     private Hall hall;
     private int startHour;
     private String dateTag;
+    private double basePrice;
     public Showtime(int id,Movie movie,Hall hall,int startHour,String dateTag){
         this.id=id;
         this.movie=movie;
@@ -20,6 +21,9 @@ public class Showtime {
         return movie;
     }
 
+    public double getBasePrice(){
+        return basePrice();
+    }
     public Hall getHall() {
         return hall;
     }
