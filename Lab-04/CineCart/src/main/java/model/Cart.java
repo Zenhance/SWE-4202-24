@@ -102,4 +102,7 @@ public class Cart {
 
     public void add(ComboLine comboLine) {
     }
+
+    public void add(StudentTicket studentTicket) {
+    }
 }
