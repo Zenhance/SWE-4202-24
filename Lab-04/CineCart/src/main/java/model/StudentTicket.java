@@ -14,6 +14,7 @@ public class StudentTicket extends AbstractTicket{
 
     @Override
     public String describe() {
-        return "";
+        String string = String.format("subtotal : %f BDT", subtotal());
+        return string;
     }
 }

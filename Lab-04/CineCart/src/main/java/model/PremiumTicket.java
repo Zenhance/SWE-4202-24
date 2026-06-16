@@ -14,6 +14,8 @@ public class PremiumTicket extends AbstractTicket {
 
     @Override
     public String describe() {
-        return "";
+        String string = String.format("Premium\n" +
+                "subtotal : %f BDT", subtotal());
+        return string;
     }
 }
