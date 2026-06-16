@@ -12,5 +12,32 @@ public abstract class AbstractTicket extends LineItem {
         this.col = col;
 
 
+
+        double peakMultiplier = 1.00;
+
+
+        if ("Fri".equalsIgnoreCase(showtime.getDay())) {
+
+            peakMultiplier = 1.20;
+
+        } else {
+
+            peakMultiplier = 1.00;
+        }
+
+
+        double moviePrice = showtime.getMovie().getBasePrice();
+
+
+        this.base = moviePrice * peakMultiplier;
+    }
+
+    public Showtime getShowtime() {
+        return showtime;
+    }
+
+
+    public boolean isTicket() {
+        return true;
     }
 }
