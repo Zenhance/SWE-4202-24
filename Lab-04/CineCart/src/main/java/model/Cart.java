@@ -117,4 +117,13 @@ public class Cart {
 
     public void add(ComboLine comboLine) {
     }
+
+    public void add(LineItem b) {
+    }
+
+    public void add(ConcessionItem pop, int i) {
+    }
+
+    public void add(ConcessionItem pop) {
+    }
 }
