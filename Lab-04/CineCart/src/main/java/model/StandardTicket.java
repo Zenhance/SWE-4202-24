@@ -6,7 +6,7 @@ public class StandardTicket extends Ticket{
     }
 
     public double subtotal(){
-        return basePrice = peakMultiplier();
+        return basePrice = peak();
     }
 
     public String describe(){

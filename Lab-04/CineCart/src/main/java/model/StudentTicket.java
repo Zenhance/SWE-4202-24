@@ -6,7 +6,7 @@ public class StudentTicket extends Ticket{
     }
 
     public double subtotal(){
-        return basePrice * 0.50 * peakMultiplier();
+        return basePrice * 0.50 * peak();
     }
 
     public String describe(){

@@ -13,7 +13,7 @@ public abstract class Ticket extends LineItem{
         this.basePrice=showtime.getMovie().getBasePrice();
     }
 
-    protected double peakMultiplier(){
+    protected double peak(){
         if(showtime.isPeak()){
             return 1.20;
         }
