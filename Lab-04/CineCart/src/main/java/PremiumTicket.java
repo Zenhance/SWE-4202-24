@@ -1,6 +1,7 @@
 import model.Showtime;
+import model.Ticket;
 
-public class PremiumTicket {
+public class PremiumTicket extends AbstractTicket {
     public PremiumTicket(Showtime showtime, int i, int i1) {
     }
 

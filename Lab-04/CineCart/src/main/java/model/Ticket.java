@@ -11,6 +11,8 @@ public class Ticket {
         this.pricePaid=pricePaid;
     }
 
+
+
     public int getCol() {
         return col;
     }

@@ -1,4 +1,7 @@
-public class LineItem {
+public abstract class LineItem {
+
     public double subtotal() {
+
+
     }
 }

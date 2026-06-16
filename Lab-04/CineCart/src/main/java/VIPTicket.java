@@ -1,4 +1,6 @@
-public class VIPTicket {
+
+public class VIPTicket extends AbstractTicket {
+
     public double subtotal() {
     }
 }

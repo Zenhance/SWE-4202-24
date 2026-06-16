@@ -41,7 +41,9 @@ public class Cart {
     public int[] getQtys() {
         return qtys;
     }
-    public void addTicket(Ticket t){
+
+
+    /*public void addTicket(Ticket t){
         if(ticketCount<MAX_TICKETS){
             tickets[ticketCount] = t;
             ticketCount++;
@@ -76,10 +78,11 @@ public class Cart {
             }
         }
         return false;
-    }
+    }*/
 
 
     public double grandSubtotal() {
+
     }
 
     public void add(ConcessionItem pop, int i) {
@@ -89,8 +92,11 @@ public class Cart {
     }
 
     public void add(LineItem a) {
+
+
     }
 
-    public  getLines() {
+    public LineItem getLines() {
+
     }
 }
