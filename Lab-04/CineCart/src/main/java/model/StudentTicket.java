@@ -7,7 +7,7 @@ public class StudentTicket extends Ticket{
         super(showtime,row,col);
     }
     @Override
-    public double subtotal(){
-        return super.subtotal() + 200.0;
+    public double subtotal() {
+        return basePrice * 0.50 * peakMultiplier();
     }
 }
