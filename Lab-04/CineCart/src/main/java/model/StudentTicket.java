@@ -1,6 +1,6 @@
 package model;
 
-public class StudentTicket extends Ticket{
+public class StudentTicket extends AbstractTicket {
     public StudentTicket(Showtime showtime,int row, int col){
         super(showtime,row,col);
     }

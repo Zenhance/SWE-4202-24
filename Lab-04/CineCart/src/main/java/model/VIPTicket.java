@@ -6,7 +6,7 @@ public class VIPTicket extends PremiumTicket{
     }
     @Override
     public double subtotal(){
-        return super.subtotal();
+        return super.subtotal()+200.0;
     }
     @Override
     public String describe(){
