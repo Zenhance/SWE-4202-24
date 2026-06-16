@@ -14,6 +14,14 @@ public class Customer {
         this.id = id;
         this.name = name;
         this.age = age;
+        loyaltyTier = "BASIC";
+    }
+
+    public Customer(int id, String name, int age, String tier) {
+        this.id = id;
+        this.age = age;
+        this.name = name;
+        this.tier = tier;
 
     }
 
