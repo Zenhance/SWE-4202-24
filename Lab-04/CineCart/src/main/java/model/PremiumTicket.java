@@ -7,7 +7,7 @@ public class PremiumTicket extends AbstractTicket{
     }
 
     public double subtotal() {
-        return getBase() * 1.30 *isPeak();
+        return getBase() * 1.30 * isPeak();
     }
 
 
