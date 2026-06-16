@@ -9,5 +9,16 @@ public class StudentTicket extends AbstractTicket {
         this.id = 0;
         this.studentId = 0;
     }
+    public StudentTicket(int id, int studentId) {
+        this.id = id;
+        this.studentId = studentId;
+    }
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    public int getStudentId() {}
 
 }
