@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="premiumticket methods">
-      <change beforePath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/model/StandardTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/model/StandardTicket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/model/StudentTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/model/StudentTicket.java" afterDir="false" />
+    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="vipticket">
+      <change beforePath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/model/VIPTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/model/VIPTicket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab-04/CineCart/src/test/java/CineCartEncapsulationTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab-04/CineCart/src/test/java/CineCartTest.java" beforeDir="false" />
     </list>
@@ -186,30 +185,6 @@
       <workItem from="1778092688155" duration="94000" />
       <workItem from="1778092809585" duration="6679000" />
       <workItem from="1778163384097" duration="3333000" />
-    </task>
-    <task id="LOCAL-00050" summary="customer class constructor">
-      <option name="closed" value="true" />
-      <created>1779168218401</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1779168218402</updated>
-    </task>
-    <task id="LOCAL-00051" summary="customer class">
-      <option name="closed" value="true" />
-      <created>1779168438243</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1779168438243</updated>
-    </task>
-    <task id="LOCAL-00052" summary="customer class">
-      <option name="closed" value="true" />
-      <created>1779168698146</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1779168698146</updated>
     </task>
     <task id="LOCAL-00053" summary="customer class">
       <option name="closed" value="true" />
@@ -579,7 +554,31 @@
       <option name="project" value="LOCAL" />
       <updated>1781590074099</updated>
     </task>
-    <option name="localTasksCounter" value="99" />
+    <task id="LOCAL-00099" summary="standard and student ticket skeleton">
+      <option name="closed" value="true" />
+      <created>1781590207755</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1781590207755</updated>
+    </task>
+    <task id="LOCAL-00100" summary="vipticket">
+      <option name="closed" value="true" />
+      <created>1781590376316</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1781590376316</updated>
+    </task>
+    <task id="LOCAL-00101" summary="vipticket">
+      <option name="closed" value="true" />
+      <created>1781590567006</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1781590567006</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -619,8 +618,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ticket class 2" />
-    <MESSAGE value="writing the skeleton of checkout engine to prevent compilation error" />
     <MESSAGE value="writing the skeleton of checkout engine to prevent compilation error 2" />
     <MESSAGE value="constructor" />
     <MESSAGE value="signature" />
@@ -644,6 +641,8 @@
     <MESSAGE value="comboline.java" />
     <MESSAGE value="premiumticket" />
     <MESSAGE value="premiumticket methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="premiumticket methods" />
+    <MESSAGE value="standard and student ticket skeleton" />
+    <MESSAGE value="vipticket" />
+    <option name="LAST_COMMIT_MESSAGE" value="vipticket" />
   </component>
 </project>

@@ -1,4 +1,11 @@
 package model;
 
-public class ConcessionLine {
+public class ConcessionLine extends LineItem{
+
+
+
+    @Override
+    public double Subtotal() {
+        return 0;
+    }
 }
