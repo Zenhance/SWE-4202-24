@@ -5,12 +5,15 @@ public abstract class AbstractTicket extends LineItem {
     private int row;
     private int col;
     private double pricePaid;
+    private double price;
+
 
     public AbstractTicket(Showtime showtime, int row, int col, double pricePaid) {
         this.showtime = showtime;
         this.row = row;
         this.col = col;
         this.pricePaid = pricePaid;
+        this.price = pricePaid;
     }
 
     public Showtime getShowtime() {
@@ -28,6 +31,7 @@ public abstract class AbstractTicket extends LineItem {
     public double getPricePaid() {
         return pricePaid;
     }
+
 
 
     public String toString() {
