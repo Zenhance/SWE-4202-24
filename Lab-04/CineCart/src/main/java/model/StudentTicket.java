@@ -10,4 +10,8 @@ public class StudentTicket extends Ticket{
     public double subtotal() {
         return basePrice * 0.50 * peakMultiplier();
     }
+    @Override
+    public String describe(){
+        return "Student "+ super.describe();
+    }
 }
