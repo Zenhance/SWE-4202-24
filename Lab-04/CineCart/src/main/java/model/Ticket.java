@@ -8,11 +8,11 @@ public abstract class Ticket extends LineItem {
     protected int col;
     protected double basePrice;
     //constructor
-    public Ticket(Showtime showtime, int row, int col, double pricePaid){
+    public Ticket(Showtime showtime, int row, int col){
         this.showtime=showtime;
         this.row=row;
         this.col=col;
-        this.pricePaid=pricePaid;
+        this.basePrice=showtime.getBasePrice();
     }
     //getters
     public Showtime getShowtime() {
