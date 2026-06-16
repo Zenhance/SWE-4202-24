@@ -15,5 +15,10 @@ public class Cart {
 public void add(LineItem line){
     lines[count++]=line;
     }
+    //overloading
+    public void add(ConcessionItem item,int qty){
+        add(new ConcessionLine(item,qty));
+    }
+
 }
-    //methods
+
