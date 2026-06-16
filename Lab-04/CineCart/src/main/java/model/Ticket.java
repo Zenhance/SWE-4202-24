@@ -1,17 +1,17 @@
 package model;
 
 
-    public class Ticket {
+    public abstract class Ticket {
         private Showtime showtime;
         private int rows;
         private int cols;
-        private double pricePaid;
+        private double base;
 
-        public Ticket(Showtime showtime, int rows, int cols, double pricePaid) {
+        public Ticket(Showtime showtime, int rows, int cols) {
             this.showtime = showtime;
             this.rows = rows;
             this.cols = cols;
-            this.pricePaid = pricePaid;
+            this.base=showtime.getMovie().getBasePrice();
         }
 
 
@@ -23,9 +23,9 @@ package model;
             return cols;
         }
 
-        public double getPricePaid() {
+        /*public double getPricePaid() {
             return pricePaid;
-        }
+        }*/
 
         public Showtime getShowtime() {
             return showtime;
