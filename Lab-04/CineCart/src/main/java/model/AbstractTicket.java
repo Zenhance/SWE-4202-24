@@ -29,6 +29,10 @@ public abstract class AbstractTicket {
         return pricePaid;
     }
 
+    public abstract double subtotal();
+
+    public abstract String describe();
+
     public String toString(){
         String string = String.format("T%d - R%dC%d @ BDT %d.00",showtime.getId(),row,col,pricePaid);
         return string;
