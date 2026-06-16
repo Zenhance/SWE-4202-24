@@ -14,7 +14,7 @@ public class VIPTicket extends PremiumTicket{
     public String describe() {
         String string = String.format("VIP\n" +
                 "Premium\n" +
-                "subtotal : %f BDT", subtotal());
+                "subtotal + lounge : %f BDT", subtotal());
 
         return string;
     }
