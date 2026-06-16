@@ -99,4 +99,7 @@ public class Cart {
 
     public void add(ConcessionLine concessionLine) {
     }
+
+    public void add(ComboLine comboLine) {
+    }
 }
