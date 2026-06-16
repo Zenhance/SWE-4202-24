@@ -6,5 +6,17 @@ public class VIPTicket extends PremiumTicket{
     }
 
 
-}
+    @Override
+    public double Subtotal() {
+        return 0;
+    }
+
+    public String describe(){
+
+
+        return "";
+    }
+
+
+
 }
