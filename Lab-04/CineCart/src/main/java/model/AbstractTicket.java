@@ -13,4 +13,16 @@ public abstract class AbstractTicket extends LineItem {
         this.base = showtime.getMovie().getBasePrice();
     }
 
+    public Showtime getShowtime() {
+        return showtime;
+    }
+
+    public int getRow() {
+        return row;
+    }
+
+    public int getCol() {
+        return col;
+    }
+
 }
