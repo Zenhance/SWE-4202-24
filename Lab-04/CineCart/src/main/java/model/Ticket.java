@@ -29,6 +29,10 @@ public abstract class Ticket extends lineItem {
         {
             base=base*1.20;
         }
+        else
+        {
+            base=base*1.00;
+        }
         return base;
     }
 }
