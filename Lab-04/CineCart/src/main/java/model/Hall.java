@@ -44,5 +44,18 @@ public class Hall {
         return count;
     }
 
+    public void displayLayout() {
+        System.out.println("Hall " + id + " Layout (" + rows + "x" + cols + "):");
+        for (int r = 0; r < rows; r++) {
+            for (int c = 0; c < cols; c++) {
+                Seat s = grid[r][c];
+                if (!s.isAvailable()) System.out.print("# ");
+                else if (s.isPremium()) System.out.print("* ");
+                else System.out.print(". ");
+            }
+            System.out.println();
+        }
+    }
+
 
 }

@@ -1,5 +1,6 @@
 package data;
 
+import model.ConcessionItem;
 import model.Showtime;
 
 public class ShowtimeBoard {
