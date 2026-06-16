@@ -1,7 +1,7 @@
 public class Recipient {
-    private String name;
-    private String address;
-    public Recipient(String name,String address){
+      String name;
+      String address;
+    public Recipient(String name, String address) {
         this.name=name;
         this.address=address;
     }
@@ -10,7 +10,7 @@ public class Recipient {
         return name;
     }
 
-    public String getAddress() {
+    public CharSequence getAddress() {
         return address;
     }
 }
