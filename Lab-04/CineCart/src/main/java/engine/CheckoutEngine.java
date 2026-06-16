@@ -14,6 +14,8 @@ public class CheckoutEngine {
             groupDiscount = 0.10 * preDiscount;
         }
         double tierDiscount=cart.getOwner().getTierDiscount()*preDiscount;
+        double afterDiscounts= preDiscount - groupDiscount-tierDiscount;
+
 
 
 
