@@ -26,16 +26,18 @@ public class Seat {
         return isBooked;
     }
 
-    public void book() {
+    public boolean book() {
         isBooked = true;
+        return false;
     }
 
-    public void release() {
+    public boolean release() {
         isBooked = false;
+        return true;
     }
 
     public boolean isAvailable() {
-        return isBooked;
+        return !isBooked;
     }
 
     public String toString() {
