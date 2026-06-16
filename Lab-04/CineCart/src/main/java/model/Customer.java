@@ -25,5 +25,10 @@ public class Customer {
 
     }
 
+    //methods
+    public double getTierDiscount() {
+        return 0;
+    }
+
 
 }
