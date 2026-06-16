@@ -1,13 +1,13 @@
 package model;
 
 public class PremiumTicket extends Ticket{
-    protected static final double PREMIUM_TICKET=1.30;
+
    public PremiumTicket(Showtime showtime,int row,int col){
        super(showtime,row,col);
    }
    @Override
     public double subtotal(){
-       return base*PREMIUM_TICKET*peakMultiplier();
+       return base*1.30*peakMultiplier();
    }
    @Override
     public String describe(){
