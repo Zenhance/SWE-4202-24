@@ -6,5 +6,9 @@ public class PremiumTicket extends AbstractTicket{
         super(showtime, row, col);
     }
 
+    public double subtotal() {
+        return getBase() * 1.30 *isPeak();
+    }
+
 
 }
