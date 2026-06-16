@@ -12,4 +12,14 @@ public class ConcessionLine extends LineItem{
         return item.unitPrice *qty;
     }
 
+   public String describe(){
+        return qty + "x " + item.getName();
+    }
+
+    public boolean hasCode(String code)
+    {
+        return item.getCode().equals(code);
+    }
+
+
 }
