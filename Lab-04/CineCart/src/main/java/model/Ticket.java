@@ -1,10 +1,10 @@
 package model;
 
 public class Ticket {
-    Showtime showtime;
-    int row;
-    int col;
-    double pricePaid;
+    protected Showtime showtime;
+    protected int col;
+    protected int row;
+    protected int pricePaid;
 
     public Ticket(Showtime showtime, int row, int col, double pricePaid) {
         this.showtime = showtime;
@@ -12,7 +12,6 @@ public class Ticket {
         this.row = row;
         this.pricePaid = pricePaid;
     }
-
     public int getRow() {
         return row;
     }
@@ -27,4 +26,17 @@ public class Ticket {
 
     public String toString() {
         return String.format("T%d - R%dC%d @ BDT %.2f", showtime.getId(), row, col, pricePaid);
+}
+
+public class StandardTicket extends Ticket{
+
+}
+public class PremiumTicket extends Ticket{
+
+}
+public class StudentTicket extend Ticket{
+
+}
+public class VIPTicket extends Ticket{
+    }
 }
