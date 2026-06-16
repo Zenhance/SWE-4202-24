@@ -10,6 +10,7 @@ public class Cart {
     private int[] qtys;
     private int itemCount;
 
+
     public Cart(Customer owner) {
         this.owner = owner;
         tickets = new Ticket[MAX_TICKETS];
@@ -19,9 +20,9 @@ public class Cart {
         this.itemCount = 0;
     }
 
-    public boolean addTicket(Ticket t){
+    public boolean addTicket(Ticket t) {
         boolean res = false;
-        if(ticketCount < MAX_TICKETS) {
+        if (ticketCount < MAX_TICKETS) {
             tickets[ticketCount] = t;
             ticketCount++;
             res = true;
@@ -31,7 +32,7 @@ public class Cart {
 
     public boolean addItem(ConcessionItem c, int qty) {
         boolean res = false;
-        if(itemCount < MAX_ITEMS) {
+        if (itemCount < MAX_ITEMS) {
             items[itemCount] = c;
             qtys[itemCount] = qty;
             itemCount++;
@@ -40,17 +41,34 @@ public class Cart {
         return res;
     }
 
-    public Customer getOwner() {return owner;}
-    public Ticket[] getTickets() {return tickets;}
-    public int getTicketCount() {return ticketCount;}
-    public ConcessionItem[] getItems() {return items;}
-    public int[] getQtys() {return qtys;}
-    public int getItemCount() {return itemCount;}
+    public Customer getOwner() {
+        return owner;
+    }
+
+    public Ticket[] getTickets() {
+        return tickets;
+    }
+
+    public int getTicketCount() {
+        return ticketCount;
+    }
+
+    public ConcessionItem[] getItems() {
+        return items;
+    }
+
+    public int[] getQtys() {
+        return qtys;
+    }
+
+    public int getItemCount() {
+        return itemCount;
+    }
 
 
     public double sumTicketsPaid() {
         double sum = 0;
-        for(int i = 0; i < MAX_TICKETS; i++){
+        for (int i = 0; i < MAX_TICKETS; i++) {
             sum += tickets[i].getPricePaid();
         }
         return sum;
@@ -58,25 +76,21 @@ public class Cart {
 
     public double sumConcessionsRaw() {
         double sum = 0;
-        for(int i = 0; i < itemCount; i++){
-            sum += items[i].getUnitPrice()*qtys[i];
+        for (int i = 0; i < itemCount; i++) {
+            sum += items[i].getUnitPrice() * qtys[i];
         }
         return sum;
     }
 
     public boolean hasItem(String code) {
-        for(int i = 0; i < MAX_ITEMS; i++){
-            if(items[i].getCode().equals(code)){
+        for (int i = 0; i < MAX_ITEMS; i++) {
+            if (items[i].getCode().equals(code)) {
                 return true;
             }
 
         }
         return false;
     }
-
-
-
-
 
 
 
