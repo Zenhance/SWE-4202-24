@@ -93,4 +93,7 @@ public class Cart {
 
     public void add(ConcessionItem pop, int i) {
     }
+
+    public void add(VIPTicket vipTicket) {
+    }
 }
