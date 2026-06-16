@@ -5,5 +5,11 @@ public abstract class PremiumTicket extends AbstractTicket{
         super();
     }
 
+    public double subtotal(){
+        return 0.0;
+    }
 
+    public String describe() {
+        return null;
+    }
 }
