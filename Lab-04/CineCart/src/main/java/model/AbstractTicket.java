@@ -5,7 +5,7 @@ public abstract class AbstractTicket extends LineItem {
     protected int row;
     protected int col;
     protected double basePrice;
-public AbstractTicket(Showtime showtime,int cols,int rows){
+public AbstractTicket(Showtime showtime,int col,int row){
     this.showtime=showtime;
     this.col=col;
     this.row=row;
