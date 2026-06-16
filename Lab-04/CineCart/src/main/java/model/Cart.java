@@ -9,6 +9,7 @@ public class Cart {
     private int ticketCount;
 //    private final ConcessionItem[] items;
 //    private final int[] qtys;
+    private int itemCount;
     private int lineCount;
 
     public Cart(Customer owner) {
@@ -43,11 +44,17 @@ public class Cart {
         lineItems[lineCount++] = a;
     }
 
+    public void add(AbstractTicket a) {
+        if (lineCount >= MAX_ITEMS) return;;
+        if (a == null) return;
+        lineItems[ticketCount++] = a;
+    }
+
     public void add(ConcessionItem c) {
         ConcessionLine c1 = new ConcessionLine(c, 1);
         if (lineCount >= MAX_ITEMS) return;;
         if (c == null) return;
-        lineItems[lineCount++] = c1;
+        lineItems[itemCount++] = c1;
     }
 
     public void add(ConcessionItem c, int qty) {
@@ -55,7 +62,19 @@ public class Cart {
         if (lineCount >= MAX_ITEMS) return;
         if(qty<0) return;
         if (c == null) return;
-        lineItems[lineCount++] = c1;
+        lineItems[itemCount++] = c1;
+    }
+
+    public void add(ConcessionLine c) {
+        if (lineCount >= MAX_ITEMS) return;;
+        if (c == null) return;
+        lineItems[itemCount++] = c;
+    }
+
+    public void add(ComboLine c) {
+        if (lineCount >= MAX_ITEMS) return;;
+        if (c == null) return;
+        lineItems[itemCount++] = c;
     }
 
     public Customer getOwner() {
@@ -68,9 +87,9 @@ public class Cart {
 //        return tickets;
 //    }
 
-//    public int getTicketCount() {
-//        return ticketCount;
-//    }
+    public int ticketCount() {
+        return ticketCount;
+    }
 
 //    public ConcessionItem[] getItems() {
 //        ConcessionItem[] items = new ConcessionItem[itemCount];
@@ -84,9 +103,9 @@ public class Cart {
 //        return qtys;
 //    }
 
-//    public int getItemCount() {
-//        return itemCount;
-//    }
+    public int getItemCount() {
+        return itemCount;
+    }
 
     public LineItem[] getLines() {
         LineItem[] lines = new LineItem[lineCount];
@@ -116,6 +135,10 @@ public class Cart {
 //
 //        return sum;
 //    }
+
+    public boolean hasCode(String code) {
+        return true;
+    }
 
 //    public boolean hasItem(String code) {
 //        for (int i=0; i<itemCount; i++) {
