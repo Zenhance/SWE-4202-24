@@ -1,32 +1,30 @@
 package model;
 
-public class Ticket {
-    private Showtime showtime;
-    private int row;
-    private int col;
-    private double pricePaid;
+public abstract class Ticket extends LineItem{
+    protected final Showtime showtime;
+    protected final int row;
+    protected final int col;
+    protected final double basePrice;
 
-    public Ticket(Showtime showtime,int row,int col,double pricePaid){
+    public Ticket(Showtime showtime,int row,int col,double basePrice){
         this.showtime=showtime;
         this.row=row;
         this.col=col;
-        this.pricePaid=pricePaid;
+        this.basePrice=showtime.getMovie().getBasePrice();
     }
 
-    public Showtime getShowtime(){
-        return showtime;
-    }
-    public int getRow(){
-        return row;
-    }
-    public int getCol(){
-        return col;
-    }
-    public double getPricePaid(){
-        return pricePaid;
+    protected double peakMultiplier(){
+        if(showtime.isPeak()){
+            return 1.20;
+        }
+        return 1.00;
     }
 
-    public String toString(){
-        return "T" + showtime.getId() + " -R" + row + "C" + col + " @ BDT " + String.format("%.2f",pricePaid);
+    public boolean isTicket(){
+        return true;
+    }
+
+    public String describe(){
+        return "Ticket R" + row + "C" + col;
     }
 }
