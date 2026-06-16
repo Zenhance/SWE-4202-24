@@ -34,6 +34,9 @@ public class Cart {
     public boolean add(ConcessionItem item,int qty){
         if(qty<=0){
             return false;
+
+        }
+        else{
             return add(new ConcessionLine(item,qty));
         }
     }
@@ -45,8 +48,9 @@ public class Cart {
         LineItem[] copy=new LineItem[count];
         for(int i=0;i<count;i++){
             copy[i]=lines[i];
-            return copy;
+
         }
+        return copy;
     }
     public int getCount(){
         return count;
@@ -58,14 +62,15 @@ public class Cart {
         }
         return total;
     }
-    public ticketCount(){
+    public int ticketCount(){
         int n=0;
         for(int i=0;i<count ;i++){
             if(lines[i] instanceof AbstractTicket){
                 n++;
             }
-            return n;
+
         }
+        return n;
     }
     public boolean hasCode(String code) {
         for (int i = 0; i < count; i++) {
