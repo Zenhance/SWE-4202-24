@@ -4,7 +4,7 @@ public class Cart {
     public static final int MAX_TICKETS = 20;
     public static final int MAX_ITEMS = 20;
     private Customer owner;
-    private Ticket[] tickets;
+    private  AbstractTicket[] tickets;
     private int ticketCount;
     private ConcessionItem[] items;
     private int[] qtys;
@@ -12,7 +12,7 @@ public class Cart {
 
     public Cart(Customer owner){
         this.owner = owner;
-        tickets = new Ticket[MAX_TICKETS];
+        tickets = new AbstractTicket[][MAX_TICKETS];
         ticketCount = 0;
         items = new ConcessionItem[MAX_ITEMS];
         itemCount = 0;
