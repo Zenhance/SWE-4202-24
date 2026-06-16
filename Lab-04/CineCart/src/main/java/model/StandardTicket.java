@@ -10,4 +10,8 @@ public class StandardTicket extends Ticket{
     public double subtotal(){
         return basePrice*peakMultiplier();
     }
+    @Override
+    public String describe(){
+        return "Standard " + super.describe();
+    }
 }
