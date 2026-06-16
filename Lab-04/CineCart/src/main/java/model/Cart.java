@@ -99,4 +99,10 @@ public class Cart {
 
     public Object getLines() {
     }
+
+    public double grandSubtotal() {
+    }
+
+    public boolean hasCode(String pop) {
+    }
 }
