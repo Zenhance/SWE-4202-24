@@ -3,7 +3,7 @@ package model;
 public class PremiumTicket extends AbstractTicket{
 
 
-    protected PremiumTicket(Showtime showtime, int row, int col) {
+    public PremiumTicket(Showtime showtime, int row, int col) {
         super(showtime, row, col);
     }
 
