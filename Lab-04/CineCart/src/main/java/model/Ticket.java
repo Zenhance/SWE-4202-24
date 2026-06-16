@@ -1,9 +1,9 @@
 package model;
 
-public class Ticket {
+public abstract class Ticket extends LineItem{
 
-   private Showtime showtime;
-   private int row;
+   private final Showtime showtime;
+   private final int row;
    private int col;
    private double pricePaid;
 
