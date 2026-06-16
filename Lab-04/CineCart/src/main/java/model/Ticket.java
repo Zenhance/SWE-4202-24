@@ -1,18 +1,18 @@
 package model;
 
-public class Ticket
+public abstract class Ticket extends LineItem
 {
-    private Showtime showtime;
-    private int row;
-    private int col;
-    private double pricePaid;
+    protected Showtime showtime;
+    protected int row;
+    protected int col;
+    protected double base;
 
-    public Ticket(Showtime showtime, int row, int col, double pricePaid)
+    public Ticket(Showtime showtime, int row, int col)
     {
         this.showtime = showtime;
         this.row = row;
         this.col = col;
-        this.pricePaid = pricePaid;
+        this.base = showtime.getMovie().getBasePrice();
     }
 
     public Showtime getShowtime()
@@ -32,11 +32,7 @@ public class Ticket
 
     public double getPricePaid()
     {
-        return pricePaid;
+        return base;
     }
 
-    public String toString()
-    {
-        return "T"+showtime.getId()+" - "+"R"+row+"C"+col+" @ BDT "+String.format("%.2f",pricePaid);
-    }
 }
