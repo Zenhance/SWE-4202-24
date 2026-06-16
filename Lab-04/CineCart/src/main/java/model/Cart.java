@@ -86,4 +86,8 @@ public class Cart {
 
     public void add(StandardTicket standardTicket) {
     }
+
+    public double grandSubtotal() {
+        return 0.0;
+    }
 }
