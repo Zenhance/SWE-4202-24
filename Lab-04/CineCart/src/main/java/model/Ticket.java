@@ -1,16 +1,16 @@
 package model;
 
-public class Ticket {
-    private Showtime showtime;  //--> showtime will contain everything of the class "Showtime";
-    private int row;
-    private int col;
-    private double pricePaid;
+public abstract  class Ticket {
+    protected Showtime showtime;  //--> showtime will contain everything of the class "Showtime";
+    protected int row;
+    protected int col;
+    protected double basePrice;
 
-    public Ticket(Showtime showtime, int row, int col, double pricePaid) {
+    public Ticket(Showtime showtime, int row, int col) {
         this.showtime = showtime;
         this.row = row;
         this.col = col;
-        this.pricePaid = pricePaid;
+        this.basePrice = showtime.getMovie().getBasePrice();
     }
 
     public Showtime getShowtime() {
@@ -25,13 +25,5 @@ public class Ticket {
         return col;
     }
 
-    public double getPricePaid() {
-        return pricePaid;
-    }
 
-
-
-    public String toString(){
-        return String.format("T%d - R%dC%d @ BDT %0.2f",  showtime.getId(), row, col, pricePaid);
-    }
 }
