@@ -6,7 +6,9 @@ public class  Cart {
     public static final int MAX_ITEMS = 20;
 
     private Customer owner;
-    private Ticket[] tickets;
+    private LineItem[] lineItems;
+   // private Ticket[] tickets;
+    private int lineCount;
     private int ticketCount;
     private ConcessionItem[] items;
     private int[] qtys;
@@ -14,12 +16,13 @@ public class  Cart {
 
     public Cart(Customer owner) {
         this.owner = owner;
-        tickets = new Ticket[MAX_TICKETS];
+        this.lineItems = new LineItem[MAX_ITEMS];
+        //tickets = new Ticket[MAX_TICKETS];
         items = new ConcessionItem[MAX_ITEMS];
         qtys = new int[MAX_ITEMS];
     }
 
-    public boolean addTicket(Ticket t) {
+   /* public boolean addTicket(Ticket t) {
 
         boolean res = false;
         if (ticketCount < MAX_TICKETS) {
@@ -39,7 +42,9 @@ public class  Cart {
             res = true;
         }
         return res;
-    }
+    }  */
+
+    public
 
     public int getTicketCount() {
         return ticketCount;

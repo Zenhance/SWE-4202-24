@@ -32,3 +32,5 @@ public String toString(){  //"POP - Popcorn (Large) - BDT 220.00".
     return res;
 
 } }
+
+// CLass animal {

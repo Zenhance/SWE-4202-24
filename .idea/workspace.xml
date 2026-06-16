@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="vipticket">
-      <change beforePath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/model/VIPTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/model/VIPTicket.java" afterDir="false" />
+    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="concessionline">
       <change beforePath="$PROJECT_DIR$/Lab-04/CineCart/src/test/java/CineCartEncapsulationTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab-04/CineCart/src/test/java/CineCartTest.java" beforeDir="false" />
     </list>
@@ -185,22 +184,6 @@
       <workItem from="1778092688155" duration="94000" />
       <workItem from="1778092809585" duration="6679000" />
       <workItem from="1778163384097" duration="3333000" />
-    </task>
-    <task id="LOCAL-00053" summary="customer class">
-      <option name="closed" value="true" />
-      <created>1779168771819</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1779168771819</updated>
-    </task>
-    <task id="LOCAL-00054" summary="customer class">
-      <option name="closed" value="true" />
-      <created>1779168798468</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1779168798468</updated>
     </task>
     <task id="LOCAL-00055" summary="customer class completion">
       <option name="closed" value="true" />
@@ -578,7 +561,23 @@
       <option name="project" value="LOCAL" />
       <updated>1781590567006</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="concession item">
+      <option name="closed" value="true" />
+      <created>1781590636268</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1781590636268</updated>
+    </task>
+    <task id="LOCAL-00103" summary="concessionline">
+      <option name="closed" value="true" />
+      <created>1781590788774</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1781590788774</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -618,8 +617,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="writing the skeleton of checkout engine to prevent compilation error 2" />
-    <MESSAGE value="constructor" />
     <MESSAGE value="signature" />
     <MESSAGE value="checkout cart" />
     <MESSAGE value="getreceipt cart" />
@@ -643,6 +640,8 @@
     <MESSAGE value="premiumticket methods" />
     <MESSAGE value="standard and student ticket skeleton" />
     <MESSAGE value="vipticket" />
-    <option name="LAST_COMMIT_MESSAGE" value="vipticket" />
+    <MESSAGE value="concession item" />
+    <MESSAGE value="concessionline" />
+    <option name="LAST_COMMIT_MESSAGE" value="concessionline" />
   </component>
 </project>
