@@ -72,7 +72,13 @@ public class Cart {
 //    public int getItemCount() {
 //        return itemCount;
 //    }
-//
+
+    public LineItem[] getLines() {
+        LineItem[] lines = new LineItem[lineCount];
+        System.arraycopy(lineItems, 0, lines, 0, lineCount);
+        return lines;
+    }
+
 //    public double sumTicketsPaid() {
 //        double sum = 0;
 //
@@ -82,7 +88,7 @@ public class Cart {
 //
 //        return sum;
 //    }
-//
+
 //    public double sumConcessionsRaw() {
 //        double sum = 0;
 //
@@ -92,7 +98,7 @@ public class Cart {
 //
 //        return sum;
 //    }
-//
+
 //    public boolean hasItem(String code) {
 //        for (int i=0; i<itemCount; i++) {
 //            if (code.equals(items[i].getCode()))
