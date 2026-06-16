@@ -19,5 +19,9 @@ public abstract class AbstractTicket extends LineItem {
     public boolean isTicket(){
         return true;
     }
+    @Override
+    public String describe(){
+        return "T"+showtime.getId()+" R"+row+"C"+col;
+    }
 
 }
