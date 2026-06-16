@@ -14,20 +14,7 @@ public abstract class Ticket extends LineItem {
         this.col=col;
         this.basePrice=showtime.getBasePrice();
     }
-    //getters
-    public Showtime getShowtime() {
-        return showtime;
-    }
-    public int getRow(){
-        return row;
-    }
-    public int getCol(){
-        return col;
-    }
-    public double getPricePaid(){
-        return pricePaid;
-    }
-    public String toString(){
-        return "T"+ showtime.getId()+ " - R "+ row + "C"+ col + " @ BDT "+String.format("%.2f",pricePaid);
+    protected double peakMultiplier(){
+    return showtime.isPeak() ? 1.20 : 1.00;
     }
 }
