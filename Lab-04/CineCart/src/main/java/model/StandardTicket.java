@@ -5,7 +5,7 @@ public class StandardTicket extends AbstractTicket{
         super(showtime,row,col);
     }
     @Override
-    public double subTotal(){
+    public double subtotal(){
         return base*peakMultiplier();
     }
     @Override
