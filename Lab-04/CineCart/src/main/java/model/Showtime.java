@@ -1,11 +1,12 @@
 package model;
 
 public class Showtime {
-    private int id;
-    private Movie movie;
-    private Hall hall;
-    private int startHour;
-    private String dateTag;
+    private double basePrice;
+    private boolean peak;
+    public Showtime(double basePrice,boolean peak){
+        this.basePrice=basePrice;
+        this.peak=peak;
+    }
 
     //constructor
     public Showtime(int id, Movie movie,Hall hall, int startHour, String dateTag) {
