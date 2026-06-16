@@ -3,6 +3,5 @@ package model;
 public abstract class LineItem {
     protected double price;
 
-    public LineItem() {
-    }
+    public abstract double subtotal();
 }
