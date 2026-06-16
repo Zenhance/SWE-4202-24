@@ -1,5 +1,3 @@
-import java.beans.ConstructorProperties;
-
 public class EmailMessage extends Message {
     public EmailMessage(Recipient recipient, String message){
         super(recipient, message);
