@@ -10,4 +10,8 @@ public class PremiumTicket extends Ticket{
     public double subtotal(){
         return basePrice*1.30*peakMultiplier();
     }
+    @Override
+    public String describe(){
+        return "Premium" + super.describe();
+    }
 }
