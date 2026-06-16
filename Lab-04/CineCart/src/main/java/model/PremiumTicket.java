@@ -10,7 +10,7 @@ public class PremiumTicket extends AbstractTicket{
     }
     @Override
     public String describe(){
-        return "Premium Ticket";
+        return super.describe()+"Premium Ticket";
     }
 
 }
