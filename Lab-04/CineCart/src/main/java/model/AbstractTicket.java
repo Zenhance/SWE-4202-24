@@ -1,5 +1,8 @@
 package model;
 
-public class AbstractTicket {
-
+public abstract class AbstractTicket extends LineItem{
+    private Showtime showtime;
+    private int row;
+    private int col;
+    private double base;
 }
