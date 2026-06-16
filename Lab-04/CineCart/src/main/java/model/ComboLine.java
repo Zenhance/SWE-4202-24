@@ -15,6 +15,10 @@ public class ComboLine extends LineItem {
     public String describe(){
         return itemA.getName() + " + " + itemB.getName() + "Combo";
     }
+    @Override
+    public boolean hasCode(String code){
+        return itemA.getCode().equals(code) || itemB.getCode().equals(code);
+    }
 
 
 }
