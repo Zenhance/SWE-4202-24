@@ -14,5 +14,7 @@ public abstract class Ticket {
 
     }
 
+    public abstract double getFare();
+
 
 }
