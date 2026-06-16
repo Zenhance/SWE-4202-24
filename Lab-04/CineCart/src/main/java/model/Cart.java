@@ -5,7 +5,7 @@ public class Cart {
     public static final int MAX_ITEMS=20;
     private Customer owner;
     private Ticket[] tickets;
-    private int ticketCount;
+    public int ticketCount;
     private ConcessionItem[] items;
     private int[] qtys;
     private int itemCount;
@@ -18,6 +18,7 @@ public class Cart {
         this.qtys = new int[MAX_ITEMS];
         this.itemCount = 0;
     }
+    public String get;
     public Customer getOwner()          { return owner; }
     public Ticket[] getTickets()        { return tickets; }
     public int getTicketCount()         { return ticketCount; }
@@ -61,5 +62,34 @@ public class Cart {
             }
         }
         return false;
+    }
+
+    public void add(VIPTicket vipTicket) {
+
+    }
+    public void add(ConcessionLine standardTicket) {
+
+    }
+    public void add(StandardTicket vipTicket) {
+
+    }
+    public void add(ComboLine vipTicket, int i) {
+
+    }
+
+    public void getLines() {
+        return;
+    }
+
+    public double grandSubtotal() {
+        return 0.0;
+    }
+
+    public void add(StudentTicket studentTicket) {
+        return;
+    }
+
+    public int ticketCount() {
+        return 0;
     }
 }
