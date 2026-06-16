@@ -7,4 +7,8 @@ public class VIPTicket {
     public double subtotal() {
         return 0.0;
     }
+
+    public String describe() {
+        return null;
+    }
 }
