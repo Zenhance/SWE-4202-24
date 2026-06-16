@@ -30,6 +30,8 @@ public abstract class AbstractTicket extends LineItem {
 
     public abstract double subtotal();
 
+    public abstract String describe();
+
     public String toString() {
         String string = String.format("T%d - R%dC%d @ BDT %.2f", showtime.getId(),
                     row, col, pricePaid);
