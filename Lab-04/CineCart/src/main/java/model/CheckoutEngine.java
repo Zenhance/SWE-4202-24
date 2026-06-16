@@ -21,6 +21,13 @@ public class CheckoutEngine {
         Seat seat = showtime.getMovie().getMinAge();
         if(seat.isBooked())
             return "Seat unavailable";
+
+        double price = showtime.getMovie().getBasePrice();
+        if(seat.isPremium()) price = price * 1.30;
+        else price = price * 1.00;
+
+        if(showtime.isPeak()) price = price * 1.20;
+        else price = price * 1.00;
     }
 
     public String addConcession(Cart cart, String code, int qty) {
