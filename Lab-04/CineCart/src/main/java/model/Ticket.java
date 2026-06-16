@@ -1,6 +1,6 @@
 package model;
 
-public abstract class Ticket implements LineItem {
+public class Ticket  {
     protected Showtime showtime;
     protected int row;
     protected int col;
@@ -13,36 +13,23 @@ public abstract class Ticket implements LineItem {
         this.basePrice = showtime.getMovie().getBasePrice();
     }
 
-    public Showtime getShowtime(){
+    public Showtime getShowtime() {
         return showtime;
     }
 
-    public int getRow(){
+    public int getRow() {
         return row;
     }
 
-    public int getCol(){
+    public int getCol() {
         return col;
     }
 
-    public double getPricePaid(){
-        return subtotal();
-    }
 
     protected double peakMultiplier() {
         return showtime.isPeak() ? 1.20 : 1.00;
     }
 
-    @Override
-    public boolean isTicketLine() {
-        return true;
-    }
-
-    @Override
-    public String describe() {
-        return "T" + showtime.getId() + " - R" + row + "C" + col
-                + " @ BDT " + String.format("%.2f", subtotal());
-    }
 
     @Override
     public String toString() {

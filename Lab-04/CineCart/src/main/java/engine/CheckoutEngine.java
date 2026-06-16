@@ -4,8 +4,11 @@ import data.ConcessionMenu;
 import data.ShowtimeBoard;
 import model.Cart;
 import model.ConcessionItem;
+import model.LineItem;
+import model.PremiumTicket;
 import model.Seat;
 import model.Showtime;
+import model.StandardTicket;
 import model.Ticket;
 
 public class CheckoutEngine {
@@ -24,33 +27,26 @@ public class CheckoutEngine {
             return "Showtime not found";
         }
 
-
-        int customerAge = cart.getOwner().getAge();
-        int minimumAge = showtime.getMovie().getMinAge();
-
-        if (customerAge < minimumAge) {
+        if (cart.getOwner().getAge() < showtime.getMovie().getMinAge()) {
             return "Underage for rating " + showtime.getMovie().getRating();
         }
+
         Seat seat = showtime.getHall().getSeat(row, col);
 
         if (!seat.isAvailable()) {
-            return "Seat not available";
+            return "Seat unavailable";
         }
 
-        double price = showtime.getMovie().getBasePrice();
+        Ticket ticket;
 
         if (seat.isPremium()) {
-            price = price * 1.30;
-        }
-
-        if (showtime.isPeak()) {
-            price = price * 1.20;
+            ticket = new PremiumTicket(showtime, row, col);
+        } else {
+            ticket = new StandardTicket(showtime, row, col);
         }
 
         seat.book();
-
-        Ticket ticket = new Ticket(showtime, row, col, price);
-        cart.addTicket(ticket);
+        cart.add(ticket);
 
         return "OK";
     }
@@ -66,29 +62,71 @@ public class CheckoutEngine {
             return "Invalid quantity";
         }
 
-        cart.addItem(item, qty);
+        cart.add(item, qty);
         return "OK";
     }
 
     public double checkout(Cart cart) {
-        double ticketSubtotal = cart.sumTicketsPaid();
-        double concessionSubtotal = cart.sumConcessionsRaw();
-        double preDiscount = ticketSubtotal + concessionSubtotal;
-        double groupDiscount = 0;
-        if (cart.getTicketCount() >= 8) {
-            groupDiscount = 10 * preDiscount;
+        double subtotal = cart.grandSubtotal();
+
+        double combo = 0.0;
+        if (cart.hasCode("POP") && cart.hasCode("SODA")) {
+            combo = 50.0;
         }
-        double tierDiscount = cart.getOwner().getTierDiscount() * preDiscount;
-        double afterDiscounts = preDiscount - groupDiscount - tierDiscount;
-        double tax = 5 * afterDiscounts;
-        double finalAmount = afterDiscounts + tax;
-        return Math.round(finalAmount * 100) / 100;
+
+        double preDiscount = subtotal - combo;
+
+        double group = 0.0;
+        if (cart.ticketCount() >= 4) {
+            group = 0.10 * preDiscount;
+        }
+
+        double tier = cart.getOwner().getTierDiscount() * preDiscount;
+
+        double afterDiscounts = preDiscount - group - tier;
+        double tax = 0.05 * afterDiscounts;
+
+        return round2(afterDiscounts + tax);
     }
 
     public String getReceipt(Cart cart) {
-        String receipt = "Receipt";
-        receipt += "Customer: " + cart.getOwner().getName() ;
-        receipt += "BDT Total: " + String.format("%.2f", checkout(cart));
+        String receipt = "";
+        receipt += "Receipt\n";
+        receipt += "Customer: " + cart.getOwner().getName() + "\n";
+        receipt += "--------------------\n";
+
+        LineItem[] lines = cart.getLines();
+
+        for (int i = 0; i < lines.length; i++) {
+            receipt += lines[i].describe() + "\n";
+        }
+
+        double subtotal = cart.grandSubtotal();
+
+        double combo = 0.0;
+        if (cart.hasCode("POP") && cart.hasCode("SODA")) {
+            combo = 50.0;
+        }
+
+        double preDiscount = subtotal - combo;
+
+        double group = 0.0;
+        if (cart.ticketCount() >= 4) {
+            group = 0.10 * preDiscount;
+        }
+
+        double tier = cart.getOwner().getTierDiscount() * preDiscount;
+        double discount = combo + group + tier;
+
+        receipt += "--------------------\n";
+        receipt += "Subtotal: BDT " + String.format("%.2f", subtotal) + "\n";
+        receipt += "Discount: BDT " + String.format("%.2f", discount) + "\n";
+        receipt += "Total: BDT " + String.format("%.2f", checkout(cart)) + "\n";
+
         return receipt;
+    }
+
+    private double round2(double value) {
+        return Math.round(value * 100.0) / 100.0;
     }
 }

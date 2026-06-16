@@ -4,7 +4,6 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 
-import model.AbstractTicket;
 import model.Cart;
 import model.ComboLine;
 import model.ConcessionItem;
@@ -19,7 +18,6 @@ import model.StandardTicket;
 import model.StudentTicket;
 import model.VIPTicket;
 import data.ConcessionMenu;
-import data.ShowtimeBoard;
 import engine.CheckoutEngine;
 
 /**

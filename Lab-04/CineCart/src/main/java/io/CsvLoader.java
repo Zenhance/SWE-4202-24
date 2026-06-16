@@ -12,7 +12,6 @@ import model.Hall;
 import model.Movie;
 import model.Showtime;
 import data.ConcessionMenu;
-import data.ShowtimeBoard;
 
 /**
  * <p>
