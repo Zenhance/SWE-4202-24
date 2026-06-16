@@ -1,6 +1,6 @@
 package model;
 
 public abstract class LineItem {
-    public abstract double subTotal();
-    public abstract double describe();
+    public abstract double subtotal();
+    public abstract String describe();
 }
