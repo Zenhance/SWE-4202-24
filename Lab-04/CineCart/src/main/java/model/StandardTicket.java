@@ -8,5 +8,8 @@ public class StandardTicket extends AbstractTicket{
     public double subTotal(){
         return base*peakMultiplier();
     }
-
+    @Override
+    public String describe(){
+        return super.describe()+" Standard";
+    }
 }
