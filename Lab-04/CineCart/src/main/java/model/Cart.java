@@ -112,4 +112,8 @@ public class Cart {
 
     public void add(PremiumTicket premiumTicket) {
     }
+
+    public Object getLines() {
+        return null;
+    }
 }
