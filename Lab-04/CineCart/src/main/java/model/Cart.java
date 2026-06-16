@@ -7,7 +7,7 @@ public class  Cart {
 
     private Customer owner;
     private LineItem[] lineItems;
-   // private Ticket[] tickets;
+    // private Ticket[] tickets;
     private int lineCount;
     private int ticketCount;
     private ConcessionItem[] items;
@@ -20,7 +20,23 @@ public class  Cart {
         //tickets = new Ticket[MAX_TICKETS];
         items = new ConcessionItem[MAX_ITEMS];
         qtys = new int[MAX_ITEMS];
+        lineCount = 0;
     }
+
+
+
+    public void add(LineItem a){
+        if(lineCount>=MAX_ITEMS)return;;
+        if(a == null) return;
+        lineItems[lineCount++] =a ;
+
+    }
+}
+
+
+
+
+
 
    /* public boolean addTicket(Ticket t) {
 
@@ -44,7 +60,7 @@ public class  Cart {
         return res;
     }  */
 
-    public
+    /*
 
     public int getTicketCount() {
         return ticketCount;
@@ -97,3 +113,4 @@ public class  Cart {
         return found;
     }
 }
+*/
