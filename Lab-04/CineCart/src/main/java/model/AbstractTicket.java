@@ -1,12 +1,12 @@
 package model;
 
-public class Ticket {
+public abstract class AbstractTicket {
     private Showtime showtime;
     private int row;
     private int col;
     private double base;
 
-    public Ticket(Showtime showtime, int row, int col) {
+    public AbstractTicket(Showtime showtime, int row, int col) {
         this.showtime = showtime;
         this.row = row;
         this.col = col;
