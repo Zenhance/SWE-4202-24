@@ -6,11 +6,11 @@ public class StudentTicket extends AbstractTicket {
     }
     @Override
     public double subtotal(){
-        return base*1*peakMultiplier();
+        return basePrice*0.5*getPeakMultiplier();
     }
     @Override
     public String describe(){
-        return "Standard Ticket";
+        return super.describe()+ "StudentTicket";
     }
 
 }
