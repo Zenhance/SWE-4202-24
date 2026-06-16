@@ -17,6 +17,7 @@ public class CheckoutEngine {
         double afterDiscounts= preDiscount - groupDiscount-tierDiscount;
         double tax= afterDiscounts*0.05;
         double finalTotal=afterDiscounts+ tax;
+        return Math.round(finalTotal*100.0)/100.0;
 
 
 
