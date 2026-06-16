@@ -26,7 +26,7 @@ public class Cart {
         return owner;
     }
 
-    public int getTicketCount() {
+    public int TicketCount() {
         return ticketCount;
     }
 
@@ -79,4 +79,18 @@ public class Cart {
     }
 
 
+    public double grandSubtotal() {
+    }
+
+    public void add(ConcessionItem pop, int i) {
+    }
+
+    public boolean hasCode(String nacho) {
+    }
+
+    public void add(LineItem a) {
+    }
+
+    public  getLines() {
+    }
 }

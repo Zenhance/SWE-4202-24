@@ -1,26 +1,13 @@
+import data.ConcessionMenu;
+import data.ShowtimeBoard;
+import engine.CheckoutEngine;
+import model.*;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 
-import model.AbstractTicket;
-import model.Cart;
-import model.ComboLine;
-import model.ConcessionItem;
-import model.ConcessionLine;
-import model.Customer;
-import model.Hall;
-import model.LineItem;
-import model.Movie;
-import model.PremiumTicket;
-import model.Showtime;
-import model.StandardTicket;
-import model.StudentTicket;
-import model.VIPTicket;
-import data.ConcessionMenu;
-import data.ShowtimeBoard;
-import engine.CheckoutEngine;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * CineCartPolymorphismTest.java
@@ -88,7 +75,7 @@ public class CineCartPolymorphismTest {
     void vipFare_equalsPremiumPlusLounge() {
         Showtime st = peakShow();
         PremiumTicket premium = new PremiumTicket(st, 2, 4);
-        VIPTicket     vip     = new VIPTicket(st, 2, 4);
+        VIPTicket vip     = new VIPTicket(st, 2, 4);
         assertEquals(premium.subtotal() + 200.00, vip.subtotal(), EPS);
 
         // A different base: VIP must still be exactly premium + lounge, with no
