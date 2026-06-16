@@ -1,14 +1,14 @@
 package model;
 
-public abstract class Ticket extends LineItem{
+public abstract class AbstractTicket extends LineItem{
 
-   private final Showtime showtime;
-   private final int row;
-   private int col;
-   private double pricePaid;
+   protected Showtime showtime;
+   protected int row;
+    protected int col;
+    protected double pricePaid;
 
 
-public Ticket(Showtime showtime, int row, int col, double pricePaid){
+public AbstractTicket(Showtime showtime, int row, int col, double pricePaid){
 
     this.showtime=showtime;
     this.row=row;
