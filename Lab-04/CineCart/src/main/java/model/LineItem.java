@@ -1,7 +1,6 @@
 package model;
 
-public class LineItem {
-    public double subtotal() {
-        return 0.0;
-    }
+public abstract class LineItem {
+    public abstract double subtotal();
+    public abstract String describe();
 }
