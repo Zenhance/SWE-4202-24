@@ -13,6 +13,10 @@ public class ComboLine extends LineItem{
 
     public ConcessionItem getItemB() {
         return itemB;
+
+    }
+    public boolean containsCode(String code){
+        return itemA.getCode().equals(code) || itemB.getCode().equals(code);
     }
 
 

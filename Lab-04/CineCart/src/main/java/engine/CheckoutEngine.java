@@ -34,9 +34,9 @@ public class CheckoutEngine {
         double price=basePrice*premiumFactor * peakFactor;
         seat.book();
 
-        Ticket ticket=new Ticket(showtime,row,col, price);
+        StandardTicket ticket=new StandardTicket(showtime,row,col);
 
-        cart.addTicket(ticket);
+        cart.add(ticket);
         return "OK";
     }
         public String addConcession(Cart cart,String code,int qty){
@@ -47,7 +47,7 @@ public class CheckoutEngine {
             if (qty<=0) {
                 return "Invalid quantity";
             }
-            cart.addItem(item, qty);
+            cart.add(item, qty);
             return "OK";
         }
         public double checkout(Cart cart){
