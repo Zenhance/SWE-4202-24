@@ -1,14 +1,12 @@
 package model;
 
-public class StandardTicket extends LineItem {
-    public StandardTicket(Showtime showtime, int i, int i1) {
+public class StandardTicket extends AbstractTicket {
+    public StandardTicket(Showtime showtime, int row, int col) {
+        super(showtime, row, col);
     }
 
+    @Override
     public double subtotal() {
-        return 0;
-    }
-
-    public String describe() {
-        return null;
+        return calculateBase();
     }
 }
