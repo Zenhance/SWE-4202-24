@@ -122,4 +122,8 @@ public class Cart {
 
     public void add(ConcessionItem pop) {
     }
+
+    public int ticketCount() {
+        return 0;
+    }
 }
