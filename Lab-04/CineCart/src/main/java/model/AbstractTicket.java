@@ -32,7 +32,11 @@ public double getPricePaid(){
     return pricePaid;
 }
 
-public String toString(){
+
+    public abstract double Subtotal();
+
+
+    public String toString(){
 
     String res=String.format("T%d - R%dC%d @ BDT %.2f",showtime.getId(),row,col,pricePaid);
    return res;
