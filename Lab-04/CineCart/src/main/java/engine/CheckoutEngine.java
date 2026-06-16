@@ -70,7 +70,7 @@ public class CheckoutEngine {
         }
         double combo = 0.0;
         if ((cart.hasCode("POP") && cart.hasCode("SODA"))||
-                (cart.hasItem("POP")&&(cart.hasItem("SODA"))) {
+                (cart.hasItem("POP")&&(cart.hasItem("SODA")))) {
             combo = 50.0;
         }
         double preDiscount = subtotal - combo;
