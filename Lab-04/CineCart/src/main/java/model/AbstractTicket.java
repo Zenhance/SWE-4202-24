@@ -33,5 +33,8 @@ public abstract class AbstractTicket extends LineItem {
         return price;
     }
 
-
+    @Override
+    public String describe() {
+        return showtime.getMovie().getTitle() + " [Row: " + row + ", Col: " + col + "]";
+    }
 }
