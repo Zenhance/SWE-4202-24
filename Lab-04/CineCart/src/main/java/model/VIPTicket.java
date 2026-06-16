@@ -5,6 +5,10 @@ public class VIPTicket extends PremiumTicket {
         super(showtime, row, col);
     }
 
+    @Override
+    public double subtotal(){
+        return super.subtotal() +200.00;
+    }
 
 
 }
