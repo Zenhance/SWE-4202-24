@@ -23,6 +23,7 @@ public class ConcessionItem {
         return unitPrice;
     }
 
+    @Override
     public String toString() {
         return code + " - " + name + " - BDT " + String.format("%.2f", unitPrice);
     }
