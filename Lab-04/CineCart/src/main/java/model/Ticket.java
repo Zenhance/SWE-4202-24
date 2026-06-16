@@ -1,6 +1,6 @@
 package model;
 
-public class Ticket {
+public abstract class Ticket {
     private final Showtime  showtime;
     private final int row;
     private final int col;
