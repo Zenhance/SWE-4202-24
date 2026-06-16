@@ -1,9 +1,9 @@
 package model;
 
 public class Seat {
-    private int row;
-    private int col;
-    private boolean isPremium;
+    private final int row;
+    private final int col;
+    private final boolean isPremium;
     private boolean isBooked;
 
     public Seat(int row, int col, boolean isPremium){
