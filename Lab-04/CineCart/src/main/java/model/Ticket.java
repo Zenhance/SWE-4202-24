@@ -1,11 +1,11 @@
 package model;
 
 public class Ticket {
-    private Showtime showtime;
-    private int row;
-    private int col;
-    private double pricePaid;
-    private int id;
+    private final Showtime showtime;
+    private final int row;
+    private final int col;
+    private final double pricePaid;
+    private final int id;
 
     public Ticket(Showtime showtime, int row, int col, double pricePaid){
         this.id = id;
