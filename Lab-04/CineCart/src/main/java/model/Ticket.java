@@ -7,7 +7,9 @@ public abstract class Ticket extends LineItem {
     protected int col;
     protected double basePrice;
 
-    public Ticket(Showtime showtime, int row, int col) {
+    public Ticket(Showtime showtime,
+                  int row,
+                  int col) {
 
         this.showtime = showtime;
         this.row = row;
@@ -23,7 +25,7 @@ public abstract class Ticket extends LineItem {
             return 1.20;
         }
 
-        return 1.0;
+        return 1.00;
     }
 
     public Showtime getShowtime() {
@@ -43,62 +45,10 @@ public abstract class Ticket extends LineItem {
         return true;
     }
 
-    package model;
 
-    public abstract class Ticket extends LineItem {
+    public String describe() {
 
-        protected Showtime showtime;
-        protected int row;
-        protected int col;
-        protected double basePrice;
+        return "T" + showtime.getId() + " - R" + row + "C" + col;
 
-        public Ticket(Showtime showtime,
-                      int row,
-                      int col) {
-
-            this.showtime = showtime;
-            this.row = row;
-            this.col = col;
-
-            this.basePrice =
-                    showtime.getMovie().getBasePrice();
-        }
-
-        protected double peakMultiplier() {
-
-            if (showtime.isPeak()) {
-                return 1.20;
-            }
-
-            return 1.00;
-        }
-
-        public Showtime getShowtime() {
-            return showtime;
-        }
-
-        public int getRow() {
-            return row;
-        }
-
-        public int getCol() {
-            return col;
-        }
-
-        @Override
-        public boolean isTicket() {
-            return true;
-        }
-
-
-        public String describe() {
-
-            return "T" + showtime.getId() + " - R" + row + "C" + col;
-        }
-
-
-        public String toString() {
-            return describe();
-        }
     }
 }
