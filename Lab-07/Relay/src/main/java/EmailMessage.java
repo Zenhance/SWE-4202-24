@@ -10,7 +10,7 @@ public class EmailMessage extends Message{
 
     @Override
     public double cost() {
-        return 0;
+        return 0.0;
     }
 
     @Override
