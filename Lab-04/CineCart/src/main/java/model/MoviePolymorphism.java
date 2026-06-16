@@ -1,13 +1,14 @@
 package model;
 
-public class Movie {
+public class MoviePolymorphism
+{
     private int id;
     private String title;
     private String rating;
     private int durationMin;
     private double basePrice;
 
-    public Movie(int id, String title, String rating,
+    public oviePolymorphism(int id, String title, String rating,
                  int durationMin, double basePrice) {
         this.id = id;
         this.title = title;
