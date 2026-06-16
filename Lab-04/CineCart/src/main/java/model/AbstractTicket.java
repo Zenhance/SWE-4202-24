@@ -6,8 +6,7 @@ public abstract class AbstractTicket extends LineItem {
     private final int col;
     private double pricePaid;
 
-    public AbstractTicket(Showtime showtime, int row, int col, double pricePaid) {
-        super(pricePaid);
+    public AbstractTicket(Showtime showtime, int row, int col) {
         this.showtime = showtime;
         this.row = row;
         this.col = col;
@@ -28,6 +27,8 @@ public abstract class AbstractTicket extends LineItem {
     public double getPricePaid() {
         return pricePaid;
     }
+
+    public abstract double subtotal();
 
     public String toString() {
         String string = String.format("T%d - R%dC%d @ BDT %.2f", showtime.getId(),
