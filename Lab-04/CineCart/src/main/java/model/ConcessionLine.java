@@ -12,7 +12,7 @@ public class ConcessionLine extends LineItem {
 
     @Override
     public double subtotal(){
-        return item.getUnitPrice();
+        return item.getUnitPrice()*qty;
     }
 
     @Override
