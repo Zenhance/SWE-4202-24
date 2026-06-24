@@ -1,13 +1,11 @@
 package engine;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
 import data.ConcessionMenu;
 import data.ShowtimeBoard;
 import model.Cart;
 import model.ConcessionItem;
 import model.Showtime;
-import model.Ticket;
+import model.AbstractTicket;
 
 public class CheckoutEngine {
     private ShowtimeBoard board;
@@ -18,7 +16,7 @@ public class CheckoutEngine {
         this.menu = menu;
     }
 
-    public String bookTicket(Cart cart, int showtimeId, int row, int col){
+    /*public String bookTicket(Cart cart, int showtimeId, int row, int col){
         Showtime showtime = board.findById(showtimeId);
         if (showtime == null){
             return "Showtime not found";
@@ -36,11 +34,11 @@ public class CheckoutEngine {
 
         showtime.getHall().getSeat(row, col).book();
 
-        Ticket t = new Ticket(showtime, row, col, price);
+        //AbstractTicket t = new AbstractTicket(showtime, row, col, price);
 
         cart.addTicket(t);
         return "OK";
-    }
+    }*/
 
 
     public String addConcession(Cart cart, String code, int qty){
@@ -55,30 +53,30 @@ public class CheckoutEngine {
         }
 
         else{
-            cart.addItem(item, qty);
+            cart.add(item, qty);
         }
 
         return "OK";
     }
 
     public double checkout(Cart cart){
-        double ticketSubtotal = cart.sumTicketsPaid();
-        double concessionSubtotal = cart.sumConcessionsRaw();
+//        double ticketSubtotal = cart.sumTicketsPaid();
+//        double concessionSubtotal = cart.sumConcessionsRaw();
 
         double combo = 0.0;
 
-        boolean pop = cart.hasItem("POP");
-        boolean soda = cart.hasItem("SODA");
+        boolean pop = cart.hasCode("POP");
+        boolean soda = cart.hasCode("SODA");
 
         if (pop && soda){
             combo = 50.0;
         }
 
-        double preDiscount = ticketSubtotal + concessionSubtotal - combo;
+        double preDiscount = cart.grandSubtotal() - combo;
 
         double group = 0.0;
 
-        if (cart.getTicketCount() >= 4) group = 0.10*preDiscount;
+        if (cart.ticketCount() >= 4) group = 0.10*preDiscount;
 
         double tier = cart.getOwner().getTierDiscount()*preDiscount;
 
