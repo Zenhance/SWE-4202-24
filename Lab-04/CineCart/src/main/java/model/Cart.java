@@ -7,6 +7,8 @@ public class Cart {
     Ticket[] tickets;
     int ticketCount;
     ConcessionItem[] items;
+    LineItem[] lines;
+    int lcount;
     int[] qtys;
     int itemCount;
 
@@ -87,4 +89,23 @@ public class Cart {
         return false;
     }
 
+    public void add(StandardTicket standardTicket) {
+
+    }
+
+    public double grandSubtotal() {
+        return 0;
+    }
+
+    public LineItem[] getLines() {
+        LineItem[] l=new LineItem[lcount];
+        for(int i=0;i<lcount;i++){
+            l[i]=lines[i];
+        }return l;
+    }
+
+    public boolean hasCode(String pop) {
+        return false;
+    }
 }
+
