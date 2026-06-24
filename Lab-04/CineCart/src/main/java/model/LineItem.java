@@ -1,18 +1,12 @@
 package model;
 
-public class  LineItem {
-    private static int count = 0;
-    int sum = 0;
+public abstract class LineItem {
 
-    public int getLines(){
-        return count;
-    }
+    double sum = 0;
 
-    public double subtotal(){
-        return sum;
-    }
+    public abstract double subtotal();
 
-    public String describe(){
-        return "";
-    }
+    public abstract String describe();
+
+    public abstract boolean isTicket();
 }

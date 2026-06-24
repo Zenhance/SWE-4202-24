@@ -2,10 +2,7 @@ package engine;
 
 import data.ConcessionMenu;
 import data.ShowtimeBoard;
-import model.Cart;
-import model.ConcessionItem;
-import model.Showtime;
-import model.AbstractTicket;
+import model.*;
 
 public class CheckoutEngine {
     private ShowtimeBoard board;
@@ -41,23 +38,23 @@ public class CheckoutEngine {
     }*/
 
 
-    public String addConcession(Cart cart, String code, int qty){
-        ConcessionItem item = menu.findByCode(code);
-
-        if (item == null){
-            return "Item not found";
-        }
-
-        else if (qty <= 0){
-            return "Invalid quantity";
-        }
-
-        else{
-            cart.add(item, qty);
-        }
-
-        return "OK";
-    }
+//    public String addConcession(Cart cart, String code, int qty){
+//        ConcessionLine item = menu.findByCode(code);
+//
+//        if (item == null){
+//            return "Item not found";
+//        }
+//
+//        else if (qty <= 0){
+//            return "Invalid quantity";
+//        }
+//
+//        else{
+//            cart.add(item, qty);
+//        }
+//
+//        return "OK";
+//    }
 
     public double checkout(Cart cart){
 //        double ticketSubtotal = cart.sumTicketsPaid();

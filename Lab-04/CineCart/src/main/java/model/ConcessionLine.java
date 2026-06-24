@@ -9,6 +9,9 @@ public class ConcessionLine extends LineItem {
         this.qty = qty;
     }
 
+    public ConcessionItem getItem() {
+        return item;
+    }
 
     @Override
     public double subtotal(){
@@ -18,5 +21,10 @@ public class ConcessionLine extends LineItem {
     @Override
     public String describe(){
         return "concessionline";
+    }
+
+    @Override
+    public boolean isTicket(){
+        return false;
     }
 }

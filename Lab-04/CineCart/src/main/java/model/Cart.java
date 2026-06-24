@@ -10,16 +10,17 @@ public class Cart {
     //private AbstractTicket[] tickets;
     private int ticketCount;
     private ConcessionItem[] items;
-   private int[] qtys;
+    private int[] qtys;
     private int count;
     private int itemCount;
 
     public Cart(Customer owner){
         this.owner = owner;
 //        tickets = new AbstractTicket[MAX_TICKETS];
-//        items = new ConcessionItem[MAX_ITEMS];
-        //qtys = new int[MAX_ITEMS];
+         items = new ConcessionItem[MAX_ITEMS];
+        qtys = new int[MAX_ITEMS];
         count = 0;
+        itemCount = 0;
         lineItems = new LineItem[MAX_TICKETS+MAX_ITEMS];
     }
 
@@ -37,8 +38,10 @@ public class Cart {
 
         boolean res = false;
         int i = 0;
-        if(itemCount < MAX_TICKETS && i < qty){
+        if(itemCount < MAX_TICKETS){
+            ConcessionLine l = new ConcessionLine(c, qty);
             items[itemCount] = c;
+            lineItems[count] = l;
             qtys[itemCount] = qty;
             count++;
             itemCount++;
@@ -48,9 +51,11 @@ public class Cart {
     }
 
     public boolean add(ConcessionItem c){
-        if (itemCount >= MAX_TICKETS) return false;
+        if (count >= MAX_TICKETS+MAX_ITEMS) return false;
 
+        ConcessionLine l = new ConcessionLine(c, 1);
         items[itemCount] = c;
+        lineItems[count] = l;
         itemCount++;
         count++;
         return true;
@@ -59,16 +64,54 @@ public class Cart {
 
     public boolean add(LineItem L){
         if (count >= MAX_ITEMS+MAX_TICKETS) return false;
-
         lineItems[count] = L;
         count++;
         return true;
 
     }
 
+    public boolean add(ComboLine L){
+        if (count >= MAX_ITEMS+MAX_TICKETS) return false;
+        lineItems[count] = L;
+        count++;
+        items[itemCount] = L.getA();
+        itemCount++;
+        items[itemCount] = L.getB();
+        itemCount++;
+        return true;
+
+    }
+
+    public boolean add(ConcessionLine L){
+        if (count >= MAX_ITEMS+MAX_TICKETS) return false;
+        lineItems[count] = L;
+        count++;
+        items[itemCount] = L.getItem();
+        itemCount++;
+        return true;
+
+    }
+
+    public boolean add(ConcessionItem A, ConcessionItem B){
+        if (count+1 >= MAX_ITEMS+MAX_TICKETS) return false;
+        LineItem l = new ComboLine(A, B);
+        lineItems[count] = l;
+        items[itemCount] = A;
+        itemCount++;
+        items[itemCount] = B;
+        count++;
+        return true;
+    }
+
+
 
     public LineItem[] getLines() {
-        return lineItems;
+        LineItem[] l = new LineItem[count];
+        for (int i = 0; i < count; i++)
+        {
+            l[i] = lineItems[i];
+        }
+        return l;
     }
 
     //    public int getTicketCount() {
@@ -117,14 +160,18 @@ public class Cart {
         boolean found = false;
         for (int i = 0; i < itemCount; i++){
             if(code.equals(items[i].getCode())){
-                found = true;
-                break;
+                return true;
             }
         }
         return found;
     }
 
     public int ticketCount(){
-        return count - itemCount;
+        int res = 0;
+        for (int i = 0; i < count; i++)
+        {
+            if(lineItems[i].isTicket()) res++;
+        }
+        return res;
     }
 }
