@@ -56,7 +56,7 @@ public class Cart
     {
         for(int i=0;i<count;i++)
         {
-            if(lines[i].hashCode(code))
+            if(lines[i].hasCode(code))
             {
                 return true;
             }
@@ -77,6 +77,13 @@ public class Cart
     public int getTicketCount()
     {
         int t=0;
+        for(int i=0;i<count;i++)
+        {
+            if(lines[i].isTicket())
+            {
+                t++;
+            }
+        }
         return t;
     }
 }
