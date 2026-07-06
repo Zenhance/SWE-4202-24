@@ -66,15 +66,15 @@ public class Hall
             for(int c=0;c<cols;c++)
             {
                 Seat seat = grid[r][c];
-                if(seat.isPremium())
-                {
-                    System.out.print("*");
-                }
                 if(seat.isBooked())
                 {
                     System.out.print("#");
                 }
-                if(seat.isAvailable())
+                else if(seat.isPremium())
+                {
+                    System.out.print("*");
+                }
+                else if(seat.isAvailable())
                 {
                     System.out.print(".");
                 }
