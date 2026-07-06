@@ -114,7 +114,11 @@ public class Cart {
     }
 
     public double grandSubtotal() {
-        return 0.0;
+        double total = 0;
+        for (int i=0; i<lineCount;i++) {
+            total += lineItems[i].subtotal();
+        }
+        return total;
     }
 //    public double sumTicketsPaid() {
 //        double sum = 0;
