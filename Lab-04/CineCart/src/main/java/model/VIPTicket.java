@@ -5,8 +5,8 @@ public class VIPTicket extends PremiumTicket{
         super(showtime, row, col);
     }
 
-    public double getPricePaid() {
-        return getPricePaid() + 200.00;
+    public double subtotal() {
+        return super.subtotal() + 200.00;
     }
 
 }

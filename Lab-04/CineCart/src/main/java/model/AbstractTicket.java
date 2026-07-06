@@ -23,7 +23,7 @@ public abstract class AbstractTicket extends LineItem {
         return col;
     }
 
-    public double getPricePaid() {
+    public double subtotal() {
         return showtime.getMovie().getBasePrice();
     }
     public String toString() {
