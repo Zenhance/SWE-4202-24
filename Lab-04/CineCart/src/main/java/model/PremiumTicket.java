@@ -14,4 +14,10 @@ public class PremiumTicket extends AbstractTicket
     {
         return base*PREMIUM*peakTime();
     }
+
+    @Override
+    public String describe()
+    {
+        return null;
+    }
 }

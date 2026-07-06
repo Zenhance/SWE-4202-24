@@ -15,4 +15,9 @@ public class StudentTicket extends AbstractTicket
         return base*STUDENT*peakTime();
     }
 
+    @Override
+    public String describe()
+    {
+        return null;
+    }
 }
