@@ -1,16 +1,15 @@
 package model;
 
-public abstract class Ticket extends LineItem {
+public abstract class AbstractTicket extends LineItem {
     private final Showtime  showtime;
     private final int row;
     private final int col;
-    private final double pricePaid;
+    //private final double pricePaid;
 
-    public Ticket(Showtime showtime, int row, int col, double pricePaid) {
+    public AbstractTicket(Showtime showtime, int row, int col) {
         this.showtime = showtime;
         this.row = row;
         this.col = col;
-        this.pricePaid = pricePaid;
     }
 
     public Showtime getShowtime() {
@@ -25,10 +24,10 @@ public abstract class Ticket extends LineItem {
     }
 
     public double getPricePaid() {
-        return pricePaid;
+        return showtime.getMovie().getBasePrice();
     }
     public String toString() {
-        String out = String.format("T%d - R%dC%d @ BDT %.2f", showtime.getId(), row, col, pricePaid);
+        String out = String.format("T%d - R%dC%d @ BDT %.2f", showtime.getId(), row, col);
         return out;
     }
 }

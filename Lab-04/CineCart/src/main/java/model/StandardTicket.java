@@ -1,8 +1,8 @@
 package model;
 
-public class StandardTicket extends Ticket {
-    public StandardTicket(Showtime showtime, int row, int col, double pricePaid){
-        super(showtime, row, col, pricePaid);
+public class StandardTicket extends AbstractTicket {
+    public StandardTicket(Showtime showtime, int row, int col){
+        super(showtime, row, col);
     }
     public double getPricePaid() {
         double price = getPricePaid();

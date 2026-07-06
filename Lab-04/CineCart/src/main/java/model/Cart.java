@@ -27,21 +27,21 @@ public class Cart {
 
 
 
-    public void addTicket(Ticket t){
+    public void addTicket(AbstractTicket t){
         if (lineCount >= MAX_LINES)
             throw new IllegalArgumentException("MAX LINES exceeded");
         lines[lineCount] = t;
         lineCount++;
     }
 
-    public void addItem(ConcessionItem c, int qty){
+    public void addItem(ConcessionLine c, int qty){
         if (lineCount >= MAX_LINES || qty <= 0 || (lineCount+qty) >= MAX_LINES)
             throw new IllegalArgumentException("MAX LINES exceeded OR Qty is too low");
         lines[lineCount] = c;
-        qtys[lineCount] = qty;
+        //qtys[lineCount] = qty;
         lineCount++;
     }
-
+    /*
     public double sumTicketsPaid(){
         double ticketPrice = 0;
         for(int i = 0; i < ticketCount; i++){
@@ -65,5 +65,5 @@ public class Cart {
             if(code.equals(it.getCode())) return true;
         }
         return false;
-    }
+    }*/
 }

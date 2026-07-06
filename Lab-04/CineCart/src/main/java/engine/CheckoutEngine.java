@@ -38,12 +38,12 @@ public class CheckoutEngine {
                 (showtime.isPeak() ? 1.20 : 1.00);
 
         seat.book();
-        Ticket ticket = new Ticket(showtime, row, col, price);
-        cart.addTicket(ticket);
+        //Ticket ticket = new Ticket(showtime, row, col, price);
+        //cart.addTicket(ticket);
 
         return "OK";
     }
-
+    /*
     //E.2
     public String addConcession(Cart cart, String code, int qty){
         ConcessionItem item = menu.findByCode(code);
@@ -53,10 +53,11 @@ public class CheckoutEngine {
 
         cart.addItem(item, qty);
         return "OK";
-    }
+    }*/
 
     //F. Checkout Pipeline
     //F.1
+    /*
     public double checkout(Cart cart){
         double ticketSubtotal = cart.sumTicketsPaid();
         double concessionSubtotal = cart.sumConcessionsRaw();
@@ -76,10 +77,10 @@ public class CheckoutEngine {
 
         double preDiscount = ticketSubtotal + concessionSubtotal - combo;
 
-        double group = (cart.getTicketCount() >= 4) ? 0.10 * preDiscount : 0;
+        //double group = (cart.getTicketCount() >= 4) ? 0.10 * preDiscount : 0;
 
         double tier = cart.getOwner().getTierDiscount() * preDiscount;
-        double afterDiscounts = preDiscount - group - tier;
+        double afterDiscounts = preDiscount - tier; //double afterDiscounts = preDiscount - group- tier;
         double tax = 0.05 * afterDiscounts;
 
         double total = afterDiscounts + tax;
@@ -93,7 +94,7 @@ public class CheckoutEngine {
     public String getReceipt(Cart cart){
         String out = "Receipt : \n Name: " + cart.getOwner().getName()
                 + "\nTotal Price: " + String.format("%.2f", checkout(cart))+ " BDT (with Discount)\nList:";
-
+        /*
         Ticket[] tickets = cart.getTickets();
         for (int i = 0; i < cart.getTicketCount(); i++) {
             Ticket k = tickets[i];
@@ -106,5 +107,5 @@ public class CheckoutEngine {
             out += k.toString();
         }
         return out;
-    }
+    }*/
 }
