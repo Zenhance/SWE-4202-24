@@ -1,6 +1,6 @@
 package model;
 
-public abstract class Ticket {
+public abstract class Ticket extends LineItem {
     private final Showtime  showtime;
     private final int row;
     private final int col;

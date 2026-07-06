@@ -1,6 +1,6 @@
 package model;
 
-public class ConcessionItem {
+public class ConcessionItem extends LineItem{
     private final String code;
     private final String name;
     private final double unitPrice;
