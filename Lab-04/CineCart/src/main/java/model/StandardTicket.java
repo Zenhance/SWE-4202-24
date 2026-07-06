@@ -10,6 +10,6 @@ public class StandardTicket extends AbstractTicket
     @Override
     public double subtotal()
     {
-        return base*peakTime();
+        return peakTime();
     }
 }
