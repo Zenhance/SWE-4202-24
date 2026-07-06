@@ -38,13 +38,18 @@ public class Cart
             count++;
         }
     }
-    public boolean add(ConcessionItem item, int qty)
+
+    public void add(ConcessionItem item)
+    {
+        add(item,1);
+    }
+
+    public void add(ConcessionItem item, int qty)
     {
         if(qty>0)
         {
-            return add(new ConcessionLine(item,qty));
+            add(new ConcessionLine(item,qty));
         }
-        return false;
     }
 
     public boolean hasCode(String code)
