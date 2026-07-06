@@ -1,4 +1,4 @@
 package model;
 
-public class ConcessionLine {
+public class ConcessionLine extends LineItem{
 }
