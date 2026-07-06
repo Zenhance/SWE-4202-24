@@ -26,7 +26,7 @@ public abstract class AbstractTicket extends LineItem {
     public double subtotal() {
         return showtime.getMovie().getBasePrice();
     }
-    public String toString() {
+    public String describe() {
         String out = String.format("T%d - R%dC%d @ BDT %.2f", showtime.getId(), row, col);
         return out;
     }
