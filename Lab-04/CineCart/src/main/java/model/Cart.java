@@ -30,11 +30,6 @@ public class Cart
         return l;
     }
 
-    public int getCount()
-    {
-        return count;
-    }
-
     public boolean add(LineItem line)
     {
         if(count<=MAX_LINES)
@@ -52,26 +47,6 @@ public class Cart
             return add(new ConcessionLine(item,qty));
         }
         return false;
-    }
-
-    public double sumTicketsPaid()
-    {
-        double sum=0.0;
-        for(int i=0;i<count;i++)
-        {
-            sum=sum+lines[i].getPricePaid();
-        }
-        return sum;
-    }
-
-    public double sumConcessionsRaw()
-    {
-        double sum=0.0;
-        for(int i=0;i<itemCount;i++)
-        {
-            sum=sum+items[i].getUnitPrice()*qtys[i];
-        }
-        return sum;
     }
 
     public boolean hasCode(String code)
@@ -96,8 +71,9 @@ public class Cart
         return total;
     }
 
-    public void getTicketCount()
+    public int getTicketCount()
     {
-
+        int t=0;
+        return t;
     }
 }
