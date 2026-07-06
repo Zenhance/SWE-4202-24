@@ -18,6 +18,6 @@ public class VIPTicket extends PremiumTicket
     @Override
     public String describe()
     {
-        return super.describe()+" VIP";
+        return super.describe()+" VIP Lounge";
     }
 }
