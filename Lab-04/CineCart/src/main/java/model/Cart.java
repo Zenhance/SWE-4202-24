@@ -3,23 +3,16 @@ package model;
 public class Cart
 {
     private Customer owner;
-    private Ticket[] tickets;
-    private int ticketCount;
-    private ConcessionItem[] items;
-    private int[] qtys;
-    private int itemCount;
+    private LineItem[] lines;
+    private int count;
 
-    public static final int MAX_TICKETS = 20;
-    public static final int MAX_ITEMS = 20;
+    public static final int MAX_LINES = 40;
 
     public Cart(Customer owner)
     {
         this.owner = owner;
-        this.itemCount = 0;
-        tickets = new Ticket[MAX_TICKETS];
-        items = new ConcessionItem[MAX_ITEMS];
-        this.ticketCount = 0;
-        qtys = new int[MAX_ITEMS];
+        lines = new LineItem[MAX_LINES];
+        count = 0;
     }
 
     public Customer getOwner()
@@ -27,55 +20,46 @@ public class Cart
         return owner;
     }
 
-    public Ticket[] getTickets()
+    public LineItem[] getLines()
     {
-        return tickets;
-    }
-
-    public int getTicketCount()
-    {
-        return ticketCount;
-    }
-
-    public ConcessionItem[] getItems()
-    {
-        return items;
-    }
-
-    public int[] getQtys()
-    {
-        return qtys;
-    }
-
-    public int getItemCount()
-    {
-        return itemCount;
-    }
-
-    public void addTicket(Ticket t)
-    {
-        if(ticketCount<MAX_TICKETS)
+        LineItem[] l = new LineItem[count];
+        for(int i=0;i<count;i++)
         {
-            tickets[ticketCount]=t;
-            ticketCount++;
+            l[i]=lines[i];
         }
+        return l;
     }
-    public void addItem(ConcessionItem c, int qty)
+
+    public int getCount()
     {
-        if(itemCount<MAX_ITEMS && qty>0)
+        return count;
+    }
+
+    public boolean add(LineItem line)
+    {
+        if(count<=MAX_LINES)
         {
-            items[itemCount]=c;
-            qtys[itemCount]=qty;
-            itemCount++;
+            lines[count]=line;
+            count++;
+            return true;
         }
+        return false;
+    }
+    public boolean add(ConcessionItem item, int qty)
+    {
+        if(qty>0)
+        {
+            return add(new ConcessionLine(item,qty));
+        }
+        return false;
     }
 
     public double sumTicketsPaid()
     {
         double sum=0.0;
-        for(int i=0;i<ticketCount;i++)
+        for(int i=0;i<count;i++)
         {
-            sum=sum+tickets[i].getPricePaid();
+            sum=sum+lines[i].getPricePaid();
         }
         return sum;
     }
@@ -90,9 +74,9 @@ public class Cart
         return sum;
     }
 
-    public boolean hasItem(String code)
+    public boolean hasCode(String code)
     {
-        for(int i=0;i<itemCount;i++)
+        for(int i=0;i<count;i++)
         {
             if(items[i].getCode().equals(code))
             {
@@ -100,5 +84,20 @@ public class Cart
             }
         }
         return false;
+    }
+
+    public double grandSubtotal()
+    {
+        double total=0.0;
+        for(int i=0;i<count;i++)
+        {
+            total=total+lines[i].subtotal();
+        }
+        return total;
+    }
+
+    public void getTicketCount()
+    {
+
     }
 }
