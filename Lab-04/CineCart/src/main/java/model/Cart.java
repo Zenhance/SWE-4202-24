@@ -25,8 +25,15 @@ public class Cart {
         return lineCount;
     }
 
+    public void add(LineItem l){
+        if (lineCount >= MAX_LINES)
+            throw new IllegalArgumentException("MAX LINES exceeded");
+        lines[lineCount] = l;
+        lineCount++;
+    }
 
 
+/*
     public void addTicket(AbstractTicket t){
         if (lineCount >= MAX_LINES)
             throw new IllegalArgumentException("MAX LINES exceeded");
@@ -41,7 +48,7 @@ public class Cart {
         //qtys[lineCount] = qty;
         lineCount++;
     }
-    /*
+
     public double sumTicketsPaid(){
         double ticketPrice = 0;
         for(int i = 0; i < ticketCount; i++){
