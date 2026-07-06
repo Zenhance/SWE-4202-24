@@ -53,7 +53,7 @@ public class Cart
     {
         for(int i=0;i<count;i++)
         {
-            if(items[i].getCode().equals(code))
+            if(lines[i].hashCode(code))
             {
                 return true;
             }
