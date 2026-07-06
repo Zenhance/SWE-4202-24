@@ -30,15 +30,13 @@ public class Cart
         return l;
     }
 
-    public boolean add(LineItem line)
+    public void add(LineItem line)
     {
         if(count<=MAX_LINES)
         {
             lines[count]=line;
             count++;
-            return true;
         }
-        return false;
     }
     public boolean add(ConcessionItem item, int qty)
     {
