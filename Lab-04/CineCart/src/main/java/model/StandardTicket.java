@@ -16,6 +16,6 @@ public class StandardTicket extends AbstractTicket
     @Override
     public String describe()
     {
-        return null;
+        return super.describe();
     }
 }

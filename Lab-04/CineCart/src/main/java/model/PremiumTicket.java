@@ -18,6 +18,6 @@ public class PremiumTicket extends AbstractTicket
     @Override
     public String describe()
     {
-        return null;
+        return super.describe()+" Premium";
     }
 }

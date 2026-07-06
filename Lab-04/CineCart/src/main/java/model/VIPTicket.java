@@ -14,4 +14,10 @@ public class VIPTicket extends PremiumTicket
     {
         return super.subtotal()+FLAT_LOUNGE;
     }
+
+    @Override
+    public String describe()
+    {
+        return super.describe()+" VIP";
+    }
 }
