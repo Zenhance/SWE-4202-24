@@ -33,8 +33,8 @@ public class CheckoutEngine
         }
         double price = showtime.getMovie().getBasePrice()*(seat.isPremium()?1.30:1.00)*(showtime.isPeak()?1.20:1.00);
         seat.book();
-        Ticket ticket = new Ticket(showtime,row,col,price);
-        cart.addTicket(ticket);
+        StandardTicket ticket = new StandardTicket(showtime,row,col);
+        cart.add(ticket);
         return "OK";
     }
 
@@ -49,7 +49,7 @@ public class CheckoutEngine
         {
             return "Invalid quantity";
         }
-        cart.addItem(item,qty);
+        cart.add(item,qty);
         return "OK";
     }
 
@@ -58,7 +58,7 @@ public class CheckoutEngine
         double ticketSubtotal = cart.sumTicketsPaid();
         double concessionSubtotal = cart.sumConcessionsRaw();
         double combo = 0.0;
-        if(cart.hasItem("POP") && cart.hasItem("SODA"))
+        if(cart.hasCode("POP") && cart.hasCode("SODA"))
         {
             combo=50.0;
         }
@@ -80,14 +80,10 @@ public class CheckoutEngine
         String receipt="=== Receipt ===\n";
         receipt=receipt+"Customer : "+cart.getOwner().getName();
         receipt=receipt+"\nTickets\n";
-        for(int i=0;i<cart.getTicketCount();i++)
+        for(LineItem line : cart.getLines())
         {
-            receipt=receipt+cart.getTickets()[i].toString();
-        }
-        receipt=receipt+"\nConcessions\n";
-        for(int i=0;i<cart.getItemCount();i++)
-        {
-            receipt=receipt+cart.getItems()[i].getName()+" x "+cart.getQtys()[i];
+            receipt=receipt+line.describe();
+            receipt=receipt+"\nBDT"+String.format("%.2f",line.describe())+"\n";
         }
         receipt=receipt+"\nPayable : ";
         double amount = checkout(cart);
