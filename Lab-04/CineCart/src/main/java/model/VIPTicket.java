@@ -12,6 +12,6 @@ public class VIPTicket extends PremiumTicket
     @Override
     public double subtotal()
     {
-        return super.subTotal()+FLAT_LOUNGE;
+        return super.subtotal()+FLAT_LOUNGE;
     }
 }
