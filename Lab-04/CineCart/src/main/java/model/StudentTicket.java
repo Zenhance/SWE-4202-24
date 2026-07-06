@@ -1,6 +1,6 @@
 package model;
 
-public class StudentTicket extends AbstractTicket
+public class StudentTicket extends StandardTicket
 {
     protected static final double STUDENT = 0.50;
 
