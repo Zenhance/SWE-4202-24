@@ -38,14 +38,14 @@ public abstract class AbstractTicket extends LineItem
     public double peakTime()
     {
         if(showtime.isPeak())
-        {
-            base=base*1.20;
-        }
+        return base*1.20;
         else
-        {
-            base=base*1.00;
-        }
         return base;
     }
 
+    @Override
+    public String describe()
+    {
+        return showtime.getMovie().getTitle()+" R"+row+"C"+col;
+    }
 }
