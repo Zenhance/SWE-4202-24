@@ -12,7 +12,7 @@ public class PremiumTicket extends AbstractTicket
     @Override
     public double subtotal()
     {
-        return base*PREMIUM*peakTime();
+        return PREMIUM*peakTime();
     }
 
     @Override

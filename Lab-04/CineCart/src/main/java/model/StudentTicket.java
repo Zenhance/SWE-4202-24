@@ -12,7 +12,7 @@ public class StudentTicket extends AbstractTicket
     @Override
     public double subtotal()
     {
-        return base*STUDENT*peakTime();
+        return STUDENT*peakTime();
     }
 
     @Override
