@@ -7,17 +7,13 @@ public class LifelineConnection extends Connection{
 
     @Override
     public double energyCharge(){
+        double rebate=super.energyCharge()*0.30;
+        return super.energyCharge()-rebate;
 
 
     }
 
 
-    @Override
-    public double fixedCharge(){
-
-
-
-    }
 
 
 

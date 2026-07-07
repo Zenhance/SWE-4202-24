@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="IndustrialConnection">
-      <change beforePath="$PROJECT_DIR$/Lab-08/GridLedger/src/main/java/ResidentialConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-08/GridLedger/src/main/java/ResidentialConnection.java" afterDir="false" />
+    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="ResidentialConnection method completion">
+      <change beforePath="$PROJECT_DIR$/Lab-08/GridLedger/src/main/java/LifelineConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-08/GridLedger/src/main/java/LifelineConnection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,22 +209,6 @@
       <workItem from="1778092688155" duration="94000" />
       <workItem from="1778092809585" duration="6679000" />
       <workItem from="1778163384097" duration="3333000" />
-    </task>
-    <task id="LOCAL-00077" summary="message writing">
-      <option name="closed" value="true" />
-      <created>1780987114357</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1780987114357</updated>
-    </task>
-    <task id="LOCAL-00078" summary="message writing">
-      <option name="closed" value="true" />
-      <created>1780987150054</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1780987150054</updated>
     </task>
     <task id="LOCAL-00079" summary="message writing">
       <option name="closed" value="true" />
@@ -602,7 +586,23 @@
       <option name="project" value="LOCAL" />
       <updated>1783403581079</updated>
     </task>
-    <option name="localTasksCounter" value="126" />
+    <task id="LOCAL-00126" summary="ResidentialConnection method">
+      <option name="closed" value="true" />
+      <created>1783403975430</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1783403975430</updated>
+    </task>
+    <task id="LOCAL-00127" summary="ResidentialConnection method completion">
+      <option name="closed" value="true" />
+      <created>1783404090854</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1783404090854</updated>
+    </task>
+    <option name="localTasksCounter" value="128" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -642,8 +642,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="sms skeleton writing" />
-    <MESSAGE value="sms methods" />
     <MESSAGE value="..." />
     <MESSAGE value=".." />
     <MESSAGE value="renamed ticket and made it abstractticket" />
@@ -667,6 +665,8 @@
     <MESSAGE value="commercialconnection" />
     <MESSAGE value="." />
     <MESSAGE value="IndustrialConnection" />
-    <option name="LAST_COMMIT_MESSAGE" value="IndustrialConnection" />
+    <MESSAGE value="ResidentialConnection method" />
+    <MESSAGE value="ResidentialConnection method completion" />
+    <option name="LAST_COMMIT_MESSAGE" value="ResidentialConnection method completion" />
   </component>
 </project>
