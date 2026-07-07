@@ -13,17 +13,17 @@ public abstract class Connection {
     public abstract double energyCharge();
     public abstract double fixedCharge();
 
-    public double getFuelSurcharge(){
+    public double fuelSurcharge(){
         return energyCharge()*fuelSurchargePercentage;
     }
 
-    public double getTax(){
-        double subtotal= energyCharge()+fixedCharge()+getFuelSurcharge();
+    public double tax(){
+        double subtotal= energyCharge()+fixedCharge()+fuelSurcharge();
         return subtotal*taxPercentage;
     }
 
-    public double getTotalBill(){
-        return energyCharge()+fixedCharge()+getFuelSurcharge()+getTax();
+    public double total(){
+        return energyCharge()+fixedCharge()+fuelSurcharge()+tax();
     }
 
     public void setFuelSurchargePercentage(double fuelPercentage){
