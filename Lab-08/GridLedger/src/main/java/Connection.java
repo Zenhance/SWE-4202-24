@@ -16,10 +16,6 @@ public abstract class Connection {
         return meter;
     }
 
-    public static double getTax() {
-        return tax;
-    }
-
     public double getFuelSurcharge() {
         return getEnergyCharge() * (fuelSurchargePercentage / 100.0);
     }
@@ -35,5 +31,10 @@ public abstract class Connection {
     public abstract double getEnergyCharge();
 
     public abstract double getFixedCharge();
+
+    public double getTax() {
+        double subtotal = getEnergyCharge() + getFixedCharge() + getFuelSurcharge();
+        return subtotal * (tax / 100.0);
+    }
 
 }
