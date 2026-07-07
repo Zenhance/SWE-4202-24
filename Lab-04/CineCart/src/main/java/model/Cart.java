@@ -46,7 +46,7 @@ public void add(LineItem line){
         }
         return copy;
       }
-      return double grandSubtotal(){
+      public double grandSubtotal(){
         double total=0;
         for(int i=0;i<count;i++){
             total+=lines[i].subtotal();
@@ -56,9 +56,21 @@ public void add(LineItem line){
     public int ticketCount(){
         int tickets=0;
         for(int i=0;i<count;i++){
-
+        if(lines[i].isTicket()){
+            tickets++;
         }
+        }
+        return tickets;
     }
+    public boolean hasCode(String code){
+        for(int i=0;i<count;i++) {
+            if(lines[i].hasCode(code)){
+                return true;
+        }
+        }
+        return false;
+    }
+
     public void addTicket(Ticket t){
     if(ticketCount<MAX_TICKETS){
         tickets[ticketCount]=t;
