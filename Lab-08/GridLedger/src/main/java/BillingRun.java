@@ -23,6 +23,10 @@ public class BillingRun {
         connections.add(c);
     }
     public double grandTotal(){
-
+        double t=0.0;
+        for (Connection c: connections){
+            t=t+c.total();
+        }
+        return t;
     }
 }
