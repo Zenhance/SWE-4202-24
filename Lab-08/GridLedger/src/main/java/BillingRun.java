@@ -19,4 +19,15 @@ public class BillingRun {
         }
         return invoices;
     }
+    public double grandTotal() {
+        double sum = 0.0;
+        for (Connection connection : connections) {
+            sum += connection.total();
+        }
+        return sum;
+    }
+
+    public int size() {
+        return connections.size();
+    }
 }
