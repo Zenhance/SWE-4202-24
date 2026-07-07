@@ -3,14 +3,17 @@ public class CommercialConnection extends Connection{
         super(M);
     }
 
+    private double RATE_1 = 9.0;
+    private double RATE_2 = 13.0;
+
     @Override
     public double energyCharge() {
         double c = 0;
         if (units <= 100) {
-            c += units * 9.0;
+            c += units * RATE_1;
         } else {
-            c += 100 * 9.0;
-            c += (units - 100) * 13.0;
+            c += 100 * RATE_1;
+            c += (units - 100) * RATE_2;
         }
         return c;
     }

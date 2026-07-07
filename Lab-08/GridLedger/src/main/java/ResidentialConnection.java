@@ -4,20 +4,21 @@ public class ResidentialConnection extends Connection {
         super(M);
     }
 
-
-
+    private double RATE_1 = 4.0;
+    private double RATE_2 = 7.0;
+    double RATE_3 = 11.0;
     @Override
     public double energyCharge() {
         double c = 0;
         if (units <= 50) {
-            c += units * 4.0;
+            c += units * RATE_1;
         } else {
-            c += 50 * 4.0;
+            c += 50 * RATE_1;
             if (units <= 200) {
-                c += (units - 50) * 7.0;
+                c += (units - 50) * RATE_2;
             } else {
-                c += 150 * 7.0;
-                c += (units - 200) * 11.0;
+                c += 150 * RATE_2;
+                c += (units - 200) * RATE_3;
             }
         }
         return c;

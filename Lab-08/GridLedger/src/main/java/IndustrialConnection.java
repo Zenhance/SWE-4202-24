@@ -3,9 +3,10 @@ public class IndustrialConnection extends Connection {
         super(M);
     }
 
+    private double RATE = 15.0;
     @Override
     public double energyCharge() {
-        return units * 15.0;
+        return units * RATE;
     }
 
     @Override

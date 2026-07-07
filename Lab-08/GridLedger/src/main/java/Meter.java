@@ -1,7 +1,7 @@
 public class Meter {
 
-    private int previousReading;
-    private int currentReading;
+    private final int previousReading;
+    private final int currentReading;
 
     public Meter(int previousReading, int currentReading){
         if(previousReading < 0) throw new IllegalArgumentException("previousReading cannot be negative");
