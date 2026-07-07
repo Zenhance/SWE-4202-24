@@ -6,7 +6,7 @@ public class Meter {
 
     public Meter(int previousReading, int currentReading){
         if(currentReading<0 || previousReading<0){
-            throw new IllegalArgumentException("Reading cant be negative.")
+            throw new IllegalArgumentException("Reading cant be negative.");
         }
         if(currentReading<previousReading){
             throw new IllegalArgumentException("Usages cant be negative");

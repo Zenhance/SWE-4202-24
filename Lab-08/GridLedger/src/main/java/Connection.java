@@ -4,8 +4,8 @@ import java.Meter;
 
 public abstract class Connection {
     private final Meter meter;
-    private static double fuelPercent = 0.10;
-    private static double taxPercent  = 0.05;
+    private  double fuelPercent = 0.10;
+    private static final double taxPercent  = 0.05;
     protected Connection(Meter meter){
         this.meter = meter;
     }
