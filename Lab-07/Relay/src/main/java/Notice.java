@@ -4,9 +4,9 @@ public class Notice {
 
     public static void main(String[] args) {
         public String transmit() {
-            if(channel == "EMAIL");
-            else if(channel == "SMS");
-            else if(channel == "PUSH");
+            if(channel.equals("EMAIL"));
+            else if(channel.equals("SMS");
+            else if(channel.equals("PUSH"));
         }
     }
 }
