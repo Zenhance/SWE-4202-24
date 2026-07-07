@@ -15,6 +15,14 @@ public class BillingRun {
     public int size(){
         return connections.size();
     }
+
+    public double grandTotal() {
+        double subtotal = 0;
+        for (Connection c : connections) {
+            subtotal += c.total();
+        }
+        return subtotal;
+    }
 }
 
 
