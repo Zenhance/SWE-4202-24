@@ -20,7 +20,7 @@ public class Meter {
     public int getClosing_reading(){
         return closing_reading;
     }
-    public int getUnitsConsumed(int closing_reading, int opening_reading){
+    public int getUnitsConsumed(){
         return closing_reading-opening_reading;
     }
 
