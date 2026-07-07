@@ -1,2 +1,2 @@
-public class ResidentialConnection {
+public class ResidentialConnection extends Connection{
 }

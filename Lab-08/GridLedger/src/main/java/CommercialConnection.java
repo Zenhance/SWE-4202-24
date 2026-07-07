@@ -1,2 +1,2 @@
-public class CommercialConnection {
+public class CommercialConnection extends Connection{
 }

@@ -1,2 +1,2 @@
-public class LifelineConnection {
+public class LifelineConnection extends Connection{
 }

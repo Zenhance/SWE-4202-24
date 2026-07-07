@@ -1,2 +1,2 @@
-public class IndustrialConnection {
+public class IndustrialConnection extends Connection {
 }
