@@ -8,7 +8,7 @@ public class ResidentialConnection extends Connection {
     }
 
     public double energyCharge() {
-        int units = meter.getUnitsConsumed()
+        int units = meter.getUnitsConsumed();
 
                 if(units <= 50){
                     return units*rate1;
