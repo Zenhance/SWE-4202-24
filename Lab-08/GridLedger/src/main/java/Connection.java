@@ -23,15 +23,12 @@ public abstract class Connection{
          return subtotal * 0.05;
     }
 
+    public double total(){
 
 
+    }
 
-
-
-
-
-
-
-
-
+    public Meter getMeter() {
+        return meter;
+    }
 }
