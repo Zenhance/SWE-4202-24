@@ -7,4 +7,13 @@ public class CommercialConnection extends Connection {
     public CommercialConnection(Meter meter) {
         super(meter);
     }
+    @Override
+    public double energyCharge() {
+        int units = getUnitsConsumed();
+        if (units <= BAND1_LIMIT) {
+            return (units * RATE_BAND1);
+        }else{
+        return (BAND1_LIMIT * RATE_BAND1 + (units - BAND1_LIMIT) * RATE_BAND2);
+        }
+    }
 }
