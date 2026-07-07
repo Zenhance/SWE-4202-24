@@ -17,6 +17,6 @@ public class Connection {
     }
 
     public double total() {
-        return fixedCharge() + fuelSurcharge() + tax();
+        return energyCharge() == null ? 0.0 : energyCharge() * 0.1 + fixedCharge() + fuelSurcharge() + tax();
     }
 }
