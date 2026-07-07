@@ -12,18 +12,20 @@ public abstract class Connection {
         this.fuelSurchargePercentage = fuelSurchargePercentage;
     }
 
-    public @org.jspecify.annotations.Nullable Byte energyCharge() {
+    public Meter getMeter() {
+        return meter;
     }
 
-    public double fixedCharge() {
+    public static double getTax() {
+        return tax;
     }
 
-    public double fuelSurcharge() {
+    public double getFuelSurchargePercentage() {
+        return fuelSurchargePercentage;
     }
 
-    public double tax() {
+    public void setFuelSurchargePercentage(double fuelSurchargePercentage) {
+        this.fuelSurchargePercentage = fuelSurchargePercentage;
     }
 
-    public double total() {
-    }
 }
