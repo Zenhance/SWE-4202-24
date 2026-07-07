@@ -5,7 +5,8 @@ public class BillingRun {
 
     public BillingRun(){
 
-        connections=new ArrayList<>(); invoices=new ArrayList<>();
+        connections=new ArrayList<>();
+        invoices=new ArrayList<>();
     }
 
     public void register(Connection c){
@@ -21,7 +22,7 @@ public class BillingRun {
 
     public int size(){
 
-        return connections.size;
+        return connections.size();
     }
 
     public double grandTotal(){
@@ -33,9 +34,6 @@ public class BillingRun {
         } return subtotal;
 
     }
-
-
-
 
     public ArrayList<Invoice> execute() {
         return invoices;
