@@ -20,19 +20,20 @@ public abstract class Connection {
         return tax;
     }
 
-    public double getFuelSurchargePercentage() {
-        return fuelSurchargePercentage;
+    public double getFuelSurcharge() {
+        return getEnergyCharge() * (fuelSurchargePercentage / 100.0);
     }
 
     public void setFuelSurchargePercentage(double fuelSurchargePercentage) {
         this.fuelSurchargePercentage = fuelSurchargePercentage;
     }
 
-    protected int getUnits(){
+    protected int getUnits() {
         return meter.getUnitsConsumed();
     }
 
     public abstract double getEnergyCharge();
-    public abstract double getFixedCharge(); 
+
+    public abstract double getFixedCharge();
 
 }
