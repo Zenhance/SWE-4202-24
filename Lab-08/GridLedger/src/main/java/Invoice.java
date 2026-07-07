@@ -5,7 +5,7 @@ public class Invoice {
         this.connection=connection;
     }
 
-    public double getAmount(){
-        return connection.totalBill();
+    public double getTotal(){
+        return connection.total();
     }
 }

@@ -9,10 +9,13 @@ public class BillingRun{
     public void register(Connection c){
         connections.add(c);
     }
+    public void register(Connection c,double fuelPercentage){
+        connections.add(c);
+    }
     public int size(){
         return connections.size();
     }
-    public ArrayList<Invoice> excecute(){
+    public ArrayList<Invoice> execute(){
         ArrayList<Invoice> invoices=new ArrayList<>();
         for(Connection c:connections){
             invoices.add(new Invoice(c));
