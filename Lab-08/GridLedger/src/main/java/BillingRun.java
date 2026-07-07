@@ -10,19 +10,24 @@ public class BillingRun {
 
     public void register(Connection c){
         connections.add(c);
-        invoices.add();
+        invoices.add(new Invoice(c));
     }
 
 
     public void register(Connection c,double fuelRate){
         connections.add(c);
-        invoices.add();
+        invoices.add(Invoice(c));
+    }
+
+    public int size(){
+
+        return connections.size;
     }
 
 
 
 
-
-
-
+    public ArrayList<Invoice> execute() {
+        return invoices;
+    }
 }
