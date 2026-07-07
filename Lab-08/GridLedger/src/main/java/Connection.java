@@ -18,4 +18,8 @@ public abstract class Connection
         this.meter = meter;
         this.fuelSurchargePercentage = fuelSurchargePercentage;
     }
+    public void setFuelSurchargePercentage(double fuelSurchargePercentage)
+    {
+        this.fuelSurchargePercentage = fuelSurchargePercentage;
+    }
 }
