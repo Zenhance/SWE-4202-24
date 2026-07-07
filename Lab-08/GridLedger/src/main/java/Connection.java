@@ -16,5 +16,10 @@ public abstract class Connection {
     public double tax() {
         return (energyCharge() + fuelSurcharge() + fixedCharge()) * .05;
     }
-
+    public double total(){
+        return energyCharge() + fixedCharge() + fuelSurcharge() + tax();
+    }
+    public void setFuelPercentage(double fuelPercentage) {
+        this.fuelPercentage = fuelPercentage;
+    }
 }
