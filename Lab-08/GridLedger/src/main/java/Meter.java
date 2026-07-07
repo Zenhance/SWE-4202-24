@@ -15,4 +15,14 @@ public final class Meter
         this.openingReading = openingReading;
         this.closeingReading = closeingReading;
     }
+    public int getOpeningReading()
+    {
+        return openingReading;
+    }
+
+    public int getCloseingReading()
+    {
+        return closeingReading;
+    }
+
 }
