@@ -19,22 +19,12 @@ public class ResidentialConnection extends Connection {
                 c += 150 * 7.0;
                 c += (units - 200) * 11.0;
             }
-            return c;
         }
+        return c;
     }
 
     @Override
     public double fixedCharge() {
         return 100.0;
-    }
-
-    @Override
-    public double fuelSurcharge() {
-        return energyCharge()*fuelPercent;
-    }
-
-    @Override
-    public double tax() {
-        return  (energyCharge() + fixedCharge() + fuelSurcharge()) * taxPercent;
     }
 }

@@ -13,8 +13,14 @@ public abstract class Connection {
 
     public abstract double energyCharge();
     public abstract double fixedCharge();
-    public abstract double fuelSurcharge();
-    public abstract double tax();
+
+    public double fuelSurcharge() {
+        return energyCharge()*fuelPercent;
+    }
+    public double tax() {
+        return  (energyCharge() + fixedCharge() + fuelSurcharge()) * taxPercent;
+    }
+
     public double total(){
         return energyCharge()+fixedCharge()+fuelSurcharge()+tax();
     };
