@@ -23,5 +23,8 @@ public class ResidentialConnection extends Connection {
                     + (units - BAND2_LIMIT) * RATE_BAND3);
         }
     }
-
+    @Override
+    public double fixedCharge() {
+        return FIXED_CHARGE;
+    }
 }
