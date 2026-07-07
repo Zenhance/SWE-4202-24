@@ -17,4 +17,9 @@ public class CommercialConnection extends Connection{
            return 100*COM_RATE_1+(unit-100)*COM_RATE_2;
         }
     }
+
+    @Override
+    public double fixedCharge() {
+        return COM_FIXED;
+    }
 }
