@@ -17,8 +17,13 @@ public abstract class Connection{
     public double tax(){
 
 
-        return
+        double subtotal= this.energyCharge()+this.fixedCharge()+this.fuelSurcharge();
+
+
+         return subtotal * 0.05;
     }
+
+
 
 
 
