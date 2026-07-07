@@ -4,4 +4,14 @@ public class IndustrialConnection extends Connection{
     public IndustrialConnection(Meter meter) {
         super(meter);
     }
+
+    @Override
+    double energyCharge() {
+        return getMeter().getUnitsConsumed()*IND_RATE;
+    }
+
+    @Override
+    double fixedCharge() {
+        return IND_FIXED;
+    }
 }
