@@ -56,4 +56,9 @@ public class Main {
                     "MISMATCH in " + label + ": expected " + expected + " but got " + actual);
         }
     }
+
+    public static class ResidentialConnection {
+        public ResidentialConnection(Meter meter) {
+        }
+    }
 }
