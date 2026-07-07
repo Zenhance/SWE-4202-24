@@ -5,7 +5,7 @@ public class CommercialConnection extends Connection{
     private static final double RATE_2 = 13.0;
 
     public CommercialConnection(Meter meter){
-        super(Meter meter, int FIXED_CHARGE);
+        super(meter,FIXED_CHARGE);
     }
     @Override
     public double energyCharge(){
