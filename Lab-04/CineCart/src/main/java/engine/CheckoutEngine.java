@@ -31,6 +31,14 @@ public class CheckoutEngine
         {
             return "Seat unavailable";
         }
+        if(seat.isPremium())
+        {
+            cart.add(new PremiumTicket(showtime, row, col));
+        }
+        else
+        {
+            cart.add(new StandardTicket(showtime, row, col));
+        }
         double price = showtime.getMovie().getBasePrice()*(seat.isPremium()?1.30:1.00)*(showtime.isPeak()?1.20:1.00);
         seat.book();
         StandardTicket ticket = new StandardTicket(showtime,row,col);
