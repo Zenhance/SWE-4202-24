@@ -1,5 +1,5 @@
-public class Industrial extends Connection{
-    public Industrial(Meter meter){
+public class IndustrialConnection extends Connection{
+    public IndustrialConnection(Meter meter){
         super(meter);
     }
     @Override
