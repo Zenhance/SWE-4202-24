@@ -7,6 +7,10 @@ public class BillingRun {
     public BillingRun() {
         connections = new ArrayList<>();
     }
+
+    public void register(Connection c) {
+        connections.add(c);
+    }
 }
 
 
