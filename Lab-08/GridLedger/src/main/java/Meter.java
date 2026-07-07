@@ -17,4 +17,12 @@ public class Meter {
 
     public int getUnitsConsumed() {
     }
+
+    public int getOpeningReading() {
+        return openingReading;
+    }
+
+    public int getClosingReading() {
+        return closingReading;
+    }
 }
