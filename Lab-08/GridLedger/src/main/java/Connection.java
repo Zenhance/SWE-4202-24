@@ -7,6 +7,9 @@ public abstract class Connection {
         this.meter = meter;
     }
 
+    public Meter getMeter() {
+        return meter;
+    }
     public abstract double energyCharge();
     public abstract double fixedCharge();
 
@@ -15,5 +18,8 @@ public abstract class Connection {
     }
     public double tax(){
         return (energyCharge() + fixedCharge() + fuelSurcharge()) * TAX_RATE;
+    }
+    public double total(){
+        return energyCharge() + fixedCharge() + fuelSurcharge() + tax();
     }
 }
