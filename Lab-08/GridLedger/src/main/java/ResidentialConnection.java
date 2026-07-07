@@ -11,5 +11,13 @@ public class ResidentialConnection extends Connection{
         }else if(units<=200){
             return (50*40) + ((units-50))*7;
         }
+        else {
+            return 50*40+150*7;
+        }
+    }
+
+    @Override
+    public double fixedCharge() {
+        return 100;
     }
 }
