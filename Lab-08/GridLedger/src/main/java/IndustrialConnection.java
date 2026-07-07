@@ -9,4 +9,9 @@ public class IndustrialConnection extends Connection {
     public double energyCharge() {
         return getUnitsConsumed() * RATE;
     }
+
+    @Override
+    public double fixedCharge() {
+        return FIXED_CHARGE;
+    }
 }
