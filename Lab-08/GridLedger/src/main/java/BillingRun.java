@@ -3,9 +3,11 @@ import java.util.ArrayList;
 public class BillingRun {
 
     private ArrayList<Connection> connections;
+    private ArrayList<Invoice> invoices;
 
     public BillingRun() {
         connections = new ArrayList<>();
+        invoices = new ArrayList<>();
     }
 
     public void register(Connection c) {
@@ -27,6 +29,11 @@ public class BillingRun {
             subtotal += c.total();
         }
         return subtotal;
+    }
+
+    public ArrayList<Invoice> execute() {
+
+        return invoices;
     }
 }
 
