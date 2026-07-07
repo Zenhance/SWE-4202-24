@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="meter class">
-      <change beforePath="$PROJECT_DIR$/Lab-08/GridLedger/src/main/java/Meter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-08/GridLedger/src/main/java/Meter.java" afterDir="false" />
+    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="connection class">
+      <change beforePath="$PROJECT_DIR$/Lab-08/GridLedger/src/main/java/Connection.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-08/GridLedger/src/main/java/Connection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,22 +209,6 @@
       <workItem from="1778092688155" duration="94000" />
       <workItem from="1778092809585" duration="6679000" />
       <workItem from="1778163384097" duration="3333000" />
-    </task>
-    <task id="LOCAL-00063" summary="signature">
-      <option name="closed" value="true" />
-      <created>1780400136323</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1780400136323</updated>
-    </task>
-    <task id="LOCAL-00064" summary="signature">
-      <option name="closed" value="true" />
-      <created>1780400189019</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1780400189019</updated>
     </task>
     <task id="LOCAL-00065" summary="signature">
       <option name="closed" value="true" />
@@ -602,7 +586,23 @@
       <option name="project" value="LOCAL" />
       <updated>1783401083133</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="meter class completion">
+      <option name="closed" value="true" />
+      <created>1783401236019</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1783401236019</updated>
+    </task>
+    <task id="LOCAL-00113" summary="connection class">
+      <option name="closed" value="true" />
+      <created>1783401594262</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1783401594262</updated>
+    </task>
+    <option name="localTasksCounter" value="114" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -642,8 +642,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Cart.java line 76 fix" />
-    <MESSAGE value="recipient" />
     <MESSAGE value="recipient methods" />
     <MESSAGE value="message writing" />
     <MESSAGE value="message methods" />
@@ -667,6 +665,8 @@
     <MESSAGE value="." />
     <MESSAGE value="creating classes" />
     <MESSAGE value="meter class" />
-    <option name="LAST_COMMIT_MESSAGE" value="meter class" />
+    <MESSAGE value="meter class completion" />
+    <MESSAGE value="connection class" />
+    <option name="LAST_COMMIT_MESSAGE" value="connection class" />
   </component>
 </project>
