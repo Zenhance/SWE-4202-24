@@ -1,7 +1,7 @@
 public class Meter {
 
-    double openingReading;
-    double closingReading;
+    private double openingReading;
+    private double closingReading;
 
     public Meter(double openingReading, double closingReading) {
         if (openingReading > closingReading) {
@@ -23,7 +23,8 @@ public class Meter {
         return closingReading;
     }
 
-    public getUnitsConsumed() {
+    public double getUnitsConsumed() {
         return closingReading-openingReading;
+
     }
 }
