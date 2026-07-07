@@ -1,5 +1,8 @@
 public class Meter {
-    public Meter(int i, int i1) {
+    private int openingReading;
+    private int closingReading;
+    public Meter(int openingReading, int closingReading) {
+
     }
 
     public int getUnitsConsumed() {
