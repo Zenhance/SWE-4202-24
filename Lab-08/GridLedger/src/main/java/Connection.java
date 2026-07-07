@@ -12,5 +12,18 @@ public abstract class Connection {
         this.fuelSurchargePercent = fuelSurchargePercent;
     }
 
+    public abstract double energyCharge();
+    public abstract double fixedCharge();
 
+    public double fuelSurcharge(){
+        return energyCharge() * fuelSurchargePercent;
+    }
+
+    public double tax() {
+        return (energyCharge() + fixedCharge() + fuelSurcharge()) * TAX_PERCENT;
+    }
+
+    public double total() {
+        return energyCharge() + fixedCharge() + tax() + fuelSurcharge();
+    }
 }
