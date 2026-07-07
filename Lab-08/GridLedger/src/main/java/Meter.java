@@ -4,13 +4,13 @@ public final class Meter
     private final int closeingReading;
     public Meter(int openingReading, int closeingReading)
     {
-        if(openingReading>0 || closeingReading>0)
+        if(openingReading<0 || closeingReading<0)
         {
-            throw new IllegalArgumentException("A Meter reading can not be negative.")
+            throw new IllegalArgumentException("A Meter reading can not be negative.");
         }
-        if(closeingReading>openingReading)
+        if(closeingReading<openingReading)
         {
-            throw new IllegalArgumentException("Closing reading cannot be below the opening reading.")
+            throw new IllegalArgumentException("Closing reading cannot be below the opening reading.");
         }
         this.openingReading = openingReading;
         this.closeingReading = closeingReading;
