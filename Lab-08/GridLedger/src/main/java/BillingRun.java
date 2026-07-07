@@ -8,7 +8,6 @@ public class BillingRun{
 
 
     public List<Invoice> execute(){
-
         return invoices;
     }
 
@@ -16,7 +15,13 @@ public class BillingRun{
 
     public int size(){return connections.size();}
 
-    public int grandTotal(){return 0;}
+    public double grandTotal(){
+        double grand = 0.0;
+        for(Connection c : connections){
+            grand += c.total();
+        }
+        return grand;
+    }
 
     public void register(Connection connection){
         connections.add(connection);
