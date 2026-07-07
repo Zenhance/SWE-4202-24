@@ -1,4 +1,4 @@
-public class Connection {
+abstract class Connection {
 
     public double energyCharge() {
         return 0.0;
