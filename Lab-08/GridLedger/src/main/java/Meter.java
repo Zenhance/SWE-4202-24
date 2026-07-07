@@ -12,5 +12,8 @@ public class Meter {
     }
 
 
+    public int getUnitsConsumed() {
+        return currentReading - previousReading;
+    }
 
 }
