@@ -1,4 +1,9 @@
 abstract class Connection {
+    private final Meter meter;
+
+    public Connection(Meter meter) {
+        this.meter = meter;
+    }
 
     public double energyCharge() {
         return 0.0;
