@@ -48,4 +48,16 @@ public abstract class AbstractTicket extends LineItem
     {
         return showtime.getMovie().getTitle()+" R"+row+"C"+col;
     }
+
+    @Override
+    public boolean isTicket()
+    {
+        return true;
+    }
+
+    @Override
+    public boolean hasCode(String code)
+    {
+        return true;
+    }
 }
