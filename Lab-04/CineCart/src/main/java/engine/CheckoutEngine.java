@@ -35,7 +35,9 @@ public class CheckoutEngine {
         return "Seat unavailable";
     }
  double price=movie.getBasePrice();
+ LineItem line;
  if(seat.isPremium()){
+     line=new PremiumTicket(showtime,row,col);
      price=price*1.30;
  }
   if(showtime.isPeak()){
