@@ -43,4 +43,5 @@ public abstract class Connection
     {
         this.fuelPercentage = fuelPercentage;
     }
+
 }
