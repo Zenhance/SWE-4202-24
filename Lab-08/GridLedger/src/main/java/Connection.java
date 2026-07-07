@@ -7,4 +7,8 @@ public class Connection {
     public double fixedCharge() {
         return 0.0;
     }
+
+    public double fuelSurcharge() {
+        return 0.0;
+    }
 }
