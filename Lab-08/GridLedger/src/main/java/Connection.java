@@ -9,4 +9,8 @@ public abstract class Connection{
     public abstract double energyCharge();
 
     public abstract double fixedCharge();
+
+    public double fuelSurcharge() {
+        return this.energyCharge() * 0.10;
+    }
 }
