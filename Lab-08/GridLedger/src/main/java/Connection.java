@@ -15,4 +15,13 @@ public abstract class Connection {
     public double fuelSurviceCharge(){
         return energyCharge()*fuelPercentage;
     }
+
+    public double tax(){
+        double subtotal=energyCharge()+fixedCharge()+fuelSurviceCharge();
+        return subtotal*0.05;
+    }
+
+    public double total(){
+        return energyCharge()+fixedCharge()+fuelSurviceCharge()+tax();
+    }
 }
