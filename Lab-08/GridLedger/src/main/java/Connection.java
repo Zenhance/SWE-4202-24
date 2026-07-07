@@ -1,7 +1,8 @@
 public abstract class Connection {
 
     protected Meter meter;
-    private double fuelSurChargePercentage = 0.4;
+    private double fuelSurChargePercentage;
+    protected static final double TAX_PERCENTAGE;
 
     public Connection(Meter meter, double fuelSurChargePercentage ) {
         this.meter = meter;
@@ -16,12 +17,15 @@ public abstract class Connection {
     public abstract double fixedCharge();
 
     public double fuelSurCharge() {
-
+        return fuelSurChargePercentage*energyCharge();
     }
 
     public double tax() {
-
+        double subtotal = energyCharge() + fixedCharge() + fuelSurCharge();
+        return subtotal*TAX_PERCENTAGE;
     }
 
-    public double total()
+    public double total() {
+
+    }
 }
