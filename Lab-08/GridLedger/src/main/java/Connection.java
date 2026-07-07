@@ -15,4 +15,8 @@ public class Connection {
     public double tax() {
         return 0.0;
     }
+
+    public double total() {
+        return fixedCharge() + fuelSurcharge() + tax();
+    }
 }
