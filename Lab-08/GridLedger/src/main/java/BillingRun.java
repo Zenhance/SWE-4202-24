@@ -3,6 +3,7 @@ import java.util.List;
 
 public class BillingRun {
     private final List<Connection> connections = new ArrayList<>();
+
     public void register(Connection connection) {
         connections.add(connection);
     }
@@ -22,5 +23,13 @@ public class BillingRun {
             totalSum += c.total();
         }
         return totalSum;
+    }
+
+    public List<Invoice> execute() {
+        List<Invoice> invoices = new ArrayList<>();
+        for (Connection c : connections) {
+            invoices.add(new Invoice(c.total()));
+        }
+        return invoices;
     }
 }
