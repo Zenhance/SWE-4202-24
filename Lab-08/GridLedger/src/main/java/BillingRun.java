@@ -15,4 +15,7 @@ public class BillingRun {
     public List<Invoice> execute() {
         return null;
     }
+
+    public void register(Connection res, double v) {
+    }
 }
