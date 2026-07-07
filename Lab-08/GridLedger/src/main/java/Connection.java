@@ -37,4 +37,7 @@ public abstract class Connection {
         return subtotal * (tax / 100.0);
     }
 
+    public double getTotalBill() {
+        return getEnergyCharge() + getFixedCharge() + getFuelSurcharge() + getTax();
+    }
 }
