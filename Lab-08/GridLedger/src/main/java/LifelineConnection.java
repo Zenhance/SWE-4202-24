@@ -4,4 +4,8 @@ public class LifelineConnection extends Connection{
     public LifelineConnection(Meter meter){
         super(meter);
     }
+    @Override
+    public double energyCharge(){
+        return super.energyCharge()*(1.0-LIFELINE_REBATE);
+    }
     }
