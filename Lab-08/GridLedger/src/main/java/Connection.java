@@ -2,7 +2,7 @@ public abstract class Connection {
     public double fuelPercent = 0.10;
     public double taxPercent  = 0.05;
 
-    private final Meter meter;
+    protected final Meter meter;
 
     public Connection(Meter meter) {
         this.meter = meter;
