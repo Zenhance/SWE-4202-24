@@ -5,9 +5,9 @@ public class BillingRun {
     private ArrayList<Connection> connections;
     private ArrayList<Invoice> invoices;
 
-    public BillingRun(ArrayList<Connection> connections, ArrayList<Invoice> invoices){
-        this.connections = new ArrayList<>();
-        this.invoices = new ArrayList<>();
+    public BillingRun() {
+        connections = new ArrayList<>();
+        invoices = new ArrayList<>();
     }
 
     public void register(Connection c) {
@@ -21,13 +21,6 @@ public class BillingRun {
 
     public int size(){
         return connections.size();
-    }
-
-    public ArrayList<BillingRun> getBillingRuns(){
-        ArrayList<BillingRun> billingRuns = new ArrayList<>();
-        for(Connection c : connections){
-
-        }
     }
 
     public double grandTotal() {
