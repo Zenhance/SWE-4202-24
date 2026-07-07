@@ -24,4 +24,12 @@ public abstract class Connection {
     public double total(){
         return energyCharge()+fixedCharge()+fuelSurviceCharge()+tax();
     }
+
+    public void setFuelPercentage(double fuelPercentage){
+        this.fuelPercentage=fuelPercentage;
+    }
+
+    public Meter getMeter(){
+        return meter;
+    }
 }
