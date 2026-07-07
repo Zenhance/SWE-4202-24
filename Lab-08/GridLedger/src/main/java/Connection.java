@@ -1,6 +1,6 @@
 public abstract class Connection {
      protected Meter meter;
-     protected double fualPercentage = 0.1;
+     protected double fuelPercentage = 0.1;
      protected static final double TAX_RATE = 0.05;
 
      public Connection(Meter meter) {
@@ -18,5 +18,13 @@ public abstract class Connection {
         }
             public double total () {
                 return energyCharge()+ fixedCharge() + fuelSurcharge() + tax();
+             }
+
+             public void setFuelSurcharge(double fuelPercentage) {
+                this.fuelPercentage = fuelPercentage;
+             }
+
+             public Meter getMeter() {
+                return meter;
              }
         }
