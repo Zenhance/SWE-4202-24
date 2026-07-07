@@ -1,1 +1,8 @@
-public class Conne
+public abstract class Connection{
+    private
+
+
+
+
+
+}
