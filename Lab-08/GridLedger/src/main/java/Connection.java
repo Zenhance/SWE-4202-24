@@ -1,6 +1,6 @@
 public abstract class Connection {
-    public double Fuel_Charge = 0.10;
-    public double Tax = 0.05;
+    private double Fuel_Charge = 0.10;
+    private double Tax = 0.05;
 
     public abstract double fixedCharge();
     public abstract double energyCharge();
