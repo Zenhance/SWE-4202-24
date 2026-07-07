@@ -16,6 +16,7 @@ public class BillingRun {
     }
 
     public void register(Connection c, double fuelRate) {
+        c.setFuelRate(fuelRate);
         connections.add(c);
         invoices.add(new Invoice(c));
     }
