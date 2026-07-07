@@ -1,7 +1,7 @@
 public class Connection {
 
-    public @org.jspecify.annotations.Nullable Byte energyCharge() {
-        return null;
+    public double energyCharge() {
+        return 0.0;
     }
 
     public double fixedCharge() {
@@ -17,6 +17,7 @@ public class Connection {
     }
 
     public double total() {
-        return energyCharge() == null ? 0.0 : energyCharge() * 0.1 + fixedCharge() + fuelSurcharge() + tax();
+        return energyCharge() == 0.0 ? 0.0 : energyCharge() * 0.1 + fixedCharge() + fuelSurcharge() + tax();
     }
+
 }
