@@ -12,8 +12,9 @@ public abstract class CommercialConnection extends Connection {
         int unit =getMeter.getUnitsConsumed;
         if(unit<=100)
             return com_rate1;
-        else
-            return com_rate1*100+(unit-100)*com_rate2;
+        else {
+            return com_rate1 * 100 + (unit - 100) * com_rate2;
+        }
     }
 
     @Override
