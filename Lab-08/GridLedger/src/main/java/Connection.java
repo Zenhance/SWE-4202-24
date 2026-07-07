@@ -28,4 +28,16 @@ public abstract class Connection
     }
     public abstract double energyCharge();
     public abstract double fixedCharge();
+    public double fuelSurcharge()
+    {
+        return energyCharge() * fuelSurchargePercentage;
+    }
+    public double tax()
+    {
+        return(energyCharge() + fixedCharge() + fuelSurcharge()) * TAX_PERCENTAGE;
+    }
+    public double billTotal()
+    {
+        return energyCharge() + fixedCharge() + fuelSurcharge() + tax();
+    }
 }
