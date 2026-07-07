@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="wriitng billing run">
+    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="writing billing run">
       <change beforePath="$PROJECT_DIR$/Lab-08/GridLedger/src/main/java/BillingRun.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-08/GridLedger/src/main/java/BillingRun.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -209,22 +209,6 @@
       <workItem from="1778092688155" duration="94000" />
       <workItem from="1778092809585" duration="6679000" />
       <workItem from="1778163384097" duration="3333000" />
-    </task>
-    <task id="LOCAL-00086" summary="sms skeleton writing">
-      <option name="closed" value="true" />
-      <created>1780987873078</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1780987873078</updated>
-    </task>
-    <task id="LOCAL-00087" summary="sms methods">
-      <option name="closed" value="true" />
-      <created>1780987906231</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1780987906231</updated>
     </task>
     <task id="LOCAL-00088" summary="...">
       <option name="closed" value="true" />
@@ -602,7 +586,23 @@
       <option name="project" value="LOCAL" />
       <updated>1783405855535</updated>
     </task>
-    <option name="localTasksCounter" value="135" />
+    <task id="LOCAL-00135" summary="wriyitng billing run">
+      <option name="closed" value="true" />
+      <created>1783406029566</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1783406029566</updated>
+    </task>
+    <task id="LOCAL-00136" summary="writing billing run">
+      <option name="closed" value="true" />
+      <created>1783406178470</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1783406178470</updated>
+    </task>
+    <option name="localTasksCounter" value="137" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -642,8 +642,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="premiumticket methods" />
-    <MESSAGE value="standard and student ticket skeleton" />
     <MESSAGE value="vipticket" />
     <MESSAGE value="concession item" />
     <MESSAGE value="concessionline" />
@@ -667,6 +665,8 @@
     <MESSAGE value="invoice" />
     <MESSAGE value="invoice completion" />
     <MESSAGE value="wriitng billing run" />
-    <option name="LAST_COMMIT_MESSAGE" value="wriitng billing run" />
+    <MESSAGE value="wriyitng billing run" />
+    <MESSAGE value="writing billing run" />
+    <option name="LAST_COMMIT_MESSAGE" value="writing billing run" />
   </component>
 </project>
