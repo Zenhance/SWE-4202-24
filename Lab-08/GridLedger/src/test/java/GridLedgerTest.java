@@ -175,7 +175,8 @@ class GridLedgerTest {
         @Test
         @DisplayName("a lifeline connection IS a residential connection")
         void lifelineIsAResidential() {
-            Connection life = new LifelineConnection(new Meter(0, 100));
+            Connection life;
+            life = new LifelineConnection(new Meter(0, 100));
             assertTrue(life instanceof ResidentialConnection,
                     "a lifeline household is a residential connection with a rebate, not a separate category");
         }
