@@ -12,4 +12,14 @@ public class Meter {
         this.openingReading=openingReading;
         this.closingReading=closingReading;
     }
+
+    public int getOpeningReading(){
+        return openingReading;
+    }
+    public int getClosingReading(){
+        return closingReading;
+    }
+    public int getUnitsConsumed(){
+        return closingReading-openingReading;
+    }
 }
