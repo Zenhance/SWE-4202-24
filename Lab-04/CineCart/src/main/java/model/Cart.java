@@ -6,7 +6,7 @@ public class Cart {
     public static final int MAX_ITEMS = 20;
 
     private Customer owner;
-
+    private LineItem[] lines;
     private Ticket[] tickets;
     private int ticketCount;
 

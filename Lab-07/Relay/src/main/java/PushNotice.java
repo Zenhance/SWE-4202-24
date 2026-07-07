@@ -5,6 +5,15 @@ public class PushNotice extends Notice{
         super(recipient, text);
     }
 
+    @Override
+    public String deliver(){
+        String preview = getText();
+
+        if(preview.length() > PREVIEW_LENGTH){
+            preview = preview.substring(0,PREVIEW_LENGTH);
+        }
+        return "PUSH: " + preview;
+    }
 
     @Override
     public double cost()

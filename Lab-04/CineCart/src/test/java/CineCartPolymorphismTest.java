@@ -13,7 +13,6 @@ import model.Customer;
 import model.Hall;
 import model.LineItem;
 import model.Movie;
-import model.PremiumTicket;
 import model.Showtime;
 import model.StandardTicket;
 import model.StudentTicket;
