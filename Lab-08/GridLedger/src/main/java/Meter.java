@@ -11,6 +11,8 @@ if(closing<opening){
         this.opening = opening;
         this.closing = closing;
     }
-
+public int getUnitsConsumed(){
+        return closing-opening;
+}
 
 }
