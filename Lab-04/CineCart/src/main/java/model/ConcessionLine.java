@@ -32,4 +32,10 @@ public class ConcessionLine extends LineItem
     {
         return String.format(item.toString()+" x "+qty+"\n BDT : "+subtotal());
     }
+
+    @Override
+    public boolean hasCode(String code)
+    {
+        return false;
+    }
 }
