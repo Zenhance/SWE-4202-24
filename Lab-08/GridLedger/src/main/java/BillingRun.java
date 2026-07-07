@@ -5,4 +5,8 @@ public class BillingRun {
     public void register(Connection c){
       connections.add(c);
     }
+    public void register(Connection c, double fuel){
+        c.setFuelPercentage(fuel);
+        connections.add(c);
+    }
 }
