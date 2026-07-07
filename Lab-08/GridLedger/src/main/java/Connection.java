@@ -30,10 +30,26 @@ public abstract class Connection {
 
     public abstract double fixedCharge();
 
-    public double fuetSurcharge(){
+    public double fuelSurcharge(){
         return energyCharge() * fuelSurchargeRate;
     }
 
+    public double tax(){
+        return (energyCharge()+fixedCharge()+fuelSurcharge()) * TAX_RATE;
+    }
 
+    public double total(){
+        return energyCharge()+fixedCharge()+fuelSurcharge()+tax();
+    }
 
+    public void setFuelSurchargeRate(double fuelSurchargeRate){
+        if(fuelSurchargeRate<0){
+            throw new IllegalArgumentException("Fuel surcharge rate cannot be negative.");
+        }
+        this.fuelSurchargeRate=fuelSurchargeRate;
+    }
+
+    public double getFuelSurchargeRate(){
+        return fuelSurchargeRate;
+    }
 }
