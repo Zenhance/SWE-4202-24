@@ -6,5 +6,7 @@ public class Invoice {
         this.connection=connection;
     }
 
-
+    public double getTotal(){
+        return connection.total();
+    }
 }
