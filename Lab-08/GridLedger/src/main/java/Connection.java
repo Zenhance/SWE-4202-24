@@ -1,4 +1,8 @@
-public class Connection {
+public abstract class Connection {
+    private Meter meter;
+    private double fuelSurchargePercentage;
+    private static double tax = 10.0;
+
     public @org.jspecify.annotations.Nullable Byte energyCharge() {
     }
 
