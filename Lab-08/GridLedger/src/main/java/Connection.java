@@ -1,4 +1,6 @@
 public class Connection {
+
+
     public Connection(Meter meter) {
         super();
     }
