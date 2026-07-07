@@ -9,12 +9,14 @@ public class Residential extends Connection{
 if(units<=50){
 charge = units * 4.0;
 }
-
-
-
-
-
-
+else if(units<=200){
+charge=50+4.0+(units-50)*7.0;
+}
+else{
+charge=50*4.0+150*7.0+(units-200)*11.0;
+}
+return charge;
+}
 
 
 }
