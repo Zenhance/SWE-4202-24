@@ -1,3 +1,5 @@
+
+
 public class Meter {
     private int openingReading;
     private int closingReading;
@@ -13,9 +15,9 @@ public class Meter {
         } else {
             this.closingReading = closingReading;
         }
+    }
 
-        public int getUnitsConsumed () {
+    public int getUnitsConsumed () {
             return closingReading - openingReading;
         }
     }
-}

@@ -1,4 +1,6 @@
-public abstract class Connection{
+
+
+public abstract class Connection {
 
     private Meter meter;
 
