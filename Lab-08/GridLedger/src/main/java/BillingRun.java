@@ -14,4 +14,18 @@ public class BillingRun {
     public int size(){
         return connections.size();
     }
+
+    public ArrayList<Invoice> (){
+        ArrayList<Invoice> =new ArrayList<>();
+        for(Connection c: connections) {
+
+        }
+    }
+
+    public float grandTotal() {
+        double total=0;
+        for(Connection c: connections){
+            total+=c.total();
+        }
+    }
 }
