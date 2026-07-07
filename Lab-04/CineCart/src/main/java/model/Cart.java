@@ -32,7 +32,7 @@ public class Cart
 
     public void add(LineItem line)
     {
-        if(count<=MAX_LINES)
+        if(count<MAX_LINES)
         {
             lines[count]=line;
             count++;
@@ -74,7 +74,7 @@ public class Cart
         return total;
     }
 
-    public int getTicketCount()
+    public int ticketCount()
     {
         int t=0;
         for(int i=0;i<count;i++)
