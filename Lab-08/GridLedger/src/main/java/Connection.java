@@ -23,4 +23,7 @@ public abstract class Connection {
     public double total(){
         return energyCharge() + fixedCharge() + fuelSurcharge() + tax();
     }
+    protected int getUnitsConsumed(){
+        return meter.getUnitsConsumed();
+    }
 }
