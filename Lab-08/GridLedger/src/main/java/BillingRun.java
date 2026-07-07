@@ -15,11 +15,12 @@ public class BillingRun {
         return connections.size();
     }
 
-    public ArrayList<Invoice> (){
-        ArrayList<Invoice> =new ArrayList<>();
+    public ArrayList<Invoice> execute(){
+        ArrayList<Invoice> invoices=new ArrayList<>();
         for(Connection c: connections) {
-
+            invoices.add(new invoice(c));
         }
+        return invoices;
     }
 
     public float grandTotal() {
@@ -27,5 +28,6 @@ public class BillingRun {
         for(Connection c: connections){
             total+=c.total();
         }
+        return total;
     }
 }
