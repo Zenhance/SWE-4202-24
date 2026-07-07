@@ -4,26 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dfcbdcd4-310d-4487-b279-635bf3e2eecf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab-04/CineCart/src/test/java/CineCartEncapsulationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab-07/Relay/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab-07/Relay/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab-07/Relay/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab-07/Relay/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab-07/Relay/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab-07/Relay/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab-07/Relay/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab-07/Relay/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab-07/Relay/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab-07/Relay/src/main/java/Relay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab-07/Relay/src/test/java/RelayTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab-04/CineCart/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-04/CineCart/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab-04/CineCart/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-04/CineCart/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab-07/Relay/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-07/Relay/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab-07/Relay/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-07/Relay/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab-07/Relay/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-07/Relay/.idea/vcs.xml" afterDir="false" />
-    </list>
+    <list default="true" id="dfcbdcd4-310d-4487-b279-635bf3e2eecf" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,29 +34,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Merging 36__Tanvir&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Documents/LAB/SWE-4202-24&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "36__Tanvir",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/User/Documents/LAB/SWE-4202-24",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="dfcbdcd4-310d-4487-b279-635bf3e2eecf" name="Changes" comment="" />
