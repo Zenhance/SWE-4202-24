@@ -5,4 +5,6 @@ public abstract class Connection{
     public Connection(Meter meter) {
         this.meter = meter;
     }
+
+    public abstract double energyCharge();
 }
