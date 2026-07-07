@@ -1,5 +1,5 @@
-public class Commercial extends Connection {
-    public Commercial(Meter meter) {
+public class CommercialConnection extends Connection {
+    public CommercialConnection(Meter meter) {
         super(meter);
     }
 
