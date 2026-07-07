@@ -24,5 +24,8 @@ public final class Meter
     {
         return closeingReading;
     }
-
+    public int getUnitsConsumed()
+    {
+        return closeingReading-openingReading;
+    }
 }
