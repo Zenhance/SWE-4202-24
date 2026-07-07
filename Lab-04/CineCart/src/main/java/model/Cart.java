@@ -10,6 +10,7 @@ public class Cart {
     private ConcessionItem[] items;
     private int[] qtys;
     private int itemCount;
+    protected LineItem[] lineItems;
 
     public Cart(Customer owner){
         this.owner = owner;
@@ -84,5 +85,13 @@ public class Cart {
             }
         }
         return false;
+    }
+
+    public String add(){
+        return "Cart Added";
+    }
+
+    public double grandSubtotal(){
+
     }
 }
