@@ -22,7 +22,7 @@ public class BillingRun {
     public double grandTotal(){
         double total=0;
         for(Connection c : connections){
-            total+=c.totalBill();
+            total+=c.total();
         }
         return total;
     }

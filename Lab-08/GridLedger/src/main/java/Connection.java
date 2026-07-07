@@ -20,7 +20,7 @@ public abstract class Connection {
         double subtotal= energyCharge()+fixedCharge()+fuelSurcharge();
         return subtotal*0.05;
     }
-    public double totalBill(){
+    public double total(){
         return energyCharge()+fixedCharge()+fuelSurcharge()+tax();
     }
     public void setFuelPercentage(double fuelPercentage) {
