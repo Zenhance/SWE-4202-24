@@ -15,4 +15,12 @@ public class BillingRun {
     public int size() {
         return connections.size();
     }
+
+    public double grandTotal() {
+        double totalSum = 0.0;
+        for (Connection c : connections) {
+            totalSum += c.total();
+        }
+        return totalSum;
+    }
 }
