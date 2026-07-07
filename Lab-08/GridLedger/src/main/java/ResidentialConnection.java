@@ -8,4 +8,9 @@ public class ResidentialConnection extends Connection{
     public double energyCharge() {
         return 0;
     }
+
+    @Override
+    public double fixedCharge() {
+        return 100.0;
+    }
 }

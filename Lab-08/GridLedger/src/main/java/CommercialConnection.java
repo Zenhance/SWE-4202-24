@@ -8,4 +8,9 @@ public class CommercialConnection extends Connection{
     public double energyCharge() {
         return 0;
     }
+
+    @Override
+    public double fixedCharge() {
+        return 500.0;
+    }
 }
