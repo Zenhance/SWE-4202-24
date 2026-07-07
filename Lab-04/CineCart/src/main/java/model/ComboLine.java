@@ -7,4 +7,7 @@ public class ComboLine extends LineItem{
         this.a = a;
         this.b = b;
     }
+
+    public double subtotal(){return 0;}
+
 }

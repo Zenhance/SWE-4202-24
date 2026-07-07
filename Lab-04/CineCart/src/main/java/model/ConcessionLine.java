@@ -12,4 +12,7 @@ public class ConcessionLine extends LineItem{
     public ConcessionLine(ConcessionItem c){
         this(c,1);
     }
+
+    public double subtotal(){return 0;}
+
 }

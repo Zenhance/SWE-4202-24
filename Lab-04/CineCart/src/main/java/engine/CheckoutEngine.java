@@ -57,8 +57,9 @@ public class CheckoutEngine {
 
     //F. Checkout Pipeline
     //F.1
-    /*
+
     public double checkout(Cart cart){
+         /*
         double ticketSubtotal = cart.sumTicketsPaid();
         double concessionSubtotal = cart.sumConcessionsRaw();
 
@@ -87,7 +88,9 @@ public class CheckoutEngine {
 
         double rounded = Math.round(total*100.0)/100.0;
 
-        return rounded;
+        return rounded; */
+
+        return 0;
     }
 
     //F.2
@@ -107,5 +110,7 @@ public class CheckoutEngine {
             out += k.toString();
         }
         return out;
-    }*/
+        */
+        return out;
+    }
 }

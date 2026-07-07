@@ -32,6 +32,9 @@ public class Cart {
         lineCount++;
     }
 
+    public double grandSubtotal(){return 0;}
+
+
 
 /*
     public void addTicket(AbstractTicket t){
@@ -73,4 +76,8 @@ public class Cart {
         }
         return false;
     }*/
+
+    public boolean hasCode(String c){
+        return false;
+    }
 }
