@@ -13,13 +13,22 @@ public abstract double fixedCharge();
 public double fuelSurcharge(){
     return energyCharge()*fuelPercentage;
 }
+
+public double tax(){
+    return (energyCharge()+fixedCharge()+fuelSurcharge())*TAX_RATE;
+}
+
 public double total(){
-    return 1;
+    double sum=energyCharge()+fixedCharge()+fuelSurcharge();
+    return sum+tax();
 }
 public Meter getMeter(){
     return meter;
 }
 public double getFuelPercentage(){
     return fuelPercentage;
+}
+public void setFuelPercentage(double fuelPercentage){
+    this.fuelPercentage=fuelPercentage;
 }
 }
