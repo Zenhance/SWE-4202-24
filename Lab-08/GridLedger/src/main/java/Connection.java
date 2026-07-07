@@ -6,6 +6,9 @@ public abstract class Connection {
     public Connection(Meter meter, double fuelSurChargePercentage ) {
         this.meter = meter;
         this.fuelSurChargePercentage = fuelSurChargePercentage;
-
     }
+
+    public abstract double energyCharge();
+    public abstract double fixedCharge();
+
 }
