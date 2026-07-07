@@ -9,8 +9,16 @@ public class CommercialConnection extends Connection{
     @Override
     public double energyCharge(){
 
+        int units=super.getMeter().getUnitsConsumed();
 
-    }
+        double subtotal=0;
+
+        if(units <= 100)
+
+            subtotal += (units*9.0);
+
+            else subtotal += (100*9.0 + (units-100) * 13.0);
+            return subtotal; }
 
 
     @Override
