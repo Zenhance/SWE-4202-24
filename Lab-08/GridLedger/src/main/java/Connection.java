@@ -14,13 +14,17 @@ abstract  class Connection {
     public abstract double energyCharge();
     public abstract double fixedCharge();
 
+    public void setFuelPercent(double fuelPercent) {
+        this.fuelPercent = fuelPercent;
+    }
+
     public double fuelSurcharge(){
-        return fuelSurcharge()*fuelPercent;
+        return energyCharge()*fuelPercent;
 
     }
 
     public double tax(){
-        return (energyCharge()+fixedCharge()+fuelSurcharge());
+        return (energyCharge()+fixedCharge()+fuelSurcharge())*taxPercent;
 
     }
 

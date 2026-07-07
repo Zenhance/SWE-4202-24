@@ -16,7 +16,7 @@ public class BillingRun {
     }
 
     public void register(Connection c, double fuelPercent){
-       // c.setfuelPercent(fuelPercent);
+       c.setFuelPercent(fuelPercent);
         run.add(c);
     }
 
