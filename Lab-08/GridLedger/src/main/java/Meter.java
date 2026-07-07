@@ -19,4 +19,8 @@ public class Meter {
     public double getOpeningReading() {
         return openingReading;
     }
+
+    public double getClosingReading() {
+        return closingReading;
+    }
 }
