@@ -24,7 +24,7 @@ public class ResidentialConnection extends Connection
         }
         else
         {
-            return 50*RES_RATE_1+150*RES_RATE_2+(unit-150)*RES_RATE_3;
+            return 50*RES_RATE_1+150*RES_RATE_2+(unit-200)*RES_RATE_3;
         }
     }
 
