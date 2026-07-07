@@ -6,7 +6,7 @@ public class LifelineConnection extends ResidentialConnection{
     }
 
     public double energyCharge(){
-        double baseResidentialCharge=super.energyCharge();
+        double baseResidentialCharge=super.getEnergyCharge();
         return baseResidentialCharge*(1.0-REBATE_PERCENTAGE);
     }
 }
