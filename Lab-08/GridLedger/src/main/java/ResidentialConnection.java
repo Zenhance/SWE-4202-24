@@ -4,7 +4,7 @@ public class ResidentialConnection extends Connection {
     final double RATE_BAND1 = 4.0;
     final double RATE_BAND2 = 7.0;
     final double RATE_BAND3 = 11.0;
-    final double FIXED_CHARGE = 100.0
+    final double FIXED_CHARGE = 100.0;
 
     public ResidentialConnection(Meter meter) {
         super(meter);
