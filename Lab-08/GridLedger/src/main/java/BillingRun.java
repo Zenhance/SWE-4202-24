@@ -6,6 +6,7 @@ public class BillingRun{
     List<Connection> connections = new ArrayList<>(); //just found out how List works :0
     List<Invoice> invoices = new ArrayList<>();
 
+
     public List<Invoice> execute(){
 
         return invoices;
@@ -13,16 +14,17 @@ public class BillingRun{
 
 
 
-    public int size(){return invoices.size();}
+    public int size(){return connections.size();}
 
     public int grandTotal(){return 0;}
 
     public void register(Connection connection){
-        connections.set(connections.size(), connection);
+        connections.add(connection);
     }
 
     public void register(Connection connection, double d){
-        connections.set(connections.size(), connection);
+        connection.fuelPercent = d;
+        connections.add(connection);
     }
 
 

@@ -1,6 +1,6 @@
 abstract class Connection{
 
-    protected double fuelPercent = 0.10;
+    double fuelPercent = 0.10;
     protected double taxPercent  = 0.05;
     Meter meter;
 
