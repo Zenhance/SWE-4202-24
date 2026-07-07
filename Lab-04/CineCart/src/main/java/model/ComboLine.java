@@ -38,6 +38,6 @@ public class ComboLine extends LineItem
     @Override
     public boolean hasCode(String code)
     {
-        return false;
+        return item1.getCode().equals(code) || item2.getCode().equals(code);
     }
 }
