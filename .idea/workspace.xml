@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="creating classes">
+    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="meter class">
       <change beforePath="$PROJECT_DIR$/Lab-08/GridLedger/src/main/java/Meter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-08/GridLedger/src/main/java/Meter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -209,22 +209,6 @@
       <workItem from="1778092688155" duration="94000" />
       <workItem from="1778092809585" duration="6679000" />
       <workItem from="1778163384097" duration="3333000" />
-    </task>
-    <task id="LOCAL-00061" summary="signature">
-      <option name="closed" value="true" />
-      <created>1780399946915</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1780399946915</updated>
-    </task>
-    <task id="LOCAL-00062" summary="signature">
-      <option name="closed" value="true" />
-      <created>1780400000769</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1780400000769</updated>
     </task>
     <task id="LOCAL-00063" summary="signature">
       <option name="closed" value="true" />
@@ -602,7 +586,23 @@
       <option name="project" value="LOCAL" />
       <updated>1783400855244</updated>
     </task>
-    <option name="localTasksCounter" value="110" />
+    <task id="LOCAL-00110" summary="creating classes">
+      <option name="closed" value="true" />
+      <created>1783401009586</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1783401009586</updated>
+    </task>
+    <task id="LOCAL-00111" summary="meter class">
+      <option name="closed" value="true" />
+      <created>1783401083133</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1783401083133</updated>
+    </task>
+    <option name="localTasksCounter" value="112" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -642,7 +642,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="getreceipt cart" />
     <MESSAGE value="Cart.java line 76 fix" />
     <MESSAGE value="recipient" />
     <MESSAGE value="recipient methods" />
@@ -667,6 +666,7 @@
     <MESSAGE value="cart" />
     <MESSAGE value="." />
     <MESSAGE value="creating classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="creating classes" />
+    <MESSAGE value="meter class" />
+    <option name="LAST_COMMIT_MESSAGE" value="meter class" />
   </component>
 </project>
