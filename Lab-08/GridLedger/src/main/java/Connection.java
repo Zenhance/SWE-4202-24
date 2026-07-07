@@ -9,6 +9,9 @@ public abstract class Connection {
     public double fuelSurcharge() {
         return energyCharge() * fuelSurchargePercentage;
     }
+    public double tax(){
+        return (energyCharge() + fixedCharge() + fuelSurcharge()) * taxSurchargePercentage ;
+    }
 
 
 }
