@@ -5,4 +5,8 @@ public class BillingRun {
     public int size() {
         return 0;
     }
+
+    public double grandTotal() {
+        return 0.0;
+    }
 }
