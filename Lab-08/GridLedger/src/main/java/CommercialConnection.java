@@ -13,7 +13,7 @@ public class CommercialConnection extends Connection{
             charge+=units*9.0;
         }
         else{
-            charge+=(100*9.0)+((units-100)*13.0):
+            charge+=(100*9.0)+((units-100)*13.0);
         }
         return charge;
     }
