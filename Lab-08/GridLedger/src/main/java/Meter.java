@@ -14,6 +14,11 @@ public class Meter {
         this.opening = opening;
     }
 
+    public int getUnitsConsumed() {
+        System.out.println(opening - closing);
+        return 0;
+    }
+
 
 
 
