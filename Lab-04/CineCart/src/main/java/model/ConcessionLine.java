@@ -36,6 +36,6 @@ public class ConcessionLine extends LineItem
     @Override
     public boolean hasCode(String code)
     {
-        return false;
+        return item.getCode().equals(code);
     }
 }
