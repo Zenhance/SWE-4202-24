@@ -16,4 +16,8 @@ public class CommercialConnection extends Connection {
         return (BAND1_LIMIT * RATE_BAND1 + (units - BAND1_LIMIT) * RATE_BAND2);
         }
     }
+    @Override
+    public double fixedCharge() {
+        return FIXED_CHARGE;
+    }
 }
