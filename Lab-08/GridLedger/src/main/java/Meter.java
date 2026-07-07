@@ -3,7 +3,7 @@ public class Meter {
     private double openingReading;
 
     public Meter (double closingReading, double openingReading) {
-        if ((openingReading <0 && closingReading <0) && (closingReading < openingReading)) {
+        if (openingReading <0 && (closingReading < openingReading)) {
             throw new IllegalArgumentException("Invalid value of Reading");
         }
 
