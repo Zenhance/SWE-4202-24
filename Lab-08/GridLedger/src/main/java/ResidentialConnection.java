@@ -2,7 +2,7 @@ public abstract class ResidentialConnection extends Connection{
     private static final double res_rate1=4.0;
     private static final double res_rate2=7.0;
     private static final double res_rate3=11.0;
-    private static final double rate=100.0;
+    private static final double res_rate=100.0;
 
 
     public ResidentialConnection(Meter meter) {
@@ -24,6 +24,6 @@ public abstract class ResidentialConnection extends Connection{
 
     @Override
     public double fixedCharge() {
-        return rate;
+        return res_rate;
     }
 }
