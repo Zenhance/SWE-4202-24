@@ -8,6 +8,7 @@ public Meter (int openingReading,int closingReading) {
     if (closingReading < openingReading)
         throw new IllegalArgumentException(" closing reading below the opening reading is a broken record, not a cheap month");
     if (closeReading < 0) throw new IllegalArgumentException("a negative opening reading is impossible");
+    if (openingReading <0) throw new IllegalArgumentException ("a negative closing reading is impossble");
     this.openingReading = openingReading;
     this.closingReading = closingReading;
 }
