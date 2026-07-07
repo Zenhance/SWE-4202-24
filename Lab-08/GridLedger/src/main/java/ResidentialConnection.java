@@ -19,5 +19,8 @@ public class ResidentialConnection extends Connection {
         return subtotal;
     }
 
-
+    @Override
+    public double fixedCharge() {
+        return 100.0;
+    }
 }
