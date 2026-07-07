@@ -11,4 +11,8 @@ public class Connection {
     public double fuelSurcharge() {
         return 0.0;
     }
+
+    public double tax() {
+        return 0.0;
+    }
 }
