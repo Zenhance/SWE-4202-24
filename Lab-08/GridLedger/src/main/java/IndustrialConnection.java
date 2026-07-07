@@ -9,7 +9,8 @@ public class IndustrialConnection extends Connection{
     public double energyCharge(){
         int units=super.getMeter().getUnitsConsumed();
 
-        double subtotal=
+        double subtotal= units*15.0;
+        return subtotal;
 
 
     }
@@ -17,6 +18,8 @@ public class IndustrialConnection extends Connection{
 
     @Override
     public double fixedCharge(){
+
+        return 2000.0;
 
 
 

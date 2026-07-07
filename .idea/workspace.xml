@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="methods">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab-08/GridLedger/src/main/java/CommercialConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-08/GridLedger/src/main/java/CommercialConnection.java" afterDir="false" />
+    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment=".">
+      <change beforePath="$PROJECT_DIR$/Lab-08/GridLedger/src/main/java/IndustrialConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-08/GridLedger/src/main/java/IndustrialConnection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,30 +209,6 @@
       <workItem from="1778092688155" duration="94000" />
       <workItem from="1778092809585" duration="6679000" />
       <workItem from="1778163384097" duration="3333000" />
-    </task>
-    <task id="LOCAL-00073" summary="recipient">
-      <option name="closed" value="true" />
-      <created>1780986488757</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1780986488757</updated>
-    </task>
-    <task id="LOCAL-00074" summary="recipient">
-      <option name="closed" value="true" />
-      <created>1780986543261</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1780986543261</updated>
-    </task>
-    <task id="LOCAL-00075" summary="recipient methods">
-      <option name="closed" value="true" />
-      <created>1780986585550</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1780986585550</updated>
     </task>
     <task id="LOCAL-00076" summary="recipient methods">
       <option name="closed" value="true" />
@@ -603,7 +578,31 @@
       <option name="project" value="LOCAL" />
       <updated>1783402733163</updated>
     </task>
-    <option name="localTasksCounter" value="122" />
+    <task id="LOCAL-00122" summary="energycharge">
+      <option name="closed" value="true" />
+      <created>1783403293731</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1783403293731</updated>
+    </task>
+    <task id="LOCAL-00123" summary="commercialconnection">
+      <option name="closed" value="true" />
+      <created>1783403367690</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1783403367690</updated>
+    </task>
+    <task id="LOCAL-00124" summary=".">
+      <option name="closed" value="true" />
+      <created>1783403474310</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1783403474310</updated>
+    </task>
+    <option name="localTasksCounter" value="125" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -643,8 +642,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="message" />
-    <MESSAGE value="email extends message" />
     <MESSAGE value="email methods" />
     <MESSAGE value="sms skeleton writing" />
     <MESSAGE value="sms methods" />
@@ -660,7 +657,6 @@
     <MESSAGE value="concessionline" />
     <MESSAGE value="changing cart" />
     <MESSAGE value="cart" />
-    <MESSAGE value="." />
     <MESSAGE value="meter class" />
     <MESSAGE value="meter class completion" />
     <MESSAGE value="connection class" />
@@ -668,6 +664,9 @@
     <MESSAGE value="creating classes" />
     <MESSAGE value="connection extension" />
     <MESSAGE value="methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="methods" />
+    <MESSAGE value="energycharge" />
+    <MESSAGE value="commercialconnection" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
 </project>
