@@ -1,7 +1,7 @@
-public class Connection {
+public abstract class Connection {
     protected Meter meter;
     public double fuelSurcharge=0.05;
-    public double fuelCharge=0.15;
+    public double taxCharge=0.15;
     public int fixedCharge;
     public int energyCharge;
     public Connection(Meter meter){
@@ -10,10 +10,21 @@ public class Connection {
         }
         this.meter=meter;
     }
-    public void energyCharge(){}
-    public void fixedCharge(){
+
+    public abstract double energyCharge();
+    public abstract double fixedCharge();
+
+    public void setfuelSurcharge(double percentage){
+        this.fuelSurcharge=percentage;
     }
     public double fuelSurcharge(){
-        return energyCharge()*fuelSurcharge;
+        return energyCharge()*fuelSurcharge*fixedCharge();
     }
+    public double taxCharge(){
+        return (energyCharge()+fuelSurcharge()+fixedCharge())*taxCharge;
+    }
+    public double total(){
+        return (energyCharge()+fuelSurcharge()+fixedCharge()+taxCharge());
+    }
+
 }

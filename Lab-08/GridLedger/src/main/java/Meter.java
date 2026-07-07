@@ -1,6 +1,7 @@
 public class Meter {
     protected int currentMeter;
     protected int previousMeter;
+    public int units;
 
 
     public Meter(int currentMeter, int previousMeter) {
@@ -10,7 +11,8 @@ public class Meter {
         this.currentMeter = currentMeter;
         this.previousMeter = previousMeter;
     }
-    protected int units = currentMeter - previousMeter;
+    public void calculateMeter(){
+     units = currentMeter - previousMeter;}
     public int getCurrentMeter() {
         return currentMeter;
     }
