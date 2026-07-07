@@ -13,4 +13,9 @@ public abstract class Connection{
     public double fuelSurcharge() {
         return this.energyCharge() * 0.10;
     }
+
+    public double tax() {
+        double subtotal = this.energyCharge() + this.fixedCharge() + this.fuelSurcharge();
+        return subtotal * 0.05;
+    }
 }
