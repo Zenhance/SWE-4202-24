@@ -18,7 +18,7 @@ public class CommercialConnection extends Connection{
         return FIRST_LIMIT*FIRST_RATE+(units-FIRST_LIMIT)*SECOND_RATE;
     }
 
-    public double getFixedCharge(){
+    public double fixedCharge(){
         return FIXED_CHARGE;
     }
 }
