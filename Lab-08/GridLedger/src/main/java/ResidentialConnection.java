@@ -10,6 +10,16 @@ public class ResidentialConnection extends Connection{
 
     @Override
     public double energyCharge() {
+        int unit= getMeter().getUnitsConsumed();
+        if(unit<=50){
+            return unit*RES_RATE_1;
+        }
+        else if(unit>=51 && unit<=200){
+            return 50*RES_RATE_1+(unit-50)*RES_RATE_2;
+        }
+        else{
+            return 50*RES_RATE_1+150*RES_RATE_2+(unit-200)*RES_RATE_3;
+        }
 
     }
 }
