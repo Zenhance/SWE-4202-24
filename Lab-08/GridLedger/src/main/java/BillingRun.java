@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.List;
+
 public class BillingRun {
     private ArrayList<Connection> batch = new ArrayList<>();
     public void register(Connection c){
@@ -19,5 +21,18 @@ public class BillingRun {
         for (Connection c : batch){
             total += c.total();
         }
+        return total;
+    }
+
+    public ArrayList<Invoice> execute(){
+        ArrayList<Invoice> invoices =  new ArrayList<>();
+        Invoice temp;
+
+        for(Connection c : batch){
+            temp = new Invoice(c.total());
+            invoices.add(temp);
+        }
+
+        return invoices;
     }
 }
