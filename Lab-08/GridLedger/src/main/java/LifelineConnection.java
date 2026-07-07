@@ -1,4 +1,4 @@
-public class LifelineConnection extends Connection{
+public class LifelineConnection extends ResidentialConnection{
 
     public LifelineConnection(Meter meter){
         super(meter);
@@ -12,14 +12,4 @@ public class LifelineConnection extends Connection{
 
 
     }
-
-
-
-
-
-
-
-
-
-
 }
