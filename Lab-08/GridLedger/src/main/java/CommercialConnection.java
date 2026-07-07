@@ -1,4 +1,9 @@
 public class CommercialConnection extends Connection{
+
+    CommercialConnection(Meter meter) {
+        super(meter);
+    }
+
     public double energyCharge(){
         int units = meter.getUnitsConsumed();
         if(units <= 100){
