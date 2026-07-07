@@ -5,7 +5,7 @@ public abstract class Connection {
 
     public Connection(Meter meter){
         if(meter==null){
-            throw new IllegalAccessException("Meter cannot be null");
+            throw new IllegalArgumentException("Meter cannot be null");
         }
         this.meter = meter;
     }

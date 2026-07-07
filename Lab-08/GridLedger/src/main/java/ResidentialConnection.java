@@ -1,5 +1,5 @@
 public class ResidentialConnection extends Connection{
-    public ResidentialConnection(Meter mete){
+    public ResidentialConnection(Meter meter){
         super(meter);
     }
     @Override
