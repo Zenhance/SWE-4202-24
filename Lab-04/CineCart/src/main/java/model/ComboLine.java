@@ -34,4 +34,10 @@ public class ComboLine extends LineItem
     {
         return item1.getName()+" "+item2.getName()+"\n BDT : "+String.format("%.2f",subtotal());
     }
+
+    @Override
+    public boolean hasCode(String code)
+    {
+        return false;
+    }
 }
