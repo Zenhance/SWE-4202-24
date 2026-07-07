@@ -3,4 +3,7 @@ public class Invoice {
     public Invoice(Connection connection){
         this.connection=connection;
     }
+    public double getAmount(){
+        return connection.totalBill();
+    }
 }
