@@ -6,7 +6,13 @@ public class IndustrialConnection extends Connection {
     @Override
     public double energyCharge(){
         int units=getMeter().getUnitsConsumed();
+        return units*15.0;
 
+    }
+
+    @Override
+    public double fixedCharge(){
+        return 2000.0;
     }
 
 }
