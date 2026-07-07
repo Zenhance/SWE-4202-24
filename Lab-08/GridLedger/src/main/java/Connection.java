@@ -11,4 +11,12 @@ public abstract class Connection {
     public abstract double energyCharge();
     public abstract double fixedCharge();
 
+    public double fuelSurCharge() {
+
+    }
+
+
+    public Meter getMeter() {
+        return meter;
+    }
 }
