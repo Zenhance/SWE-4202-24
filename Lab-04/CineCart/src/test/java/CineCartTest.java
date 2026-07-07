@@ -4,16 +4,16 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 
-import model.Cart;
-import model.ConcessionItem;
-import model.Customer;
-import model.Hall;
-import model.Movie;
-import model.Seat;
-import model.Showtime;
-import model.Ticket;
-import data.ConcessionMenu;
-import data.ShowtimeBoard;
+import Model.Cart;
+import Model.ConcessionItem;
+import Model.Customer;
+import Model.Hall;
+import Model.Movie;
+import Model.Seat;
+import Model.Showtime;
+import Model.Ticket;
+import Data.ConcessionMenu;
+import Data.ShowtimeBoard;
 import engine.CheckoutEngine;
 import io.CsvLoader;
 

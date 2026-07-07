@@ -6,13 +6,13 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 
-import model.ConcessionItem;
-import model.Customer;
-import model.Hall;
-import model.Movie;
-import model.Showtime;
-import data.ConcessionMenu;
-import data.ShowtimeBoard;
+import Model.ConcessionItem;
+import Model.Customer;
+import Model.Hall;
+import Model.Movie;
+import Model.Showtime;
+import Data.ConcessionMenu;
+import Data.ShowtimeBoard;
 
 /**
  * <p>
