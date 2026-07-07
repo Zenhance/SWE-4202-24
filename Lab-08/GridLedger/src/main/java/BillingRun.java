@@ -9,4 +9,15 @@ public class BillingRun {
     public int size(){
         return batch.size();
     }
+
+    public void register(Connection res, double v) {
+    }
+
+    public double grandTotal() {
+        return 0;
+    }
+
+    public List<Invoice> execute() {
+        return null;
+    }
 }
