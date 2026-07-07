@@ -10,4 +10,8 @@ public class IndustrialConnection extends Connection{
         return 0;
     }
 
+    @Override
+    public double fixedCharge() {
+        return 0;
+    }
 }
