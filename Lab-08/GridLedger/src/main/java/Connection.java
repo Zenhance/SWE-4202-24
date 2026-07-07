@@ -24,6 +24,7 @@ public abstract class Connection{
     }
 
     public double total(){
+        return this.energyCharge()+this.fixedCharge()+this.fuelSurcharge()+this.tax();
 
 
     }
