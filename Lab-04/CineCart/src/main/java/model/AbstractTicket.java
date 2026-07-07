@@ -55,9 +55,4 @@ public abstract class AbstractTicket extends LineItem
         return true;
     }
 
-    @Override
-    public boolean hasCode(String code)
-    {
-        return true;
-    }
 }
