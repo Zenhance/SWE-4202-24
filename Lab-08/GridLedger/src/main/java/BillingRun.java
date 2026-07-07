@@ -8,6 +8,17 @@ public class BillingRun {
         connections=new ArrayList<>(); invoices=new ArrayList<>();
     }
 
+    public void register(Connection c){
+        connections.add(c);
+        invoices.add();
+    }
+
+
+    public void register(Connection c,double fuelRate){
+        connections.add(c);
+        invoices.add();
+    }
+
 
 
 
