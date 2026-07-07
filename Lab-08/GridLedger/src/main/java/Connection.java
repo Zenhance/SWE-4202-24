@@ -6,7 +6,6 @@ public abstract class Connection{
         this.meter=meter;
     }
 
-
     public abstract double energyCharge();
     public abstract double fixedCharge();
 
@@ -16,17 +15,12 @@ public abstract class Connection{
 
     public double tax(){
 
-
         double subtotal= this.energyCharge()+this.fixedCharge()+this.fuelSurcharge();
-
-
-         return subtotal * 0.05;
+        return subtotal * 0.05;
     }
 
     public double total(){
         return this.energyCharge()+this.fixedCharge()+this.fuelSurcharge()+this.tax();
-
-
     }
 
     public Meter getMeter() {

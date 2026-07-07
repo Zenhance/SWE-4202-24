@@ -16,10 +16,5 @@ private class Meter{
 
     public int getUnitsConsumed(){
         return closing-opening;
-
-
     }
-
-
-
 }
