@@ -33,10 +33,4 @@ public class BillingRun{
         connection.fuelPercent = d;
         connections.add(connection);
     }
-
-
-
-
-
-
 }
