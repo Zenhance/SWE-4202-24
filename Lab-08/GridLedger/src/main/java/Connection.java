@@ -2,6 +2,8 @@ public abstract class Connection {
     private double fuelSurchargePercentage = 0.10;
     private double taxSurchargePercentage = 0.05;
 
+    Meter meter;
+
 
     abstract public double energyCharge();
     abstract public double fixedCharge();\
