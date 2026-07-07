@@ -1,5 +1,10 @@
 public class LifelineConnection extends ResidentialConnection{
     private double Rebate = 0.3;
+    private Meter meter;
+
+    public LifelineConnection(Meter meter) {
+        super(meter);
+    }
 
 
     @Override

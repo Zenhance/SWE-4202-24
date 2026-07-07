@@ -3,6 +3,10 @@ public class IndustrialConnection extends Connection{
     private double Fixed_Rate = 2000.0;
     private Meter meter;
 
+    public IndustrialConnection(Meter meter) {
+        super(meter);
+    }
+
     @Override
     public double fixedCharge() {
         return Fixed_Rate;

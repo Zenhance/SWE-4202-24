@@ -4,6 +4,10 @@ public class CommercialConnection extends Connection {
     private double Rate_Fixed = 500.0;
     private Meter meter;
 
+    public CommercialConnection(Meter meter) {
+        super(meter);
+    }
+
     @Override
     public double fixedCharge() {
         return Rate_Fixed;

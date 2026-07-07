@@ -1,6 +1,11 @@
 public abstract class Connection {
+    private Meter meter;
     private double Fuel_Charge = 0.10;
     private double Tax = 0.05;
+
+    public Connection(Meter meter) {
+        this.meter = meter;
+    }
 
     public abstract double fixedCharge();
     public abstract double energyCharge();

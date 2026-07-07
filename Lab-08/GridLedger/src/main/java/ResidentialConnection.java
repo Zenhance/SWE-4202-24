@@ -5,6 +5,9 @@ public class ResidentialConnection extends Connection{
     private double Rate_Fixed = 100.0;
     private Meter meter;
 
+    public ResidentialConnection(Meter meter) {
+        super(meter);
+    }
 
     @Override
     public double fixedCharge() {
