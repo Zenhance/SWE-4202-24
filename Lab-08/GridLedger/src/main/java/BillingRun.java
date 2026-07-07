@@ -10,7 +10,7 @@ public class BillingRun {
         connections.add(c);
     }
     public int size(){
-        return connections.size()
+        return connections.size();
     }
     public ArrayList<Invoice>execute(){
         ArrayList<Invoice>invoices= new ArrayList<>();
