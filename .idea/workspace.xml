@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment=".">
-      <change beforePath="$PROJECT_DIR$/Lab-08/GridLedger/src/main/java/Connection.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-08/GridLedger/src/main/java/Connection.java" afterDir="false" />
+    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="creating classes">
+      <change beforePath="$PROJECT_DIR$/Lab-08/GridLedger/src/main/java/Meter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-08/GridLedger/src/main/java/Meter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,14 +209,6 @@
       <workItem from="1778092688155" duration="94000" />
       <workItem from="1778092809585" duration="6679000" />
       <workItem from="1778163384097" duration="3333000" />
-    </task>
-    <task id="LOCAL-00060" summary="constructor">
-      <option name="closed" value="true" />
-      <created>1780399703097</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1780399703097</updated>
     </task>
     <task id="LOCAL-00061" summary="signature">
       <option name="closed" value="true" />
@@ -602,7 +594,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783400312047</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL-00109" summary="creating classes">
+      <option name="closed" value="true" />
+      <created>1783400855244</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1783400855244</updated>
+    </task>
+    <option name="localTasksCounter" value="110" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -644,7 +644,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="getreceipt cart" />
     <MESSAGE value="Cart.java line 76 fix" />
-    <MESSAGE value="creating classes" />
     <MESSAGE value="recipient" />
     <MESSAGE value="recipient methods" />
     <MESSAGE value="message writing" />
@@ -667,6 +666,7 @@
     <MESSAGE value="changing cart" />
     <MESSAGE value="cart" />
     <MESSAGE value="." />
-    <option name="LAST_COMMIT_MESSAGE" value="." />
+    <MESSAGE value="creating classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="creating classes" />
   </component>
 </project>
