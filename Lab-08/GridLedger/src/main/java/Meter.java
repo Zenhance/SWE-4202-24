@@ -6,13 +6,13 @@ public class Meter {
         if(opening<0){
             throw new IllegalArgumentException("Cannot be negative");
         }
-        if(closing<0){
+        if(closing<opening){
             throw new IllegalArgumentException("Cannot be negative");
         }
         this.opening=opening;
         this.closing=closing;
     }
     public int getUnitsConsumed(){
-        return opening-closing;
+        return -(opening-closing);
     }
 }
