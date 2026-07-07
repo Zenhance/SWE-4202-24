@@ -13,5 +13,9 @@ public abstract class Connection {
         return (energyCharge() + fixedCharge() + fuelSurcharge()) * taxSurchargePercentage ;
     }
 
+    public double total(){
+        return energyCharge() + fixedCharge() + fuelSurcharge() + tax();
+    }
+
 
 }
