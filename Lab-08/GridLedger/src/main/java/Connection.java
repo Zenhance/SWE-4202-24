@@ -15,6 +15,25 @@ public abstract class Connection {
         this.meter=meter;
         this.fuelSurchargeRate=DEFAULT_FUEL_SURCHARGE_RATE;
     }
+    public Connection(){
+        meter=null;
+    }
+
+    public Meter meter(){
+        return meter;
+    }
+
+    public int unitsConsumed(){
+        return meter.unitsConsumed();
+    }
+    public abstract double energyCharge();
+
+    public abstract double fixedCharge();
+
+    public double fuetSurcharge(){
+        return energyCharge() * fuelSurchargeRate;
+    }
+
 
 
 }
