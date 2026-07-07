@@ -16,8 +16,8 @@ public abstract class Connection {
         return meter;
     }
 
-    public double getFuelSurcharge() {
-        return getEnergyCharge() * (fuelSurchargePercentage / 100.0);
+    public double fuelSurcharge() {
+        return energyCharge() * (fuelSurchargePercentage / 100.0);
     }
 
     public void setFuelSurchargePercentage(double fuelSurchargePercentage) {
@@ -28,16 +28,16 @@ public abstract class Connection {
         return meter.getUnitsConsumed();
     }
 
-    public abstract double getEnergyCharge();
+    public abstract double energyCharge();
 
-    public abstract double getFixedCharge();
+    public abstract double fixedCharge();
 
-    public double getTax() {
-        double subtotal = getEnergyCharge() + getFixedCharge() + getFuelSurcharge();
+    public double tax() {
+        double subtotal = energyCharge() + fixedCharge() + fuelSurcharge();
         return subtotal * (tax / 100.0);
     }
 
-    public double getTotalBill() {
-        return getEnergyCharge() + getFixedCharge() + getFuelSurcharge() + getTax();
+    public double total() {
+        return energyCharge() + fixedCharge() + fuelSurcharge() + tax();
     }
 }
