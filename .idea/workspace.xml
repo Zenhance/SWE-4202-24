@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment=".">
-      <change beforePath="$PROJECT_DIR$/Lab-08/GridLedger/src/main/java/IndustrialConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-08/GridLedger/src/main/java/IndustrialConnection.java" afterDir="false" />
+    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="IndustrialConnection">
+      <change beforePath="$PROJECT_DIR$/Lab-08/GridLedger/src/main/java/ResidentialConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-08/GridLedger/src/main/java/ResidentialConnection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,14 +209,6 @@
       <workItem from="1778092688155" duration="94000" />
       <workItem from="1778092809585" duration="6679000" />
       <workItem from="1778163384097" duration="3333000" />
-    </task>
-    <task id="LOCAL-00076" summary="recipient methods">
-      <option name="closed" value="true" />
-      <created>1780986627175</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1780986627175</updated>
     </task>
     <task id="LOCAL-00077" summary="message writing">
       <option name="closed" value="true" />
@@ -602,7 +594,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783403474310</updated>
     </task>
-    <option name="localTasksCounter" value="125" />
+    <task id="LOCAL-00125" summary="IndustrialConnection">
+      <option name="closed" value="true" />
+      <created>1783403581079</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1783403581079</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -642,7 +642,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="email methods" />
     <MESSAGE value="sms skeleton writing" />
     <MESSAGE value="sms methods" />
     <MESSAGE value="..." />
@@ -667,6 +666,7 @@
     <MESSAGE value="energycharge" />
     <MESSAGE value="commercialconnection" />
     <MESSAGE value="." />
-    <option name="LAST_COMMIT_MESSAGE" value="." />
+    <MESSAGE value="IndustrialConnection" />
+    <option name="LAST_COMMIT_MESSAGE" value="IndustrialConnection" />
   </component>
 </project>

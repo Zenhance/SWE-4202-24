@@ -12,12 +12,20 @@ public class ResidentialConnection extends Connection{
 
         double subtotal=0;
 
+        if(units<=50) subtotal+=units * 4.0;
+        else if (units>50 && units>=200) {
+            subtotal+= ((50*4.0)+((units-50)*7.0));
+        }
+
+
+
 
     }
 
 
     @Override
     public double fixedCharge(){
+        return 100.0;
 
 
 
