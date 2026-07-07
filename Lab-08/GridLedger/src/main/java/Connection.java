@@ -1,9 +1,11 @@
 public abstract class Connection{
 
     private Meter meter;
+    private double fuelRate;
 
     public Connection(Meter meter) {
         this.meter = meter;
+        this.fuelRate = 0.10;
     }
 
     public abstract double energyCharge();
@@ -11,7 +13,7 @@ public abstract class Connection{
     public abstract double fixedCharge();
 
     public double fuelSurcharge() {
-        return this.energyCharge() * 0.10;
+        return this.energyCharge() * fuelRate;
     }
 
     public double tax() {
@@ -25,5 +27,10 @@ public abstract class Connection{
 
     public Meter getMeter() {
         return meter;
+    }
+
+    public void setFuelRate(double fuelRate) {
+        if (fuelRate <= 0) return;
+        this.fuelRate = fuelRate;
     }
 }
