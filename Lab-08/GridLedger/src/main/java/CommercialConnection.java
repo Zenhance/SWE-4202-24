@@ -18,7 +18,8 @@ public class CommercialConnection extends Connection{
             subtotal += (units*9.0);
 
             else subtotal += (100*9.0 + (units-100) * 13.0);
-            return subtotal; }
+            return subtotal;
+    }
 
 
     @Override

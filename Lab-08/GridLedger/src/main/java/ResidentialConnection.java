@@ -8,6 +8,9 @@ public class ResidentialConnection extends Connection{
 
     @Override
     public double energyCharge(){
+        int units=super.getMeter().getUnitsConsumed();
+
+        double subtotal=0;
 
 
     }
