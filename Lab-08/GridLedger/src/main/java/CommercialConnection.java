@@ -5,7 +5,7 @@ public class CommercialConnection extends Connection{
     }
 
     public double energyCharge(){
-        int units = meter.getUnitsConsumed();
+        int units = getUnits();
         if(units <= 100){
             return units * 9.0;
         }

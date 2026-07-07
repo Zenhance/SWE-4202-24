@@ -4,7 +4,7 @@ public class IndustrialConnection extends Connection{
         super(meter);
     }
     public double energyCharge(){
-        int units = meter.getUnitsConsumed();
+        int units = getUnits();
         return units * 15.0;
     }
 

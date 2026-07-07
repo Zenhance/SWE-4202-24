@@ -2,10 +2,21 @@ public abstract class Connection {
     private double fuelSurchargePercentage = 0.10;
     private double taxSurchargePercentage = 0.05;
 
-    public final Meter meter;
+    private Meter meter;
+
+
+    public int getUnits(){
+       return meter.getUnitsConsumed();
+    }
+
+
+
+    public void setMeter(Meter meter) {
+        this.meter = meter;
+    }
 
     public Connection(Meter meter) {
-        this.meter = meter;
+        setMeter(meter);
     }
 
     abstract public double energyCharge();
