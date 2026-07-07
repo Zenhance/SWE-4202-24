@@ -5,6 +5,22 @@ public class IndustrialConnection extends Connection{
     }
 
 
+    @Override
+    public double energyCharge(){
+
+
+    }
+
+
+    @Override
+    public double fixedCharge(){
+
+
+
+    }
+
+
+
 
 
 

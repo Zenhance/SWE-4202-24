@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="connection class">
-      <change afterPath="$PROJECT_DIR$/Lab-08/GridLedger/src/main/java/CommercialConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab-08/GridLedger/src/main/java/Connection.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-08/GridLedger/src/main/java/Connection.java" afterDir="false" />
-    </list>
+    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="connection extension" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -211,30 +207,6 @@
       <workItem from="1778092688155" duration="94000" />
       <workItem from="1778092809585" duration="6679000" />
       <workItem from="1778163384097" duration="3333000" />
-    </task>
-    <task id="LOCAL-00069" summary="getreceipt cart">
-      <option name="closed" value="true" />
-      <created>1780400565266</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1780400565266</updated>
-    </task>
-    <task id="LOCAL-00070" summary="getreceipt cart">
-      <option name="closed" value="true" />
-      <created>1780400713218</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1780400713218</updated>
-    </task>
-    <task id="LOCAL-00071" summary="Cart.java line 76 fix">
-      <option name="closed" value="true" />
-      <created>1780400991937</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1780400991937</updated>
     </task>
     <task id="LOCAL-00072" summary="creating classes">
       <option name="closed" value="true" />
@@ -604,7 +576,31 @@
       <option name="project" value="LOCAL" />
       <updated>1783402083231</updated>
     </task>
-    <option name="localTasksCounter" value="118" />
+    <task id="LOCAL-00118" summary="connection class completion">
+      <option name="closed" value="true" />
+      <created>1783402262371</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1783402262371</updated>
+    </task>
+    <task id="LOCAL-00119" summary="creating classes">
+      <option name="closed" value="true" />
+      <created>1783402392910</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1783402392910</updated>
+    </task>
+    <task id="LOCAL-00120" summary="connection extension">
+      <option name="closed" value="true" />
+      <created>1783402551864</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1783402551864</updated>
+    </task>
+    <option name="localTasksCounter" value="121" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -644,8 +640,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="recipient methods" />
-    <MESSAGE value="message writing" />
     <MESSAGE value="message methods" />
     <MESSAGE value="message" />
     <MESSAGE value="email extends message" />
@@ -665,10 +659,12 @@
     <MESSAGE value="changing cart" />
     <MESSAGE value="cart" />
     <MESSAGE value="." />
-    <MESSAGE value="creating classes" />
     <MESSAGE value="meter class" />
     <MESSAGE value="meter class completion" />
     <MESSAGE value="connection class" />
-    <option name="LAST_COMMIT_MESSAGE" value="connection class" />
+    <MESSAGE value="connection class completion" />
+    <MESSAGE value="creating classes" />
+    <MESSAGE value="connection extension" />
+    <option name="LAST_COMMIT_MESSAGE" value="connection extension" />
   </component>
 </project>

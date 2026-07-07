@@ -6,6 +6,24 @@ public class CommercialConnection extends Connection{
     }
 
 
+    @Override
+    public double energyCharge(){
+
+
+    }
+
+
+    @Override
+    public double fixedCharge(){
+
+
+
+    }
+
+
+
+
+
 
 
 

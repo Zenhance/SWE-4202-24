@@ -6,6 +6,23 @@ public class ResidentialConnection extends Connection{
 
 
 
+    @Override
+    public double energyCharge(){
+
+
+    }
+
+
+    @Override
+    public double fixedCharge(){
+
+
+
+    }
+
+
+
+
 
 
 
