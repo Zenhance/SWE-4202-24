@@ -1,4 +1,4 @@
-public abstract class ResidentialConnection extends Connection{
+public class ResidentialConnection extends Connection{
     private static final double RATE_1=4.0;
     private static final double RATE_2=7.0;
     private static final double RATE_3=11.0;
@@ -16,5 +16,9 @@ public abstract class ResidentialConnection extends Connection{
             return (50*RATE_1)+((units-50)*RATE_2);
         }
         return (50*RATE_1)+(150*RATE_2)+((units-200)*RATE_3);
+    }
+    @Override
+    public double fixedCharge() {
+        return FIXED_CHARGE;
     }
 }
