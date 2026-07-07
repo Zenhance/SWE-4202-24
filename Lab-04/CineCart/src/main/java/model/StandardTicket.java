@@ -1,6 +1,6 @@
 package model;
 
-public class StandardTicket extends LineItem{
+public class StandardTicket extends AbstractTicket{
     public StandardTicket(Showtime showtime, int row, int col) {
     super(showtime,row,col);
 }

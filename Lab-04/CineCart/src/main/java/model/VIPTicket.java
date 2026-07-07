@@ -1,6 +1,6 @@
 package model;
 
-public class VIPTicket extends LineItem {
+public class VIPTicket extends AbstractTicket {
     public VIPTicket(Showtime st, int i, int i1) {
         super(st,i, i1);
     }
