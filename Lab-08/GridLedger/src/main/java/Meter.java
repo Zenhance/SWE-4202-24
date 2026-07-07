@@ -6,13 +6,9 @@ public class Meter {
             if (openingReading < 0 || closingReading < 0) {
                 throw new IllegalArgumentException("Meter readings cannot be negative.");
             }
-
-
-
             if (closingReading < openingReading) {
                 throw new IllegalArgumentException("Closing reading cannot be below opening reading.");
             }
-
             this.openingReading = openingReading;
             this.closingReading = closingReading;
         }
