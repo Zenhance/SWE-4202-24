@@ -8,10 +8,10 @@ public class Meter {
             throw new IllegalArgumentException("Closing Reading can not be greater than Opening Reading");
         }
         if(openingReading<0){
-                throw new IllegalArgumentException("Reading can not be negative");
+                throw new IllegalArgumentException("Opening Reading can not be negative");
             }
         if(closingReading<0){
-            throw new IllegalArgumentException("Reading can not be negative");
+            throw new IllegalArgumentException("Closing Reading can not be negative");
     }
         this.openingReading=openingReading;
         this.closingReading=closingReading;
