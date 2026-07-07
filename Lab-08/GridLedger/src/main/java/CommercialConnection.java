@@ -23,20 +23,6 @@ public class CommercialConnection extends Connection{
 
     @Override
     public double fixedCharge(){
-
-
-
+        return 500.0;
     }
-
-
-
-
-
-
-
-
-
-
-
-
 }
