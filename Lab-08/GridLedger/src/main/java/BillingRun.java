@@ -7,4 +7,9 @@ public class BillingRun {
     public void register(Connection c){
         connections.add(c);
     }
+
+    public void register(Connection c, double nfs){
+        c.changeFuelSurcharge(nfs);
+        connections.add(c);
+    }
 }
