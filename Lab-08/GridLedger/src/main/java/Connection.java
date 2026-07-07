@@ -1,7 +1,7 @@
 public abstract class Connection
 {
-    public static final double FUEL_DEFAULT = 0.10;
-    public static final double TAX_RATE = 0.05;
+    private static final double FUEL_DEFAULT = 0.10;
+    private static final double TAX_RATE = 0.05;
 
     private Meter meter;
 
@@ -24,5 +24,10 @@ public abstract class Connection
     {
         double sum=energyCharge()+fixedCharge()+fuelSurcharge();
         return sum+tax();
+    }
+
+    public Meter getMeter()
+    {
+        return meter;
     }
 }

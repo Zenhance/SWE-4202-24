@@ -5,8 +5,6 @@ public class ResidentialConnection extends Connection
     private static final double RES_RATE_3 = 11.0;
     private static final double RES_FIXED  = 100.0;
 
-    private Meter meter;
-
     public ResidentialConnection(Meter meter)
     {
         super(meter);
@@ -15,7 +13,7 @@ public class ResidentialConnection extends Connection
     @Override
     public double energyCharge()
     {
-        int unit = meter.getUnitsConsumed();
+        int unit = getMeter().getUnitsConsumed();
         if(unit<=50)
         {
             return unit*RES_RATE_1;
