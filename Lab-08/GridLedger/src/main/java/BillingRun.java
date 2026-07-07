@@ -36,7 +36,7 @@ public class BillingRun
         double t=0.0;
         for(Connection c : connections)
         {
-            t=c.total();
+            t=t+c.total();
         }
         return t;
     }
