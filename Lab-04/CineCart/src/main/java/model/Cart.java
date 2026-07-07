@@ -1,4 +1,5 @@
 package model;
+import model.AbstractTicket;
 
 public class Cart {
     public static final int MAX_TICKETS = 20;
