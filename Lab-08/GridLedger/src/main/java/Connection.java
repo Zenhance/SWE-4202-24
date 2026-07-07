@@ -1,4 +1,4 @@
-public abstract class Connection {
+public CommercialConnection extends Connection {
     protected Meter meter;
     protected double fuelRate=0.0;
 
