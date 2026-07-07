@@ -3,12 +3,15 @@ public class Meter {
     private int closingReading;
 
     public Meter(int openingReading, int closingReading) {
-        if(openingReading == -1 || closingReading == -1) {
+        if(openingReading<0) {
             throw new IllegalArgumentException("Invalid input");
         }else{
             this.openingReading = openingReading;
-            this.closingReading = closingReading;
         }
+        if(closingReading<openingReading) {
+            throw new IllegalArgumentException("Invalid input");
+        }else{
+            this.closingReading = closingReading;
     }
 
     public getUnitsConsumed(){
