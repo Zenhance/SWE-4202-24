@@ -17,18 +17,14 @@ public class ResidentialConnection extends Connection{
             subtotal+= ((50*4.0)+((units-50)*7.0));
         }
 
-
-
-
+        else subtotal+= ((50*4.0)+(150.0*7.0)+((units-200)*11.0));
+        return subtotal;
     }
 
 
     @Override
     public double fixedCharge(){
         return 100.0;
-
-
-
     }
 
 
