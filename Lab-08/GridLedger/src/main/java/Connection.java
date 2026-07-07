@@ -9,4 +9,14 @@ public abstract class Connection {
         }
         this.meter = meter;
     }
+    protected int units(){
+        return meter.getUnitsConsumed();
+    }
+    public abstract double energyCharge();
+    public abstract double fixedCharge();
+
+    public double fuelSurcharge(){
+        return energyCharge()*fuelPercent;
+    }
+    public double
 }
