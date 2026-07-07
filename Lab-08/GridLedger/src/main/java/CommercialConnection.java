@@ -7,5 +7,9 @@ public class CommercialConnection extends Connection{
         return 100 * 9.0 + (units - 100) * 13.0;
     }
 
+    public double fixedCharge(){
+        return 500.0;
+    }
+
 
 }
