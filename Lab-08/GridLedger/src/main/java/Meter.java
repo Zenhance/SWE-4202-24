@@ -5,7 +5,9 @@ public class Meter {
         if (opening < 0) {
             throw new IllegalArgumentException("Opening reading cannot be negative");
         }
-
+if(closing<opening){
+    throw new IllegalArgumentException("Closing reading cannot be less than opening reading.");
+}
         this.opening = opening;
         this.closing = closing;
     }
