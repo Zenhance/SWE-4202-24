@@ -10,7 +10,17 @@ public class CheckoutEngine {
         this.board = board;
         this.menu = menu;
     }
-
+public static double checkout(Cart cart){
+        double subtotal=cart.grandSubtotal();
+        double comboDiscount=0;
+        if(cart.hasCode("POP") && cart.hasCode("SODA")){
+            comboDiscount=50.0;
+        }
+        double groupDiscount=0;
+        if(cart.ticketCount()>=4){
+            groupDiscount=0.
+        }
+}
     public String bookTicket(Cart cart, int showtimeId, int row, int col) {
         Showtime showtime = board.findById(showtimeId);
             if (showtime == null) {
