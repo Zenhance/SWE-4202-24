@@ -1,12 +1,18 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class BillingRun {
-    public void register(Connection slot) {
+    private final List<Connection> connections = new ArrayList<>();
+    public void register(Connection connection) {
+        connections.add(connection);
+    }
+
+    public void register(Connection connection, double fuelSurchargePercentage) {
+        connection.setFuelSurchargePercentage(fuelSurchargePercentage);
+        connections.add(connection);
     }
 
     public int size() {
-    }
-
-    public List<Invoice> execute() {
+        return connections.size();
     }
 }
