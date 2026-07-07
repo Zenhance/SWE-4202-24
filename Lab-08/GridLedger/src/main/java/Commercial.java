@@ -1,7 +1,8 @@
 public class Commercial extends Connection {
-    public Commercial(Meter meter){
+    public Commercial(Meter meter) {
         super(meter);
     }
+
     @Override
     public double energyCharge() {
         int units = meter.getUnitsConsumed();
@@ -10,12 +11,9 @@ public class Commercial extends Connection {
         }
         return 100 * 9.0 + (units - 100) * 13.0;
     }
+
+    @Override
+    public double fixedCharge() {
+        return 300;
     }
-
-
-
-
-
-
-
 }
