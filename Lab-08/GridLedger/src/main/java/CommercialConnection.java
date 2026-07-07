@@ -2,11 +2,12 @@ public class CommercialConnection extends Connection{
     public CommercialConnection(Meter meter){
         super(meter);
     }
-    public double getFixedCharge(){
+    @Override
+    public double fixedCharge(){
         return 120.0;
     }
-
-    public double getEnergyCharge(){
+    @Override
+    public double energyCharge(){
         int units= getMeter().getUnitsConsumed();
         double charge=0;
         if(units<=100){

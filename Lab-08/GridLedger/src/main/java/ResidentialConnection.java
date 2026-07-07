@@ -4,12 +4,12 @@ public class ResidentialConnection extends Connection{
     }
 
     @Override
-     public double getFixedCharge(){
+     public double fixedCharge(){
         return 40.0;
      }
 
      @Override
-     public double getEnergyCharge(){
+     public double energyCharge(){
         int units= getMeter().getUnitsConsumed();
         double charge=0;
         if(units<=50){

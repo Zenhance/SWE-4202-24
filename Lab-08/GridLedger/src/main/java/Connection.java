@@ -10,20 +10,20 @@ public abstract class Connection {
         return meter;
     }
 
-    public abstract double getEnergyCharge();
-    public abstract double getFixedCharge();
+    public abstract double energyCharge();
+    public abstract double fixedCharge();
 
     public double getFuelSurcharge(){
-        return getEnergyCharge()*fuelSurchargePercentage;
+        return energyCharge()*fuelSurchargePercentage;
     }
 
     public double getTax(){
-        double subtotal= getEnergyCharge()+getFixedCharge()+getFuelSurcharge();
+        double subtotal= energyCharge()+fixedCharge()+getFuelSurcharge();
         return subtotal*taxPercentage;
     }
 
     public double getTotalBill(){
-        return getEnergyCharge()+getFixedCharge()+getFuelSurcharge()+getTax();
+        return energyCharge()+fixedCharge()+getFuelSurcharge()+getTax();
     }
 
     public void setFuelSurchargePercentage(double fuelPercentage){

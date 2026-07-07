@@ -2,11 +2,12 @@ public class IndustrialConnection extends Connection{
     public IndustrialConnection(Meter meter){
         super(meter);
     }
-
-    public double getFixedCharge(){
+    @Override
+    public double fixedCharge(){
         return 500.0;
     }
-    public double getEnergyCharge(){
+    @Override
+    public double energyCharge(){
         int units= getMeter().getUnitsConsumed();
         return units*15.0;
     }

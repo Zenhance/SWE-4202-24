@@ -4,9 +4,9 @@ public class LifelineConnection extends ResidentialConnection{
     public LifelineConnection(Meter meter){
         super(meter);
     }
-
+    @Override
     public double energyCharge(){
-        double baseResidentialCharge=super.getEnergyCharge();
+        double baseResidentialCharge=super.energyCharge();
         return baseResidentialCharge*(1.0-REBATE_PERCENTAGE);
     }
 }
