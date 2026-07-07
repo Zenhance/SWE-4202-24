@@ -5,6 +5,7 @@ public class LifelineConn extends RsidentialConn {
 
     @Override
     public double energyCharge(){
+        return super.energyCharge() = 0.7;
 
     }
 
