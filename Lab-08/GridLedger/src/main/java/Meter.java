@@ -9,7 +9,7 @@ public class Meter {
             throw new IllegalArgumentException();
         }
 
-        this.unitsConsumed = openingReading - closingReading;
+        this.unitsConsumed = closingReading - openingReading;
     }
 
     public int getUnitsConsumed() {
