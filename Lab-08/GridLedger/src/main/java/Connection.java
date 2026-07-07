@@ -8,8 +8,10 @@ public abstract class Connection {
         this.meter=meter;
     }
 
-    public double energyCharge();
-    public double fixedCharge();
+    public abstract double energyCharge();
+
+    public abstract double fixedCharge();
+
     public double fuelSurviceCharge(){
         return energyCharge()*fuelPercentage;
     }
