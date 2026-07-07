@@ -24,5 +24,6 @@ public class BillingRun {
         for(Connection c : connections){
             total+=c.totalBill();
         }
+        return total;
     }
 }
