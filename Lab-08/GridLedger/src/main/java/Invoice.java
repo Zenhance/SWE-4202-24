@@ -1,4 +1,7 @@
 public class Invoice {
-    public double getTotal() {
+    private final double total;
+
+    public Invoice(double total) {
+        this.total = total;
     }
 }
