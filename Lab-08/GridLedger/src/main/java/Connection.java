@@ -32,6 +32,7 @@ public abstract class Connection {
         return meter.getUnitsConsumed();
     }
 
-
+    public abstract double getEnergyCharge();
+    public abstract double getFixedCharge(); 
 
 }
