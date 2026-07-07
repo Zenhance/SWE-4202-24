@@ -15,4 +15,8 @@ public class ResidentialConnection extends Connection {
         return (50 * 4.0) + (150 * 7.0) + ((units - 200) * 11.0);
     }
 
+    @Override
+    public double fixedCharge() {
+        return 100.00;
+    }
 }
