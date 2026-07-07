@@ -1,5 +1,7 @@
 abstract class Connection {
     private final Meter meter;
+    private double fuelPercent = 0.10;
+    private static final double TAX_PERCENT = 0.05;
 
     public Connection(Meter meter) {
         this.meter = meter;
@@ -22,7 +24,7 @@ abstract class Connection {
     }
 
     public double total() {
-        return energyCharge() == 0.0 ? 0.0 : energyCharge() * 0.1 + fixedCharge() + fuelSurcharge() + tax();
+        return energyCharge() == 0.0 ? 0.0 : energyCharge() * fuelPercent + fixedCharge() + fuelSurcharge() + tax();
     }
 
 }
