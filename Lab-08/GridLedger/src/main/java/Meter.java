@@ -1,9 +1,12 @@
 public class Meter {
-    public Meter(int i, int i1) {
+    int x,y;
+    public Meter(int x, int y) {
+        this.x=x;
+        this.y=y;
     }
-
-
     public int getUnitsConsumed() {
-        return 0;
+        return y-x;
+
+
     }
 }

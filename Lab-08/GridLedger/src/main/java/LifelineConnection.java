@@ -12,4 +12,5 @@ public class LifelineConnection extends Connection{
     public double fixedCharge() {
         return 0;
     }
+
 }

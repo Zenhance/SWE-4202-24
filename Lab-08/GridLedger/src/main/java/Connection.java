@@ -10,11 +10,12 @@ public abstract class Connection {
     public Connection(Meter meter) {
         this.meter=meter;
     }
-
+    protected int getUnits(){
+        return meter.getUnitsConsumed();
+    }
     public double fuelSurcharge() {
         return energyCharge()*fuelPercent;
     }
-
     public abstract double energyCharge();
     public abstract double fixedCharge();
     public double tax() {

@@ -1,4 +1,6 @@
 public class IndustrialConnection extends Connection{
+    private Bill x;
+
     public IndustrialConnection(Meter meter) {
         super(meter);
 
@@ -6,11 +8,11 @@ public class IndustrialConnection extends Connection{
 
     @Override
     public double energyCharge() {
-        return 0;
+        return getUnits()*15.0;
     }
 
     @Override
     public double fixedCharge() {
-        return 0;
+        return 200;
     }
 }
