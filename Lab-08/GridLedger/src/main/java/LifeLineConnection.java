@@ -5,8 +5,8 @@ public class LifeLineConnection extends ResidentialConnection {
     }
 
     public double energyCharge(){
-        int units = meter.getUnitsConsumed();
-        return units - (units * rate);
+        double c = super.energyCharge();
+        return c - (c * rate);
     }
 
 }
