@@ -1,18 +1,27 @@
 package model;
 
-public class Ticket {
+public abstract class Ticket implements LineItem {
     private final Showtime showtime;
     private final int row;
     private final int col;
-    private final double pricePaid;
+    private final double basePrice;
 
-    public Ticket(Showtime showtime, int row, int col, double pricePaid) {
+    public Ticket(Showtime showtime, int row, int col) {
         this.showtime = showtime;
         this.row = row;
         this.col = col;
-        this.pricePaid = pricePaid;
+        this.basePrice = showtime.getMovie().getBasePrice();
     }
 
+    protected double peakMultiplier(){
+        return showtime.isPeak()? 1.20 : 1.00;
+    }
+
+    public abstract double subtotal();
+
+    public String describe(){
+        return String.format("T%d - R%dC%d", showtime.getId(), row, col);
+    }
     public Showtime getShowtime() {
         return showtime;
     }
@@ -25,12 +34,12 @@ public class Ticket {
         return col;
     }
 
-    public double getPricePaid() {
-        return pricePaid;
-    }
 
+    /*
     public String toString(){
         return String.format("T%d - R%dC%d @ BDT %.2f",
                 showtime.getId(), row, col, pricePaid);
     }
+
+     */
 }
