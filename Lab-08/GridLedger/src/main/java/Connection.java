@@ -28,4 +28,10 @@ public abstract class Connection {
         this.fuelSurchargePercentage = fuelSurchargePercentage;
     }
 
+    protected int getUnits(){
+        return meter.getUnitsConsumed();
+    }
+
+
+
 }
