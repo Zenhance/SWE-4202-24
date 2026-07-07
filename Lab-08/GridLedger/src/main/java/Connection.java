@@ -16,4 +16,10 @@ public class Connection {
     public double fuelSurcharge(){
         return energyCharge()*fuelPercentage;
     }
+    public double tax(){
+        return (energyCharge()+fixedCharge()+fuelSurcharge())*TAX_RATE;
+    }
+    public double total(){
+        return energyCharge()+fixedCharge()+fuelSurcharge()+tax();
+    }
 }
