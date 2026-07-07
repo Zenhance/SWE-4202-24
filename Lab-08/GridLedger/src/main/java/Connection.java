@@ -1,4 +1,4 @@
-public class Connection {
+public abstract class Connection {
     private final Meter meter;
     private double fuelPercentage=0.10;
     private static final double TAX_RATE=0.05;
