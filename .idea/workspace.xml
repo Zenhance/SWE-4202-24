@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="cart">
+    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment=".">
+      <change afterPath="$PROJECT_DIR$/Lab-08/GridLedger/src/main/java/Connection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/model/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/model/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab-04/CineCart/src/test/java/CineCartEncapsulationTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab-04/CineCart/src/test/java/CineCartTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,26 +74,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.CineCartEncapsulationTest.executor": "Run",
-    "Gradle.CineCartTest.executor": "Run",
-    "Gradle.Tests in 'CineCart.test'.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "39-riju",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.CineCartEncapsulationTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CineCartPolymorphismTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CineCartTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Tests in 'CineCart.test'.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;39-riju&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Gradle.CineCartEncapsulationTest">
+}</component>
+  <component name="RunManager" selected="Gradle.Tests in 'CineCart.test'">
     <configuration name="CineCartEncapsulationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -192,9 +191,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Tests in 'CineCart.test'" />
         <item itemvalue="Gradle.CineCartEncapsulationTest" />
         <item itemvalue="Gradle.CineCartPolymorphismTest" />
-        <item itemvalue="Gradle.Tests in 'CineCart.test'" />
         <item itemvalue="Gradle.CineCartTest" />
       </list>
     </recent_temporary>
@@ -211,22 +210,6 @@
       <workItem from="1778092688155" duration="94000" />
       <workItem from="1778092809585" duration="6679000" />
       <workItem from="1778163384097" duration="3333000" />
-    </task>
-    <task id="LOCAL-00057" summary="ticket class 2">
-      <option name="closed" value="true" />
-      <created>1779169138921</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1779169138921</updated>
-    </task>
-    <task id="LOCAL-00058" summary="writing the skeleton of checkout engine to prevent compilation error">
-      <option name="closed" value="true" />
-      <created>1780399553503</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1780399553504</updated>
     </task>
     <task id="LOCAL-00059" summary="writing the skeleton of checkout engine to prevent compilation error 2">
       <option name="closed" value="true" />
@@ -604,7 +587,23 @@
       <option name="project" value="LOCAL" />
       <updated>1781592154763</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="cart">
+      <option name="closed" value="true" />
+      <created>1781592249028</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1781592249028</updated>
+    </task>
+    <task id="LOCAL-00107" summary=".">
+      <option name="closed" value="true" />
+      <created>1781593410680</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1781593410680</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -646,7 +645,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="getreceipt cart" />
     <MESSAGE value="Cart.java line 76 fix" />
-    <MESSAGE value="." />
     <MESSAGE value="creating classes" />
     <MESSAGE value="recipient" />
     <MESSAGE value="recipient methods" />
@@ -669,6 +667,7 @@
     <MESSAGE value="concessionline" />
     <MESSAGE value="changing cart" />
     <MESSAGE value="cart" />
-    <option name="LAST_COMMIT_MESSAGE" value="cart" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
 </project>
