@@ -31,6 +31,7 @@ public class CheckoutEngine
         {
             return "Seat unavailable";
         }
+        seat.book();
         if(seat.isPremium())
         {
             cart.add(new PremiumTicket(showtime, row, col));
@@ -39,10 +40,6 @@ public class CheckoutEngine
         {
             cart.add(new StandardTicket(showtime, row, col));
         }
-        double price = showtime.getMovie().getBasePrice()*(seat.isPremium()?1.30:1.00)*(showtime.isPeak()?1.20:1.00);
-        seat.book();
-        StandardTicket ticket = new StandardTicket(showtime,row,col);
-        cart.add(ticket);
         return "OK";
     }
 
@@ -63,14 +60,11 @@ public class CheckoutEngine
 
     public double checkout(Cart cart)
     {
-//        double ticketSubtotal = cart.sumTicketsPaid();
-//        double concessionSubtotal = cart.sumConcessionsRaw();
-//        double combo = 0.0;
-//        if(cart.hasCode("POP") && cart.hasCode("SODA"))
-//        {
-//            combo=50.0;
-//        }
         double preDiscount = cart.grandSubtotal();
+        if(cart.hasCode("POP") && cart.hasCode("SODA"))
+        {
+            preDiscount=preDiscount-50.0;
+        }
         double groupDiscount = 0.0;
         if(cart.ticketCount()>=4)
         {
