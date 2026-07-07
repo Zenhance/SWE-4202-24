@@ -12,10 +12,12 @@ public class BillingRun {
 
     public void register(Connection c) {
         connections.add(c);
+        invoices.add(new Invoice(c));
     }
 
     public void register(Connection c, double fuelRate) {
         connections.add(c);
+        invoices.add(new Invoice(c));
     }
 
 
