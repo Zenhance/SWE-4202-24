@@ -7,16 +7,16 @@ public abstract class Connection {
     protected static final double TAX_RATE = 0.05;
 
     public Connection(Meter meter) {
-        if (meter == null) {
+        if (meter== null) {
             throw new IllegalArgumentException("Connection must have a meter.");
         }
 
-        this.meter = meter;
+        this.meter= meter;
         this.fuelSurchargeRate = DEFAULT_FUEL_SURCHARGE_RATE;
     }
     public Connection() {
 
-        meter = null;
+        meter= null;
     }
     public Meter meter() {
         return meter;

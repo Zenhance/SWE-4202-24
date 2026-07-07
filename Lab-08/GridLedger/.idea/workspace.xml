@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5331e440-4f0b-4416-bfe7-2c8a513b5169" name="Changes" comment="completed INDUSTRIAL connection and implemented the the INDUSTRIAL connection formula.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/BillingRun.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Invoice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/LifelineConnection.java" afterDir="false" />
+    <list default="true" id="5331e440-4f0b-4416-bfe7-2c8a513b5169" name="Changes" comment="COMMITTING">
       <change beforePath="$PROJECT_DIR$/.gradle/9.3.0/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.3.0/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/9.3.0/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.3.0/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/9.3.0/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.3.0/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Meter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Meter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Connection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Connection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Invoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Invoice.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +191,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783397126015</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="COMMITTING">
+      <option name="closed" value="true" />
+      <created>1783397295173</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1783397295173</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,6 +212,7 @@
     <MESSAGE value="completed residential connection and implemented the the residential connection formula." />
     <MESSAGE value="completed commercial connection and implemented the the commercial connection formula." />
     <MESSAGE value="completed INDUSTRIAL connection and implemented the the INDUSTRIAL connection formula." />
-    <option name="LAST_COMMIT_MESSAGE" value="completed INDUSTRIAL connection and implemented the the INDUSTRIAL connection formula." />
+    <MESSAGE value="COMMITTING" />
+    <option name="LAST_COMMIT_MESSAGE" value="COMMITTING" />
   </component>
 </project>
