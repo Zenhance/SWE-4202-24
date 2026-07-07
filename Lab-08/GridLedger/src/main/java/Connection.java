@@ -8,6 +8,10 @@ public abstract class Connection {
         this.fuelSurChargePercentage = fuelSurChargePercentage;
     }
 
+    public Meter getMeter() {
+        return meter;
+    }
+
     public abstract double energyCharge();
     public abstract double fixedCharge();
 
@@ -15,8 +19,9 @@ public abstract class Connection {
 
     }
 
+    public double tax() {
 
-    public Meter getMeter() {
-        return meter;
     }
+
+    public double total()
 }
