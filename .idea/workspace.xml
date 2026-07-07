@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="ResidentialConnection method completion">
-      <change beforePath="$PROJECT_DIR$/Lab-08/GridLedger/src/main/java/LifelineConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-08/GridLedger/src/main/java/LifelineConnection.java" afterDir="false" />
-    </list>
+    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="space clearance" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -209,30 +207,6 @@
       <workItem from="1778092688155" duration="94000" />
       <workItem from="1778092809585" duration="6679000" />
       <workItem from="1778163384097" duration="3333000" />
-    </task>
-    <task id="LOCAL-00079" summary="message writing">
-      <option name="closed" value="true" />
-      <created>1780987230087</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1780987230087</updated>
-    </task>
-    <task id="LOCAL-00080" summary="message writing">
-      <option name="closed" value="true" />
-      <created>1780987346312</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1780987346312</updated>
-    </task>
-    <task id="LOCAL-00081" summary="message methods">
-      <option name="closed" value="true" />
-      <created>1780987385952</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1780987385952</updated>
     </task>
     <task id="LOCAL-00082" summary="message">
       <option name="closed" value="true" />
@@ -602,7 +576,31 @@
       <option name="project" value="LOCAL" />
       <updated>1783404090854</updated>
     </task>
-    <option name="localTasksCounter" value="128" />
+    <task id="LOCAL-00128" summary="LifelineConnection">
+      <option name="closed" value="true" />
+      <created>1783404277655</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1783404277655</updated>
+    </task>
+    <task id="LOCAL-00129" summary="LifelineConnection">
+      <option name="closed" value="true" />
+      <created>1783404329902</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1783404329902</updated>
+    </task>
+    <task id="LOCAL-00130" summary="space clearance">
+      <option name="closed" value="true" />
+      <created>1783404440590</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1783404440590</updated>
+    </task>
+    <option name="localTasksCounter" value="131" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -642,8 +640,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="..." />
-    <MESSAGE value=".." />
     <MESSAGE value="renamed ticket and made it abstractticket" />
     <MESSAGE value="comboline.java" />
     <MESSAGE value="premiumticket" />
@@ -667,6 +663,8 @@
     <MESSAGE value="IndustrialConnection" />
     <MESSAGE value="ResidentialConnection method" />
     <MESSAGE value="ResidentialConnection method completion" />
-    <option name="LAST_COMMIT_MESSAGE" value="ResidentialConnection method completion" />
+    <MESSAGE value="LifelineConnection" />
+    <MESSAGE value="space clearance" />
+    <option name="LAST_COMMIT_MESSAGE" value="space clearance" />
   </component>
 </project>
