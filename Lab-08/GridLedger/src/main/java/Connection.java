@@ -18,4 +18,8 @@ public abstract class Connection{
         double subtotal = this.energyCharge() + this.fixedCharge() + this.fuelSurcharge();
         return subtotal * 0.05;
     }
+
+    public double total() {
+        return this.energyCharge() + this.fixedCharge() + this.fuelSurcharge() + this.tax();
+    }
 }
