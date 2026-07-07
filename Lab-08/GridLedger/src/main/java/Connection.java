@@ -1,18 +1,29 @@
 public abstract class Connection {
-    private Meter meter;
+    protected Meter meter;
 
     public Connection(Meter meter){
         this.meter = meter;
+    }
+
+    public Meter getMeter() {
+        return meter;
     }
 
     public abstract double energyCharge();
 
     public abstract double fixedCharge();
 
-    public abstract double fuelSurcharge();
+    public  double fuelSurcharge(){
+        return this.energyCharge() * 0.10;
+    }
 
-    public abstract double tax();
+    public  double tax(){
+        double subtotal = this.energyCharge() + this.fixedCharge() + this.fuelSurcharge();
+        return subtotal * 0.05;
+    }
 
-    public abstract double total();
+    public  double total(){
+        return this.energyCharge() + this.fixedCharge() + this.fuelSurcharge() + this.tax();
+    }
 
 }
