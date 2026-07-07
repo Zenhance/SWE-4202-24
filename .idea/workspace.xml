@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="connection class">
+      <change afterPath="$PROJECT_DIR$/Lab-08/GridLedger/src/main/java/CommercialConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab-08/GridLedger/src/main/java/Connection.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-08/GridLedger/src/main/java/Connection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -209,38 +211,6 @@
       <workItem from="1778092688155" duration="94000" />
       <workItem from="1778092809585" duration="6679000" />
       <workItem from="1778163384097" duration="3333000" />
-    </task>
-    <task id="LOCAL-00065" summary="signature">
-      <option name="closed" value="true" />
-      <created>1780400264232</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1780400264232</updated>
-    </task>
-    <task id="LOCAL-00066" summary="signature">
-      <option name="closed" value="true" />
-      <created>1780400308993</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1780400308993</updated>
-    </task>
-    <task id="LOCAL-00067" summary="checkout cart">
-      <option name="closed" value="true" />
-      <created>1780400388071</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1780400388071</updated>
-    </task>
-    <task id="LOCAL-00068" summary="checkout cart">
-      <option name="closed" value="true" />
-      <created>1780400481867</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1780400481867</updated>
     </task>
     <task id="LOCAL-00069" summary="getreceipt cart">
       <option name="closed" value="true" />
@@ -602,7 +572,39 @@
       <option name="project" value="LOCAL" />
       <updated>1783401594262</updated>
     </task>
-    <option name="localTasksCounter" value="114" />
+    <task id="LOCAL-00114" summary="connection class">
+      <option name="closed" value="true" />
+      <created>1783401770385</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1783401770385</updated>
+    </task>
+    <task id="LOCAL-00115" summary="connection class">
+      <option name="closed" value="true" />
+      <created>1783401845659</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1783401845659</updated>
+    </task>
+    <task id="LOCAL-00116" summary="connection class">
+      <option name="closed" value="true" />
+      <created>1783402020919</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1783402020919</updated>
+    </task>
+    <task id="LOCAL-00117" summary="connection class">
+      <option name="closed" value="true" />
+      <created>1783402083231</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1783402083231</updated>
+    </task>
+    <option name="localTasksCounter" value="118" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
