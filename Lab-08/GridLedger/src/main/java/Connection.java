@@ -1,7 +1,7 @@
 public abstract class Connection {
 
     protected Meter meter;
-    private double fuelSurChargePercentage;
+    private final double fuelSurChargePercentage;
     protected static final double TAX_PERCENTAGE;
 
     public Connection(Meter meter, double fuelSurChargePercentage ) {
@@ -11,6 +11,11 @@ public abstract class Connection {
 
     public Meter getMeter() {
         return meter;
+    }
+
+    public double getUnits() {
+        return meter.getUnitsConsumed();
+
     }
 
     public abstract double energyCharge();
