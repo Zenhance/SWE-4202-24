@@ -3,18 +3,19 @@ public class Meter {
     private int closingReading;
 
     public Meter(int openingReading, int closingReading) {
-        if(openingReading<0) {
+        if (openingReading < 0) {
             throw new IllegalArgumentException("Invalid input");
-        }else{
+        } else {
             this.openingReading = openingReading;
         }
-        if(closingReading<openingReading) {
+        if (closingReading < openingReading) {
             throw new IllegalArgumentException("Invalid input");
-        }else{
+        } else {
             this.closingReading = closingReading;
-    }
+        }
 
-    public getUnitsConsumed(){
-        return closingReading -openingReading;
+        public int getUnitsConsumed () {
+            return closingReading - openingReading;
+        }
     }
 }
