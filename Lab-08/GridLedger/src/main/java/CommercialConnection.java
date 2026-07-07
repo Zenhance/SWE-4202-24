@@ -9,8 +9,7 @@ public abstract class CommercialConnection extends Connection {
 
     @Override
     public double energyCharge() {
-        Meter meter = getMeter();
-        int unit = meter.getUnitsConsumed();
+        int unit = getMeter().getUnitsConsumed();
         if(unit<=100)
             return com_rate1;
         else {
