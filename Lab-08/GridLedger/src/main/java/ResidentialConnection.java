@@ -2,7 +2,7 @@ public class ResidentialConnection extends Connection{
     private Meter meter;
 
     public ResidentialConnection(Meter meter){
-        this.meter=meter;
+        super(meter);
     }
 
     public double energyCharge(){
@@ -15,5 +15,10 @@ public class ResidentialConnection extends Connection{
         else{
             return 50*4.0 +150*7.0 + (meter.getUnitsConsumed()-200)*11.0;
         }
+    }
+
+    @Override
+    public double fixedCharge() {
+        return 0;
     }
 }
