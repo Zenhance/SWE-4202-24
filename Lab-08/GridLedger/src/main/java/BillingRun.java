@@ -24,4 +24,13 @@ public class BillingRun {
         }
         return sum;
     }
+
+    public List<Invoice> execute(){
+        List<Invoice> invoices = new ArrayList<>();
+        for(Connection c : connections){
+            Invoice invoice = new Invoice(c);
+            invoices.add(invoice);
+        }
+        return invoices;
+    }
 }
