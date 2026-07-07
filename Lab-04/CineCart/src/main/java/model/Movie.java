@@ -1,25 +1,28 @@
 package model;
 
-public class Movie{
-    int id;
-    String title;
-    String rating;
-    int durationMin;
-    double basePrice;
+public class Movie {
 
-    public Movie(int id,String title,String rating,int durationMin,double basePrice){
-        this.id=id;
-        this.title=title;
-        this.rating=rating;
-        this.durationMin=durationMin;
-        this.basePrice=basePrice;
+    private int id;
+    private String title;
+    private String rating;
+    private int duration;
+    private double basePrice;
 
+    public Movie(int id, String title, String rating,
+                 int duration, double basePrice) {
+
+        this.id = id;
+        this.title = title;
+        this.rating = rating;
+        this.duration = duration;
+        this.basePrice = basePrice;
     }
-    public int getid(){return id;}
-    public String gettitle(){return title;}
-    public String getrating(){return rating;}
-    public int getdurationMin(){return durationMin;}
-    public double basePrice(){return basePrice;}
 
+    public String getTitle() {
+        return title;
+    }
 
+    public double getBasePrice() {
+        return basePrice;
+    }
 }

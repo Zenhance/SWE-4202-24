@@ -18,9 +18,8 @@ import model.Showtime;
 import model.StandardTicket;
 import model.StudentTicket;
 import model.VIPTicket;
-import data.ConcessionMenu;
-import data.ShowtimeBoard;
-import engine.CheckoutEngine;
+import model.ConcessionMenu;
+import model.CheckoutEngine;
 
 /**
  * CineCartPolymorphismTest.java
@@ -45,7 +44,7 @@ public class CineCartPolymorphismTest {
     // ------------------------------------------------------------------
     private static final Movie PEAK_MOVIE = new Movie(1, "Inception", "PG-13", 148, 350.00);
     private static final Movie OFF_MOVIE  = new Movie(3, "Toy Story 4", "G", 100, 200.00);
-    private static final Hall  HALL       = new Hall(2, 6, 10, 2);
+    private static final Hall  HALL       = new Hall();
 
     private static Showtime peakShow() { return new Showtime(17, PEAK_MOVIE, HALL, 19, "Fri"); }
     private static Showtime offShow()  { return new Showtime(19, OFF_MOVIE,  HALL, 11, "Sat"); }
@@ -148,7 +147,7 @@ public class CineCartPolymorphismTest {
             new ComboLine(pop(), soda())
         };
         double sum = 0.0;
-        for (LineItem line : batch) sum += line.subtotal();   // one call name, six behaviours
+        for (LineItem line : batch) sum += line.subtotal();   // one call name, six behaviors
         assertEquals(6, batch.length);
         assertTrue(sum > 0.0);
     }
