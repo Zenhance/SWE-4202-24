@@ -2,11 +2,14 @@ public abstract class Connection {
     private double fuelSurchargePercentage = 0.10;
     private double taxSurchargePercentage = 0.05;
 
-    Meter meter;
+    protected final Meter meter;
 
+    public Connection(Meter meter) {
+        this.meter = meter;
+    }
 
     abstract public double energyCharge();
-    abstract public double fixedCharge();\
+    abstract public double fixedCharge();
 
     public double fuelSurcharge() {
         return energyCharge() * fuelSurchargePercentage;
@@ -19,5 +22,8 @@ public abstract class Connection {
         return energyCharge() + fixedCharge() + fuelSurcharge() + tax();
     }
 
+    public void changeFuelSurcharge(double fuelSurcharge){
+        this.fuelSurchargePercentage = fuelSurcharge;
+    }
 
 }
