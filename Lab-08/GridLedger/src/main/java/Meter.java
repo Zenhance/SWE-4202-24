@@ -22,6 +22,12 @@ public class Meter {
         return closingReading;
     }
 
+    public int unitsConsumed(){
+        return closingReading-openingReading;
+    }
 
+    public int getunitsConsumed(){
+        return 0;
+    }
 
 }
