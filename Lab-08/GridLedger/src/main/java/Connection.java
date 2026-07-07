@@ -1,15 +1,14 @@
 public abstract class Connection {
     private Meter meter;
-    private double fuelSurchargePercentage;
-    private static double tax = 10.0;
+    private double fuelSurchargePercentage = 0.10;
+//    private static double tax = 0.05;
 
-    public Connection(Meter meter, double fuelSurchargePercentage) {
+    public Connection(Meter meter) {
         if (meter == null) {
             throw new IllegalArgumentException("A connection must hold a valid meter reference.");
         }
 
         this.meter = meter;
-        this.fuelSurchargePercentage = fuelSurchargePercentage;
     }
 
     public Meter getMeter() {
@@ -17,7 +16,7 @@ public abstract class Connection {
     }
 
     public double fuelSurcharge() {
-        return energyCharge() * (fuelSurchargePercentage / 100.0);
+        return energyCharge() * (fuelSurchargePercentage);
     }
 
     public void setFuelSurchargePercentage(double fuelSurchargePercentage) {
@@ -34,7 +33,7 @@ public abstract class Connection {
 
     public double tax() {
         double subtotal = energyCharge() + fixedCharge() + fuelSurcharge();
-        return subtotal * (tax / 100.0);
+        return subtotal * (0.05);
     }
 
     public double total() {
