@@ -5,4 +5,16 @@ public class CommercialConnection extends Connection{
     public CommercialConnection(Meter meter){
         super(meter);
     }
+    @Override
+    public double fixedCharge(){
+        return FIXED_CHARGE;
+    }
+    @Override
+    public double energyCharge(){
+        int units=getUnitsConsumed();
+        if(units<=100){
+            return units*RATE_1;
+        }
+        return (100*RATE_1)+((units-100)*RATE_2);
+    }
 }
