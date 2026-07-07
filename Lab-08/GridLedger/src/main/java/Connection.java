@@ -2,7 +2,7 @@ import java.security.PublicKey;
 
 public abstract class Connection {
     protected Meter meter;
-    private double fuelPercentage = 0.0;,
+    private double fuelPercentage = 0.0;
 
     public Connection(Meter meter) {
     if(meter==null){

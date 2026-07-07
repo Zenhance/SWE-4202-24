@@ -6,6 +6,6 @@ public class LifelineConnection extends ResidentialConnection {
 
     @Override
     public double energyCharge() {
-        return super.energyCharge()(super.energyCharge()*rebate);
+        return super.energyCharge()-(super.energyCharge()*rebate);
     }
 }
