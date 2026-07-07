@@ -14,6 +14,17 @@ public class Meter {
             this.opening_reading=opening_reading;
             this.closing_reading=closing_reading;
     }
+    public int getOpening_reading(){
+        return opening_reading;
+    }
+    public int getClosing_reading(){
+        return closing_reading;
+    }
+    public int getConsumedunit(int closing_reading, int opening_reading){
+        return closing_reading-opening_reading;
+    }
+
+
 
 
 }
