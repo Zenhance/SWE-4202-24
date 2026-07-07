@@ -22,4 +22,9 @@ public class ResidentialConnection extends Connection{
         }
 
     }
+
+    @Override
+    public double fixedCharge() {
+        return RES_FIXED;
+    }
 }
