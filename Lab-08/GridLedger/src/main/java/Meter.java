@@ -7,7 +7,18 @@ public class Meter {
             throw new IllegalAccessException("Reading cannot be negative");
         }
         if(closingReading<openingReading){
-
+            throw new IllegalAccessException("Closing reading cannot be below opening reading");
         }
+        this.openingReading=openingReading;
+        this.closingReading=closingReading;
+    }
+    public int getOpeningReading(){
+        return openingReading;
+    }
+    public int getClosingReading(){
+        return closingReading;
+    }
+    public int getUnitsConsumed(){
+        return closingReading-openingReading;
     }
 }
