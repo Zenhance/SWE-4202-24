@@ -3,6 +3,7 @@ class LifelineConnection extends ResidentialConnection{
         super(meter);
     }
 
+    @Override
     public double energyCharge(){
         double c = super.energyCharge();
         return c - (c * 0.30);

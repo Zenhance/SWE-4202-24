@@ -5,6 +5,7 @@ class ResidentialConnection extends Connection{
     }
 
 
+    @Override
     public double energyCharge() {
 
         int units = meter.getUnitsConsumed();
@@ -23,6 +24,7 @@ class ResidentialConnection extends Connection{
         return c;
     }
 
+    @Override
     public double fixedCharge(){return 100.0;}
 
 

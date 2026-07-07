@@ -4,6 +4,7 @@ class CommercialConnection extends Connection{
         super(meter);
     }
 
+    @Override
     public double energyCharge() {
 
         int units = meter.getUnitsConsumed();
@@ -17,6 +18,7 @@ class CommercialConnection extends Connection{
         return c;
     }
 
+    @Override
     public double fixedCharge(){return 500.0;}
 
 }
