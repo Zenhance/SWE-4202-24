@@ -22,4 +22,8 @@ public class Meter {
     public double getClosingReading() {
         return closingReading;
     }
+
+    public getUnitsConsumed() {
+        return closingReading-openingReading;
+    }
 }
