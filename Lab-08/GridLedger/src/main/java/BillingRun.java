@@ -8,10 +8,12 @@ public class BillingRun{
 
 
     public List<Invoice> execute(){
+        for(Connection c: connections){
+            Invoice e = new Invoice(c);
+            invoices.add(e);
+        }
         return invoices;
     }
-
-
 
     public int size(){return connections.size();}
 
