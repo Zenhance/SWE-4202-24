@@ -12,6 +12,11 @@ public class BillingRun {
         connections.add(c);
     }
 
+    public void register(Connection c, double fuelRate) {
+        connections.add(c);
+    }
+
+
     public int size(){
         return connections.size();
     }
