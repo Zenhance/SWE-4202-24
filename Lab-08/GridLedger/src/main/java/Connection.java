@@ -7,7 +7,7 @@ public class Connection {
 
     }
 
-    public Byte energyCharge() {
+    public double energyCharge() {
         return 0;
     }
 
