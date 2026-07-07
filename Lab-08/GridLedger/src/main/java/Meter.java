@@ -4,7 +4,7 @@ public class Meter {
     private final int  currentReading;
     private final int  previousReading;
 
-    public Meter(int currentReading, int previousReading){
+    public Meter(int previousReading, int currentReading){
         if(currentReading<0 || previousReading<0){
             throw new IllegalArgumentException("Reading cant be negative.")
         }
@@ -23,6 +23,6 @@ public class Meter {
         return previousReading;
     }
     public int totalUsages(){
-        return previousReading-currentReading;
+        return currentReading-previousReading;
     }
 }
