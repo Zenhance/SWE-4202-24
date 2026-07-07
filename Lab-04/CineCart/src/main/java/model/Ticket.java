@@ -1,6 +1,6 @@
 package model;
 
-public abstract  class Ticket {
+public abstract  class Ticket  extends  LineItem{
     protected Showtime showtime;  //--> showtime will contain everything of the class "Showtime";
     protected int row;
     protected int col;
