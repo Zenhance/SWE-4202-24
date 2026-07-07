@@ -7,7 +7,17 @@ public abstract class Connection
 
     public abstract double energyCharge();
     public abstract double fixedCharge();
-    public abstract double fuelSurcharge();
-    public abstract double tax();
-    public abstract double total();
+    public double fuelSurcharge()
+    {
+        return energyCharge()*FUEL_DEFAULT;
+    }
+    public double tax()
+    {
+        return (energyCharge()+fixedCharge()+fuelSurcharge())*TAX_RATE;
+    }
+    public double total()
+    {
+        double sum=energyCharge()+fixedCharge()+fuelSurcharge();
+        return sum+tax();
+    }
 }
