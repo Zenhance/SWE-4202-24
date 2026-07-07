@@ -6,7 +6,9 @@ public class IndustrialConnection extends Connection{
 
     @Override
     public double energyCharge() {
-        return 0;
+        int units = super.getMeter().getUnitsConsumed();
+        double subtotal = units * 15.0;
+        return subtotal;
     }
 
     @Override
