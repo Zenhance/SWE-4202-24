@@ -2,6 +2,9 @@
 //  THE CONTRACTOR'S CODE -- the God class you must REPAIR.
 // =====================================================================
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Everything happens here, and every method opens with the SAME two questions:
  * "which kind of transaction?" then "which kind of account?" -- the two-level
@@ -14,18 +17,16 @@
  */
 public class TransactionEngine {
 
-    Account[] accounts = new Account[100];
-    int acctCount = 0;
-    Transaction[] batch = new Transaction[100];
-    int txnCount = 0;
+    List<Account> accounts = new ArrayList<>();
+    List<Transaction> batch = new ArrayList<>();
 
-    void addAccount(Account a) { accounts[acctCount++] = a; }
-    void submit(Transaction t) { batch[txnCount++] = t; }
+    void addAccount(Account a) { accounts.add(a); }
+    void submit(Transaction t) { batch.add(t); }
 
     Account find(String id) {
         // the contractor used the pin field as an id in the demo; good enough
-        for (int i = 0; i < acctCount; i++) {
-            if (accounts[i] != null && accounts[i].pin.equals(id)) return accounts[i];
+        for (Account a : accounts) {
+            if (a != null && a.pin.equals(id)) return a;
         }
         return null;
     }
@@ -88,8 +89,8 @@ public class TransactionEngine {
     }
 
     void settleBatch() {
-        for (int i = 0; i < txnCount; i++) {
-            int code = process(batch[i]);
+        for (int i = 0; i < batch.size(); i++) {
+            int code = process(batch.get(i));
             if (code != 0) System.out.println("txn " + i + " failed: " + code);
         }
     }
