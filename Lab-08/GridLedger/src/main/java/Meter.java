@@ -1,12 +1,28 @@
 public class Meter {
-    private double units;
+    private final int opening;
+    private final int closing;
 
-    public Meter(double units){
-        if(units<0) throw new IllegalArgumentException("Units cannot be negative");
-        this.units=units;
+    public Meter(int opening, int closing){
+        if(opening<0 || closing<0){
+            throw new IllegalArgumentException("Meter readings can't be negative");
+        }
+        if(closing < opening){
+            throw new IllegalArgumentException("Closing reading cannot be less than opening");
+        }
+
+        this.opening=opening;
+        this.closing=closing;
     }
 
-    public double getUnits(){
-        return units;
+    public int getOpening() {
+        return opening;
+    }
+
+    public int getClosing() {
+        return closing;
+    }
+
+    public int getUnitsConsumed(){
+        return closing-opening;
     }
 }
