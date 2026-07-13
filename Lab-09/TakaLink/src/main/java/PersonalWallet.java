@@ -12,4 +12,8 @@ public class PersonalWallet {
 
     public void credit(double v) {
     }
+
+    public boolean verifyPin(String number) {
+        return false;
+    }
 }
