@@ -1,10 +1,11 @@
 public abstract class Connection{
     protected final Meter meter;
-    protected double fuelPet = 0.10;
+    protected double fuelPet;
     protected static final double taxPet = 0.05;
 
     public Connection(Meter meter) {
         this.meter = meter;
+        this.fuelPet=0.10;
     }
 
     public abstract double energyCharge();
