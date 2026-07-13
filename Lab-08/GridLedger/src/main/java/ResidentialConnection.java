@@ -11,11 +11,15 @@ public class ResidentialConnection extends Connection{
     @Override
     public double energyCharge(){
         int units = meter.getUnitsConsumed();
-        if(units <= 100){
+        if(units <= 50){
             return units*RATE1;
         }
 
-        return 100*RATE1 + (units -100)*RATE2;
+        if (units <=200){
+            return 50 * RATE1 + (units - 50) * RATE2;
+        }
+
+        return 50*RATE1 + 150*RATE2 + (units -200)*RATE3;
     }
 
     @Override
