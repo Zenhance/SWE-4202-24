@@ -25,4 +25,8 @@ public class Transaction {
     public Transaction() {
 
     }
+
+    public void settle() {
+
+    }
 }
