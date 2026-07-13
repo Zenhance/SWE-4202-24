@@ -7,6 +7,10 @@ abstract class Connection {
         this.meter = meter;
     }
 
+    protected int getUnits() {
+        return meter.getUnits();
+    }
+
     public double energyCharge() {
         return 0.0;
     }
