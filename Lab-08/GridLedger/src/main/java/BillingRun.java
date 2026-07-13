@@ -11,6 +11,7 @@ public class BillingRun {
     }
 
     public void register(Connection res, double v) {
+        batch.add(res);
     }
 
     public double grandTotal() {

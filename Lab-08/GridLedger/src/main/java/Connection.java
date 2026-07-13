@@ -4,7 +4,7 @@ public abstract class Connection { private static final double FUEL_DEFAULT    =
     public Connection(Meter meter){
         this.meter=meter;
     }
-    protected int getUnitsConsumed(){
+    protected int getUnitsConsumed() {
         return meter.getUnitsConsumed();
     }
 
@@ -13,6 +13,7 @@ public abstract class Connection { private static final double FUEL_DEFAULT    =
     public double fuelSurcharge(){
         return energyCharge()*FUEL_DEFAULT;
     }
+
     public double tax(){
         return (energyCharge()+fixedCharge()+fuelSurcharge())*TAX_RATE;
     }
