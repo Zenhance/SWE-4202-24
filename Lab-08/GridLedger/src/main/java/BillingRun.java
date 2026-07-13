@@ -13,6 +13,19 @@ public class BillingRun {
         connections.add(c);
     }
 
+    public int size(){
+        return connections.size();
+    }
+
+    public double grandTotal(){
+        double sum=0;
+
+        for (Connection c : connections){
+            sum += c.total();
+        }
+        return sum;
+    }
+
     public List<Invoice> execute()
     {
         List<Invoice> invoices = new ArrayList<>();
