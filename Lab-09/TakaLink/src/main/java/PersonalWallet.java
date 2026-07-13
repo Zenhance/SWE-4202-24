@@ -3,5 +3,10 @@ public class PersonalWallet {
     }
 
     public void debit(double v) {
+
+    }
+
+    public double balance() {
+        return 0.0;
     }
 }
