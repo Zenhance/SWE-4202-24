@@ -5,4 +5,7 @@ public class Payment {
     public double fee() {
         return 0.0;
     }
+
+    public void settle() {
+    }
 }
