@@ -24,4 +24,9 @@ public abstract class Transaction {
     public Wallet getTo(){
         return to;
     }
+    public double getAmount(){
+        return amount;
+    }
+
+
 }
