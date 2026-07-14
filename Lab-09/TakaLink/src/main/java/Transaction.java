@@ -44,9 +44,10 @@ public Transaction(Wallet paywallet,Wallet receivewallet,double amount,String pi
         throw new IllegalArgumentException("Receiver cant be null");
     if(amount<=0.0)
         throw new IllegalArgumentException("Amount cant be negative");
-
-
-
+    if(pin==null||pin.isBlank()||pin.isEmpty())
+        throw new IllegalArgumentException("Pin cant be null");
+    if(!paywallet.pinVerify(pin))
+        throw new IllegalArgumentException("Pin is invalid");
 
     this.paywallet=paywallet;
     this.receivewallet=receivewallet;
