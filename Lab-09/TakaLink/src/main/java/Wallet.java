@@ -23,30 +23,27 @@ public abstract class Wallet {
         this.spentToday=0.0;
     }
 
-    public String getId() {
+    public String id(){
         return id;
     }
 
-    public double getBalance() {
+    public double balance(){
         return balance;
-    }
-
-    public String getPin() {
-        return pin;
-    }
-
-    public double getSpentToday() {
-        return spentToday;
-    }
-
-    public boolean getFrozen() {
-        return frozen;
     }
 
     public void debit(double amount) throws InsufficientBalanceException {
         if(amount<=0) {
-            throw new IllegallArgumentException ("Debit amount cannot be negative");
+            throw new InsufficientBalanceException ("Debit amount cannot be negative");
         }
         balance -=amount;
     }
+
+    public void credit(double amount){
+        if(amount<=0){
+            throw new IllegalArgumentException ("Credit amount cannot be negative");
+        }
+        balance+=amount;
+    }
+
+
 }
