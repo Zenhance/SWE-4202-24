@@ -35,6 +35,11 @@ public abstract class Wallet {
     public void unfreeze(){
         frozen=false;
     }
+    public void verifyPin(String enteredPin)
+        throws WrongPinException{
+        if(!pin.equals(enteredPin))
+            throw new WrongPinException();
+    }
 
 
 
