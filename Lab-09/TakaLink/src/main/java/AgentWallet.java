@@ -9,7 +9,5 @@ public class AgentWallet extends Wallet{
     }
 
     @Override
-    public double sendMoney()
-
-
+    public double sendMoney();
 }

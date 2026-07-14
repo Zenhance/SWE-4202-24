@@ -1,2 +1,3 @@
-public class Payment extends Te{
+public class Payment extends Transaction{
+
 }
