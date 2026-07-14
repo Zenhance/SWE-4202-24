@@ -18,6 +18,14 @@ public class SettlementReport {
         return 0.0;
     }
 
+    public Object errorOf(Transaction bad){
+        return bad;
+    }
+
+    public boolean isSettled(Transaction t){
+        return false;
+    }
+
 
 }
 
