@@ -10,15 +10,19 @@
 public class Transaction {
     public String type;        // "SEND", "CASHOUT", "PAYMENT", "TOPUP"
     public double amount;
-    public String fromId;
-    public String toId;
+    public Wallet fromId;
+    public Wallet toId;
     public String pin;
 
-    public Transaction(String type, double amount, String fromId, String toId, String pin) {
+    public Transaction(String type, double amount, Wallet fromId, Wallet toId, String pin) {
         this.type = type;
         this.amount = amount;
         this.fromId = fromId;
         this.toId = toId;
         this.pin = pin;
+    }
+
+    public void settle() {
+
     }
 }
