@@ -45,5 +45,37 @@ public abstract class Wallet {
         balance+=amount;
     }
 
+    public boolean verifyPin(String candidate){
+        return pin.equals(candidate);
+    }
 
+    public boolean isFrozen(){
+        return frozen;
+    }
+
+    public void freeze(){
+        frozen=true;
+    }
+
+    public abstract double dailyLimit();
+
+    public double remainingDailyLimit(){
+        return 0.0;
+    }
+
+    void recordSpend(double amount){
+
+    }
+
+    public boolean canSend(){
+        return true;
+    }
+
+    public boolean canInitiateCashOut(){
+        return true;
+    }
+
+    public boolean canReceiveCashOut(){
+        return false;
+    }
 }
