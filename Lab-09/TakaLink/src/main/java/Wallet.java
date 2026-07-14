@@ -39,10 +39,20 @@ public abstract class Wallet {
     public abstract double dailyLimit();
 
     public void debit(double amount) throws InsufficientBalanceException {
+        if (amount <= 0) {
+            throw new IllegalArgumentException("Amount must be positive");
+        }
+        if (this.balance - amount < 0) {
+            throw new InsufficientBalanceException("Not enough funds");
+        }
+
         this.balance -= amount;
     }
 
     public void credit(double amount) {
+        if (amount <= 0) {
+            throw new IllegalArgumentException("Amount must be positive.");
+        }
         this.balance += amount;
     }
 
