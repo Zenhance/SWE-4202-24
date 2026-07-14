@@ -51,4 +51,10 @@ public abstract class Wallet {
         return dailyLimit() - spentToday;
     }
     public abstract double dailyLimit();
+
+    protected void assertCanSend() throws OperationNotAllowedException {};
+    protected void assertCanCashOut() throws OperationNotAllowedException {};
+    protected void assertCanReceiveCashOut() throws OperationNotAllowedException {
+        throw new OperationNotAllowedException(id + " is not an agent and cannot pay out a cash-out");
+    }
 }
