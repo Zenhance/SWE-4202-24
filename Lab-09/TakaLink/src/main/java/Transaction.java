@@ -38,5 +38,19 @@ public abstract class Transaction {
         this.toId = toId;
         this.pin = pin;
     }
+    protected TransactionType type() {
+        return type;
+    }
+
+    protected double amount() {
+        return amount;
+    }
+    protected Wallet fromId() {
+        return fromId;
+    }
+    protected Wallet toId() {
+        return toId;
+    }
+
 
 }
