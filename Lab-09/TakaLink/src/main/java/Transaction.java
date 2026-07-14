@@ -34,4 +34,41 @@ public abstract class Transaction {
         this.toId = toId;
         this.pin = pin;
     }
+
+    public abstract double fee();
+
+    public abstract void validateOperation() throws OperationNotAllowedException;
+
+    public abstract void moveMoney() throws TransactionException;
+
+    public double getAmount(){
+        return amount;
+    }
+
+    public Wallet getFromId(){
+        return fromId;
+    }
+
+    public Wallet getToId(){
+        return toId;
+    }
+
+    public String getPin(){
+        return pin;
+    }
+
+    public void settle() throws TransactionException{
+    if(fromId.isFrozen()){
+        throw new FrozenAccountException();
+    }
+    if(!fromId.verifyPin(pin)){
+        throw new InvalidPinException();
+    }
+    if(fromId.getSpentToday()+amount>fromId.dailyLimit())
+        throw new DailyLimitExceededException();
+    if(fromId.getBalance()<amount+fee())
+        throw new InsufficientBalanceException();
+    moveMoney();
+    fromId.addSpent(amount);
+    }
 }

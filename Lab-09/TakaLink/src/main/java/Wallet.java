@@ -22,7 +22,7 @@ public abstract class Wallet {
         this.pin=pin;
     }
 
-    public boolean verefyPin(String typedPin){
+    public boolean verifyPin(String typedPin){
         return pin.equals(typedPin);
     }
 
