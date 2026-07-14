@@ -76,6 +76,9 @@ public abstract class Wallet {
         spentToday += amount;
     }
     public abstract double dailyLimit();
+
+    public abstract boolean canPerform(String operation);
+
 }
 
 
