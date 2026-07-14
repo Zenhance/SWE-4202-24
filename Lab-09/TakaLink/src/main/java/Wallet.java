@@ -7,6 +7,22 @@ public abstract class Wallet {
     private boolean status;
 
 
+    public Wallet(String name,double balance,String pin){
+
+        if(name==null && name.isBlank())
+            throw new IllegalArgumentException("Name isn't valid");
+
+        if(balance<0)
+            throw new IllegalArgumentException("Invalid balance");
+
+        if(pin==null && pin.isBlank())
+            throw new IllegalArgumentException("Pin isn't valid");
+        this.name=name;
+        this.balance=balance;
+        this.pin=pin;
+        this.status=false;
+        this.senttoday=0.0;
+    }
 
 
 
