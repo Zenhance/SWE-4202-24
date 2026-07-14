@@ -19,4 +19,22 @@ public class Wallet {
         this.balance = balance;
         this.pin = pin;
     }
+
+    private double getBalance() {
+        return balance;
+    }
+
+    private String getPin() {
+        return pin;
+    }
+
+    public void debit(double amount) throws InsufficientBalanceException {
+        if(amount < 0){
+            throw new IllegalArgumentException("debit amount cannot be negative");
+        }
+        if(amount > balance){
+            throw new InsufficientBalanceException( amount, balance);
+        }
+        balance -= amount;
+    }
 }
