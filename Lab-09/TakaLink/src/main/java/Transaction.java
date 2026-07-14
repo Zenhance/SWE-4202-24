@@ -13,11 +13,10 @@ public abstract class Transaction {
     protected double amount;
     protected String pin;
 
-    public Transaction(String type, double amount, String fromId, String toId, String pin) {
-        this.type = type;
-        this.amount = amount;
-        this.fromId = fromId;
-        this.toId = toId;
-        this.pin = pin;
+    public Transaction(Wallet from, Wallet to, double amount, String pin) {
+        this.from=from;
+        this.to=to;
+        this.amount=amount;
+        this.pin=pin;
     }
 }
