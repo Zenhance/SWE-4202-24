@@ -63,6 +63,18 @@ public abstract class Wallet {
         balance+=amount;
     }
 
+    public void addSpent(double amount){
+        spentToday=spentToday+amount;
+    }
 
+    public double remainingLimit(){
+        return dailyLimit()-spentToday;
+    }
+
+    public abstract double dailyLimit();
+    public abstract boolean canSendMoney();
+    public abstract boolean canCashOut();
+    public abstract boolean canTopUp();
+    public abstract boolean canPayment();
 
 }
