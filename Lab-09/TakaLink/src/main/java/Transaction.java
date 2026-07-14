@@ -12,14 +12,23 @@ public abstract class Transaction {
     private Wallet receivingWallet;
     private double amount;
     private String PIN;
-   public abstract double fee();
-   public abstract
 
-    public Transaction(String type, double amount, String fromId, String toId, String pin) {
-        this.type = type;
+    public Transaction(Wallet payingWallet, Wallet receivingWallet,double amount, String PIN) {
+        if(payingWallet == null)
+            throw new IllegalArgumentException("Paying amount can not be null");
+        if(receivingWallet == null)
+            throw new IllegalArgumentException("Receiving amount can not be null");
+        if(amount<=0.0)
+            throw new IllegalArgumentException("amount cant be zero or negative");
+        if(PIN == null || PIN.isBlank())
+            throw new IllegalArgumentException("PIN cant be null or blank");
+        if(payingWallet.verifyPin(PIN)==false){
+            throw new IllegalArgumentException("Invalid Pin");
+        }
+        this.receivingWallet = receivingWallet;
+        this.payingWallet = payingWallet;
         this.amount = amount;
-        this.fromId = fromId;
-        this.toId = toId;
-        this.pin = pin;
+        this.PIN = PIN;
     }
+
 }
