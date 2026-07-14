@@ -8,5 +8,16 @@ public class CashOutTransaction extends Transaction{
     public double getFee(){
         return amount*RATE;
     }
+    @Override
+    public String getType(){
+        return "CASHOUT";
+
+    }
+    @Override
+    protected void moveMoney()
+        throws TransactionException{
+        from.debit(amount+getFee());
+        to.credit(amount);
+    }
 
 }
