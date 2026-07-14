@@ -14,11 +14,11 @@ public abstract class Transaction {
     public String toId;
     public String pin;
 
-    public Transaction(String type, double amount, String fromId, String toId, String pin) {
+    public Transaction(String fromId, String toId, double amount, String pin) {
         if(amount <= 0) {
             throw new IllegalArgumentException("Transaction always positive");
         }
-        this.type = type;
+
         this.amount = amount;
         this.fromId = fromId;
         this.toId = toId;
