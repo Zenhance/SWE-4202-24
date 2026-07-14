@@ -27,4 +27,8 @@ public abstract class Wallet {
 
         this.balance -= amount;
     }
+
+    public double balance() {
+        return this.balance;
+    }
 }
