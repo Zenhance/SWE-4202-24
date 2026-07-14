@@ -1,12 +1,4 @@
-// =====================================================================
-//  THE CONTRACTOR'S CODE -- part of the version you must REPAIR.
-// =====================================================================
 
-/**
- * Another public-field bag. new Transaction("SEND", -1000, ...) is a "send"
- * that PULLS a thousand taka out of the recipient -- a theft the type system
- * waves straight through, because nothing here is ever checked.
- */
 public abstract class Transaction {
     protected Wallet from;
     protected Wallet to;
@@ -14,9 +6,16 @@ public abstract class Transaction {
     protected String pin;
 
     public Transaction(Wallet from, Wallet to, double amount, String pin) {
-        this.from=from;
-        this.to=to;
-        this.amount=amount;
-        this.pin=pin;
+        this.from = from;
+        this.to = to;
+        this.amount = amount;
+        this.pin = pin;
+        if (from == null || to == null)
+            throw new IllegalArgumentException("Wallet cant be null");
+
+        if (amount <= 0)
+            throw new IllegalArgumentException("Amount cant be negative.");
+        if (pin == null)
+            throw new IllegalArgumentException("PIN cant be null");
     }
 }
