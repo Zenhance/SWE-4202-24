@@ -19,5 +19,14 @@ public class Wallet {
             this.pin = pin;
         }
 
+        public void debit(double amount) {
+            if (amount <= 0) throw new IllegalArgumentException("Amount must be over 0, got" + amount);
+            if (amount > balance) throw new IllegalStateException("Your balance (currently :" + balance + ")too low for withdrawal amount: " + amount);
 
-}
+            spentToday += amount;
+            balance -= amount;
+        }
+
+
+
+    }
