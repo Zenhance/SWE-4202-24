@@ -18,10 +18,11 @@ public class SettlementRun {
         }
     }
 
+    public int pending(){
+        return transactions.size();
+    }
 
-
-
-
-
-
+    public SettlementReport settle(){
+        return report;
+    }
 }
