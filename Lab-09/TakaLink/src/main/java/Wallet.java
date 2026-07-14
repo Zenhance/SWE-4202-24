@@ -17,15 +17,15 @@ public abstract class Wallet {
         this.spentToday = 0.0;
     }
 
-    public String getId() {
+    public String id() {
         return id;
     }
 
-    public double getBalance() {
+    public double balance() {
         return balance;
     }
 
-    public String getPin() {
+    public String pin() {
         return pin;
     }
 
@@ -33,7 +33,7 @@ public abstract class Wallet {
         return frozen;
     }
 
-    public double getSpentToday() {
+    public double spentToday() {
         return spentToday;
     }
 

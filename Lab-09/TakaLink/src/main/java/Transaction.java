@@ -8,10 +8,10 @@
  * waves straight through, because nothing here is ever checked.
  */
 public abstract class Transaction {
-    private Wallet sender;
-    private Wallet reciever;
-    private double amount;
-    private String pin;
+    protected Wallet sender;
+    protected Wallet reciever;
+    protected double amount;
+    protected String pin;
 
     public Transaction(Wallet sender, Wallet reciever, double amount, String pin) {
         if(sender==null || reciever==null)
@@ -30,21 +30,21 @@ public abstract class Transaction {
     public abstract void validOperation() throws TransactionException;
     public abstract void moveMoney() throws TransactionException;
 
-    public Wallet getSender() {
+    public Wallet sender() {
         return sender;
     }
-    public Wallet getReciever() {
+    public Wallet reciever() {
         return reciever;
     }
-    public double getAmount() {
+    public double amount() {
         return amount;
     }
-    public String getPin() {
+    public String pin() {
         return pin;
     }
 
     public void settle() throws TransactionException {
-        if(!sender.verifyPin(getPin()))
+        if(!sender.verifyPin(pin()))
             throw new InvalidPinException();
 
         sender.checkFrozen();
@@ -53,7 +53,7 @@ public abstract class Transaction {
         double fee = fee();
         if(sender.remainingLimit()< amount)
             throw new DailyLimitExceedException();
-        if(sender.getBalance()>amount+fee)
+        if(sender.balance()>amount+fee)
             throw new InsufficientBalanceException();
 
         moveMoney();
