@@ -11,7 +11,7 @@ public abstract class Transaction {
 
     public double amount;
     public String pin;
-
+    public boolean settled = false;
     Wallet a;
     Wallet b;
 
@@ -36,8 +36,10 @@ public abstract class Transaction {
         if(a.isFrozen() || b.isFrozen())
             throw new FrozenAccountException("Account Frozen");
 
-        SettlementReport.settled = true;
-        SettlementReport.settlePlus();
+        settled = true;
+        SettlementReport.settleCount++;
+        SettlementReport.moved++;
+
     }
 
 

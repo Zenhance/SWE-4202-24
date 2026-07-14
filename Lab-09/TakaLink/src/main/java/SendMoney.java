@@ -1,8 +1,5 @@
 public class SendMoney extends Transaction{
 
-    PersonalWallet p1;
-    PersonalWallet p2;
-
     public SendMoney(Wallet p1, Wallet p2, double amount, String pin) {
 
         super(p1, p2, amount, pin);
@@ -34,6 +31,6 @@ public class SendMoney extends Transaction{
         a.debit(out);
         a.daily -= amount;
         b.credit(amount);
-
+        //SettlementReport.fee
     }
 }

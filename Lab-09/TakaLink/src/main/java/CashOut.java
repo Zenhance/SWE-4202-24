@@ -1,9 +1,5 @@
 public class CashOut extends Transaction {
 
-    PersonalWallet p;
-    AgentWallet g;
-
-
     public CashOut(PersonalWallet p, Wallet g, double amount, String pin) {
         super(p, g, amount, pin);
         this.a = p;
