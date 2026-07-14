@@ -7,18 +7,31 @@
  * that PULLS a thousand taka out of the recipient -- a theft the type system
  * waves straight through, because nothing here is ever checked.
  */
-public class Transaction {
-    public String type;        // "SEND", "CASHOUT", "PAYMENT", "TOPUP"
-    public double amount;
-    public String fromId;
-    public String toId;
-    public String pin;
+public abstract class Transaction {
+    protected final Wallet fromId;
+    protected final Wallet toId;
+    protected final double amount;
+    protected final String pin;
 
-    public Transaction(String type, double amount, String fromId, String toId, String pin) {
-        this.type = type;
+    public Transaction(Wallet fromId,Wallet toId, double amount, String pin) {
         this.amount = amount;
         this.fromId = fromId;
         this.toId = toId;
         this.pin = pin;
     }
+    public abstract double fee();
+    protected abstract void validateSpecificRules()
+        throws TransactionException;
+    protected abstract void executeMovement()
+        throws InsufficientBalanceException;
+    public final void settle()
+        throws TransactionException{
+
+        if(fromId.isFrozen()){
+            throw new FrozenAccountException("Account in frozen");
+        }
+        validateSpecificRules();
+
+    }
+
 }
