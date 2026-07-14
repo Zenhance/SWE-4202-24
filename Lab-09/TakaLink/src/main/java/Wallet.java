@@ -60,6 +60,9 @@ public abstract class Wallet {
             throw new IllegalArgumentException("Invalid amount");
         balance+=amount;
     }
+    public void addSpent(double amount){
+        spentToday+=amount;
+    }
 
 
 
