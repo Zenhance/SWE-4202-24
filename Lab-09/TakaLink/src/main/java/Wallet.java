@@ -37,14 +37,14 @@ public abstract class Wallet {
         if(amount>balance){
             throw new IllegalArgumentException("Insufficient funds");
         }
-        this.balance-=balance;
+        this.balance-=amount;
     }
 
     public void credit(double amount){
         if(amount<0.0){
             throw new IllegalArgumentException("Amount cannot be negative");
         }
-        this.balance+=balance;
+        this.balance+=amount;
     }
 
     public boolean verifyPin(String pin){
