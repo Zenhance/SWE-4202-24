@@ -1,4 +1,5 @@
 public class PersonalWallet extends Wallet {
-    pr
-
+    public PersonalWallet(String name, double balance,String PIN) {
+        super(name,balance,PIN);
+    }
 }
