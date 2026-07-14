@@ -27,6 +27,12 @@ public abstract class Transaction {
     public double getAmount(){
         return amount;
     }
+    public abstract double getFee();
+    public abstract String getType();
+    protected abstract void moveMoney() throws TransactionException;
+    public final void settle() throws TransactionException{
+
+    }
 
 
 }
