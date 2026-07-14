@@ -40,5 +40,26 @@ public abstract class Wallet {
         balance +=amount;
     }
 
+    public double spentToday(){
+        return spentToday;
+    }
+
+    protected void addSpentToday(double amount){
+        this.spentToday += amount;
+    }
+
+    public double remainingLimit(){
+        return dailyLimit() - spentToday;
+    }
+
+    public boolean canSpendAmount(double amount){
+        return (spentToday + amount) <= dailyLimit();
+    }
+
+    protected abstract double dailyLimit();
+    protected abstract boolean maySend();
+    public abstract boolean mayCashOut();
+
+
 
 }
