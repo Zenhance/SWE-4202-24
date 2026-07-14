@@ -7,4 +7,8 @@ public class TopUpTransaction extends Transaction{
         return 0;
 
     }
+    @Override
+    public String getType(){
+        return "TOPUP";
+    }
 }
