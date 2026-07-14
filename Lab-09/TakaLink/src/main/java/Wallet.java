@@ -63,4 +63,10 @@ public abstract class Wallet {
             throw new FrozenAccountException(id + " is frozen");
         }
     }
+
+    protected void assertPin(String offeredPin) throws InvalidPinException {
+        if (!verifyPin(offeredPin)) {
+            throw new InvalidPinException("wrong pin offered for " + id);
+        }
+    }
 }
