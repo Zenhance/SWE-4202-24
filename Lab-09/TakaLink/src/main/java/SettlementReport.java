@@ -12,5 +12,7 @@ public class SettlementReport {
     public int  rejectedCount() {
         return rejectedTransactions.size();
     }
-
+    public boolean isSettled(Transaction transaction) {
+        return settledTransactions.contains(transaction);
+    }
 }
