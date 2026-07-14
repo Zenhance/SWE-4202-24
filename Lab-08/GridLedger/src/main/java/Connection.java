@@ -1,4 +1,7 @@
-public class Connection {
+public abstract class Connection {
+    public Connection(Meter meter) {
+        this.meter=meter;
+    }
     public double fuelPercent =0.1;
     public double taxPercent=0.05;
     Meter meter;

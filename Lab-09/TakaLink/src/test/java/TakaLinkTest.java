@@ -297,4 +297,5 @@ public class TakaLinkTest {
         run.submit(new SendMoney(a, b, 10.0, "1234"), 3);    // three copies
         assertEquals(4, run.pending());
     }
+
 }

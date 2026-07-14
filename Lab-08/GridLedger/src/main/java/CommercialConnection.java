@@ -1,7 +1,8 @@
 public class CommercialConnection extends Connection{
 
     public CommercialConnection(Meter meter) {
-        this.meter=meter;    }
+        super(meter);
+    }
 
     @Override
     public double energyCharge() {

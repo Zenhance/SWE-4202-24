@@ -2,7 +2,8 @@ public class ResidentialConnection extends Connection {
 
 
     public ResidentialConnection(Meter meter) {
-        this.meter=meter;
+        super(meter);
+
     }
 
     @Override

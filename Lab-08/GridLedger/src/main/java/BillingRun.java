@@ -11,8 +11,10 @@ public class BillingRun {
         List<Invoice> invoices = new ArrayList<>();
         int i=0;
         while(connections.size()>i){
-            invoices.add(new Invoice())
+            invoices.add(new Invoice(connections.get(i)))
+            i++;
         }
+        return invoices;
     }
 
     public double grandTotal() {
