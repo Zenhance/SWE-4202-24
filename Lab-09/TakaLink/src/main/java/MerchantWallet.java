@@ -11,4 +11,9 @@ public class MerchantWallet extends Wallet{
     protected void assertCanSend() throws OperationNotAllowedException {
         throw new OperationNotAllowedException(id() + " is a merchant and it does not send money");
     }
+
+    @Override
+    protected void assertCanCashOut() throws OperationNotAllowedException {
+        throw new OperationNotAllowedException(id() + " is a merchant and it is now allowed to cashout");
+    }
 }
