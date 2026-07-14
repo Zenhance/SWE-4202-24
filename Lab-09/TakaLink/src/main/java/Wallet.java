@@ -1,6 +1,6 @@
 public abstract class Wallet {
     private final String id;
-    private final double balance;
+    private  double balance;
     private final String pin;
     private boolean frozen;
     private double spentToday;
@@ -24,6 +24,19 @@ public abstract class Wallet {
         this.frozen=true;
     }
     public double SpentToday(){
-
+     return   this.spentToday;
     }
+    public void debit(double amount){
+        if(amount<=0){
+            throw new IllegalArgumentException("Debit must be positive");
+        }
+        this.balance -= amount;
+    }
+    public void credit(double amount){
+        if(amount<=0){
+            throw new IllegalArgumentException("Credit must be positive");
+        }
+        this.balance += amount;
+    }
+public abstract double getDailyLimit();
 }
