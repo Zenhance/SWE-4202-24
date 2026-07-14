@@ -21,4 +21,8 @@ public abstract class Wallet {
         this.frozen = false;
         this.spentToday = 0.0;
     }
+    public final String id(){
+        return id;
+    }
+
 }
