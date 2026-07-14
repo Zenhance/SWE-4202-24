@@ -66,5 +66,9 @@ public abstract class Wallet {
         return sendingLimit - sentToday;
     }
 
+    public void freeze(){
+        active = false;
+    }
+
 
 }
