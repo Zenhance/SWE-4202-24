@@ -1,5 +1,5 @@
 public class MerchantWallet extends Wallet{
-    private final double DAILY_LIMIT = 0.0
+    private final double DAILY_LIMIT = 0.0;
     public MerchantWallet(String id, double balance, String pin) {
         super(id, balance, pin);
     }

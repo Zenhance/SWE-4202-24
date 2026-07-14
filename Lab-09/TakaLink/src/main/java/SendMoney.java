@@ -3,5 +3,12 @@ public class SendMoney extends Transaction{
     public SendMoney(Wallet from, Wallet to, double amount, String pin) {
         super(from, to, amount, pin);
     }
-
+    @Override
+    public double fee() {
+        return FEE;
+    }
+    @Override
+    public void checkPermission() throws OperationNotAllowedException {
+        from.assertCanSend();
+    }
 }
