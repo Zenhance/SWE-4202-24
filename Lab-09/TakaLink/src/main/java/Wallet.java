@@ -1,3 +1,5 @@
+import java.security.PublicKey;
+
 public abstract class Wallet {
     private String id;
     private double balance;
