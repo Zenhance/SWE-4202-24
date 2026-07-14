@@ -28,6 +28,9 @@ public class CashOut extends Transaction {
         super.settle();
         //if(a.daily < amount)
         //    throw new DailyLimitExceededException("Daily Limit reached :')");
+        double out = amount + fee();
+        a.debit(out);
+        a.daily -= amount;
         b.credit(amount + fee());
     }
 }

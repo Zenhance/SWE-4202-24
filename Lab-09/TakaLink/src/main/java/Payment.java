@@ -27,6 +27,10 @@ public class Payment extends Transaction{
             throw new OperationNotAllowedException("Transaction NOT possible between these accounts");
 
         super.settle();
+        double out = amount + fee();
+        a.debit(out);
+        a.daily -= amount;
         b.credit(amount);
+
     }
 }

@@ -36,9 +36,6 @@ public abstract class Transaction {
         if(a.isFrozen() || b.isFrozen())
             throw new FrozenAccountException("Account Frozen");
 
-
-        a.debit(out);
-        a.daily -= amount;
     }
 
 

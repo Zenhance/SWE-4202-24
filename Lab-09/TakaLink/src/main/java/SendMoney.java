@@ -28,5 +28,11 @@ public class SendMoney extends Transaction{
         if(a.daily < amount)
             throw new DailyLimitExceededException("Daily Limit reached :')");
 
+
+        double out = amount + fee();
+        a.debit(out);
+        a.daily -= amount;
+        b.credit(amount);
+
     }
 }
