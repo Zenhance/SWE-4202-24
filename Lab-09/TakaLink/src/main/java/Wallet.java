@@ -4,7 +4,7 @@ public abstract class Wallet {
     private String pin;
     private boolean frozen;
     private double spentToday;
-    public Wallet(String id, double balance,String pin ,boolean frozen){
+    public Wallet(String id, double balance,String pin){
         if(id== null || id.isBlank()){
             throw new IllegalArgumentException("Invalid id");
         }
