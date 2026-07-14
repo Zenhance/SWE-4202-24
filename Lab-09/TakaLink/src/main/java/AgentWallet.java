@@ -5,5 +5,11 @@ public class AgentWallet extends Wallet{
         super(id,balance,pin);
     }
 
+    public double dailyLimit(){
+        return DAILY_LIMIT;
+    }
 
+    public boolean canReceiveCashOut(){
+        return true;
+    }
 }
