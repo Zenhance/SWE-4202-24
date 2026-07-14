@@ -56,3 +56,18 @@ public abstract class Wallet {
         }
         balance -= amount;
     }
+    final double remainingDailyLimit() {
+        return dailyLimit() - spentToday;
+    }
+
+
+    final void recordSpend(double amount) {
+        spentToday += amount;
+    }
+
+    protected abstract double dailyLimit();
+
+    abstract boolean canBePayerOf(TransactionKind kind);
+
+    abstract boolean canBeRecipientOf(TransactionKind kind);
+}
