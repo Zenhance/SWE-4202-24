@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="writing billing run">
-      <change beforePath="$PROJECT_DIR$/Lab-08/GridLedger/src/main/java/BillingRun.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-08/GridLedger/src/main/java/BillingRun.java" afterDir="false" />
+    <list default="true" id="341fc649-fa80-4bae-8596-fffd7968dcda" name="Changes" comment="writing billing run fix">
+      <change afterPath="$PROJECT_DIR$/Lab-09/TakaLink/src/main/java/Wallet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +65,9 @@
     &quot;accountId&quot;: &quot;aa5ee623-0c65-4302-94e4-d25466634c7a&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -78,7 +82,7 @@
     &quot;Gradle.CineCartEncapsulationTest.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.CineCartPolymorphismTest.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.CineCartTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Tests in 'CineCart.test'.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Tests in 'CineCart.test'.executor&quot;: &quot;Debug&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
@@ -93,7 +97,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.Tests in 'CineCart.test'">
+  <component name="RunManager" selected="Gradle.CineCartEncapsulationTest">
     <configuration name="CineCartEncapsulationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -209,22 +213,6 @@
       <workItem from="1778092688155" duration="94000" />
       <workItem from="1778092809585" duration="6679000" />
       <workItem from="1778163384097" duration="3333000" />
-    </task>
-    <task id="LOCAL-00088" summary="...">
-      <option name="closed" value="true" />
-      <created>1780988554205</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1780988554205</updated>
-    </task>
-    <task id="LOCAL-00089" summary="...">
-      <option name="closed" value="true" />
-      <created>1780988685385</created>
-      <option name="number" value="00089" />
-      <option name="presentableId" value="LOCAL-00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1780988685385</updated>
     </task>
     <task id="LOCAL-00090" summary="...">
       <option name="closed" value="true" />
@@ -602,7 +590,23 @@
       <option name="project" value="LOCAL" />
       <updated>1783406178470</updated>
     </task>
-    <option name="localTasksCounter" value="137" />
+    <task id="LOCAL-00137" summary="writing billing run">
+      <option name="closed" value="true" />
+      <created>1783406271759</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1783406271759</updated>
+    </task>
+    <task id="LOCAL-00138" summary="writing billing run fix">
+      <option name="closed" value="true" />
+      <created>1783406335911</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1783406335911</updated>
+    </task>
+    <option name="localTasksCounter" value="139" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -642,7 +646,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="vipticket" />
     <MESSAGE value="concession item" />
     <MESSAGE value="concessionline" />
     <MESSAGE value="changing cart" />
@@ -667,6 +670,7 @@
     <MESSAGE value="wriitng billing run" />
     <MESSAGE value="wriyitng billing run" />
     <MESSAGE value="writing billing run" />
-    <option name="LAST_COMMIT_MESSAGE" value="writing billing run" />
+    <MESSAGE value="writing billing run fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="writing billing run fix" />
   </component>
 </project>
