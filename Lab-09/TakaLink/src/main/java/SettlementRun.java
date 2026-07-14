@@ -11,7 +11,7 @@ public class SettlementRun {
         batch.add(t);
    }
    public void addTransaction(Transaction t, int repeat){
-        for(int i=0;i<report;i++)
+        for(int i=0;i<repeat;i++)
             batch.add(t);
    }
    public int getWaitingCount(){
