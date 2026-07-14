@@ -12,9 +12,9 @@ public abstract class Transaction
     protected double amount;
     protected Wallet fromId;
     protected Wallet toId;
-    protected Wallet pin;
+    protected String pin;
 
-    public Transaction(Wallet fromId, Wallet toId, double amount, Wallet pin)
+    public Transaction(Wallet fromId, Wallet toId, double amount, String pin)
     {
         if(fromId==null)
             throw new IllegalArgumentException("Id can not be null");
@@ -36,5 +36,37 @@ public abstract class Transaction
 
     public abstract void moveMoney() throws TransactionException;
 
+    public double getAmount()
+    {
+        return amount;
+    }
 
+    public Wallet getFromId()
+    {
+        return fromId;
+    }
+
+    public Wallet getToId()
+    {
+        return toId;
+    }
+
+    public String getPin()
+    {
+        return pin;
+    }
+
+    public void settle() throws TransactionException
+    {
+        if(fromId.isFrozen())
+            throw new FrozenAccountException();
+        if(!fromId.verifyPin(pin))
+            throw new InvalidPinException();
+        if(fromId.getSpentToday()+amount>fromId.dailyLimit())
+            throw new DailyLimitExceededException();
+        if(fromId.getBalance()<amount+fee())
+            throw new InsufficientBalanceException();
+        moveMoney();
+        fromId.addSpent(amount);
+    }
 }
