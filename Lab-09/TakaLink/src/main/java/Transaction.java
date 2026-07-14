@@ -33,7 +33,7 @@ throw new IllegalArgumentException("Pin can not be null");
 
 
     public abstract double fee();
-    public abstract void validOperation() throws OperationNotAllowedException;
+    public abstract void validateOperation() throws OperationNotAllowedException;
     public abstract void moveMoney() throws TransactionException;
     public double getAmount()
     {
