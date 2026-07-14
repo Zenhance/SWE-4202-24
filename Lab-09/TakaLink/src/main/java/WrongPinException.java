@@ -1,5 +1,5 @@
 public class WrongPinException extends TransactionException{
-    public WrongPinException(){
+    public WrongPinException(String msg){
         super("WRONG");
     }
 }
