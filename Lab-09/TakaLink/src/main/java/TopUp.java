@@ -1,6 +1,6 @@
 // TopUp.java
 public class TopUp extends Transaction {
-    public TopUp(Wallet from, Wallet To, double amount, String offeredPin){
+    public TopUp(Wallet from, Wallet to, double amount, String offeredPin){
         super(from, to, amount, offeredPin);
     }
 
