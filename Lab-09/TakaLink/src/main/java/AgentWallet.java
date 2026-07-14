@@ -1,13 +1,13 @@
 package src.main.java;
 
-public class PersonalWallet extends Wallet {
-    private static final double DAILY_LIMIT=25000.0;
-    public PersonalWallet(String id,double balance,String pin){
+public class AgentWallet extends Wallet{
+    private static final double DAILY_LIMIT=500000.0;
+    public AgentWallet(String id,double balance,String pin){
         super(id,balance,pin);
     }
 
     @Override
-    public double getDailyLimit() {
+    public  double getDailyLimit() {
         return DAILY_LIMIT;
     }
 
@@ -19,6 +19,5 @@ public class PersonalWallet extends Wallet {
     @Override
     public boolean canCashOut() {
         return true;
-
     }
 }
