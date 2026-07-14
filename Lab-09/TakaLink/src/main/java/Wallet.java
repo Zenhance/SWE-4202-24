@@ -48,5 +48,9 @@ public abstract class Wallet {
         return this.pin.equals(pin);
     }
 
+    public void freeze(){
+        this.status=true;
+    }
+
 
 }
