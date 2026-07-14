@@ -1,19 +1,5 @@
-public class PersonalWallet {
-    public PersonalWallet(String a, double v, String number) {
-    }
-
-    public void debit(double v) {
-    }
-
-    public void credit(double v) {
-    }
-
-    public double balance() {
-    }
-
-    public boolean verifyPin(String number) {
-    }
-
-    public void freeze() {
+public class PersonalWallet extends Wallet {
+    public PersonalWallet(String id, double balance, String pin) {
+        super(id, balance, pin);
     }
 }
