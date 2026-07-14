@@ -1,5 +1,5 @@
 public class PersonalWallet extends Wallet {
-    public static final double DailyLimit=2500.00;
+    public static final double DailyLimit=25000.00;
     public PersonalWallet(String id , double balance , String pin){
         super(id,balance,pin);
     }
