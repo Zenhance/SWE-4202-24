@@ -32,7 +32,7 @@ public abstract class Transaction
 
     public abstract double fee();
 
-    public abstract void validOperation() throws OperationNotAllowedException;
+    public abstract void validateOperation() throws OperationNotAllowedException;
 
     public abstract void moveMoney() throws TransactionException;
 
