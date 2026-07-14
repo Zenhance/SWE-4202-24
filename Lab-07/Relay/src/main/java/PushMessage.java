@@ -1,2 +1,3 @@
-public class PushMessage {
+public class PushMessage extends Message {
+
 }
