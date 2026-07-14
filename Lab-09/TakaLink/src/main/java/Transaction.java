@@ -18,21 +18,36 @@ public abstract class Transaction {
         if (pin == null)
             throw new IllegalArgumentException("PIN cant be null");
     }
-    public Wallet getFrom(){
+
+    public Wallet getFrom() {
         return from;
     }
-    public Wallet getTo(){
+
+    public Wallet getTo() {
         return to;
     }
-    public double getAmount(){
+
+    public double getAmount() {
         return amount;
     }
+
     public abstract double getFee();
+
     public abstract String getType();
+
     protected abstract void moveMoney() throws TransactionException;
-    public final void settle() throws TransactionException{
 
+    public final void settle() throws TransactionException {
+        from.verifyPin(pin);
+        from.checkFrozen();
+        from.validateOperation(getType());
+        if(from.getRemainingLimit()<amount)
+            throw new DailyLimitExceededException();
+        double total = amount + getFee();
+        if(from.getBalance()<total)
+            throw new InsufficientBalanceException();
+        moveMoney();
+        from.addSpent(amount);
     }
-
-
 }
+
