@@ -34,10 +34,10 @@ public abstract class Transaction {
 
     public abstract double fee();
 
-    public double payeeCredit(){
+    protected double payeeCredit(){
         return amount;
     }
-    protected abstract void checkPermission() throws OptionNotAllowedException;
+    protected abstract void checkPermission() throws OperationNotAllowedException;
     public final void settle() throws TransactionException {
         if (payer.isFrozen()) {
             throw new FrozenAccountException(payer.id() + " is frozen");

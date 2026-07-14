@@ -23,7 +23,7 @@ public abstract class Wallet {
         this.balance = balance;
     }
 
-    public double getBalance() {
+    public double balance() {
         return balance;
     }
 
@@ -64,9 +64,9 @@ public final boolean verifyPin(String pin2){
     public void recordSpend(double amount){
         spentToday+=amount;
     }
-    final void checkDailyLimit(double amount) throws DailyLimitExceedException{
+    final void checkDailyLimit(double amount) throws DailyLimitExceededException {
         if(spentToday+amount>dailyLimit()){
-            throw new DailyLimitExceedException("Exceeds");
+            throw new DailyLimitExceededException("Exceeds");
         }
 
     }

@@ -5,7 +5,10 @@ public class PersonalWallet extends Wallet{
     }
 
 
-
+    @Override
+    public double fee(){
+        return 0.0;
+    }
     @Override
     public double dailyLimit() {
         return DAILY_LIMIT;

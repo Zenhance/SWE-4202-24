@@ -5,6 +5,11 @@ public class AgentWallet extends Wallet{
     }
 
     @Override
+    public double fee() {
+        return 0;
+    }
+
+    @Override
     public double dailyLimit() {
         return 0;
     }

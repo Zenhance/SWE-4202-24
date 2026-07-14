@@ -1,10 +1,16 @@
-public class TopUp {
-    public TopUp(PersonalWallet a, AgentWallet operator, double v, String number) {
+public class TopUp extends Transaction {
+
+    public TopUp(Wallet payer, Wallet paidTo, double amount, String pin) throws FrozenAccountException {
+        super(payer, paidTo, amount, pin);
     }
 
+    @Override
     public double fee() {
+        return 0.0;
     }
 
-    public void settle() {
+    @Override
+    protected void checkPermission() throws OperationNotAllowedException {
+
     }
 }
