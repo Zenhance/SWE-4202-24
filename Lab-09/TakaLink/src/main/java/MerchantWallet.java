@@ -4,4 +4,12 @@ public final class MerchantWallet extends Wallet{
     public MerchantWallet(String id, double openingBalance, String pin){
         super(id, openingBalance, pin);
     }
+    @Override
+    public double dailyLimit(){
+        return DAILY_LIMIT;
+    }
+    @Override
+    protected boolean allows(Operation operation){
+        return operation!=Operation.SEND_MONEY && operation!=Operation.CASH_OUT;
+    }
 }
