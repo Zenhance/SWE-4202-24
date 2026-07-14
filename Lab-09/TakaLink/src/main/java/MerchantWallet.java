@@ -1,7 +1,7 @@
-public class MerchantWallet {
-    public MerchantWallet(String m, double v, String number) {
-    }
+public class MerchantWallet extends Wallet{
+    private final double limit = 0;
 
-    public double balance() {
+    public MerchantWallet(String id, double balance, String pin) {
+        super(id, balance, pin);
     }
 }

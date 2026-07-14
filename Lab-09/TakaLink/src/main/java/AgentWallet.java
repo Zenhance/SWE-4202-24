@@ -1,7 +1,7 @@
-public class AgentWallet {
-    public AgentWallet(String g, double v, String number) {
-    }
+public class AgentWallet extends Wallet{
+    private final double limit = 500000.0;
 
-    public double balance() {
+    public AgentWallet(String id, double balance, String pin) {
+        super(id, balance, pin);
     }
 }
