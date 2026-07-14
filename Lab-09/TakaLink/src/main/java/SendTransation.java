@@ -7,6 +7,15 @@ public class SendTransation extends Transaction{
     public double getFee(){
         return FEE;
     }
+    @Override
+    public String getType(){
+        return "SEND";
+    }
+    @Override
+    protected void moveMoney()
+        throws TransactionException{
+
+    }
 
 
 
