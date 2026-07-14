@@ -32,6 +32,13 @@ public abstract class Transaction {
         this.pin = pin;
     }
 
+    public double amount() {
+        return this.amount;
+    }
+
+    public abstract double fee();
+
+
     public void settle() {
     }
 }
