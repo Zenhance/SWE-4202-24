@@ -45,8 +45,11 @@ public abstract class Transaction {
     if (!from.verifyPin(pin)) throw new InvalidPinException("wrong pin for " + from.name());
     validateLimit();
     double debit = debitAmount();
-        if (debit > from.balance()) {
-        throw new InsufficientBalanceException(
-                from.name() + " has " + from.balance() + " but needs " + debit);
+    if (debit > from.balance())
+        throw new InsufficientBalanceException(from.name() + " has " + from.balance() + " but needs " + debit);
+    try{
+        from.debit(debit);
+    }catch (InsufficientBalanceException alreadyChecked){
+        throw alreadyChecked;
     }
 }
