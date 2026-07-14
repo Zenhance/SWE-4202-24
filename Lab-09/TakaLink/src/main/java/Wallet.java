@@ -32,12 +32,12 @@ public abstract class Wallet {
     public void debit(double amount) throws InsufficientBalanceException{
         if(amount <= 0) throw new IllegalArgumentException("Debit ammount must be positive");
         if(balance-amount < 0) throw new InsufficientBalanceException(id);
-        balance -= amount;
+        balance += amount;
     }
 
     public void credit(double amount){
         if(amount <=0) throw new IllegalArgumentException("Credit must be positive");
-        balance +=amount;
+        balance -=amount;
     }
 
     public double spentToday(){
