@@ -7,6 +7,16 @@ public abstract class Wallet {
     public Wallet(String id, double balance,String pin){
         if(id==null || id.isBlank())
             throw new IllegalArgumentException("Invalid wallet ID");
+        if(balance<0)
+            throw new IllegalArgumentException("Balance cant be negative");
+
+
+
+
+
+
+
+
     }
 
 
