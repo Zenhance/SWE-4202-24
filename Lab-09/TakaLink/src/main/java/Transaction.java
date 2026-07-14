@@ -18,4 +18,7 @@ public abstract class Transaction {
         if (pin == null)
             throw new IllegalArgumentException("PIN cant be null");
     }
+    public Wallet getFrom(){
+        return from;
+    }
 }
