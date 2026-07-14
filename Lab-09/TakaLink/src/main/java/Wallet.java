@@ -5,7 +5,7 @@ public abstract class Wallet {
     private boolean frozen;
     private double spentToday;
 
-    public Wallet(String id, String pin, double openingBalance) {
+    public Wallet() {
         this.id = id;
         this.pin = pin;
         this.balance = openingBalance;
