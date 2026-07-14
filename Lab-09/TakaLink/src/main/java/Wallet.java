@@ -48,4 +48,9 @@ public abstract class Wallet {
     void recordSpend(double amount) {
         spentToday += amount;
     }
+    public abstract double dailyLimit();
+    public abstract boolean canSend();
+    public abstract boolean canCashOut();
+    public abstract boolean isAgent();
+    
 }
