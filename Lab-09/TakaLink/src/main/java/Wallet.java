@@ -6,11 +6,11 @@ public class Wallet {
     private double spentToday;
     public Wallet(String id,double openingBalance,String pin){
         if(id==null || id.isBlank())
-            throw new IllegalArguementException("Wallet Id cannot be null or blank.");
+            throw new IllegalArgumentException("Wallet Id cannot be null or blank.");
         if(openingBalance<0)
-            thrown new IllegalArguementException("Opening balance cannot be negative.");
+            throw new IllegalArgumentException("Opening balance cannot be negative.");
         if(pin==null)
-            thrown new IllegalArguementException("PIN cannot be null.");
+            throw new IllegalArgumentException("PIN cannot be null.");
         this.id=id;
         this.balance=openingBalance;
         this.pin=pin;
@@ -33,7 +33,7 @@ public class Wallet {
     return spentToday;
     }
     public double getRemainingLimit(){
-        return getDailylimit()-spentToday;
+        return getDailyLimit()-spentToday;
     }
     //----------------
     // Wallet Operations
@@ -57,14 +57,14 @@ public class Wallet {
     public void debit(double amount)
         throws InsufficientBalanceException{
         if(amount<=0)
-            throw new IllegalArguementException("Debit amount must be positive.");
+            throw new IllegalArgumentException("Debit amount must be positive.");
         if(balance<amount)
             throw new InsufficientBalanceException("Insufficient balance.");
         balance-=amount;
     }
     public void credit (double amount){
         if(amount<=0)
-            throw new IllegalArguementException("Credit amount must be positive.");
+            throw new IllegalArgumentException("Credit amount must be positive.");
         balance+=amount;
     }
     public void recordSpend(double amount){
