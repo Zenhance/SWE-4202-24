@@ -11,6 +11,11 @@ public class TopUp extends Transaction{
     }
 
     @Override
+    public  double fee(){
+        return 0.0;
+    }
+
+    @Override
     public void settle() throws Exception {
         try {
             PersonalWallet pw = (PersonalWallet) a;

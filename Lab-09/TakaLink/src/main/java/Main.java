@@ -5,7 +5,7 @@
 // =====================================================================
 
 public class Main {
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         TransactionEngine engine = new TransactionEngine();
 
         // The contractor identifies accounts by their PIN string (see find()).
@@ -29,5 +29,5 @@ public class Main {
         alice.balance = 1_000_000.0;
         alice.frozen = false;
         System.out.println("Outside code just set alice.balance = " + alice.balance);
-    }
+    }*/
 }

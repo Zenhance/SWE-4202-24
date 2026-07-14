@@ -10,6 +10,9 @@ public class Payment extends Transaction{
         this.b = m;
     }
 
+    @Override
+    public double fee(){return 0.0;}
+
 
     @Override
     public void settle() throws Exception {

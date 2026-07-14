@@ -7,20 +7,10 @@
  * that PULLS a thousand taka out of the recipient -- a theft the type system
  * waves straight through, because nothing here is ever checked.
  */
-public class Transaction {
-    public String type;        // "SEND", "CASHOUT", "PAYMENT", "TOPUP"
-    public double amount;
-    public String fromId;
-    public String toId;
-    public String pin;
+public abstract class Transaction {
 
-    public Transaction(String type, double amount, String fromId, String toId, String pin) {
-        this.type = type;
-        this.amount = amount;
-        this.fromId = fromId;
-        this.toId = toId;
-        this.pin = pin;
-    }
+    public double amount;
+    public String pin;
 
     Wallet a;
     Wallet b;
@@ -35,9 +25,7 @@ public class Transaction {
         this.pin = pin;
     }
 
-    public double fee(){
-        return 0.0;
-    }
+    public abstract double fee();
 
     public void settle() throws Exception{
         double out = amount + fee();
@@ -51,8 +39,6 @@ public class Transaction {
 
         a.debit(out);
         a.daily -= amount;
-
-
     }
 
 
