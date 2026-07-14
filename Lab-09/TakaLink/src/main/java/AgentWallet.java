@@ -1,7 +1,7 @@
 public class AgentWallet extends Wallet{
 
     public AgentWallet(String id,double openingBalance, String pin){
-        super(id , openingBalance, pin)
+        super(id , openingBalance, pin);
     }
     @Override
     public double dailyLimit() {
