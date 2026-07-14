@@ -12,25 +12,29 @@ public abstract class Transaction {
 
     protected String type;        // "SEND", "CASHOUT", "PAYMENT", "TOPUP"
     protected double amount;
-    protected String fromId;
-    protected String toId;
+    protected Wallet fromId;
+    protected Wallet toId;
     protected String pin;
 
 
 
-    public Transaction(String type, double amount, String fromId, String toId, String pin) {
+    public Transaction(Wallet fromId, Wallet toId, double amount, String pin)
+    {
+        if(fromId==null)
+            throw new IllegalArgumentException("Id can not be null");
+        if(toId==null)
+            throw new IllegalArgumentException("Id can not be null");
         if(amount<=0)
-            throw new IllegalArgumentException("Transaction needs to be positive");
-
-        this.type = type;
-        this.amount = amount;
+            throw new IllegalArgumentException("Amount has to be positive");
+        if(pin==null)
+            throw new IllegalArgumentException("Pin can not be null");
         this.fromId = fromId;
         this.toId = toId;
+        this.amount = amount;
         this.pin = pin;
     }
-}
 
-private Wallet payWallet;
+/* private Wallet payWallet;
 private Wallet receiveWallet;
 private double amount;
 private String pin;
@@ -53,8 +57,9 @@ public Transaction(Wallet payWallet,Wallet receiveWallet,double amount,String pi
     this.receiveWallet=receiveWallet;
     this.amount=amount;
     this.pin=pin;
-}
+} */
 
 public abstract double fee();
-public abstract void settle();
-}
+
+
+
