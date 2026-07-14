@@ -11,4 +11,10 @@ public class TopUpTransaction extends Transaction{
     public String getType(){
         return "TOPUP";
     }
+    @Override
+    protected void moveMoney()
+        throws TransactionException{
+        from.debit(amount);
+        to.credit(amount);
+    }
 }
