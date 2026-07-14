@@ -40,6 +40,17 @@ public abstract class Wallet {
         balance -= amount;
     }
 
+    public void credit(double amount)
+            throws InsufficientBalanceException {
+        if (amount < 0) throw new IllegalArgumentException("Amount must be positive");
+        balance += amount;
+    }
+
+    public boolean verifyPin(String offeredPin) {
+        return pin.equals(offeredPin);
+    }
+
+
 
 }
 
