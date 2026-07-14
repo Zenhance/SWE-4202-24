@@ -1,7 +1,10 @@
-public class MerchantWallet {
-    public MerchantWallet(String m, double v, String number) {
-    }
+public class MerchantWallet extends Wallet {
 
-    public double balance() {
+    public MerchantWallet(
+            String id,
+            double openingBalance,
+            String pin
+    ) {
+        super(id, openingBalance, pin);
     }
 }
