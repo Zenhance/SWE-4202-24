@@ -20,7 +20,7 @@ public abstract class Wallet {
     }
 
     public void debit(double amount) {
-        if (amount < 0)
+        if (amount < 0.0)
             throw new IllegalArgumentException("Amount cannot be negative");
         if (amount > this.balance)
             return; // InsufficientBalanceException
@@ -30,5 +30,15 @@ public abstract class Wallet {
 
     public double balance() {
         return this.balance;
+    }
+
+    public void credit(double amount) {
+        if (amount < 0.0)
+            throw new IllegalArgumentException("Amount cannot be negative");
+        this.balance += amount;
+    }
+
+    public boolean verifyPin(String PIN) {
+        return this.PIN.equals(PIN);
     }
 }
