@@ -47,7 +47,7 @@ public abstract class Transaction {
 
     public abstract double fee();
 
-    public abstract void settle() throws InsufficientBalanceException;
+    public abstract void settle() throws TransactionException;
 
     public String getPIN() {
         return PIN;
