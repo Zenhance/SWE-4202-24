@@ -3,4 +3,5 @@ public class CashOut extends Transaction {
     public CashOut(Wallet from, Wallet to, double amount, String pin) {
         super(from, to, amount, pin);
     }
+
 }
