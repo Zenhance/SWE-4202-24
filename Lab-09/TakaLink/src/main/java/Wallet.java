@@ -14,5 +14,48 @@ public  abstract class Wallet {
         if(pin== null || pin.isBlank()){
             throw new IllegalArgumentException("pin cannot be null");
         }
+        this.id=id;
+        this.balance=balance;
+        this.pin=pin;
+        this.frozen=false;
+        this.spentToday=0.0;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public String getPin() {
+        return pin;
+    }
+
+    public boolean isFrozen() {
+        return frozen;
+    }
+
+    public double getSpentToday() {
+        return spentToday;
+    }
+    public void debit(double amount) throws InsufficientBalanceException{
+        if(amount<0){
+            throw new IllegalArgumentException("amount cannot be negative");
+        }
+        if(amount>balance){
+            throw new InsufficientBalanceException();
+        }
+        balance-=amount;
+    }
+    public void credit(double amount){
+        if(amount<0){
+            throw new IllegalArgumentException("amount cannot be negative");
+        }
+        balance+=amount;
+    }
+    public boolean verifyPin(String pin){
+        return pin.equals(pin);
     }
 }
