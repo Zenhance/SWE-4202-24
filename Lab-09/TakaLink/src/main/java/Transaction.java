@@ -21,4 +21,39 @@ public class Transaction {
         this.toId = toId;
         this.pin = pin;
     }
+
+    Wallet a;
+    Wallet b;
+
+    public Transaction(Wallet a, Wallet b, double amount, String pin){
+
+        if (a == null || b == null || amount <= 0)
+            throw new IllegalArgumentException();
+        this.a = a;
+        this.b = b;
+        this.amount = amount;
+        this.pin = pin;
+    }
+
+    public double fee(){
+        return 0.0;
+    }
+
+    public void settle() throws Exception{
+        double out = amount + fee();
+        if(a.verifyPin(pin) == false)
+            throw new InvalidPinException("Invalid Pin :/");
+        if(a.balance() < out)
+            throw new InsufficientBalanceException("Insufficient Balance :(");
+        if(a.isFrozen() || b.isFrozen())
+            throw new FrozenAccountException("Account Frozen");
+
+
+        a.debit(out);
+        a.daily -= amount;
+
+
+    }
+
+
 }
