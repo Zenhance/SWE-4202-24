@@ -1,8 +1,5 @@
-public class AgentWallet {
-    public AgentWallet(String op, double v, String number) {
-    }
-
-    public double balance() {
-        return 2;
+public class MerchantWallet extends Wallet {
+    public MerchantWallet(String id, double balance, String pin) {
+        super(id, balance, pin);
     }
 }
