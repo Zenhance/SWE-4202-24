@@ -30,7 +30,7 @@ public class CashOut extends Transaction {
         //    throw new DailyLimitExceededException("Daily Limit reached :')");
         double out = amount + fee();
         a.debit(out);
-        a.daily -= amount;
+        //a.daily -= amount;
         b.credit(amount + fee());
     }
 }

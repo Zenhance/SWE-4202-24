@@ -4,7 +4,7 @@ public abstract class Wallet {
     String name;
     protected double balance;
     String pin;
-    protected double limit;
+    protected double limit = Double.MAX_VALUE;
     public double daily = limit;
 
     public Wallet(String name, double balance, String pin){
@@ -34,8 +34,6 @@ public abstract class Wallet {
         if(tk <= 0 ){
             throw new IllegalArgumentException("The amount cannot be debited");
         }
-        if(tk > balance)
-            throw new InsufficientBalanceException("The amount cannot be debited");
         balance += tk;
     }
 

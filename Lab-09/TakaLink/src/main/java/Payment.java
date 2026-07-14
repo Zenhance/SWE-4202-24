@@ -29,7 +29,7 @@ public class Payment extends Transaction{
         super.settle();
         double out = amount + fee();
         a.debit(out);
-        a.daily -= amount;
+        //a.daily -= amount;
         b.credit(amount);
 
     }
