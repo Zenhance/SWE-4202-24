@@ -19,7 +19,7 @@ public class Wallet {
         this.id=id;
         this.balance=balance;
         this.pin=pin;
-        this.frozen=null;
+        this.frozen=false;
         this.spentToday=0.0;
     }
 
@@ -39,7 +39,13 @@ public class Wallet {
         return spentToday;
     }
 
-    public String getFrozen() {
+    public boolean getFrozen() {
         return frozen;
+    }
+
+    public void debit(double amount) {
+        if(amount<=0) {
+            throw new IllegallArgumentException ("Debit amount cannot be negative")
+        }
     }
 }
