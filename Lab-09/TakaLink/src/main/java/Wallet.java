@@ -8,9 +8,9 @@ public abstract class Wallet {
     protected Wallet(String name, double balance, String pin) {
         if (name == null || name.trim().isEmpty()) throw new IllegalArgumentException("name must not be null or blank");
 
-        if (balance < 0) throw new IllegalArgumentException("balance must not be negative");
+        if (balance < 0) throw new IllegalArgumentException("Balance must not be negative");
 
-        if (pin == null) throw new IllegalArgumentException("pin must not be null");
+        if (pin == null) throw new IllegalArgumentException("Pin must not be null");
 
         this.name = name;
         this.balance = balance;
@@ -52,5 +52,22 @@ public abstract class Wallet {
     public abstract boolean canSend();
     public abstract boolean canCashOut();
     public abstract boolean isAgent();
-    
-}
+
+    public void debit(double amount) throws InsufficientBalanceException {
+        if (amount <= 0) {
+            throw new IllegalArgumentException("debit amount must be positive");
+        }
+        if (amount > balance) {
+            throw new InsufficientBalanceException(
+                    name + " has " + balance + " but needs to debit " + amount);
+        }
+        balance -= amount;
+    }
+
+    public void credit(double amount) {
+        if (amount <= 0) {
+            throw new IllegalArgumentException("credit amount must be positive");
+        }
+        balance += amount;
+        }
+    }
