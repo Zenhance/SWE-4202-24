@@ -12,6 +12,15 @@ public class SettlementRun {
         transactions.add(transaction);
     }
 
+    public void submit(Transaction transaction,int amount){
+        for(int i=0;i<amount;i++){
+            transactions.add(transaction);
+        }
+    }
+
+
+
+
 
 
 
