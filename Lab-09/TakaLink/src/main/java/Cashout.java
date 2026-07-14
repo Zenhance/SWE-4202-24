@@ -1,4 +1,16 @@
 public class Cashout extends Transaction{
 
-    public Cashout(Wallet paywallet)
+    public Cashout(Wallet payWallet,Wallet receiveWallet,double amount,String pin){
+        super(payWallet, receiveWallet, amount, pin);
+    }
+
+    @Override
+    public double fee() {
+        return 0.0;
+    }
+
+    @Override
+    public void settle() {
+
+    }
 }
