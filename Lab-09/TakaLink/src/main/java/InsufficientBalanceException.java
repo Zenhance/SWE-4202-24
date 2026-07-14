@@ -1,0 +1,7 @@
+package src.main.java;
+
+public class InsufficientBalanceException extends TransactionException {
+    public InsufficientBalanceException(String message){
+        super(message);
+    }
+}
