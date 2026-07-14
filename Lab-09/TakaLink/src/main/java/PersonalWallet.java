@@ -1,3 +1,3 @@
-public class PersonalWallet {
+public class PersonalWallet extends Wallet{
 
 }

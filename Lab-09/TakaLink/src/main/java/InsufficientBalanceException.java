@@ -1,3 +1,3 @@
-public class InsufficientBalanceException ex{
+public class InsufficientBalanceException {
 
 }

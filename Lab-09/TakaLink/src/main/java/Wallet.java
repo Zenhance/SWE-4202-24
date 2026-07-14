@@ -5,7 +5,7 @@ public abstract class Wallet {
     private double spentToday;
     private boolean frozen;
 
-    public Wallet(String id, double balance, String pin) {
+    protected Wallet(String id, double balance, String pin) {
         if(id==null) {
             throw new IllegalArgumentException("ID cannot be empty");
         }
