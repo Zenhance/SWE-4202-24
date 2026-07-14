@@ -5,28 +5,18 @@ public abstract class Transaction {
     private final double amount;
     private final String offeredPin;
 
-    protected Transaction(
-            Wallet payer,
-            Wallet receiver,
-            double amount,
-            String offeredPin
+    protected Transaction(Wallet payer, Wallet receiver, double amount, String offeredPin
     ) {
         if (payer == null || receiver == null) {
-            throw new IllegalArgumentException(
-                    "Wallet cannot be null"
-            );
+            throw new IllegalArgumentException("Wallet cannot be null");
         }
 
         if (amount < 0.0) {
-            throw new IllegalArgumentException(
-                    "Amount cannot be negative"
-            );
+            throw new IllegalArgumentException("Amount cannot be negative");
         }
 
         if (offeredPin == null) {
-            throw new IllegalArgumentException(
-                    "PIN cannot be null"
-            );
+            throw new IllegalArgumentException("PIN cannot be null");
         }
 
         this.payer = payer;
@@ -54,8 +44,7 @@ public abstract class Transaction {
     protected abstract String operationName();
 
     protected void validateParties()
-            throws OperationNotAllowedException {
-    }
+            throws OperationNotAllowedException {}
 
     protected abstract void moveMoney()
             throws TransactionException;
@@ -64,32 +53,21 @@ public abstract class Transaction {
             throws TransactionException {
 
         if (!payer.verifyPin(offeredPin)) {
-            throw new InvalidPinException(
-                    "Invalid PIN for wallet " + payer.id()
-            );
+            throw new InvalidPinException("Invalid PIN for wallet " + payer.id());
         }
         if (payer.isFrozen()) {
-            throw new FrozenAccountException(
-                    "Wallet " + payer.id() + " is frozen"
-            );
+            throw new FrozenAccountException("Wallet " + payer.id() + " is frozen");
         }
         validateParties();
 
         if (amount > payer.remainingDailyLimit()) {
-            throw new DailyLimitExceededException(
-                    "Daily limit exceeded for wallet "
-                            + payer.id()
-            );
+            throw new DailyLimitExceededException("Daily limit exceeded for wallet " + payer.id());
         }
 
         double requiredBalance = amount + fee();
 
         if (payer.balance() < requiredBalance) {
-            throw new InsufficientBalanceException(
-                    "Wallet " + payer.id()
-                            + " requires " + requiredBalance
-                            + " but has " + payer.balance()
-            );
+            throw new InsufficientBalanceException("Wallet " + payer.id() + " requires " + requiredBalance + " but has " + payer.balance());
         }
         moveMoney();
 
