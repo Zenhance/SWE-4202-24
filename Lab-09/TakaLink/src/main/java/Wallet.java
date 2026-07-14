@@ -40,6 +40,12 @@ public abstract class Wallet {
         if(!pin.equals(enteredPin))
             throw new WrongPinException();
     }
+    public void checkFrozen()
+        throws FrozenAccountException{
+        if(frozen)
+            throw new FrozenAccountException();
+
+    }
 
 
 
