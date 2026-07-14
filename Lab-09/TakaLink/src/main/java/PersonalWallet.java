@@ -1,4 +1,5 @@
 public class PersonalWallet extends Wallet{
+    private static final double DAILY_LIMIT=25000.0;
     public PersonalWallet(String id, double balance, String pin) {
         super(id, balance, pin);
     }
@@ -7,16 +8,16 @@ public class PersonalWallet extends Wallet{
 
     @Override
     public double dailyLimit() {
-        return 0;
+        return DAILY_LIMIT;
     }
 
     @Override
     public boolean canSend() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean canCashOut() {
-        return false;
+        return true;
     }
 }
