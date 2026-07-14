@@ -14,5 +14,13 @@ public class Payment extends Transaction {
             throw new OperationNotAllowedException();
         }
     }
+    @Override
+    protected void moveMoney()
+            throws TransactionException {
+
+        fromId().debit(amount());
+
+        toId().credit(amount());
+    }
 
 }
