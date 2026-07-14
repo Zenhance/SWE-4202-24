@@ -26,9 +26,13 @@ public abstract class Transaction {
 
     public abstract double fee();
 
-    public abstract boolean isPayerAllowed();
+    protected abstract boolean isPayerAllowed();
 
-    protected void validateCounterparty() {
+    protected void validateCounterparty() throws OperationNotAllowedException{
+
+    }
+
+    public final void settle() throws TransactionException{
 
     }
 }
