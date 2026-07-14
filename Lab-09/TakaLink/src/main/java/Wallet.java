@@ -1,8 +1,10 @@
-public class Wallet {
+public abstract class Wallet {
     private final String identity;
     private double balance;
     private final String pin;
     private boolean active;
+    private double sendingLimit;
+    private double sentToday;
 
 
     public Wallet(String identity, double balance, String pin) {
@@ -27,6 +29,10 @@ public class Wallet {
     private String getPin() {
         return pin;
     }
+    public boolean isFrozen(){
+        return !active;
+    }
+
 
     public void debit(double amount) throws InsufficientBalanceException {
         if(amount < 0){
@@ -55,4 +61,10 @@ public class Wallet {
         }
         balance += amount;
     }
+
+    public double canSend(){
+        return sendingLimit - sentToday;
+    }
+
+
 }
