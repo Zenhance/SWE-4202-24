@@ -42,9 +42,17 @@ public abstract class Wallet {
     }
 
     public boolean verifyPin(String number) {
+        return this.pin.equals(number);
     }
 
     public void freeze() {
         this.frozen=true;
     }
+
+    public boolean isFrozen() {
+        return frozen;
+    }
+
+    protected abstract double getDailylimit();
+
 }
