@@ -40,5 +40,19 @@ public abstract class Wallet {
         this.balance-=balance;
     }
 
+    public void credit(double amount){
+        if(amount<0.0){
+            throw new IllegalArgumentException("Amount cannot be negative");
+        }
+        this.balance+=balance;
+    }
+
+    public boolean verifyPin(String pin){
+        return this.pin.equals(pin);
+    }
+
+    public void freeze(){
+        this.frozenStatus=true;
+    }
 
 }
