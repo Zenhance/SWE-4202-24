@@ -6,9 +6,22 @@ public abstract class Wallet {
     private double sentToday;
 
     public Wallet(String name, double balance, String PIN){
+        if(name== null || name.isBlank()){
+            throw new IllegalArgumentException("Name can not be null nor empty");
+        }
+        if(balance<0.0){
+            throw new IllegalArgumentException("Balance can not be negative");
+        }
+        if(PIN == null || PIN.isBlank()){
+            throw new IllegalArgumentException("Pin can not be null nor empty");
+
+        }
+
         this.name=name;
         this.balance=balance;
         this.PIN=PIN;
+        this.frozenStatus = false;
+        this.sentToday = 0.0;
 
     }
 
