@@ -11,21 +11,21 @@ public abstract class Wallet {
             double openingBalance,
             String pin
     ) {
-        if (id == null  || id.isBlank()) {
+        if (id == null || id.isBlank()) {
             throw new IllegalArgumentException(
-                    "Wallet ID can't be null or blank"
+                    "Wallet ID cannot be null or blank"
             );
         }
 
         if (openingBalance < 0.0) {
             throw new IllegalArgumentException(
-                    "Opening balance can't be negative"
+                    "Opening balance cannot be negative"
             );
         }
 
         if (pin == null) {
             throw new IllegalArgumentException(
-                    "PIN can't be null"
+                    "PIN cannot be null"
             );
         }
 
@@ -71,6 +71,18 @@ public abstract class Wallet {
         }
 
         balance += amount;
+    }
+
+    public final boolean verifyPin(String enteredPin) {
+        return pin.equals(enteredPin);
+    }
+
+    public final boolean isFrozen() {
+        return frozen;
+    }
+
+    public final void freeze() {
+        frozen = true;
     }
 
 }
