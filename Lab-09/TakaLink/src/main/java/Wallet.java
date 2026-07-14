@@ -85,5 +85,33 @@ public abstract class Wallet {
         frozen = true;
     }
 
-}
+    public final double remainingDailyLimit() {
+        return Math.max(
+                0.0,
+                dailyLimit() - spentToday
+        );
+    }
 
+    final void recordSpend(double amount) {
+        spentToday += amount;
+    }
+
+    protected abstract double dailyLimit();
+
+    public abstract boolean canSendMoney();
+
+    public abstract boolean canCashOut();
+
+    public abstract boolean canMakePayment();
+
+    public abstract boolean canTopUp();
+
+
+    public boolean canReceiveCashOut() {
+        return false;
+    }
+
+    public boolean canReceivePayment() {
+        return false;
+    }
+}
