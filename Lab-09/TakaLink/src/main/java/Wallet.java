@@ -19,4 +19,19 @@ protected Wallet(String id,double openingBalance,String pin) {
     this.pin=pin;
     this.balance=openingBalance;
 }
+public final String id(){
+    return id;
+}
+public final double balance() {
+    return balance;
+}
+public final void debit(double amount) throws InsufficientBalanceException {
+    if(amount>balance) {
+        throw new InsufficientBalanceException("Wallet " +
+                "id " +"has insufficient balance for debit" + amount);
+    }
+    balance -= amount;
+}
+
+
 }
