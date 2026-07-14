@@ -7,7 +7,7 @@
  * that PULLS a thousand taka out of the recipient -- a theft the type system
  * waves straight through, because nothing here is ever checked.
  */
-public class Transaction {
+public abstract class Transaction {
            // "SEND", "CASHOUT", "PAYMENT", "TOPUP"
     public double amount;
     public String fromId;
@@ -15,6 +15,15 @@ public class Transaction {
     public String pin;
 
     public Transaction(String fromId, String toId, double amount, String pin) {
+
+        if(fromId==null || fromId.isBlank())
+throw new IllegalArgumentException("Id can not be null");
+        if(toId==null || toId.isBlank())
+throw new IllegalArgumentException("Id can not be null");
+        if(amount<=0)
+            throw new IllegalArgumentException( "Amount has to be positive");
+            if (pin==null || pin.isBlank())
+throw new IllegalArgumentException("Pin can not be null");
 
         this.amount = amount;
         this.fromId = fromId;
@@ -37,5 +46,11 @@ public class Transaction {
 
     public String getToId() {
         return toId;
+    }
+    public abstract double fee();
+
+    public void settle()
+    {
+
     }
 }
