@@ -7,5 +7,10 @@ public class Payment extends Transaction{
         return 0.0;
     }
     @Override
-    protected void checkPermission() {}
+    public void checkPermission() {};
+    @Override
+    public void moveMoney(double fee) throws InsufficientBalanceException {
+        from.debit(amount);
+        to.credit(amount);
+    }
 }
