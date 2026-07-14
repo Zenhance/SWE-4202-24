@@ -16,4 +16,24 @@ public class Wallet {
             throw new IllegalArgumentException("PIN cannot be empty");
         }
     }
+
+    public String getId() {
+        return id;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public String getPin() {
+        return pin;
+    }
+
+    public double getSpentToday() {
+        return spentToday;
+    }
+
+    public String getFrozen() {
+        return frozen;
+    }
 }
