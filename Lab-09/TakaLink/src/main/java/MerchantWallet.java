@@ -1,2 +1,4 @@
-public class MerchantWallet {
+public class MerchantWallet extends Wallet {
+    private double balance;
+
 }
