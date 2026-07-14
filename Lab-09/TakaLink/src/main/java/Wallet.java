@@ -57,4 +57,10 @@ public abstract class Wallet {
     protected void assertCanReceiveCashOut() throws OperationNotAllowedException {
         throw new OperationNotAllowedException(id + " is not an agent and cannot pay out a cash-out");
     }
+
+    protected void assertNotFrozen() throws FrozenAccountException {
+        if (frozen) {
+            throw new FrozenAccountException(id + " is frozen");
+        }
+    }
 }
