@@ -4,7 +4,13 @@ public class SendMoney extends Transaction {
     public SendMoney(String type, double amount, Wallet fromId,Wallet toId,String pin ){
         super(type,amount,fromId,toId,pin);
     }
-    public SendMoney()
+
+    public SendMoney(Wallet a, PersonalWallet b, double v, String number) {
+        this.fromId = a;
+        this.toId = b;
+        this.amount = v;
+        this.pin = number;
+    }
 
     public double fee(){
         return FLAT_FEE;

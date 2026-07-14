@@ -1,10 +1,27 @@
+import java.util.ArrayList;
+import java.util.Objects;
+
 public class SettlementRun {
-    public void submit(Transaction good2) {
+    private ArrayList<Transaction> batch;
+
+    public SettlementRun() {
+        batch=new ArrayList<>();
     }
 
-    public int pending() {
+    public void submit(Transaction t){
+
+    }
+    public void submit(Transaction t, int c){
+
     }
 
-    public SettlementReport settle() {
+    public int pending(){
+        return 0;
     }
+
+    public SettlementReport settle(){
+        return null;
+    }
+
+
 }

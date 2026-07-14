@@ -3,6 +3,12 @@ public class Payment extends Transaction{
         super(type, amount, fromId, toId, pin);
     }
 
+    public Payment(PersonalWallet a, MerchantWallet m, double v, String number) {
+        this.fromId = a;
+        this.toId = m;
+        this.amount = v;
+        this.pin = number;
+    }
 
 
     public double fee() {

@@ -29,7 +29,7 @@ public abstract class Wallet {
     public final boolean isFrozen(){
         return frozen;
     }
-    public double getBalance(){
+    public double balance(){
         return balance;
     }
     public boolean verifyPin(String p){
