@@ -36,4 +36,28 @@ public abstract class Wallet {
     public double getSpentToday() {
         return spentToday;
     }
+
+    public abstract double getDailyLimit();
+    public abstract boolean canSend();
+    public abstract boolean canCshOut();
+
+    public  void debit(double amount) throws InsufficientBalanceException {
+        if (amount < 0)
+            throw new IllegalArgumentException("Amount can not be negative");
+        if (amount > getBalance()) throw new InsufficientBalanceException();
+        balance -= amount;
+    }
+
+    public void credit(double amount) {
+        if (amount < 0) throw new IllegalArgumentException("Amount can not be negative");
+        balance += amount;
+    }
+    public boolean verifyPin(String pin) {
+        return getPin().equals(pin);
+    }
+
+    public void freeze() {
+        frozen = true;
+    }
+
 }
