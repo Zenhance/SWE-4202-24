@@ -22,4 +22,14 @@ public abstract class Transaction {
     public abstract double fee();
     public abstract void checkPermission() throws OperationNotAllowedException;
     protected abstract void moveMoney(double fee) throws InsufficientBalanceException;
+
+    public final void settle() throws TransactionException {
+        from.assertNotFrozen();
+        from.assertPin(pin);
+        checkPermission();
+        double fee = fee();
+        from.assertWithinDailyLimit(amount);
+        moveMoney(fee);
+        from.recordSpend(amount);
+    }
 }
