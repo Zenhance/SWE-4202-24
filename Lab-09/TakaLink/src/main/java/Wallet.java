@@ -41,4 +41,8 @@ public abstract class Wallet {
     public boolean verifyPin(String PIN) {
         return this.PIN.equals(PIN);
     }
+
+    public void freeze() {
+        this.frozenStatus = true;
+    }
 }
