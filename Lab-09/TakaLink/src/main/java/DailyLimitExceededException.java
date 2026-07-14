@@ -1,8 +1,5 @@
-public class DailyLimitExceededException extends TransactionException {
-
-    public DailyLimitExceededException() {
-        super("Daily transaction limit exceeded");
-    }
+public class DailyLimitExceededException
+        extends TransactionException {
 
     public DailyLimitExceededException(String message) {
         super(message);
