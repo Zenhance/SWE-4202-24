@@ -27,6 +27,12 @@ public class Wallet {
             balance -= amount;
         }
 
+        public void credit(double amount) {
+            if (amount <= 0) throw new IllegalArgumentException("Amount must be above 0.0, got" + amount);
+
+            balance += amount;
+        }
+
 
 
     }
