@@ -18,5 +18,23 @@ public class SettlementReport {
         return 0.0;
     }
 
+    public Object errorOf(Transaction bad1) {
+        return bad1;
+    }
 
+    public boolean isSettled(Transaction t) {
+        return false;
+    }
+
+//    public void errorOf(Transaction t) throws TransactionException{
+//        try {
+//            PersonalWallet p1 = new PersonalWallet("", 0.0, "");
+//            PersonalWallet p2 = new PersonalWallet("", 0.0, "");
+//            Payment p = new Payment(p1, p2, 0.0, "");
+//            throw new InsufficientBalanceException("Invalid");
+//        }
+//        catch (TransactionException e) {
+//            System.out.println("Invalid");
+//        }
+//    }
 }
