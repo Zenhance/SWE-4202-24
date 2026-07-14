@@ -14,12 +14,14 @@ public abstract class Wallet {
     public void debit(double amount) {
         if (amount < 0)
             throw new IllegalArgumentException("Amount cannot be negative");
-        if (amount > this.balance)
-            return; // InsufficientBalanceException
-
         this.balance -= amount;
     }
 
+    public void credit(double amount){
+        if (amount < 0)
+            throw new IllegalArgumentException("Amount cannot be negative");
+        this.balance += amount;
+    }
 
 
 }
