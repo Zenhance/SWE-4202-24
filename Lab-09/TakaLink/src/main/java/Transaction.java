@@ -14,7 +14,7 @@ public abstract class Transaction {
     private final double amount;
     private final String pin;
 
-    public Transaction(String type, double amount, String fromId, String toId, Wallet from, Wallet wallet, String pin) {
+    public Transaction() {
         this.from = from;
         to = wallet;
         this.amount = amount;
