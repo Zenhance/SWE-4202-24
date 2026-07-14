@@ -2,6 +2,10 @@ public class PersonalWallet {
     public PersonalWallet(String a, double v, String number) {
     }
 
+    public PersonalWallet() {
+
+    }
+
     public void debit(double v) {
 
     }
@@ -15,5 +19,8 @@ public class PersonalWallet {
 
     public boolean verifyPin(String number) {
         return false;
+    }
+
+    public void freeze() {
     }
 }

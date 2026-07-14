@@ -3,6 +3,10 @@ public class SendMoney extends Transaction {
         super();
     }
 
+    public SendMoney(AgentWallet agent, PersonalWallet dest2, double v, String number) {
+    }
+
+
     public void settle() {
 
     }

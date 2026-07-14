@@ -1,4 +1,6 @@
-public class MerchantWallet {
+public class MerchantWallet extends PersonalWallet {
+
+
     public MerchantWallet(String m, double v, String number) {
     }
 
