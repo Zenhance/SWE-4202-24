@@ -1,4 +1,4 @@
-public class Wallet {
+
     public class Wallet {
 
         private String id;
@@ -43,6 +43,20 @@ public class Wallet {
 
         public double balance() {
             return balance;
+        }
+
+
+        public final boolean isFrozen() {
+            return frozen;
+        }
+
+
+        public final void unfreeze() {
+            this.frozen = false;
+        }
+
+        public final String id() {
+            return id;
         }
 
 
