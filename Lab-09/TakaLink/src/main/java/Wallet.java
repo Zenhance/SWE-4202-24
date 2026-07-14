@@ -27,7 +27,7 @@ public abstract class Wallet {
     public final double getBalance(){
         return balance;
     }
-    public final void debit(double amount){
+    public final void debit(double amount)
         throws InsufficientBalanceException{
             requirePositiveAmount(amount);
             if(amount>balance){
@@ -35,7 +35,6 @@ public abstract class Wallet {
             }
             balance-=amount;
         }
-    }
     public final void credit(double amount){
         requirePositiveAmount(amount);
         balance+=amount;
@@ -57,7 +56,7 @@ public abstract class Wallet {
         spentToday+=amount;
     }
     public abstract double dailyLimit();
-    public abstract boolean allows(Operation operation);
+    protected abstract boolean allows(Operation operation);
     private static void requirePositiveAmount(double amount){
         if(!Double.isFinite(amount)||amount<=0.0){
             throw new IllegalArgumentException("Amount must be positive");
