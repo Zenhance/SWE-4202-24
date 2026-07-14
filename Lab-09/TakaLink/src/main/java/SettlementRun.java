@@ -9,4 +9,7 @@ public class SettlementRun {
         transactions.add(transaction);
     }
 
+    public int pending() {
+        return transactions.size();
+    }
 }
