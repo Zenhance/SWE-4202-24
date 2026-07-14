@@ -72,7 +72,13 @@ public  abstract class Wallet
        return dailyLimit()-spentToday;
    }
 
-    public abstract double fee();
+    public abstract boolean canSendMoney();
+
+    public abstract boolean canCashOut();
+
+    public abstract boolean canTopUp();
+
+    public abstract boolean canPayment();
 
     public abstract double dailyLimit();
 }
