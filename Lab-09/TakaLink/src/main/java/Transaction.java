@@ -7,18 +7,40 @@
  * that PULLS a thousand taka out of the recipient -- a theft the type system
  * waves straight through, because nothing here is ever checked.
  */
-public class Transaction {
-    public String type;        // "SEND", "CASHOUT", "PAYMENT", "TOPUP"
-    public double amount;
-    public String fromId;
-    public String toId;
-    public String pin;
+public abstract class Transaction {
 
-    public Transaction(String type, double amount, String fromId, String toId, String pin) {
-        this.type = type;
+    private final Wallet pay;
+    private final Wallet recieve;
+    private final double amount;
+    private final String pin;
+
+    public Transaction(Wallet pay, Wallet recieve, double amount, String pin) {
+        if(pay==null){
+            throw new IllegalArgumentException("Invalid");
+        }
+        if(recieve==null){
+            throw new IllegalArgumentException("Invalid");
+        }
+        if(amount<0.0){
+            throw new IllegalArgumentException("Invalid");
+        }
+        if(pin==null || pin.isBlank())
+            throw new IllegalArgumentException("Invalid");
+
+        this.pay = pay;
+        this.recieve = recieve;
         this.amount = amount;
-        this.fromId = fromId;
-        this.toId = toId;
         this.pin = pin;
     }
+    public abstract double fee();
+    public double debitAmoubt(){
+        return amount+fee();
+    }
+    protected void validateOperation() throws OperationNotAllowedException{}
+    protected void validateLimit() throws DailyLimitExceededException{}
+
+
+
+
+
 }
