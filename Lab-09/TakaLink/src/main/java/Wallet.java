@@ -3,7 +3,7 @@ public class Wallet {
     private double balance;
     private String pin;
     private double spentToday;
-    private String frozen;
+    private boolean frozen;
 
     public Wallet(String id, double balance, String pin) {
         if(id==null) {
@@ -15,6 +15,12 @@ public class Wallet {
         if(pin==null) {
             throw new IllegalArgumentException("PIN cannot be empty");
         }
+
+        this.id=id;
+        this.balance=balance;
+        this.pin=pin;
+        this.frozen=null;
+        this.spentToday=0.0;
     }
 
     public String getId() {
