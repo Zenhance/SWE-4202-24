@@ -8,4 +8,10 @@ public class AgentWallet extends Wallet{
     public double getDailyLimit(){
         return LIMIT;
     }
+    public boolean canSend(){
+        return true;
+    }
+    public boolean canCashOut(){
+        return true;
+    }
 }

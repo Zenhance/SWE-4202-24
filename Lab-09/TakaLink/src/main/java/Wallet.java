@@ -73,4 +73,6 @@ public  abstract class Wallet {
     public void addSpent(double amount){
         spentToday+=amount;
     }
+    public abstract boolean canSend();
+    public abstract boolean canCashOut();
 }
