@@ -15,4 +15,15 @@ public abstract class Wallet {
         this.frozen = false;
         this.spentToday = 0.0;
     }
+    public double balance() {
+        return this.balance;
+    }
+
+    public boolean isFrozen() {
+        return this.frozen;
+    }
+
+    public void freeze() {
+        this.frozen = true;
+    }
 }
