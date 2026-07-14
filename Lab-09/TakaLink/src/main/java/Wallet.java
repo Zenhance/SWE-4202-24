@@ -20,6 +20,10 @@ public abstract class Wallet {
         this.frozen= false;
         this.spentToday=0;
     }
+    public String getId(){
+        return id;
+    }
+
 
 
 
