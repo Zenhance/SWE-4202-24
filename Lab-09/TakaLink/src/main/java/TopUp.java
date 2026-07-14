@@ -9,7 +9,10 @@ public class TopUp extends Transaction {
     }
 
     @Override
-    public void settle() {
-
+    public void settle() throws InsufficientBalanceException {
+        if (payingWallet.verifyPin(super.getPIN())) {
+            payingWallet.debit(amount);
+            receivingWallet.credit(amount);
+        }
     }
 }
