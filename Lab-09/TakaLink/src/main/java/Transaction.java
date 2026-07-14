@@ -56,5 +56,17 @@ public abstract class Transaction {
         if(totalDebit> payer.getBalance()){
             throw new InsufficientBalanceException("Insufficient balance in wallet "+ payer.getId());
         }
+        payer.debit(totalDebit);
+        receiver.credit(amountCreditedToReceiver());
+        payer.recordSent(amount);
+    }
+    public final double amount(){
+        return amount;
+    }
+    protected final Wallet payer(){
+        return payer;
+    }
+    protected final Wallet receiver(){
+        return receiver;
     }
 }
