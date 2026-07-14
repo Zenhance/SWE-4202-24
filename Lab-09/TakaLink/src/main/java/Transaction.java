@@ -42,4 +42,21 @@ public abstract class Transaction {
     public String getPin() {
         return pin;
     }
+
+    public void settle() throws TransactionException {
+        if(!sender.verifyPin(getPin()))
+            throw new InvalidPinException();
+
+        sender.checkFrozen();
+        validOperation();
+
+        double fee = fee();
+        if(sender.remainingLimit()< amount)
+            throw new DailyLimitExceedException();
+        if(sender.getBalance()>amount+fee)
+            throw new InsufficientBalanceException();
+
+        moveMoney();
+        sender.addSpent(amount);
+    }
 }
