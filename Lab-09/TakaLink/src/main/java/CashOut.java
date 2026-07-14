@@ -1,4 +1,6 @@
-public class CashOut {
-    public CashOut(PersonalWallet a, PersonalWallet b, double v, String number) {
+public class CashOut extends Transaction{
+    public CashOut(Wallet a, Wallet b, double v, String number) {
+        super(a,b,v,number);
     }
+    public double fee() {return amount*.0185;}
 }

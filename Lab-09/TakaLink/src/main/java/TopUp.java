@@ -1,4 +1,6 @@
-public class TopUp {
-    public TopUp(PersonalWallet a, AgentWallet operator, double v, String number) {
+public class TopUp extends Transaction{
+    public TopUp(Wallet a, Wallet operator, double v, String number) {
+        super(a,operator,v,number);
     }
+
 }
