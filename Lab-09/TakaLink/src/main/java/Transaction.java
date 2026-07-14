@@ -35,4 +35,18 @@ public abstract class Transaction {
     protected double creditAmount() {
         return amount;
     }
+    protected void validateOperation() throws OperationNotAllowedException {}
+    protected void validateLimit() throws DailyLimitExceededException {}
+    protected void onSettled() {}
+    public final void settle() throws TransactionException {
+        validateOperation();
+    }
+    if (from.isFrozen()) throw new FrozenAccountException(from.name() + " is frozen");
+    if (!from.verifyPin(pin)) throw new InvalidPinException("wrong pin for " + from.name());
+    validateLimit();
+    double debit = debitAmount();
+        if (debit > from.balance()) {
+        throw new InsufficientBalanceException(
+                from.name() + " has " + from.balance() + " but needs " + debit);
+    }
 }
