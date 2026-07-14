@@ -6,6 +6,11 @@
       <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/Lab-04/CineCart" />
         <option name="gradleJvm" value="21" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Lab-04/CineCart" />
+          </set>
+        </option>
       </GradleProjectSettings>
     </option>
   </component>
