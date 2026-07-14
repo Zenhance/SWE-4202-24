@@ -21,6 +21,7 @@ public abstract class Wallet {
         this.frozen=false;
         this.spentToday=0.0;
     }
+    /////////////////
     public final String id(){
         return id;
     }
@@ -40,9 +41,7 @@ public abstract class Wallet {
     public boolean verifyPin(String offeredPin){
         return pin.equals(offeredPin);
     }
-    public double remainingDailyLimit(){
-        return getDailyLimit() - spentToday;
-    }
+    /// //////////////
     public final void debit(double amount) {
         if (amount <= 0) {
             throw new IllegalArgumentException("Debit amoount must be positive");
@@ -52,5 +51,13 @@ public abstract class Wallet {
         }
         balance -= amount;
     }
+    final double remainingDailyLimit(){
+        return dailyLimit() - spentToday;
     }
+    final void recordSpend(double amount){
+        spentToday+=amount;
+    }
+    protected abstract double dailyLimit();
+    abstract boolean canBePayerOf(TransactionKind kind);
+    abstract boolean canBeRecipientOf(TransactionKind kind);
 }
