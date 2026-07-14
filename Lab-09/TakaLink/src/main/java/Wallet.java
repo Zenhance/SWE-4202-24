@@ -44,7 +44,7 @@ public String getid()
 {
     return id;
 }
-public double getBalance()
+public double balance()
 {
     return balance;
 }

@@ -1,7 +1,7 @@
 public class PersonalWallet extends Wallet {
 
     private static final double LIMIT= 25000.0;
-    public PersonalWallet(String id. double balance, String pin )
+    public PersonalWallet(String id, double balance, String pin )
     {
         super(id, balance, pin);
     }
