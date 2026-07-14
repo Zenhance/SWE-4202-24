@@ -30,7 +30,7 @@ public abstract class Transaction {
     }
 }        */
 
-    private Wallet payWallet;
+private Wallet payWallet;
 private Wallet receiveWallet;
 private double amount;
 private String pin;

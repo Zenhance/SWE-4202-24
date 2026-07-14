@@ -25,8 +25,6 @@ public class SettlementReport {
     public boolean isSettled(Transaction t){
         return false;
     }
-
-
 }
 
 
