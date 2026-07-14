@@ -9,20 +9,20 @@
  */
 public abstract class Transaction {
            // "SEND", "CASHOUT", "PAYMENT", "TOPUP"
-    public double amount;
-    public String fromId;
-    public String toId;
-    public String pin;
+    protected double amount;
+   protected Wallet fromId;
+    protected Wallet toId;
+   protected Wallet pin;
 
-    public Transaction(String fromId, String toId, double amount, String pin) {
+    public Transaction(Wallet fromId,Wallet toId, double amount, Wallet pin) {
 
-        if(fromId==null || fromId.isBlank())
+        if(fromId==null)
 throw new IllegalArgumentException("Id can not be null");
-        if(toId==null || toId.isBlank())
+        if(toId==null )
 throw new IllegalArgumentException("Id can not be null");
         if(amount<=0)
             throw new IllegalArgumentException( "Amount has to be positive");
-            if (pin==null || pin.isBlank())
+            if (pin==null)
 throw new IllegalArgumentException("Pin can not be null");
 
         this.amount = amount;
@@ -31,26 +31,8 @@ throw new IllegalArgumentException("Pin can not be null");
         this.pin = pin;
     }
 
-    public double getAmount() {
-        return amount;
-    }
 
-    public String getFromId() {
-        return fromId;
-    }
-
-    public String getPin() {
-
-        return pin;
-    }
-
-    public String getToId() {
-        return toId;
-    }
     public abstract double fee();
-
-    public void settle()
-    {
-
-    }
+    public abstract void validOperation() throws OperationNotAllowedException;
+    public abstract void moveMoney() throws TransactionException;
 }
