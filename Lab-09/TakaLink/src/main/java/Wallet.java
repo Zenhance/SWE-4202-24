@@ -58,4 +58,12 @@ public  abstract class Wallet {
     public boolean verifyPin(String pin){
         return pin.equals(pin);
     }
+    public void freeze(){
+        frozen=true;
+    }
+    public void checkFrozen() throws FrozenAccountException{
+        if(frozen){
+            throw new FrozenAccountException();
+        }
+    }
 }
