@@ -1,5 +1,5 @@
 public final class Payment extends Transaction{
-    public Payment( payer, Wallet receiver, double amount, String offeredPin){
+    public Payment(Wallet payer, Wallet receiver, double amount, String offeredPin){
         super(payer, receiver, amount, offeredPin);
     }
     @Override
