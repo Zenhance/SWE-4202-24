@@ -32,6 +32,9 @@ public abstract class Wallet {
     public void freeze(){
         frozen=true;
     }
+    public void unfreeze(){
+        frozen=false;
+    }
 
 
 
