@@ -16,6 +16,20 @@ public abstract class Transaction {
 
     public abstract double fee();
 
+    public final void settle() throws TransactionException {
+        if (!from.verifyPin(offeredPin)) throw new InvalidPinException(from.id());
+
+        if (from.isFrozen()) throw new FrozenAccountException(from.id());
+
+        if (!operationAllowed()) throw new OperationNotAllowedException(from.id());
+
+        if (!from.canSpendAmount(amount)) throw new DailyLimitExceededException(from.id());
+
+        double totalDebit = amount + fee();
+        if (from.balance() - totalDebit < 0) throw new InsufficientBalanceException(from.id());
+
+        performTransfer(totalDebit);
+    }
 
     protected abstract boolean operationAllowed();
 
