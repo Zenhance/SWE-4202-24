@@ -58,6 +58,9 @@ public abstract class Wallet {
         frozen = true;
     }
 
+    public abstract double dailyLimit();
+
+    public abstract boolean allows(TransactionType type);
 
 }
 
