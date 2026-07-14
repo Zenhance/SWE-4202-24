@@ -17,3 +17,38 @@ public abstract class Transaction {
         this.amount = amount;
         this.pin = pin;
     }
+    public final double amount() {
+        return amount;
+    }
+
+    public abstract double fee();
+
+    protected abstract TransactionKind kind();
+
+    protected double recipientCredit() {
+        return amount;
+    }
+
+    public final void settle() throws TransactionException {
+        if (from.isFrozen()) {
+            throw new FrozenAccountException(from.id());
+        }
+        if (!from.verifyPin(pin)) {
+            throw new InvalidPinException(from.id());
+        }
+        if (!from.canBePayerOf(kind())) {
+            throw new OperationNotAllowedException(from.id(), kind(), "payer");
+        }
+        if (!to.canBeRecipientOf(kind())) {
+            throw new OperationNotAllowedException(to.id(), kind(), "recipient");
+        }
+        if (amount > from.remainingDailyLimit()) {
+            throw new DailyLimitExceededException(from.id(), amount, from.remainingDailyLimit());
+        }
+
+        double totalDebit = amount + fee();
+        from.debit(totalDebit);
+        to.credit(recipientCredit());
+        from.recordSpend(amount);
+    }
+}
