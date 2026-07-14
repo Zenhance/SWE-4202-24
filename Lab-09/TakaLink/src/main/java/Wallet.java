@@ -34,6 +34,13 @@ public abstract class Wallet {
     public double balance(){
         return this.balance;
     }
+    public boolean verifyPin(String PIN){
+    if(PIN==null || PIN.isEmpty()){
+        throw new IllegalArgumentException("PIN cannot be empty");
+        }else {
+        return PIN.equals(this.PIN);
+        }
+    }
     public void credit(double amount){
         if(amount<0){
             throw new IllegalArgumentException("Amount cannot be negative");
