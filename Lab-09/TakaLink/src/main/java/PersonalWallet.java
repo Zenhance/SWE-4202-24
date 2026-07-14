@@ -1,23 +1,22 @@
-public class PersonalWallet {
-    public PersonalWallet(String b, double v, String number) {
+public class PersonalWallet extends Wallet{
+    public PersonalWallet(String id, double balance, String pin) {
+        super(id, balance, pin);
     }
 
-    public void debit(double v) {
-    }
 
-    public double balance() {
+
+    @Override
+    public double dailyLimit() {
         return 0;
     }
 
-    public void credit(double v) {
-
+    @Override
+    public boolean canSend() {
+        return false;
     }
 
-    public boolean verifyPin(String number) {
-    return true;
-    }
-
-
-    public void freeze() {
+    @Override
+    public boolean canCashOut() {
+        return false;
     }
 }
