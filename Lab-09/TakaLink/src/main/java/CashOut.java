@@ -9,7 +9,11 @@ public class CashOut extends Transaction{
     }
 
     @Override
-    public void settle() {
-
+    public void settle() throws InsufficientBalanceException {
+        double cashoutFee = amount * 0.0185;
+        if (payingWallet.verifyPin(super.getPIN())) {
+            payingWallet.debit(amount + cashoutFee);
+            receivingWallet.credit(amount + cashoutFee);
+        }
     }
 }
