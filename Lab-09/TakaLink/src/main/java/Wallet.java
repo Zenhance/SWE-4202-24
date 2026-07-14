@@ -1,3 +1,5 @@
+import javax.naming.InsufficientResourcesException;
+
 public abstract class Wallet {
     private String id;
     private String pin;
@@ -19,6 +21,48 @@ public abstract class Wallet {
         this.balance=balance;
         this.pin=pin;
     }
+
+    public boolean verefyPin(String typedPin){
+        return pin.equals(typedPin);
+    }
+
+    public String getId(){
+        return id;
+    }
+
+    public double balance(){
+        return balance;
+    }
+
+    public double getSpentToday(){
+        return spentToday;
+    }
+
+    public void freeze(){
+        frozen=true;
+    }
+
+    public boolean isFrozen(){
+        return frozen;
+    }
+
+    public void debit(double amount) throws InsufficientBalanceException {
+        if(amount<=0){
+            throw new IllegalArgumentException("amount must be positive");
+        }
+        if((balance-amount)<0){
+            InsufficientBalanceException(id + "has insufficient balance for a debit of" + amount);
+        }
+        balance-=amount;
+    }
+
+    public void credit(double amount){
+        if(amount<=0){
+            throw new IllegalArgumentException("amount must be positive");
+        }
+        balance+=amount;
+    }
+
 
 
 }
