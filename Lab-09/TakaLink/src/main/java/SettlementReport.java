@@ -9,4 +9,10 @@ public class SettlementReport {
     public SettlementReport(){
         rejectedReasons = new ArrayList<>();
     }
+
+    public void addSuccess(Transaction t){
+        settledCount++;
+        totalValueMoved += t.getAmount();
+        totalFees+= t.getFee();
+    }
 }
