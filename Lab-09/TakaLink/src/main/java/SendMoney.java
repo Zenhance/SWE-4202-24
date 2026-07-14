@@ -1,13 +1,27 @@
-public class SendMoney {
-    public SendMoney(PersonalWallet a, PersonalWallet b, double v, String number) {
+public class SendMoney extends Transaction {
+
+    public SendMoney(Wallet payer, Wallet receiver, double amount, String offeredPin
+    ) {
+        super(payer, receiver, amount, offeredPin);
     }
 
-    public SendMoney(AgentWallet agent, PersonalWallet dest2, double v, String number) {
+    @Override
+    public double fee() {
+        return 5.0;
     }
 
-    public SendMoney(MerchantWallet m, PersonalWallet a, double v, String number) {
+    @Override
+    protected boolean payerIsAllowed() {
+        return false;
     }
 
-    public void settle() {
+    @Override
+    protected String operationName() {
+        return "";
+    }
+
+    @Override
+    protected void moveMoney() throws TransactionException {
+
     }
 }

@@ -1,10 +1,31 @@
-public class TopUp {
-    public TopUp(PersonalWallet a, AgentWallet operator, double v, String number) {
+public class TopUp extends Transaction {
+
+    public TopUp(
+            Wallet payer,
+            Wallet receiver,
+            double amount,
+            String offeredPin
+    ) {
+        super(payer, receiver, amount, offeredPin);
     }
 
+    @Override
     public double fee() {
+        return 0.0;
     }
 
-    public void settle() {
+    @Override
+    protected boolean payerIsAllowed() {
+        return false;
+    }
+
+    @Override
+    protected String operationName() {
+        return "";
+    }
+
+    @Override
+    protected void moveMoney() throws TransactionException {
+
     }
 }

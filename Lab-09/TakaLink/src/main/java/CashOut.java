@@ -1,10 +1,31 @@
-public class CashOut {
-    public CashOut(PersonalWallet a, AgentWallet g, double v, String number) {
+public class CashOut extends Transaction {
+
+    public CashOut(
+            Wallet payer,
+            Wallet receiver,
+            double amount,
+            String offeredPin
+    ) {
+        super(payer, receiver, amount, offeredPin);
     }
 
-    public CashOut(PersonalWallet a, PersonalWallet b, double v, String number) {
+    @Override
+    public double fee() {
+        return amount() * 0.0185;
     }
 
-    public void settle() {
+    @Override
+    protected boolean payerIsAllowed() {
+        return false;
+    }
+
+    @Override
+    protected String operationName() {
+        return "";
+    }
+
+    @Override
+    protected void moveMoney() throws TransactionException {
+
     }
 }
