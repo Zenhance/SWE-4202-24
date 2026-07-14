@@ -1,6 +1,6 @@
 public class SendTransation extends Transaction{
     private static final double FEE=5.0;
-    public SendTransation(Wallet from,Wallet to, Wallet amount, String pin){
+    public SendTransation(Wallet from,Wallet to, double amount, String pin){
         super(from,to,amount,pin);
     }
     @Override
@@ -14,11 +14,7 @@ public class SendTransation extends Transaction{
     @Override
     protected void moveMoney()
         throws TransactionException{
-
+    from.debit(amount+getFee());
+    to.credit(amount);
     }
-
-
-
-
-
 }
