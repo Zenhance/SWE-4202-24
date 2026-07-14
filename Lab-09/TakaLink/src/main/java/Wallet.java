@@ -66,4 +66,11 @@ public  abstract class Wallet {
             throw new FrozenAccountException();
         }
     }
+    public abstract double getDailyLimit();
+    public double remainingLimit(){
+        return getDailyLimit()-spentToday;
+    }
+    public void addSpent(double amount){
+        spentToday+=amount;
+    }
 }
