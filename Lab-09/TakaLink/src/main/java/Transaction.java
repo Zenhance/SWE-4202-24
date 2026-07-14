@@ -30,27 +30,27 @@ public abstract class Transaction {
     }
 }        */
 
-    private Wallet paywallet;
-private Wallet receivewallet;
+    private Wallet payWallet;
+private Wallet receiveWallet;
 private double amount;
 private String pin;
 
 
-public Transaction(Wallet paywallet,Wallet receivewallet,double amount,String pin){
+public Transaction(Wallet payWallet,Wallet receiveWallet,double amount,String pin){
 
-    if(paywallet==null)
+    if(payWallet==null)
         throw new IllegalArgumentException("Payer cant be null");
-    if(receivewallet==null)
+    if(receiveWallet==null)
         throw new IllegalArgumentException("Receiver cant be null");
     if(amount<=0.0)
         throw new IllegalArgumentException("Amount cant be negative");
     if(pin==null||pin.isBlank()||pin.isEmpty())
         throw new IllegalArgumentException("Pin cant be null");
-    if(!paywallet.pinVerify(pin))
+    if(!payWallet.pinVerify(pin))
         throw new IllegalArgumentException("Pin is invalid");
 
-    this.paywallet=paywallet;
-    this.receivewallet=receivewallet;
+    this.payWallet=payWallet;
+    this.receiveWallet=receiveWallet;
     this.amount=amount;
     this.pin=pin;
 }

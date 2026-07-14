@@ -1,4 +1,4 @@
 public class Cashout extends Transaction{
 
-    public Cashout(Wallet payingWallet)
+    public Cashout(Wallet paywallet)
 }
