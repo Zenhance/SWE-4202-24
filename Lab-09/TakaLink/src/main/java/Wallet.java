@@ -15,7 +15,7 @@ public abstract class Wallet {
             throw new IllegalArgumentException("PIN cant be null");
 
         this.id=id;
-        this.balance;
+        this.balance=balance;
         this.pin=pin;
         this.frozen= false;
         this.spentToday=0;
