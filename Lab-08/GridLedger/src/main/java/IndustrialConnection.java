@@ -11,6 +11,6 @@ public class IndustrialConnection extends Connection{
 
     @Override
     public double energyCharge() {
-        return meter.getUnitsConsumed()*10.0;
+        return units*10.0;
     }
 }

@@ -1,12 +1,16 @@
 public abstract class Connection {
     private static final double DEFAULT_FUEL_SURCHARGE=0.05;
     private static final double TAX=0.05;
-    protected final Meter meter;
+    protected Meter meter;
     private double fuelSurcharge=DEFAULT_FUEL_SURCHARGE;
+    protected double units;
+
 
     public Connection(Meter meter){
-        if(meter==null) throw new IllegalArgumentException("Error!");
-           else  this.meter=meter;
+
+           this.meter=meter;
+           units = meter.getUnitsConsumed();
+
     }
     public abstract double energyCharge();
 

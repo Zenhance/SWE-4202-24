@@ -4,12 +4,13 @@ public class CommercialConnection extends Connection{
     }
     @Override
     public double energyCharge() {
-        if(meter.getUnitsConsumed()<100){
-            return 100*9.0;
+        double c = 0;
+        if(units<100){
+            c =  100*9.0;
         }
-        else {
-            return 100*9.0 +(meter.getUnitsConsumed()-100)*13.5;
-        }
+
+        else  c = 100*9.0 +(units-100)*13.0;
+        return c;
     }
 
     @Override

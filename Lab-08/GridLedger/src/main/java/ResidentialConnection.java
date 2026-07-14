@@ -1,20 +1,22 @@
 public class ResidentialConnection extends Connection{
-    private Meter meter;
 
     public ResidentialConnection(Meter meter){
         super(meter);
     }
 
     public double energyCharge(){
-        if(meter.getUnitsConsumed()<=50){
-            return meter.getUnitsConsumed()*4.0;
-        }
-        else if(meter.getUnitsConsumed()>50 && meter.getUnitsConsumed()<=200){
-            return 50*4.0 + (meter.getUnitsConsumed()-50)*7.0;
-        }
-        else{
-            return 50*4.0 +150*7.0 + (meter.getUnitsConsumed()-200)*11.0;
-        }
+        double c = 0;
+        if (units <= 50) {
+            c += units * 4.0;
+        } else {
+            c += 50 * 4.0;
+            if (units <= 200) {
+                c += (units - 50) * 7.0;
+            } else {
+                c += 150 * 7.0;
+                c += (units - 200) * 11.0;
+            }
+        return c;
     }
 
     @Override
