@@ -5,7 +5,10 @@ public abstract class Wallet {
     private boolean frozen;
     private double spentToday;
 
-    public Wallet(String id, String pin, double balance) {
+    public Wallet(String id,double balance, String pin) {
+        if (id == null || id.isBlank() || balance < 0 || pin == null){
+            throw new IllegalArgumentException("Invalid Inputs");
+        }
         this.id = id;
         this.pin = pin;
         this.balance = balance;
