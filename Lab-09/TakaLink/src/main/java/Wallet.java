@@ -26,6 +26,9 @@ public abstract class Wallet {
     public double getBalance(){
         return balance;
     }
+    public boolean isFrozen(){
+        return frozen;
+    }
 
 
 
