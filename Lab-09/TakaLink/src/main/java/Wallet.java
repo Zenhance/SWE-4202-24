@@ -20,4 +20,29 @@ public class Wallet
         this.frozen=false;
         this.spentToday=0;
     }
+
+    public boolean verifyPin(String typedPin)
+    {
+        return pin.equals(typedPin);
+    }
+
+    public String getId()
+    {
+        return id;
+    }
+
+    public double getAmount()
+    {
+        return amount;
+    }
+
+    public void freeze()
+    {
+        frozen=true;
+    }
+
+    public boolean isFrozen()
+    {
+        return frozen;
+    }
 }
