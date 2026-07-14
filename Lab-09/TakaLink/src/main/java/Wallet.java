@@ -21,34 +21,36 @@ public abstract class Wallet {
         this.frozen=false;
         this.spentToday=0.0;
     }
-    public String getId(){
+    public final String id(){
         return id;
     }
-    public double getBalance(){
+    public final double balance(){
         return balance;
     }
 
-    public boolean isFrozen() {
+    public final boolean isFrozen() {
         return frozen;
     }
-    public void setFrozen(){
+    public final void freeze(){
         this.frozen=true;
     }
-    public void unfreeze(){
+    public final void unfreeze(){
         this.frozen=false;
     }
-    public boolean verifyPin(String candidate){
-        return pin.equals(candidate);
+    public boolean verifyPin(String offeredPin){
+        return pin.equals(offeredPin);
     }
     public double remainingDailyLimit(){
         return getDailyLimit() - spentToday;
     }
-    void debit(double amount){
-        if(amount<=0){
+    public final void debit(double amount) {
+        if (amount <= 0) {
             throw new IllegalArgumentException("Debit amoount must be positive");
         }
-        if(balance-amount<0){
-            throw new IllegalArgumentException("");
+        if (balance - amount < 0) {
+            throw new InsufficientBalanceException(id, amount, balance);
         }
+        balance -= amount;
+    }
     }
 }
