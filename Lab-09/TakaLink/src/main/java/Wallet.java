@@ -69,4 +69,10 @@ public abstract class Wallet {
             throw new InvalidPinException("wrong pin offered for " + id);
         }
     }
+    protected void assertWithinDailyLimit(double amount) throws DailyLimitExceededException {
+        if (spentToday + amount > dailyLimit()) {
+            throw new DailyLimitExceededException(
+                    id + " would exceed its daily limit of " + dailyLimit());
+        }
+    }
 }
