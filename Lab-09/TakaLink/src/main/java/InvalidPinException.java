@@ -1,4 +1,4 @@
-public class InvalidPinException {
+public class InvalidPinException extends TransactionException{
 
 
 

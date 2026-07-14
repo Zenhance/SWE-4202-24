@@ -1,4 +1,4 @@
-public class FrozenAccountException {
+public class FrozenAccountException extends TransactionException{
 
 
 
