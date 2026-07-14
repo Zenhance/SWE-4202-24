@@ -23,6 +23,9 @@ public abstract class Wallet {
     public String getId(){
         return id;
     }
+    public double getBalance(){
+        return balance;
+    }
 
 
 
