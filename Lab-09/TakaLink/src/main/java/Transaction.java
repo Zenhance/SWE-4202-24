@@ -54,4 +54,7 @@ public Transaction(Wallet paywallet,Wallet receivewallet,double amount,String pi
     this.amount=amount;
     this.pin=pin;
 }
+
+public abstract double fee();
+public abstract void settle();
 }
