@@ -7,9 +7,9 @@ public class MerchantWallet extends Wallet{
         return 0;
     }
     @Override
-    public void validateOperation(String transactionType){
+    public void validateOperation(String transactionType)
         throws OperationNotAllowedException{
-
+            if(transactionType.equals("SEND")|| transactionType.equals("CASHOUT"));
+            throw new OperationNotAllowedException();
         }
     }
-}
