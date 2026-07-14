@@ -11,7 +11,7 @@ public class AgentWallet extends Wallet{
     }
 
     @Override
-    protected boolean canPay(TransactionType type) {
+    protected boolean canPay() {
         return true ;
     }
 }
