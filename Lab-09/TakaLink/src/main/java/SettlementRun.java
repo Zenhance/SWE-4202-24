@@ -7,7 +7,10 @@ public class SettlementRun {
     public void submit(Transaction s){count++;}
 
 
-    public SettlementReport settle(){return null;}
+    public SettlementReport settle(){
+        SettlementReport r = new SettlementReport();
+        return r;
+    }
 
 
     public int pending(){return count;}

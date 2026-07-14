@@ -1,10 +1,14 @@
 public class SettlementReport {
 
+    public static int settleCount = 0;
+    public static int rejectCount = 0;
+    public static int moved = 0;
+    public static double fees = 0.0;
+    public static boolean settled;
 
+    public int settledCount(){return settleCount;}
 
-    public int settledCount(){return 0;}
-
-    public int rejectedCount(){return 0;}
+    public int rejectedCount(){return rejectCount;}
 
     public int totalMoved(){return 0;}
 

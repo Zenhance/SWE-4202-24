@@ -24,9 +24,10 @@ public class SendMoney extends Transaction{
             throw new OperationNotAllowedException("Transaction NOT possible between these accounts");
         }
 
-        super.settle();
         if(a.daily < amount)
             throw new DailyLimitExceededException("Daily Limit reached :')");
+
+        super.settle();
 
 
         double out = amount + fee();
