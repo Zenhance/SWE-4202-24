@@ -16,5 +16,15 @@ public abstract class Wallet {
         this.balance = balance;
         this.PIN = PIN;
         this.frozenStatus = false;
+        this.sentToday = 0.0;
+    }
+
+    public void debit(double amount) {
+        if (amount < 0)
+            throw new IllegalArgumentException("Amount cannot be negative");
+        if (amount > this.balance)
+            return; // InsufficientBalanceException
+
+        this.balance -= amount;
     }
 }
