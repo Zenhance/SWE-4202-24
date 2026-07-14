@@ -42,5 +42,6 @@ public abstract class Transaction {
 
     public double amount() {
         return amount;
+
     }
 }
