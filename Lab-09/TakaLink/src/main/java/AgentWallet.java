@@ -1,4 +1,4 @@
-public class AgentWallet {
+public class AgentWallet extends Wallet {
     public AgentWallet(String g, double v, String number) {
     }
 
