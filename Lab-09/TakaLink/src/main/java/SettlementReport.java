@@ -6,6 +6,8 @@ public class SettlementReport {
     public static double fees = 0.0;
     public static boolean settled;
 
+    public static void settlePlus(){settleCount++;}
+
     public int settledCount(){return settleCount;}
 
     public int rejectedCount(){return rejectCount;}

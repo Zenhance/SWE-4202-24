@@ -37,7 +37,7 @@ public abstract class Transaction {
             throw new FrozenAccountException("Account Frozen");
 
         SettlementReport.settled = true;
-        SettlementReport.settleCount++;
+        SettlementReport.settlePlus();
     }
 
 
