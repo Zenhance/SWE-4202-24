@@ -21,7 +21,7 @@ public abstract class Transaction {
         throw new IllegalArgumentException("Transaction must be positive");
     }
     if(offeredPin == null){
-        throw new IllegalArgumentException("Offered PIN must not be null")''
+        throw new IllegalArgumentException("Offered PIN must not be null");
     }
     this.payer = payer;
     this.receiver = receiver;
