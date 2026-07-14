@@ -44,6 +44,8 @@ public abstract class Wallet {
         this.frozen = true;
     }
 
+    public abstract double getDailyLimit();
+
 
 
 
