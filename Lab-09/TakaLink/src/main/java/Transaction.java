@@ -19,4 +19,7 @@ public abstract class Transaction {
         this.amount = amount;
         this.pin = pin;
     }
+    public abstract double fee();
+    public abstract void checkPermission() throws OperationNotAllowedException;
+    protected abstract void moveMoney(double fee) throws InsufficientBalanceException;
 }
