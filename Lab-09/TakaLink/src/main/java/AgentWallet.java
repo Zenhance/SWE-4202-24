@@ -7,7 +7,7 @@ public class AgentWallet extends Wallet {
     }
 
     @Override
-    private double dailyLimit() {
+    protected double dailyLimit() {
         return DAILY_LIMIT;
     }
 
