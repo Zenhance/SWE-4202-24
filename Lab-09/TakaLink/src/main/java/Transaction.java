@@ -8,17 +8,21 @@
  * waves straight through, because nothing here is ever checked.
  */
 public class Transaction {
-    public String type;        // "SEND", "CASHOUT", "PAYMENT", "TOPUP"
-    public double amount;
-    public String fromId;
-    public String toId;
-    public String pin;
+    private Wallet sender;
+    private Wallet receiver;
+    protected double transactionAmount;
+    private String senderPin;
+    private double cost;
 
-    public Transaction(String type, double amount, String fromId, String toId, String pin) {
-        this.type = type;
-        this.amount = amount;
-        this.fromId = fromId;
-        this.toId = toId;
-        this.pin = pin;
+
+    public Transaction(Wallet sender, Wallet receiver, double transactionAmount, String senderPin) {
+        this.sender = sender;
+        this.receiver = receiver;
+        this.transactionAmount = transactionAmount;
+        this.senderPin = senderPin;
+
     }
+
+
 }
+
