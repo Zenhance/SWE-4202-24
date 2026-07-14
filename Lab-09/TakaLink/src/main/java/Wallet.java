@@ -35,4 +35,13 @@ public abstract class Wallet {
         }
         balance += amount;
     }
+    public boolean verifyPin(String offeredPin) {
+        return pin.equals(offeredPin);
+    }
+    public boolean isFrozen(){
+        return frozen;
+    }
+    public void freeze(){
+        frozen=true;
+    }
 }
