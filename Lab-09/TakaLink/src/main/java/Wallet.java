@@ -37,4 +37,14 @@ public abstract class Wallet {
     }
 
     public abstract double dailyLimit();
+
+    public void debit(double amount) throws InsufficientBalanceException {
+        this.balance -= amount;
+    }
+
+    public void credit(double amount) {
+        this.balance += amount;
+    }
+
+
 }
