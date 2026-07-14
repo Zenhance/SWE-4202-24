@@ -19,12 +19,11 @@ public abstract class Wallet {
         this.sentToday = 0.0;
     }
 
-    public void debit(double amount) {
+    public void debit(double amount) throws InsufficientBalanceException {
         if (amount < 0.0)
             throw new IllegalArgumentException("Amount cannot be negative");
         if (amount > this.balance)
-            return; // InsufficientBalanceException
-
+            throw new InsufficientBalanceException("Insufficient balance");
         this.balance -= amount;
     }
 
