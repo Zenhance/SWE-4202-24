@@ -22,3 +22,37 @@ public abstract class Wallet {
         this.frozen = false;
         this.spentToday = 0.0;
     }
+    public final String id() {
+        return id;
+    }
+
+    public final double balance() {
+        return balance;
+    }
+
+    public final boolean isFrozen() {
+        return frozen;
+    }
+
+
+    public final void freeze() {
+        this.frozen = true;
+    }
+
+    public final void unfreeze() {
+        this.frozen = false;
+    }
+
+    public final boolean verifyPin(String offeredPin) {
+        return this.pin.equals(offeredPin);
+    }
+
+    public final void debit(double amount) throws InsufficientBalanceException {
+        if (amount <= 0) {
+            throw new IllegalArgumentException("debit amount must be positive");
+        }
+        if (amount > balance) {
+            throw new InsufficientBalanceException(id, amount, balance);
+        }
+        balance -= amount;
+    }
