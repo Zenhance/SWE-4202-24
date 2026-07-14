@@ -67,20 +67,6 @@ public abstract class Wallet {
         return getDailyLimit()-spentToday;
     }
     public abstract double getDailyLimit();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    public abstract void validateOperation(String transactionType)
+        throws OperationNotAllowedException;
 }
