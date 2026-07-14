@@ -58,6 +58,14 @@ public abstract class Wallet {
         frozen = true;
     }
 
+    public double remainingDailyLimit() {
+        return dailyLimit() - spentToday;
+    }
+
+    protected void recordSpend(double amount) {
+        spentToday += amount;
+    }
+
     public abstract double dailyLimit();
 
     public abstract boolean allows(TransactionType type);
