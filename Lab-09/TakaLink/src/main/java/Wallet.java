@@ -75,4 +75,8 @@ public abstract class Wallet {
                     id + " would exceed its daily limit of " + dailyLimit());
         }
     }
+    protected void recordSpend(double amount) {
+        spentToday += amount;
+    }
+
 }
