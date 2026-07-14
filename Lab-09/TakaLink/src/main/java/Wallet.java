@@ -1,7 +1,7 @@
 public abstract class Wallet {
-    private String id;
+    private final String id;
     private double balance;
-    private String pin;
+    private final String pin;
     private boolean frozen;
     private double spentToday;
 
@@ -38,7 +38,7 @@ public abstract class Wallet {
 
     public void credit(double amount){
         if(amount<=0){
-            throw new IllegalArgumentException("Invalid Amount");
+            throw new IllegalArgumentException();
         }
         balance+=amount;
     }
@@ -61,10 +61,6 @@ public abstract class Wallet {
 
     public void addSpent(double amount){
         spentToday+=amount;
-    }
-
-    public double remainingLimit(){
-        return dailyLimit()-spentToday;
     }
 
     public String getId(){
