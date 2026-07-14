@@ -18,13 +18,12 @@ public class SendMoney extends Transaction{
     public void settle() throws Exception {
 
 
-
-        try {
-            PersonalWallet pw = (PersonalWallet) a;
-            PersonalWallet aw = (PersonalWallet) b;
-        } catch (ClassCastException e) {
+        if(!(b instanceof PersonalWallet) || !(a instanceof AgentWallet || a instanceof PersonalWallet))
             throw new OperationNotAllowedException("Transaction NOT possible between these accounts");
-        }
+
+
+
+
         if(a.daily < amount || a.getLimit() < amount )
             throw new DailyLimitExceededException("Daily Limit reached :')");
 
