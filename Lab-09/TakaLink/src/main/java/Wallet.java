@@ -6,6 +6,18 @@ public abstract class Wallet {
     private double spentToday;
 
     protected Wallet(String id, double openingBalance, String pin) {
+        if (id == null || id.isBlank()) {
+            throw new IllegalArgumentException("Invalid wallet id");
+        }
+
+        if (openingBalance < 0) {
+            throw new IllegalArgumentException(
+                    "Opening balance cannot be negative"
+            );
+        }
+        if (pin == null) {
+            throw new IllegalArgumentException("PIN cannot be null");
+        }
 
         this.id = id;
         this.balance = openingBalance;
@@ -14,5 +26,20 @@ public abstract class Wallet {
         this.spentToday = 0;
     }
 
+    public double getBalance() {
+        return balance;
+    }
+
+    public void debit(double amount)
+            throws InsufficientBalanceException {
+        if (amount < 0) throw new IllegalArgumentException("Amount must be positive");
+        if (balance - amount < 0) {
+            throw new InsufficientBalanceException();
+        }
+
+        balance -= amount;
+    }
+
 
 }
+
