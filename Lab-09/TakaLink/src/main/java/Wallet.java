@@ -63,6 +63,9 @@ public abstract class Wallet {
     public void addSpent(double amount){
         spentToday+=amount;
     }
+    public double getRemainingLimit(){
+        return getDailyLimit()-spentToday;
+    }
 
 
 
