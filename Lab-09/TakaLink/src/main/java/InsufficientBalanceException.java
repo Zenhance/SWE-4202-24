@@ -5,6 +5,11 @@ public class InsufficientBalanceException extends TransactionRefused {
         super(message);
         this.currentBalance = currentBalance;
         this.shortfall = shortfall;
-
+    }
+    public double getCurrentBalance() {
+        return currentBalance;
+    }
+    public double getShortfall() {
+        return shortfall;
     }
 }
