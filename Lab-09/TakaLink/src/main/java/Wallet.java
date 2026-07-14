@@ -31,7 +31,7 @@ public  abstract class Wallet
         return id;
     }
 
-    public double getBalance()
+    public double balance()
     {
         return balance;
     }
