@@ -1,7 +1,7 @@
 public class Wallet {
-    private String id;
+    private final String id;
     private double balance;
-    private String pin;
+    private final String pin;
     private double spentToday;
     private boolean frozen;
 
@@ -43,9 +43,10 @@ public class Wallet {
         return frozen;
     }
 
-    public void debit(double amount) {
+    public void debit(double amount)  {
         if(amount<=0) {
-            throw new IllegallArgumentException ("Debit amount cannot be negative")
+            throw new IllegallArgumentException ("Debit amount cannot be negative");
         }
+        balance -=amount;
     }
 }
