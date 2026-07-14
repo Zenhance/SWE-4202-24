@@ -7,26 +7,45 @@
  * that PULLS a thousand taka out of the recipient -- a theft the type system
  * waves straight through, because nothing here is ever checked.
  */
-public class Transaction {
-    public String type;        // "SEND", "CASHOUT", "PAYMENT", "TOPUP"
-    public double amount;
-    public String fromId;
-    public String toId;
-    public String pin;
+public abstract class Transaction {
+    // "SEND", "CASHOUT", "PAYMENT", "TOPUP"
+    private final Wallet from;
+    private final Wallet to;
+    private final double amount;
+    private final String pin;
 
-    public Transaction(String type, double amount, String fromId, String toId, String pin) {
-        this.type = type;
+    public Transaction(String type, double amount, String fromId, String toId, Wallet from, Wallet wallet, String pin) {
+        this.from = from;
+        to = wallet;
         this.amount = amount;
-        this.fromId = fromId;
-        this.toId = toId;
         this.pin = pin;
     }
 
-    public Transaction() {
+    public Transaction(Wallet from, Wallet wallet, double amount, String pin) {
 
+        this.from = from;
+        to = wallet;
+        this.amount = amount;
+        this.pin = pin;
     }
 
-    public void settle() {
-
+    public Wallet getFrom() {
+        return from;
     }
+
+    public Wallet getTo() {
+        return to;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public String getPin() {
+        return pin;
+    }
+
+    public abstract double getFee();
+
+    public abstract void settle() throws TransactionException;
 }
