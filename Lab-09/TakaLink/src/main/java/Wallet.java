@@ -56,6 +56,14 @@ public abstract class Wallet {
         }
         balance -= amount;
     }
+    public final void credit(double amount) {
+        if (amount <= 0) {
+            throw new IllegalArgumentException("credit amount must be positive");
+        }
+        balance += amount;
+    }
+
+
     final double remainingDailyLimit() {
         return dailyLimit() - spentToday;
     }
