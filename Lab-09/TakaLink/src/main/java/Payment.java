@@ -9,10 +9,11 @@ public class Payment extends Transaction{
     }
 
     @Override
-    public void settle() throws InsufficientBalanceException {
-        if (payingWallet.verifyPin(super.getPIN())) {
-            payingWallet.debit(amount);
-            receivingWallet.credit(amount);
+    public void settle() throws TransactionException {
+        if (!payingWallet.verifyPin(super.getPIN())) {
+            throw new InvalidPinException("Wrong PIN");
         }
+        payingWallet.debit(amount);
+        receivingWallet.credit(amount);
     }
 }
