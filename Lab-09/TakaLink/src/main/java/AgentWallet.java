@@ -8,9 +8,9 @@ public class AgentWallet extends Wallet{
         return DAILY_LIMIT;
     }
 
+    @Override
+    public void validateOperation(String transactionType)
+        throws OperationNotAllowedException{
 
-
-
-
-
+        }
 }
