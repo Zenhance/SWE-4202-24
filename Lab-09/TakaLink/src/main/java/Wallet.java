@@ -30,7 +30,42 @@ public abstract class Wallet {
         return pin;
     }
 
+    public boolean isFrozen() {
+        return this.frozen;
+    }
 
+    public double getSpentToday() {
+        return this.spentToday;
+    }
+
+    public void debit(double amount)throws InsufficientBalanceException{
+        if(amount<=0){
+            throw new IllegalArgumentException("Invalid Amount");
+
+        }
+        if(balance<amount){
+            throw new InsufficientBalanceException("Invalid amount");
+        }
+        balance-=amount;
+    }
+    public void credit(double amount){
+        if(amount<=0){
+            throw new IllegalArgumentException("Amount must be positive");
+        }
+        balance+=amount;
+    }
+    public void addSpent(double amount){
+        spentToday+=amount;
+    }
+    public boolean verifyPin(String enteredPin){
+        return pin.equals(enteredPin);
+    }
+    public void freeze(){
+        frozen=true;
+    }
+    public abstract double dailyLimit();
+    public abstract boolean canSend();
+    public abstract boolean canCashOut();
 
 
 }
