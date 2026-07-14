@@ -1,10 +1,10 @@
 public abstract class Wallet {
     private String id;
-    private int balance;
-    private int pin;
+    private double balance;
+    private string pin;
     private boolean status;
 
-    public Wallet(String id, int balance, int pin){
+    public Wallet(String id, double balance, String pin){
         this.id = id;
         this.balance = balance;
         this.pin = pin;
