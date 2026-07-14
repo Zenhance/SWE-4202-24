@@ -27,14 +27,24 @@ public abstract class Wallet {
     }
 
     public void debit(double v) {
+        if (v<0)
+            throw new IllegalArgumentException("Amount cannot be negative");
+        if (balance-v<0)
+            throw new IllegalArgumentException("Amount cannot be greater than balance");
+        balance-=v;
+
     }
 
     public void credit(double v) {
+        if (v<0)
+            throw new IllegalArgumentException("Amount cannot be negative");
+        balance+=v;
     }
 
     public boolean verifyPin(String number) {
     }
 
     public void freeze() {
+        this.frozen=true;
     }
 }
