@@ -13,4 +13,19 @@ public class CashOut extends Transaction {
     public double fee() {
         return amount() * 0.0185;
     }
+
+    @Override
+    protected boolean payerIsAllowed() {
+        return false;
+    }
+
+    @Override
+    protected String operationName() {
+        return "";
+    }
+
+    @Override
+    protected void moveMoney() throws TransactionException {
+
+    }
 }
