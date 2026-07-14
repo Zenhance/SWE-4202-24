@@ -4,6 +4,7 @@ public abstract class Wallet {
     private String pin;
     private boolean frozen;
     private double spentToday;
+
     protected Wallet(String id,double balance,String pin,boolean frozen,double spentToday){
         if (id==null||id.isBlank())
             throw new IllegalArgumentException("Wallet must have ID");
@@ -17,7 +18,9 @@ public abstract class Wallet {
         this.frozen=frozen;
         this.spentToday=spentToday;
     }
-
+    protected Wallet(String id, double balance, String pin) {
+        this(id, balance, pin, false,0);
+    }
     public double getBalance() {
         return balance;
     }
@@ -54,5 +57,6 @@ public abstract class Wallet {
     }
 
     protected abstract double getDailylimit();
+    protected abstract boolean canPay();
 
 }
