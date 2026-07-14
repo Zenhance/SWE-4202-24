@@ -1,5 +1,5 @@
 public class InsufficientBalanceException extends TransactionException{
-    public InsufficientBalanceException(){
+    public InsufficientBalanceException(String msg){
         super("Insufficient");
     }
 }
