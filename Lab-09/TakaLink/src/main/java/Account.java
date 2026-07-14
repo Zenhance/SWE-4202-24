@@ -23,5 +23,4 @@ public class Account {
         this.balance = balance;
         this.pin = pin;
     }
-
 }

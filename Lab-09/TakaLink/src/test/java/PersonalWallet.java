@@ -1,10 +1,12 @@
-public class PersonalWallet {
+public class PersonalWallet extends Wallet {
     public PersonalWallet(String a, double v, String number) {
-        super();
+        super(a,v,number);
 
     }
 
-    public double balance() {
-
+    @Override
+    public double getDailyLimit() {
+        return 25000;
     }
+
 }
