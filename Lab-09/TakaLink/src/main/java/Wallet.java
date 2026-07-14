@@ -29,5 +29,24 @@ public abstract class Wallet {
     public final double balance() {
         return balance;
     }
+    public final void debit(double amount)
+            throws InsufficientBalanceException {
+        if (amount<= 0.0) {
+            throw new IllegalArgumentException(
+                    "Debit amount must be positive"
+            );
+        }
+        if (balance< amount) {
+            throw new InsufficientBalanceException("Insufficient balance in wallet " + id);
+        }
+        balance -= amount;
+    }
+    public final void credit(double amount) {
+        if (amount<= 0.0) {
+            throw new IllegalArgumentException("Credit amount must be positive");
+        }
+        balance += amount;
+    }
+
 
 }
