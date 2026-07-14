@@ -9,11 +9,12 @@ public class SendMoney extends Transaction{
     }
 
     @Override
-    public void settle() throws InsufficientBalanceException {
-        if (payingWallet.verifyPin(super.getPIN())) {
-            double FLAT_FEE = 5.0;
-            payingWallet.debit(amount + FLAT_FEE);
-            receivingWallet.credit(amount);
+    public void settle() throws TransactionException {
+        if (!payingWallet.verifyPin(super.getPIN())) {
+            throw new InvalidPinException("Wrong PIN");
         }
+        double FLAT_FEE = 5.0;
+        payingWallet.debit(amount + FLAT_FEE);
+        receivingWallet.credit(amount);
     }
 }
