@@ -50,6 +50,13 @@ public abstract class Wallet {
         return pin.equals(offeredPin);
     }
 
+    public boolean isFrozen() {
+        return frozen;
+    }
+
+    public void freeze() {
+        frozen = true;
+    }
 
 
 }
