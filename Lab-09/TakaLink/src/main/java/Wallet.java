@@ -20,6 +20,8 @@ public abstract class Wallet {
     }
 
     public void debit(double amount) throws TransactionException{
+        if (frozenStatus)
+            throw new FrozenAccountException("Account is frozen");
         if (amount < 0.0)
             throw new IllegalArgumentException("Amount cannot be negative");
         if (amount > this.balance)
