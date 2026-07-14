@@ -44,4 +44,11 @@ public abstract class Wallet {
     public void freeze(){
         frozen=true;
     }
+    public void unfreeze() {
+        frozen = false;
+    }
+    public double remainingDailyLimit() {
+        return dailyLimit() - spentToday;
+    }
+    public abstract double dailyLimit();
 }
