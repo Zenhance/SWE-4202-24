@@ -28,4 +28,33 @@ public abstract class Transaction {
     this.amount = amount;
     this.offeredPin = offeredPin;
     }
+    public abstract double fee();
+    protected abstract Operation operation();
+    protected double amountCreditedToReceiver(){
+        return amount;
+    }
+    protected void validateParties()
+        throws OperationNotAllowedException{
+    }
+    public final void settle() throws TransactionException{
+        double transactionFee = fee();
+        double totalDebit = amount + transactionFee;
+
+        if(!payer.verifyPin(offeredPin)){
+            throw new InvalidPinException("Invalid PIN for wallet "+ payer.getId());
+        }
+        if(payer.isFrozen()){
+            throw new FrozenAccountException("Wallet "+ payer.getId() + " is frozen");
+        }
+        if(!payer.allows(operation())){
+            throw new OperationNotAllowedException("Wallet "+ payer.getId() + " cannot perform "+ operation());
+        }
+        validateParties();
+        if(amount > payer.remainingDailyLimit()){
+            throw new DailyLimitExceededException("Daily limit exceeded for wallet "+ payer.getId());
+        }
+        if(totalDebit> payer.getBalance()){
+            throw new InsufficientBalanceException("Insufficient balance in wallet "+ payer.getId());
+        }
+    }
 }
