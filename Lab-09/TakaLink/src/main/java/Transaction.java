@@ -28,5 +28,10 @@ public abstract class Transaction {
 
     public abstract double fee();
 
-    public abstract void settle();
+    public void settle() throws TransactionException{
+        if(!from.verifyPin(this.pin)){
+            throw new InvalidPinException("PIN must be correct");
+        }
+
+    }
 }

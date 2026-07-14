@@ -7,9 +7,9 @@ public class Wallet {
     private String pin;
 
     public Wallet(String id, double balance, String pin) {
-        if (id == null) throw new NullPointerException("Must provide Identity");
+        if (id == null || id.equals(" ")) throw new IllegalArgumentException("Must provide Identity");
         if(balance < 0) throw new IllegalArgumentException("Cannot create Account with negative balance");
-        if(pin == null) throw new NullPointerException("Must provide pin");
+        if(pin == null) throw new IllegalArgumentException("Must provide pin");
 
         spentToday = 0;
         this.balance = balance;
