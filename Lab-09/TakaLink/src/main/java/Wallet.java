@@ -76,5 +76,7 @@ public final boolean verifyPin(String pin2){
 
     public abstract boolean canCashOut();
 
+    public abstract double fee();
+
 
 }
