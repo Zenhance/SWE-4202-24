@@ -5,8 +5,8 @@ public abstract class Wallet {
     private boolean frozen;
     private double spentToday;
 
-    public Wallet(String id,double balance, String pin) {
-        if (id == null || id.isBlank() || balance < 0 || pin == null){
+    public Wallet(String id, double balance, String pin) {
+        if (id == null || id.isBlank() || balance < 0 || pin == null) {
             throw new IllegalArgumentException("Invalid Inputs");
         }
         this.id = id;
@@ -15,6 +15,7 @@ public abstract class Wallet {
         this.frozen = false;
         this.spentToday = 0.0;
     }
+
     public double balance() {
         return this.balance;
     }
@@ -26,4 +27,14 @@ public abstract class Wallet {
     public void freeze() {
         this.frozen = true;
     }
+
+    public boolean verifyPin(String pinEntered) {
+        return this.pin.equals(pinEntered);
+    }
+
+    public double spentToday() {
+        return this.spentToday;
+    }
+
+    public abstract double dailyLimit();
 }
