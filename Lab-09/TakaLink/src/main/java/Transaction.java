@@ -10,7 +10,7 @@
 public abstract class Transaction {
 
 
-    protected String type;        // "SEND", "CASHOUT", "PAYMENT", "TOPUP"
+  /*  protected String type;        // "SEND", "CASHOUT", "PAYMENT", "TOPUP"
     protected double amount;
     protected Wallet fromId;
     protected Wallet toId;
@@ -32,9 +32,9 @@ public abstract class Transaction {
         this.toId = toId;
         this.amount = amount;
         this.pin = pin;
-    }
+    }   */
 
-/* private Wallet payWallet;
+private Wallet payWallet;
 private Wallet receiveWallet;
 private double amount;
 private String pin;
@@ -57,9 +57,13 @@ public Transaction(Wallet payWallet,Wallet receiveWallet,double amount,String pi
     this.receiveWallet=receiveWallet;
     this.amount=amount;
     this.pin=pin;
-} */
+}
 
-public abstract double fee();
+    public abstract double fee();
+
+    public abstract void settle();
+
+
 
 
 
