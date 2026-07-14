@@ -15,6 +15,11 @@ public abstract class Transaction {
     private String pin;
 
     public Transaction(String type, double amount, String fromId, String toId, String pin) {
+
+        if(amount < 0.0){
+        throw new IllegalArgumentException("Transaction amount can't be negative.");
+        }
+
         this.type = type;
         this.amount = amount;
         this.fromId = fromId;
