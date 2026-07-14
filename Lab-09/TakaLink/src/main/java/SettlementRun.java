@@ -8,5 +8,11 @@ public class SettlementRun {
         transactions=new ArrayList<>();
     }
 
+    public void submit(Transaction transaction){
+        transactions.add(transaction);
+    }
+
+
+
 
 }
