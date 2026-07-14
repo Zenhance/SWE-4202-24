@@ -32,4 +32,15 @@ public abstract class Transaction {
         moveMoney(fee);
         from.recordSpend(amount);
     }
+    public Wallet from() {
+        return from;
+    }
+
+    public Wallet to() {
+        return to;
+    }
+
+    public double amount() {
+        return amount;
+    }
 }
