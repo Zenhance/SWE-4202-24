@@ -30,14 +30,21 @@ public abstract class Transaction {
     }
 }        */
 
-
-private Wallet paywallet;
+    private Wallet paywallet;
 private Wallet receivewallet;
 private double amount;
 private String pin;
 
 
 public Transaction(Wallet paywallet,Wallet receivewallet,double amount,String pin){
+
+    if(paywallet==null)
+        throw new IllegalArgumentException("Payer cant be null");
+    if(receivewallet==null)
+        throw new IllegalArgumentException("Receiver cant be null");
+    if(amount<=0.0)
+        throw new IllegalArgumentException("Amount cant be negative");
+
 
 
 
