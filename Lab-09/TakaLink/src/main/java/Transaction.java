@@ -8,13 +8,12 @@
  * waves straight through, because nothing here is ever checked.
  */
 public abstract class Transaction {
-    public String type;        // "SEND", "CASHOUT", "PAYMENT", "TOPUP"
     public double amount;
     public String fromId;
     public String toId;
     public String pin;
 
-    public Transaction(String type, double amount, String fromId, String toId, String pin) {
+    public Transaction(String fromId, String toId,double amount, String pin) {
         if(fromId==null){
             throw new IllegalArgumentException("Id cannot be null");
         }
@@ -28,7 +27,6 @@ public abstract class Transaction {
             throw new IllegalArgumentException("Pin cannot be null");
         }
 
-        this.type = type;
         this.amount = amount;
         this.fromId = fromId;
         this.toId = toId;
