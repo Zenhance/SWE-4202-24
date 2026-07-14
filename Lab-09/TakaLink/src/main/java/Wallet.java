@@ -61,5 +61,4 @@ public abstract class Wallet {
     public abstract boolean mayCashOut();
 
 
-
 }
