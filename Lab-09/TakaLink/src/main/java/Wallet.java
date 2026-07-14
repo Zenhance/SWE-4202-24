@@ -24,5 +24,9 @@ public abstract class Wallet {
     public final String id(){
         return id;
     }
+    public final double balance(){
+        return balance;
+    }
+
 
 }
