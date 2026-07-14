@@ -7,7 +7,7 @@
  * that PULLS a thousand taka out of the recipient -- a theft the type system
  * waves straight through, because nothing here is ever checked.
  */
-public class Transaction {
+public abstract class Transaction {
     protected Wallet from;
     protected Wallet to;
     protected double amount;
@@ -20,5 +20,15 @@ public class Transaction {
         this.pin=pin;
     }
 
+    public double amount() {
+        return amount;
+    }
 
+    public abstract double fee();
+
+    public abstract boolean isPayerAllowed();
+
+    protected void validateCounterparty() {
+
+    }
 }
