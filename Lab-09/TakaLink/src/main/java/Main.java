@@ -4,7 +4,7 @@
 //  a FAILED send has already moved money.
 // =====================================================================
 
-public class Main {
+/*public class Main {
     public static void main(String[] args) {
         TransactionEngine engine = new TransactionEngine();
 
@@ -15,9 +15,29 @@ public class Main {
         engine.addAccount(bob);
 
         // Happy path: a 1000 send settles to the paisa.
-        engine.submit(new Transaction("SEND", 1_000.0, "1234", "0000", "1234"));
+        engine.submit(new Transaction("SEND", 1_000.0, "1234", "0000", "1234") {
+            @Override
+            protected TransactionType type() {
+                return null;
+            }
+
+            @Override
+            public double fee() {
+                return 0;
+            }
+        });
         // Damage: bob has only 500 but tries to send 5000. It WILL be rejected...
-        engine.submit(new Transaction("SEND", 5_000.0, "0000", "1234", "0000"));
+        engine.submit(new Transaction("SEND", 5_000.0, "0000", "1234", "0000") {
+            @Override
+            protected TransactionType type() {
+                return null;
+            }
+
+            @Override
+            public double fee() {
+                return 0;
+            }
+        });
 
         System.out.println("Before: alice=" + alice.balance + " bob=" + bob.balance);
         engine.settleBatch();
@@ -31,3 +51,4 @@ public class Main {
         System.out.println("Outside code just set alice.balance = " + alice.balance);
     }
 }
+*/

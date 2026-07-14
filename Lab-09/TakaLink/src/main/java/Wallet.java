@@ -1,6 +1,6 @@
 public abstract class Wallet {
     private String id;
-    private double balance;
+   private double balance;
     private String pin;
     private boolean frozen;
     private double spentToday;
@@ -21,7 +21,7 @@ public abstract class Wallet {
     protected Wallet(String id, double balance, String pin) {
         this(id, balance, pin, false,0);
     }
-    public double getBalance() {
+    public double balance() {
         return balance;
     }
 
@@ -57,6 +57,17 @@ public abstract class Wallet {
     }
 
     protected abstract double getDailylimit();
-    protected abstract boolean canPay();
+    protected abstract boolean canPay(TransactionType type);
 
+    public void recordSpend(double amount) {
+        spentToday+=amount;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public double remainingDailyLimit() {
+        return getDailylimit()-spentToday;
+    }
 }

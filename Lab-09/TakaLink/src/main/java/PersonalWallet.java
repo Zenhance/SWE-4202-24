@@ -12,7 +12,7 @@ public class PersonalWallet extends Wallet{
     }
 
     @Override
-    protected boolean canPay() {
+    protected boolean canPay(TransactionType type) {
         return true;
     }
 }

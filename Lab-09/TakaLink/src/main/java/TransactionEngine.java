@@ -15,7 +15,7 @@ import java.util.List;
  * worst of all -- process() debits the sender BEFORE it has finished checking,
  * so a transaction that is about to be rejected has already moved money.
  */
-public class TransactionEngine {
+/*public class TransactionEngine {
 
     List<Account> accounts = new ArrayList<>();
     List<Transaction> batch = new ArrayList<>();
@@ -94,4 +94,4 @@ public class TransactionEngine {
             if (code != 0) System.out.println("txn " + i + " failed: " + code);
         }
     }
-}
+}*/
