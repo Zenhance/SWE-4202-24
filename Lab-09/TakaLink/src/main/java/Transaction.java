@@ -14,7 +14,24 @@ public abstract class Transaction {
     private final Wallet toId;
     private final String pin;
 
-    public Transaction(TransactionType type, double amount, Wallet fromId, Wallet toId, String pin)) {
+    protected Transaction(TransactionType type, double amount, Wallet fromId, Wallet toId, String pin) {
+        if (fromId == null || toId == null) {
+            throw new IllegalArgumentException(
+                    "Wallet cannot be null"
+            );
+        }
+        if (amount <= 0) {
+            throw new IllegalArgumentException(
+                    "Amount must be positive"
+            );
+        }
+        if (pin == null) {
+            throw new IllegalArgumentException(
+                    "PIN cannot be null"
+            );
+        }
+
+
         this.type = type;
         this.amount = amount;
         this.fromId = fromId;
