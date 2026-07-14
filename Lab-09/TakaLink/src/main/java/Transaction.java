@@ -10,11 +10,11 @@
 public abstract class Transaction {
 
 
-      /*public String type;        // "SEND", "CASHOUT", "PAYMENT", "TOPUP"
-    public double amount;
-    public String fromId;
-    public String toId;
-    public String pin;
+    protected String type;        // "SEND", "CASHOUT", "PAYMENT", "TOPUP"
+    protected double amount;
+    protected String fromId;
+    protected String toId;
+    protected String pin;
 
 
 
@@ -28,7 +28,7 @@ public abstract class Transaction {
         this.toId = toId;
         this.pin = pin;
     }
-}        */
+}
 
 private Wallet payWallet;
 private Wallet receiveWallet;
