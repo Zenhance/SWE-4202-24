@@ -15,4 +15,8 @@ public class SettlementReport {
         totalValueMoved += t.getAmount();
         totalFees+= t.getFee();
     }
+    public void addFailure(Transaction t, TransactionException e){
+        rejectedCount++;
+        rejectedReasons.add(t.getType() + " : " + e.getMessage());
+    }
 }
