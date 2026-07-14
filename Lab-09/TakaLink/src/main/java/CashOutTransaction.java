@@ -4,5 +4,9 @@ public class CashOutTransaction extends Transaction{
         super(from,to,amount,pin);
 
     }
+    @Override
+    public double getFee(){
+        return amount*RATE;
+    }
 
 }
