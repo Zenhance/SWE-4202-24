@@ -19,5 +19,20 @@ public abstract class Transaction {
         this.amount = amount;
         this.pin = pin;
 
+        if (from == null || to == null) throw new IllegalArgumentException("from/to must not be null");
+
+        if (amount <= 0) throw new IllegalArgumentException("amount must be positive");
+
+        if (pin == null) throw new IllegalArgumentException("pin must not be null");
+    }
+    public double amount() {
+        return amount;
+    }
+    public abstract double fee();
+    protected double debitAmount() {
+        return amount + fee();
+    }
+    protected double creditAmount() {
+        return amount;
     }
 }
