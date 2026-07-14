@@ -8,11 +8,11 @@
  * waves straight through, because nothing here is ever checked.
  */
 public abstract class Transaction {
-    public String type;        // "SEND", "CASHOUT", "PAYMENT", "TOPUP"
-    public double amount;
-    public String fromId;
-    public String toId;
-    public String pin;
+    private String type;        // "SEND", "CASHOUT", "PAYMENT", "TOPUP"
+    private double amount;
+    private String fromId;
+    private String toId;
+    private String pin;
 
     public Transaction(String type, double amount, String fromId, String toId, String pin) {
         this.type = type;
