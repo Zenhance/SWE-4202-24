@@ -36,4 +36,10 @@ public abstract class Wallet {
         return this.balance;
     }
 
+    public void credit(double amount){
+        if(amount<0.0)
+            throw new IllegalArgumentException("Amount can not be negative");
+        this.balance+=amount;
+    }
+
 }
