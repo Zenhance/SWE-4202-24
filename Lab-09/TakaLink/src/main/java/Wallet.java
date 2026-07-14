@@ -37,4 +37,15 @@ public class Wallet {
         }
         balance -= amount;
     }
+
+    public boolean verifyPin(String pin)  {
+        if(pin == null || pin.length() == 0){
+            throw new IllegalArgumentException("pin cannot be null or empty");
+        }
+        if(pin.equals(this.pin)){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }
