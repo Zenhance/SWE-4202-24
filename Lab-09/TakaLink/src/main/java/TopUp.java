@@ -1,4 +1,4 @@
-public final class TopUp extends Transcation{
+public final class TopUp extends Transaction{
     public TopUp(Wallet payer, Wallet receiver, double amount, String offeredPin){
         super(payer, receiver, amount, offeredPin);
     }
