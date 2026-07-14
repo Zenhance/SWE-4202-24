@@ -12,5 +12,13 @@ public abstract class Wallet {
         if(!Double.isFinite(openingBalance)||openingBalance<0.0){
             throw new IllegalArgumentException("Opening balance must be non-negative");
         }
+        if(pin==null){
+            throw new IllegalArgumentException("PIN must not be null");
+        }
+        this.id = id;
+        this.balance = openingBalance;
+        this.pin = pin;
+        this.frozen = false;
+        this.spentToday = 0.0;
     }
 }
