@@ -14,9 +14,9 @@ public abstract class Transaction {
 //    public String toId;
 //    public String pin;
 
-    private Wallet payingWallet;
-    private Wallet receivingWallet;
-    private double amount;
+    protected Wallet payingWallet;
+    protected Wallet receivingWallet;
+    protected double amount;
     private String PIN;
 
 //    public Transaction(String type, double amount, String fromId, String toId, String pin) {
