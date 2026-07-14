@@ -11,8 +11,19 @@ public abstract class Wallet {
             throw new IllegalArgumentException("Balance cannot be negative");
         if (pin==null)
             throw new IllegalArgumentException("Pin has to be entered");
+        this.balance=balance;
+        this.id=id;
+        this.pin=pin;
+        this.frozen=frozen;
+        this.spentToday=spentToday;
     }
-    public double balance() {
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public String getId() {
+        return id;
     }
 
     public void debit(double v) {
