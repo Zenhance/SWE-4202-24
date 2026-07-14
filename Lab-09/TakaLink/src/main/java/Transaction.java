@@ -38,9 +38,26 @@ public abstract class Transaction {
     }
     protected void validateOperation() throws OperationNotAllowedException{}
     protected void validateLimit() throws DailyLimitExceededException{}
+    protected void onsettled(){}
+
+    public final void settle()throws TransactionException{
+        validateOperation();
+        if(pay.isFrozen()){
+            throw new FrozenAccountException("Frozen");
+        }
+        if(!pay.verifyPin(pin)){
+            throw new InvalidPinException("invalid");
+        }
+        validateLimit();
+        double debit = debitAmount();
+        if(debit> pay.getBalance()){
+            throw new InsufficientBalanceException("Insuffiecient");
+        }
 
 
+    }
 
+    protected abstract double debitAmount();
 
 
 }
