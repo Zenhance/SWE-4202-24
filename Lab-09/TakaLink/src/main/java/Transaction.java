@@ -51,6 +51,47 @@ public abstract class Transaction {
     protected Wallet toId() {
         return toId;
     }
+    public double amount() {
+        return amount;
+    }
 
+    protected TransactionType type() {
+        return type;
+    }
+    public abstract double fee();
+    protected abstract void validateSpecific()
+            throws TransactionException;
 
+    protected abstract void moveMoney()
+            throws TransactionException;
+
+    public final void settle()
+            throws TransactionException {
+
+        if (!fromId.verifyPin(pin)) {
+            throw new InvalidPinException();
+        }
+
+        if (fromId.isFrozen()) {
+            throw new FrozenAccountException();
+        }
+
+        if (!fromId.allows(type)) {
+            throw new OperationNotAllowedException();
+        }
+
+        validateSpecific();
+
+        if (amount > fromId.remainingDailyLimit()) {
+            throw new DailyLimitExceededException();
+        }
+
+        if (fromId.balance() < amount + fee()) {
+            throw new InsufficientBalanceException();
+        }
+
+        moveMoney();
+
+        fromId.recordSpend(amount);
+    }
 }
