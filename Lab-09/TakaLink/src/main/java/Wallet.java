@@ -44,14 +44,9 @@ public abstract class Wallet {
         this.balance-=amount;
     }
 
-
-
-
-
-
-
-
-
+    public boolean pinVerify(String pin){
+        return this.pin.equals(pin);
+    }
 
 
 }
