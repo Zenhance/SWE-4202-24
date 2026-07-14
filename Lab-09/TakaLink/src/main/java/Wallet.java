@@ -69,6 +69,10 @@ public abstract class Wallet {
         this.spentToday += spentToday;
     }
 
+    public double remainingDailyLimit(){
+        return Math.max(0,dailyLimit()-spentToday);
+    }
+
     public abstract double dailyLimit();
     public abstract boolean allowedOperations(Operation operation);
 }
