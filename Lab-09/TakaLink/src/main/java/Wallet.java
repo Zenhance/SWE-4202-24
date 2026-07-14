@@ -28,6 +28,22 @@ public abstract class Wallet {
         this.balance -= amount;
     }
 
+    public void credit(double amount) {
+        if(amount <= 0) {
+            throw new IllegalArgumentException("Credit amount must be positive");
+        }
+        this.balance += amount;
+    }
+
+    public boolean verifyPin(String pin) {
+        if (this.pin == pin) return true;
+        else return false;
+    }
+
+    public void freeze() {
+        this.frozen = true;
+    }
+
 
 
 
