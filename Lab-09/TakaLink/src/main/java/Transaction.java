@@ -7,12 +7,13 @@
  * that PULLS a thousand taka out of the recipient -- a theft the type system
  * waves straight through, because nothing here is ever checked.
  */
-public class Transaction {
-    public String type;        // "SEND", "CASHOUT", "PAYMENT", "TOPUP"
-    public double amount;
-    public String fromId;
-    public String toId;
-    public String pin;
+public abstract class Transaction {
+    private Wallet payingWallet;
+    private Wallet receivingWallet;
+    private double amount;
+    private String PIN;
+   public abstract double fee();
+   public abstract
 
     public Transaction(String type, double amount, String fromId, String toId, String pin) {
         this.type = type;
