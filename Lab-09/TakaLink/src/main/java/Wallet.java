@@ -1,4 +1,4 @@
-public class Wallet {
+public abstract class Wallet {
     private final String id;
     private double balance;
     private final String pin;
@@ -43,7 +43,7 @@ public class Wallet {
         return frozen;
     }
 
-    public void debit(double amount)  {
+    public void debit(double amount) throws InsufficientBalanceException {
         if(amount<=0) {
             throw new IllegallArgumentException ("Debit amount cannot be negative");
         }
