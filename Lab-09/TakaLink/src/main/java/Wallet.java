@@ -6,9 +6,9 @@ public abstract class Wallet {
     private double spentToday;
 
     public Wallet(String id, double balance, String pin) {
-        if(id == null||id.isEmpty()) throw new IllegalArgumentException();
-        if(pin == null||pin.isEmpty()) throw new IllegalArgumentException();
-        if(!Double.isFinite(balance)||balance<0) throw new IllegalArgumentException();
+        if (id == null || id.isEmpty()) throw new IllegalArgumentException();
+        if (pin == null || pin.isEmpty()) throw new IllegalArgumentException();
+        if (!Double.isFinite(balance) || balance < 0) throw new IllegalArgumentException();
 
         this.id = id;
         this.pin = pin;
@@ -20,23 +20,28 @@ public abstract class Wallet {
     public String getId() {
         return id;
     }
+
     public String getPin() {
         return pin;
     }
-    public double getBalance() {
+
+    public double balance() {
         return balance;
     }
+
     public boolean isFrozen() {
         return frozen;
     }
+
     public void freeze() {
         frozen = true;
     }
+
     public double getSpentToday() {
         return spentToday;
     }
 
-    public void debit ( double amount ) {
+    public void debit(double amount) {
         if (amount <= 0) {
             throw new IllegalArgumentException(" amount must be positive , got " + amount);
         }
@@ -46,8 +51,10 @@ public abstract class Wallet {
         balance -= amount;
     }
 
-    public void credit( double amount ) {
-        if(amount <= 0) { throw new IllegalArgumentException(" amount must be positive"); }
+    public void credit(double amount) {
+        if (amount <= 0) {
+            throw new IllegalArgumentException(" amount must be positive");
+        }
         balance += amount;
     }
 
@@ -55,4 +62,13 @@ public abstract class Wallet {
         return this.pin.equals(pin);
     }
 
+    public void setSpentToday(double spentToday) {
+        if (spentToday <= 0) {
+            throw new IllegalArgumentException(" spent today must be positive");
+        }
+        this.spentToday += spentToday;
+    }
+
+    public abstract double dailyLimit();
+    public abstract boolean allowedOperations(Operation operation);
 }
