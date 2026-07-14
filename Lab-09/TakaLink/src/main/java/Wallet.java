@@ -46,6 +46,13 @@ public abstract class Wallet {
             throw new FrozenAccountException();
 
     }
+    public void debit(double amount)
+
+        throws InsufficientBalanceException{
+        if(amount<=0)
+            throw new IllegalArgumentException("Invalid amount");
+
+    }
 
 
 
