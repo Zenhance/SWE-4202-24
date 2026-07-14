@@ -14,7 +14,7 @@ public class CommercialConnection extends Connection{
         if (units <= BAND_1) {
             return units * COM_RATE_1;
         }
-            return units * COM_RATE_1 + (units - BAND_1) * COM_RATE_2;
+            return BAND_1 * COM_RATE_1 + (units - BAND_1) * COM_RATE_2;
 
 
     }

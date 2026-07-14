@@ -15,12 +15,12 @@ public class ResidentialConnection extends Connection{
     double energyCharge() {
         int units=getMeter().getUnitsConsumed();
         if(units<=BAND_1){
-            return units*RES_RATE_1;
+            return BAND_1*RES_RATE_1;
         }
         if(units<=BAND_2){
-            return units*RES_RATE_1+(units-BAND_1)*RES_RATE_2;
+            return BAND_2*RES_RATE_1+(units-BAND_1)*RES_RATE_2;
         }
-        return units*RES_RATE_1+(units-BAND_1)*RES_RATE_2+(units-BAND_2)*RES_RATE_3;
+        return BAND_1*RES_RATE_1+(BAND_2-BAND_1)*RES_RATE_2+(units-BAND_2)*RES_RATE_3;
 
     }
 
