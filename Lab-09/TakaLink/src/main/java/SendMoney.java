@@ -11,4 +11,9 @@ public class SendMoney extends Transaction{
     public void checkPermission() throws OperationNotAllowedException {
         from.assertCanSend();
     }
+    @Override
+    protected void moveMoney(double fee) throws InsufficientBalanceException {
+        from.debit(amount + fee);
+        to.credit(amount);
+    }
 }
