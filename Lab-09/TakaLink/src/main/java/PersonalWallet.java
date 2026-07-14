@@ -5,27 +5,21 @@ public class PersonalWallet extends Wallet{
     private final double dailySendingLimit = 25000;
 
     public PersonalWallet(String type, String pin, double balance, boolean frozen, double spentToday) {
-        super(frozen, spentToday);
-        this.type = type;
-        this.pin = pin;
-        this.balance = balance;
+        super(type, pin, balance);
     }
 
     @Override
-    public double cashOut(double amount){
-        balance = balance - amount;
-        return balance;
+    public boolean cashOut(){
+        return true;
     }
 
     @Override
-    public double sendMoney(double amount){
-        balance = balance - amount;
-        return balance;
+    public boolean sendMoney(){
+        return true;
     }
 
     @Override
-    public double receiveMoney(double amount){
-        balance = balance + amount;
-        return balance;
+    public boolean receiveMoney(){
+        return true;
     }
 }

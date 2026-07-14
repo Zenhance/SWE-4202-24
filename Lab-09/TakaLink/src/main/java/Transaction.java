@@ -13,6 +13,8 @@ public abstract class Transaction {
     protected String fromId;
     protected String toId;
     protected String pin;
+    protected double fee;
+
 
     public Transaction(String type, double amount, String fromId, String toId, String pin) {
         if(amount < 0) {
@@ -24,4 +26,6 @@ public abstract class Transaction {
         this.toId = toId;
         this.pin = pin;
     }
+
+
 }

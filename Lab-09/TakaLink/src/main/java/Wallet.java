@@ -55,9 +55,9 @@ public abstract class Wallet {
         this.spentToday = spentToday;
     }
 
-    public abstract double cashOut(double amount);
-    public abstract double sendMoney(double amount);
-    public abstract double receiveMoney(double amount);
+    public abstract boolean cashOut();
+    public abstract boolean sendMoney();
+    public abstract boolean receiveMoney();
 
     public double debit(double amount) {
         if(amount < 0) {
