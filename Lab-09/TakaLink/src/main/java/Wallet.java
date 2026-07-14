@@ -20,7 +20,7 @@ public class Wallet {
         this.pin = pin;
     }
 
-    private double getBalance() {
+    public double balance() {
         return balance;
     }
 
@@ -42,10 +42,17 @@ public class Wallet {
         if(pin == null || pin.length() == 0){
             throw new IllegalArgumentException("pin cannot be null or empty");
         }
-        if(pin.equals(this.pin)){
+        if(pin.equals(getPin())){
             return true;
         }else{
             return false;
         }
+    }
+
+    public void credit(double amount)  {
+        if(amount < 0){
+            throw new IllegalArgumentException("credit amount cannot be negative");
+        }
+        balance += amount;
     }
 }
