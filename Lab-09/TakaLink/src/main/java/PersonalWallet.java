@@ -8,7 +8,8 @@ public class PersonalWallet extends Wallet{
         super(name, deposit, pin);
     }
 
-
-
-
+    @Override
+    public double getLimit() {
+        return limit;
+    }
 }

@@ -17,14 +17,15 @@ public class SendMoney extends Transaction{
     @Override
     public void settle() throws Exception {
 
+
+
         try {
             PersonalWallet pw = (PersonalWallet) a;
             PersonalWallet aw = (PersonalWallet) b;
         } catch (ClassCastException e) {
             throw new OperationNotAllowedException("Transaction NOT possible between these accounts");
         }
-
-        if(a.daily < amount)
+        if(a.daily < amount || a.getLimit() < amount )
             throw new DailyLimitExceededException("Daily Limit reached :')");
 
         super.settle();
