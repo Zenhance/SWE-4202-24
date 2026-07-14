@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 public class SettlementRun {
     private ArrayList<Transaction> transactions;
+    private SettlementReport report;
 
     public SettlementRun() {
         transactions = new ArrayList<>();
@@ -14,5 +15,13 @@ public class SettlementRun {
         for (int i = 0; i < amount; i++) {
             transactions.add(transaction);
         }
+    }
+
+    public int pending() {
+        return transactions.size();
+    }
+
+    public SettlementReport settle() {
+        return report;
     }
 }
