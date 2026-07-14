@@ -70,11 +70,11 @@
 
         protected abstract double dailyLimit();
 
-        abstract boolean canBePayerOf(TransactionKind kind);
+        /*abstract boolean canBePayerOf(TransactionKind kind);*/
 
-        abstract boolean canBeRecipientOf(TransactionKind kind);
+       /* abstract boolean canBeRecipientOf(TransactionKind kind);*/
     }
 
 
 
-    }
+

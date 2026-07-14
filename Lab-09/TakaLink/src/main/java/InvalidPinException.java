@@ -1,2 +1,5 @@
-public class InvalidPinException extends TransactionException{
+public class InvalidPinException extends TransactionException {
+    public InvalidPinException(String message) {
+        super(message);
+    }
 }

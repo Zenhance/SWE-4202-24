@@ -1,4 +1,4 @@
-public class MerchantWallet extends Wallet{
+public abstract class MerchantWallet extends Wallet{
 
     public final double limit = 0;
 

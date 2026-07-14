@@ -8,17 +8,15 @@
  * waves straight through, because nothing here is ever checked.
  */
 public abstract class Transaction {
-    // "SEND", "CASHOUT", "PAYMENT", "TOPUP"
     protected double amount;
     private Wallet from;
     private Wallet to;
     private String pin;
 
-
     public Transaction(Wallet from, Wallet to, double amount, String pin) {
         if (from == null) throw new NullPointerException("Sender cannot be null");
         if (to == null) throw new NullPointerException("Receiver cannot be null");
-        if (amount <= 0) throw new IllegalArgumentException("amount cannot be non positive");
+        if (amount <= 0) throw new IllegalArgumentException("Amount cannot be non positive");
         if (pin == null) throw new NullPointerException("Must provide pin");
 
         this.from = from;
@@ -31,12 +29,8 @@ public abstract class Transaction {
 
     public void settle() throws TransactionException{
         if(!from.verifyPin(this.pin)){
-            throw new InvalidPinException();
+            throw new InvalidPinException("PIN must be correct");
         }
 
     }
-
-
-
-
 }

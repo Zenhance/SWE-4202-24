@@ -1,3 +1,4 @@
+/*
 // =====================================================================
 //  THE CONTRACTOR'S CODE -- the God class you must REPAIR.
 // =====================================================================
@@ -5,6 +6,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
+*/
 /**
  * Everything happens here, and every method opens with the SAME two questions:
  * "which kind of transaction?" then "which kind of account?" -- the two-level
@@ -14,7 +16,8 @@ import java.util.List;
  * Failure is reported as an int code that a caller can simply ignore, and --
  * worst of all -- process() debits the sender BEFORE it has finished checking,
  * so a transaction that is about to be rejected has already moved money.
- */
+ *//*
+
 public class TransactionEngine {
 
     List<Account> accounts = new ArrayList<>();
@@ -95,3 +98,4 @@ public class TransactionEngine {
         }
     }
 }
+*/

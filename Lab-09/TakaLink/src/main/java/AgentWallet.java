@@ -1,23 +1,7 @@
-public class AgentWallet extends Wallet {
+public abstract class AgentWallet extends Wallet{
+    public final double limit = 500000.0;
 
-    private static final double DAILY_LIMIT = 500_000.0;
-
-    public AgentWallet(String id, double openingBalance, String pin) {
-        super(id, openingBalance, pin);
-    }
-
-    @Override
-    protected double dailyLimit() {
-        return DAILY_LIMIT;
-    }
-
-    @Override
-    boolean canBePayerOf(TransactionKind kind) {
-        return kind == TransactionKind.SEND;
-    }
-
-    @Override
-    boolean canBeRecipientOf(TransactionKind kind) {
-        return kind == TransactionKind.CASHOUT || kind == TransactionKind.TOPUP;
+    public AgentWallet(String id, double balance, String pin) {
+        super(id, balance, pin);
     }
 }
