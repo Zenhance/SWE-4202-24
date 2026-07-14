@@ -44,7 +44,7 @@ public abstract class Wallet {
     /// //////////////
     public final void debit(double amount) {
         if (amount <= 0) {
-            throw new IllegalArgumentException("Debit amoount must be positive");
+            throw new IllegalArgumentException("Debit amount must be positive");
         }
         if (balance - amount < 0) {
             throw new InsufficientBalanceException(id, amount, balance);
