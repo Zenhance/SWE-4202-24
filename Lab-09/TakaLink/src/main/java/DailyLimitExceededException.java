@@ -1,0 +1,2 @@
+public class DailyLimitExceededException extends TransactionException{
+}
