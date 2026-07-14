@@ -18,7 +18,8 @@ public abstract class Wallet {
         this.balance=balance;
         this.pin=pin;
     }
-    public double getBalance(){return balance;}
+    public double balance(){return balance;}
+    public String id(){return id;}
     public void debit(double amount) throws InsufficientBalanceException {
         if (amount <= 0) {
             throw new IllegalArgumentException("Withdraw amount must be positive");
