@@ -28,4 +28,11 @@ public abstract class Wallet {
         }
         balance -= amount;
     }
+
+    public void credit(double amount) {
+        if (amount <= 0) {
+            throw new IllegalArgumentException("Deposit must be positive");
+        }
+        balance += amount;
+    }
 }
