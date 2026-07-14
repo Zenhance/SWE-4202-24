@@ -7,7 +7,7 @@
  * that PULLS a thousand taka out of the recipient -- a theft the type system
  * waves straight through, because nothing here is ever checked.
  */
-public class Transaction {
+public abstract class Transaction {
     public String type;        // "SEND", "CASHOUT", "PAYMENT", "TOPUP"
     public double amount;
     public String fromId;
@@ -24,4 +24,6 @@ public class Transaction {
         this.toId = toId;
         this.pin = pin;
     }
+
+    public abstract double fee();
 }
