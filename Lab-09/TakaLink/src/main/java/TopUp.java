@@ -3,6 +3,7 @@ public class TopUp {
     }
 
     public double fee() {
+        return 0;
     }
 
     public void settle() {
