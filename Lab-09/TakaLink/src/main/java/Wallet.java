@@ -60,4 +60,13 @@ public abstract class Wallet {
         frozen = true;
     }
 
+    public void checkFrozen() throws FrozenAccountException {
+        if (frozen)
+            throw new FrozenAccountException();
+    }
+
+    public double remainingLimit() {
+        return getDailyLimit() - getSpentToday();
+    }
+
 }
