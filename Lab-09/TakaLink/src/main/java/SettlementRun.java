@@ -7,4 +7,7 @@ public class SettlementRun {
 
     public SettlementReport settle() {
     }
+
+    public void submit(SendMoney sendMoney, int i) {
+    }
 }

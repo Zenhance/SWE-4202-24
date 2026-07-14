@@ -3,5 +3,6 @@ public class AgentWallet {
     }
 
     public double balance() {
+        return 2;
     }
 }
