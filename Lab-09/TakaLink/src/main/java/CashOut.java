@@ -3,5 +3,7 @@ public class CashOut {
     }
 
     public void settle() {
+
     }
+
 }
