@@ -39,7 +39,7 @@ public abstract class Wallet {
 
     public abstract double getDailyLimit();
     public abstract boolean canSend();
-    public abstract boolean canCshOut();
+    public abstract boolean canCashOut();
 
     public  void debit(double amount) throws InsufficientBalanceException {
         if (amount < 0)
