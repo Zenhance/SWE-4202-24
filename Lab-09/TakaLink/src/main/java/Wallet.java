@@ -33,6 +33,18 @@ public class Wallet {
             balance += amount;
         }
 
+        public boolean verifyPin(String number) {
+            return pin.equals(number);
+        }
+
+        public void freeze() {
+            this.frozen = true;
+        }
+
+        public double balance() {
+            return balance;
+        }
+
 
 
     }
