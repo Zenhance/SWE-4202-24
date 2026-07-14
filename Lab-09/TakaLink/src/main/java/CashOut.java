@@ -10,6 +10,8 @@ public class CashOut extends Transaction{
 
     @Override
     public void settle() throws TransactionException {
+        if (!(receivingWallet instanceof AgentWallet))
+            throw new OperationNotAllowedException("Operation not allowed");
         double cashoutFee = amount * 0.0185;
         if (!payingWallet.verifyPin(super.getPIN())) {
             throw new InvalidPinException("Wrong PIN");
