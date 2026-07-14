@@ -1,5 +1,5 @@
 
-    public class Wallet {
+    public abstract class Wallet {
 
         private String id;
         private double balance;
@@ -58,6 +58,22 @@
         public final String id() {
             return id;
         }
+
+        final double remainingDailyLimit() {
+            return dailyLimit() - spentToday;
+        }
+
+
+        final void recordSpend(double amount) {
+            spentToday += amount;
+        }
+
+        protected abstract double dailyLimit();
+
+        abstract boolean canBePayerOf(TransactionKind kind);
+
+        abstract boolean canBeRecipientOf(TransactionKind kind);
+    }
 
 
 
