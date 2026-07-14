@@ -6,7 +6,7 @@ public abstract class AbstractTicket {
     protected int col;
     protected double basePrice;
 
-    public AbstractTicket(Showtime showtime, int row, int col, double basePrice){
+    public AbstractTicket(Showtime showtime, int row, int col,double basePrice){
         this.showtime=showtime;
         this.row=row;
         this.col=col;
