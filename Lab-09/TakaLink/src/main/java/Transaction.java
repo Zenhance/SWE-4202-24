@@ -23,6 +23,12 @@ public class Transaction {
 
     }
 
+    public void settle() {
+
+    }
+
+
+
 
 }
 
