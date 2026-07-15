@@ -36,7 +36,7 @@ public abstract class Transaction
 
     public abstract void moveMoney() throws TransactionException;
 
-    public double getAmount()
+    public double amount()
     {
         return amount;
     }
@@ -64,7 +64,7 @@ public abstract class Transaction
             throw new InvalidPinException();
         if(fromId.getSpentToday()+amount>fromId.dailyLimit())
             throw new DailyLimitExceededException();
-        if(fromId.getBalance()<amount+fee())
+        if(fromId.balance()<amount+fee())
             throw new InsufficientBalanceException();
         moveMoney();
         fromId.addSpent(amount);
