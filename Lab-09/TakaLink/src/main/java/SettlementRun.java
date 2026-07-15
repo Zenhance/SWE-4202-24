@@ -28,4 +28,22 @@ public class SettlementRun
             batch.add(t);
         }
     }
+
+    public SettlementReport settle()
+    {
+        SettlementReport report = new SettlementReport();
+        for(Transaction t : batch)
+        {
+            try
+            {
+                t.settle();
+                report.addSuccess(t);
+            }
+            catch (TransactionException e)
+            {
+                report.addFailure(t,e);
+            }
+        }
+        return report;
+    }
 }
