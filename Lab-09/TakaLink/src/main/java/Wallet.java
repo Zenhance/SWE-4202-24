@@ -10,7 +10,7 @@ public  abstract class Wallet
     {
         if(id==null || id.isBlank())
             throw new IllegalArgumentException("Id can not be null");
-        if(balance<=0)
+        if(balance<0)
             throw new IllegalArgumentException("Amount must be positive");
         if(pin==null || pin.isBlank())
             throw new IllegalArgumentException("Pin can not be null");
