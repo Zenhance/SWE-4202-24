@@ -1,9 +1,5 @@
 public class TopUp extends Transaction{
 
-    PersonalWallet p;
-    AgentWallet g;
-
-
     public TopUp(Wallet p, Wallet g, double amount, String pin) {
         super(p, g, amount, pin);
         this.a = p;
