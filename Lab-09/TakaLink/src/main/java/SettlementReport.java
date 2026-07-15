@@ -25,4 +25,32 @@ public class SettlementReport
         totalFees=totalFees+t.fee();
         settledTransaction.add(t);
     }
+
+    public void addFailure(Transaction t, TransactionException e)
+    {
+        rejectedCount++;
+        failedTransactions.add(t);
+        failureReasons.add(e);
+    }
+
+    public int getSettledCount()
+    {
+        return settledCount;
+    }
+
+    public int getRejectedCount()
+    {
+        return rejectedCount;
+    }
+
+    public double getTotalMoved()
+    {
+        return totalMoved;
+    }
+
+    public double getTotalFees()
+    {
+        return totalFees;
+    }
+
 }
