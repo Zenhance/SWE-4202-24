@@ -34,11 +34,13 @@ public abstract class Transaction {
             throw new IllegalArgumentException("Receiver cannot be null");
         if (amount <= 0.0)
             throw new IllegalArgumentException("Amount cannot be negative or zero");
-        if (PIN == null || PIN.isBlank() || PIN.isEmpty())
+        if (PIN == null || PIN.isBlank())
             throw new IllegalArgumentException("PIN cannot be null, empty or blank");
+        // settle method will handle InvalidPinException, no need handle it in constructor
         //InvalidPinException
-        if (!payingWallet.verifyPin(PIN))
-            throw new IllegalArgumentException("Invalid PIN");
+//        if (!payingWallet.verifyPin(PIN))
+//            throw new IllegalArgumentException("Invalid PIN");
+
         this.payingWallet = payingWallet;
         this.receivingWallet = receivingWallet;
         this.amount = amount;
