@@ -5,7 +5,7 @@ public class SendMoney extends Transaction{
 
     @Override
     public double fee() {
-        return 0.0;
+        return 5.0;
     }
 
     @Override
