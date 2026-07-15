@@ -58,6 +58,7 @@ public abstract class Transaction
 
     public void settle() throws TransactionException
     {
+        validateOperation();
         if(fromId.isFrozen())
             throw new FrozenAccountException();
         if(!fromId.verifyPin(pin))
