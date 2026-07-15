@@ -58,4 +58,13 @@ public class SettlementReport
         return settledTransaction.contains(t);
     }
 
+    public TransactionException errorOf(Transaction t)
+    {
+        for(int i=0;i<failedTransactions.size();i++)
+        {
+            if(failedTransactions.get(i)==t)
+                return failureReasons.get(i);
+        }
+        return null;
+    }
 }
