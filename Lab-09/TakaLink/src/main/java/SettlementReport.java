@@ -53,6 +53,9 @@ public class SettlementReport
         return totalFees;
     }
 
-
+    public boolean isSettled(Transaction t)
+    {
+        return settledTransaction.contains(t);
+    }
 
 }
