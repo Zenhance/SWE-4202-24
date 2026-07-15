@@ -21,7 +21,7 @@ public class SettlementReport
     public void addSuccess(Transaction t)
     {
         settledCount++;
-        totalMoved=totalMoved+t.getAmount();
+        totalMoved=totalMoved+t.amount();
         totalFees=totalFees+t.fee();
         settledTransaction.add(t);
     }
@@ -33,22 +33,22 @@ public class SettlementReport
         failureReasons.add(e);
     }
 
-    public int getSettledCount()
+    public int settledCount()
     {
         return settledCount;
     }
 
-    public int getRejectedCount()
+    public int rejectedCount()
     {
         return rejectedCount;
     }
 
-    public double getTotalMoved()
+    public double totalMoved()
     {
         return totalMoved;
     }
 
-    public double getTotalFees()
+    public double totalFees()
     {
         return totalFees;
     }
