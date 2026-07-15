@@ -21,7 +21,7 @@ public class TopUp extends Transaction
     @Override
     public void moveMoney() throws TransactionException
     {
-        fromId.debit(amount);
-        toId.credit(amount);
+        fromId.debit(amount());
+        toId.credit(amount());
     }
 }
