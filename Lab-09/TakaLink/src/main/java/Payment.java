@@ -14,7 +14,7 @@ public class Payment extends Transaction
     @Override
     public void validateOperation() throws OperationNotAllowedException
     {
-        if(!fromId.canSendMoney())
+        if(!fromId.canPayment())
             throw new OperationNotAllowedException();
         if(!(toId instanceof MerchantWallet))
             throw new OperationNotAllowedException();

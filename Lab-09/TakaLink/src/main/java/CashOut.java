@@ -14,7 +14,7 @@ public class CashOut extends Transaction
     @Override
     public void validateOperation() throws OperationNotAllowedException
     {
-        if(!fromId.canSendMoney())
+        if(!fromId.canCashOut())
             throw new OperationNotAllowedException();
         if(!(toId instanceof AgentWallet))
             throw new OperationNotAllowedException();

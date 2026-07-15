@@ -14,7 +14,7 @@ public class TopUp extends Transaction
     @Override
     public void validateOperation() throws OperationNotAllowedException
     {
-        if(!fromId.canSendMoney())
+        if(!fromId.canTopUp())
             throw new OperationNotAllowedException();
     }
 
