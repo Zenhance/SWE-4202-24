@@ -9,7 +9,7 @@ public class SettlementReport
 
     private ArrayList<Transaction> settledTransaction;
     private ArrayList<Transaction> failedTransactions;
-    private ArrayList<Transaction> failureReasons;
+    private ArrayList<TransactionException> failureReasons;
 
     public SettlementReport()
     {
@@ -52,5 +52,7 @@ public class SettlementReport
     {
         return totalFees;
     }
+
+
 
 }
