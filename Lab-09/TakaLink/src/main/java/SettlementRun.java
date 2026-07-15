@@ -9,5 +9,23 @@ public class SettlementRun
         batch = new ArrayList<>();
     }
 
+    public int pending()
+    {
+        return batch.size();
+    }
 
+    public void submit(Transaction t)
+    {
+        batch.add(t);
+    }
+
+    public void submit(Transaction t, int repeat)
+    {
+        if(repeat<=0)
+            return;
+        for(int i=0;i<repeat;i++)
+        {
+            batch.add(t);
+        }
+    }
 }
