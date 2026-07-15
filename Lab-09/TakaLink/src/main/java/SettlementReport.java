@@ -18,5 +18,11 @@ public class SettlementReport
         failureReasons = new ArrayList<>();
     }
 
-
+    public void addSuccess(Transaction t)
+    {
+        settledCount++;
+        totalMoved=totalMoved+t.getAmount();
+        totalFees=totalFees+t.fee();
+        settledTransaction.add(t);
+    }
 }
