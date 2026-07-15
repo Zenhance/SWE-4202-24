@@ -24,6 +24,6 @@ public class CashOut extends Transaction
     public void moveMoney() throws TransactionException
     {
         fromId.debit(amount()+fee());
-        toId.credit(amount());
+        toId.credit(amount()+fee());
     }
 }
