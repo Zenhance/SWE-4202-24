@@ -14,7 +14,7 @@ public class MerchantWallet extends Wallet
     @Override
     public boolean canSendMoney()
     {
-        return true;
+        return false;
     }
 
     @Override
@@ -26,7 +26,7 @@ public class MerchantWallet extends Wallet
     @Override
     public boolean canCashOut()
     {
-        return true;
+        return false;
     }
 
     @Override
