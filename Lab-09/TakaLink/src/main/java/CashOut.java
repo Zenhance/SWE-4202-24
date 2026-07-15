@@ -8,7 +8,7 @@ public class CashOut extends Transaction
     @Override
     public double fee()
     {
-        return getAmount()*0.0185;
+        return amount()*0.0185;
     }
 
     @Override
@@ -23,7 +23,7 @@ public class CashOut extends Transaction
     @Override
     public void moveMoney() throws TransactionException
     {
-        fromId.debit(amount+fee());
-        toId.credit(amount);
+        fromId.debit(amount()+fee());
+        toId.credit(amount());
     }
 }
