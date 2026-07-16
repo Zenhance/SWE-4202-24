@@ -23,10 +23,20 @@ public class SettlementRun {
 
     public SettlementReport settle() throws TransactionException {
         int size = this.pending();
+        int rejectedTransactions = 0;
+        String message = "";
 
         for (Transaction t : transactions) {
-            t.settle();
+            try {
+                t.settle();
+            } catch (TransactionException e) {
+                rejectedTransactions++;
+                message = message.concat(e.getMessage());
+                message = message.concat("\n");
+            }
         }
-        return new SettlementReport();
+
+        int settledTransactions = size - rejectedTransactions;
+        return new SettlementReport(message, settledTransactions, rejectedTransactions);
     }
 }
