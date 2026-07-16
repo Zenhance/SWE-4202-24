@@ -22,11 +22,21 @@ public class SettlementReport {
     }
 
     public double totalMoved() {
-        return 0.0;
+        double moved = 0;
+        for (Transaction t : goodTransactions) {
+            moved  += t.amount;
+        }
+
+        return moved;
     }
 
     public double totalFees() {
-        return 0.0;
+        double fees = 0;
+        for (Transaction t: goodTransactions) {
+            fees += t.fee();
+        }
+
+        return fees;
     }
 
     public Object errorOf(Transaction bad1) {
