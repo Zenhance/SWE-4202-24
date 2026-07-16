@@ -21,7 +21,12 @@ public class SettlementRun {
         return transactions.size();
     }
 
-    public SettlementReport settle() {
-        return report;
+    public SettlementReport settle() throws TransactionException {
+        int size = this.pending();
+
+        for (Transaction t : transactions) {
+            t.settle();
+        }
+        return new SettlementReport();
     }
 }
