@@ -1,6 +1,13 @@
 public class SettlementReport {
     private int settledTransactions;
     private int rejectedTransactions;
+    private String reportMessage;
+
+    public SettlementReport(String reportMessage, int settledTransactions, int rejectedTransactions) {
+        this.reportMessage = reportMessage;
+        this.settledTransactions = settledTransactions;
+        this.rejectedTransactions = rejectedTransactions;
+    }
 
     public int settledCount() {
         return settledTransactions;
