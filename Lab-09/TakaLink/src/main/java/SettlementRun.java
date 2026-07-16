@@ -21,15 +21,17 @@ public class SettlementRun {
         return transactions.size();
     }
 
-    public SettlementReport settle() throws TransactionException {
+    public SettlementReport settle() {
         int size = this.pending();
         int rejectedTransactions = 0;
         String message = "";
+        ArrayList<Transaction> goodTransactions = transactions;
 
         for (Transaction t : transactions) {
             try {
                 t.settle();
             } catch (TransactionException e) {
+                goodTransactions.remove(t);
                 rejectedTransactions++;
                 message = message.concat(e.getMessage());
                 message = message.concat("\n");
@@ -37,6 +39,7 @@ public class SettlementRun {
         }
 
         int settledTransactions = size - rejectedTransactions;
-        return new SettlementReport(message, settledTransactions, rejectedTransactions);
+
+        return new SettlementReport(message, settledTransactions, rejectedTransactions, goodTransactions);
     }
 }
