@@ -1,12 +1,16 @@
+import java.util.ArrayList;
+
 public class SettlementReport {
     private int settledTransactions;
     private int rejectedTransactions;
     private String reportMessage;
+    ArrayList<Transaction> goodTransactions;
 
-    public SettlementReport(String reportMessage, int settledTransactions, int rejectedTransactions) {
+    public SettlementReport(String reportMessage, int settledTransactions, int rejectedTransactions, ArrayList<Transaction> goodTransactions) {
         this.reportMessage = reportMessage;
         this.settledTransactions = settledTransactions;
         this.rejectedTransactions = rejectedTransactions;
+        this.goodTransactions = goodTransactions;
     }
 
     public int settledCount() {
