@@ -54,4 +54,16 @@ public abstract class Transaction {
     public String getPIN() {
         return PIN;
     }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public Wallet getPayingWallet() {
+        return payingWallet;
+    }
+
+    public Wallet getReceivingWallet() {
+        return receivingWallet;
+    }
 }
