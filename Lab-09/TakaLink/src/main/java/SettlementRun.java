@@ -2,7 +2,6 @@ import java.util.ArrayList;
 
 public class SettlementRun {
     private ArrayList<Transaction> transactions;
-    private SettlementReport report;
 
     public SettlementRun() {
         transactions = new ArrayList<>();
@@ -22,24 +21,31 @@ public class SettlementRun {
     }
 
     public SettlementReport settle() {
-        int size = this.pending();
+        int size = transactions.size();
         int rejectedTransactions = 0;
+        int settledTransactions = 0;
         String message = "";
-        ArrayList<Transaction> goodTransactions = transactions;
+        ArrayList<Transaction> settledList = new ArrayList<>();
+        ArrayList<Transaction> rejectedList = new ArrayList<>();
+        ArrayList<TransactionException> rejectedExceptions = new ArrayList<>();
 
         for (Transaction t : transactions) {
             try {
                 t.settle();
+                settledTransactions++;
+                settledList.add(t);
             } catch (TransactionException e) {
-                goodTransactions.remove(t);
                 rejectedTransactions++;
+                rejectedList.add(t);
+                rejectedExceptions.add(e);
                 message = message.concat(e.getMessage());
                 message = message.concat("\n");
             }
         }
 
-        int settledTransactions = size - rejectedTransactions;
+        //int settledTransactions = size - rejectedTransactions;
 
-        return new SettlementReport(message, settledTransactions, rejectedTransactions, goodTransactions);
+        return new SettlementReport(message, settledTransactions, rejectedTransactions,
+                settledList, rejectedList, rejectedExceptions);
     }
 }
