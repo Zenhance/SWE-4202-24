@@ -21,27 +21,17 @@ public class SettlementRun {
     }
 
     public SettlementReport settle() {
-        int rejectedTransactions = 0;
-        int settledTransactions = 0;
-        ArrayList<Transaction> settledList = new ArrayList<>();
-        ArrayList<Transaction> rejectedList = new ArrayList<>();
-        ArrayList<TransactionException> rejectedExceptions = new ArrayList<>();
+        SettlementReport report = new SettlementReport();
 
         for (Transaction t : transactions) {
             try {
                 t.settle();
-                settledTransactions++;
-                settledList.add(t);
+                report.recordSettled(t);
             } catch (TransactionException e) {
-                rejectedTransactions++;
-                rejectedList.add(t);
-                rejectedExceptions.add(e);
+                report.recordRejected(t, e);
             }
         }
 
-        //int settledTransactions = size - rejectedTransactions;
-
-        return new SettlementReport( settledTransactions, rejectedTransactions,
-                settledList, rejectedList, rejectedExceptions);
+        return report;
     }
 }
