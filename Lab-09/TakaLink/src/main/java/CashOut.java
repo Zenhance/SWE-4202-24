@@ -18,7 +18,7 @@ public class CashOut extends Transaction{
         if (!getPayingWallet().verifyPin(super.getPIN())) {
             throw new InvalidPinException("Wrong PIN");
         }
-        getPayingWallet().debit(getAmount() + cashoutFee);
-        getReceivingWallet().credit(getAmount() + cashoutFee);
+        getPayingWallet().debit(getAmount() + fee());
+        getReceivingWallet().credit(getAmount() + fee());
     }
 }
