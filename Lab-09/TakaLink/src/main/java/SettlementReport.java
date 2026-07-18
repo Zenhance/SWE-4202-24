@@ -64,16 +64,4 @@ public class SettlementReport {
         }
         return false;
     }
-
-//    public void errorOf(Transaction t) throws TransactionException{
-//        try {
-//            PersonalWallet p1 = new PersonalWallet("", 0.0, "");
-//            PersonalWallet p2 = new PersonalWallet("", 0.0, "");
-//            Payment p = new Payment(p1, p2, 0.0, "");
-//            throw new InsufficientBalanceException("Invalid");
-//        }
-//        catch (TransactionException e) {
-//            System.out.println("Invalid");
-//        }
-//    }
 }
