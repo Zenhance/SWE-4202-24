@@ -56,7 +56,12 @@ public class SettlementReport {
         return null;
     }
 
-    public boolean isSettled(Transaction t) {
+    public boolean isSettled(Transaction transaction) {
+        for (Transaction t: settledList) {
+            if (t == transaction) {
+                return true;
+            }
+        }
         return false;
     }
 
