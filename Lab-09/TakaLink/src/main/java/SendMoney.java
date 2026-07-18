@@ -6,7 +6,7 @@ public class SendMoney extends Transaction{
     @Override
     public double fee() {
         return 5.0;
-    }
+    } // FLAT_FEE = 5.0;
 
     @Override
     public void settle() throws TransactionException {
@@ -15,8 +15,7 @@ public class SendMoney extends Transaction{
         if (!getPayingWallet().verifyPin(super.getPIN())) {
             throw new InvalidPinException("Wrong PIN");
         }
-        double FLAT_FEE = 5.0;
-        getPayingWallet().debit(getAmount() + FLAT_FEE);
+        getPayingWallet().debit(getAmount() + fee());
         getReceivingWallet().credit(getAmount());
     }
 }
