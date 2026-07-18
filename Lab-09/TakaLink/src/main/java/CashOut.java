@@ -13,12 +13,12 @@ public class CashOut extends Transaction{
 
     @Override
     public void settle() throws TransactionException {
-        if (!(receivingWallet instanceof AgentWallet))
+        if (!(getReceivingWallet() instanceof AgentWallet))
             throw new OperationNotAllowedException("Operation not allowed");
-        if (!payingWallet.verifyPin(super.getPIN())) {
+        if (!getPayingWallet().verifyPin(super.getPIN())) {
             throw new InvalidPinException("Wrong PIN");
         }
-        payingWallet.debit(amount + cashoutFee);
-        receivingWallet.credit(amount + cashoutFee);
+        getPayingWallet().debit(getAmount() + cashoutFee);
+        getReceivingWallet().credit(getAmount() + cashoutFee);
     }
 }
