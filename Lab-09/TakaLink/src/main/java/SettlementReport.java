@@ -47,8 +47,13 @@ public class SettlementReport {
         return fees;
     }
 
-    public Object errorOf(Transaction bad1) {
-        return bad1;
+    public TransactionException errorOf(Transaction t) {
+        // for each loop is not used, because we have to match rejectedList with rejectedErrors
+        for (int i = 0; i < rejectedList.size(); i++) {
+            if (rejectedList.get(i) == t)
+                return rejectedExceptions.get(i);
+        }
+        return null;
     }
 
     public boolean isSettled(Transaction t) {
