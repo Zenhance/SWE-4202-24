@@ -23,7 +23,6 @@ public class SettlementRun {
     public SettlementReport settle() {
         int rejectedTransactions = 0;
         int settledTransactions = 0;
-        String message = "";
         ArrayList<Transaction> settledList = new ArrayList<>();
         ArrayList<Transaction> rejectedList = new ArrayList<>();
         ArrayList<TransactionException> rejectedExceptions = new ArrayList<>();
@@ -37,8 +36,6 @@ public class SettlementRun {
                 rejectedTransactions++;
                 rejectedList.add(t);
                 rejectedExceptions.add(e);
-                message = message.concat(e.getMessage());
-                message = message.concat("\n");
             }
         }
 
