@@ -10,10 +10,10 @@ public class TopUp extends Transaction {
 
     @Override
     public void settle() throws TransactionException {
-        if (!payingWallet.verifyPin(super.getPIN())) {
+        if (!getPayingWallet().verifyPin(super.getPIN())) {
             throw new InvalidPinException("Wrong PIN");
         }
-        payingWallet.debit(amount);
-        receivingWallet.credit(amount);
+        getPayingWallet().debit(getAmount());
+        getReceivingWallet().credit(getAmount());
     }
 }
