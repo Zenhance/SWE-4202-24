@@ -3,20 +3,18 @@ import java.util.ArrayList;
 public class SettlementReport {
     private int settledTransactions;
     private int rejectedTransactions;
-    private String reportMessage;
 
     private ArrayList<Transaction> settledList;
     private ArrayList<Transaction> rejectedList;
     private ArrayList<TransactionException> rejectedExceptions;
 
-    public SettlementReport(String reportMessage, int settledTransactions, int rejectedTransactions,
-                            ArrayList<Transaction> goodTransactions,
+    public SettlementReport(int settledTransactions, int rejectedTransactions,
+                            ArrayList<Transaction> settledList,
                             ArrayList<Transaction> rejectedList,
                             ArrayList<TransactionException> rejectedExceptions) {
-        this.reportMessage = reportMessage;
         this.settledTransactions = settledTransactions;
         this.rejectedTransactions = rejectedTransactions;
-        this.settledList  = goodTransactions;
+        this.settledList  = settledList;
         this.rejectedList = rejectedList;
         this.rejectedExceptions = rejectedExceptions;
     }

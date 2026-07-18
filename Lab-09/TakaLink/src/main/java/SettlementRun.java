@@ -44,7 +44,7 @@ public class SettlementRun {
 
         //int settledTransactions = size - rejectedTransactions;
 
-        return new SettlementReport(message, settledTransactions, rejectedTransactions,
+        return new SettlementReport( settledTransactions, rejectedTransactions,
                 settledList, rejectedList, rejectedExceptions);
     }
 }
