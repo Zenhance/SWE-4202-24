@@ -27,6 +27,11 @@ public class SettlementReport {
         return rejectedTransactions;
     }
 
+    public void recordSettled(Transaction t) {
+        settledTransactions++;
+        settledList.add(t);
+    }
+    
     public double totalMoved() {
         double moved = 0;
         for (Transaction t : settledList ) {
