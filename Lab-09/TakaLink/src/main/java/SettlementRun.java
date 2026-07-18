@@ -21,7 +21,6 @@ public class SettlementRun {
     }
 
     public SettlementReport settle() {
-        int size = transactions.size();
         int rejectedTransactions = 0;
         int settledTransactions = 0;
         String message = "";
