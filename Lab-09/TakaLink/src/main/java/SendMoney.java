@@ -10,13 +10,13 @@ public class SendMoney extends Transaction{
 
     @Override
     public void settle() throws TransactionException {
-        if (payingWallet instanceof MerchantWallet)
+        if (getPayingWallet() instanceof MerchantWallet)
             throw new OperationNotAllowedException("Operation not allowed");
-        if (!payingWallet.verifyPin(super.getPIN())) {
+        if (!getPayingWallet().verifyPin(super.getPIN())) {
             throw new InvalidPinException("Wrong PIN");
         }
         double FLAT_FEE = 5.0;
-        payingWallet.debit(amount + FLAT_FEE);
-        receivingWallet.credit(amount);
+        getPayingWallet().debit(getAmount() + FLAT_FEE);
+        getReceivingWallet().credit(getAmount());
     }
 }
