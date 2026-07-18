@@ -8,15 +8,12 @@ public class SettlementReport {
     private ArrayList<Transaction> rejectedList;
     private ArrayList<TransactionException> rejectedExceptions;
 
-    public SettlementReport(int settledTransactions, int rejectedTransactions,
-                            ArrayList<Transaction> settledList,
-                            ArrayList<Transaction> rejectedList,
-                            ArrayList<TransactionException> rejectedExceptions) {
-        this.settledTransactions = settledTransactions;
-        this.rejectedTransactions = rejectedTransactions;
-        this.settledList  = settledList;
-        this.rejectedList = rejectedList;
-        this.rejectedExceptions = rejectedExceptions;
+    public SettlementReport() {
+        this.settledTransactions = 0;
+        this.rejectedTransactions = 0;
+        this.settledList  = new ArrayList<>();
+        this.rejectedList = new ArrayList<>();
+        this.rejectedExceptions = new ArrayList<>();
     }
 
     public int settledCount() {
