@@ -27,6 +27,7 @@ public abstract class Wallet {
         if (amount > this.balance)
             throw new InsufficientBalanceException("Insufficient balance");
         this.balance -= amount;
+        sentToday += amount;
     }
 
     public double balance() {
