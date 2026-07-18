@@ -24,7 +24,7 @@ public class SettlementReport {
     public double totalMoved() {
         double moved = 0;
         for (Transaction t : goodTransactions) {
-            moved  += t.amount;
+            moved  += t.getAmount();
         }
 
         return moved;
