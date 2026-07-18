@@ -4,13 +4,21 @@ public class SettlementReport {
     private int settledTransactions;
     private int rejectedTransactions;
     private String reportMessage;
-    ArrayList<Transaction> goodTransactions;
 
-    public SettlementReport(String reportMessage, int settledTransactions, int rejectedTransactions, ArrayList<Transaction> goodTransactions) {
+    private ArrayList<Transaction> settledList;
+    private ArrayList<Transaction> rejectedList;
+    private ArrayList<TransactionException> rejectedExceptions;
+
+    public SettlementReport(String reportMessage, int settledTransactions, int rejectedTransactions,
+                            ArrayList<Transaction> goodTransactions,
+                            ArrayList<Transaction> rejectedList,
+                            ArrayList<TransactionException> rejectedExceptions) {
         this.reportMessage = reportMessage;
         this.settledTransactions = settledTransactions;
         this.rejectedTransactions = rejectedTransactions;
-        this.goodTransactions = goodTransactions;
+        this.settledList  = goodTransactions;
+        this.rejectedList = rejectedList;
+        this.rejectedExceptions = rejectedExceptions;
     }
 
     public int settledCount() {
@@ -23,7 +31,7 @@ public class SettlementReport {
 
     public double totalMoved() {
         double moved = 0;
-        for (Transaction t : goodTransactions) {
+        for (Transaction t : settledList ) {
             moved  += t.getAmount();
         }
 
@@ -32,7 +40,7 @@ public class SettlementReport {
 
     public double totalFees() {
         double fees = 0;
-        for (Transaction t: goodTransactions) {
+        for (Transaction t: settledList ) {
             fees += t.fee();
         }
 
