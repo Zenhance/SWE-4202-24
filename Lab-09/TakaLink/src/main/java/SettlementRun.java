@@ -12,9 +12,17 @@ public class SettlementRun {
             transactions.get(0).settle();
             transactions.remove(0);
         }
+        return new SettlementReport();
     }
 
     public int pending() {
         return transactions.size();
+    }
+
+    public void submit(Transaction t, int i) {
+        while(i>0){
+            transactions.add(t);
+            i--;
+        }
     }
 }

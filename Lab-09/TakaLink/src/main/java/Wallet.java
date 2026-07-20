@@ -25,7 +25,7 @@ public abstract class Wallet {
     }
     public void credit(double amount) {
         if(amount<=0.0) throw new IllegalArgumentException();
-        amount+=balance;
+        balance += amount;
     }
     public double balance() {
         return balance;

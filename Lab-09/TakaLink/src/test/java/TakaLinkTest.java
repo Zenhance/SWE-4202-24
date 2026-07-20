@@ -220,7 +220,7 @@ public class TakaLinkTest {
     // ---------------------------------------------------------------
 
     @Test
-    void run_settlesMixedBatchAndSurvivesFailures() {
+    void run_settlesMixedBatchAndSurvivesFailures() throws InsufficientBalanceException, FrozenAccountException, InvalidPinException, DailyLimitExceededException {
         PersonalWallet a = new PersonalWallet("A", 10_000.0, "1234");
         PersonalWallet b = new PersonalWallet("B", 500.0, "0000");
         AgentWallet g = new AgentWallet("G", 1_000_000.0, "9999");
