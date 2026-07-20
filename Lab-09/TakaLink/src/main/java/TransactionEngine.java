@@ -34,10 +34,10 @@ public class TransactionEngine {
     // 0 = OK, 1 = insufficient, 2 = over limit, 3 = bad PIN,
     // 4 = frozen, 5 = operation not allowed for this account
     int process(Transaction t) {
-        Account from = find(t.fromId);
-        Account to = find(t.toId);
+        Account from = find(t.fromId.toString());
+        Account to = find(t.toId.toString());
 
-        if (t.type == "SEND") {
+        if (t.pin == "SEND") {
             if (from.frozen) return 4;
             if (!from.pin.equals(t.pin)) return 3;
             from.balance -= t.amount;                          // money leaves NOW...
@@ -47,7 +47,7 @@ public class TransactionEngine {
             to.balance += t.amount;
             from.spentToday += t.amount;
             return 0;
-        } else if (t.type == "CASHOUT") {
+        } else if (t.pin == "CASHOUT") {
             if (from.type == "MERCHANT") return 5;             // merchants can't cash out
             if (from.frozen) return 4;
             if (!from.pin.equals(t.pin)) return 3;
@@ -57,14 +57,14 @@ public class TransactionEngine {
             to.balance += t.amount + fee;
             from.spentToday += t.amount;
             return 0;
-        } else if (t.type == "PAYMENT") {
+        } else if (t.pin == "PAYMENT") {
             if (from.frozen) return 4;
             if (!from.pin.equals(t.pin)) return 3;
             from.balance -= t.amount;
             if (from.balance < 0) return 1;
             to.balance += t.amount;
             return 0;
-        } else if (t.type == "TOPUP") {
+        } else if (t.pin == "TOPUP") {
             if (from.frozen) return 4;
             if (!from.pin.equals(t.pin)) return 3;
             from.balance -= t.amount;
@@ -76,8 +76,8 @@ public class TransactionEngine {
     }
 
     double feeFor(Transaction t) {
-        if (t.type == "SEND")    return 5.0;
-        if (t.type == "CASHOUT") return t.amount * 0.019;      // drifts from FeeBook
+        if (t.pin == "SEND")    return 5.0;
+        if (t.pin == "CASHOUT") return t.amount * 0.019;      // drifts from FeeBook
         return 0.0;
     }
 

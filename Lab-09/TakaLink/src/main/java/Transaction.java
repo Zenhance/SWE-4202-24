@@ -1,24 +1,21 @@
-// =====================================================================
-//  THE CONTRACTOR'S CODE -- part of the version you must REPAIR.
-// =====================================================================
 
-/**
- * Another public-field bag. new Transaction("SEND", -1000, ...) is a "send"
- * that PULLS a thousand taka out of the recipient -- a theft the type system
- * waves straight through, because nothing here is ever checked.
- */
-public class Transaction {
-    public String type;        // "SEND", "CASHOUT", "PAYMENT", "TOPUP"
-    public double amount;
-    public String fromId;
-    public String toId;
-    public String pin;
+public abstract class Transaction {
+    protected final Wallet fromId;
+    protected final Wallet toId;
+    protected final double amount;
+    protected final String pin;
+    public Transaction(Wallet fromId, Wallet toId, double amount, String pin) {
+        if (fromId==null||toId==null) throw new IllegalArgumentException("Wallets cannot be null");
+        if (amount<=0) throw new IllegalArgumentException("Amount must be positive");
 
-    public Transaction(String type, double amount, String fromId, String toId, String pin) {
-        this.type = type;
-        this.amount = amount;
-        this.fromId = fromId;
-        this.toId = toId;
-        this.pin = pin;
+        this.fromId=fromId;
+        this.toId=toId;
+        this.amount=amount;
+        this.pin=pin;
+    }
+    public double getAmount() { return this.amount; }
+    public abstract double fee();
+    protected abstract void validateSpecifics() throws OperationNotAllowedException;
+    public void settle() throws TransactionException {
     }
 }

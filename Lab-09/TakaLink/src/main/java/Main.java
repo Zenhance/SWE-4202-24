@@ -14,10 +14,10 @@ public class Main {
         engine.addAccount(alice);
         engine.addAccount(bob);
 
-        // Happy path: a 1000 send settles to the paisa.
-        engine.submit(new Transaction("SEND", 1_000.0, "1234", "0000", "1234"));
-        // Damage: bob has only 500 but tries to send 5000. It WILL be rejected...
-        engine.submit(new Transaction("SEND", 5_000.0, "0000", "1234", "0000"));
+//        // Happy path: a 1000 send settles to the paisa.
+//        engine.submit(new Transaction("SEND", 1_000.0, "1234", "0000", "1234"));
+//        // Damage: bob has only 500 but tries to send 5000. It WILL be rejected...
+//        engine.submit(new Transaction("SEND", 5_000.0, "0000", "1234", "0000"));
 
         System.out.println("Before: alice=" + alice.balance + " bob=" + bob.balance);
         engine.settleBatch();
