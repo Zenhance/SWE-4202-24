@@ -56,12 +56,16 @@ a rectangle already does, and your job is to decide what it must change so that
 it always stays square.
 
 ### The exception family
-When the canvas cannot draw a well-formed shape, the shape throws. Model this as
-**one common parent** ("this shape could not be drawn") with **two kinds**
-beneath it:
-- **too large** — the shape is bigger than the canvas can hold (its area exceeds
-  the canvas `capacity()`);
-- **too small** — the shape would not cover even a single cell.
+When the canvas cannot draw a well-formed shape, the shape throws a **checked**
+exception. There are two kinds:
+- **`ShapeTooLargeException`** — the shape is bigger than the canvas can hold
+  (its area exceeds the canvas `capacity()`);
+- **`ShapeTooSmallException`** — the shape would not cover even a single cell.
+
+The gallery must be able to catch **both of these together, in one place** in its
+draw loop — and it should still work the day a third kind of failure is added.
+How you arrange `ShapeTooLargeException` and `ShapeTooSmallException` so that a
+*single* `catch` can hold all of them at once is part of the design.
 
 ### The gallery
 Holds a mixed pile of shapes (circles, rectangles, squares) together as plain
