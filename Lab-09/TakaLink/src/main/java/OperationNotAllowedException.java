@@ -1,2 +1,2 @@
-public class OperationNotAllowedException {
+public class OperationNotAllowedException extends TransactionException {
 }

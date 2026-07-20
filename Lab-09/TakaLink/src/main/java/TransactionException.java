@@ -1,2 +1,2 @@
-public class TransactionException {
+public class TransactionException extends Exception {
 }

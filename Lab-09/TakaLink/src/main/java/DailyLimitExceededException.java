@@ -1,2 +1,2 @@
-public class DailyLimitExceededException {
+public class DailyLimitExceededException extends TransactionException {
 }

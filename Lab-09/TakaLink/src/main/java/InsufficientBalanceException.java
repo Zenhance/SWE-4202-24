@@ -1,2 +1,2 @@
-public class InsufficientBalanceException {
+public class InsufficientBalanceException extends TransactionException {
 }
