@@ -27,4 +27,5 @@ public abstract class Wallet {
     public void freeze() { this.frozen=true; }
     public boolean isFrozen() { return this.frozen; }
 
+
 }
