@@ -14,35 +14,19 @@ public abstract class Transaction {
     private final double amount;
     private final String pin;
 
-    public Transaction() {
+    public Transaction(Wallet from, Wallet to, double amount, String pin) throws IllegalAccessException {
+        if (amount <= 0) {
+            throw new IllegalAccessException("Transaction amount must be positive");
+        }
+
+        if (pin == null) {
+            throw new IllegalAccessException("PIN cannot be null");
+        }
+
         this.from = from;
-        to = wallet;
+        this.to = to;
         this.amount = amount;
         this.pin = pin;
-    }
-
-    public Transaction(Wallet from, Wallet wallet, double amount, String pin) {
-
-        this.from = from;
-        to = wallet;
-        this.amount = amount;
-        this.pin = pin;
-    }
-
-    public Wallet getFrom() {
-        return from;
-    }
-
-    public Wallet getTo() {
-        return to;
-    }
-
-    public double getAmount() {
-        return amount;
-    }
-
-    public String getPin() {
-        return pin;
     }
 
     public abstract double getFee();

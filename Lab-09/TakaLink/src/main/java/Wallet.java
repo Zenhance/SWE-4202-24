@@ -1,7 +1,8 @@
 public abstract class Wallet {
-    private final String id;
+    private double openingBalance;
+    private String id;
     private double balance;
-    private final String pin;
+    private String pin;
     private boolean frozen;
     private double spentToday;
 
