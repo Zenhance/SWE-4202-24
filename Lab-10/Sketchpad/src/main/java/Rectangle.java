@@ -11,6 +11,15 @@ public abstract class Rectangle extends Shape{
         this.height=height;
     }
 
+    @Override
+    public String describe(){
+        return String.format("Rectangle(%.2f, %.2f)", getWidth(), getHeight());
+    }
+
+    public double getWidth{
+        return width;
+    }
+
 
 
 }
