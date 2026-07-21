@@ -26,13 +26,13 @@ public class Circle extends Shape {
     public void draw(Canvas canvas) throws ShapeTooLargeException, ShapeTooSmallException {
         double diameter = 2 * radius;
 
-        if (diameter > canvas.getWidth() || diameter > canvas.getHeight()) {
+        if (diameter > canvas.width() || diameter > canvas.height()) {
             throw new ShapeTooLargeException(describe() + "doesn't fit on the canvas");
         }
         if (diameter < 1) {
             throw new ShapeTooSmallException(describe() + "is too small to cover a cell");
         }
-        canvas.paintCircle(radius);
+        canvas.circle(radius);
 
     }
 }
