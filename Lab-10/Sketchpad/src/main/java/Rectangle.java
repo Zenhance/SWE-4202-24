@@ -38,7 +38,7 @@ public Rectangle(double length,double width){
     @Override
     public void draw(Canvas canvas) throws Shapedrawexception {
     if (area()> canvas.capacity())
-        throw new Shapetoolargeexception("Rectangle is too large for a canvas of capacity"+canvas.capacity());
+        throw new Shapetoolargeexception("Rectangle is too large for a canvas of capacity "+canvas.capacity());
     if (area()<1)
         throw new Shapetoosmallexception("Rectangle too small for the canvas");
 

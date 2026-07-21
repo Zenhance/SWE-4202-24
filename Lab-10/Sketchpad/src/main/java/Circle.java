@@ -24,7 +24,7 @@ public class Circle extends Shape {
     @Override
     public void draw(Canvas canvas) throws Shapedrawexception {
 if (area()> canvas.capacity()){
-    throw new Shapetoolargeexception("Circle is too large for a canvas of capacity"+canvas.capacity());
+    throw new Shapetoolargeexception("Circle is too large for a canvas of capacity "+canvas.capacity());
 }
 if (area()<1){
     throw new Shapetoosmallexception("Circle would not cover even one cell");
