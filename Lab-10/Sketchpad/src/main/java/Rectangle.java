@@ -10,4 +10,15 @@ public class Rectangle extends Shape{
         this.width = width;
     }
 
+    @Override
+    public double area() {
+        return width*height;
+    }
+
+    @Override
+    public String describe() {
+        return "This is a rectangle with width "+ width + " and height " + height + " and area " + area();
+    }
+
+
 }
