@@ -9,6 +9,11 @@ public class Circle extends Shape{
         if(radius<0) throw new IllegalArgumentException("Radius cannot be negative");
         this.radius=radius;
     }
+
+    public double getRadius() {
+        return radius;
+    }
+
     public double area(){
         return PI*radius*radius;
     }
