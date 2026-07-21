@@ -4,7 +4,7 @@ public abstract class Shape {
             throw new IllegalArgumentException("Argument 'canvas' must not be null.");
         }
 
-        if(area() <= 0){
+        if(area() <= 1.0){
             throw new ShapeTooSmallException("Shape is too small.");
         }
         if(area()>canvas.capacity()){
