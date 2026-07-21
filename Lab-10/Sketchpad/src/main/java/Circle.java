@@ -30,6 +30,7 @@ public class Circle extends Shape {
             throw new ShapeTooSmallException();
         }
 
+        canvas.circle(radius);
 
     }
 }

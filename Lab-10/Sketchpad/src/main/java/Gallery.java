@@ -1,9 +1,9 @@
-import java.awt.*;
+import java.util.List;
 import java.util.ArrayList;
 
 public class Gallery {
     protected Canvas canvas;
-    protected ArrayList<Shape> shapes;
+    protected List<Shape> shapes;
 
     public Gallery(Canvas canvas) {
         this.canvas = canvas;

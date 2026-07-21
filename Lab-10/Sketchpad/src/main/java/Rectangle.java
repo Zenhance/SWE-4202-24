@@ -27,6 +27,7 @@ public class Rectangle extends Shape {
         if(area()<1){
             throw new ShapeTooSmallException();
         }
+        canvas.rectangle(width,height);
 
     }
 }
