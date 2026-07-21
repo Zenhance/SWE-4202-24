@@ -29,7 +29,7 @@ public class Circle extends Shape {
         if(area()<1){
             throw new ShapeTooSmallException();
         }
-
+        canvas.circle(radius);
 
     }
 }

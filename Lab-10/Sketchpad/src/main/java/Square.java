@@ -17,14 +17,5 @@ public class Square extends Rectangle {
         this.width = width;
     }
 
-    @Override
-    public void draw(Canvas canvas) throws ShapeException {
-        if (area() > canvas.capacity()) {
-            throw new ShapeTooLargeException();
-        }
 
-        if (area() < 1) {
-            throw new ShapeTooSmallException();
-        }
-    }
 }

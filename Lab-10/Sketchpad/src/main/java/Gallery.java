@@ -1,6 +1,8 @@
+import java.util.List;
+import java.util.ArrayList;
 public class Gallery {
     protected Canvas canvas;
-    protected ArrayList<Shape> shapes;
+    protected List<Shape> shapes;
 
     public Gallery(Canvas canvas) {
         this.canvas = canvas;
@@ -18,18 +20,22 @@ public class Gallery {
     public void render(){
         int drawn=0;
         int skipped=0;
+        ArrayList<String> skip=new ArrayList<>();
         for(Shape s: shapes){
             try{
                 s.draw(canvas);
                 drawn++;
             } catch (ShapeException e) {
                 skipped++;
-                System.out.println(e.getMessage());
-
+                skip.add(e.getMessage());
             }
         }
         System.out.println("Drawn: "+drawn);
         System.out.println("Skipped: "+skipped);
+
+        for(String s: skip){
+            System.out.println(s);
+        }
         canvas.show();
 
     }
