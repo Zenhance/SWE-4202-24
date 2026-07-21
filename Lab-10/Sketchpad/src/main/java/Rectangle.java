@@ -22,4 +22,12 @@ public class Rectangle extends Shape{
         requirePositive((height,"Height"));
         this.height = height;
     }
+    @Override
+    public double area(){
+        return width*height;
+    }
+    @Override
+    protected void paint(Canvas canvas){
+        canvas.rectangle(width, height);
+    }
 }
