@@ -7,6 +7,7 @@ public class Gallery {
     private final List<String> skippedReasons=new ArrayList<>();
     private int drawnCount =0;
 
+
     public void add(Shape shape){
         shapes.add(shape);
     }
