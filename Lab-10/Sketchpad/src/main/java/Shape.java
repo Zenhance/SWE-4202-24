@@ -36,5 +36,7 @@ public abstract class Shape {
          construct it.
 
     3. One method you overrode even though the parent implemented it, and why.
+    Ans:
+
     4. One method you deliberately did not override, and why.
 */
