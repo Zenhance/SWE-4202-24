@@ -1,5 +1,5 @@
 public class Square extends Rectangle {
-    double i,j;
+
     public Square(double i) {
         super(i,i);
     }

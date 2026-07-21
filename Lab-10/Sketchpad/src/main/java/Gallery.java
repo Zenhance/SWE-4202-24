@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 public class Gallery {
     private ArrayList<Shape> shapes= new  ArrayList<>();
+    int i=0;
     Canvas canvas;
 
     public Gallery(Canvas canvas) {
@@ -9,17 +10,14 @@ public class Gallery {
     }
 
     public void add(Shape shape) {
-        try {shapes.add(shape);}
-        catch(Exception e) {
-            if(e instanceof IllegalArgumentException)
-            {
-                System.out.println("Invalid shape");
-            }
-            if(e instanceof CheckedExceptions)
-            {
-                System.out.println("this shape cannot be drawn right now");
-            }
+        shapes.add(shape);
+
+        if(shapes.get(i).area()>800||shapes.get(i).area()<1) {
+            shapes.remove(i);
+            i--;
         }
+        i++;
+
     }
 
     public int waiting() {
@@ -29,7 +27,7 @@ public class Gallery {
 
     public void render() {
         for (Shape shape : shapes) {
-            if(shape instanceof Square) canvas.rectangle(((Square) shape).i,((Square) shape).j);
+
             if(shape instanceof Circle) canvas.circle(((Circle) shape).radius);
             if(shape instanceof Rectangle) canvas.rectangle(((Rectangle) shape).i,((Rectangle) shape).j);
         }

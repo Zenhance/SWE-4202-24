@@ -12,15 +12,21 @@ public class Circle extends Shape {
 
     public Circle(double i){
         super();
-        try {radius=i;}
+        try {
+            if(i<0) throw new IllegalArgumentException();
+
+            radius=i;
+        }
         catch(Exception e) {
+
             if(e instanceof IllegalArgumentException)
             {
                 System.out.println("Invalid shape");
             }
             if(e instanceof CheckedExceptions)
             {
-                System.out.println("this shape cannot be drawn right now");
+                System.out.println("This this shape cannot be drawn right now");
+
             }
 
 
