@@ -7,22 +7,12 @@ public class Square extends Rectangle {
         return getWidth();
     }
 
-    public void setWidth(double width) {
-        if (width <= 0) {
-            throw new IllegalArgumentException("Width must be positive ");
+    public void setSide(double side) {
+        if (side <= 0) {
+            throw new IllegalArgumentException("Side must be positive: " + side);
         }
-        this.width = width;
-    }
-
-    public double getHeight() {
-        return height;
-    }
-
-    public void setHeight(double height) {
-        if (width <= 0) {
-            throw new IllegalArgumentException("Height must be positive ");
-        }
-        this.height = height;
+        super.setWidth(side);
+        super.setHeight(side);
     }
 
     @Override
