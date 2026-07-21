@@ -7,7 +7,9 @@ public class Circle extends Shape{
         this.radius=radius;
     }
 
-
+    public double getRadius() {
+        return radius;
+    }
 
     @Override
     public double calculateArea(){
