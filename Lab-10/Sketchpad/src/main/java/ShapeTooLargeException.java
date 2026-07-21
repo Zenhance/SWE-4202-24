@@ -1,5 +1,5 @@
 public class ShapeTooLargeException extends ShapeException {
-    public ShapeTooLargeException(String message) {
+    public ShapeTooLargeException() {
         super("too large for 800");
     }
 }

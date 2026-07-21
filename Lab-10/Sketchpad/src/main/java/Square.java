@@ -20,11 +20,11 @@ public class Square extends Rectangle {
     @Override
     public void draw(Canvas canvas) throws ShapeException {
         if (area() > canvas.capacity()) {
-            throw new ShapeTooLargeException("Square is too large");
+            throw new ShapeTooLargeException();
         }
 
         if (area() < 1) {
-            throw new ShapeTooSmallException("Square is too small");
+            throw new ShapeTooSmallException();
         }
     }
 }

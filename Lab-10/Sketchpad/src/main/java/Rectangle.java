@@ -26,11 +26,11 @@ public class Rectangle extends Shape {
     @Override
     public void draw(Canvas canvas) throws ShapeException {
         if (canvas.capacity() < area()) {
-            throw new ShapeTooLargeException("Rectangle is too large");
+            throw new ShapeTooLargeException();
         }
 
         if (area() < 1) {
-            throw new ShapeTooSmallException("Rectangle is too small");
+            throw new ShapeTooSmallException();
         }
 
     }
