@@ -38,3 +38,7 @@ public class Gallery {
     }
 
 }
+//1. The class Shape is abstract because it has no drawable form or area formula of its own which means only concrete shapes(circle,rectangle,square) can meaningfully exist.
+//2. I left Rectangle concrete because a rectangle is itself a valid, drawable shape, and it also serves as the parent of Square, and a class can be both.
+//3. I overrode width/height in Sqaure because Rectangle's versions would let it break the square invariant.
+//4. I deliberately did not override the area() in Square because Rectangle's width* height formula already gives the correct square of s when both sides are kept equal.
