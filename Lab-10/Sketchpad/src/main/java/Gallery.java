@@ -1,8 +1,9 @@
 import java.util.ArrayList;
 
 public class Gallery {
-    Canvas c;
-    ArrayList<Shape> shapes = new ArrayList<>();
+    private Canvas c;
+    private ArrayList<Shape> shapes = new ArrayList<>();
+    private ArrayList<String> skipped = new ArrayList<>();
 
 
     Gallery(Canvas c){
@@ -10,16 +11,37 @@ public class Gallery {
     }
 
     public void add(Shape s){
-        if(s.getWidth() > c.width() || s.getHeight() > c.height() || s.area() > c.capacity())
+        if(s.getWidth() > c.width() || s.getHeight() > c.height() || s.area() > c.capacity()){
+            skipped.add(s.toString()+ "was too large");
             throw new ShapeTooLarge("Shape too large!");
+        }
 
-        if(s.area() < 1)
+
+        if(s.area() < 1) {
+            skipped.add(s.toString()+ "was too large");
             throw new ShapeTooSmall("Shape too small");
+        }
 
         shapes.add(s);
     }
 
-    public String waiting(){return shapes.toString();}
+    public String waiting(){
+        String out = "In waiting:"
+        for(Shape s: shapes){
+            out += (s.toString());
+        }
 
-    public void render(){shapes.clear();}
+        out += "\nSkipped";
+        for(String k: skipped){
+            out += k;
+        }
+
+                }
+
+    public void render(){
+        for(Shape s: shapes){
+            System.out.println(s.toString() + "is drawn");
+        }
+        shapes.clear();
+    }
 }
