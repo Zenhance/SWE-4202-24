@@ -10,7 +10,5 @@ public class SendMoney extends Transaction{
     }
 
     @Override
-    protected double debitAmount() {
-        return debitAmount();
-    }
+
 }
