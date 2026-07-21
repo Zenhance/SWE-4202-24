@@ -27,4 +27,14 @@ public class Rectangle extends Shape{
     public void setWidth(double height){
         this.height=height;
     }
+
+    @Override
+    public double area(){
+        return height*width;
+    }
+
+    @Override
+    public void paint(Canvas canvas){
+        canvas.rectangle(width,height);
+    }
 }
