@@ -17,3 +17,23 @@ public class Gallery {
     public int waiting() {
         return shapes.size();
     }
+
+    public void render(){
+    for (Shape s : shapes)
+    try {
+        s.draw(canvas);
+    }
+    catch (ShapeException e){
+
+    }
+
+    }
+}
+
+
+
+
+
+
+
+
