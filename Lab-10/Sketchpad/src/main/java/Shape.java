@@ -4,7 +4,7 @@ public abstract class Shape {
     public abstract String describe();
     public abstract void draw(Canvas canvas) throws DrawException;
 
-    public void checkFit() throws DrawException {
+    public void checkFit(Canvas canvas) throws DrawException {
         double a = area();
 
         if (a < 1.0) {
