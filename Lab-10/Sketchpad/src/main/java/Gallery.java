@@ -26,21 +26,21 @@ public class Gallery {
     }
 
     public String waiting(){
-        String out = "In waiting:"
+        String out = "In waiting:\n";
         for(Shape s: shapes){
-            out += (s.toString());
+            out += (s.toString()+"\n");
         }
 
         out += "\nSkipped";
         for(String k: skipped){
-            out += k;
+            out += (k+"\n");
         }
 
-                }
+                return  out;}
 
     public void render(){
         for(Shape s: shapes){
-            System.out.println(s.toString() + "is drawn");
+            System.out.println(s.toString() + " is drawn");
         }
         shapes.clear();
     }
