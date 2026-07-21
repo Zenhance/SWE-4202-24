@@ -1,4 +1,4 @@
-public class Rectangle {
+public class Rectangle extends Shape {
 
     protected double width;
     protected double height;
