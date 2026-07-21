@@ -10,16 +10,21 @@ public class Rectangle extends Shape {
             this.height = height;
         }
     }
-    public void draw(Canvas canvas) {
-        canvas.rectangle(width,height);
+    public void draw(Canvas canvas) throws ShapeException {
+        if (area() > canvas.capacity())
+            throw new ShapeTooLargeException("Shape too large exception");
+        if (area() < 1.0)
+            throw new ShapeTooSmallException("Shape too small exception");
+        canvas.rectangle(width, height);
     }
+
 
     public double area() {
         return width * height;
     }
 
     public String describe() {
-        return "Rectangle(" + width + ", " + height + ")";
+        return String.format("Rectangle(%f, %f)", getWidth(), getHeight());
     }
 
     public double getWidth() {
