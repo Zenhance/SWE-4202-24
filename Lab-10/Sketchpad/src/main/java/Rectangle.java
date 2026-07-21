@@ -20,4 +20,11 @@ public class Rectangle extends Shape{
     public double getHeight(){
         return height;
     }
+
+    public void setWidth(double width){
+        this.width=width;
+    }
+    public void setWidth(double height){
+        this.height=height;
+    }
 }
