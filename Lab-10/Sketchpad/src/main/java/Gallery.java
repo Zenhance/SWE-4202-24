@@ -19,7 +19,12 @@ public class Gallery {
 
     public void render() {
         for (Shape s : shapes) {
-            s.draw(canvas);
+            try {
+                s.draw(canvas);
+            }
+            catch (ShapeException e) {
+                System.out.println(e.getMessage());
+            }
         }
     }
 }
