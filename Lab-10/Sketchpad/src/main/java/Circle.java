@@ -8,4 +8,14 @@ public class Circle extends Shape{
         this.radius = radius;
     }
 
+    @Override
+    public double area(){
+        return PI*radius*radius;
+    }
+
+    @Override
+    public String describe() {
+        return "This is a circle with" + radius + "and area" + area();
+    }
+
 }
