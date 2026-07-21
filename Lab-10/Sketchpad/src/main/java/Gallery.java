@@ -54,3 +54,23 @@ public class Gallery
         System.out.println(waiting() + " shape(s) still waiting to be drawn.");
     }
 }
+
+/*
+1.Shape is abstract because it stands for any shape at all with no area
+formula and nothing to paint of its own a bare shape is nonsense.So
+new Shape() must not compile.
+
+2.Rectangle is the parent I left concrete it is itself a real drawable
+shape and it doubles as the parent of Square since a square is a rectangle
+whose sides are always equal.
+
+3.I overrode setWidth and setHeight in Square even though Rectangle already
+implements them because Rectangle's versions would let a square resize
+one side without the other and stop being square the parent's behavior
+is simply wrong for this child.
+
+4.I deliberately did not override area() or description() in Square
+because Rectangle's width x height already equals side^2 when both sides
+are equal, so an override would just call super and add nothing.
+
+ */
