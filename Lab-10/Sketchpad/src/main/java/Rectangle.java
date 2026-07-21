@@ -3,6 +3,10 @@ public class Rectangle extends Shape{
     private double height;
 
     public Rectangle(double width, double height) {
+        if (width < 0)
+            throw new IllegalArgumentException("Width cannot be negative");
+        if (height < 0)
+            throw new IllegalArgumentException("Height cannot be negative");
         this.width = width;
         this.height = height;
     }
