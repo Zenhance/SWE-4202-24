@@ -7,13 +7,13 @@ public class Square extends Rectangle{
         return getWidth();
     }
 
-    public void setWidth(double width){
-        super.setWidth(width);
-        super.setHeight(width);
+    public void setWidth(double side){
+        super.setWidth(side);
+        super.setHeight(side);
     }
 
-    public void setHeight(double height){
-        super.setHeight(height);
-        super.setWidth(height);
+    public void setHeight(double side){
+        super.setHeight(side);
+        super.setWidth(side);
     }
 }

@@ -11,7 +11,7 @@ public class Rectangle extends Shape{
 
     private static void validate(double value,String name){
         if(value<=0){
-            throw new IllegalArgumentException("Rectangle"+name+"must be positve");
+            throw new IllegalArgumentException("Rectangle must be positive");
         }
     }
 
@@ -23,13 +23,13 @@ public class Rectangle extends Shape{
         return height;
     }
 
-    public void setWidth(int width) {
+    public void setWidth(double width) {
         validate(width,"width");
         this.width = width;
     }
 
-    public void setHeight(int height) {
-        validate(height,"height")
+    public void setHeight(double height) {
+        validate(height,"height");
         this.height = height;
     }
 
@@ -42,6 +42,6 @@ public class Rectangle extends Shape{
     }
 
     public void draw(Canvas canvas) {
-
+        canvas.rectangle(width,height);
     }
 }
