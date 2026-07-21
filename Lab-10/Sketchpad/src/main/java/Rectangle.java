@@ -3,11 +3,13 @@ public class Rectangle extends Shape{
     private double height;
 
     public Rectangle (int width, int height){
+        validate(width,"width");
+        validate(height,"height");
        this.width=width;
        this.height=height;
     }
 
-    private void validate(double value,String name){
+    private static void validate(double value,String name){
         if(value<=0){
             throw new IllegalArgumentException("Rectangle"+name+"must be positve");
         }
@@ -22,10 +24,12 @@ public class Rectangle extends Shape{
     }
 
     public void setWidth(int width) {
+        validate(width,"width");
         this.width = width;
     }
 
     public void setHeight(int height) {
+        validate(height,"height")
         this.height = height;
     }
 
@@ -37,5 +41,7 @@ public class Rectangle extends Shape{
         return null;
     }
 
+    public void draw(Canvas canvas) {
 
+    }
 }
