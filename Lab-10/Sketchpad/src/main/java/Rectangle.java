@@ -11,8 +11,12 @@ public class Rectangle {
         this.width = width;
         this.height = height;
     }
-
+    @Override
     public double area() {
         return width*height;
+    }
+    @Override
+    public String describe() {
+        return String.format("Rectangle [w = %.2f, h = %.2f]", width, height);
     }
 }
