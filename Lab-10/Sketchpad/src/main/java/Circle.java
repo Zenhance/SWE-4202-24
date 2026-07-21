@@ -18,9 +18,9 @@ public class Circle extends Shape{
         return String.format(Circle(radius=%.2f,area=%.2f),radius,area();
     }
     @Override
-    public void draw(Canvas canva)throws ShapeException{
+    public void draw(Canvas canvas)throws ShapeException{
         double diameter=radius*2;
-        if(diameter>canva.getHeight || diameter>canva.getWidth)
+        if(diameter>canvas.getHeight || diameter>canvas.getWidth)
             throw new ShapeTooLargeException("Invalid");
         if(diameter<1)
             throw new ShapeTooSmallException("Invalid");
