@@ -1,5 +1,9 @@
+import java.util.ArrayList;
+
 public class Gallery {
     Canvas c;
+    ArrayList<Shape> shapes = new ArrayList<>();
+
 
     Gallery(Canvas c){
         this.c=c;
@@ -11,9 +15,11 @@ public class Gallery {
 
         if(s.area() < 1)
             throw new ShapeTooSmall("Shape too small");
+
+        shapes.add(s);
     }
 
-    public String waiting(){return "idk";}
+    public String waiting(){return shapes.toString();}
 
-    public void render(){}
+    public void render(){shapes.clear();}
 }

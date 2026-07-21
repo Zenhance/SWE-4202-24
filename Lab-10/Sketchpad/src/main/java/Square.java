@@ -5,8 +5,11 @@ public class Square extends Rectangle{
 
     @Override
     public String describe(){
-        return "smth";
+        return "Area: "+area();
     }
 
-    public void setWidth(double d){}
+    public void setWidth(double d){
+        width = d;
+        height = d;
+    }
 }
