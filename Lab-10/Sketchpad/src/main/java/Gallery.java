@@ -31,7 +31,7 @@ public class Gallery {
                 drawnCount++;
             } catch (ShapeException e) {
                 skippedShapes.add(shape);
-                skippedShapes.add(e);
+                skippedReasons.add(e);
             }
         }
         System.out.println("Gallery Report:");
