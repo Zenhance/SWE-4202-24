@@ -18,7 +18,11 @@ public abstract class Rectangle extends Shape{
 
     @Override
     public void draw(Canvas canvas) throws ShapeException{
-        if(area()> canvas.capacity()) throw new ShapeTooLargeException("Shape too large");
+        if(area()> canvas.capacity())
+            throw new ShapeTooLargeException("Shape too large");
+        if(area()<1.0)
+            throw new ShapeTooSmallException("Shape too small");
+        canvas.rectangle(width,height);
     }
 
     @Override
