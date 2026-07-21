@@ -18,8 +18,13 @@ public class Gallery {
             }
         }
     }
-
-
-
+    public void report(Canvas canvas){
+        System.out.println("Drawn:  "+drawnCount);
+        System.out.println("Skipped: "+ skippedReasons.size());
+        for(String reason : skippedReasons){
+            System.out.println(" - "+ reason);
+        }
+        canvas.show();
+    }
 
 }
