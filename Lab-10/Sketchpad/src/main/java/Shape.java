@@ -2,5 +2,5 @@ public abstract class Shape {
     public abstract int area();
     public abstract String describe();
 
-    public abstract void draw();
+    public abstract void draw(Canvas canvas);
 }
