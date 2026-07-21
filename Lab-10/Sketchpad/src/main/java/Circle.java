@@ -1,5 +1,7 @@
 public class Circle extends Shape{
 
+    private double radius;
+
     @Override
     public abstract double area();
 
