@@ -19,6 +19,8 @@ public class Gallery {
     }
 
     public void render() {
-
+        for (Shape s : shapes) {
+            s.draw(canvas);
+        }
     }
 }
