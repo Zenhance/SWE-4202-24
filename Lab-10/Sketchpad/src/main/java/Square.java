@@ -9,4 +9,7 @@ public class Square extends Rectangle{
         return "This is a square with length "+length;
     }
 
+    public void setLength(double length) {
+        this.length = length;
+    }
 }
