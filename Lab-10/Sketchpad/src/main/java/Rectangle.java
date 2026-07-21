@@ -16,4 +16,22 @@ public class Rectangle extends Shape{
         if(height<=0) throw new IllegalArgumentException("height must be +ve ");
         this.height=height;
     }
+
+    @Override
+    public double area(){
+        return width*height;
+    }
+
+    @Override
+    public String describe(){
+        return String.format("Rectangle(&.2f x %.2f. area=%.2f)", width,height,area());
+    }
+
+    @Override
+    public void draw(Canvas canvas) throws ShapeTooLargeException,ShapeTooSmallException{
+        double area = area();
+        if(area>canvas.capacity()) throw new ShapeTooLargeException(describe() + " too large ");
+        if(area<1)throw new ShapeTooSmallException(describe() + " too small ");
+        canvas.rectangle(width,height);
+    }
 }
