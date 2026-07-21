@@ -1,2 +1,2 @@
-public class Square {
+public abstract class Square extends Shape {
 }
