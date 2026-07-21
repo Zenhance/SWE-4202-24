@@ -1,2 +1,2 @@
-public class Shape {
+public abstract class Shape {
 }
