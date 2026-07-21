@@ -1,12 +1,22 @@
 public class Rectangle extends Shape{
+    private double length;
+    private double width;
+public Rectangle(double length,double width){
+    if (length<=0||width<0){
+        throw new IllegalArgumentException("Length or width cannot be negative");
+    }
+    this.length=length;
+    this.width=width;
+}
+
     @Override
     public double area() {
-        return 0;
+        return length*width;
     }
 
     @Override
     public String describe() {
-        return "";
+        return String.format("Rectangle(Length=%.2f,Width=%.2f,Area=%.2f",length,width,area());
     }
 
     @Override
