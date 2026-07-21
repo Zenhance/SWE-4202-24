@@ -42,5 +42,7 @@ public class Gallery {
         }
 
         canvas.show();
+
+
     }
 }
