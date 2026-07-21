@@ -23,7 +23,6 @@ public class Rectangle extends Shape{
         if (area() < 1.0)
             throw new ShapeTooSmallException("Shape too small exception");
         canvas.rectangle(width, height);
-        canvas.show();
     }
 
     @Override

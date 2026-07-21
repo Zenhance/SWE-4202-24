@@ -26,5 +26,11 @@ public class Gallery {
                 System.out.println(e.getMessage());
             }
         }
+
+        canvas.show();
     }
 }
+// Q1.Which class is abstract, and why nobody may construct it.
+// Ans: for my case, Shape and ShapeException classes are abstract.
+//      a shape without any definition of how it looks should not be constructed
+//        and ShapeException is
