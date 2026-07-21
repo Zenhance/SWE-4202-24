@@ -1,5 +1,5 @@
-public class ShapeTooLargeException extends Exception {
+public class ShapeTooLargeException extends CheckedExceptions {
     public ShapeTooLargeException() {
-        super("Shape too large. area bigger than canvas.");
+        super();
     }
 }

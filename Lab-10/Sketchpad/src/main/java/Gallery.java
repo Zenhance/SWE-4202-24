@@ -9,11 +9,21 @@ public class Gallery {
     }
 
     public void add(Shape shape) {
-        shapes.add(shape);
+        try {shapes.add(shape);}
+        catch(Exception e) {
+            if(e instanceof IllegalArgumentException)
+            {
+                System.out.println("Invalid shape");
+            }
+            if(e instanceof CheckedExceptions)
+            {
+                System.out.println("this shape cannot be drawn right now");
+            }
+        }
     }
 
-    public boolean waiting() {
-        return shapes.isEmpty();
+    public int waiting() {
+        return shapes.size();
 
     }
 
@@ -23,5 +33,6 @@ public class Gallery {
             if(shape instanceof Circle) canvas.circle(((Circle) shape).radius);
             if(shape instanceof Rectangle) canvas.rectangle(((Rectangle) shape).i,((Rectangle) shape).j);
         }
+        canvas.show();
     }
 }

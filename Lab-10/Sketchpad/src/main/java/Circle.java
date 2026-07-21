@@ -10,11 +10,19 @@ public class Circle extends Shape {
         return "This is a Circle with radius " + radius+"And Area"+this.area();
     }
 
-    public Circle(double i) throws ShapeTooSmallException, ShapeTooLargeException {
+    public Circle(double i){
         super();
-        if(i<0) throw new IllegalArgumentException();
-        if(i*i*Math.PI< 1)  throw new ShapeTooSmallException();
-        if(i*i*Math.PI>800) throw  new ShapeTooLargeException();
-        this.radius = i;
+        try {radius=i;}
+        catch(Exception e) {
+            if(e instanceof IllegalArgumentException)
+            {
+                System.out.println("Invalid shape");
+            }
+            if(e instanceof CheckedExceptions)
+            {
+                System.out.println("this shape cannot be drawn right now");
+            }
+
+
     }
-}
+}}

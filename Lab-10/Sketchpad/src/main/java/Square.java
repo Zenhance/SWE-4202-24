@@ -1,6 +1,6 @@
 public class Square extends Rectangle {
     double i,j;
-    public Square(double i) throws ShapeTooSmallException, ShapeTooLargeException {
+    public Square(double i) {
         super(i,i);
     }
 
