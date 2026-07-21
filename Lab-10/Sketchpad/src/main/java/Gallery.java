@@ -26,15 +26,10 @@ public class Gallery {
                 }
             }
             System.out.println("Gallery Report");
-
             System.out.println("-----------------------");
-
             System.out.println("Drawn   : " + drawn);
-
             System.out.println("Skipped : " + skipped);
-
             if (!skippedShapes.isEmpty()) {
-
                 System.out.println("\nSkipped Shapes:");
                 for (String s : skippedShapes) {
                     System.out.println(s);
