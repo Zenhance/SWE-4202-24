@@ -1,10 +1,7 @@
 public abstract class Shape {
     public abstract double area();
 
-    public String describe(){
-        return String.format("%s [area=%.2f]",getClass().getSimpleName(),area());
-    }
-
+    public abstract String describe();
     public abstract void draw(Canvas canvas) throws ShapeException;
 
     protected void check(Canvas canvas)throws ShapeException{
