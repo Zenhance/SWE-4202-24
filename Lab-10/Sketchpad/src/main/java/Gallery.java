@@ -33,3 +33,17 @@ public class Gallery {
         canvas.show();
     }
 }
+
+/*
+1.Which class is abstract, and why nobody may construct it.
+ans: Shape class is abstract class. circle , rectangle, square are shape's but shape in and itself is not a shape that can be drawn. so nobody should construct it.
+
+2.Which parent class you left concrete, and why.
+ans: I have left rectangle parent class concrete because it be constructed and it is a parent class.
+
+3. One method you overrode even though the parent implemented it, and why.
+ans: I have overrode describe method because it describes each shape , so unique implementation is needed.
+
+4. One method you deliberately did not override, and why.
+ans: I have not overriden the area method in square because it can use the same method because it can use the same method from rectangle.
+ */
