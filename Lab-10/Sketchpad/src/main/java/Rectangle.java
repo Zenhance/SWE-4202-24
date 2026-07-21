@@ -16,12 +16,26 @@ public abstract class Rectangle extends Shape{
         return String.format("Rectangle(%.2f, %.2f)", getWidth(), getHeight());
     }
 
+    @Override
+    public double area(){
+        return width*height;
+    }
+
     public double getWidth(){
         return width;
     }
 
     public double getHeight(){
         return  height;
+    }
+
+    public void setWidth(double width){
+        this.width=width;
+
+    }
+
+    public void setHeight(double height){
+        this.height=height;
     }
 
 
