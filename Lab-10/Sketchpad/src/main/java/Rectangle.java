@@ -35,5 +35,15 @@ public class Rectangle extends Shape
         }
         this.height = newHeight;
     }
-
+    @Override
+    public double area()
+    {
+        return width * height;
+    }
+    @Override
+    public void draw(Canvas canvas) throws ShapeDrawException
+    {
+        checkFits(canvas);
+        canvas.rectangle(width, height);
+    }
 }
