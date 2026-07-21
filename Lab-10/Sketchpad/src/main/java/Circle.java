@@ -11,7 +11,7 @@ public class Circle extends Shape {
     }
 
     public void setRadius(double radius) {
-        if (radius <=) {
+        if (radius <= 0) {
             throw new IllegalArgumentException("Radius: " + radius + " has to be positive");
         }
         this.radius = radius;
