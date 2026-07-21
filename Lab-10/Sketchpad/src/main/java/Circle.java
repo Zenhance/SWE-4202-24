@@ -1,8 +1,8 @@
 public class Circle extends Shape{
-    private double radius;
+    private final double radius;
     public Circle(double radius){
         if(radius<=0){
-            throw new IllegalArgumentException("Invalid radius");
+            throw new IllegalArgumentException("Invalid radius");}
             this.radius=radius;
         }
         @Override
@@ -15,13 +15,13 @@ public class Circle extends Shape{
         }
 
         @Override
-                public void draw(Canvas canvas){
+                public void draw(Canvas canvas)
             throws ShapeException{
                 if(radius<0.5) throw new ShapeTooSmallException
                     ("Circle too small");
-            }
+          if(Math.PI*radius*radius>canvas.capacity()) throw new ShapeTooLargeException("Circle too large");
 
-            canvas.drawCircle(radius);
+            canvas.circle(radius);
         }
     }
-}
+

@@ -4,7 +4,7 @@ public class Rectangle extends Shape {
 
     public Rectangle(double width, double height) {
         if (width <= 0 || height <= 0)
-            IllegalArgumentException("Invalid size");
+           throw new IllegalArgumentException("Invalid size");
         this.width = width;
         this.height = height;
 
@@ -28,10 +28,10 @@ public class Rectangle extends Shape {
     }
 
     @Override
-    public void raw(Canvas canvas) throws ShapeException {
+    public void draw(Canvas canvas) throws ShapeException {
         if (width < 1 || height < 1) throw new ShapeTooSmallException("Rectangle too small");
-
-
-        canvas.drawRectangle(width, height);
+        if(width*height> canvas.capacity()) throw new ShapeTooLargeException("Rectangle too large");
+        canvas.rectangle(width,height);
+        canvas.rectangle(width, height);
     }
 }
