@@ -6,6 +6,13 @@ public class Rectangle extends Shape {
         this.width = width;
         this.height = height;
     }
+    public void draw(Canvas canvas) {
+        canvas.rectangle(width,height);
+    }
+
+    public double area() {
+        return width * height;
+    }
 
     public String describe() {
         return "Rectangle(" + width + ", " + height + ")";
