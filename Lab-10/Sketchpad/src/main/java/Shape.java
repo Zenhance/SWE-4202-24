@@ -8,11 +8,11 @@ public abstract class Shape {
         double a = area();
 
         if (a < 1.0) {
-            throw new ShapeTooSmallException("area is too small");
+            throw new ShapeTooSmallException(describe() + "area is too small");
         }
 
         if (a > canvas.capacity()) {
-            throw new ShapeTooLargeException("area exceeds canvas capacity");
+            throw new ShapeTooLargeException(describe() + "area exceeds canvas capacity");
         }
 
     }
