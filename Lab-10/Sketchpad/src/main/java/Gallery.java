@@ -32,5 +32,9 @@ public class Gallery {
                 skippedShapes.add(shape.describe() + " -> " + e.getMessage());
             }
         }
+
+        System.out.println("=== GALLERY REPORT ===");
+        System.out.println("Shapes Drawn: " + drawn);
+        System.out.println("Shapes Skipped: " + skippedShapes.size());
     }
 }
