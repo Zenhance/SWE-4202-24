@@ -14,7 +14,7 @@ public class Main {
 
     public static void main(String[] args) {
         Canvas canvas = new Canvas(40, 20);   // capacity = 40 * 20 = 800 cells
-        Gallery gallery = new Gallery(canvas);
+        main.java.Gallery gallery = new main.java.Gallery(canvas);
 
         // A mixed pile: three fit, two the canvas must refuse.
         gallery.add(new Circle(4));          // area ~50   -> fits

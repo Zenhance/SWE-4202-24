@@ -1,5 +1,6 @@
 package main.java;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,7 +12,7 @@ public class Gallery {
         this.canvas = canvas;
     }
 
-    public void add(Shape shape) {
+    public void add(Rectangle shape) {
         shapes.add(shape);
     }
     public int waiting() {

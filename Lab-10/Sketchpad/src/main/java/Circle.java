@@ -1,3 +1,5 @@
+import java.awt.Canvas;
+
 public class Circle extends Shape{
     public final double radius;
     public Circle(double radius) {
@@ -12,11 +14,12 @@ public class Circle extends Shape{
     public String describe() {
         return String.format ("Circle(radius=%.2f, area=%.2f)", radius, area());
     }
+
     @Override
-    public void draw(Canvas canvas) throws ShapeException{
+    public void draw(Canvas canvas) throws ShapeException, InterruptedException {
         double area =area();
-        if (area > canvas.capacity()) throw new ShapeTooLargeException(describe() + " does not fit in canvas of capacity " + canvas.capacity());
+        if (area > canvas.wait()) throw new ShapeTooLargeException(describe() + " does not fit in canvas of capacity " + canvas.wait());
         if (area < 1) throw new ShapeTooSmallException(describe() + " is too small to cover even one cell");
-        canvas.circle(radius);
+        canvas.size();
     }
 }
