@@ -8,5 +8,10 @@ public class Gallery {
     public Gallery(Canvas canvas) {
         this.canvas = canvas;
     }
-
+    public void add(Shape shape) {
+        shapes.add(shape);
+    }
+    public int waiting() {
+        return shapes.size();
+    }
 }
