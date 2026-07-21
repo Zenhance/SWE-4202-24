@@ -41,3 +41,9 @@ public class Gallery {
     }
 
 }
+/*
+ * 1- The Shape method is abstract cause shape has no dimention or area of it's own
+ * 2- The Rectangle parent class is a concrete class because square is-A type of rectangle
+ * 3- setWidth() was overridden cause if only the width is modified and the height is same,then it will become a rectangle
+ *    so,both needs to be same
+ * 4- area() and draw() method need not to be overridden because it is already in parent class Rectangle working the same thing     */
