@@ -14,7 +14,7 @@ public class MerchantWallet extends Wallet{
         if(transaction instanceof SendTransaction){
             throw new OperationNotAllowedException("Merchant wallets cannot send money.");
         }
-        if(transaction instanceof CashOuttransaction){
+        if(transaction instanceof CashOutTransaction){
             throw new OperationNotAllowedException("Merchant wallets cannot cash out.");
         }
         //PaymentTransaction and TopUpTransaction are allowed.
