@@ -3,7 +3,7 @@ import java.util.List;
 
 public class Gallery {
    private Canvas canvas;
-   private final List<Shape> shapes=new ArrayList<>();
+   private final ArrayList<Shape> shapes=new ArrayList<>();
 
    public Gallery(Canvas canvas){
        this.canvas=canvas;
