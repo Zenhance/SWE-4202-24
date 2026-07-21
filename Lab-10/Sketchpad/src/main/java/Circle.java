@@ -16,11 +16,11 @@ public class Circle extends Shape {
         this.radius = radius;
     }
     @Override
-    public double area(double r) {
-        if(r <= 0){
-            throw new IllegalArgumentException("r must be positive");
+    public double area() {
+        if(radius <= 0){
+            throw new IllegalArgumentException("radius must be positive");
         }
-        return Math.PI * Math.pow(r, 2);
+        return Math.PI * Math.pow(radius, 2);
     }
 
     @Override
