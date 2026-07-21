@@ -24,7 +24,7 @@ public class Gallery {
                shape.draw(canvas);
            } catch (ShapeException e) {
                skipped++;
-               arg += "  skipped " + shape.describe() + " — " + e.getMessage() + "\n";
+               arg += "  skipped " + shape.describe() + " " + e.getMessage() + "\n";
            }
 
        }
