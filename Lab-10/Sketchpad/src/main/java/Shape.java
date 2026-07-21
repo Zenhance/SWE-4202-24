@@ -21,5 +21,5 @@ public abstract class Shape {
         }
     }
 
-    public abstract String description();
+    public abstract String describe();
 }

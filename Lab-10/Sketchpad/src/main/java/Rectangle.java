@@ -29,6 +29,6 @@ public class Rectangle extends Shape {
     }
 
     @Override
-    public String description(){
+    public String describe(){
         return "Rectangle";}
 }

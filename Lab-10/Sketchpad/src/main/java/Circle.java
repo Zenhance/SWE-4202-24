@@ -17,7 +17,7 @@ public class Circle extends Shape{
     }
 
     @Override
-    public String description(){
+    public String describe(){
         return "Circle";
     }
 }
