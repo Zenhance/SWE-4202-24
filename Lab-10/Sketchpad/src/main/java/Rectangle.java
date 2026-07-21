@@ -21,6 +21,18 @@ public class Rectangle extends Shape {
         return height;
     }
 
+    public void setWidth(double width) {
+        if (width <= 0) {
+            throw new IllegalArgumentException("Width must be positive");
+        }
+
+        this.width = width;
+    }
+
+    public void setHeight(double height) {
+
+    }
+
     @Override
     public double area() {
         return width*height;
