@@ -14,6 +14,16 @@ public class Rectangle extends Shape{
     public double getHeight(){
         return Height;
     }
+    public double setHeight(double height){
+        if(height<1)
+            throw new IllegalArgumentException("Invalid");
+        this.height=height;
+    }
+    public double setWidth(double width){
+        if(width<1)
+            throw new IllegalArgumentException("Invalid");
+        this.width=width;
+    }
     @Override
     public double area(){
         return width*height;
