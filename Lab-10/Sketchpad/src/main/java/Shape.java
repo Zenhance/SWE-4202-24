@@ -1,7 +1,7 @@
 public abstract class Shape {
     public abstract double area();
     public abstract String describe();
-    protected abstract void render(Canvas canvas);
+    protected abstract void render(Canvas canvas) throws ShapeTooLargeException,ShapeTooSmallException;
 
     public final void draw(Canvas canvas) throws ShapeTooLargeException,ShapeTooSmallException{
         double area=area();

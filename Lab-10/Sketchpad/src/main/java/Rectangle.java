@@ -12,11 +12,11 @@ public class Rectangle extends Shape{
         this.width=width;
 
     }
-    public double getLength(){
-        return length;
+    public void setLength(double newL){
+        length=newL;
     }
-    public double getWidth(){
-        return width;
+    public void setWidth(double newW){
+         width= newW;
     }
     public void resize(double newW, double newL){
         this.width=newW;
@@ -25,11 +25,11 @@ public class Rectangle extends Shape{
     public double area(){
     return length*width;
     }
-
+    @Override
     public String describe(){
         return String.format("Length %.2f , Width %.2f , area= %.2f",length,width,area());
     }
-
+    @Override
     public void render(Canvas canvas){
     canvas.rectangle(width,length);
     }
