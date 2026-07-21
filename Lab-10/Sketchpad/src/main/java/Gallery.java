@@ -4,7 +4,7 @@ public class Gallery {
     private final ArrayList<Shape> shapes;
     public Gallery(Canvas canvas){
         if(canvas == null){
-            throw new IllegalArgumentException("Canvas cannot be null.")
+            throw new IllegalArgumentException("Canvas cannot be null.");
         }
         this.canvas = canvas;
         this.shapes = new ArrayList<>();
@@ -51,3 +51,4 @@ public class Gallery {
         System.out.println("\nFinished Canvas:");
         canvas.show();
     }
+}

@@ -15,11 +15,11 @@ public class Rectangle extends Shape{
         return height;
     }
     public void setWidth(double width){
-        requirePositive((width,"Width"));
+        requirePositive(width,"Width");
         this.width = width;
     }
     public void setHeight(double height){
-        requirePositive((height,"Height"));
+        requirePositive(height,"Height");
         this.height = height;
     }
     @Override
