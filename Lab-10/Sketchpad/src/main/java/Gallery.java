@@ -15,4 +15,8 @@ public class Gallery {
     public double waiting() {
         return shapes.size();
     }
+
+    public void render() {
+
+    }
 }
