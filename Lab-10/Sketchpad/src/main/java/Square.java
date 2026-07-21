@@ -8,4 +8,5 @@ public class Square extends Rectangle
     {
         return getWidth();
     }
+
 }
