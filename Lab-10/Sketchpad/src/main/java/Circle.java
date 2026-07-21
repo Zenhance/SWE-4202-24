@@ -10,10 +10,18 @@ public class Circle extends Shape{
         return 3.14 *radius *radius;
     }
 
+    public double getRadius(){
+        return radius;
+    }
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
+
     @Override
     public String describe() {
-        return "";
+        return String.format("Circle(%.2f)", getRadius());
     }
+
 
 
 }
