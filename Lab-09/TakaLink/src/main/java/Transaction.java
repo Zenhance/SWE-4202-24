@@ -1,25 +1,22 @@
-// =====================================================================
-//  THE CONTRACTOR'S CODE -- part of the version you must REPAIR.
-// =====================================================================
-
-/**
- * Another public-field bag. new Transaction("SEND", -1000, ...) is a "send"
- * that PULLS a thousand taka out of the recipient -- a theft the type system
- * waves straight through, because nothing here is ever checked.
- */
+// Transaction.java
 public abstract class Transaction {
-    public String type;        // "SEND", "CASHOUT", "PAYMENT", "TOPUP"
+    // Legacy contractor public fields
+    public String type;
     public double amount;
     public String fromId;
     public String toId;
     public String pin;
 
-    public Transaction(String type, double amount, String fromId, String toId, String pin) {
+    // Direct wallet references initialized by the constructor
+    final Wallet from;
+    final Wallet to;
+
+    public Transaction(String type, Wallet from, Wallet to, double amount, String pin) {
         if (amount <= 0) {
             throw new IllegalArgumentException("Transaction amount must be positive.");
         }
-        if (fromId == null || fromId.isBlank() || toId == null || toId.isBlank()) {
-            throw new IllegalArgumentException("Wallet IDs cannot be null or blank.");
+        if (from == null || to == null) {
+            throw new IllegalArgumentException("Wallets cannot be null.");
         }
         if (pin == null) {
             throw new IllegalArgumentException("PIN cannot be null.");
@@ -27,9 +24,14 @@ public abstract class Transaction {
 
         this.type = type;
         this.amount = amount;
-        this.fromId = fromId;
-        this.toId = toId;
+
+        // FIX: Using the id() method instead of the private id property field
+        this.fromId = from.getId();
+        this.toId = to.getId();
+
         this.pin = pin;
+        this.from = from;
+        this.to = to;
     }
 
     public double amount() {
@@ -38,7 +40,32 @@ public abstract class Transaction {
 
     public abstract double fee();
 
+    abstract void executeMovement() throws InsufficientBalanceException;
+    abstract void validateOperationSpecifics() throws OperationNotAllowedException;
 
-    public void settle() {
+    public final void settle() throws TransactionException {
+        // 1. PIN Check
+        if (!from.verifyPin(pin)) {
+            throw new InvalidPinException("Incorrect PIN.");
+        }
+
+        // 2. Class specific rules (e.g. Merchant restrictions)
+        validateOperationSpecifics();
+
+        // 3. Daily limits check
+        if (amount > (from.dailyLimit() - from.spentToday)) {
+            throw new DailyLimitExceededException("Daily transaction limit exceeded.");
+        }
+
+        // 4. Total balance availability check
+        double totalDebit = amount + fee();
+        if (from.balance() - totalDebit < 0) {
+            throw new InsufficientBalanceException("Insufficient balance.");
+        }
+
+        // 5. Apply state changes atomically
+        from.debit(totalDebit);
+        executeMovement();
+        from.spentToday += amount;
     }
 }

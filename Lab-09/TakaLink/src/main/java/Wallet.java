@@ -3,7 +3,7 @@ public abstract class Wallet {
     private double balance;
     private final String pin;
     private boolean frozen;
-    private double spentToday;
+    double spentToday;
 
     public Wallet(String id, double balance, String pin) {
         if (id == null || id.isBlank() || balance < 0 || pin == null) {

@@ -21,6 +21,14 @@ public class SendMoney extends Transaction {
         super();
     }
 
+    public SendMoney(PersonalWallet a, PersonalWallet b, double v, String number) {
+        super();
+    }
+
+    public SendMoney(PersonalWallet a, PersonalWallet b, double v, String number) {
+        super();
+    }
+
     public void settle() {
     }
 }
