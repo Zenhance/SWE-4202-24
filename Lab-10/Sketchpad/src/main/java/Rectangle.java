@@ -19,5 +19,12 @@ public class Rectangle extends Shape
     {
         return height;
     }
-
+    public void setWidth(double newWidth)
+    {
+        if(newWidth <= 0)
+        {
+            throw new IllegalArgumentException("width must be positive, got " + newWidth);
+        }
+        this.width = newWidth;
+    }
 }
