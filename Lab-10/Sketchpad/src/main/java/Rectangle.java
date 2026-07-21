@@ -27,4 +27,9 @@ public class Rectangle extends Shape{
 
         canvas.rectangle(width, height);
     }
+
+    public void setWidth(int width) {
+        this.width = width;
+        this.height = width;
+    }
 }
