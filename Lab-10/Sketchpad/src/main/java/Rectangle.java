@@ -30,7 +30,11 @@ public class Rectangle extends Shape {
     }
 
     public void setHeight(double height) {
+        if (height <= 0) {
+            throw new IllegalArgumentException("Height must be positive");
+        }
 
+        this.height = height;
     }
 
     @Override
@@ -43,7 +47,7 @@ public class Rectangle extends Shape {
     }
 
     @Override
-    public void draw(Canvas canvas) {
+    public void draw(Canvas canvas) throws DrawException {
         checkFit(canvas);
         canvas.rectangle(width, height);
     }
