@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 public class Gallery{
     private final  Canvas canvas;
     private final ArrayList<Shape>shapes;
@@ -7,7 +8,7 @@ public class Gallery{
             throw new IllegalArgumentException("Invalid");
         }this.canvas=canvas;
         this.shapes=new ArrayList<>();
-        public void add(Shapee shape){
+        public void add(Shape shape){
             if(shape==null){
                 throw new IllegalArgumentException("Invalid");
             }
