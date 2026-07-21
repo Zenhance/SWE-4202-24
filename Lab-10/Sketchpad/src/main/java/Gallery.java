@@ -26,14 +26,18 @@ public class Gallery {
     }
 
     public String waiting(){
+        int count = 1;
         String out = "In waiting:\n";
         for(Shape s: shapes){
-            out += (s.toString()+"\n");
+            out += (count+". "+s.toString()+"\n");
+            count++;
         }
 
+        int skipCount = 1;
         out += "\nSkipped";
         for(String k: skipped){
-            out += (k+"\n");
+            out += (skipCount+k+"\n");
+            skipCount++;
         }
 
                 return  out;}
