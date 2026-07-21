@@ -20,4 +20,10 @@ public class Rectangle extends Shape{
         }
         this.width=width;
     }
+    public void setHeight(double height){
+        if(height<=0){
+            throw new IllegalArgumentException("height cannot be negative");
+        }
+        this.height=height;
+    }
 }
