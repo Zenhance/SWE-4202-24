@@ -33,8 +33,8 @@ public class Gallery {
                 + skippedReasons.size() + " shape(s).");
         for (String reason : skippedReasons) {
             System.out.println("  " + reason);
-            canvas.show();
-        }
+
+        }canvas.show();
     }
 
     public int waiting() {
