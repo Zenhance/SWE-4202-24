@@ -9,7 +9,7 @@ public class Gallery {
         shapes = new ArrayList<>();
     }
 
-    public void add(Shape s) throws ShapeException {
+    public void add(Shape s) {
         shapes.add(s);
     }
 
