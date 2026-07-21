@@ -24,7 +24,11 @@ public class Circle extends Shape{
     }
 
     @Override
-    public void draw(Canvas canvas) {
+    public void draw(Canvas canvas) throws ShapeException {
+        if (area() > canvas.capacity())
+            throw new ShapeTooLargeException("Shape too large exception");
+        if (area() < 1.0)
+            throw new ShapeTooSmallException("Shape too small exception");
         canvas.circle(radius);
     }
 }
