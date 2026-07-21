@@ -18,16 +18,19 @@ public class Gallery {
     }
 
     public void render() {
-        for (Shape s:shapelist)
-        try {
-            s.draw(canvas);
-            count++;
-        } catch (shapeException e) {
-            skipped++;
+        for (Shape s:shapelist) {
+            try {
+                s.draw(canvas);
+                count++;
+            } catch (shapeException e) {
+                skipped++;
+            }
+
         }
-        System.out.println(count);
-        System.out.println(skipped);
-        canvas.show();
+            System.out.println(count);
+            System.out.println(skipped);
+            canvas.show();
+
 
     }
 

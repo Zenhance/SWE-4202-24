@@ -24,8 +24,8 @@ public class Square extends Rectangle{
         }
         if(area()<1)
             throw new ShapeTooSmallException("too small to draw");
+        canvas.rectangle(i,i);
         }
-
     public void setWidth(double v) {
         this.v=v;
     }

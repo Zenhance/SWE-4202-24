@@ -1,4 +1,3 @@
-
 public class Circle extends Shape {
     public Circle(double R){
         super(R);
@@ -20,6 +19,7 @@ public class Circle extends Shape {
         }
         if(area()<1)
             throw new ShapeTooSmallException("too small to draw");
+        canvas.circle(R);
     }
 
 
