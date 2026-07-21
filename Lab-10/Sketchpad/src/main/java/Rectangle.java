@@ -33,8 +33,7 @@ public class Rectangle  extends Shape {
     public void draw(Canvas canvas) {
         double area = area();
         if (area > canvas.capacity()) {
-            throw new ShapeTooLargeException(
-                    describe() + " does not fit in canvas of capacity " + canvas.capacity());
+            throw new ShapeTooLargeException(describe() + " does not fit in canvas of capacity " + canvas.capacity());
         }
         if (area < 1)
             throw new ShapeTooSmallException(describe() + " is too small to cover even one cell");
