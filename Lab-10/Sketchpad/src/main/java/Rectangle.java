@@ -13,10 +13,16 @@ public class Rectangle extends Shape {
     }
 
     public void setWidth(double width) {
+        if(width <= 0){
+            throw new IllegalArgumentException("width must be positive");
+        }
         this.width = width;
     }
 
     public void setHeight(double height) {
+        if(height <= 0){
+            throw new IllegalArgumentException("height must be positive");
+        }
         this.height = height;
     }
     public double getWidth() {return width;}
