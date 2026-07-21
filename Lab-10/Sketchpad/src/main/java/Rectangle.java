@@ -8,6 +8,7 @@ public class Rectangle extends Shape {
         this.width = width;
         this.height = height;
     }
+    @Override
     public double area(double width, double height) {
         return width * height;
     }
@@ -28,4 +29,8 @@ public class Rectangle extends Shape {
     public double getWidth() {return width;}
     public double getHeight() {return height;}
 
+    @Override
+    public String describe() {
+        return "Rectangle(" + width + ", " + height + ")";
+    }
 }
