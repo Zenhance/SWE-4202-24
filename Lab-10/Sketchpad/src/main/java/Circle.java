@@ -3,7 +3,7 @@ package main.java;
 import java.awt.*;
 
 public class Circle extends Shape{
-    public double radius;
+    private double radius;
     public Circle(double radius){
         if(radius<=0){
             throw new IllegalArgumentException("Radius must be positive and it can not be 0");
