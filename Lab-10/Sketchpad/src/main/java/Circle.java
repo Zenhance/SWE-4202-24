@@ -27,5 +27,9 @@ public class Circle extends Shape {
         return String.format("Circle [r = %.2f]", radius);
     }
 
-
+    @Override
+    public void draw(Canvas canvas) throws DrawException {
+        checkFit(canvas);
+        canvas.circle(radius);
+    }
 }
