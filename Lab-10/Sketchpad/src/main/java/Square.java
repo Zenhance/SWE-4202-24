@@ -5,6 +5,12 @@ public class Square extends Rectangle{
     }
 
     public double getSide() {
-
+        return width;
     }
+
+    public void setSide(double side) {
+        this.width = side;
+    }
+
+
 }
