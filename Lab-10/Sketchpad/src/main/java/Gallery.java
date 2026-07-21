@@ -7,6 +7,12 @@ public class Gallery {
             throw new IllegalArgumentException("Canvas cannot be null.")
         }
         this.canvas = canvas;
-        this.shapes = shapes;
+        this.shapes = new ArrayList<>();
+    }
+    public void add(Shape shape){
+        if(shape == null){
+            throw new IllegalArgumentException("Shape cannot be null.");
+        }
+        shapes.add(shape);
     }
 }
