@@ -23,4 +23,10 @@ public class Circle extends Shape {
         return Math.PI * Math.pow(r, 2);
     }
 
+    @Override
+    public String describe() {
+        return "Circle(" + radius + ")";
+    }
+
+
 }
