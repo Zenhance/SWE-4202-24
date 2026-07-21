@@ -8,4 +8,12 @@ public class Rectangle extends Shape{
         double a = height * width;
         return (int)a;
     }
+
+    public void setWidth(double d){
+        width = d;
+    }
+
+    public void setHeight(double d){
+        height = d;
+    }
 }

@@ -9,8 +9,4 @@ public class Circle extends Shape{
         return (int)a;
     }
 
-    @Override
-    public String describe(){
-        return "Radius: "+height;
-    }
 }

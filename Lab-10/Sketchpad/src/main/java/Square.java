@@ -4,12 +4,8 @@ public class Square extends Rectangle{
     }
 
     @Override
-    public String describe(){
-        return "Area: "+area();
-    }
-
     public void setWidth(double d){
         width = d;
-        height = d;
+        setHeight(d);
     }
 }
