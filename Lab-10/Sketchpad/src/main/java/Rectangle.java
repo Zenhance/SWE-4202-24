@@ -4,15 +4,10 @@ public class Rectangle extends Shape {
     private double height;
 
     public Rectangle(double width, double height) {
-        this.width = width;
-        this.height = height;
-    }
+        requirePositive(width, "Width");
+        requirePositive(height, "Height");
 
-    public void setWidth(double width) {
         this.width = width;
-    }
-
-    public void setHeight(double height) {
         this.height = height;
     }
 
@@ -24,18 +19,29 @@ public class Rectangle extends Shape {
         return height;
     }
 
+    public void setWidth(double width) {
+        requirePositive(width, "Width");
+        this.width = width;
+    }
+
+    public void setHeight(double height) {
+        requirePositive(height, "Height");
+        this.height = height;
+    }
+
     @Override
     public double area() {
-        return 0.0;
+        return width * height;
     }
 
     @Override
     public String describe() {
-        return "Rectangle";
+        return String.format("%s(width=%.2f, height=%.2f, area=%.2f)",getClass().getSimpleName(),width,height,area()
+        );
     }
 
     @Override
-    public void draw(Canvas canvas) throws ShapeException {
-
+    protected void paint(Canvas canvas) {
+        canvas.rectangle(width, height);
     }
 }
