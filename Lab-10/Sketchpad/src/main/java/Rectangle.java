@@ -27,4 +27,13 @@ public class Rectangle extends Shape
         }
         this.width = newWidth;
     }
+    public void setHeight(double newHeight)
+    {
+        if(newHeight <= 0)
+        {
+            throw new IllegalArgumentException("height must be positive, got " + newHeight);
+        }
+        this.height = newHeight;
+    }
+
 }
