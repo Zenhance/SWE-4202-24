@@ -1,4 +1,4 @@
-package main.java;
+
 
 public class ShapeTooLargeException extends ShapeException{
     public ShapeTooLargeException(String message){

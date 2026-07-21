@@ -1,4 +1,4 @@
-package main.java;
+
 
 public class Rectangle extends Shape{
     private double height;

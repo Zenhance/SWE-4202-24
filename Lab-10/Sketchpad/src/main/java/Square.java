@@ -1,4 +1,4 @@
-package main.java;
+
 
 public class Square extends Rectangle{
     private double length;
@@ -9,7 +9,7 @@ public class Square extends Rectangle{
         return "This is a square with length "+length;
     }
 
-    public void setLength(double length) {
-        this.length = length;
+    public void setWidth(double width) {
+        this.length = width;
     }
 }
