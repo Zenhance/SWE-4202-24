@@ -15,9 +15,20 @@ public class Gallery {
     }
 
     public void render() {
-    }
+        int drawn=0;
+        List<String> skippedReasons=new ArrayList<>();
+        for (Shape shape:pile){
+            try {
+                shape.draw(canvas);
+                drawn++;
 
-    public boolean waiting() {
-        return true;
+            }catch (Shapedrawexception e){
+                skippedReasons.add(shape.describe() + " -> skipped (" + e.getMessage() + ")");
+            }
+
+        }    }
+
+    public int waiting() {
+        return pile.size();
     }
 }
