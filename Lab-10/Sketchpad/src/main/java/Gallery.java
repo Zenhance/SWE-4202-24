@@ -10,3 +10,15 @@ public class Gallery {
     public void add(Shape shape) { shapes.add(shape); }
 
     public int waiting() { return shapes.size(); }
+
+    public void render() {
+        int drawn = 0;
+        List<String> skipped = new ArrayList<>();
+        for (Shape shape : shapes) {
+            try {
+                shape.draw(canvas);
+                drawn++;
+            } catch (ShapeDrawException e) {
+                skipped.add(shape.describe() + " -> skipped: " + e.getMessage());
+            }
+        }
