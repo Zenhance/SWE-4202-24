@@ -1,24 +1,40 @@
-// =====================================================================
-//  THE CONTRACTOR'S CODE -- part of the version you must REPAIR.
-// =====================================================================
+public abstract class Transaction {
 
-/**
- * Another public-field bag. new Transaction("SEND", -1000, ...) is a "send"
- * that PULLS a thousand taka out of the recipient -- a theft the type system
- * waves straight through, because nothing here is ever checked.
- */
-public class Transaction {
-    public String type;        // "SEND", "CASHOUT", "PAYMENT", "TOPUP"
-    public double amount;
-    public String fromId;
-    public String toId;
-    public String pin;
+    private final Wallet payer;
+    private final Wallet receiver;
+    private final double amount;
+    private final String offeredPin;
 
-    public Transaction(String type, double amount, String fromId, String toId, String pin) {
-        this.type = type;
+    protected Transaction(
+            Wallet payer,
+            Wallet receiver,
+            double amount,
+            String offeredPin
+    ) {
+        this.payer = payer;
+        this.receiver = receiver;
         this.amount = amount;
-        this.fromId = fromId;
-        this.toId = toId;
-        this.pin = pin;
+        this.offeredPin = offeredPin;
+    }
+
+    public Wallet payer() {
+        return payer;
+    }
+
+    public Wallet receiver() {
+        return receiver;
+    }
+
+    public double amount() {
+        return amount;
+    }
+
+    protected String offeredPin() {
+        return offeredPin;
+    }
+
+    public abstract double fee();
+
+    public void settle() throws TransactionException {
     }
 }

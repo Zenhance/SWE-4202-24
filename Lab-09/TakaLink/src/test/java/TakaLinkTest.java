@@ -273,7 +273,7 @@ public class TakaLinkTest {
         AgentWallet g = new AgentWallet("G", 0.0, "9999");
 
         Transaction t = new SendMoney(a, b, 100.0, "1234");
-        t.settle();
+        ((SendMoney) t).settle();
         t = new CashOut(a, g, 200.0, "1234");
         t.settle();
         t = new Payment(a, new MerchantWallet("M", 0.0, "5555"), 50.0, "1234");

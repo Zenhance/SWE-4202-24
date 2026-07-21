@@ -4,7 +4,7 @@
 //  a FAILED send has already moved money.
 // =====================================================================
 
-public class Main {
+/*public class Main {
     public static void main(String[] args) {
         TransactionEngine engine = new TransactionEngine();
 
@@ -31,3 +31,4 @@ public class Main {
         System.out.println("Outside code just set alice.balance = " + alice.balance);
     }
 }
+*/
