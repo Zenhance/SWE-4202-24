@@ -26,7 +26,14 @@ public class Rectangle extends Shape{
     public String describe(){
         return "This is a rectangle with height "+height+"and width "+width;
     }
-    public void draw(Canvas canvas){
+    public void draw(Canvas canvas) throws ShapeException{
+        if(area()<1){
+            throw new ShapeTooSmallException("area cannot be less than 1");
+        }
+        if(area()> canvas.capacity()){
+            throw new ShapeTooLargeException("area cannot be greater than "+canvas.capacity());
+        }
+        canvas.rectangle(width,height);
 
     }
 }
