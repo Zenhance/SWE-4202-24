@@ -33,5 +33,20 @@ public class Gallery {
             }
         }
 
+        System.out.println("Drawn = " + drawn);
+        System.out.println("Skipped = "+ skipped);
+
+        for (String r : report){
+            System.out.println(r);
+        }
+
+        canvas.show();
+
+
+    }
+}
+
+
+
 
 
