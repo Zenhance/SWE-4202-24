@@ -13,11 +13,11 @@ public class Rectangle extends Shape{
         }
     }
 
-    public int getWidth() {
+    public double getWidth() {
         return width;
     }
 
-    public int getHeight() {
+    public double getHeight() {
         return height;
     }
 
