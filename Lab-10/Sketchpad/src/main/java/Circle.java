@@ -4,6 +4,13 @@ public class Circle extends Shape {
         this.radius = radius;
     }
 
+    public void draw(Canvas canvas) {
+        canvas.circle(radius);
+    }
+    public double area() {
+        return 3.14 * radius * radius;
+    }
+
     public String describe(){
         return "Circle(" + radius + ")";
     }
