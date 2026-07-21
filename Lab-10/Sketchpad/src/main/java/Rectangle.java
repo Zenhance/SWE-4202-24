@@ -1,5 +1,3 @@
-import java.awt.Canvas;
-
 public class Rectangle  extends Shape {
     private double width;
     private double height;
@@ -32,11 +30,10 @@ public class Rectangle  extends Shape {
         return String.format("Rectangle(w=%.2f, h=%.2f, area=%.2f)", width, height, area());
     }
 
-    @Override
     public void draw(Canvas canvas) throws ShapeTooLargeException, ShapeTooSmallException, InterruptedException {
         double area = area();
-        if (area > canvas.wait())
-            throw new ShapeTooLargeException("%s does not fit in canvas of capacity %s".formatted(describe(), canvas.wait()));
+        if (area > canvas.capacity())
+            throw new ShapeTooLargeException("%s does not fit in canvas of capacity %s".formatted(describe(), canvas.capacity()));
         if (area < 1)
             throw new ShapeTooSmallException(describe() + " is too small to cover even one cell");
         canvas.enable();

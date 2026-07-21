@@ -14,13 +14,13 @@ public class Main {
 
     public static void main(String[] args) {
         Canvas canvas = new Canvas(40, 20);   // capacity = 40 * 20 = 800 cells
-        main.java.Gallery gallery = new main.java.Gallery(canvas);
+        Gallery gallery = new Gallery(canvas);
 
         // A mixed pile: three fit, two the canvas must refuse.
-        gallery.add(new Circle(4));          // area ~50   -> fits
+        gallery.add(new Rectangle(4, 4));    // area 16    -> fits
         gallery.add(new Rectangle(10, 5));   // area 50    -> fits
         gallery.add(new Square(6));          // area 36    -> fits
-        gallery.add(new Circle(20));         // area ~1256 -> too large for 800
+        gallery.add(new Rectangle(41, 20));  // area 820   -> too large for 800
         gallery.add(new Square(0.5));        // area 0.25  -> too small for one cell
 
         System.out.println(gallery.waiting() + " shapes waiting to be drawn:\n");
