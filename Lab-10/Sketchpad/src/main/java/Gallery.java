@@ -1,5 +1,5 @@
-import javax.swing.*;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Gallery {
     private final List<Shape> shapes = new ArrayList<>();
