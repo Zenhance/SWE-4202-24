@@ -32,11 +32,11 @@ public class Rectangle extends Shape{
     }
     @Override
     public void draw(Canvas canvas) throws ShapeTooLargeException,ShapeTooSmallException{
-        if(width> canvas.getWidth() || height > canvas.getHeight())
+        if(width> canvas.width() || height > canvas.height())
             throw new ShapeTooLargeException("doesn't fit on the canvas");
         if(width <1 || height <1){
             throw new ShapeTooSmallException("is too small to cover a cell");
         }
-        canvas.paintRectangle(width,height);
+        canvas.rectangle(width,height);
     }
 }
