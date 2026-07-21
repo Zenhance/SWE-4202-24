@@ -18,5 +18,6 @@ public class Gallery {
 
     public void render() {
 
+
     }
 }
