@@ -48,5 +48,8 @@ public abstract class Wallet {
             this.balance += amount;
         }
     }
+    public void freeze(){
+        this.frozenStatus = true;
+    }
 
 }
