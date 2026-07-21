@@ -23,7 +23,14 @@ public class Rectangle extends Shape{
         return String.format(Rectangle(width=%.2f,height=%.2f,area=%.2f),width,height,area();
     }
     @Override
-    public void draw(Canvas canva){
+    public void draw(Canvas canvas)throws ShapeException{
+        double area=area();
+        if(area>canvas.capacity()){
+            throw new ShapeTooLargeException("Invalid");
+        }
+        if(area<1)
+            throw new ShapeTooSmallException("Invalid");
+        canvas.rectangle(width,height);
 
     }
 
