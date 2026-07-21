@@ -39,7 +39,7 @@ public class Gallery {
 ans: Shape class is abstract class. circle , rectangle, square are shape's but shape in and itself is not a shape that can be drawn. so nobody should construct it.
 
 2.Which parent class you left concrete, and why.
-ans: I have left rectangle parent class concrete because it be constructed and it is a parent class.
+ans: Rectangle parent class is concrete because it can be constructed and it is a parent class.
 
 3. One method you overrode even though the parent implemented it, and why.
 ans: I have overrode describe method because it describes each shape , so unique implementation is needed.
