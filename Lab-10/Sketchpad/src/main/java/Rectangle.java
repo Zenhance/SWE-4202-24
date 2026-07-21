@@ -34,7 +34,7 @@ public class Rectangle extends Shape {
 
     @Override
     public double area() {
-        return Math.PI * radius * radius;
+        return height * width;
     }
 
     @Override
@@ -46,7 +46,7 @@ public class Rectangle extends Shape {
         if (calArea > canvas.capacity()) {
             throw new ShapeTooLargeException("Too Large");
         }
-        canvas.circle(radius);
+        canvas.rectangle(width, height);
     }
 
     @Override
