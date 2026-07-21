@@ -1,6 +1,6 @@
 public abstract class Shape {
     public abstract double area();
-    public abstract String getDescription();
+    public abstract String describe();
     public abstract void draw(Canvas canvas) throws ShapeDrawException;
 
 
