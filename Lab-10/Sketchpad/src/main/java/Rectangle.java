@@ -33,4 +33,9 @@ public class Rectangle extends Shape {
     public String describe() {
         return "Rectangle(" + width + ", " + height + ")";
     }
+
+    @Override
+    public void paint(Canvas canvas) {
+        canvas.rectangle(width, height);
+    }
 }
