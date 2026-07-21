@@ -23,15 +23,13 @@
 
         if (area > canvas.capacity()){
             throw new ShapeTooLargeException(String.format("Circle area is too large %.2f exceeds canvas capacity %d", area,
-                    canvas.capacity()
-            );
+                    canvas.capacity()));
         }
         if (area < 1.0){
             throw new ShapToolSmallException(
                     String.format("Circle area %.2f is less than canvas capacity (1 cell)", area)
             );
-
-            canvas.circle(radius);
         }
+        canvas.circle(radius);
     }
  }
