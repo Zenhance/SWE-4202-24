@@ -16,6 +16,7 @@ public class Circle extends Shape{
         return "This is a Circle with radius "+radius;
     }
     public void draw(Canvas canvas) throws ShapeException{
-
+           if(area()<1) throw new ShapeTooSmallException("area cannot be less than 1");
+           if(area()>canvas.capacity()) throw new ShapeTooLargeException("area cannot greater than "+canvas.capacity());
     }
 }
