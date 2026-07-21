@@ -12,6 +12,6 @@ public class Square extends Rectangle{
 
     @Override
     public String describe() {
-        return super.describe();
+        return String.format("Square(%f, %f)", getWidth(), getHeight());
     }
 }
