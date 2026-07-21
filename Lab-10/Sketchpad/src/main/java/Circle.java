@@ -1,5 +1,5 @@
 public class Circle extends Shape {
-    private double radius;
+    private final double radius;
 
     public Circle(double radius) {
         if (radius <= 0) {
@@ -19,4 +19,8 @@ public class Circle extends Shape {
         return "Circle (radius = " + radius + ", area = " + area() + ")";
     }
 
+    @Override
+    protected void paint(Canvas canvas) {
+        canvas.circle(radius);
+    }
 }
