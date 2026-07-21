@@ -4,4 +4,14 @@ public class Square extends Shape{
         public Square(double length){
             super(length, length);
         }
+
+        @Override
+        public String describe() {
+            return "This is a square with length "+ length + " and area " + area();
+        }
+
+        public void setWidth(int width) {
+            this.length = width;
+
+        }
 }
