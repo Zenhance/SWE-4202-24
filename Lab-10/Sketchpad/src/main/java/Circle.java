@@ -5,15 +5,21 @@ public class Circle extends Shape {
         public Circle(double radius) {
             this.radius = radius;
         }
+        public double getRadius() {
+            return radius;
+        }
 
         @Override
         public double area() {
-            return 0.0;
+            return Math.PI* radius * radius;
         }
 
         @Override
         public String describe() {
-            return "Circle";
+            return String.format(
+                    "Circle(radius=%.2f, area=%.2f)",
+                    radius, area()
+            );
         }
 
         @Override
