@@ -41,4 +41,8 @@ public class Gallery {
 // Q3. One method you overrode even though the parent implemented it, and why?
 // Ans: the setWidth method was implemented in Rectangle, but it was overridden
 //      by Square's setWidth becuase both the width and height should be
-//      changed and be equal to eact other.
+//      changed and be equal to eact other for squares.
+// Q4. One method you deliberately did not override, and why?
+// Ans: the area method in Rectangle was not overridden in Square
+//      because square is just a rectangle with equal sides, so
+//      area calculation is identical
