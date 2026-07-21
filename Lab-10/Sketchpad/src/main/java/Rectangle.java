@@ -13,5 +13,27 @@ public class Rectangle extends Shape{
         }
     }
 
+    public int getWidth() {
+        return width;
+    }
 
+    public int getHeight() {
+        return height;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public int area(){
+        return width*height;
+    }
+
+    public String describe(){
+        return null;
+    }
 }
