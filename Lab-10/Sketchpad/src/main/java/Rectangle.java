@@ -3,10 +3,10 @@ public class Rectangle extends Shape{
     private double height;
 
     public Rectangle(double width, double height){
-        if(width==0 || width<0){
+        if( width<=0){
             throw new IllegalArgumentException("Width cannot be negative");
         }
-        if(height==0 || height<0){
+        if(height<=0){
             throw new IllegalArgumentException("Height cannot be negative");
         }
 
@@ -26,10 +26,11 @@ public class Rectangle extends Shape{
 
     @Override
     public void draw(Canvas canvas)throws DrawingException{
-        if(calculateArea()> canvas.capacity() ){
-            throw new ShapeTooLargeException();
-        }else if(calculateArea()< 1){
-            throw new ShapeTooSmallException();
+        double areaOfRectangle=calculateArea();
+        if(areaOfRectangle> canvas.capacity() ){
+            throw new ShapeTooLargeException("Area is too large");
+        }else if(areaOfRectangle< 1){
+            throw new ShapeTooSmallException("Area is too small;");
         }else{
             canvas.rectangle( width,height);
         }
