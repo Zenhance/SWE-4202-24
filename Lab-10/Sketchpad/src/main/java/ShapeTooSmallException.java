@@ -1,5 +1,5 @@
 public class ShapeTooSmallException extends ShapeException{
-    public ShapeTooSmallException(String message){
+    public ShapeTooSmallException(){
         super("too small for one cell");
     }
 }
