@@ -11,12 +11,8 @@ public abstract class Shape {
 
     public abstract int area();
 
-    //public void paint(){}
-
-    //public void draw(){}
-
     public String describe(){
-        return "Height: "+height+", Width: "+width;
+        return "Area: "+area();
     }
 
     public double getHeight() {
@@ -27,3 +23,5 @@ public abstract class Shape {
         return width;
     }
 }
+
+
