@@ -1,0 +1,15 @@
+public class Square extends Rectangle {
+    double i,j;
+    public Square(double i) throws ShapeTooSmallException, ShapeTooLargeException {
+        super(i,i);
+    }
+
+
+    public String describe() {
+        return "This is a Square with width " +i+"And Area"+this.area();
+    }
+
+    public void setWidth(int i) {
+        this.i=i;j=i;
+    }
+}
