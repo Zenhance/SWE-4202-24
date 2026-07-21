@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.util.ArrayList;
 
 public class Gallery {
@@ -7,4 +8,18 @@ public class Gallery {
     public void add(Shape shape){
         shapes.add(shape);
     }
+    public void drawAll(Canvas canvas){
+        for(Shape shape : shapes){
+            try{
+                shape.draw(canvas);
+                drawnCount++;
+            } catch (ShapeException e){
+                skippedReasons.add(shape, describe()+ " ->" + e.getMessage());
+            }
+        }
+    }
+
+
+
+
 }
