@@ -1,20 +1,18 @@
-public class Circle extends Shape{
+public class Circle extends Shape {
 
-    private double radius;
+    public double radius;
 
     public Circle(double radius) {
         this.radius = radius;
         }
     }
 
-    @Override
-    public abstract double area();
+    public double getRadius() {
+        return radius;
+    }
 
-    @Override
-    public abstract String describe();
+    public void setRadius(double radius) {
 
-    @Override
-    public abstract void draw();
-
+    }
 
 }
