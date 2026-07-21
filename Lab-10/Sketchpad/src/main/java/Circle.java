@@ -19,10 +19,10 @@ public class Circle extends Shape{
     }
     @Override
     public void draw(Canvas canvas)throws ShapeException{
-        double diameter=radius*2;
-        if(diameter>canvas.getHeight || diameter>canvas.getWidth)
+        double area=area();
+        if(area>canvas.capacity)
             throw new ShapeTooLargeException("Invalid");
-        if(diameter<1)
+        if(area<1)
             throw new ShapeTooSmallException("Invalid");
         canva.circle(radius);
     }
