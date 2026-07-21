@@ -22,12 +22,13 @@ public abstract class Shape {
 
         protected abstract void paint(Canvas canvas);
 
-        protected static void requirePositive(double value, String name) {
+    protected static void requirePositive(double value, String name) {
         if (value <= 0) {
             throw new IllegalArgumentException(
-                    name + " must be a positive, finite number"
+                    name + " must be positive"
             );
         }
     }
+    }
 
-}
+
