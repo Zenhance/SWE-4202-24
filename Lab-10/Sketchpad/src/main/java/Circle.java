@@ -16,4 +16,16 @@ public class Circle extends Shape {
     public double area() {
         return Math.PI * radius * radius;
     }
+
+    @Override
+    public void draw(Canvas canvas) throws ShapeException {
+        double calArea = area();
+        if (calArea < 1.0) {
+            throw new ShapeTooSmallException("Too small");
+        }
+        if (calArea > canvas.capacity()) {
+            throw new ShapeTooLargeException("Too Large");
+        }
+        canvas.circle(radius);
+    }
 }
