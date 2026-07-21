@@ -21,4 +21,18 @@ public class Rectangle extends Shape{
     }
 
 
+
+    @Override
+    public void draw(Canvas canvas) throws ShapeException {
+        if (area() < 1) throw new ShapeTooSmallException("area cannot be less than 1");
+        else if (area() > canvas.capacity()) throw new ShapeTooLargeException("area cannot be greater than" + canvas.capacity());
+
+        canvas.rectangle(width, height);
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+
 }
