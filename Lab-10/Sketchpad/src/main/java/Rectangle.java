@@ -19,4 +19,10 @@ public class Rectangle {
     public String describe() {
         return String.format("Rectangle [w = %.2f, h = %.2f]", width, height);
     }
+
+    @Override
+    public void draw(Canvas canvas) {
+        checkFit(canvas);
+        canvas.rectangle(width, height);
+    }
 }
