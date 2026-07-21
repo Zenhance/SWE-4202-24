@@ -20,4 +20,17 @@ public class Gallery {
         return shapes.size();
     }
 
+    public void render() {
+        int drawn = 0;
+        List<String> skippedShapes = new ArrayList<>();
+
+        for (Shape shape : shapes) {
+            try {
+                shape.draw(canvas);
+                drawn++;
+            } catch (ShapeException e) {
+                skippedShapes.add(shape.describe() + " -> " + e.getMessage());
+            }
+        }
+    }
 }
