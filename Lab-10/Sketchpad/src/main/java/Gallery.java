@@ -9,9 +9,13 @@ public class Gallery {
         shapes = new ArrayList<>();
     }
 
-    public void add(Shape s) {
-        if (s.area() < canvas.capacity() && s.area() >= 1.0)
-            shapes.add(s);
+    public void add(Shape s) throws ShapeException {
+        if (s.area() > canvas.capacity())
+            throw new ShapeTooLargeException("Shape too large exception");
+        if (s.area() < 1.0)
+            throw new ShapeTooSmallException("Shape too small exception");
+
+        shapes.add(s);
     }
 
     public int waiting() {
