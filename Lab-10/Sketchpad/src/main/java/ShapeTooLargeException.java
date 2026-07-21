@@ -1,5 +1,5 @@
-public class ShapeTooLargeException {
-    public ShapeTooSmallException(String message) {
+public class ShapeTooLargeException extends DrawException {
+    public ShapeTooLargeException(String message) {
         super(message);
     }
 }
