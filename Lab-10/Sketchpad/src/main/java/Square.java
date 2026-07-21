@@ -9,6 +9,6 @@ public class Square extends Rectangle{
         super.setHeight(width);
     }
     public String describe() {
-        super.describe();
+       return super.describe();
     }
 }
