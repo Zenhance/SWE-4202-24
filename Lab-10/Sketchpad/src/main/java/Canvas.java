@@ -7,7 +7,7 @@
  *
  * Shapes are stamped left to right; when a shape does not fit on the current
  * row the canvas drops to a new band automatically. Each shape gets its own
- * fill character so a composite picture stays readable.
+ * fill character so a composite picture stay.s readable.
  *
  * The only method your shapes need for their fit-check is {@link #capacity()}.
  */
