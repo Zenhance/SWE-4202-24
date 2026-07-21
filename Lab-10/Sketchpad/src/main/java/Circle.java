@@ -4,5 +4,12 @@ public class Circle extends Shape{
         requirePositive(radius,"Radius");
         this.radius = radius;
     }
+    public double getRadius(){
+        return radius;
+    }
+    @Override
+    public double area(){
+        return Math.PI*radius*radius;
+    }
 
 }
