@@ -21,4 +21,9 @@ public class Circle extends Shape{
     public String describe() {
         return "";
     }
+
+    @Override
+    public void draw(Canvas canvas) {
+        canvas.circle(radius);
+    }
 }
