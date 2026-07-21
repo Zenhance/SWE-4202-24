@@ -36,6 +36,6 @@ public class Rectangle extends Shape {
 
     @Override
     public void draw(Canvas canvas) throws ShapeException {
-        // TODO: Implement later
+
     }
 }
