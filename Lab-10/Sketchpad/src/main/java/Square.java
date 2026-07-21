@@ -16,24 +16,17 @@ public class Square extends Rectangle {
     }
 
     @Override
-    public double area() {
-        return height * width;
+    public void setWidth(double width) {
+        setSide(width);
     }
 
     @Override
-    public void draw(Canvas canvas) throws ShapeException {
-        double calArea = area();
-        if (calArea < 1.0) {
-            throw new ShapeTooSmallException("Too small");
-        }
-        if (calArea > canvas.capacity()) {
-            throw new ShapeTooLargeException("Too Large");
-        }
-        canvas.Square(width, height);
+    public void setHeight(double height) {
+        setSide(height);
     }
 
     @Override
     public String describe() {
-        return " Rectangle [ Width=" + width + ", Height=" + height + ", Area=" + area() + "]";
+        return " Square [ Side=" + getWidth() + ", Area =" + area() + "]";
     }
 }
