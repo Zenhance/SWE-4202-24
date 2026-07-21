@@ -14,11 +14,12 @@ public abstract class Shape {
     }
     public abstract double area();
     protected abstract void make(Canvas canvas);
-    public abstract String desciption();
 
     protected void requirePositive(double value){
         if(!Double.isFinite(value)||value<0){
             throw new IllegalArgumentException("The value needs to be positive.");
         }
     }
+
+    public abstract String description();
 }
