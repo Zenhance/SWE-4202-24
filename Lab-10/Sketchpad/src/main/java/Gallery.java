@@ -24,9 +24,17 @@ public class Gallery {
                shape.draw(canvas);
            } catch (ShapeException e) {
                skipped++;
+               arg += "  skipped " + shape.describe() + " — " + e.getMessage() + "\n";
            }
 
        }
+       System.out.println("Drawn:" + drawn + "   Skipped: " + skipped);
+       if (skipped > 0) {
+           System.out.println("Skipped shapes:");
+           System.out.print(arg);
+       }
+       canvas.show();
+
 
 
    }
