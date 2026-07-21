@@ -2,16 +2,14 @@ public abstract class Shape {
 
     public abstract double area();
     public abstract String describe();
-    public abstract void draw();
+    public abstract void draw(Canvas canvas) throws DrawException;
 
     public void checkFit() throws DrawException {
         double a = area();
 
         if (a < 1.0) {
-            throw new ShapeTooSmallException();
+            throw new ShapeTooSmallException("area is too small");
         }
-
-
 
     }
 }
