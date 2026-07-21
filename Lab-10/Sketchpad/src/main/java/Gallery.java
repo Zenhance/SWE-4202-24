@@ -51,3 +51,27 @@ public class Gallery {
 
 
 }
+
+/*
+Answer no-
+    1. The Shape class is made abstract because it does not require any
+    direct instantiation. Shape itself cannot be defined specifically.
+    In addition, the canvas only has methods for specific methods like rectangle
+    circle rather than just shape.
+
+    2.Rectangle class was made concrete while being a parent class.
+    Square class inherited Rectangle class that made it a parent class.
+    But rectangle class  itself had properties and methods to implement .
+    Thats why Rectangle class was made concrete with its own methods and elements.
+
+    3. The method names setWidth() was Overridden in Square class.
+    Though its parent Rectangle had implemented setWidth(), the logic inside contradicted
+    with each other. The square shape has only one property "side", while  the rectangle
+    shape has width and length. Therefore , the setter for different elements had to be different.
+    Hence, SetWidth() was Overriiden in Square class to implement its own property.
+
+    4. I deliberately did not Overriden the area() method in Square class despite changing
+    setWidth() than its parent Rectangle. That is because, though the setter logic contradicted
+    while setting properties , but the area calculation is same . width * length and side*side.
+    therefore i did not over ride it.
+ */
