@@ -14,5 +14,12 @@ public class Rectangle extends Shape{
     public double getHeight(){
         return height;
     }
-
+    public void setWidth(double width){
+        requirePositive((width,"width"));
+        this.width = width;
+    }
+    public void setHeight(double height){
+        requirePositive((height,"height"));
+        this.height = height;
+    }
 }
