@@ -4,4 +4,7 @@ public abstract class ShapeException extends Exception {
         super(message);
         this.shape = shape;
     }
+    public Shape getShape() {
+        return shape;
+    }
 }
