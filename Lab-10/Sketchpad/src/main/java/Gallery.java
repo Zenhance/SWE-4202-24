@@ -10,7 +10,8 @@ public class Gallery {
     }
 
     public void add(Shape s) {
-        shapes.add(s);
+        if (s.area() < canvas.capacity() && s.area() >= 1.0)
+            shapes.add(s);
     }
 
     public int waiting() {
