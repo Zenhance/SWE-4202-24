@@ -9,6 +9,14 @@ public Rectangle(double length,double width){
     this.width=width;
 }
 
+    public double getLength() {
+        return length;
+    }
+
+    public void setWidth(double width) {
+        this.width = width;
+    }
+
     @Override
     public double area() {
         return length*width;
