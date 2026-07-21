@@ -25,6 +25,13 @@ public class Rectangle extends Shape {
         return height;
     }
 
+    public void setHeight(double height) {
+        if (width <= 0) {
+            throw new IllegalArgumentException("Height must be positive ");
+        }
+        this.height = height;
+    }
+
     @Override
     public double area() {
         return Math.PI * radius * radius;
