@@ -1,4 +1,3 @@
-/*
 // =====================================================================
 //  THE CONTRACTOR'S CODE -- a driver that shows it "working" on the happy
 //  path, and then shows the damage. Run it and watch the third line:
@@ -32,4 +31,3 @@ public class Main {
         System.out.println("Outside code just set alice.balance = " + alice.balance);
     }
 }
-*/
