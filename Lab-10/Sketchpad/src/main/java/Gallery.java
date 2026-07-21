@@ -43,5 +43,6 @@ public class Gallery {
                 System.out.println("  - " + detail);
             }
         }
+        canvas.show();
     }
 }
