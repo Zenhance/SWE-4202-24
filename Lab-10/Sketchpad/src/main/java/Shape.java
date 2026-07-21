@@ -1,4 +1,4 @@
-public class Shape {
-    private int area();
-    private String describe();
+public abstract class Shape {
+    public abstract int area();
+    private abstract String describe();
 }
