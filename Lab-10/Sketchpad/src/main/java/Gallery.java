@@ -9,4 +9,15 @@ public class Gallery {
         this.canvas = canvas;
         this.shapes = new ArrayList<>();
     }
+
+    public void add(Shape shape) {
+        if (shape != null) {
+            shapes.add(shape);
+        }
+    }
+
+    public int waiting() {
+        return shapes.size();
+    }
+
 }
