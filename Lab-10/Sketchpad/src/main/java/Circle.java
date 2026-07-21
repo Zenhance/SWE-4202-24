@@ -28,4 +28,9 @@ public class Circle extends Shape {
         }
         canvas.circle(radius);
     }
+
+    @Override
+    public String describe() {
+        return "Circle [radius=" + radius + ", area=" + String.format("%.2f", area()) + "]";
+    }
 }
