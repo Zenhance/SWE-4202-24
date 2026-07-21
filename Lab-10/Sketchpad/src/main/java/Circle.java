@@ -5,6 +5,10 @@ public class Circle extends Shape{
         this.radius = radius;
     }
 
+    public double area() {
+        return 3.14 * radius * radius;
+    }
+
     @Override
     public String describe() {
         return "";
