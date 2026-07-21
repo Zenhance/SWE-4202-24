@@ -9,7 +9,7 @@ public class Rectangle extends Shape {
         this.height = height;
     }
     @Override
-    public double area(double width, double height) {
+    public double area() {
         return width * height;
     }
 
