@@ -26,4 +26,18 @@ public class Rectangle extends Shape{
         }
         this.height=height;
     }
+    @Override
+    public double area(){
+        return width*height;
+    }
+    @Override
+    public void draw(Canvas canvas) throws ShapeDrawException{
+        if(area()>canvas.capacity()){
+            throw new ShapeTooLargeException("Rectangle is too large for the canvas.");
+        }
+        if(area()<1){
+            throw new ShapeTooSmallException("Rectangle is too small to cover one cell.");
+        }
+        canvas.rectangle(width,height);
+    }
 }
