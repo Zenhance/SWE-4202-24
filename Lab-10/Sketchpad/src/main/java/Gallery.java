@@ -44,9 +44,7 @@ public class Gallery {
                 System.out.println(reason);
             }
         }
-
-
+        canvas.show();
     }
-
 
 }
