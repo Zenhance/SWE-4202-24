@@ -7,18 +7,52 @@
  * that PULLS a thousand taka out of the recipient -- a theft the type system
  * waves straight through, because nothing here is ever checked.
  */
-public class Transaction {
-    public String type;        // "SEND", "CASHOUT", "PAYMENT", "TOPUP"
-    public double amount;
-    public String fromId;
-    public String toId;
-    public String pin;
+public abstract class Transaction {
+    protected Wallet payer;
+    protected Wallet paidTo;
+    protected double amount;
+    private final String pin;
 
-    public Transaction(String type, double amount, String fromId, String toId, String pin) {
-        this.type = type;
-        this.amount = amount;
-        this.fromId = fromId;
-        this.toId = toId;
-        this.pin = pin;
+    public Transaction(Wallet payer, Wallet paidTo, double amount, String pin) throws FrozenAccountException {
+
+        if(payer.isFrozen()){
+            throw new FrozenAccountException("is frozen");
+        }
+        if(!payer.verifyPin(pin)){
+            throw new FrozenAccountException("Invalid pin");
+        }
+
+
+        this.payer=payer;
+        this.paidTo=paidTo;
+        this.amount=amount;
+        this.pin=pin;
     }
+    public final double getAmount(){
+        return amount;
+    }
+
+    public abstract double fee();
+
+    protected double payeeCredit(){
+        return amount;
+    }
+    protected abstract void checkPermission() throws OperationNotAllowedException;
+    public final void settle() throws TransactionException {
+        if (payer.isFrozen()) {
+            throw new FrozenAccountException(payer.id() + " is frozen");
+        }
+        if (!payer.verifyPin(pin)) {
+            throw new InvalidPinException("wrong PIN for " + payer.id());
+        }
+        checkPermission();
+        payer.checkDailyLimit(amount);
+
+
+        payer.debit(amount + fee());
+        paidTo.credit(payeeCredit());
+        payer.recordSpend(amount);
+    }
+
+
 }
