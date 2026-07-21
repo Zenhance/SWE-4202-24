@@ -12,7 +12,7 @@ public class Circle extends Shape{
     }
 
     @Override
-    public void make(Canvas canvas) {
+    protected void make(Canvas canvas) {
         canvas.circle(radius);
     }
 
