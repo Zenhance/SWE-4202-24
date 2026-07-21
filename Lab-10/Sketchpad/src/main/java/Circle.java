@@ -28,5 +28,8 @@ public class Circle extends Shape {
         return "Circle(" + radius + ")";
     }
 
-
+    @Override
+    public void paint(Canvas canvas) {
+        canvas.circle(radius);
+    }
 }
