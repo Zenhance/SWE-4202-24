@@ -36,5 +36,12 @@ public class Gallery {
         System.out.println("=== GALLERY REPORT ===");
         System.out.println("Shapes Drawn: " + drawn);
         System.out.println("Shapes Skipped: " + skippedShapes.size());
+
+        if (!skippedShapes.isEmpty()) {
+            System.out.println("\nSkipped Details:");
+            for (String detail : skippedShapes) {
+                System.out.println("  - " + detail);
+            }
+        }
     }
 }
