@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Gallery {
     private Canvas canvas;
     private List<Shape> shapes = new ArrayList<>();
@@ -13,3 +16,22 @@ public class Gallery {
     public int waiting() {
         return shapes.size();
     }
+
+    public void render() {
+        int drawn = 0;
+        int skipped = 0;
+
+        ArrayList<String> report = new ArrayList<>();
+
+        for (Shape shape : shapes) {
+            try {
+                shape.draw(canvas);
+                drawn++;
+            } catch (ShapeException e) {
+                skipped++;
+                report.add(e.getMessage());
+            }
+        }
+
+
+
