@@ -6,10 +6,10 @@ public class Gallery {
     }
 
     public void add(Shape s){
-        if(s.getWidth() > c.width() || s.getHeight() > c.height())
+        if(s.getWidth() > c.width() || s.getHeight() > c.height() || s.area() > c.capacity())
             throw new ShapeTooLarge("Shape too large!");
 
-        if(s.area() > c.capacity())
+        if(s.area() < 1)
             throw new ShapeTooSmall("Shape too small");
     }
 

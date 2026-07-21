@@ -1,7 +1,7 @@
 public abstract class Shape {
 
-    private double height;
-    private double width;
+    protected double height;
+    protected double width;
     public Shape(double height, double width){
         if(height <= 0.0 || width  <= 0.0)
             throw new ShapeException("Invalid size!");
@@ -9,7 +9,7 @@ public abstract class Shape {
         this.width = width;
     }
 
-    public abstract double area();
+    public abstract int area();
 
     //public void paint(){}
 

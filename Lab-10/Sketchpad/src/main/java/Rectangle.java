@@ -4,8 +4,8 @@ public class Rectangle extends Shape{
     }
 
     @Override
-    public double area(){
+    public int area(){
         double a = height * width;
-        return a;
+        return (int)a;
     }
 }
