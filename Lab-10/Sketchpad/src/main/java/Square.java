@@ -6,6 +6,12 @@ public abstract class Square extends Rectangle{
     }
 
     @Override
+    public void setWidth(double width){
+        super.setWidth(width);
+        super.setHeight(width);
+
+
+    }
 
 
 }
