@@ -1,0 +1,15 @@
+1. Which class is abstract, and why nobody may construct it?
+ans: I made Shape abstract because a bare generic shape has no physical
+dimensions or drawing implementation, so instantiating new Shape() would be meaningless.
+
+2. Which parent class you left concrete, and why?
+ans: I left Rectangle concrete because a generic rectangle is a
+fully valid, drawable shape on its own while serving as the parent for Square.
+
+3. One method you overrode even though the parent implemented it, and why?
+ans: I overrode setWidth (and setHeight) in Square because the parent's versions change dimensions
+independently, which breaks the invariant that a square's sides must remain equal.
+
+4. One method you deliberately did not override, and why?
+ans: I deliberately did not override area in Square because inheriting Rectangle (w*h) calculation
+already computes the correct area (s^2) when the sides are kept equal.
