@@ -13,7 +13,7 @@ public class Rectangle extends Shape{
 
     @Override
     public String describe() {
-        return String.format("Rectangle(%f, %f)", getWidth(), getHeight());
+        return String.format("Rectangle(%.2f, %.2f)", getWidth(), getHeight());
     }
 
     @Override

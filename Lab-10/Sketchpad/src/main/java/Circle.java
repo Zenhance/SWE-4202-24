@@ -22,7 +22,7 @@ public class Circle extends Shape{
 
     @Override
     public String describe() {
-        return "";
+        return String.format("Circle(%.2f)", getRadius());
     }
 
     @Override
