@@ -1,16 +1,14 @@
+
+
 public abstract class Shape {
-    int i,j;
-    double R;
-    public Shape(int i,int j){
+    double R,i,j;
+    public Shape(double i,double j){
         this.i=i;
         this.j=j;
     }
 
     public Shape(double R) {
         this.R=R;
-    }
-    public Shape(int i){
-        this.i=i;
     }
 
     public abstract double area();

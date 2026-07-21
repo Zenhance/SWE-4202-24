@@ -1,8 +1,9 @@
 public class Rectangle extends Shape{
 
-    public Rectangle(int i,int j) {
+    public Rectangle(double i,double j) {
         super(i, j);
     }
+
 
     @Override
     public double area() {
@@ -15,7 +16,7 @@ public class Rectangle extends Shape{
     }
 
 
-    @Override
+
     public void draw(Canvas canvas) throws shapeException{
         if(canvas.capacity()<area()){
             throw new ShapeTooSmallException ("too big to draw");
@@ -24,4 +25,5 @@ public class Rectangle extends Shape{
             throw new ShapeTooSmallException("too small to draw");
 
     }
+
 }
