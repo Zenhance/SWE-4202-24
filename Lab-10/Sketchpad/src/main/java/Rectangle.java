@@ -51,6 +51,6 @@ public class Rectangle extends Shape {
 
     @Override
     public String describe() {
-        return "Circle [radius=" + radius + ", area=" + String.format("%.2f", area()) + "]";
+        return " Rectangle [ Width=" + width + ", Height=" + height + ", Area=" + area() + "]";
     }
 }
