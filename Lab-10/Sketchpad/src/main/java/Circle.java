@@ -21,6 +21,9 @@ public class Circle extends Shape{
         public void draw(Canvas canvas) throws ShapeTooLargeException,ShapeTooSmallException{
         double diameter = 2* radius;
         }
+        if(diameter>canvas.getWidth() || diameter > canvas.getHeight()){
+            throw new ShapeTooLargeException(describe()+ "doesn't fit on the canvas");
+    }
 
 
 
