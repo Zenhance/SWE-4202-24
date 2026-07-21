@@ -1,6 +1,6 @@
 public class Rectangle extends Shape{
-    private int width;
-    private int height;
+    private double width;
+    private double height;
 
     public Rectangle (int width, int height){
        this.width=width;
@@ -29,11 +29,13 @@ public class Rectangle extends Shape{
         this.height = height;
     }
 
-    public int area(){
+    public double area(){
         return width*height;
     }
 
     public String describe(){
         return null;
     }
+
+
 }
