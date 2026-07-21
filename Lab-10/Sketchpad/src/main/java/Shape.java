@@ -36,7 +36,11 @@ public abstract class Shape {
          construct it.
 
     3. One method you overrode even though the parent implemented it, and why.
-    Ans:
+    Ans: setWidth was overriden in Square because in Rectangle, it does not change both width
+         & height with is necessary for Square.
 
     4. One method you deliberately did not override, and why.
+    Ans: area() was not overriden in Square as the width and height are always the same when
+         we construct it or set a new height and width, thus w*h formula doesn't affect the
+         area of Square.
 */
