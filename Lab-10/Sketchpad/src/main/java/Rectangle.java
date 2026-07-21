@@ -12,6 +12,11 @@ public class Rectangle extends Shape{
         return "";
     }
 
+    @Override
+    public void draw(Canvas canvas) {
+        canvas.rectangle(width, height);
+    }
+
     public double getWidth() {
         return width;
     }
