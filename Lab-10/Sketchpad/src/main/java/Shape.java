@@ -3,7 +3,7 @@ public abstract class Shape {
     public String description(){
         return "Rectangle";
     }
-    public abstract void draw(Canvas canvas){
+    public abstract void draw(Canvas canvas)
         throws ShapeException;
-    }
+
 }
