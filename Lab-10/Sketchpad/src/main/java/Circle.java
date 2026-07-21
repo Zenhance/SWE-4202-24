@@ -30,5 +30,6 @@ public class Circle extends Shape{
         if (area() < 1.0)
             throw new ShapeTooSmallException("Shape too small exception");
         canvas.circle(radius);
+        canvas.show();
     }
 }
