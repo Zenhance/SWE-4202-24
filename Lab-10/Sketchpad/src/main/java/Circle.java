@@ -23,7 +23,8 @@ public class Circle extends Shape {
         }
 
         @Override
-        public void draw(Canvas canvas) throws ShapeException {
+        protected void paint(Canvas canvas) {
+            canvas.circle(radius);
         }
     }
 
