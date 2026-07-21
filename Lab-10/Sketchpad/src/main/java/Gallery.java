@@ -11,4 +11,8 @@ public class Gallery {
     public void add(Shape shape) {
         shapes.add(shape);
     }
+
+    public double waiting() {
+        return shapes.size();
+    }
 }
