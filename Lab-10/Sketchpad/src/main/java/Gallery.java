@@ -9,4 +9,11 @@ public class Gallery {
         this.canvas=canvas;
         shapes=new ArrayList<>();
     }
-}
+
+    public void add(Shape s) {
+        shapes.add(s);
+    }
+
+    public int waiting() {
+        return shapes.size();
+    }
