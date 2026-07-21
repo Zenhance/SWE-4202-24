@@ -18,6 +18,10 @@ public class Rectangle extends Shape{
     public double getWidth(){
         return width;
     }
+    public void resize(double newW, double newL){
+        this.width=newW;
+        this.length=newL;
+    }
     public double area(){
     return length*width;
     }
