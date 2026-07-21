@@ -22,3 +22,10 @@ public class Gallery {
                 skipped.add(shape.describe() + " -> skipped: " + e.getMessage());
             }
         }
+        System.out.println("Drawn: " + drawn);
+        System.out.println("Skipped: " + skipped.size());
+        for (String reason : skipped) System.out.println("  - " + reason);
+        System.out.println();
+        canvas.show();
+    }
+}
