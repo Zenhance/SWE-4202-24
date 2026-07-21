@@ -1,7 +1,11 @@
 public class Circle extends Shape {
     private double radius;
     public Circle(double radius) {
-        this.radius = radius;
+        if(radius < 0){
+            throw new IllegalArgumentException("Radius must be a positive number");
+        }else {
+            this.radius = radius;
+        }
     }
 
     public void draw(Canvas canvas) {
