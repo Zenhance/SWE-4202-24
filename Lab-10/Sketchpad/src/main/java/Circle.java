@@ -21,17 +21,18 @@ public class Circle extends Shape{
     }
 
     @Override
-    public String getDescription() {
+    public String describe() {
         return "Circle with Radius:"+radius;
     }
 
     @Override
-    public void draw(Canvas canvas) throws ShapeDrawException {
-        if(radius<1){
-            throw new ShapeTooSmallException("Circle is too small");
-        }
-        if(radius*2>canvas.width()||radius*2> canvas.height()){
-            throw new ShapeTooLargeException("Circle is too large");
+    public abstract void draw(Canvas canvas) throws ShapeDrawException {
+         double canvasArea= canvas.width()*canvas.height();
+         if(this.area()<1.0){
+             throw new ShapeTooSmallException("Shape area ("+area()+") is too small for a cell.");
+         }
+        if(this.area()>canvasArea){
+            throw new ShapeTooLargeException("Shape area ("+area()+") is too large for a cell.");
         }
         canvas.circle(radius);
     }
