@@ -3,5 +3,5 @@ public abstract class Shape{
     public String describe(){
         return getClass().getSimpleName()+ "(Area= "+area()+")";
     }
-
+public abstract void draw(Canvas canvas) throws ShapeDrawException;
 }
