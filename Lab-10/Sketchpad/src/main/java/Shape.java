@@ -24,4 +24,17 @@ public abstract class Shape {
     }
 }
 
+/*
+    1. Which class is abstract, and why nobody may construct it.
+    Ans: Shape is an abstract class. Nobody may not construct is because a shape as itself,
+         as an indefinite entity does not make sense in real life, we must specify WHAT exact
+         shape it might be.
 
+    2. Which parent class you left concrete, and why.
+    Ans: We left Rectangle (parent class of Square) concrete because Rectangle itself can be
+         an independent shape on its own, if we make it abstract... we won't be able to
+         construct it.
+
+    3. One method you overrode even though the parent implemented it, and why.
+    4. One method you deliberately did not override, and why.
+*/
