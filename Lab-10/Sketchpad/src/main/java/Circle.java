@@ -1,10 +1,10 @@
 public class Circle extends Shape{
 
-    private double radius;
+    private final double radius;
 
     public Circle(double radius){
         if(radius <= 0){
-            throw new IllegalArgumentException("Radius must be positive");
+            throw new IllegalArgumentException("Circle radius must be positive, got " + radius);
         }
         this.radius = radius;
     }
@@ -13,26 +13,18 @@ public class Circle extends Shape{
         return radius;
     }
 
-    public void setRadius(double radius) {
-        if(radius <= 0){
-            throw new IllegalArgumentException("Radius must be positive");
-        }
-    }
-
     @Override
-    public double area(double radius) {
+    public double area() {
         return Math.PI * Math.pow(radius, 2);
     }
 
-
     @Override
-    public String describe(double radius, double area) {
-        return String.format("Area of circle with radius %.2f is %.2f", radius, area());
+    public String describe() {
+        return String.format("Circle: Radius = %.2f, Area = %.2f", radius, area());
     }
-
 
     @Override
     public void printOn(Canvas canvas) {
-
+        canvas.circle(radius);
     }
 }

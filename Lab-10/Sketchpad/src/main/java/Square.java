@@ -1,18 +1,19 @@
 public class Square extends Rectangle {
 
-    private final double side;
-
     public Square(double side) {
-        this.side = side;
+        super(side, side);
     }
 
     @Override
-    public double area(double side) {
-        return this.side * side;
+    public void setWidth(double side) {
+        if(side <= 0) {
+            throw new IllegalArgumentException("Side must be greater than zero, got " + side);
+        }
+        super.setWidth(side);
     }
 
     @Override
-    public void printOn(Canvas canvas) {
-
+    public void setHeight(double side) {
+        setWidth(side);
     }
 }

@@ -1,4 +1,3 @@
-
 public abstract class Shape {
 
     public abstract double area();
@@ -7,16 +6,22 @@ public abstract class Shape {
         return String.format("Area: %.2f", area());
     }
 
-    public void draw() throws ShapeTooSmallException, ShapeTooLargeException {
+    public final void draw(Canvas canvas) throws ShapeTooSmallException, ShapeTooLargeException {
         double a = area();
+
         if(a < 1.0) {
-            throw new IllegalArgumentException("Area is too small");
+            throw new ShapeTooSmallException(
+                    describe() + " - area " + String.format("%.2f", a) + " would not cover even one cell ");
         }
 
-        if(a > capacity()) {
-            throw new IllegalArgumentException("Area is too large");
+        if(a > canvas.capacity()) {
+            throw new ShapeTooLargeException(
+                    describe() + " - area " + String.format("%.2f", a) + " exceeds canvas capacity of " +
+            canvas.capacity() + " cells");
         }
 
+        printOn(canvas);
     }
+
     protected abstract void printOn(Canvas canvas);
 }

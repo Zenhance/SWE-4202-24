@@ -4,7 +4,7 @@ import java.util.List;
 public class Gallery {
 
     private final Canvas canvas;
-    private final List<Shape> piles = new ArrayList<>();
+    private final List<Shape> pile = new ArrayList<>();
     private final List<String> skippedReasons = new ArrayList<>();
     private int drawCount = 0;
 
@@ -13,15 +13,15 @@ public class Gallery {
     }
 
     public void add(Shape shape){
-        piles.add(shape);
+        pile.add(shape);
     }
 
     public int waiting(){
-        return piles.size();
+        return pile.size();
     }
 
     public void render() {
-        for (Shape pile : piles) {
+        for (Shape shape : pile) {
             try {
                 shape.draw(canvas);
                 drawCount++;
