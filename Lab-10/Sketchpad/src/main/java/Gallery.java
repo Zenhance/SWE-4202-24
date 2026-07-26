@@ -21,6 +21,17 @@ public class Gallery {
         int skipped =0;
         ArrayList<String> skipReasons = new ArrayList<>();
 
+        for (Shape shape: shapes) {
+            try {
+                shape.draw(canvas);
+                drawn++;
+            }
+            catch (DrawException) {
+                skipped++;
+                skipReasons.add(e.getMessage());
+            }
+        }
+
 
     }
 }
