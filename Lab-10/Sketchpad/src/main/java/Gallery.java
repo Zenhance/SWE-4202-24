@@ -17,6 +17,9 @@ public class Gallery {
     }
 
     public void render() {
+        int drawn = 0;
+        int skipped =0;
+        ArrayList<String> skipReasons = new ArrayList<>();
 
 
     }
