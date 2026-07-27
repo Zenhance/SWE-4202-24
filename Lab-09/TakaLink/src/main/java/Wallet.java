@@ -20,4 +20,19 @@ public abstract class Wallet {
         this.frozen = false;
         this.spentToday = 0;
     }
+    public String getId(){
+        return id;
+    }
+    public double getBalance(){
+        return balance;
+    }
+    public boolean isFrozen(){
+        return frozen;
+    }
+    public void freeze(){
+        frozen=true;
+    }
+    public void unfreeze(){
+        frozen=false;
+    }
 }
