@@ -1,54 +1,71 @@
-public abstract class Transaction {
-    protected Wallet from;
-    protected Wallet to;
-    protected double amount;
-    protected String pin;
-    public Transaction(Wallet from,Wallet to,double amount,String pin) {
-        if (from==null || to==null) {
-            throw new IllegalArgumentException("Wallet cannot be null.");
-        }
-        if (amount<=0) {
-            throw new IllegalArgumentException("Amount must be positive.");
-        }
-        if (pin==null) {
-            throw new IllegalArgumentException("PIN cannot be null.");
-        }
+// =====================================================================
+//  THE CONTRACTOR'S CODE -- part of the version you must REPAIR.
+// =====================================================================
 
-        this.from =from;
-        this.to= to;
-        this.amount=amount;
-        this.pin=pin;
+/**
+ * Another public-field bag. new Transaction("SEND", -1000, ...) is a "send"
+ * that PULLS a thousand taka out of the recipient -- a theft the type system
+ * waves straight through, because nothing here is ever checked.
+ */
+public abstract class Transaction {
+    String type;
+    // "SEND", "CASHOUT", "PAYMENT", "TOPUP"
+    private double amount;
+    public Wallet fromId;
+    public   Wallet toId;
+    private String pin;
+
+    public Transaction(  Wallet fromId, Wallet toId,double amount,String pin) {
+        if (fromId==null||toId==null)
+            throw new IllegalArgumentException("Id has to be given");
+        if (amount<=0)
+            throw new IllegalArgumentException("Amount must be positive");
+
+        this.amount = amount;
+        this.fromId = fromId;
+        this.toId = toId;
+        this.pin = pin;
     }
-    public Wallet getFrom() {
-        return from;
+
+    public Transaction(String send, double v, String number, String number1, String number2) {
     }
-    public Wallet getTo() {
-        return to;
+
+    public Wallet getFromId() {
+        return fromId;
     }
+
+    public Wallet getToId() {
+        return toId;
+    }
+
     public double getAmount() {
         return amount;
     }
-    public abstract double getFee();
-    protected abstract void moveMoney() throws TransactionException;
-    public final void settle() throws TransactionException {
-        if (from.isFrozen()) {
-            throw new FrozenAccountException();
+    protected abstract TransactionType type();
+
+    public final void settle()  throws TransactionException {
+        if (fromId.isFrozen()) {
+            throw new FrozenAccountException(fromId);
         }
-        if (!from.verifyPin(pin)) {
-            throw new WrongPinException();
+        if (!fromId.verifyPin(pin)) {
+            throw new InvalidPinException(fromId);
         }
-        if (!from.canPerform(this)) {
-            throw new OperationNotAllowedException();
+        if (!fromId.canPay(type())) {
+            throw new OperationNotAllowedException(fromId, type());
         }
-        if (from.getSpentToday()+amount>from.getDailyLimit()) {
-            throw new DailyLimitExceededException();
+        if (fromId.remainingDailyLimit() < amount) {
+            throw new DailyLimitExceededException(fromId, amount);
         }
-        double total=amount+getFee();
-        if (from.getBalance()<total) {
-            throw new InsufficientBalanceException();
+        double totalDebit = amount + fee();
+        if (fromId.getBalance() < totalDebit) {
+            throw new InsufficientBalanceException(fromId, totalDebit);
         }
-        from.debit(total);
-        moveMoney();
-        from.addSpent(amount);
+
+        // Every precondition has passed -- only now does any money move.
+        fromId.debit(totalDebit);
+        toId.credit(amount);
+        fromId.recordSpend(amount);
     }
+    public abstract double fee() ;
+
 }
