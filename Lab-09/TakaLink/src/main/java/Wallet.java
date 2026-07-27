@@ -35,4 +35,16 @@ public abstract class Wallet {
     public void unfreeze(){
         frozen=false;
     }
+    public boolean verifyPin(String enteredPin){
+        return pin.equals(enteredPin);
+    }
+    public void debit(double amount){
+        if(amount<=0){
+            throw new IllegalArgumentException("Invalid debit");
+        }
+        if(balance<amount){
+            throw new IllegalArgumentException("Insufficient balance");
+        }
+        balance-=amount;
+    }
 }
