@@ -28,4 +28,28 @@ public abstract class Transaction {
     public double getAmount() {
         return amount;
     }
+    public abstract double getFee();
+    protected abstract void moveMoney() throws TransactionException;
+    public final void settle() throws TransactionException {
+        if (from.isFrozen()) {
+            throw new FrozenAccountException();
+        }
+        if (!from.verifyPin(pin)) {
+            throw new WrongPinException();
+        }
+        if (!from.canPerform(this)) {
+            throw new OperationNotAllowedException();
+        }
+        if (from.getSpentToday()+amount>from.getDailyLimit()) {
+            throw new DailyLimitExceededException();
+        }
+        double total=amount+getFee();
+        if (from.getBalance()<total) {
+            throw new InsufficientBalanceException();
+        }
+        from.debit(total);
+        moveMoney();
+        from.addSpent(amount);
+    }
+}
 }
