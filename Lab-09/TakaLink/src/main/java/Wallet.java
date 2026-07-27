@@ -48,8 +48,20 @@ public abstract class Wallet {
         balance-=amount;
     }
     public void credit(double amount) {
-        if(amount <= 0)
+        if(amount <= 0) {
             throw new IllegalArgumentException("Invalid credit");
+        }
         balance += amount;
     }
+    public double getSpentToday(){
+        return spentToday;
+    }
+    public void addSpent(double amount){
+        spentToday+=amount;
+    }
+    public double remainingLimit() {
+        return getDailyLimit()-spentToday;
+    }
+    public abstract double getDailyLimit();
+    public abstract boolean canPerform(Transaction transaction);
 }
