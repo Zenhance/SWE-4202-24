@@ -30,7 +30,7 @@ public class Gallery{
         try {
             shape.draw(canvas);
             drawn++;
-        } catch (ShapeException e) {
+        } catch (ShapeException e){
             skipped.add(shape.describe() + " — " + e.getMessage());
         }
     }
