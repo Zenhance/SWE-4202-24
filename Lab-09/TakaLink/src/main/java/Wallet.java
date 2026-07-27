@@ -47,4 +47,9 @@ public abstract class Wallet {
         }
         balance-=amount;
     }
+    public void credit(double amount) {
+        if(amount <= 0)
+            throw new IllegalArgumentException("Invalid credit");
+        balance += amount;
+    }
 }
