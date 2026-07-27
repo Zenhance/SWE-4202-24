@@ -33,5 +33,4 @@ public class AgentWallet extends Wallet{
     {
         return true;
     }
-
 }
