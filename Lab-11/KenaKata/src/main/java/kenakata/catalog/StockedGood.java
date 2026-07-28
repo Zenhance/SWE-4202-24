@@ -20,4 +20,8 @@ public final class StockedGood extends CatalogItem implements Weighable, Insurab
         }
         return MoneyMath.ceilPercent(lineValue,8);
     }
+    @Override
+    public int unitWeightGrams(){
+        return unitWeightGrams;
+    }
 }
