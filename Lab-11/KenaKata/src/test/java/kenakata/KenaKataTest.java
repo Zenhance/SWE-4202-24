@@ -1,9 +1,6 @@
 package kenakata;
 
 import kenakata.catalog.*;
-import kenakata.exceptions.*;
-import kenakata.order.*;
-import kenakata.payment.*;
 import kenakata.settlement.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
