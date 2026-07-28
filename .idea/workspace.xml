@@ -5,24 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dfcbdcd4-310d-4487-b279-635bf3e2eecf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Lab-04/CineCart/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab-04/CineCart/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab-04/CineCart/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab-04/CineCart/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab-04/CineCart/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab-04/CineCart/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab-04/CineCart/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab-04/CineCart/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab-04/CineCart/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab-04/CineCart/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab-04/CineCart/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab-04/CineCart/src/main/java/io/CsvLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab-04/CineCart/src/main/resources/concessions.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab-04/CineCart/src/main/resources/customers.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab-04/CineCart/src/main/resources/halls.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab-04/CineCart/src/main/resources/movies.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab-04/CineCart/src/main/resources/showtimes.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab-04/CineCart/src/test/java/CineCartTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab-11/KenaKata/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab-11/KenaKata/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab-11/KenaKata/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab-11/KenaKata/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab-11/KenaKata/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab-11/KenaKata/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab-11/KenaKata/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab-11/KenaKata/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab-11/KenaKata/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab-11/KenaKata/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab-11/KenaKata/src/main/java/kenakata/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab-11/KenaKata/src/test/java/kenakata/KenaKataTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,22 +26,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "xenonono36-ctrl"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;xenonono36-ctrl&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Zenhance/SWE-4202-24.git",
-    "accountId": "a40ace16-fa49-4aa9-a54a-9105e5510a52"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Zenhance/SWE-4202-24.git&quot;,
+    &quot;accountId&quot;: &quot;a40ace16-fa49-4aa9-a54a-9105e5510a52&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7,
-  "fromUser": false
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3DbbBT1txRDXs5dvmvW0jUDPJro" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -62,7 +56,6 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "Merging 36__Tanvir",
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
