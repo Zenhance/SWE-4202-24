@@ -1,5 +1,4 @@
 package kenakata.catalog;
 
-public class Seller {
-
+public class CatalogItem {
 }
