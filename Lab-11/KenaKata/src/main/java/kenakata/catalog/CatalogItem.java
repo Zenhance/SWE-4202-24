@@ -36,4 +36,7 @@ public abstract class CatalogItem implements Chargeable{
     private final String title(){
         return title;
     }
+    private final long getUnitPrice(){
+        return unitPrice;
+    }
 }
