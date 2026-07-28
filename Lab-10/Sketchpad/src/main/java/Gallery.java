@@ -25,7 +25,7 @@ public class Gallery {
                 drawn++;
             } catch (ShapeException e) {
                 skipped++;
-                reasons.add(s.description() + " : " + e.getMessage());
+                reasons.add(s.describe() + " : " + e.getMessage());
             }
         }
         System.out.println("Drawn= " + drawn);
