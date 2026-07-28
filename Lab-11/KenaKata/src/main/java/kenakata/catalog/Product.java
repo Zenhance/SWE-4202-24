@@ -45,5 +45,7 @@ public abstract class Product {
         this.stock -= quantity;
     }
 
+    public void restore(int quantity) { this.stock += quantity;}
+
 
 }
