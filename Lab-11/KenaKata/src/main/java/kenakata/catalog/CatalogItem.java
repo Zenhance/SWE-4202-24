@@ -12,5 +12,9 @@ public abstract class CatalogItem implements Chargeable{
         if(sku == null || sku.isBlank()){
             throw new IllegalArgumentException("SKU must not be blank");
         }
+        if(title == null || title.isBlank()){
+            throw new IllegalArgumentException("Title must not blank");
+        }
+        if()
     }
 }
