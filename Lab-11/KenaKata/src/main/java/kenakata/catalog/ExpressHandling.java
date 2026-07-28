@@ -1,6 +1,6 @@
 package kenakata.catalog;
 
-public class ExpressHandling {
+public class ExpressHandling implements Chargeable{
     private final int unitPrice = 120;
 
     public int unitCharge() {

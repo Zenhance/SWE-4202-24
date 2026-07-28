@@ -1,6 +1,6 @@
 package kenakata.catalog;
 
-public abstract class Good {
+public abstract class Good implements Chargeable{
     private String SKU;
     private String title;
     private double unitPrice;
