@@ -1,4 +1,5 @@
 package catalog;
 
-public class Weighable {
+public interface Weighable {
+    double weightGrams();
 }
