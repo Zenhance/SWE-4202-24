@@ -1,4 +1,5 @@
 package kenakata.catalog;
+
 import kenakata.enums.ItemType;
 import kenakata.settlement.Seller;
 
@@ -11,6 +12,13 @@ public abstract class AbstractItem implements Item {
     private ItemType type;
 
     public AbstractItem(String sku, String title, double unitPrice, int stock, Seller seller, ItemType type) {
+        if (sku == null || title == null || seller == null) {
+            throw new IllegalArgumentException("Fields cannot be null.");
+        }
+        if (unitPrice < 0 || stock < 0) {
+            throw new IllegalArgumentException("Non-negative value needed.");
+        }
+
         this.sku = sku;
         this.title = title;
         this.unitPrice = unitPrice;
