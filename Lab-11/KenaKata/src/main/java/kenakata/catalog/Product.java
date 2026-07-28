@@ -1,5 +1,7 @@
 package kenakata.catalog;
 
+import kenakata.exceptions.InsufficientStockException;
+
 public abstract class Product {
     private String sku;
     private String title;
@@ -7,17 +9,17 @@ public abstract class Product {
     private int stock;
     private Seller seller;
 
-    public Product(String sku, String title, double unitPrice, int stock, Seller seller) {
+    public Product(String sku, String title, double unitPrice, int stock, Seller seller) throws InsufficientStockException {
         if (sku == null || title == null || seller == null) {
             throw new IllegalArgumentException("SKU, title and seller can not be blank.");
         }
 
         if (unitPrice < 0) {
-            throw new IllegalArgumentException("Unit price must be greater than zero.");
+            throw new IllegalArgumentException("Unit price must be positive.");
         }
 
         if (stock <= 0) {
-
+            throw new InsufficientStockException("Stock must be greater than zero.");
         }
 
         this.sku = sku;
@@ -25,4 +27,11 @@ public abstract class Product {
         this.stock = stock;
         this.seller = seller;
     }
+
+    public String getSku() { return sku;}
+    public String getTitle() { return title;}
+    public int getStock() { return stock;}
+    public double getUnitPrice() { return unitPrice;}
+    public Seller getSeller() { return seller;}
+
 }
