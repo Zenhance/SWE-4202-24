@@ -14,4 +14,15 @@ public class Marketplace {
             registeredSellers.add(seller);
         }
     }
+    public void record(Order order){
+        if(order != null && order.placed()){
+            placedOrders.add(order);
+        }
+    }
+    public SettlementReport settle() {
+        List<SellerPayout> payoutList = new ArrayList<>();
+        for (Seller seller : registeredSellers) {
+            payoutList.add(new SellerPayout(seller));
+        }
+    }
 }
