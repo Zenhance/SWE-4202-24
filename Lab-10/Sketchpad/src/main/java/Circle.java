@@ -17,5 +17,11 @@ public class Circle extends Shape {
         return ("The radius of the circle is: " +radius+ "& the area is: " + area());
     }
 
+    @Override
+    public void draw(Canvas canvas) throws ShapeException {
+        if(area()<1) throw new ShapeTooSmallException("Impossible!");
+        else if(area()> canvas.capacity()) throw new ShapeTooLargeException("Area can't be greater than canvas capacity");
+        canvas.circle(radius);
+    }
 
 }
