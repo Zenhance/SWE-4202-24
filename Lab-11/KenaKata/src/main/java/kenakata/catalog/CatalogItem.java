@@ -34,5 +34,23 @@ public abstract class CatalogItem {
         return unitPrice;
     }
 
+    public String getTitle() {
+        return title;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public String getSku() {
+        return sku;
+    }
+
+
+
 }
+
+
+
+
 
