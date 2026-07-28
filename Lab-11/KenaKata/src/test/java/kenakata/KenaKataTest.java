@@ -423,7 +423,7 @@ class KenaKataTest {
     @DisplayName("Returns")
     class Returns {
 
-        private Order placedOrderWith(Chargeable... units) throws Exception {
+        private Order placedOrderWith(DigitalGood units) throws Exception {
             Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
             for (Chargeable unit : units) {
                 if (unit instanceof CatalogItem item) {
