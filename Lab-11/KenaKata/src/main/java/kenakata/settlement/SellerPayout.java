@@ -12,6 +12,21 @@ public class SellerPayout {
         this.grossSales+=amount;
     }
     public void addCommission(long amount){
-        this.commission+=commission;
+        this.commission+=amount;
+    }
+    public void addRefund(long amount){
+        this.refunds+=amount;
+    }
+    public long grossSales(){
+        return grossSales;
+    }
+    public long commission(){
+        return commission;
+    }
+    public long refunds(){
+        return refunds;
+    }
+    public long payout(){
+        return grossSales - commission-refunds;
     }
 }
