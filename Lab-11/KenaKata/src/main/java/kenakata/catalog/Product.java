@@ -6,4 +6,12 @@ public abstract class Product {
     private double unitPrice;
     private int stock;
     private Seller seller;
+
+    public Product(String sku, String title, double unitPrice, int stock, Seller seller) {
+
+        this.sku = sku;
+        this.title = title;
+        this.stock = stock;
+        this.seller = seller;
+    }
 }
