@@ -1,4 +1,4 @@
 package catalog;
 
-public class ColdChain {
+public interface ColdChain {
 }
