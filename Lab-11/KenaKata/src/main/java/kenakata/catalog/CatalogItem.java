@@ -1,5 +1,7 @@
 package kenakata.catalog;
 
+import kenakata.exceptions.OutOfStockException;
+
 public abstract class CatalogItem implements Chargeable
 {
     private String sku;
@@ -52,5 +54,27 @@ public abstract class CatalogItem implements Chargeable
     public double unitCharge()
     {
         return unitPrice;
+    }
+
+    public boolean canReserve(int qty)
+    {
+        if(qty<=0)
+        {
+            throw new IllegalArgumentException("Reservation quantity must be positive");
+        }
+        return qty<=remaining;
+    }
+
+    public void reserve(int qty) throws OutOfStockException
+    {
+        if(qty<=0)
+        {
+            throw new IllegalArgumentException("Reservation quantity must be positive");
+        }
+        if(qty>remaining)
+        {
+            throw new OutOfStockException(label() + " has only " + remaining + " units, out of " + qty);
+        }
+        remaining=remaining-qty;
     }
 }
