@@ -9,20 +9,23 @@ import java.util.Map;
 
 public class Order {
 
-    String place;
+    Zone zone;
     DeliveryCalculator d;
     PriceBreakdown pb;
     ArrayList<Chargeable> items = new ArrayList<>();
+    Coupon cp;
 
 
     public Order(Zone z, DeliveryCalculator d) {
-        this.place = place;
+        this.zone = z;
+        d.z = z;
         this.d = d;
         this.pb = new PriceBreakdown(items);
+        pb.deliveryBase = d.calculateDeliveryCharge();
     }
 
     public void addProduct(CatalogItem g, int n){
-        for(int i=0; i<1; i++){
+        for(int i=0; i<n; i++){
             items.add(g);
         }
     }
@@ -31,7 +34,9 @@ public class Order {
         items.add(w);
     }
 
-    public void applyCoupon(Coupon c){}
+    public void applyCoupon(Coupon c){
+        pb.cp = c;
+    }
 
     public void place(PaymentMethod p, int no){}
 

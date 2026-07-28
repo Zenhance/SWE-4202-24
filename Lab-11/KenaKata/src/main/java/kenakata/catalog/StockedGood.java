@@ -2,7 +2,7 @@ package kenakata.catalog;
 
 import kenakata.exceptions.OutOfStockException;
 
-public class StockedGood extends CatalogItem{
+public class StockedGood extends CatalogItem implements Weighable{
 
     public StockedGood(String a, String itemType, int unitPrice, int amount, Seller s, int weight) {
         super(a, itemType, unitPrice, amount, s, weight);
@@ -19,7 +19,8 @@ public class StockedGood extends CatalogItem{
         return (int) x;
     }
 
-
-
-
+    @Override
+    public int weightCharge(int w) {
+        return weight*20;
+    }
 }

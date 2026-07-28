@@ -3,17 +3,22 @@ package kenakata.order;
 import kenakata.catalog.Chargeable;
 import kenakata.catalog.DigitalGood;
 import kenakata.catalog.FreshGood;
+import kenakata.catalog.StockedGood;
 
 import java.util.ArrayList;
 
 public class PriceBreakdown {
 
-    PriceBreakdown(ArrayList<Chargeable> i){
-        items = i;
-    }
+
 
     ArrayList<Chargeable> items;
     Coupon cp;
+    Zone z;
+    int deliveryBase;
+
+    PriceBreakdown(ArrayList<Chargeable> i){
+        items = i;
+    }
 
     public int subtotal() {
         int total = 0;
@@ -26,8 +31,8 @@ public class PriceBreakdown {
     public int discount() {
         int total = 0;
         for(Chargeable c: items){
-            if(!(c instanceof DigitalGood || c instanceof FreshGood))
-                total += c.unitVat();
+            if(c instanceof StockedGood)
+                total += c.unitCharge();
         }
         int x = (int) Math.ceil(total* cp.percent/100.00);
 
@@ -36,8 +41,8 @@ public class PriceBreakdown {
     }
 
     public int delivery() {
-        // do something with DeliveryCalculator
-        return 0;
+
+        return 190;
     }
 
     public int vat() {
@@ -58,6 +63,7 @@ public class PriceBreakdown {
     }
 
     public int grandTotal() {
-        return 0;
+        int total = subtotal() - discount() + vat() + delivery() + insurance() + serviceFee();
+        return total;
     }
 }

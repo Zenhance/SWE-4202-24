@@ -4,8 +4,17 @@ import kenakata.catalog.Chargeable;
 import kenakata.catalog.DigitalGood;
 import kenakata.catalog.FreshGood;
 
+
 public class DeliveryCalculator {
-    int calculateDeliveryCharge(String smth) {
-        return 130;
+    Zone z;
+    int charge  =0;
+    int calculateDeliveryCharge() {
+        if(z == Zone.DHAKA)
+            charge += 60;
+
+        if(z == Zone.OUTSIDE)
+            charge += 120;
+
+        return charge;
     }
 }
