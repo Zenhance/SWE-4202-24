@@ -16,6 +16,8 @@ public abstract class CatalogItem {
         if(title==null || title.isBlank())
             throw new IllegalArgumentException("null title");
         if(unitPrice<0) throw new IllegalArgumentException("Price must be positive");
+        if(stock<0) throw new IllegalArgumentException("Stock number must be positive");
+        if(seller==null) throw new IllegalArgumentException("null seller");
 
 
     }
