@@ -13,7 +13,7 @@ public abstract class CatalogItem implements Chargeable{
             throw new IllegalArgumentException("SKU must not be blank");
         }
         if(title == null || title.isBlank()){
-            throw new IllegalArgumentException("Title must not blank");
+            throw new IllegalArgumentException("Title must not be blank");
         }
         if(unitPrice<0){
             throw new IllegalArgumentException("Unit price cannot be negative");
@@ -30,33 +30,48 @@ public abstract class CatalogItem implements Chargeable{
         this.stock = stock;
         this.seller = seller;
     }
-    private final String sku(){
+    public final String sku(){
         return sku;
     }
-    private final String title(){
+    public final String title(){
         return title;
     }
-    private final long getUnitPrice(){
+    public final long unitPrice(){
         return unitPrice;
     }
     public final Seller seller(){
         return seller;
     }
-    private final int remaining(){
+    public final int remaining(){
         return stock;
     }
     public final boolean canReserve(int quantity){
         validateQuantity(quantity);
         return stock>=quantity;
     }
-    public final void reserve(int quantity){
-        throws OutOfStockException{
+    public final void reserve(int quantity) throws OutOfStockException{
             validateQuantity(quantity);
             if(stock<quantity){
                 throw new OutOfStockException(title + " has only " + stock + " unit(s) remaining");
             }
             stock-=quantity;
         }
-        public
-    }
+        public final void release(int quantity){
+            validateQuantity(quantity);
+            stock = Math.addExact(stock, quantity);
+        }
+        private static void validateQuantity(int quantity){
+            if (quantity <= 0) {
+                throw new IllegalArgumentException("Quantity must be positive");
+            }
+        }
+        @Override
+                public final long unitCharge(){
+            return unitPrice;
+        }
+        @Override
+                public final String label(){
+            return title;
+        }
+        public abstract long commissionOn(long lineValue);
 }
