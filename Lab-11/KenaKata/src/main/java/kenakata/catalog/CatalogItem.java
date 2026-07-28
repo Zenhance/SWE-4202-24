@@ -42,5 +42,7 @@ public abstract class CatalogItem implements Chargeable{
     public final Seller seller(){
         return seller;
     }
-
+    private final int remaining(){
+        return stock;
+    }
 }
