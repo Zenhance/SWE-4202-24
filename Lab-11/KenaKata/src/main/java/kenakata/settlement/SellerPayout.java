@@ -9,6 +9,9 @@ public class SellerPayout {
     public SellerPayout(Seller seller){
         this.seller=seller;
     }
+    public void addSales(long amount){
+        this.grossSales+=amount;
+    }
 
 
 
