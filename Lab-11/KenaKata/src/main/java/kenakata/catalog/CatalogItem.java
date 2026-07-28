@@ -1,5 +1,7 @@
 package catalog;
 
+import exceptions.OutOfStockException;
+
 public abstract class CatalogItem implements Chargeable {
     private String sku;
     private String title;
@@ -29,4 +31,35 @@ public abstract class CatalogItem implements Chargeable {
        this.stockRemaining = stockRemaining;
        this.seller = seller;
     }
+    public String sku() {
+        return sku;
+    }
+    public String title() {
+        return title;
+    }
+    public double seller(){
+        return seller;
+    }
+    public String label(){
+        return title;
+    }
+    public double unitCharge(){
+        return unitPrice;
+    }
+    public boolean canReserve(int qty){
+        if(qty<=0){
+            throw new IllegalArgumentException("Reserved quantity cannot be negative");
+        }
+        return qty<=stockRemaining;
+    }
+    public void reserve(int qty) throws OutOfStockException {
+        if(qty<=0){
+            throw new IllegalArgumentException("Reserved quantity cannot be negative");
+        }
+        if(qty>stockRemaining){
+            throw new OutOfStockException(label()+" has only "+stockRemaining+" units, out of "+ qty);
+        }
+        stockRemaining -= qty;
+    }
+    public abstract double commisionOn(double lineValue);
 }
