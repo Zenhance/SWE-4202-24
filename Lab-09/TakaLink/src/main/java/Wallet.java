@@ -6,7 +6,7 @@ public abstract class Wallet {
     private String pin;
     private boolean frozen;
     private double spentToday;
-    public Wallet(String id, double balance, String pin, boolean frozen){
+    public Wallet(String id, double balance, String pin){
         if(id == null || id.isBlank()){
             throw new IllegalArgumentException("Invalid Id");
         }
@@ -19,7 +19,7 @@ public abstract class Wallet {
         this.id = id;
         this.balance = balance;
         this.pin = pin;
-        this.frozen = frozen;
+        this.frozen = false;
     }
 
     public String getId() {
@@ -39,7 +39,7 @@ public abstract class Wallet {
             throw new InsufficientBalanceException("Insufficient Balance");
         }
         balance = balance - amount;
-        spentToday = spentToday+amount;
+
     }
     public void credit(double amount){
         if(amount <=0){
@@ -47,19 +47,21 @@ public abstract class Wallet {
         }
         balance = balance+amount;
     }
-    public void verifyPin(String inPin) throws InvalidPinException{
-            if(!inPin.equals(pin)){
-                throw new InvalidPinException("Invalid pin");
-        }
-
+    public boolean verifyPin(String enteredPin) {
+        return pin.equals(enteredPin);
     }
+
     public void checkFrozen() throws FrozenAccountException{
         if(frozen){
             throw new FrozenAccountException("Your account has been frozen");
         }
     }
+    public void addSpent(double amount){
+        spentToday += amount;
+    }
     public double getRemainingDailyLimit(){
         return getDailyLimit() - spentToday;
     }
+    public abstract void validateOperation(Transaction transaction) throws OperationNotAllowedException;
 
 }
