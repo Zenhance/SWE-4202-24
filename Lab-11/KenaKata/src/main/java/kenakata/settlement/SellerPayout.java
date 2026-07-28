@@ -27,4 +27,7 @@ public class SellerPayout {
     public long payout(){
         return grossSales-commission-refunds;
     }
+    public Seller seller(){
+        return seller;
+    }
 }

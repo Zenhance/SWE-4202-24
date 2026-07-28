@@ -18,4 +18,7 @@ public class SettlementReport {
         }
         return new SellerPayout(seller);
     }
+    public long platformRevenue(){
+        return  platformRevenue;
+    }
 }
