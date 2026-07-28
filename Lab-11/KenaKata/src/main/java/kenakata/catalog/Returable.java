@@ -1,4 +1,5 @@
 package catalog;
 
-public class Returable {
+public interface Returable {
+    int returnWindowDays();
 }
