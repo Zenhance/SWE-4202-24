@@ -45,4 +45,9 @@ public abstract class CatalogItem implements Chargeable{
     private final int remaining(){
         return stock;
     }
+    public final boolean canReserve(int quantity){
+        validateQuantity(quantity);
+        return stock>=quantity;
+    }
+    public final
 }
