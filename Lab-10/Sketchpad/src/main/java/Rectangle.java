@@ -30,8 +30,16 @@ public class Rectangle extends Shape{
         return width*height;
     }
 
+    @Override
+    public String description() {
+        return ("The width of the rectangle is: " + width + "The height of the rectangle is: " + height + "& the area is: " + area());
+    }
 
-
+    @Override
+    public void draw(Canvas canvas) throws ShapeException {
+        if(area()<1) throw new ShapeTooSmallException ("Impossible");
+        else if(area()> canvas.capacity()) throw new IllegalArgumentException("Impossible");
+    }
 
 
 }
