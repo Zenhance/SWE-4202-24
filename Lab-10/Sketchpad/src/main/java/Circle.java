@@ -7,6 +7,16 @@ public class Circle extends Shape {
         this.radius = radius;
     }
 
+    public double getRadius() {
+        return radius;
+    }
+
+    public void setRadius() {
+        if(radius <= 0) throw new IllegalArgumentException("Radius can't be negative");
+        this.radius = radius;
+    }
+
+
     @Override
     public double area() {
         return PI*radius*radius;
