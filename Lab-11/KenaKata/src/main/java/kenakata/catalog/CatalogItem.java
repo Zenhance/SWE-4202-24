@@ -49,5 +49,14 @@ public abstract class CatalogItem implements Chargeable{
         validateQuantity(quantity);
         return stock>=quantity;
     }
-    public final
+    public final void reserve(int quantity){
+        throws OutOfStockException{
+            validateQuantity(quantity);
+            if(stock<quantity){
+                throw new OutOfStockException(title + " has only " + stock + " unit(s) remaining");
+            }
+            stock-=quantity;
+        }
+        public
+    }
 }
