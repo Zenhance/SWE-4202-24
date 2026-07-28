@@ -1,4 +1,7 @@
 package exceptions;
 
-public class CouponRejectedException {
+public class CouponRejectedException extends CheckoutException {
+    public CouponRejectedException(String message) {
+        super(message);
+    }
 }
