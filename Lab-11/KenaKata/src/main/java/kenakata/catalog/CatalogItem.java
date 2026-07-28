@@ -15,6 +15,19 @@ public abstract class CatalogItem implements Chargeable{
         if(title == null || title.isBlank()){
             throw new IllegalArgumentException("Title must not blank");
         }
-        if()
+        if(unitPrice<0){
+            throw new IllegalArgumentException("Unit price cannot be negative");
+        }
+        if(stock<0){
+            throw new IllegalArgumentException("Stock cannot be negative");
+        }
+        if(seller == null){
+            throw new IllegalArgumentException("Seller must not be null");
+        }
+        this.sku = sku;
+        this.title = title;
+        this.unitPrice = unitPrice;
+        this.stock = stock;
+        this.seller = seller;
     }
 }
