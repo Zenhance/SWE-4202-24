@@ -36,6 +36,7 @@ public class Rectangle  extends Shape {
             throw new ShapeTooLargeException("%s does not fit in canvas of capacity %s".formatted(describe(), canvas.capacity()));
         if (area < 1)
             throw new ShapeTooSmallException(describe() + " is too small to cover even one cell");
-        canvas.enable();
+        // canvas has no enable() method; after validation the shape is considered drawable
+        // Actual drawing/adding to canvas should be handled by Canvas API elsewhere
     }
 }
