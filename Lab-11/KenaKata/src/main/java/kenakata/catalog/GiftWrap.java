@@ -1,6 +1,6 @@
 package kenakata.catalog;
 
-public class GiftWrap implements Chargeable{
+public class GiftWrap extends AddOn{
     private final int unitPrice = 50;
 
     public int unitCharge() {

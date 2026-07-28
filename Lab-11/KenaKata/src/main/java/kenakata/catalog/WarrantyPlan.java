@@ -1,6 +1,6 @@
 package kenakata.catalog;
 
-public class WarrantyPlan implements Chargeable{
+public class WarrantyPlan extends AddOn{
     private Good item;
 
     public WarrantyPlan(Good item) {
