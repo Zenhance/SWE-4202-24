@@ -1,6 +1,6 @@
 package kenakata.catalog;
 
-public class Good {
+public abstract class Good {
     private String SKU;
     private String title;
     private double unitPrice;
@@ -16,16 +16,10 @@ public class Good {
         this.seller = seller;
     }
 
-    public int unitCharge() {
-        return (int) Math.ceil(unitPrice);
-    }
+    public abstract int unitCharge();
 
-    public int unitVat() {
-        return (int) Math.ceil(unitPrice * 0.075);
-    }
+    public abstract int unitVat();
 
     // fix parameter
-    public int commissionOn(int something) {
-        return (int) Math.ceil(something * 0.08);
-    }
+    public abstract int commissionOn(int something);
 }
