@@ -14,4 +14,8 @@ public class GiftWrap implements Chargeable{
     public int commissionOn(int something) {
         return (int) Math.ceil(something * 0.00);
     }
+
+    public String label() {
+        return "Gift wrapping";
+    }
 }
