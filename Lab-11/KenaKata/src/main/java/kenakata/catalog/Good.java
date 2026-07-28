@@ -42,4 +42,15 @@ public abstract class Good implements Chargeable{
     public Seller getSeller() {
         return seller;
     }
+
+    public int remaining() {
+        return stockCount;
+    }
+
+    public void reserve(int amount) {
+        if(amount > remaining())
+            //throw new OutOfStockException("Out of stock");
+            return;
+        stockCount -= amount;
+    }
 }
