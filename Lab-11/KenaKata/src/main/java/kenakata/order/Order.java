@@ -1,14 +1,14 @@
 package kenakata.order;
 
 import kenakata.catalog.AddOn;
+import kenakata.catalog.Chargeable;
 import kenakata.catalog.Good;
 import java.util.ArrayList;
 
 public class Order {
     private Zone zone;
     private DeliveryCalculator calculator;
-    private ArrayList<Good> products;
-    private ArrayList<AddOn> addOns;
+    private ArrayList<Chargeable> chargeables;
 
     public Order(Zone zone, DeliveryCalculator calculator) {
         this.zone = zone;
@@ -16,10 +16,10 @@ public class Order {
     }
 
     public void addProduct(Good product) {
-        products.add(product);
+        chargeables.add(product);
     }
 
     public void addAddOn(AddOn addOn) {
-        addOns.add(addOn);
+        chargeables.add(addOn);
     }
 }
