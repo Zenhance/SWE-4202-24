@@ -10,4 +10,12 @@ public class SettlementReport {
         this.payouts=payouts;
         this.platformRevenue=platformRevenue;
     }
+    public SellerPayout forSeller(Seller seller){
+        for(SellerPayout payout : payouts){
+            if(payout.seller().equals(seller)){
+                return payout;
+            }
+        }
+        return new SellerPayout(seller);
+    }
 }
