@@ -8,5 +8,5 @@ public abstract class Shape {
     }
     public abstract double area();
     public abstract void draw(Canvas canvas) throws ShapeTooLargeException, ShapeTooSmallException;
-    public abstract String toString();
+    public abstract String describe();
 }

@@ -11,6 +11,8 @@
  *
  * The only method your shapes need for their fit-check is {@link #capacity()}.
  */
+package main.java;
+
 public class Canvas {
 
     private final int cols;

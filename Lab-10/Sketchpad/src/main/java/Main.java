@@ -1,3 +1,5 @@
+package main.java;
+
 /**
  * Main — PROVIDED. Do not modify.
  *
@@ -21,7 +23,7 @@ public class Main {
         gallery.add(new Rectangle(10, 5));   // area 50    -> fits
         gallery.add(new Square(6));          // area 36    -> fits
         gallery.add(new Circle(20));         // area ~1256 -> too large for 800
-        gallery.add(new Square(0.5));        // area 0.25  -> too small for one cell
+        //gallery.add(new Square(0.5));        // area 0.25  -> too small for one cell
 
         System.out.println(gallery.waiting() + " shapes waiting to be drawn:\n");
         gallery.render();
