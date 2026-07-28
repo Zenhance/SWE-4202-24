@@ -39,4 +39,8 @@ public abstract class CatalogItem implements Chargeable{
     private final long getUnitPrice(){
         return unitPrice;
     }
+    public final Seller seller(){
+        return seller;
+    }
+
 }
