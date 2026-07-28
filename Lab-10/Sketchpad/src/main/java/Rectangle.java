@@ -21,12 +21,15 @@ public class Rectangle extends Shape{
         return height;
     }
 
-    public void setWidth(double width){
-        this.width=width;
+    public void setWidth(double width) {
+        requirePositive(width, "width");
+        this.width = width;
     }
-    public void setWidth(double height){
-        this.height=height;
+    public void setHeight(double height) {
+        requirePositive(height, "height");
+        this.height = height;
     }
+
 
     @Override
     public double area(){

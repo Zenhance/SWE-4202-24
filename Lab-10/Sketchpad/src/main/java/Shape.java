@@ -1,6 +1,6 @@
 public abstract class Shape {
-    public abstract double area();
 
+    public abstract double area();
     public abstract void paint(Canvas canvas);
     public String describe() {
         return String.format("%s with area %.2f", getClass().getSimpleName(), area());
