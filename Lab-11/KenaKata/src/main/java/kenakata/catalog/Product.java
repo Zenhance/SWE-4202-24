@@ -34,4 +34,16 @@ public abstract class Product {
     public double getUnitPrice() { return unitPrice;}
     public Seller getSeller() { return seller;}
 
+    public int remaining() { return stock;}
+    public void reserve(int quantity) throws InsufficientStockException {
+        if (quantity < =0) {
+            throw new IllegalArgumentException("Quantity must be greater than zero.");
+        }
+        if (quantity > stock) {
+            throw new InsufficientStockException("Not enough stock for " + title +".");
+        }
+        this.stock -= quantity;
+    }
+
+
 }
