@@ -22,4 +22,6 @@ public abstract class CatalogItem{
         stock-=quantity;
     }
 
+    public abstract long commissionOn(int amount);
+
 }
