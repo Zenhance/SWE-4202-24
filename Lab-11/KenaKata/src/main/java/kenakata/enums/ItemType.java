@@ -8,4 +8,12 @@ public class ItemType {
         this.vatRate = vatRate;
         this.commissionRate = commissionRate;
     }
+
+    public double getVatRate() {
+        return vatRate;
+    }
+
+    public double getCommissionRate() {
+        return commissionRate;
+    }
 }
