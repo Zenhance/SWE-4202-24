@@ -23,10 +23,10 @@ public final class FreshGood extends CatalogItem implements Weighable, ColdChain
 }
 @Override
     public int unitWeightGrams(){
-        return unitWeightGrams();
+        return unitWeightGrams;
 }
 @Override
-    public long coldCahinSurcharge(){
+    public long coldChainSurcharge(){
         return COLD_CHAIN_FEE;
 }
 @Override
