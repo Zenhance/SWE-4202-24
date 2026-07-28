@@ -16,4 +16,10 @@ public abstract class CatalogueItems {
     }
 
     public abstract boolean isShippable();
+
+    public abstract double VAT();
+
+    public abstract boolean canBeReturned();
+
+    public abstract double commission();
 }
