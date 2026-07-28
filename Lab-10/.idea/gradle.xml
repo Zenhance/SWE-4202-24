@@ -4,13 +4,13 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Sketchpad" />
+        <option name="gradleJvm" value="26" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Sketchpad" />
           </set>
         </option>
-        <option name="myGradleHome" value="" />
       </GradleProjectSettings>
     </option>
   </component>
