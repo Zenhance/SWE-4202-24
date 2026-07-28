@@ -15,4 +15,17 @@ public class Good {
         this.stockCount = stockCount;
         this.seller = seller;
     }
+
+    public int unitCharge() {
+        return (int) Math.ceil(unitPrice);
+    }
+
+    public int unitVat() {
+        return (int) Math.ceil(unitPrice * 0.075);
+    }
+
+    // fix parameter
+    public int commissionOn(int something) {
+        return (int) Math.ceil(something * 0.08);
+    }
 }
