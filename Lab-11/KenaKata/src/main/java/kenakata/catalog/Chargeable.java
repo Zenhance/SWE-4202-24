@@ -1,4 +1,7 @@
 package catalog;
 
-public class Chargeable {
+public interface Chargeable {
+    double unitVat();
+    double unitCharge();
+    String label();
 }
