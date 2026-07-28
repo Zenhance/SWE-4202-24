@@ -9,4 +9,15 @@ public final class StockedGood extends CatalogItem implements Weighable, Insurab
         }
         this.unitWeightGrams = unitWeightGrams;
     }
+    @Override
+    public long unitVat(){
+        return MoneyMath.ceilFraction(unitPrice(),75,1000);
+    }
+    @Override
+    public long comissionOn(long lineValue){
+        if(lineValue < 0){
+            throw new IllegalArgumentException("Line value cannot be negative");
+        }
+        return MoneyMath.ceilPercent(lineValue,8);
+    }
 }
