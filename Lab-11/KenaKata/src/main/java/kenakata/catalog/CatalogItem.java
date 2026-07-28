@@ -46,6 +46,12 @@ public abstract class CatalogItem {
         return sku;
     }
 
+    public abstract int unitCharge();
+
+    public abstract int unitVat();
+
+    public abstract String label();
+
 
 
 }
