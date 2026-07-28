@@ -18,14 +18,13 @@ public class SellerPayout {
     public void addRefund(long amount){
         this.refunds+=amount;
     }
-
-
-
-
-
-
-
-
-
-
+    public long grossSales(){
+        return grossSales;
+    }
+    public long refunds(){
+        return refunds;
+    }
+    public long payout(){
+        return grossSales-commission-refunds;
+    }
 }
