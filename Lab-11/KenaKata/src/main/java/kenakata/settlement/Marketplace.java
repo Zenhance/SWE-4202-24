@@ -4,6 +4,7 @@ import kenakata.order.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.RecursiveTask;
 
 public class Marketplace {
     private final List<Seller> registeredSellers = new ArrayList<>();
@@ -38,14 +39,20 @@ public class Marketplace {
 
                 long lineValue = line.lineValue();
                 payout.addSales(lineValue);
+
+                long comm = catalogItem.commissionOn(lineValue);
+                payout.addCommission(comm);
+                platformRevenue+=comm;
+                if(line.returned()){
+                        payout.addRefund(lineValue);
             }
-
-
-
-
-
-
-
+                else{
+                    platformRevenue += line.lineValue();
+                }
+            }
         }
+        return new SettlementReport(payoutlist,platformRevenue);
+}
+    private SellerPayout findPayoutForSeller(List<SellerPayout>payouts,Seller seller){
     }
 }
