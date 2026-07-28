@@ -21,5 +21,26 @@ public class Gallery
         return shapes.size();
     }
 
-
+    public void render()
+    {
+        int draw=0,skip=0;
+        ArrayList<String> skipped = new ArrayList<>();
+        for(Shape shape : shapes)
+        {
+            try
+            {
+                 shape.draw(canvas);
+                 draw++;
+            }
+            catch(ShapeException e)
+            {
+                skip++;
+                System.out.println(shape.describe());
+                System.out.println("Skipped because : "+e.getMessage());
+            }
+        }
+        System.out.println("Drawn : "+draw);
+        System.out.println("Skipped : "+skip);
+        canvas.show();
+    }
 }
