@@ -53,4 +53,5 @@ public abstract class CatalogItem implements Chargeable {
     public String label() {
         return title;
     }
+    //reminder: add optional capabilities
 }

@@ -13,33 +13,43 @@ public class StockedGood extends CatalogItem {
         this.weight = weight;
     }
 
+
     @Override
     public long unitVat() {
         return ceilPercent(unitCharge(), 7.5);
     }
+
 
     @Override
     public long commissionOn(long amount) {
         return ceilPercent(amount, 8);
     }
 
+
     @Override
     public int weightGrams() {
         return weight;
     }
+
+
     @Override
     public boolean isInsurable() {
         return true;
     }
+
+
     @Override
     public boolean isReturnable() {
         return true;
     }
 
+
     @Override
     public int returnWindow() {
         return 7;
     }
+
+
     private long ceilPercent(long value, double percent) {
         return (long)Math.ceil(value * percent / 100.0);
     }
