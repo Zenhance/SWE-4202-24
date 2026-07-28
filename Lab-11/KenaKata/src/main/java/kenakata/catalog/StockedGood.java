@@ -8,15 +8,18 @@ public class StockedGood extends Good{
         this.weight = weight;
     }
 
+    @Override
     public int unitCharge() {
         return (int) Math.ceil(getUnitPrice());
     }
 
+    @Override
     public int unitVat() {
         return (int) Math.ceil(getUnitPrice() * 0.075);
     }
 
     // fix parameter
+    @Override
     public int commissionOn(int something) {
         return (int) Math.ceil(something * 0.08);
     }
