@@ -38,4 +38,15 @@ public abstract class CatalogueItem implements OrderableLine{
         return this.LiveStockCount;
     }
 
+    public Seller getSeller() {
+        return this.seller;
+    }
+    @Override
+    public String getReceiptLabel(){
+        return title;
+    }
+    @Override
+    public long getCharge(int quantity){
+        return (long) (unitprice*quantity);
+    }
 }
