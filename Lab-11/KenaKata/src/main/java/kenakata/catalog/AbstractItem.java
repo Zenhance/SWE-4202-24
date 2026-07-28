@@ -26,4 +26,34 @@ public abstract class AbstractItem implements Item {
         this.seller = seller;
         this.type = type;
     }
+
+    @Override
+    public String getSku() {
+        return sku;
+    }
+
+    @Override
+    public String getTitle() {
+        return title;
+    }
+
+    @Override
+    public double getUnitPrice() {
+        return unitPrice;
+    }
+
+    @Override
+    public int getStockRemaining() {
+        return stock;
+    }
+
+    @Override
+    public Seller getSeller() {
+        return seller;
+    }
+
+    @Override
+    public ItemType getType() {
+        return type;
+    }
 }
