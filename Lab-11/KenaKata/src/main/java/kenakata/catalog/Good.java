@@ -22,4 +22,8 @@ public abstract class Good {
 
     // fix parameter
     public abstract int commissionOn(int something);
+
+    public double getUnitPrice() {
+        return unitPrice;
+    }
 }
