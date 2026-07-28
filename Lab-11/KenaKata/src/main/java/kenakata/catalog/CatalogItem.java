@@ -9,15 +9,14 @@ public abstract class CatalogItem implements Chargeable {
     private int stock;
     private final Seller seller;
 
-    public CatalogItem(String sku, String title, long price, Seller seller) {
-        if (sku == null || sku.isBlank() || title == null || title.isBlank() || seller == null || price < 0 || stock < 0) {
+    public CatalogItem(String sku, String title, long price, int stock, Seller seller) {
+        if (sku == null || sku.isBlank() || title == null || title.isBlank() || seller == null || price < 0 || this.stock < 0) {
             throw new IllegalArgumentException();
         }
         this.sku = sku;
         this.title = title;
         this.price = price;
         this.seller = seller;
-        this.stock = stock;
     }
 
     @Override
@@ -53,5 +52,29 @@ public abstract class CatalogItem implements Chargeable {
     public String label() {
         return title;
     }
-    //reminder: add optional capabilities
+
+    public abstract long commissionOn(long amount);
+
+    public int weightGrams() {
+        return 0;
+    }
+
+    public boolean isColdChain() {
+        return false;
+    }
+
+
+    public boolean isInsurable() {
+        return false;
+    }
+
+
+    public boolean isReturnable() {
+        return false;
+    }
+
+
+    public int returnWindow() {
+        return 0;
+    }
 }
