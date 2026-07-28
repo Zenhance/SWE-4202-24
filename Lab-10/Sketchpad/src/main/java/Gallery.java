@@ -16,6 +16,26 @@ public class Gallery {
         return shapes.size();
     }
     public void render() {
+        int drawn = 0;
+        int skipped = 0;
 
+        ArrayList<String> report = new ArrayList<>();
+
+        for(Shape shape : shapes) {
+            try {
+                shape.draw(canvas);
+                drawn++;
+            }
+            catch(ShapeException e) {
+                skipped++;
+            }
+        }
+
+        System.out.println("Drawn: " + drawn);
+        System.out.println("Skipped: " + skipped);
+
+        canvas.show();
     }
+
+
 }
