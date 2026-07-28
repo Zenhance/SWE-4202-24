@@ -1,5 +1,7 @@
 package kenakata.catalog;
 
+import kenakata.exceptions.OutOfStockException;
+
 public abstract class Good implements Chargeable{
     private String SKU;
     private String title;
@@ -47,10 +49,9 @@ public abstract class Good implements Chargeable{
         return stockCount;
     }
 
-    public void reserve(int amount) {
+    public void reserve(int amount) throws OutOfStockException {
         if(amount > remaining())
-            //throw new OutOfStockException("Out of stock");
-            return;
+            throw new OutOfStockException("Out of stock");
         stockCount -= amount;
     }
 }
