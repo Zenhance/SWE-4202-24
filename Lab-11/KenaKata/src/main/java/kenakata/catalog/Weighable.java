@@ -2,5 +2,5 @@ package kenakata.catalog;
 
 public interface Weighable
 {
-    long weightGrams();
+    double weightGrams();
 }
