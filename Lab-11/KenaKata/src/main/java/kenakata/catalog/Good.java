@@ -23,7 +23,23 @@ public abstract class Good implements Chargeable{
     // fix parameter
     public abstract int commissionOn(int something);
 
+    public String getSKU() {
+        return SKU;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
     public double getUnitPrice() {
         return unitPrice;
+    }
+
+    public int getStockCount() {
+        return stockCount;
+    }
+
+    public Seller getSeller() {
+        return seller;
     }
 }
