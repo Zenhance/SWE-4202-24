@@ -18,7 +18,7 @@ public class Main {
 
         // A mixed pile: three fit, two the canvas must refuse.
         gallery.add(new Circle(4));          // area ~50   -> fits
-        gallery.add(new Rectangle(10, 5));   // area 50    -> fits
+        gallery.add(new Rectangle(1000, 5));   // area 50    -> fits
         gallery.add(new Square(6));          // area 36    -> fits
         gallery.add(new Circle(20));         // area ~1256 -> too large for 800
         gallery.add(new Square(0.5));        // area 0.25  -> too small for one cell
