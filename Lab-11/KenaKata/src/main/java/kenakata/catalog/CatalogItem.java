@@ -19,7 +19,11 @@ public abstract class CatalogItem {
         if(stock<0) throw new IllegalArgumentException("Stock number must be positive");
         if(seller==null) throw new IllegalArgumentException("null seller");
 
-
+        this.sku=sku;
+        this.title=title;
+        this.unitPrice=unitPrice;
+        this.stock=stock;
+        this.seller=seller;
     }
 
 
