@@ -1,4 +1,7 @@
 package exceptions;
 
-public class CardLimitExceededException {
+public class CardLimitExceededException extends PaymentDeclineException {
+    public CardLimitExceededException(String message) {
+        super(message);
+    }
 }
