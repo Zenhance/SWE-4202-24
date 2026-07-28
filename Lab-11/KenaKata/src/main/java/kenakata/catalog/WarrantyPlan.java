@@ -2,7 +2,7 @@ package kenakata.catalog;
 
 import java.util.Collection;
 
-public class WarrantyPlan {
+public class WarrantyPlan implements Addable {
 
     StockedGood s;
 

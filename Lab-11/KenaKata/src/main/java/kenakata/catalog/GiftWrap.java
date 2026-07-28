@@ -1,6 +1,6 @@
 package kenakata.catalog;
 
-public class GiftWrap implements Chargeable {
+public class GiftWrap implements Chargeable, Addable {
 
     static final int unitPrice = 50;
 
@@ -16,4 +16,5 @@ public class GiftWrap implements Chargeable {
     public String label() {
         return "Gift wrapping";
     }
+
 }

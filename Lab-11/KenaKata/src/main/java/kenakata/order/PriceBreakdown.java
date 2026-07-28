@@ -29,7 +29,7 @@ public class PriceBreakdown {
             if(!(c instanceof DigitalGood || c instanceof FreshGood))
                 total += c.unitVat();
         }
-        int x = (int) Math.ceil(total* cp.percent/100);
+        int x = (int) Math.ceil(total* cp.percent/100.00);
 
         if(x > cp.capped) return cp.capped;
         return x;
