@@ -21,5 +21,23 @@ public final class FreshGood extends CatalogItem implements Weighable, ColdChain
         }
         return MoneyMath.ceilPercent(lineValue,5);
 }
-
+@Override
+    public int unitWeightGrams(){
+        return unitWeightGrams();
+}
+@Override
+    public long coldCahinSurcharge(){
+        return COLD_CHAIN_FEE;
+}
+@Override
+    public long insurableValue(int quantity){
+        if(quantity<=0){
+            throw new IllegalArgumentException("Quantity must be positive");
+        }
+        return Math.multiplyExact(unitPrice(),quantity);
+}
+@Override
+    public int returnWindowDays(){
+        return 2;
+}
 }
