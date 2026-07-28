@@ -21,4 +21,8 @@ public class WarrantyPlan implements Chargeable{
     public int commissionOn(int something) {
         return 0;
     }
+
+    public String label() {
+        return item.getTitle();
+    }
 }
