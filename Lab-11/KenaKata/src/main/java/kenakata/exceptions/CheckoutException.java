@@ -1,4 +1,7 @@
 package kenakata.exceptions;
 
-public class CheckoutException {
+public abstract class CheckoutException extends Exception {
+    public CheckoutException(String message) {
+        super(message);
+    }
 }
