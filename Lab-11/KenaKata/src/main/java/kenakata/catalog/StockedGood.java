@@ -6,4 +6,14 @@ public class StockedGood extends Good{
         super(SKU, title, unitPrice, stockCount, seller);
         this.weight = weight;
     }
+
+    public int unitCharge() {
+        return (int) Math.ceil(getUnitPrice());
+    }
+    public int unitVat(){
+        return (int) Math.ceil(getUnitPrice() * 0.075);
+    }
+    public int commissionOn(int omething) {
+        return (int) Math.ceil(omething * 0.08);
+    }
 }

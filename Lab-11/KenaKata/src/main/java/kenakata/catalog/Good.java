@@ -15,4 +15,7 @@ public class Good {
         this.stockCount = stockCount;
         this.seller = seller;
     }
+    public double getUnitPrice() {
+        return unitPrice;
+    }
 }
