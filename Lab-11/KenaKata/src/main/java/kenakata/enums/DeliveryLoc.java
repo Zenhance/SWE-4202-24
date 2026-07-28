@@ -8,4 +8,12 @@ public class DeliveryLoc {
         this.baseFee = baseFee;
         this.perKgFee = perKgFee;
     }
+
+    public double getBaseFee() {
+        return baseFee;
+    }
+
+    public double getPerKgFee() {
+        return perKgFee;
+    }
 }
