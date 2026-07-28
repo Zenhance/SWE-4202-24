@@ -7,7 +7,7 @@ public class FreshGood extends Good{
     public int unitVat(){
         return (int) Math.ceil(getUnitPrice()*0.00);
     }
-    public int commissionOn(int stockCount){
-        return (int) Math.ceil(0.05*stockCount);
+    public int commissionOn(int  something){
+        return (int) Math.ceil(0.05* something);
     }
 }

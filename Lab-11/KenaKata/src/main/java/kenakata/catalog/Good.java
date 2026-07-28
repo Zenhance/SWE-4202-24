@@ -18,4 +18,9 @@ public class Good {
     public double getUnitPrice() {
         return unitPrice;
     }
+    public abstract int unitCharge();
+
+    public abstract int unitVat();
+
+    public abstract int commissionOn(int something);
 }

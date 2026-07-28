@@ -13,7 +13,7 @@ public class StockedGood extends Good{
     public int unitVat(){
         return (int) Math.ceil(getUnitPrice() * 0.075);
     }
-    public int commissionOn(int omething) {
-        return (int) Math.ceil(omething * 0.08);
+    public int commissionOn(int  something) {
+        return (int) Math.ceil( something * 0.08);
     }
 }
