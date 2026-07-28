@@ -9,5 +9,16 @@ public abstract class CatalogItem {
     private int stock;
     private Seller seller;
 
+    public CatalogItem(String sku,String title,double unitPrice,int stock,Seller seller){
+
+        if(sku==null || sku.isBlank())
+            throw new IllegalArgumentException("null sku");
+        if(title==null || title.isBlank())
+            throw new IllegalArgumentException("null title");
+        if(unitPrice<0) throw new IllegalArgumentException("Price must be positive");
+
+
+    }
+
 
 }
