@@ -7,10 +7,10 @@ public abstract class CatalogItem implements Chargeable
     private String sku;
     private String title;
     private double unitPrice;
-    private int remaining;
+    private int stockRemaining;
     private Seller seller;
 
-    public CatalogItem(String sku, String title, double unitPrice, int remaining, Seller seller)
+    public CatalogItem(String sku, String title, double unitPrice, int stockRemaining, Seller seller)
     {
         if(sku==null || sku.isBlank())
             throw new IllegalArgumentException("Sku can noy be null");
@@ -18,14 +18,14 @@ public abstract class CatalogItem implements Chargeable
             throw new IllegalArgumentException("Title can noy be null");
         if(unitPrice<0)
             throw new IllegalArgumentException("Unit price must be positive");
-        if(remaining<0)
+        if(stockRemaining<0)
             throw new IllegalArgumentException("Remaining items can not be negative");
         if(seller==null)
             throw new IllegalArgumentException("Seller can not be null");
         this.sku = sku;
         this.title = title;
         this.unitPrice = unitPrice;
-        this.remaining = remaining;
+        this.stockRemaining = stockRemaining;
         this.seller = seller;
     }
 
@@ -62,7 +62,7 @@ public abstract class CatalogItem implements Chargeable
         {
             throw new IllegalArgumentException("Reservation quantity must be positive");
         }
-        return qty<=remaining;
+        return qty<=stockRemaining;
     }
 
     public void reserve(int qty) throws OutOfStockException
@@ -71,11 +71,11 @@ public abstract class CatalogItem implements Chargeable
         {
             throw new IllegalArgumentException("Reservation quantity must be positive");
         }
-        if(qty>remaining)
+        if(qty>stockRemaining)
         {
-            throw new OutOfStockException(label() + " has only " + remaining + " units, out of " + qty);
+            throw new OutOfStockException(label() + " has only " + stockRemaining + " units, out of " + qty);
         }
-        remaining=remaining-qty;
+        stockRemaining=stockRemaining-qty;
     }
 
     public abstract double commissionOn(double lineValue);
