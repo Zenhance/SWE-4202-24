@@ -77,4 +77,6 @@ public abstract class CatalogItem implements Chargeable
         }
         remaining=remaining-qty;
     }
+
+    public abstract double commissionOn(double lineValue);
 }
