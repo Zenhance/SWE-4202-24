@@ -3,6 +3,8 @@ package kenakata.catalog;
 public class FreshGood extends CatalogueItems{
 
     public int weight;
+    public int quantity;
+    private static final double COMMISION = (5/100);
 
     public FreshGood(String sku, String title, int unit_price, int stock_count, Seller seller,  int weight) {
         super(sku, title, unit_price, stock_count, seller);
@@ -20,5 +22,7 @@ public class FreshGood extends CatalogueItems{
     }
 
     @Override
-    public double commission() {}
+    public double commission() {
+        return (unit_price * quantity) * COMMISION;
+    }
 }
