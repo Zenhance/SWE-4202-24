@@ -31,4 +31,16 @@ public class Circle extends Shape
             throw new ShapeTooSmallException("Circle is too small");
         canvas.circle(radius);
     }
+
+    public double getRadius()
+    {
+        return radius;
+    }
+
+    public void setRadius(double radius)
+    {
+        if(radius<=0)
+            throw new IllegalArgumentException("Radius must be positive");
+        this.radius = radius;
+    }
 }
