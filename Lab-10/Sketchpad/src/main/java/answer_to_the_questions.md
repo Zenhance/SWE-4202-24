@@ -1,4 +1,4 @@
-Gallery Design Questions
+Questions
 
 1.Which class is abstract, and why nobody may construct it.
 
