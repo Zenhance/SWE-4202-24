@@ -10,5 +10,8 @@ public final class GiftWrap implements Chargeable{
     public long unitVat(){
         return MoneyMath.ceilFraction(CHARGE,75,1000);
     }
-
+    @Override
+    public String label(){
+        return "Gft wrapping";
+}
 }
