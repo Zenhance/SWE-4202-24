@@ -31,7 +31,9 @@ public abstract class CatalogItem implements Chargeable{
         this.seller = seller;
     }
     private final String sku(){
+        return sku;
+    }
+    private final String title(){
         return title;
     }
-
 }
