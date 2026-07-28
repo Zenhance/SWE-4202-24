@@ -14,7 +14,7 @@ public class Square extends Rectangle{
     }
 
     @Override
-    public String description() {
+    public String describe() {
         return ("The length of the rectangle is: " + length + "& the area is: " + area());
     }
 

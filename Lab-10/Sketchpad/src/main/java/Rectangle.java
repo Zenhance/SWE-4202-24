@@ -31,7 +31,7 @@ public class Rectangle extends Shape{
     }
 
     @Override
-    public String description() {
+    public String describe() {
         return ("The width of the rectangle is: " + width + "The height of the rectangle is: " + height + "& the area is: " + area());
     }
 

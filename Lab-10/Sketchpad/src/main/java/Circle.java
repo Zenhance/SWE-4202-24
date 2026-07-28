@@ -23,7 +23,7 @@ public class Circle extends Shape {
     }
 
     @Override
-    public String description() {
+    public String describe() {
         return ("The radius of the circle is: " +radius+ "& the area is: " + area());
     }
 
