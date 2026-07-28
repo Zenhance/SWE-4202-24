@@ -1,6 +1,10 @@
 package kenakata.catalog;
 
-public class Good {
+import kenakata.exceptions.OutOfStockException;
+
+import java.io.Serializable;
+
+public abstract class Good implements Comparable{
     private String SKU;
     private String title;
     private double unitPrice;
@@ -21,6 +25,22 @@ public class Good {
     public abstract int unitCharge();
 
     public abstract int unitVat();
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void reserve(int quantity) throws Exception {
+        if(quantity > remaining())
+            throw new OutOfStockException("Out of stock");
+        if (quantity <= 0)
+            throw new IllegalArgumentException("Cannot reserve non-positive quantity");
+        stockCount -= quantity;
+    }
+
+    public int remaining() {
+        return stockCount;
+    }
 
     public abstract int commissionOn(int something);
 }
