@@ -9,4 +9,7 @@ public class GiftWrap {
     public int unitCharge() {
         return (int) Math.ceil(unitPrice);
     }
+    public String label(){
+        return "GiftWrap";
+    }
 }
