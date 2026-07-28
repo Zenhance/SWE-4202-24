@@ -49,9 +49,11 @@ public abstract class Good implements Chargeable{
         return stockCount;
     }
 
-    public void reserve(int amount) throws OutOfStockException {
-        if(amount > remaining())
+    public void reserve(int quantity) throws Exception {
+        if(quantity > remaining())
             throw new OutOfStockException("Out of stock");
-        stockCount -= amount;
+        if (quantity <= 0)
+            throw new IllegalArgumentException("Cannot reserve non-positive quantity");
+        stockCount -= quantity;
     }
 }
