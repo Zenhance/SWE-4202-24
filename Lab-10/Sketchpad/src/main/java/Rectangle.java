@@ -45,6 +45,8 @@ public class Rectangle extends Shape
 
     public void setHeight(double height)
     {
+        if(height<=0)
+            throw new IllegalArgumentException("Height must be positive");
         this.height = height;
     }
 }
