@@ -38,13 +38,19 @@ public abstract class CatalogItem implements Chargeable {
         return stock;
     }
     public void reserve(int quantity) throws OutOfStockException {
-            if (quantity <= 0) {
-                throw new IllegalArgumentException();
-            }
-            if (quantity > stock) {
-                throw new OutOfStockException("Not enough stock, sorry!!!");
-            }
-            stock -= quantity;
+        if (quantity <= 0) {
+            throw new IllegalArgumentException();
         }
+        if (quantity > stock) {
+            throw new OutOfStockException("Not enough stock, sorry!!!");
+        }
+        stock -= quantity;
+    }
+    public long comissionOn(long amount) {
+        return 0;
+    }
+    @Override
+    public String label() {
+        return title;
     }
 }
