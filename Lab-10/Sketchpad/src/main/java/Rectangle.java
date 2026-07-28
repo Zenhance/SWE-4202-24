@@ -1,4 +1,4 @@
-public class Rectangle extends Shape {
+public  class Rectangle extends Shape {
     protected double width;
     protected double height;
 
@@ -26,7 +26,10 @@ public class Rectangle extends Shape {
     public double area() {
         return width * height;
     }
-
+    @Override
+    public String describe() {
+        return "Rectangle(width=" + width + ", height=" + height + ")";
+    }
     @Override
     public void draw(Canvas canvas) throws ShapeException {
         if (width < 1 || height < 1) throw new ShapeTooSmallException("Rectangle too small");

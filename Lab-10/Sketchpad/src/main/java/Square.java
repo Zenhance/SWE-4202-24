@@ -10,6 +10,10 @@ public class Square extends Rectangle{
         height=side;
     }
     @Override
+    public String describe() {
+        return "Rectangle(width=" + width + ", height=" + height + ")";
+    }
+    @Override
     public void setHeight(double side){
         if(side<=0) throw new IllegalArgumentException();
 
