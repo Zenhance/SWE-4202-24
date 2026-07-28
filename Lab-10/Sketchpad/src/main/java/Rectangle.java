@@ -36,23 +36,11 @@ public class Rectangle extends Shape
         canvas.rectangle(width,height);
     }
 
-    public double getWidth()
-    {
-        return width;
-    }
-
     public void setWidth(double width)
     {
         if(width<=0)
             throw new IllegalArgumentException("Width must be positive");
         this.width = width;
-    }
-
-    public double getHeight()
-    {
-        if(height<=0)
-            throw new IllegalArgumentException("Height must be positive");
-        return height;
     }
 
     public void setHeight(double height)
