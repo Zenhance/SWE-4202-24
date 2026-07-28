@@ -7,4 +7,7 @@ public class ExpressHandling {
     public int unitVat() {
         return (int) Math.ceil(unitPrice*0.075);
     }
+    public int unitPrice() {
+        return (int) Math.ceil(unitPrice);
+    }
 }

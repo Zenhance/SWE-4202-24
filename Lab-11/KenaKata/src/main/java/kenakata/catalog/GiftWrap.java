@@ -6,4 +6,7 @@ public class GiftWrap {
     public int unitVat() {
         return (int) Math.ceil(unitPrice*0.075);
     }
+    public int unitCharge() {
+        return (int) Math.ceil(unitPrice);
+    }
 }

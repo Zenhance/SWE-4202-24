@@ -10,4 +10,7 @@ public class FreshGood extends Good{
     public int commissionOn(int  something){
         return (int) Math.ceil(0.05* something);
     }
+    public int reserve(){
+
+    }
 }
