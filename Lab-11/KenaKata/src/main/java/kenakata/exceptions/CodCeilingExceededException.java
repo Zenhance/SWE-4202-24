@@ -1,4 +1,7 @@
 package exceptions;
 
-public class CodCeilingExceededException {
+public class CodCeilingExceededException extends PaymentDeclineException {
+    public CodCeilingExceededException(String message) {
+        super(message);
+    }
 }
