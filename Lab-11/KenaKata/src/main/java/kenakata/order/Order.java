@@ -15,8 +15,9 @@ public class Order {
         this.calculator = calculator;
     }
 
-    public void addProduct(Good product) {
-        chargeables.add(product);
+    public void addProduct(Good product, int qty) {
+        for (int i = 0; i < qty; i++)
+            chargeables.add(product);
     }
 
     public void addAddOn(AddOn addOn) {
