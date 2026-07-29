@@ -9,6 +9,7 @@ public class Order {
     private Zone zone;
     private DeliveryCalculator calculator;
     private ArrayList<Chargeable> chargeables;
+    private Coupon coupon;
 
     public Order(Zone zone, DeliveryCalculator calculator) {
         this.zone = zone;
@@ -25,11 +26,11 @@ public class Order {
     }
 
     public void applyCoupon(Coupon coupon) {
-
+        this.coupon = coupon;
     }
 
     public PriceBreakdown quote(int amount) {
-        PriceBreakdown p = new PriceBreakdown();
+        PriceBreakdown p = new PriceBreakdown(chargeables, coupon);
         return p;
     }
 }
