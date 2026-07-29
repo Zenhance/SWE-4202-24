@@ -12,4 +12,12 @@ public class PriceBreakdown {
         this.chargeables = chargeables;
         this.coupon = coupon;
     }
+
+    public int subtotal() {
+        int subtotal = 0;
+        for (Chargeable c : chargeables) {
+            subtotal += c.unitCharge();
+        }
+        return subtotal;
+    }
 }
