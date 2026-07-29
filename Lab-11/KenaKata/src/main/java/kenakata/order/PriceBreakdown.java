@@ -7,10 +7,12 @@ import java.util.ArrayList;
 public class PriceBreakdown {
     private ArrayList<Chargeable> chargeables;
     private Coupon coupon;
+    private Zone zone;
 
-    public PriceBreakdown(ArrayList<Chargeable> chargeables, Coupon coupon) {
+    public PriceBreakdown(ArrayList<Chargeable> chargeables, Coupon coupon, Zone zone) {
         this.chargeables = chargeables;
         this.coupon = coupon;
+        this.zone = zone;
     }
 
     public int subtotal() {
@@ -32,5 +34,13 @@ public class PriceBreakdown {
             totalVat += c.unitVat();
         }
         return  totalVat;
+    }
+
+    public int delivery() {
+        final int DHAKA = 140;
+        final int  OUTSIDE = 120;
+
+        if (zone == Zone.DHAKA) return DHAKA;
+        else return OUTSIDE;
     }
 }
