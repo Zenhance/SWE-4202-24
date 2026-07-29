@@ -20,4 +20,9 @@ public class PriceBreakdown {
         }
         return subtotal;
     }
+
+    public int discount() {
+        int discount = (int) Math.ceil(subtotal() * coupon.getPercentage() * 0.01);
+        return discount;
+    }
 }
