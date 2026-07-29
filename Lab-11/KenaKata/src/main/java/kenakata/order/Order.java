@@ -30,7 +30,7 @@ public class Order {
     }
 
     public PriceBreakdown quote(int amount) {
-        PriceBreakdown p = new PriceBreakdown(chargeables, coupon);
+        PriceBreakdown p = new PriceBreakdown(chargeables, coupon, zone);
         return p;
     }
 }
