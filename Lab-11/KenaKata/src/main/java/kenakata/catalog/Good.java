@@ -8,7 +8,7 @@ public abstract class Good implements Chargeable{
     private double unitPrice;
     private int stockCount;
     private Seller seller;
-
+    private boolean isInsured;
 
     public Good(String SKU, String title, double unitPrice, int stockCount, Seller seller) {
         this.SKU = SKU;
@@ -16,6 +16,7 @@ public abstract class Good implements Chargeable{
         this.unitPrice = unitPrice;
         this.stockCount = stockCount;
         this.seller = seller;
+        isInsured = false;
     }
 
     public abstract int unitCharge();
@@ -55,5 +56,9 @@ public abstract class Good implements Chargeable{
         if (quantity <= 0)
             throw new IllegalArgumentException("Cannot reserve non-positive quantity");
         stockCount -= quantity;
+    }
+
+    public void insure() {
+        isInsured = true;
     }
 }
