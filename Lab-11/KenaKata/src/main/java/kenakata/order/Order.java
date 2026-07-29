@@ -26,4 +26,9 @@ public class Order {
     public void applyCoupon(Coupon coupon) {
 
     }
+
+    public PriceBreakdown quote(int amount) {
+        PriceBreakdown p = new PriceBreakdown();
+        return p;
+    }
 }
