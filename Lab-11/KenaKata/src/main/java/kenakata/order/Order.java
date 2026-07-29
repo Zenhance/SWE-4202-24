@@ -22,4 +22,8 @@ public class Order {
     public void addAddOn(AddOn addOn) {
         chargeables.add(addOn);
     }
+
+    public void applyCoupon(Coupon coupon) {
+
+    }
 }
