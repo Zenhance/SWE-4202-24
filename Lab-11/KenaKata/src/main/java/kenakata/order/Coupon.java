@@ -14,4 +14,24 @@ public class Coupon {
         this.minimumSpend = minimumSpend;
         this.lastValidDay = lastValidDay;
     }
+
+    public String getCode() {
+        return code;
+    }
+
+    public int getPercentage() {
+        return percentage;
+    }
+
+    public int getCap() {
+        return cap;
+    }
+
+    public int getMinimumSpend() {
+        return minimumSpend;
+    }
+
+    public int getLastValidDay() {
+        return lastValidDay;
+    }
 }
