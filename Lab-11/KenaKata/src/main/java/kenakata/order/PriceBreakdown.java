@@ -25,4 +25,12 @@ public class PriceBreakdown {
         int discount = (int) Math.ceil(subtotal() * coupon.getPercentage() * 0.01);
         return discount;
     }
+
+    public int vat() {
+        int totalVat = 0;
+        for (Chargeable c : chargeables) {
+            totalVat += c.unitVat();
+        }
+        return  totalVat;
+    }
 }
