@@ -5,6 +5,7 @@ import kenakata.exceptions.OutOfStockException;
 public abstract class CatalogItem implements Chargeable {
 
 
+    public boolean insured = false;
     protected String a;
     protected String itemType;
     protected int unitPrice;

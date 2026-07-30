@@ -1,9 +1,6 @@
 package kenakata.order;
 
-import kenakata.catalog.Chargeable;
-import kenakata.catalog.DigitalGood;
-import kenakata.catalog.FreshGood;
-import kenakata.catalog.StockedGood;
+import kenakata.catalog.*;
 
 import java.util.ArrayList;
 
@@ -15,6 +12,8 @@ public class PriceBreakdown {
     Coupon cp;
     Zone z;
     int deliveryBase;
+    DeliveryCalculator d;
+    int itemSubtotal;
 
     PriceBreakdown(ArrayList<Chargeable> i){
         items = i;
@@ -41,8 +40,7 @@ public class PriceBreakdown {
     }
 
     public int delivery() {
-
-        return 190;
+        return d.calculateDeliveryCharge();
     }
 
     public int vat() {
@@ -54,7 +52,16 @@ public class PriceBreakdown {
     }
 
     public int insurance() {
-        return 0;
+        int total = 0;
+        for(Chargeable c: items){
+            if(c instanceof Insurable)
+                if (((CatalogItem) c).insured)
+                    total += c.unitCharge();
+        }
+        double x = Math.ceil(total / 100.00);
+
+        if(x < 20 && x > 0) return 20;
+        return (int) x;
     }
 
     public int serviceFee() {
