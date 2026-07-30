@@ -8,7 +8,7 @@ public class GiftWrap implements Chargeable{
 
     @Override
     public long unitVat() {
-        return (long)Math.ceil(50 * 7.5 / 100));
+        return (long)Math.ceil(50 * 7.5 / 100);
     }
 
     @Override
