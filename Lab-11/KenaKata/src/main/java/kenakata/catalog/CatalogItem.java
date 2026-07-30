@@ -77,4 +77,8 @@ public abstract class CatalogItem implements Chargeable {
     public int returnWindow() {
         return 0;
     }
+
+    public String title() {
+        return title;
+    }
 }
