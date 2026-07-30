@@ -4,7 +4,7 @@ import kenakata.exceptions.OutOfStockException;
 
 public abstract class CatalogItem implements Chargeable {
     private final String sku;
-    private final String title;
+    final String title;
     private final long price;
     private int stock;
     private final Seller seller;
