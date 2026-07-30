@@ -1,7 +1,7 @@
 package kenakata.exceptions;
 
 public class EmptyWalletException extends CheckoutException{
-    public EmptyWalletException(String Message){
+    public EmptyWalletException(){
         super("Wallet balance is insufficient");
     }
 }
