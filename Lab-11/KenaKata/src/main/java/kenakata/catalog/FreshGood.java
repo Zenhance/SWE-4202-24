@@ -4,11 +4,12 @@ public class FreshGood extends CatalogueItems{
 
     public int weight;
     public int quantity;
-    private static final double COMMISION = (5/100);
+    private static final double COMMISION = 0.05;
 
     public FreshGood(String sku, String title, int unit_price, int stock_count, Seller seller,  int weight) {
         super(sku, title, unit_price, stock_count, seller);
         this.weight = weight;
+        this.quantity = quantity;
     }
 
 //    @Override
@@ -22,12 +23,12 @@ public class FreshGood extends CatalogueItems{
     ////    }
 
     @Override
-    public double commissionOn() {
-        return (unit_price * quantity) * COMMISION;
+    public double unitVat() {
+        return 0;
     }
 
     @Override
-    public double unitVat() {
-
+    public double commissionOn(int unit_price) {
+        return unit_price * COMMISION;
     }
 }
