@@ -11,18 +11,23 @@ public class FreshGood extends CatalogueItems{
         this.weight = weight;
     }
 
-    @Override
-    public boolean isShipplable() {
-        return true;
-    }
+//    @Override
+    ////    public boolean isShippable() {
+    ////        return false;
+    ////    }
+    ////
+    ////    @Override
+    ////    public boolean canBeReturned() {
+    ////        return true;
+    ////    }
 
     @Override
-    public boolean canBeReturned() {
-        return true;
-    }
-
-    @Override
-    public double commission() {
+    public double commissionOn() {
         return (unit_price * quantity) * COMMISION;
+    }
+
+    @Override
+    public double unitVat() {
+
     }
 }

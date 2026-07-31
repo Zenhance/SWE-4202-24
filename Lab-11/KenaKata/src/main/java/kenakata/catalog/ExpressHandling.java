@@ -1,7 +1,5 @@
 package kenakata.catalog;
 
-public class ExpressHandling extends AddOns {
+public class ExpressHandling{
 
-    private static final double VAT = (7.5/100);
-    private static final int CHARGE = 120;
 }

@@ -28,13 +28,17 @@ public class StockedGood extends CatalogueItems{
         return true;
     }
 
-    @Override
-    public double commission() {
-        return (unit_price * quantity) * COMMISSION;
+
+    public double unitCharge() {
     }
 
     @Override
-    public double VAT() {
+    public double unitVat() {
         return Math.ceil(unit_price * VAT_RATE) * quantity;
     }
+
+    @Override
+    public double commissionOn() {
+        return (unit_price * quantity) * COMMISSION;
+        }
 }

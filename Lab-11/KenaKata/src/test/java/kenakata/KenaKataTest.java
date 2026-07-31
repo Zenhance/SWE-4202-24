@@ -447,7 +447,8 @@ class KenaKataTest {
         @Test
         @DisplayName("A return after the window is refused")
         void returnPastWindowThrows() throws Exception {
-            Order order = placedOrderWith(new FreshGood("H", "Hilsa", 1600, 4, seller(), 1000));
+            Order order;
+            order = placedOrderWith();
             // Fresh window is 2 days; day 103 is past 100 + 2.
             assertThrows(ReturnNotAllowedException.class, () -> order.acceptReturn(0, 103));
         }

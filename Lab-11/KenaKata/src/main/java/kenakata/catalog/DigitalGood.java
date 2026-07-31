@@ -14,24 +14,23 @@ public class DigitalGood extends CatalogueItems{
         super(sku, title, unit_price, stock_count, seller);
         this.quantity = quantity;
     }
+//    @Override
+//    public boolean isShippable() {
+//        return false;
+//    }
+
+//    @Override
+//    public boolean canBeReturned() {
+//        return false;
+//    }
 
     @Override
-    public boolean isShippable() {
-        return false;
-    }
-
-    @Override
-    public boolean canBeReturned() {
-        return false;
-    }
-
-    @Override
-    public double commission() {
+    public double commissionOn() {
         return (unit_price * quantity) * COMMISION;
     }
 
     @Override
-    public double VAT() {
+    public double unitVat() {
         return (unit_price * quantity) * VAT_RATE;
     }
 

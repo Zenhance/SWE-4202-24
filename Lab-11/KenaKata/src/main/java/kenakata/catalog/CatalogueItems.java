@@ -15,11 +15,11 @@ public abstract class CatalogueItems {
         this.seller = seller;
     }
 
-    public abstract boolean isShippable();
+    //public abstract boolean isShippable();
 
-    public abstract double VAT();
+    public abstract double unitVat();
 
-    public abstract boolean canBeReturned();
+    //public abstract boolean canBeReturned();
 
-    public abstract double commission();
+    public abstract double commissionOn();
 }
