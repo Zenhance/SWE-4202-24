@@ -18,18 +18,19 @@ public class StockedGood extends CatalogueItems{
         this.quantity = quantity;
     }
 
-    @Override
-    public boolean isShippable() {
-        return true;
-    }
+//    @Override
+//    public boolean isShippable() {
+//        return true;
+//    }
+//
+//    @Override
+//    public boolean canBeReturned() {
+//        return true;
+//    }
 
-    @Override
-    public boolean canBeReturned() {
-        return true;
-    }
 
-
-    public double unitCharge() {
+    public int unitCharge() {
+        return unit_price;
     }
 
     @Override
@@ -38,7 +39,7 @@ public class StockedGood extends CatalogueItems{
     }
 
     @Override
-    public double commissionOn() {
-        return (unit_price * quantity) * COMMISSION;
+    public double commissionOn(int unit_price) {
+        return unit_price * COMMISSION;
         }
 }

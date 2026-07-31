@@ -25,13 +25,18 @@ public class DigitalGood extends CatalogueItems{
 //    }
 
     @Override
-    public double commissionOn() {
-        return (unit_price * quantity) * COMMISION;
+    public int unitCharge() {
+        return unit_price;
     }
 
     @Override
     public double unitVat() {
         return (unit_price * quantity) * VAT_RATE;
+    }
+
+    @Override
+    public double commissionOn(int unit_price) {
+        return (unit_price * quantity) * COMMISION;
     }
 
 }

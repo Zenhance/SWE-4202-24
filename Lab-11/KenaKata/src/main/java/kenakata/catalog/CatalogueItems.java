@@ -16,10 +16,11 @@ public abstract class CatalogueItems {
     }
 
     //public abstract boolean isShippable();
+    public abstract int unitCharge();
 
     public abstract double unitVat();
 
     //public abstract boolean canBeReturned();
 
-    public abstract double commissionOn();
+    public abstract double commissionOn(int unit_price);
 }
