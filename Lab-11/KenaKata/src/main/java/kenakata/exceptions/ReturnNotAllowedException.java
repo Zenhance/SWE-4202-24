@@ -1,7 +1,4 @@
-package main.java.kenakata.exceptions;
+package kenakata.exceptions;
 
-public class ReturnNotAllowedException extends CheckoutException {
-    public ReturnNotAllowedException(String message) {
-        super(message);
-    }
+public class ReturnNotAllowedException extends RuntimeException {
 }

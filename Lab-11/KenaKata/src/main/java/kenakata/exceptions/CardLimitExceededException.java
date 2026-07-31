@@ -1,7 +1,4 @@
-package main.java.kenakata.exceptions;
+package kenakata.exceptions;
 
-public class CardLimitExceededException extends PaymentDeclinedException {
-    public CardLimitExceededException(String message) {
-        super(message);
-    }
+public class CardLimitExceededException {
 }

@@ -1,7 +1,4 @@
-package main.java.kenakata.exceptions;
+package kenakata.exceptions;
 
-public class PaymentDeclinedException extends CheckoutException {
-    public PaymentDeclinedException(String message) {
-        super(message);
-    }
+public class PaymentDeclinedException {
 }

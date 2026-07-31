@@ -1,7 +1,4 @@
-package main.java.kenakata.exceptions;
+package kenakata.exceptions;
 
-public class OutOfStockException extends CheckoutException {
-    public OutOfStockException(String message) {
-        super(message);
-    }
+public class OutOfStockException {
 }
