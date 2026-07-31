@@ -1,5 +1,7 @@
 package kenakata.payment;
 
+import kenakata.exceptions.EmptyWalletException;
+
 public class Wallet{
 
     private double balance;
@@ -16,7 +18,10 @@ public class Wallet{
         this.balance = balance;
     }
 
-    public double debit(double amount) throws {
-        return balance - amount;
+    public void wallet(double amount) throws EmptyWalletException{
+        if(amount > balance){
+            throw new EmptyWalletException("Amount cannot be greater than balance");
+        }
+        balance -= amount;
     }
 }
