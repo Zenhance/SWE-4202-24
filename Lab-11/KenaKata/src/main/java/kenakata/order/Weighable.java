@@ -1,4 +1,5 @@
 package kenakata.order;
 
-public class Weighable {
+public interface Weighable {
+    int weightGrams();
 }
