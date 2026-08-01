@@ -1,34 +1,35 @@
 package kenakata.catalog;
 
-public class FreshGood extends CatalogueItems{
+import kenakata.exceptions.OutOfStockException;
 
-    public int weight;
-    public int quantity;
-    private static final double COMMISION = 0.05;
+public class FreshGood extends CatalogItem {
 
-    public FreshGood(String sku, String title, int unit_price, int stock_count, Seller seller,  int weight) {
-        super(sku, title, unit_price, stock_count, seller);
-        this.weight = weight;
-        this.quantity = quantity;
+    private int stock;
+    private final long weightGrams;
+
+    public FreshGood(String sku, String label, long unitPrice, int stock, Seller seller, long weightGrams) {
+        super(sku, label, unitPrice, seller);
+        if(stock < 0 || weightGrams <= 0) {
+            throw new OutOfStockException("Invalid stock/weight");
+        }
+        this.stock = stock;
+        this.weightGrams = weightGrams;
     }
 
-//    @Override
-    ////    public boolean isShippable() {
-    ////        return false;
-    ////    }
-    ////
-    ////    @Override
-    ////    public boolean canBeReturned() {
-    ////        return true;
-    ////    }
+    public int remaining() {
+        return stock;
+    }
 
+    public long weightGrams() {
+        return weightGrams;
+    }
     @Override
-    public double unitVat() {
+    public long unitVat() {
         return 0;
     }
 
     @Override
-    public double commissionOn(int unit_price) {
-        return unit_price * COMMISION;
+    public long commissionOn(long lineValue) {
+        return (long)Math.ceil(lineValue * 0.05);
     }
 }

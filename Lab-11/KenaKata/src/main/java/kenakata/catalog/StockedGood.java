@@ -1,45 +1,46 @@
 package kenakata.catalog;
 
-public class StockedGood extends CatalogueItems{
+import kenakata.exceptions.OutOfStockException;
 
-    public int weight;
-    public int quantity;
-    private final static double VAT_RATE = (7.5/100);
-    private final static double COMMISSION = (8/100);
+public class StockedGood extends CatalogItem {
 
-    public StockedGood(String sku, String title, int unit_price, int stock_count, Seller seller, int weight) {
-        super(sku, title, unit_price, stock_count, seller);
-        this.weight = weight;
-    }
+     private int stock;
+     private final long weightGrams;
 
-    public StockedGood(String sku, String title, int unit_price, int stock_count, Seller seller, int weight, int quantity) {
-        super(sku, title, unit_price, stock_count, seller);
-        this.weight = weight;
-        this.quantity = quantity;
-    }
-
-//    @Override
-//    public boolean isShippable() {
-//        return true;
-//    }
-//
-//    @Override
-//    public boolean canBeReturned() {
-//        return true;
-//    }
-
-
-    public int unitCharge() {
-        return unit_price;
-    }
-
-    @Override
-    public double unitVat() {
-        return Math.ceil(unit_price * VAT_RATE) * quantity;
-    }
-
-    @Override
-    public double commissionOn(int unit_price) {
-        return unit_price * COMMISSION;
+    public StockedGood(String sku, String label, long unitPrice, int stock, Seller seller, long weightGrams) {
+        super(sku, label, unitPrice, seller);
+        if(stock < 0 || weightGrams <= 0) {
+            throw new IllegalArgumentException("Invalid stock/weight");
         }
+        this.stock = stock;
+        this.weightGrams = weightGrams;
+    }
+
+    public void reserve(int qty) throws OutOfStockException {
+        if(qty <= 0) {
+            throw new IllegalArgumentException("Quantity must be greater than 0");
+        }
+
+        if(qty > stock) {
+            throw new OutOfStockException("Not enough stock");
+        }
+        stock -= qty;
+    }
+
+    public int remaining() {
+        return stock;
+    }
+
+    public long weightGrams() {
+        return weightGrams;
+    }
+    @Override
+    public long unitVat() {
+        return (long)Math.ceil(unitPrice * 0.075);
+    }
+
+    @Override
+    public long commissionOn(long lineValue) {
+        return (long)Math.ceil(lineValue * 0.08);
+    }
 }

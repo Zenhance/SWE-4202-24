@@ -1,7 +1,24 @@
 package kenakata.catalog;
 
-public class WarrantyPlan{
+public class WarrantyPlan implements Chargeable{
+    private final CatalogItem covered;
+    public WarrantyPlan(CatalogItem covered) {
+        if(covered == null) throw new IllegalArgumentException("Covered item cannot be null");
+        this.covered = covered;
+    }
 
-    private static final double VAT = (15/100);
-    private static final double CHARGE = (10/100);
+    @Override
+    public long unitCharge() {
+        return (long)Math.ceil(covered.unitCharge() * 0.10);
+    }
+
+    @Override
+    public long unitVat() {
+        return (long)Math.ceil(unitCharge() * 0.15);
+    }
+
+    @Override
+    public String label() {
+        return "Warranty for " + covered.label();
+    }
 }

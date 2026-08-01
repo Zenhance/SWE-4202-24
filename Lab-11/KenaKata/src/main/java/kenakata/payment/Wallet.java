@@ -4,9 +4,9 @@ import kenakata.exceptions.EmptyWalletException;
 
 public class Wallet{
 
-    private double balance;
+    private int balance;
 
-    public Wallet(double balance){
+    public Wallet(int balance){
         this.balance = balance;
     }
 
@@ -14,14 +14,22 @@ public class Wallet{
         return balance;
     }
 
-    public void setBalance(double balance){
-        this.balance = balance;
+    public boolean debit(double amount) {
+        if(amount <= 0){
+            return false;
+        }
+        if(balance >= amount){
+            balance -= amount;
+            return true;
+        }
+        return false;
     }
 
-    public void wallet(double amount) throws EmptyWalletException{
-        if(amount > balance){
-            throw new EmptyWalletException("Amount cannot be greater than balance");
+    public boolean credit(double amount) {
+        if(amount <= 0){
+            return false;
         }
-        balance -= amount;
+        balance += amount;
+        return true;
     }
 }

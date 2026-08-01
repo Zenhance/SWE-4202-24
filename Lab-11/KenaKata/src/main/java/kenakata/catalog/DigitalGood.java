@@ -1,42 +1,22 @@
 package kenakata.catalog;
 
-public class DigitalGood extends CatalogueItems{
+public class DigitalGood extends CatalogItem {
 
-    public int quantity;
-    private final static double VAT_RATE = (5/100);
-    private static final double COMMISION = 0.5;
+    private final int stock;
 
-    public DigitalGood(String sku, String title, int unit_price, int stock_count, Seller seller) {
-        super(sku, title, unit_price, stock_count, seller);
-    }
-
-    public DigitalGood(String sku, String title, int unit_price, int stock_count, Seller seller, int quantity) {
-        super(sku, title, unit_price, stock_count, seller);
-        this.quantity = quantity;
-    }
-//    @Override
-//    public boolean isShippable() {
-//        return false;
-//    }
-
-//    @Override
-//    public boolean canBeReturned() {
-//        return false;
-//    }
-
-    @Override
-    public int unitCharge() {
-        return unit_price;
+    public DigitalGood(String sku, String label, long unitPrice, int stock, Seller seller) {
+        super(sku, label, unitPrice, seller);
+        this.stock = stock;
     }
 
     @Override
-    public double unitVat() {
-        return (unit_price * quantity) * VAT_RATE;
+    public long unitVat() {
+        return (long)Math.ceil(unitPrice * 0.05);
     }
 
     @Override
-    public double commissionOn(int unit_price) {
-        return (unit_price * quantity) * COMMISION;
+    public long commissionOn(long lineValue) {
+        return (long)Math.ceil(lineValue * 0.20);
     }
 
 }
