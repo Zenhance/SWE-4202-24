@@ -39,5 +39,4 @@ public abstract class FreshGood extends CatalogItem Weighable,ColdChain,Insurabl
     public int returnWindowDays(){
         return 2;
     }
-
 }
