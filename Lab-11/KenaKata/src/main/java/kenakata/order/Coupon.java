@@ -9,7 +9,7 @@ public final class Coupon {
     private final long minimumSpeed;
     private final int lastValidDay;
 
-    public Coupon(String ode, int percentage, long cap, long minimumSpeed, int lastValidDay){
+    public Coupon(String code, int percentage, long cap, long minimumSpeed, int lastValidDay){
         if(code == null || code.isBlank()){
             throw new IllegalArgumentException("Coupn percentage must be between 0 and 100");
         }
@@ -37,5 +37,20 @@ public final class Coupon {
     public int getLastValidDay(){
         return lastValidDay;
     }
-
+    public long discountFor(long discountableBase, long subtotal, int currentDay) throws CouponRejectedException{
+        if(discountableBase<0 || subtotal<0 || currentDay<0){
+            throw new IllegalArgumentException("Pricing inputs cannot be negative");
+        }
+        if(currentDay>lastValidDay){
+            throw new CouponRejectedException("Coupon "+code+" has expired");
+        }
+        if(subtotal<minimumSpeed){
+            throw new CouponRejectedException("Coupon "+code+" requires a minimum spend of Tk "+minimumSpeed);
+        }
+        long calculatedDiscount = MoneyMath.ceilPercent(discountableBase,percentage);
+        return Math.min(cap,calculatedDiscount);
+    }
+    public long discountFor(long discountableBase, int currentDay) throws CouponRejectedException{
+        return discountFor(discountableBase,discountableBase,currentDay);
+    }
 }
