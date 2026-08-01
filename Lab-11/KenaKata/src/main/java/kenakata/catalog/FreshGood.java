@@ -19,4 +19,12 @@ public class FreshGood extends CatalogItem Weighable,ColdChain,Insurable,Returna
     public long unitVat(){
         return 0;
     }
+    @Override
+    public long commisionOn(long amount){
+        return (long)Math.ceil(amount*0.05);
+    }
+    @Override
+    public int weightGrams(){
+        return weightGrams;
+    }
 }
