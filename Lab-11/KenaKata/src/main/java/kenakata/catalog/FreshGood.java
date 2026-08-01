@@ -1,6 +1,6 @@
 package kenakata.catalog;
 
-public class FreshGood extends CatalogItem implements Charge{
+public class FreshGood extends CatalogItem implements Chargeable{
 
     protected int weight;
 

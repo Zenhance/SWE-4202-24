@@ -2,7 +2,7 @@ package kenakata.catalog;
 
 import kenakata.exceptions.OutOfStockException;
 
-public class DigitalGood extends CatalogItem implements Charge{
+public class DigitalGood extends CatalogItem implements Chargeable{
 
     public DigitalGood(String sku, String title, long unitPrice, int stock, Seller seller){
         super(sku, title, unitPrice, stock, seller);
@@ -13,7 +13,7 @@ public class DigitalGood extends CatalogItem implements Charge{
 
     @Override
     public long unitVat() {
-        return (long) (unitPrice * 0.05) ;
+        return (long) Math.ceil(unitPrice * 0.05) ;
     }
     @Override
     public long commissionOn(int amount) {

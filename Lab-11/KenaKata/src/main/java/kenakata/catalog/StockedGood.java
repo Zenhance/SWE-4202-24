@@ -1,6 +1,6 @@
 package kenakata.catalog;
 
-public class StockedGood extends CatalogItem implements Charge{
+public class StockedGood extends CatalogItem implements Chargeable{
     protected int weight;
 
     public StockedGood(String sku, String title, long unitPrice, int stock, Seller seller, int weight){
@@ -20,6 +20,6 @@ public class StockedGood extends CatalogItem implements Charge{
 
     @Override
     public long unitVat() {
-        return (long) (weight * 0.075);
+        return (long) Math.ceil(weight * 0.075);
     }
 }
