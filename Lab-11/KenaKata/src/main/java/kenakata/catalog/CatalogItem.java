@@ -1,6 +1,8 @@
 package kenakata.catalog;
 
+import kenakata.exceptions.OutOfStockException;
 import kenakata.order.Chargeable;
+import kenakata.settlement.Seller;
 
 public abstract class CatalogItem implements Chargeable {
     private final String sku;
@@ -31,4 +33,23 @@ public abstract class CatalogItem implements Chargeable {
     public int remaining(){
         return stock;
     }
+    @Override
+    public long unitCharge(){
+        return unitPrice;
+    }
+    @Override
+    public String label(){
+        return title;
+    }
+    public void reserve(int qty)throws OutOfStockException{
+        if(qty<=0){
+            throw new IllegalArgumentException("Quantity must be positive");
+        }
+        if( qty > stock){
+            throw new OutOfStockException("Not enough stock for item: " + title);
+        }
+        stock-= qty;
+
+    }
+    public abstract long commissionOn(long amount);
 }
