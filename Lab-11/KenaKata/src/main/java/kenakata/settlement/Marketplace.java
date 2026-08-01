@@ -8,7 +8,7 @@ import java.util.concurrent.RecursiveTask;
 
 public class Marketplace {
     private final List<Seller> registeredSellers = new ArrayList<>();
-    private final List<Order>placeOrders= new ArrayList<>();
+    private final List<Order>placedOrders= new ArrayList<>();
 
     public void register(Seller seller){
         if(seller != null && !registeredSellers.contains(seller)){
