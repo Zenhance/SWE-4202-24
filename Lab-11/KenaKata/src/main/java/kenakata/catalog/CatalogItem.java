@@ -1,11 +1,13 @@
 package kenakata.catalog;
 
-public abstract class CatalogItem implements Chargable{
-    private String sku;
-    private String title;
-    private long unitPrice;
+import kenakata.exceptions.OutOfStockException;
+
+public abstract class CatalogItem implements Chargeable{
+    private final String sku;
+    private final String title;
+    private final long unitPrice;
     private int stock;
-    private Seller seller;
+    private final Seller seller;
 
     public CatalogItem(String sku, String title, long unitPrice, int stock, Seller seller ){
 
@@ -35,18 +37,18 @@ public abstract class CatalogItem implements Chargable{
         this.seller=seller;
     }
 
-    public String  getSku() {
+    public String  sku() {
         return sku;
     }
 
-    public String getTitle() {
+    public String  title() {
         return title;
     }
     public int remaining() {
         return stock;
     }
 
-    public Seller getSeller() {
+    public Seller seller() {
         return seller;
     }
 
@@ -56,12 +58,12 @@ public abstract class CatalogItem implements Chargable{
         return unitPrice;  // Every catalogue item will implement their own unit charge. Thats why, we extended them.
     }
 
-    public void reserve(int quantity) throws OutofStockException{
+    public void reserve(int quantity) throws OutOfStockException {
         if(quantity<=0){
             throw new IllegalArgumentException("Quantity must be positive");
         }
         if(quantity>stock){
-            throw  new OutOfStockException();
+            throw  new OutOfStockException("Stock not available");
         }
 
         stock-=quantity;
