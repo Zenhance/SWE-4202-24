@@ -17,10 +17,18 @@ public class DeliveryCalculator {
         if(item instanceof ColdChain coldChain){
             coldChainFee+=coldChainFee.coldChainSurcharge();
         }
-    }
+
     if(!hasWeighable){
         return 0;
     }
     int billedKg= (int) Math.ceil(totalWeightGrams/1000.0);
     long baseShipping;
+
+    if(zone== Zone.DHAKA){
+        baseShipping = 60 + (billedKg * 20L);
+    } else{
+        baseShipping = 120 + (billedKg * 35L);
+    }
+    return baseShipping + coldChainFee;
+}
 }
