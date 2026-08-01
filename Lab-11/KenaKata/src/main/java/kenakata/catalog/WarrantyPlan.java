@@ -4,7 +4,7 @@ public final class WarrantyPlan implements Chargeable{
     private final CatalogItem coveredItem;
     private final long charge;
 
-    public WarrantyPlan(CatalogItem covereItem){
+    public WarrantyPlan(CatalogItem coveredItem){
         if(coveredItem == null){
             throw new IllegalArgumentException("Covered item must not be null");
         }
