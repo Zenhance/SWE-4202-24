@@ -31,4 +31,8 @@ public class FreshGood extends CatalogItem Weighable,ColdChain,Insurable,Returna
     public long coldChainSurcharge(){
         return 50;
     }
+    @Override
+    public long insurableValue(){
+        return unitCharge();
+    }
 }
