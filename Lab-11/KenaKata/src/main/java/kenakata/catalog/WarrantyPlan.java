@@ -11,7 +11,7 @@ public class WarrantyPlan implements Chargeable{
     }
 
     public String label(){
-        return "Warranty for" + coveredItem.name();
+        return "Warranty for " + coveredItem.name();
     }
 
     public int unitCharge(){

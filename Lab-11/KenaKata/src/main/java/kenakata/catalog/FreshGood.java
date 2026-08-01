@@ -1,7 +1,9 @@
 package kenakata.catalog;
 
-public class FreshGood extends CatalogItem implements Weighable,Returnable{
-    private final int stock;
+import kenakata.exceptions.OutOfStockException;
+
+public class FreshGood extends CatalogItem implements Weighable,Returnable,Insurable{
+    private int stock;
     private final int weight;
 
     public FreshGood(String sku,String name,int price,int stock,Seller seller,int weight){
@@ -14,6 +16,16 @@ public class FreshGood extends CatalogItem implements Weighable,Returnable{
         }
         this.stock=stock;
         this.weight=weight;
+    }
+
+    public void reserve(int quantity)throws OutOfStockException {
+        if(quantity<=0){
+            throw new IllegalArgumentException();
+        }
+        if(quantity>stock){
+            throw new OutOfStockException();
+        }
+        stock-=quantity;
     }
 
     public int unitVat(){

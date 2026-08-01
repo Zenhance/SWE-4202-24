@@ -3,11 +3,11 @@ package kenakata.order;
 public class Coupon {
     private final String code;
     private final int percentage;
-    private final int validUntil;
     private final int minimumSpend;
     private final int maximumDiscount;
+    private final int validUntil;
 
-    public Coupon(String code,int percentage,int validUntil,int minimumSpend,int maximumDiscount){
+    public Coupon(String code,int percentage,int minimumSpend,int maximumDiscount,int validUntil){
         if(code==null || code.isBlank()){
             throw new IllegalArgumentException();
         }
@@ -19,9 +19,9 @@ public class Coupon {
         }
         this.code=code;
         this.percentage=percentage;
-        this.validUntil=validUntil;
         this.minimumSpend=minimumSpend;
         this.maximumDiscount=maximumDiscount;
+        this.validUntil=validUntil;
     }
 
     public String code(){
@@ -32,10 +32,6 @@ public class Coupon {
         return percentage;
     }
 
-    public int validUntil(){
-        return validUntil;
-    }
-
     public int minimumSpend(){
         return minimumSpend;
     }
@@ -43,4 +39,9 @@ public class Coupon {
     public int maximumDiscount(){
         return maximumDiscount;
     }
+
+    public int validUntil(){
+        return validUntil;
+    }
+
 }

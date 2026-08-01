@@ -9,7 +9,7 @@ public class CardPayment implements PaymentMethod{
         if(limit<0){
             throw new IllegalArgumentException();
         }
-        this.remainingLimit=remainingLimit;
+        this.remainingLimit=limit;
     }
 
     public void authorise(int amount)throws CardLimitExceededException{
@@ -19,7 +19,7 @@ public class CardPayment implements PaymentMethod{
         remainingLimit-=amount;
     }
 
-    public int reaminingLimit(){
+    public int remainingLimit(){
         return remainingLimit;
     }
 }

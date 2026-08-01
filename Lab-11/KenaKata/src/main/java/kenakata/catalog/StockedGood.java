@@ -1,7 +1,7 @@
 package kenakata.catalog;
 import kenakata.exceptions.OutOfStockException;
 
-public abstract class StockedGood extends CatalogItem implements Discountable, Weighable,Insurable,Returnable {
+public class StockedGood extends CatalogItem implements Discountable, Weighable,Insurable,Returnable {
     private int stock;
     private final int weight;
 

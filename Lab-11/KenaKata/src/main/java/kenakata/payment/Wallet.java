@@ -17,4 +17,11 @@ public class Wallet {
     public void deduct(int amount){
         balance-=amount;
     }
+
+    public void credit(int amount){
+        if(amount<=0){
+            throw new IllegalArgumentException();
+        }
+        balance+=amount;
+    }
 }

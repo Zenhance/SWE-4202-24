@@ -1,6 +1,6 @@
 package kenakata.catalog;
 
-public abstract class DigitalGood extends CatalogItem{
+public class DigitalGood extends CatalogItem{
     private final int downloads;
 
     public DigitalGood(String sku,String name,int price,int downloads,Seller seller){
@@ -19,7 +19,7 @@ public abstract class DigitalGood extends CatalogItem{
         return ceilPercent(unitCharge(),5);
     }
 
-    public int commission(int amount){
+    public int commissionOn(int amount){
         return (int) Math.ceil(amount*20/100.0);
     }
 }
