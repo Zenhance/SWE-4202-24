@@ -11,4 +11,20 @@ public final class WarrantyPlan implements Chargeable{
         this.coveredItem = coveredItem;
         this.charge = MoneyMath.ceilPercent(coveredItem.unitPrice(),10);
     }
+    public CatalogItem coveredItem(){
+        return coveredItem;
+    }
+
+    @Override
+    public long unitCharge(){
+        return charge;
+    }
+    @Override
+    public long unitVat(){
+        return MoneyMath.ceilPercent(charge,15);
+    }
+    @Override
+    public String label(){
+        return "Extended warranty for "+coveredItem.title();
+    }
 }
