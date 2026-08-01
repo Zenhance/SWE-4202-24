@@ -1,6 +1,6 @@
 package kenakata.exceptions;
 
-public class PaymentDeclinedException extends Exception{
+public class PaymentDeclinedException extends CheckoutException {
     public PaymentDeclinedException(){
         super();
     }
