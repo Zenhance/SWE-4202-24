@@ -19,8 +19,4 @@ public class DigitalGood extends CatalogItem implements Chargeable{
     public long commissionOn(int amount) {
         return (long) (amount * 0.2);
     }
-    @Override
-    public long unitCharge() {
-        return unitPrice;
-    }
 }

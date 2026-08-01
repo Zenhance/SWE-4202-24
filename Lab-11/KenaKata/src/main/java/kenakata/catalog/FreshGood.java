@@ -8,16 +8,13 @@ public class FreshGood extends CatalogItem implements Chargeable{
         super(sku, title, unitPrice, stock, seller);
         this.weight = weight;
     }
-    @Override
-    public long unitCharge() {
-        return unitPrice;
-    }
+
     @Override
     public long unitVat() {
         return 0;
     }
     @Override
     public long commissionOn(int amount) {
-        return (long) (amount * 0.05);
+        return (long) Math.ceil(amount * 0.05);
     }
 }

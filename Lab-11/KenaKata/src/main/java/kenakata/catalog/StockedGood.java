@@ -10,12 +10,7 @@ public class StockedGood extends CatalogItem implements Chargeable{
 
     @Override
     public long commissionOn(int amount) {
-        return (long) (amount * 0.08);
-    }
-
-    @Override
-    public long unitCharge() {
-        return 0;
+        return (long) Math.ceil(amount * 0.08);
     }
 
     @Override
