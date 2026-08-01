@@ -11,7 +11,9 @@ public class GiftWrap implements Chargeable{
         return (long) Math.ceil(unitCharge() * 0.075);
     }
 
-
+    public String label() {
+        return "Gift wrap";
+    }
 
 
 }
