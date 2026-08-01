@@ -1,4 +1,5 @@
 package kenakata.order;
 
-public class ColdChain {
+public interface ColdChain {
+    long coldChainSurcharge();
 }
