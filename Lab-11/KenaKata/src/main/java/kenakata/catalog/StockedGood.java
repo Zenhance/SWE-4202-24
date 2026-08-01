@@ -22,4 +22,16 @@ public abstract class StockedGood extends CatalogItem implements Weighable, Retu
     public long commisionOn(long amount){
         return (long) Math.ceil(amount*0.08);
     }
+    @Override
+    public int weightGrams(){
+        return weightGrams;
+    }
+    @Override
+    public long insurableValue(){
+        return unitCharge();
+    }
+    @Override
+    public int returnWindowDays(){
+        return 7;
+    }
 }
