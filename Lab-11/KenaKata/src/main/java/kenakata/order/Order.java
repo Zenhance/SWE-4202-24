@@ -37,6 +37,10 @@ public class Order {
         lines.add(new OrderLine(item,quantity));
     }
 
+    public void addAddOn(Chargeable addOn){
+        lines.add(new OrderLine(addOn,1));
+    }
+
     public void applyCoupon(Coupon coupon){
         this.coupon=coupon;
     }
