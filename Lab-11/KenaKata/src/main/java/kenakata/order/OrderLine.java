@@ -16,6 +16,21 @@ public class OrderLine {
     public Chargeable item(){
         return item;
     }
+    public int quantity(){
+        return quantity;
+    }
+    public boolean insured(){
+        return insured;
+    }
+    public void setInsured(boolean insured){
+        this.insured = insured;
+    }
+    public boolean returned(){
+        return returned;
+    }
+    public void setReturned(boolean returned){
+        this.returned=returned;
+    }
 
 
 
