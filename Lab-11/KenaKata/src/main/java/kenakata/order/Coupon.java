@@ -25,6 +25,10 @@ public class Coupon {
         if(currentDay > lastValidDay){
             throw new CouponRejectedException("Coupon has expired");
         }
+        if(discountableBase < minSpeed){
+            throw new CouponRejectedException("Order subtotal below minimum spend required for coupon");
+        }
+        long discount = (long) Math.ceil(discountableBase*(percentage/100.0));
+        return Math.min(discount,maxDiscount);
     }
-
 }
