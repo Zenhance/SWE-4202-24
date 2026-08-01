@@ -13,6 +13,10 @@ public class OrderLine {
         this.item= item;
         this.quantity=quantity;
     }
+    public Chargeable item(){
+        return item;
+    }
+
 
 
 
