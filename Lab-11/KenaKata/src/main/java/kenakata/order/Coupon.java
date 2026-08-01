@@ -25,4 +25,17 @@ public final class Coupon {
     public String code(){
         return code;
     }
+    public int percentage(){
+        return percentage;
+    }
+    public long cap(){
+        return cap;
+    }
+    public long minimumSpeed(){
+        return minimumSpeed;
+    }
+    public int getLastValidDay(){
+        return lastValidDay;
+    }
+
 }
