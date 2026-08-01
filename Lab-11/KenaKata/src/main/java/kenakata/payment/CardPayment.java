@@ -1,4 +1,22 @@
 package kenakata.payment;
+import kenakata.exceptions.CardLimitExceededException;
+import kenakata.exceptions.PaymentDeclinedException;
 
-public class CardPayment {
+import javax.smartcardio.Card;
+
+public abstract class CardPayment implements PaymentMethod {
+    private long limit;
+    public CardPayment(long limit){
+        this.limit=limit;
+    }
+    public long remainingList(){
+        return limit;
+    }
+    @Override
+    public void authorise(long amount) throws PaymentDeclinedException{
+        if(amount > limit){
+            throw new CardLimitExceededException("Card limit exceeded");
+        }
+        limit-=amount;
+    }
 }
