@@ -1,7 +1,7 @@
 package kenakata.catalog;
 
 import kenakata.order.Returnable;
-import kenakata.order.Returnable;
+import kenakata.order.Insurable;
 import kenakata.order.Weighable;
 import kenakata.settlement.Seller;
 
