@@ -19,6 +19,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * rounded UP to the next whole Taka (ceiling), so the expected values below are computed with
  * that rounding in mind.
  *
+ *
  * <p>Reusable sellers are created per test to keep the cases independent (stock is mutable).
  */
 class KenaKataTest {
