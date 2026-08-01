@@ -1,7 +1,7 @@
 package kenakata.settlement;
 
 import kenakata.catalog.Seller;
-import java.util.Collections;
+import java.util.Collection;
 import java.util.Map;
 
 public class SettlementReport {
@@ -19,6 +19,10 @@ public class SettlementReport {
             throw new IllegalArgumentException("No payout recorded for seller " + seller);
         }
         return payout;
+    }
+
+    public Collection<SellerPayout> payouts(){
+        return payoutsBySeller.values();
     }
 
     public int platformRevenue(){
