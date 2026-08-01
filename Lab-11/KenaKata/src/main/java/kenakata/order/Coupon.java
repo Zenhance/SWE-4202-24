@@ -1,5 +1,7 @@
 package kenakata.order;
 
+import kenakata.exceptions.CouponRejectedException;
+
 public class Coupon {
     private final String code;
     private final double percentage;
@@ -19,4 +21,10 @@ public class Coupon {
         public String code(){
         return code;
     }
+    public long calculateDiscount(long discountableBase, int currentDay) throws CouponRejectedException{
+        if(currentDay > lastValidDay){
+            throw new CouponRejectedException("Coupon has expired");
+        }
+    }
+
 }
