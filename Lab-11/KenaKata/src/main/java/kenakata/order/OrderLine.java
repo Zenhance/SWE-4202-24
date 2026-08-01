@@ -32,6 +32,9 @@ public class OrderLine {
         this.returned=returned;
     }
 
+    public long lineValue(){
+        return item.unitCharge()*quantity;
+    }
 
 
 
