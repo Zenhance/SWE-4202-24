@@ -1,4 +1,5 @@
 package kenakata.order;
 
-public class Insurable {
+public interface Insurable {
+    long insurableValue();
 }

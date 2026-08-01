@@ -1,4 +1,5 @@
 package kenakata.order;
 
-public class Returnable {
+public interface Returnable {
+    int returnWindowDays();
 }
