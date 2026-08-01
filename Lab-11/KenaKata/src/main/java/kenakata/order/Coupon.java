@@ -7,7 +7,7 @@ public class Coupon {
     private final int maximumDiscount;
     private final int validUntil;
 
-    public Coupon(String code,int percentage,int minimumSpend,int maximumDiscount,int validUntil){
+    public Coupon(String code,int percentage,int maximumDiscount,int minimumSpend,int validUntil){
         if(code==null || code.isBlank()){
             throw new IllegalArgumentException();
         }
