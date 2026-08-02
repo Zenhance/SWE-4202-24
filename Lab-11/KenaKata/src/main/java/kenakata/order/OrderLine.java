@@ -5,6 +5,7 @@ public class OrderLine {
     private final int quantity;
     private boolean insured = false;
     private boolean returned = false;
+    private OrderLine Insurable;
 
     public OrderLine(Chargeable item, int quantity){
         if(quantity <=0){
@@ -35,7 +36,17 @@ public class OrderLine {
     public long lineValue(){
         return item.unitCharge()*quantity;
     }
+ public long lineVat(){
+        return item.unitVat()*quantity;
+ }
+ public long insuranceFee(){
+        if(!insured)
+            return 0;
+        long insurableValue= ((Insurable).item).insurableValue()*quantity;
+        long fee = (long)Math.ceil(insurableValue*0.01);
+        return Math.max(fee,20);
 
+ }
 
 
 
