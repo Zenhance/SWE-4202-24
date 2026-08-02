@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51081361-6857-41f6-8e00-368f50dbeaac" name="Changes" comment="zone enum">
-      <change beforePath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/order/PriceBreakdown.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/order/PriceBreakdown.java" afterDir="false" />
+    <list default="true" id="51081361-6857-41f6-8e00-368f50dbeaac" name="Changes" comment="PriceBreakdown">
+      <change beforePath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/catalog/CatalogItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/catalog/CatalogItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/catalog/DigitalGood.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/catalog/DigitalGood.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,7 +262,31 @@
       <option name="project" value="LOCAL" />
       <updated>1785703924432</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="PriceBreakdown">
+      <option name="closed" value="true" />
+      <created>1785704217961</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1785704217961</updated>
+    </task>
+    <task id="LOCAL-00018" summary="PriceBreakdown">
+      <option name="closed" value="true" />
+      <created>1785704257633</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1785704257633</updated>
+    </task>
+    <task id="LOCAL-00019" summary="PriceBreakdown">
+      <option name="closed" value="true" />
+      <created>1785704342900</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1785704342900</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,6 +325,7 @@
     <MESSAGE value="payment classes extension" />
     <MESSAGE value="." />
     <MESSAGE value="zone enum" />
-    <option name="LAST_COMMIT_MESSAGE" value="zone enum" />
+    <MESSAGE value="PriceBreakdown" />
+    <option name="LAST_COMMIT_MESSAGE" value="PriceBreakdown" />
   </component>
 </project>
