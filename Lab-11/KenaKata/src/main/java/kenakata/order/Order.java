@@ -58,6 +58,10 @@ public PriceBreakdown quote(int currentDay) throws CouponRejectedException{
             discountableBase+=line.lineValue();
         }
     }
+    long discount=0;
+    if(coupon!=null){
+        discount= coupon.calculatorDiscount(discountableBase,currentDay);
+    }
 
 
 
