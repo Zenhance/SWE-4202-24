@@ -58,4 +58,7 @@ public class Order {
 
     }
 
+    public ArrayList<Chargeable> lines() {
+        return chargeables;
+    }
 }
