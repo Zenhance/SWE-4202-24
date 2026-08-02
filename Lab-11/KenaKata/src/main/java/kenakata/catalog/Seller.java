@@ -1,6 +1,8 @@
 package kenakata.catalog;
 
 public class Seller {
-    public Seller(String seller) {
+    String name;
+    public Seller(String name) {
+        this.name = name;
     }
 }

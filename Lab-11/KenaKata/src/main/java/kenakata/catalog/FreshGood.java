@@ -1,8 +1,13 @@
 package kenakata.catalog;
 
+import static java.lang.Math.ceil;
+
 public class FreshGood extends CatalogItem {
-    public FreshGood(String SKU, String title, int unitprice, int i, Seller seller, int i1) {
+    int Stock,weight;
+    public FreshGood(String SKU, String title, int unitprice, int stock, Seller seller, int Weight) {
         super(SKU,title,unitprice,seller);
+        this.Stock = stock;
+        this.weight = Weight;
     }
 
     @Override
@@ -11,11 +16,7 @@ public class FreshGood extends CatalogItem {
     }
 
     @Override
-    public int unitCharge() {
-        return 0;
-    }
-
-    public int commissionOn(int i) {
-
+    public int commissionOn(int total) {
+    return (int) ceil(total*0.05);
     }
 }

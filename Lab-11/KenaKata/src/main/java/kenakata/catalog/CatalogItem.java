@@ -13,8 +13,8 @@ public abstract class CatalogItem implements Chargeable{
     }
     public abstract int unitVat() ;
 
-    public abstract int unitCharge();
+    public int unitCharge() {return unitprice;}
 
-    public abstract int commissionOn(int i) ;
+    public abstract int commissionOn(int total) ;
 
 }

@@ -5,5 +5,6 @@ public class CardPayment extends PaymentMethod{
     }
 
     public int remainingLimit() {
+        return 0;
     }
 }

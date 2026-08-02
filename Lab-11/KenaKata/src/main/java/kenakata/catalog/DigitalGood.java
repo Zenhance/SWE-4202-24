@@ -1,5 +1,7 @@
 package kenakata.catalog;
 
+import static java.lang.Math.ceil;
+
 public class DigitalGood extends CatalogItem {
     public DigitalGood(String SKU, String title, int unitprice, Seller seller) {
         super(SKU,title,unitprice,seller);
@@ -11,14 +13,10 @@ public class DigitalGood extends CatalogItem {
 
     @Override
     public int unitVat() {
-        return 0;
+        return (int) ceil(unitprice*0.05);
     }
 
-    @Override
-    public int unitCharge() {
-        return 0;
-    }
-
-    public int commissionOn(int i) {
+    public int commissionOn(int total) {
+        return (int) ceil(total*0.2);
     }
 }

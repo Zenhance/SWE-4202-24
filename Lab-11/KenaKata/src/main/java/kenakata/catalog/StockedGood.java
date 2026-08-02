@@ -1,5 +1,9 @@
 package kenakata.catalog;
 
+import kenakata.exceptions.OutOfStockException;
+
+import static java.lang.Math.ceil;
+
 public class StockedGood extends CatalogItem{
     int weight,stock;
     public StockedGood(String SKU, String title, int unitprice, int stock, Seller s1, int Weight) {
@@ -10,25 +14,27 @@ public class StockedGood extends CatalogItem{
 
 
 
-    public void reserve(int i) {
+    public void reserve(int amount) throws OutOfStockException {
+        try {
+            if (amount <= 0) throw new IllegalArgumentException("Amount must be positive");
+            if (stock >= amount) stock -= amount;
+            else {
+                throw new OutOfStockException();
+            }
+        } catch (OutOfStockException | IllegalArgumentException e) {
+            stock = stock;
+        }
     }
-
     public int remaining() {
         return stock;
     }
 
     @Override
     public int unitVat() {
-        return 0;
+        return (int) ceil(unitprice*0.075);
     }
-
     @Override
-    public int unitCharge() {
-        return 0;
-    }
-
-    @Override
-    public int commissionOn(int i) {
-        return 0;
+    public int commissionOn(int total) {
+        return (int) ceil(total*0.08);
     }
 }
