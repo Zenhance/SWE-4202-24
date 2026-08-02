@@ -2,7 +2,11 @@ package kenakata.catalog;
 
 import kenakata.exceptions.OutOfStockException;
 
-public class StockedGood extends CatalogItem implements Weighable, Insurable{
+import java.util.ArrayList;
+
+public class StockedGood extends CatalogItem implements Weighable, Insurable, Returnable{
+
+
 
     public StockedGood(String a, String itemType, int unitPrice, int amount, Seller s, int weight) {
         super(a, itemType, unitPrice, amount, s, weight);
@@ -22,6 +26,17 @@ public class StockedGood extends CatalogItem implements Weighable, Insurable{
     @Override
     public int getWeight(){
         return weight;
+    }
+
+    @Override
+    public void returnItem(){
+        returned = true;
+    }
+
+    public ArrayList<StockedGood> items2 = new ArrayList<>();
+
+    public StockedGood get(int i) {
+        return null;
     }
 
 }

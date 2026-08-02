@@ -3,7 +3,8 @@ package kenakata.catalog;
 public class DigitalGood extends CatalogItem{
 
     public DigitalGood(String a, String itemType, int unitPrice, int amount, Seller s) {
-        super(a, itemType, unitPrice, amount, s, 0);
+        super(a, itemType, unitPrice, amount, s, 1);
+        this.weight--;
     }
 
     public int unitVat() {

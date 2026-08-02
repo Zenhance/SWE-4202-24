@@ -1,6 +1,6 @@
 package kenakata.catalog;
 
-public class FreshGood extends CatalogItem implements Weighable, Insurable{
+public class FreshGood extends CatalogItem implements Weighable, Insurable, Returnable{
 
     public final int coldChain = 50;
 
@@ -22,4 +22,8 @@ public class FreshGood extends CatalogItem implements Weighable, Insurable{
         return weight;
     }
 
+    @Override
+    public void returnItem(){
+        returned = true;
+    }
 }

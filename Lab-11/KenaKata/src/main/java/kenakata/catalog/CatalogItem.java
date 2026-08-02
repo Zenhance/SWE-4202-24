@@ -4,7 +4,6 @@ import kenakata.exceptions.OutOfStockException;
 
 public abstract class CatalogItem implements Chargeable {
 
-
     public boolean insured = false;
     protected String a;
     protected String itemType;
@@ -12,8 +11,11 @@ public abstract class CatalogItem implements Chargeable {
     protected int amount;
     protected Seller s;
     protected int weight;
+    protected boolean returned = false;
 
     public CatalogItem(String a, String itemType, int unitPrice, int amount, Seller s, int weight) {
+        if(a == null || itemType == null || s == null || a.isBlank() || itemType.isBlank() || amount < 0 || unitPrice < 0 || weight <= 0)
+            throw new IllegalArgumentException("Wrong input");
         this.a = a;
         this.itemType = itemType;
         this.unitPrice = unitPrice;
@@ -42,15 +44,21 @@ public abstract class CatalogItem implements Chargeable {
         return amount;
     }
 
-    public CatalogItem get(int i) {
-        return null;
-    }
+
 
     public boolean returned() {
-        return false;
+        return returned;
     }
 
     public String getItemType() {
         return itemType;
+    }
+
+    public int getAmount() {
+        return amount;
+    }
+
+    public boolean isReturned() {
+        return returned;
     }
 }

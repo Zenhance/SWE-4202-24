@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 public class DeliveryCalculator {
     ArrayList<Chargeable> items;
+    ArrayList<Integer> count;
     Zone z;
 
     private boolean isOnlyDigital(){
@@ -25,11 +26,11 @@ public class DeliveryCalculator {
 
         int totalW = 0;
 
-        for(Chargeable c: items){
+        for(int i = 0; i < items.size(); i++){
+            Chargeable c = items.get(i);
             if(c instanceof Weighable)
-                totalW += ((Weighable) c).getWeight();
+                totalW += ((Weighable) c).getWeight() * count.get(i);
         }
-
         double x = Math.ceil(totalW / 1000.00) * kgCharge;
         return (int) x;
     }
