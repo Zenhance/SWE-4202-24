@@ -11,12 +11,12 @@ public class DigitalGood extends CatalogItem{
 
     @Override
     public int unitVat() {
-        return 0;
+        return (int) Math.ceil(getUnitPrice()*0.05);
     }
 
     @Override
     public int commissionOn(int total) {
-        return 0;
+        return (int) Math.ceil(total*0.2);
     }
 
 
