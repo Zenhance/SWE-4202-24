@@ -40,5 +40,9 @@ public abstract class CatalogItem implements Chargeable{
         return seller;
     }
 
-
+    public synchronized void reserve(int qty) throws OutOfStockException {
+        if(qty<=0) throw new IllegalArgumentException();
+        if(remainingStock<qty) throw new OutOfStockException("OUT OF STOCk");
+        remainingStock -= qty;
+    }
 }
