@@ -50,7 +50,7 @@ public abstract class CatalogItem {
 
     public abstract int unitVat();
 
-    public abstract String label();
+    public abstract int commissionOn(int total);
 
 
 
