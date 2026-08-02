@@ -3,6 +3,7 @@ package kenakata.order;
 import kenakata.catalog.AddOn;
 import kenakata.catalog.Chargeable;
 import kenakata.catalog.CatalogItem;
+import kenakata.exceptions.ReturnNotAllowedException;
 import kenakata.payment.PaymentMethod;
 
 import java.util.ArrayList;
@@ -40,8 +41,8 @@ public class Order {
 
     }
 
-    // fix the parameter
-    public void place(PaymentMethod p, int something) {
+    // check the parameter
+    public void place(PaymentMethod p, int day) {
 
     }
 
@@ -52,4 +53,9 @@ public class Order {
     public PriceBreakdown finalBreakdown() {
         return new PriceBreakdown(chargeables, coupon, zone);
     }
+
+    public void acceptReturn(int serial, int day) throws ReturnNotAllowedException {
+
+    }
+
 }
