@@ -17,21 +17,32 @@ public class Order {
     private PriceBreakdown finalBreakdown;
     private int placementDay;
 
-    public Order(Zone zone, DeliveryCalculator deliveryCalculator){
-        this.zone= zone;
+    public Order(Zone zone, DeliveryCalculator deliveryCalculator) {
+        this.zone = zone;
         this.deliveryCalculator = deliveryCalculator;
     }
-    public void addProduct(CatalogItem item, int quantity){
-        lines.add(new OrderLine(item,quantity));
+
+    public void addProduct(CatalogItem item, int quantity) {
+        lines.add(new OrderLine(item, quantity));
     }
-   public void addAddOn(Chargeable addOn){
-        lines.add(new OrderLine(addOn,1));
-   }
-   public void applyCoupon(Coupon coupon){
-        this.coupon=coupon;
-   }
 
+    public void addAddOn(Chargeable addOn) {
+        lines.add(new OrderLine(addOn, 1));
+    }
 
+    public void applyCoupon(Coupon coupon) {
+        this.coupon = coupon;
+    }
+
+    public void insure(int lineIndex) throws NotInsurableException {
+    }
+    if(!(line.item()instanceof Insurable))
+
+    {
+        throw new NotInsurableException("Line item is not insurable");
+    }
+    line.setInsured(true);
+}
 
 
 
