@@ -53,6 +53,10 @@ public PriceBreakdown quote(int currentDay) throws CouponRejectedException{
         subtotal+= line.lineValue();
         vat += line.lineVat();
         insurance+= line.insuranceFee();
+
+        if(line.item() instanceof StockedGood){
+            discountableBase+=line.lineValue();
+        }
     }
 
 
