@@ -79,5 +79,9 @@ for(OrderLine line : lines){
         catalogItem.reverse(line.quantity());
     }
 }
-
+this.placed = true;
+this.finalBreakdown = breakdown;
+this.placement = currentDay;
 }
+
+
