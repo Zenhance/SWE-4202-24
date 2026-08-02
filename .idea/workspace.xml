@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dfcbdcd4-310d-4487-b279-635bf3e2eecf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Lab-11/KenaKata/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab-11/KenaKata/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab-11/KenaKata/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab-11/KenaKata/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab-11/KenaKata/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab-11/KenaKata/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab-11/KenaKata/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab-11/KenaKata/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab-11/KenaKata/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab-11/KenaKata/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab-11/KenaKata/src/main/java/kenakata/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab-11/KenaKata/src/test/java/kenakata/KenaKataTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="dfcbdcd4-310d-4487-b279-635bf3e2eecf" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,6 +43,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "36__Tanvir",
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",

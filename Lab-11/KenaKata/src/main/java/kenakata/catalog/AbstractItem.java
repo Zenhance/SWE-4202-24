@@ -1,7 +1,6 @@
 package kenakata.catalog;
 
 import kenakata.enums.ItemType;
-import kenakata.settlement.Seller;
 
 public abstract class AbstractItem implements Item {
     private String sku;
