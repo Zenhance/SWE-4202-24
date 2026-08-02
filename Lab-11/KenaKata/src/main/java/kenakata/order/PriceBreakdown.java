@@ -43,4 +43,8 @@ public class PriceBreakdown {
         if (zone == Zone.DHAKA) return DHAKA;
         else return OUTSIDE;
     }
+
+    public int insurance() {
+        return  0;
+    }
 }
