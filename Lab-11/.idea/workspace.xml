@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51081361-6857-41f6-8e00-368f50dbeaac" name="Changes" comment="automated extension skeleton">
-      <change beforePath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/catalog/DigitalGood.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/catalog/DigitalGood.java" afterDir="false" />
+    <list default="true" id="51081361-6857-41f6-8e00-368f50dbeaac" name="Changes" comment="freshGood">
+      <change beforePath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/catalog/StockedGood.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/catalog/StockedGood.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -317,7 +317,23 @@
       <option name="project" value="LOCAL" />
       <updated>1785705128188</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="DigitalGood">
+      <option name="closed" value="true" />
+      <created>1785705361725</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1785705361725</updated>
+    </task>
+    <task id="LOCAL-00025" summary="freshGood">
+      <option name="closed" value="true" />
+      <created>1785705538598</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1785705538598</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,8 +374,9 @@
     <MESSAGE value="zone enum" />
     <MESSAGE value="PriceBreakdown" />
     <MESSAGE value="catalog" />
-    <MESSAGE value="DigitalGood" />
     <MESSAGE value="automated extension skeleton" />
-    <option name="LAST_COMMIT_MESSAGE" value="automated extension skeleton" />
+    <MESSAGE value="DigitalGood" />
+    <MESSAGE value="freshGood" />
+    <option name="LAST_COMMIT_MESSAGE" value="freshGood" />
   </component>
 </project>
