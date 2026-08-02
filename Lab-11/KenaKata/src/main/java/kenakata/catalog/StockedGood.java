@@ -15,11 +15,11 @@ public class StockedGood extends Product implements Weighable, Returnable, Insur
         if (weightGrams <= 0) {
             throw new IllegalArgumentException("Weight must be greater than zero in grams.");
         }
-        this.weightGrams = weightGrams;
+        this.weightInGrams = weightInGrams;
     }
 
     @Override
-    public int weightGrams() { return weightInGrams;}
+    public int weightInGrams() { return weightInGrams;}
     @Override
     public long unitVat() {
         return (long) Math.ceil(unitPrice()*0.075);
