@@ -6,4 +6,8 @@ import java.util.ArrayList;
 
 public class Marketplace {
     private ArrayList<Seller> sellers;
+
+    public void register(Seller seller) {
+        sellers.add(seller);
+    }
 }
