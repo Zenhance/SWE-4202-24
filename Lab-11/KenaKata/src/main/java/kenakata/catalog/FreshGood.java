@@ -17,6 +17,6 @@ public class FreshGood extends CatalogItem{
 
     @Override
     public int commissionOn(int total) {
-        return 0;
+        return (int) Math.ceil(total * 0.05);
     }
 }
