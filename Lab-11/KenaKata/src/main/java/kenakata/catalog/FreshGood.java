@@ -1,6 +1,6 @@
 package kenakata.catalog;
 
-public class FreshGood extends CatalogItem implements Chargeable{
+public class FreshGood extends CatalogItem implements Chargeable,Weightable,Returnable{
 
     protected int weight;
 
@@ -16,5 +16,14 @@ public class FreshGood extends CatalogItem implements Chargeable{
     @Override
     public long commissionOn(int amount) {
         return (long) Math.ceil(amount * 0.05);
+    }
+
+    @Override
+    public double weight() {
+        return weight;
+    }
+    @Override
+    public int returnWindow() {
+        return 2;
     }
 }
