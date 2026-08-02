@@ -1,5 +1,5 @@
 package kenakata.order;
 
-public class Zone {
+public enum Zone {
     dhaka, outside
 }
