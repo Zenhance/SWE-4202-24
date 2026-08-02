@@ -19,5 +19,14 @@ public PriceBreakdown(long subtotal,long discount,long vat,long delivery,long in
     this.serviceFee=serviceFee;
     this.grandTotal=grandTotal;
 }
+public long subtotal(){
+    return subtotal;
+}
+public long discount(){
+    return discount;
+}
+public long vat(){
+    return vat;
+}
 
 }
