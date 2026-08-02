@@ -3,9 +3,11 @@ package kenakata.order;
 import kenakata.catalog.AddOn;
 import kenakata.catalog.Chargeable;
 import kenakata.catalog.CatalogItem;
+import kenakata.exceptions.CheckoutException;
 import kenakata.exceptions.ReturnNotAllowedException;
 import kenakata.payment.PaymentMethod;
 
+import java.nio.charset.CharacterCodingException;
 import java.util.ArrayList;
 
 public class Order {
@@ -42,7 +44,7 @@ public class Order {
     }
 
     // check the parameter
-    public void place(PaymentMethod p, int day) {
+    public void place(PaymentMethod p, int day) throws CheckoutException {
 
     }
 
