@@ -18,12 +18,12 @@ public class Order {
         this.calculator = calculator;
     }
 
-    public void addProduct(CatalogItem product, int qty) {
+    public void addProduct(Chargeable product, int qty) {
         for (int i = 0; i < qty; i++)
             chargeables.add(product);
     }
 
-    public void addAddOn(AddOn addOn) {
+    public void addAddOn(Chargeable addOn) {
         chargeables.add(addOn);
     }
 
