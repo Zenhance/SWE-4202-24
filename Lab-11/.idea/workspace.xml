@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51081361-6857-41f6-8e00-368f50dbeaac" name="Changes" comment="payment classes">
+    <list default="true" id="51081361-6857-41f6-8e00-368f50dbeaac" name="Changes" comment="payment classes extension">
       <change beforePath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/payment/CardPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/payment/CardPayment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/payment/CashOnDeliveryPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/payment/CashOnDeliveryPayment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/payment/MobileWalletPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/payment/MobileWalletPayment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,7 +214,15 @@
       <option name="project" value="LOCAL" />
       <updated>1785702040988</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="payment classes extension">
+      <option name="closed" value="true" />
+      <created>1785702285506</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1785702285506</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,6 +259,7 @@
     <MESSAGE value="." />
     <MESSAGE value="paymentmethod" />
     <MESSAGE value="payment classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="payment classes" />
+    <MESSAGE value="payment classes extension" />
+    <option name="LAST_COMMIT_MESSAGE" value="payment classes extension" />
   </component>
 </project>
