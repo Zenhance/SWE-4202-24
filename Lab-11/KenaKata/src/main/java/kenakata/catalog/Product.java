@@ -61,7 +61,7 @@ public abstract class Product {
     public long unitCharge() { return unitPrice;}
 
     //abstract methods
-    public abstract long commisionOn();
+    public abstract long commissionOn();
     public abstract long unitVat();
 
 }
