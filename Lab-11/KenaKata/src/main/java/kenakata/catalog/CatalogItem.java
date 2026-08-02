@@ -17,6 +17,19 @@ public abstract class CatalogItem implements Chargeable{
         this.seller=seller;
     }
 
+    public String sku(){
+        return sku;
+    }
+    public String title(){
+        return title;
+    }
+    public int stock(){
+        return stock;
+    }
+    public Seller seller(){
+        return seller;
+    }
+
     @Override
     public long unitCharge() {
         return unitPrice;
