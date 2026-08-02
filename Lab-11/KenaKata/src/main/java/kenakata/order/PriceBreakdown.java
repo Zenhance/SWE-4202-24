@@ -19,7 +19,22 @@ public class PriceBreakdown {
     public int vat() {
         return 0;
     }
+
+    public int delivery(){
+        return 0;
+    }
+
+    public int serviceFee(){
+        return 0;
+    }
+
+    public int grandTotal(){
+        return 0;
+    }
+
+
 }
+
 
 
 
