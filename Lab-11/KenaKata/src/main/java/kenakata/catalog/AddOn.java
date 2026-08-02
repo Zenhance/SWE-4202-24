@@ -1,4 +1,6 @@
 package kenakata.catalog;
 
-public class AddOn {
+public abstract class AddOn implements Chargeable{
 }
+
+
