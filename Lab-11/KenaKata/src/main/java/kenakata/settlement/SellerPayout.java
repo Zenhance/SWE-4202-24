@@ -24,4 +24,8 @@ public class SellerPayout {
     public int refunds() {
         return 0;
     }
+
+    public Seller seller() {
+        return this.seller;
+    }
 }
