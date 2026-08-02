@@ -10,6 +10,6 @@ public class SettlementReport {
     private ArrayList<Seller> sellers;
 
     public SellerPayout forSeller(Seller seller) {
-        return new SellerPayout();
+        return new SellerPayout(seller);
     }
 }
