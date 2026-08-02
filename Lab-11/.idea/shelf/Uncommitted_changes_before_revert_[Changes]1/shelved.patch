@@ -1,0 +1,2424 @@
+Index: KenaKata/src/main/java/kenakata/payment/Wallet.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package kenakata.payment;\r\n\r\npublic class Wallet {\r\n    private double balance;\r\n\r\n    public Wallet(double balance){\r\n        if(balance<0)\r\n            throw new IllegalArgumentException(\"Invalid Amount\");\r\n\r\n\r\n        this.balance =balance;\r\n    }\r\n\r\n    public double balance() {\r\n        return balance;\r\n    }\r\n\r\n    public void credit(long amount){\r\n        if(amount <=0){ throw new IllegalArgumentException(\"Invalid Credit Amount\");\r\n        }\r\n        balance+=amount;\r\n    }\r\n\r\n\r\n}\r\n\r\n\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/KenaKata/src/main/java/kenakata/payment/Wallet.java b/KenaKata/src/main/java/kenakata/payment/Wallet.java
+--- a/KenaKata/src/main/java/kenakata/payment/Wallet.java	(revision e21e410dcfc7ffc35fb3b53e55fb92c3027499c9)
++++ b/KenaKata/src/main/java/kenakata/payment/Wallet.java	(date 1785700800731)
+@@ -21,6 +21,13 @@
+         balance+=amount;
+     }
+ 
++    public void debit(long amount){
++        if(amount>balance) {
++            throw new IllegalArgumentException("Invalid Debit Amount");
++        }
++        balance-=amount;
++    }
++
+ 
+ }
+ 
+Index: .idea/.name
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.name b/.idea/.name
+new file mode 100644
+--- /dev/null	(date 1785679431659)
++++ b/.idea/.name	(date 1785679431659)
+@@ -0,0 +1,1 @@
++KenaKata
+\ No newline at end of file
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/compiler.xml b/.idea/compiler.xml
+new file mode 100644
+--- /dev/null	(date 1785679431659)
++++ b/.idea/compiler.xml	(date 1785679431659)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="CompilerConfiguration">
++    <bytecodeTargetLevel target="17" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/gradle.xml b/.idea/gradle.xml
+new file mode 100644
+--- /dev/null	(date 1785679431659)
++++ b/.idea/gradle.xml	(date 1785679431659)
+@@ -0,0 +1,16 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="GradleMigrationSettings" migrationVersion="1" />
++  <component name="GradleSettings">
++    <option name="linkedExternalProjectsSettings">
++      <GradleProjectSettings>
++        <option name="externalProjectPath" value="$PROJECT_DIR$/KenaKata" />
++        <option name="modules">
++          <set>
++            <option value="$PROJECT_DIR$/KenaKata" />
++          </set>
++        </option>
++      </GradleProjectSettings>
++    </option>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/jarRepositories.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/jarRepositories.xml b/.idea/jarRepositories.xml
+new file mode 100644
+--- /dev/null	(date 1785679431660)
++++ b/.idea/jarRepositories.xml	(date 1785679431660)
+@@ -0,0 +1,20 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="RemoteRepositoriesConfiguration">
++    <remote-repository>
++      <option name="id" value="central" />
++      <option name="name" value="Maven Central repository" />
++      <option name="url" value="https://repo1.maven.org/maven2" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="jboss.community" />
++      <option name="name" value="JBoss Community repository" />
++      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="MavenRepo" />
++      <option name="name" value="MavenRepo" />
++      <option name="url" value="https://repo.maven.apache.org/maven2/" />
++    </remote-repository>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1785679431660)
++++ b/.idea/misc.xml	(date 1785679431660)
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ExternalStorageConfigurationManager" enabled="true" />
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="17" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+new file mode 100644
+--- /dev/null	(date 1785700661670)
++++ b/.idea/workspace.xml	(date 1785700661670)
+@@ -0,0 +1,356 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="AutoImportSettings">
++    <option name="autoReloadType" value="SELECTIVE" />
++  </component>
++  <component name="ChangeListManager">
++    <list default="true" id="51081361-6857-41f6-8e00-368f50dbeaac" name="Changes" comment="wallet fix">
++      <change afterPath="$PROJECT_DIR$/../Lab-04/CineCart/src/main/java/model/ComboLine.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-04/CineCart/src/main/java/model/ConcessionLine.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-04/CineCart/src/main/java/model/LineItem.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-04/CineCart/src/main/java/model/PremiumTicket.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-04/CineCart/src/main/java/model/StandardTicket.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-04/CineCart/src/main/java/model/StudentTicket.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-04/CineCart/src/main/java/model/VIPTicket.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-04/CineCart/src/test/java/CineCartEncapsulationTest.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-04/CineCart/src/test/java/CineCartPolymorphismTest.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-07/Relay/.gitignore" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-07/Relay/.idea/.gitignore" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-07/Relay/.idea/gradle.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-07/Relay/.idea/misc.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-07/Relay/.idea/vcs.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-07/Relay/build.gradle" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-07/Relay/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-07/Relay/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-07/Relay/gradlew" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-07/Relay/gradlew.bat" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-07/Relay/settings.gradle" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-07/Relay/src/main/java/Email.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-07/Relay/src/main/java/Message.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-07/Relay/src/main/java/Outbox.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-07/Relay/src/main/java/Priorityemail.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-07/Relay/src/main/java/Push.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-07/Relay/src/main/java/Recipient.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-07/Relay/src/main/java/Relay.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-07/Relay/src/main/java/SMS.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-07/Relay/src/test/java/RelayTest.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-08/GridLedger/.gitignore" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-08/GridLedger/.idea/.gitignore" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-08/GridLedger/.idea/gradle.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-08/GridLedger/.idea/misc.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-08/GridLedger/.idea/vcs.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-08/GridLedger/README.md" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-08/GridLedger/build.gradle" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-08/GridLedger/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-08/GridLedger/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-08/GridLedger/gradlew" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-08/GridLedger/gradlew.bat" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-08/GridLedger/settings.gradle" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-08/GridLedger/src/main/java/Bill.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-08/GridLedger/src/main/java/BillingRun.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-08/GridLedger/src/main/java/CommercialConnection.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-08/GridLedger/src/main/java/Connection.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-08/GridLedger/src/main/java/IndustrialConnection.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-08/GridLedger/src/main/java/Invoice.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-08/GridLedger/src/main/java/LifelineConnection.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-08/GridLedger/src/main/java/Main.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-08/GridLedger/src/main/java/Meter.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-08/GridLedger/src/main/java/ResidentialConnection.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-08/GridLedger/src/test/java/GridLedgerTest.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-09/TakaLink/.gitignore" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-09/TakaLink/.idea/.gitignore" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-09/TakaLink/.idea/gradle.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-09/TakaLink/.idea/misc.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-09/TakaLink/.idea/vcs.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-09/TakaLink/build.gradle" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-09/TakaLink/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-09/TakaLink/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-09/TakaLink/gradlew" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-09/TakaLink/gradlew.bat" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-09/TakaLink/settings.gradle" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-09/TakaLink/src/main/java/Account.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-09/TakaLink/src/main/java/AgentWallet.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-09/TakaLink/src/main/java/Cashout.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-09/TakaLink/src/main/java/DailyLimitExceedException.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-09/TakaLink/src/main/java/FeeBook.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-09/TakaLink/src/main/java/FrozenAccException.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-09/TakaLink/src/main/java/InsufficientBalanceException.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-09/TakaLink/src/main/java/InvalidPinException.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-09/TakaLink/src/main/java/Main.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-09/TakaLink/src/main/java/MerchantWallet.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-09/TakaLink/src/main/java/OperationNotAllowedException.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-09/TakaLink/src/main/java/Payment.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-09/TakaLink/src/main/java/PersonalWallet.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-09/TakaLink/src/main/java/SendMoney.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-09/TakaLink/src/main/java/SettlementReport.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-09/TakaLink/src/main/java/SettlementRun.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-09/TakaLink/src/main/java/TopUp.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-09/TakaLink/src/main/java/Transaction.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-09/TakaLink/src/main/java/TransactionEngine.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-09/TakaLink/src/main/java/TransactionExceptions.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-09/TakaLink/src/main/java/Wallet.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-09/TakaLink/src/test/java/TakaLinkTest.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-10/.idea/misc.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-10/.idea/vcs.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-10/Sketchpad/.gitignore" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-10/Sketchpad/.idea/.gitignore" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-10/Sketchpad/.idea/gradle.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-10/Sketchpad/.idea/misc.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-10/Sketchpad/.idea/vcs.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-10/Sketchpad/README.md" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-10/Sketchpad/build.gradle" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-10/Sketchpad/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-10/Sketchpad/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-10/Sketchpad/gradlew" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-10/Sketchpad/gradlew.bat" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-10/Sketchpad/settings.gradle" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-10/Sketchpad/src/main/java/Canvas.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-10/Sketchpad/src/main/java/Circle.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-10/Sketchpad/src/main/java/Gallery.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-10/Sketchpad/src/main/java/Main.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-10/Sketchpad/src/main/java/Rectangle.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-10/Sketchpad/src/main/java/Shape.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-10/Sketchpad/src/main/java/ShapeException.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-10/Sketchpad/src/main/java/ShapeTooLargeException.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-10/Sketchpad/src/main/java/ShapeTooSmallException.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Lab-10/Sketchpad/src/main/java/Square.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/Lab-11.iml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/KenaKata/.gitignore" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/KenaKata/.idea/.gitignore" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/KenaKata/.idea/gradle.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/KenaKata/.idea/uiDesigner.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/KenaKata/.idea/vcs.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/KenaKata/build.gradle" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/KenaKata/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/KenaKata/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/KenaKata/gradlew" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/KenaKata/gradlew.bat" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/KenaKata/settings.gradle" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/Main.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/catalog/AddOn.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/catalog/CatalogItem.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/catalog/Chargeable.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/catalog/DigitalGood.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/catalog/ExpressHandling.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/catalog/FreshGood.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/catalog/GiftWrapping.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/catalog/Seller.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/catalog/StockedGood.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/catalog/WarrentyPlan.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/exceptions/CardLimitExceededException.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/exceptions/CheckoutException.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/exceptions/CouponRejectedException.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/exceptions/EmptyWalletException.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/exceptions/OutofStockException.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/exceptions/PaymentDeclinedException.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/exceptions/ReturnNotAllowedException.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/order/DeliveryCalculator.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/order/Order.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/order/PriceBreakdown.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/order/Zone.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/payment/CardPayment.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/payment/CashOnDeliveryPayment.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/payment/MobileWalletPayment.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/payment/PaymentMethod.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/KenaKata/src/test/java/kenakata/KenaKataTest.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../Lab-04/CineCart/src/main/java/engine/CheckoutEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab-04/CineCart/src/main/java/engine/CheckoutEngine.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../Lab-04/CineCart/src/main/java/model/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab-04/CineCart/src/main/java/model/Cart.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../Lab-04/CineCart/src/main/java/model/ConcessionItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab-04/CineCart/src/main/java/model/ConcessionItem.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../Lab-04/CineCart/src/main/java/model/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab-04/CineCart/src/main/java/model/AbstractTicket.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/payment/Wallet.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/payment/Wallet.java" afterDir="false" />
++    </list>
++    <option name="SHOW_DIALOG" value="false" />
++    <option name="HIGHLIGHT_CONFLICTS" value="true" />
++    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++    <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="ExternalProjectsData">
++    <projectState path="$PROJECT_DIR$/KenaKata">
++      <ProjectState />
++    </projectState>
++  </component>
++  <component name="ExternalProjectsManager">
++    <system id="GRADLE">
++      <state>
++        <projects_view>
++          <tree_state>
++            <expand />
++            <select />
++          </tree_state>
++        </projects_view>
++      </state>
++    </system>
++  </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="Class" />
++      </list>
++    </option>
++  </component>
++  <component name="Git.Settings">
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$/.." value="master" />
++      </map>
++    </option>
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
++  </component>
++  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
++  "lastFilter": {
++    "state": "OPEN",
++    "assignee": "tuireuit"
++  }
++}]]></component>
++  <component name="GithubPullRequestsUISettings"><![CDATA[{
++  "selectedUrlAndAccountId": {
++    "url": "https://github.com/Zenhance/SWE-4202-24.git",
++    "accountId": "aa5ee623-0c65-4302-94e4-d25466634c7a"
++  }
++}]]></component>
++  <component name="ProjectColorInfo">{
++  &quot;associatedIndex&quot;: 2
++}</component>
++  <component name="ProjectId" id="3H7JsHPwrDPlGO5rh8O37OLcpNq" />
++  <component name="ProjectViewState">
++    <option name="hideEmptyMiddlePackages" value="true" />
++    <option name="showLibraryContents" value="true" />
++  </component>
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "Gradle.Tests in 'KenaKata.test'.executor": "Run",
++    "ModuleVcsDetector.initialDetectionPerformed": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
++    "RunOnceActivity.git.unshallow": "true",
++    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
++    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
++    "codeWithMe.voiceChat.enabledByDefault": "false",
++    "git-widget-placeholder": "39-riju",
++    "kotlin-language-version-configured": "true",
++    "last_opened_file_path": "C:/Users/Riju/IdeaProjects/SWE-4202-24/Lab-11",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_package_manager_path": "npm"
++  }
++}]]></component>
++  <component name="RunManager">
++    <configuration name="Tests in 'KenaKata.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
++      <ExternalSystemSettings>
++        <option name="executionName" />
++        <option name="externalProjectPath" value="$PROJECT_DIR$/KenaKata" />
++        <option name="externalSystemIdString" value="GRADLE" />
++        <option name="scriptParameters" value="" />
++        <option name="taskDescriptions">
++          <list />
++        </option>
++        <option name="taskNames">
++          <list>
++            <option value=":test" />
++          </list>
++        </option>
++        <option name="vmOptions" />
++      </ExternalSystemSettings>
++      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
++      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
++      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
++      <DebugAllEnabled>false</DebugAllEnabled>
++      <RunAsTest>true</RunAsTest>
++      <GradleProfilingDisabled>false</GradleProfilingDisabled>
++      <GradleCoverageDisabled>false</GradleCoverageDisabled>
++      <method v="2" />
++    </configuration>
++    <recent_temporary>
++      <list>
++        <item itemvalue="Gradle.Tests in 'KenaKata.test'" />
++      </list>
++    </recent_temporary>
++  </component>
++  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
++  <component name="TaskManager">
++    <task active="true" id="Default" summary="Default task">
++      <changelist id="51081361-6857-41f6-8e00-368f50dbeaac" name="Changes" comment="" />
++      <created>1785213378197</created>
++      <option name="number" value="Default" />
++      <option name="presentableId" value="Default" />
++      <updated>1785213378197</updated>
++    </task>
++    <task id="LOCAL-00001" summary=".">
++      <option name="closed" value="true" />
++      <created>1785213492773</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1785213492773</updated>
++    </task>
++    <task id="LOCAL-00002" summary=".">
++      <option name="closed" value="true" />
++      <created>1785686620500</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1785686620500</updated>
++    </task>
++    <task id="LOCAL-00003" summary=".">
++      <option name="closed" value="true" />
++      <created>1785699439949</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1785699439949</updated>
++    </task>
++    <task id="LOCAL-00004" summary="wallet fix">
++      <option name="closed" value="true" />
++      <created>1785700567795</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1785700567795</updated>
++    </task>
++    <option name="localTasksCounter" value="5" />
++    <servers />
++  </component>
++  <component name="TypeScriptGeneratedFilesManager">
++    <option name="version" value="3" />
++  </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State>
++              <option name="FILTERS">
++                <map>
++                  <entry key="branch">
++                    <value>
++                      <list>
++                        <option value="origin/39-riju" />
++                      </list>
++                    </value>
++                  </entry>
++                </map>
++              </option>
++            </State>
++          </value>
++        </entry>
++      </map>
++    </option>
++  </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="." />
++    <MESSAGE value="exception" />
++    <MESSAGE value="wallet fix" />
++    <option name="LAST_COMMIT_MESSAGE" value="wallet fix" />
++  </component>
++</project>
+\ No newline at end of file
+Index: KenaKata/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/KenaKata/.gitignore b/KenaKata/.gitignore
+new file mode 100644
+--- /dev/null	(date 1785679431661)
++++ b/KenaKata/.gitignore	(date 1785679431661)
+@@ -0,0 +1,44 @@
++.gradle
++build/
++!gradle/wrapper/gradle-wrapper.jar
++!**/src/main/**/build/
++!**/src/test/**/build/
++.kotlin
++
++### IntelliJ IDEA ###
++.idea/modules.xml
++.idea/jarRepositories.xml
++.idea/compiler.xml
++.idea/libraries/
++*.iws
++*.iml
++*.ipr
++out/
++!**/src/main/**/out/
++!**/src/test/**/out/
++.idea/misc.xml
++
++### Eclipse ###
++.apt_generated
++.classpath
++.factorypath
++.project
++.settings
++.springBeans
++.sts4-cache
++bin/
++!**/src/main/**/bin/
++!**/src/test/**/bin/
++
++### NetBeans ###
++/nbproject/private/
++/nbbuild/
++/dist/
++/nbdist/
++/.nb-gradle/
++
++### VS Code ###
++.vscode/
++
++### Mac OS ###
++.DS_Store
+\ No newline at end of file
+Index: KenaKata/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/KenaKata/build.gradle b/KenaKata/build.gradle
+new file mode 100644
+--- /dev/null	(date 1785679431663)
++++ b/KenaKata/build.gradle	(date 1785679431663)
+@@ -0,0 +1,20 @@
++plugins {
++    id 'java'
++}
++
++group = 'org.example'
++version = '1.0-SNAPSHOT'
++
++repositories {
++    mavenCentral()
++}
++
++dependencies {
++    testImplementation platform('org.junit:junit-bom:6.0.0')
++    testImplementation 'org.junit.jupiter:junit-jupiter'
++    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
++}
++
++test {
++    useJUnitPlatform()
++}
+\ No newline at end of file
+Index: KenaKata/gradlew
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/KenaKata/gradlew b/KenaKata/gradlew
+new file mode 100644
+--- /dev/null	(date 1785679431664)
++++ b/KenaKata/gradlew	(date 1785679431664)
+@@ -0,0 +1,234 @@
++#!/bin/sh
++
++#
++# Copyright © 2015-2021 the original authors.
++#
++# Licensed under the Apache License, Version 2.0 (the "License");
++# you may not use this file except in compliance with the License.
++# You may obtain a copy of the License at
++#
++#      https://www.apache.org/licenses/LICENSE-2.0
++#
++# Unless required by applicable law or agreed to in writing, software
++# distributed under the License is distributed on an "AS IS" BASIS,
++# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++# See the License for the specific language governing permissions and
++# limitations under the License.
++#
++
++##############################################################################
++#
++#   Gradle start up script for POSIX generated by Gradle.
++#
++#   Important for running:
++#
++#   (1) You need a POSIX-compliant shell to run this script. If your /bin/sh is
++#       noncompliant, but you have some other compliant shell such as ksh or
++#       bash, then to run this script, type that shell name before the whole
++#       command line, like:
++#
++#           ksh Gradle
++#
++#       Busybox and similar reduced shells will NOT work, because this script
++#       requires all of these POSIX shell features:
++#         * functions;
++#         * expansions «$var», «${var}», «${var:-default}», «${var+SET}»,
++#           «${var#prefix}», «${var%suffix}», and «$( cmd )»;
++#         * compound commands having a testable exit status, especially «case»;
++#         * various built-in commands including «command», «set», and «ulimit».
++#
++#   Important for patching:
++#
++#   (2) This script targets any POSIX shell, so it avoids extensions provided
++#       by Bash, Ksh, etc; in particular arrays are avoided.
++#
++#       The "traditional" practice of packing multiple parameters into a
++#       space-separated string is a well documented source of bugs and security
++#       problems, so this is (mostly) avoided, by progressively accumulating
++#       options in "$@", and eventually passing that to Java.
++#
++#       Where the inherited environment variables (DEFAULT_JVM_OPTS, JAVA_OPTS,
++#       and GRADLE_OPTS) rely on word-splitting, this is performed explicitly;
++#       see the in-line comments for details.
++#
++#       There are tweaks for specific operating systems such as AIX, CygWin,
++#       Darwin, MinGW, and NonStop.
++#
++#   (3) This script is generated from the Groovy template
++#       https://github.com/gradle/gradle/blob/master/subprojects/plugins/src/main/resources/org/gradle/api/internal/plugins/unixStartScript.txt
++#       within the Gradle project.
++#
++#       You can find Gradle at https://github.com/gradle/gradle/.
++#
++##############################################################################
++
++# Attempt to set APP_HOME
++
++# Resolve links: $0 may be a link
++app_path=$0
++
++# Need this for daisy-chained symlinks.
++while
++    APP_HOME=${app_path%"${app_path##*/}"}  # leaves a trailing /; empty if no leading path
++    [ -h "$app_path" ]
++do
++    ls=$( ls -ld "$app_path" )
++    link=${ls#*' -> '}
++    case $link in             #(
++      /*)   app_path=$link ;; #(
++      *)    app_path=$APP_HOME$link ;;
++    esac
++done
++
++APP_HOME=$( cd "${APP_HOME:-./}" && pwd -P ) || exit
++
++APP_NAME="Gradle"
++APP_BASE_NAME=${0##*/}
++
++# Add default JVM options here. You can also use JAVA_OPTS and GRADLE_OPTS to pass JVM options to this script.
++DEFAULT_JVM_OPTS='"-Xmx64m" "-Xms64m"'
++
++# Use the maximum available, or set MAX_FD != -1 to use that value.
++MAX_FD=maximum
++
++warn () {
++    echo "$*"
++} >&2
++
++die () {
++    echo
++    echo "$*"
++    echo
++    exit 1
++} >&2
++
++# OS specific support (must be 'true' or 'false').
++cygwin=false
++msys=false
++darwin=false
++nonstop=false
++case "$( uname )" in                #(
++  CYGWIN* )         cygwin=true  ;; #(
++  Darwin* )         darwin=true  ;; #(
++  MSYS* | MINGW* )  msys=true    ;; #(
++  NONSTOP* )        nonstop=true ;;
++esac
++
++CLASSPATH=$APP_HOME/gradle/wrapper/gradle-wrapper.jar
++
++
++# Determine the Java command to use to start the JVM.
++if [ -n "$JAVA_HOME" ] ; then
++    if [ -x "$JAVA_HOME/jre/sh/java" ] ; then
++        # IBM's JDK on AIX uses strange locations for the executables
++        JAVACMD=$JAVA_HOME/jre/sh/java
++    else
++        JAVACMD=$JAVA_HOME/bin/java
++    fi
++    if [ ! -x "$JAVACMD" ] ; then
++        die "ERROR: JAVA_HOME is set to an invalid directory: $JAVA_HOME
++
++Please set the JAVA_HOME variable in your environment to match the
++location of your Java installation."
++    fi
++else
++    JAVACMD=java
++    which java >/dev/null 2>&1 || die "ERROR: JAVA_HOME is not set and no 'java' command could be found in your PATH.
++
++Please set the JAVA_HOME variable in your environment to match the
++location of your Java installation."
++fi
++
++# Increase the maximum file descriptors if we can.
++if ! "$cygwin" && ! "$darwin" && ! "$nonstop" ; then
++    case $MAX_FD in #(
++      max*)
++        MAX_FD=$( ulimit -H -n ) ||
++            warn "Could not query maximum file descriptor limit"
++    esac
++    case $MAX_FD in  #(
++      '' | soft) :;; #(
++      *)
++        ulimit -n "$MAX_FD" ||
++            warn "Could not set maximum file descriptor limit to $MAX_FD"
++    esac
++fi
++
++# Collect all arguments for the java command, stacking in reverse order:
++#   * args from the command line
++#   * the main class name
++#   * -classpath
++#   * -D...appname settings
++#   * --module-path (only if needed)
++#   * DEFAULT_JVM_OPTS, JAVA_OPTS, and GRADLE_OPTS environment variables.
++
++# For Cygwin or MSYS, switch paths to Windows format before running java
++if "$cygwin" || "$msys" ; then
++    APP_HOME=$( cygpath --path --mixed "$APP_HOME" )
++    CLASSPATH=$( cygpath --path --mixed "$CLASSPATH" )
++
++    JAVACMD=$( cygpath --unix "$JAVACMD" )
++
++    # Now convert the arguments - kludge to limit ourselves to /bin/sh
++    for arg do
++        if
++            case $arg in                                #(
++              -*)   false ;;                            # don't mess with options #(
++              /?*)  t=${arg#/} t=/${t%%/*}              # looks like a POSIX filepath
++                    [ -e "$t" ] ;;                      #(
++              *)    false ;;
++            esac
++        then
++            arg=$( cygpath --path --ignore --mixed "$arg" )
++        fi
++        # Roll the args list around exactly as many times as the number of
++        # args, so each arg winds up back in the position where it started, but
++        # possibly modified.
++        #
++        # NB: a `for` loop captures its iteration list before it begins, so
++        # changing the positional parameters here affects neither the number of
++        # iterations, nor the values presented in `arg`.
++        shift                   # remove old arg
++        set -- "$@" "$arg"      # push replacement arg
++    done
++fi
++
++# Collect all arguments for the java command;
++#   * $DEFAULT_JVM_OPTS, $JAVA_OPTS, and $GRADLE_OPTS can contain fragments of
++#     shell script including quotes and variable substitutions, so put them in
++#     double quotes to make sure that they get re-expanded; and
++#   * put everything else in single quotes, so that it's not re-expanded.
++
++set -- \
++        "-Dorg.gradle.appname=$APP_BASE_NAME" \
++        -classpath "$CLASSPATH" \
++        org.gradle.wrapper.GradleWrapperMain \
++        "$@"
++
++# Use "xargs" to parse quoted args.
++#
++# With -n1 it outputs one arg per line, with the quotes and backslashes removed.
++#
++# In Bash we could simply go:
++#
++#   readarray ARGS < <( xargs -n1 <<<"$var" ) &&
++#   set -- "${ARGS[@]}" "$@"
++#
++# but POSIX shell has neither arrays nor command substitution, so instead we
++# post-process each arg (as a line of input to sed) to backslash-escape any
++# character that might be a shell metacharacter, then use eval to reverse
++# that process (while maintaining the separation between arguments), and wrap
++# the whole thing up as a single "set" statement.
++#
++# This will of course break if any of these variables contains a newline or
++# an unmatched quote.
++#
++
++eval "set -- $(
++        printf '%s\n' "$DEFAULT_JVM_OPTS $JAVA_OPTS $GRADLE_OPTS" |
++        xargs -n1 |
++        sed ' s~[^-[:alnum:]+,./:=@_]~\\&~g; ' |
++        tr '\n' ' '
++    )" '"$@"'
++
++exec "$JAVACMD" "$@"
+Index: KenaKata/gradlew.bat
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/KenaKata/gradlew.bat b/KenaKata/gradlew.bat
+new file mode 100644
+--- /dev/null	(date 1785679431665)
++++ b/KenaKata/gradlew.bat	(date 1785679431665)
+@@ -0,0 +1,89 @@
++@rem
++@rem Copyright 2015 the original author or authors.
++@rem
++@rem Licensed under the Apache License, Version 2.0 (the "License");
++@rem you may not use this file except in compliance with the License.
++@rem You may obtain a copy of the License at
++@rem
++@rem      https://www.apache.org/licenses/LICENSE-2.0
++@rem
++@rem Unless required by applicable law or agreed to in writing, software
++@rem distributed under the License is distributed on an "AS IS" BASIS,
++@rem WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++@rem See the License for the specific language governing permissions and
++@rem limitations under the License.
++@rem
++
++@if "%DEBUG%" == "" @echo off
++@rem ##########################################################################
++@rem
++@rem  Gradle startup script for Windows
++@rem
++@rem ##########################################################################
++
++@rem Set local scope for the variables with windows NT shell
++if "%OS%"=="Windows_NT" setlocal
++
++set DIRNAME=%~dp0
++if "%DIRNAME%" == "" set DIRNAME=.
++set APP_BASE_NAME=%~n0
++set APP_HOME=%DIRNAME%
++
++@rem Resolve any "." and ".." in APP_HOME to make it shorter.
++for %%i in ("%APP_HOME%") do set APP_HOME=%%~fi
++
++@rem Add default JVM options here. You can also use JAVA_OPTS and GRADLE_OPTS to pass JVM options to this script.
++set DEFAULT_JVM_OPTS="-Xmx64m" "-Xms64m"
++
++@rem Find java.exe
++if defined JAVA_HOME goto findJavaFromJavaHome
++
++set JAVA_EXE=java.exe
++%JAVA_EXE% -version >NUL 2>&1
++if "%ERRORLEVEL%" == "0" goto execute
++
++echo.
++echo ERROR: JAVA_HOME is not set and no 'java' command could be found in your PATH.
++echo.
++echo Please set the JAVA_HOME variable in your environment to match the
++echo location of your Java installation.
++
++goto fail
++
++:findJavaFromJavaHome
++set JAVA_HOME=%JAVA_HOME:"=%
++set JAVA_EXE=%JAVA_HOME%/bin/java.exe
++
++if exist "%JAVA_EXE%" goto execute
++
++echo.
++echo ERROR: JAVA_HOME is set to an invalid directory: %JAVA_HOME%
++echo.
++echo Please set the JAVA_HOME variable in your environment to match the
++echo location of your Java installation.
++
++goto fail
++
++:execute
++@rem Setup the command line
++
++set CLASSPATH=%APP_HOME%\gradle\wrapper\gradle-wrapper.jar
++
++
++@rem Execute Gradle
++"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %GRADLE_OPTS% "-Dorg.gradle.appname=%APP_BASE_NAME%" -classpath "%CLASSPATH%" org.gradle.wrapper.GradleWrapperMain %*
++
++:end
++@rem End local scope for the variables with windows NT shell
++if "%ERRORLEVEL%"=="0" goto mainEnd
++
++:fail
++rem Set variable GRADLE_EXIT_CONSOLE if you need the _script_ return code instead of
++rem the _cmd.exe /c_ return code!
++if  not "" == "%GRADLE_EXIT_CONSOLE%" exit 1
++exit /b 1
++
++:mainEnd
++if "%OS%"=="Windows_NT" endlocal
++
++:omega
+Index: KenaKata/settings.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/KenaKata/settings.gradle b/KenaKata/settings.gradle
+new file mode 100644
+--- /dev/null	(date 1785679431665)
++++ b/KenaKata/settings.gradle	(date 1785679431665)
+@@ -0,0 +1,1 @@
++rootProject.name = 'KenaKata'
+\ No newline at end of file
+Index: KenaKata/.idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/KenaKata/.idea/.gitignore b/KenaKata/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(date 1785679431662)
++++ b/KenaKata/.idea/.gitignore	(date 1785679431662)
+@@ -0,0 +1,10 @@
++# Default ignored files
++/shelf/
++/workspace.xml
++# Editor-based HTTP Client requests
++/httpRequests/
++# Ignored default folder with query files
++/queries/
++# Datasource local storage ignored files
++/dataSources/
++/dataSources.local.xml
+Index: KenaKata/.idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/KenaKata/.idea/gradle.xml b/KenaKata/.idea/gradle.xml
+new file mode 100644
+--- /dev/null	(date 1785679431662)
++++ b/KenaKata/.idea/gradle.xml	(date 1785679431662)
+@@ -0,0 +1,16 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="GradleMigrationSettings" migrationVersion="1" />
++  <component name="GradleSettings">
++    <option name="linkedExternalProjectsSettings">
++      <GradleProjectSettings>
++        <option name="externalProjectPath" value="$PROJECT_DIR$" />
++        <option name="modules">
++          <set>
++            <option value="$PROJECT_DIR$" />
++          </set>
++        </option>
++      </GradleProjectSettings>
++    </option>
++  </component>
++</project>
+\ No newline at end of file
+Index: KenaKata/.idea/uiDesigner.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/KenaKata/.idea/uiDesigner.xml b/KenaKata/.idea/uiDesigner.xml
+new file mode 100644
+--- /dev/null	(date 1785679431662)
++++ b/KenaKata/.idea/uiDesigner.xml	(date 1785679431662)
+@@ -0,0 +1,124 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="Palette2">
++    <group name="Swing">
++      <item class="com.intellij.uiDesigner.HSpacer" tooltip-text="Horizontal Spacer" icon="/com/intellij/uiDesigner/icons/hspacer.svg" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="1" hsize-policy="6" anchor="0" fill="1" />
++      </item>
++      <item class="com.intellij.uiDesigner.VSpacer" tooltip-text="Vertical Spacer" icon="/com/intellij/uiDesigner/icons/vspacer.svg" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="1" anchor="0" fill="2" />
++      </item>
++      <item class="javax.swing.JPanel" icon="/com/intellij/uiDesigner/icons/panel.svg" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3" />
++      </item>
++      <item class="javax.swing.JScrollPane" icon="/com/intellij/uiDesigner/icons/scrollPane.svg" removable="false" auto-create-binding="false" can-attach-label="true">
++        <default-constraints vsize-policy="7" hsize-policy="7" anchor="0" fill="3" />
++      </item>
++      <item class="javax.swing.JButton" icon="/com/intellij/uiDesigner/icons/button.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="3" anchor="0" fill="1" />
++        <initial-values>
++          <property name="text" value="Button" />
++        </initial-values>
++      </item>
++      <item class="javax.swing.JRadioButton" icon="/com/intellij/uiDesigner/icons/radioButton.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
++        <initial-values>
++          <property name="text" value="RadioButton" />
++        </initial-values>
++      </item>
++      <item class="javax.swing.JCheckBox" icon="/com/intellij/uiDesigner/icons/checkBox.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
++        <initial-values>
++          <property name="text" value="CheckBox" />
++        </initial-values>
++      </item>
++      <item class="javax.swing.JLabel" icon="/com/intellij/uiDesigner/icons/label.svg" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="0" anchor="8" fill="0" />
++        <initial-values>
++          <property name="text" value="Label" />
++        </initial-values>
++      </item>
++      <item class="javax.swing.JTextField" icon="/com/intellij/uiDesigner/icons/textField.svg" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
++          <preferred-size width="150" height="-1" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JPasswordField" icon="/com/intellij/uiDesigner/icons/passwordField.svg" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
++          <preferred-size width="150" height="-1" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JFormattedTextField" icon="/com/intellij/uiDesigner/icons/formattedTextField.svg" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
++          <preferred-size width="150" height="-1" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JTextArea" icon="/com/intellij/uiDesigner/icons/textArea.svg" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JTextPane" icon="/com/intellij/uiDesigner/icons/textPane.svg" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JEditorPane" icon="/com/intellij/uiDesigner/icons/editorPane.svg" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JComboBox" icon="/com/intellij/uiDesigner/icons/comboBox.svg" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="2" anchor="8" fill="1" />
++      </item>
++      <item class="javax.swing.JTable" icon="/com/intellij/uiDesigner/icons/table.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JList" icon="/com/intellij/uiDesigner/icons/list.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="2" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JTree" icon="/com/intellij/uiDesigner/icons/tree.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JTabbedPane" icon="/com/intellij/uiDesigner/icons/tabbedPane.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
++          <preferred-size width="200" height="200" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JSplitPane" icon="/com/intellij/uiDesigner/icons/splitPane.svg" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
++          <preferred-size width="200" height="200" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JSpinner" icon="/com/intellij/uiDesigner/icons/spinner.svg" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
++      </item>
++      <item class="javax.swing.JSlider" icon="/com/intellij/uiDesigner/icons/slider.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
++      </item>
++      <item class="javax.swing.JSeparator" icon="/com/intellij/uiDesigner/icons/separator.svg" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3" />
++      </item>
++      <item class="javax.swing.JProgressBar" icon="/com/intellij/uiDesigner/icons/progressbar.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1" />
++      </item>
++      <item class="javax.swing.JToolBar" icon="/com/intellij/uiDesigner/icons/toolbar.svg" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1">
++          <preferred-size width="-1" height="20" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JToolBar$Separator" icon="/com/intellij/uiDesigner/icons/toolbarSeparator.svg" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="0" anchor="0" fill="1" />
++      </item>
++      <item class="javax.swing.JScrollBar" icon="/com/intellij/uiDesigner/icons/scrollbar.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="0" anchor="0" fill="2" />
++      </item>
++    </group>
++  </component>
++</project>
+\ No newline at end of file
+Index: KenaKata/.idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/KenaKata/.idea/vcs.xml b/KenaKata/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1785679431662)
++++ b/KenaKata/.idea/vcs.xml	(date 1785679431662)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$/../.." vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: KenaKata/gradle/wrapper/gradle-wrapper.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/KenaKata/gradle/wrapper/gradle-wrapper.properties b/KenaKata/gradle/wrapper/gradle-wrapper.properties
+new file mode 100644
+--- /dev/null	(date 1785679431664)
++++ b/KenaKata/gradle/wrapper/gradle-wrapper.properties	(date 1785679431664)
+@@ -0,0 +1,6 @@
++#Fri Jul 24 23:20:57 GMT+06:00 2026
++distributionBase=GRADLE_USER_HOME
++distributionPath=wrapper/dists
++distributionUrl=https\://services.gradle.org/distributions/gradle-9.6.1-bin.zip
++zipStoreBase=GRADLE_USER_HOME
++zipStorePath=wrapper/dists
+Index: KenaKata/src/main/java/kenakata/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/KenaKata/src/main/java/kenakata/Main.java b/KenaKata/src/main/java/kenakata/Main.java
+new file mode 100644
+--- /dev/null	(date 1785679431666)
++++ b/KenaKata/src/main/java/kenakata/Main.java	(date 1785679431666)
+@@ -0,0 +1,129 @@
++package kenakata;
++
++import kenakata.catalog.DigitalGood;
++import kenakata.catalog.FreshGood;
++import kenakata.catalog.GiftWrap;
++import kenakata.catalog.ExpressHandling;
++import kenakata.catalog.Seller;
++import kenakata.catalog.StockedGood;
++import kenakata.exceptions.CheckoutException;
++import kenakata.order.Coupon;
++import kenakata.order.DeliveryCalculator;
++import kenakata.order.Order;
++import kenakata.order.PriceBreakdown;
++import kenakata.order.Zone;
++import kenakata.payment.CardPayment;
++import kenakata.payment.CashOnDeliveryPayment;
++import kenakata.payment.MobileWalletPayment;
++import kenakata.payment.PaymentMethod;
++import kenakata.payment.Wallet;
++import kenakata.settlement.Marketplace;
++import kenakata.settlement.SellerPayout;
++import kenakata.settlement.SettlementReport;
++
++/**
++ * Driver for the KenaKata engine. This is a hand-written demonstration of "a night in the
++ * life of the marketplace": build sellers and a catalogue, assemble a few mixed orders,
++ * quote them, place them against different payment methods (one is deliberately refused and
++ * caught), process a return, then run the nightly settlement.
++ *
++ * The classes it uses are deliberately different KINDS of object (stocked/digital/fresh items,
++ * non-product add-ons, three payment methods) that the order and settlement treat uniformly
++ * through their shared interfaces -- this file never asks "what kind are you?".
++ */
++public final class Main {
++
++    public static void main(String[] args) throws CheckoutException {
++        // ---- Sellers and catalogue -------------------------------------------------------
++        Seller alpha = new Seller("Alpha Electronics");
++        Seller beta = new Seller("Beta Books");
++        Seller gamma = new Seller("Gamma Fresh");
++
++        // Three kinds of catalogue item -- same base type, different money rules.
++        StockedGood lamp = new StockedGood("SKU-LAMP", "Table Lamp", 1200, 10, alpha, 1500);
++        StockedGood charger = new StockedGood("SKU-CHRG", "USB Charger", 800, 20, alpha, 300);
++        StockedGood fridge = new StockedGood("SKU-FRIDGE", "Refrigerator", 20000, 3, alpha, 50000);
++        DigitalGood ebook = new DigitalGood("SKU-EBK", "E-book: Clean OOP", 300, 1000, beta);
++        FreshGood hilsa = new FreshGood("SKU-HILSA", "Hilsa 1kg", 1600, 4, gamma, 1000);
++
++        Marketplace marketplace = new Marketplace();
++        marketplace.register(alpha);
++        marketplace.register(beta);
++        marketplace.register(gamma);
++
++        DeliveryCalculator delivery = new DeliveryCalculator();
++        Coupon eid10 = new Coupon("EID10", 10, 200, 1000, 150);
++        int today = 100;
++
++        // ---- Order 1: mixed basket inside Dhaka, paid from a mobile wallet ----------------
++        Order order1 = new Order(Zone.DHAKA, delivery);
++        order1.addProduct(lamp, 2);        // stocked, weighable, discountable
++        order1.addProduct(ebook, 1);       // digital, no weight, not discountable
++        order1.addProduct(hilsa, 1);       // fresh, weighable, needs cold chain
++        order1.addAddOn(new GiftWrap());   // non-product line, priced like any other
++        order1.applyCoupon(eid10);
++        printQuote("Order 1 (inside Dhaka)", order1.quote(today));
++
++        Wallet wallet = new Wallet(5000);
++        PaymentMethod payment = new MobileWalletPayment(wallet);   // one variable, any payment form
++        order1.place(payment, today);
++        marketplace.record(order1);
++        System.out.println("Order 1 placed. Wallet balance now Tk " + wallet.balance());
++        System.out.println();
++
++        // ---- Order 2: outside Dhaka, one insured line, paid by card -----------------------
++        Order order2 = new Order(Zone.OUTSIDE, delivery);
++        order2.addProduct(charger, 3);
++        order2.addAddOn(new ExpressHandling());
++        order2.insure(0);                  // insure the charger line (it is insurable)
++        printQuote("Order 2 (outside Dhaka)", order2.quote(today));
++
++        payment = new CardPayment(3000);   // same variable, now a card
++        order2.place(payment, today);
++        marketplace.record(order2);
++        System.out.println("Order 2 placed by card.");
++        System.out.println();
++
++        // ---- Order 3: a checkout that the business refuses, caught and reported -----------
++        Order order3 = new Order(Zone.DHAKA, delivery);
++        order3.addProduct(fridge, 1);      // grand total is above the cash-on-delivery ceiling
++        printQuote("Order 3 (inside Dhaka)", order3.quote(today));
++        try {
++            order3.place(new CashOnDeliveryPayment(), today);
++            System.out.println("Order 3 placed.");
++        } catch (CheckoutException refused) {
++            // A refused checkout throws; nothing was reserved or charged. We carry on.
++            System.out.println("Order 3 refused: " + refused.getMessage());
++            System.out.println("Refrigerator stock is still " + fridge.remaining());
++        }
++        System.out.println();
++
++        // ---- A return within the window --------------------------------------------------
++        order2.acceptReturn(0, today + 5);  // charger returned 5 days later (window is 7)
++        System.out.println("Order 2: charger line returned.");
++        System.out.println();
++
++        // ---- Nightly settlement ----------------------------------------------------------
++        SettlementReport report = marketplace.settle();
++        System.out.println("=== Nightly settlement ===");
++        for (SellerPayout payout : report.payouts()) {
++            System.out.println(payout.seller() + ": sold Tk " + payout.grossSales()
++                    + ", commission Tk " + payout.commission()
++                    + ", refunds Tk " + payout.refunds()
++                    + " -> payout Tk " + payout.payout());
++        }
++        System.out.println("Platform revenue: Tk " + report.platformRevenue());
++    }
++
++    // Prints a full price breakdown for one order's quote.
++    private static void printQuote(String heading, PriceBreakdown b) {
++        System.out.println(heading);
++        System.out.println("  Subtotal    Tk " + b.subtotal());
++        System.out.println("  Discount    Tk " + b.discount());
++        System.out.println("  Delivery    Tk " + b.delivery());
++        System.out.println("  VAT         Tk " + b.vat());
++        System.out.println("  Insurance   Tk " + b.insurance());
++        System.out.println("  Service fee Tk " + b.serviceFee());
++        System.out.println("  Grand total Tk " + b.grandTotal());
++    }
++}
+Index: KenaKata/src/test/java/kenakata/KenaKataTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/KenaKata/src/test/java/kenakata/KenaKataTest.java b/KenaKata/src/test/java/kenakata/KenaKataTest.java
+new file mode 100644
+--- /dev/null	(date 1785679431678)
++++ b/KenaKata/src/test/java/kenakata/KenaKataTest.java	(date 1785679431678)
+@@ -0,0 +1,621 @@
++package kenakata;
++
++import kenakata.catalog.*;
++import kenakata.exceptions.*;
++import kenakata.order.*;
++import kenakata.payment.*;
++import kenakata.settlement.*;
++import org.junit.jupiter.api.DisplayName;
++import org.junit.jupiter.api.Nested;
++import org.junit.jupiter.api.Test;
++
++import static org.junit.jupiter.api.Assertions.*;
++
++/**
++ * Full behavioural test suite for the KenaKata engine.
++ *
++ * <p>The tests check <em>numbers and failures only</em> -- they never inspect how the design is
++ * structured. Every monetary figure is a whole number of Taka, and every percentage result is
++ * rounded UP to the next whole Taka (ceiling), so the expected values below are computed with
++ * that rounding in mind.
++ *
++ * <p>Reusable sellers are created per test to keep the cases independent (stock is mutable).
++ */
++class KenaKataTest {
++
++    private Seller seller() {
++        return new Seller("Seller");
++    }
++
++    // A stocked good priced at 1200 with two units in an order (line value 2400) is the recurring
++    // fixture in the worked example, so several tests reuse these exact figures.
++    private StockedGood lamp(Seller s) {
++        return new StockedGood("SKU-LAMP", "Table Lamp", 1200, 10, s, 1500);
++    }
++
++    // ================================================================================
++    // 1. Per-item pricing: unit charge, per-unit VAT, and commission by kind.
++    // ================================================================================
++    @Nested
++    @DisplayName("Item pricing")
++    class ItemPricing {
++
++        @Test
++        @DisplayName("Stocked good: 7.5% VAT and 8% commission, both ceiled")
++        void stockedGoodPricing() {
++            StockedGood item = lamp(seller());
++            assertEquals(1200, item.unitCharge());
++            // 1200 * 7.5% = 90 exactly.
++            assertEquals(90, item.unitVat());
++            // 2400 * 8% = 192 exactly.
++            assertEquals(192, item.commissionOn(2400));
++        }
++
++        @Test
++        @DisplayName("Digital good: 5% VAT and 20% commission")
++        void digitalGoodPricing() {
++            DigitalGood item = new DigitalGood("SKU-EBK", "E-book", 300, 100, seller());
++            assertEquals(300, item.unitCharge());
++            assertEquals(15, item.unitVat());        // 300 * 5% = 15
++            assertEquals(60, item.commissionOn(300)); // 300 * 20% = 60
++        }
++
++        @Test
++        @DisplayName("Fresh good: VAT-exempt and 5% commission")
++        void freshGoodPricing() {
++            FreshGood item = new FreshGood("SKU-HILSA", "Hilsa", 1600, 4, seller(), 1000);
++            assertEquals(0, item.unitVat());          // exempt
++            assertEquals(80, item.commissionOn(1600)); // 1600 * 5% = 80
++        }
++
++        @Test
++        @DisplayName("VAT rounds UP: a fractional per-unit VAT is ceiled")
++        void vatRoundsUp() {
++            // Gift wrap charge 50, VAT 7.5% -> 3.75 -> ceils to 4.
++            assertEquals(4, new GiftWrap().unitVat());
++            // Express handling charge 120, VAT 7.5% -> 9 exactly.
++            assertEquals(9, new ExpressHandling().unitVat());
++        }
++    }
++
++    // ================================================================================
++    // 2. Stock reservation.
++    // ================================================================================
++    @Nested
++    @DisplayName("Stock reservation")
++    class Reservation {
++
++        @Test
++        @DisplayName("Reserving within stock lowers it by exactly the quantity")
++        void reserveLowersStock() throws Exception {
++            StockedGood item = new StockedGood("S", "Item", 100, 5, seller(), 100);
++            item.reserve(3);
++            assertEquals(2, item.remaining());
++        }
++
++        @Test
++        @DisplayName("Reserving more than stock throws and leaves stock untouched")
++        void reserveTooMuchThrows() {
++            StockedGood item = new StockedGood("S", "Item", 100, 5, seller(), 100);
++            assertThrows(OutOfStockException.class, () -> item.reserve(6));
++            assertEquals(5, item.remaining());
++        }
++
++        @Test
++        @DisplayName("Reserving a non-positive quantity is a construction-style error")
++        void reserveNonPositiveThrows() {
++            StockedGood item = new StockedGood("S", "Item", 100, 5, seller(), 100);
++            assertThrows(IllegalArgumentException.class, () -> item.reserve(0));
++            assertThrows(IllegalArgumentException.class, () -> item.reserve(-1));
++        }
++    }
++
++    // ================================================================================
++    // 3. Add-ons, including a warranty computed from its covered item.
++    // ================================================================================
++    @Nested
++    @DisplayName("Add-ons")
++    class AddOns {
++
++        @Test
++        @DisplayName("Flat add-ons expose their own charge, VAT, and label")
++        void flatAddOns() {
++            assertEquals(50, new GiftWrap().unitCharge());
++            assertEquals(120, new ExpressHandling().unitCharge());
++            assertEquals("Gift wrapping", new GiftWrap().label());
++        }
++
++        @Test
++        @DisplayName("Warranty charge is 10% of the covered item's unit price, VAT 15%")
++        void warrantyFromCoveredItem() {
++            WarrantyPlan warranty = new WarrantyPlan(lamp(seller()));
++            assertEquals(120, warranty.unitCharge());       // 10% of 1200
++            assertEquals(18, warranty.unitVat());           // 15% of 120 = 18
++            assertTrue(warranty.label().contains("Table Lamp"));
++        }
++
++        @Test
++        @DisplayName("A warranty cannot cover a null item")
++        void warrantyRejectsNull() {
++            assertThrows(IllegalArgumentException.class, () -> new WarrantyPlan(null));
++        }
++    }
++
++    // ================================================================================
++    // 4. The full worked example: an order that must total to the taka.
++    // ================================================================================
++    @Nested
++    @DisplayName("Full order pricing")
++    class FullOrder {
++
++        // Rebuilds the exact order from the specification's worked example.
++        private Order workedExample() {
++            Seller a = new Seller("A");
++            Seller b = new Seller("B");
++            Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
++            order.addProduct(new StockedGood("L", "Lamp", 1200, 10, a, 1500), 2);
++            order.addProduct(new DigitalGood("E", "E-book", 300, 100, b), 1);
++            order.addProduct(new FreshGood("H", "Hilsa", 1600, 4, a, 1000), 1);
++            order.addAddOn(new GiftWrap());
++            order.applyCoupon(new Coupon("EID10", 10, 200, 1000, 150));
++            return order;
++        }
++
++        @Test
++        @DisplayName("Every component matches the worked example, grand total 4583")
++        void totalsToTheTaka() throws Exception {
++            PriceBreakdown b = workedExample().quote(100);
++            assertEquals(4350, b.subtotal());
++            assertEquals(200, b.discount());     // 10% of 2400 = 240, capped at 200
++            assertEquals(199, b.vat());          // 180 + 15 + 0 + 4
++            assertEquals(190, b.delivery());     // 140 shipping + 50 cold chain
++            assertEquals(0, b.insurance());
++            assertEquals(44, b.serviceFee());    // 1% of 4350 = 43.5 -> 44
++            assertEquals(4583, b.grandTotal());
++        }
++    }
++
++    // ================================================================================
++    // 5. Delivery: only weighable lines, billed-kg rounds up, cold chain per fresh line.
++    // ================================================================================
++    @Nested
++    @DisplayName("Delivery")
++    class Delivery {
++
++        @Test
++        @DisplayName("An all-digital order delivers for nothing")
++        void allDigitalIsFree() throws Exception {
++            Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
++            order.addProduct(new DigitalGood("E", "E-book", 300, 100, seller()), 3);
++            assertEquals(0, order.quote(1).delivery());
++        }
++
++        @Test
++        @DisplayName("Weight rounds up to the next whole billed kilogram")
++        void billedWeightRoundsUp() throws Exception {
++            // One 1200 g line -> 1.2 kg -> billed 2 kg -> 60 + 2*20 = 100 inside Dhaka.
++            Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
++            order.addProduct(new StockedGood("S", "Item", 500, 10, seller(), 1200), 1);
++            assertEquals(100, order.quote(1).delivery());
++        }
++
++        @Test
++        @DisplayName("Only weighable lines count; digital and add-ons are ignored")
++        void ignoresWeightlessLines() throws Exception {
++            // Stocked 1000 g (1 kg) plus a digital line and a gift wrap: still just 1 billed kg.
++            Order order = new Order(Zone.OUTSIDE, new DeliveryCalculator());
++            order.addProduct(new StockedGood("S", "Item", 500, 10, seller(), 1000), 1);
++            order.addProduct(new DigitalGood("E", "E-book", 300, 100, seller()), 1);
++            order.addAddOn(new GiftWrap());
++            // Outside Dhaka: 120 + 1*35 = 155, no cold chain.
++            assertEquals(155, order.quote(1).delivery());
++        }
++
++        @Test
++        @DisplayName("Each fresh line adds a cold-chain surcharge")
++        void coldChainPerFreshLine() throws Exception {
++            Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
++            order.addProduct(new FreshGood("H", "Hilsa", 1600, 4, seller(), 1000), 1); // 1 kg
++            // 60 + 1*20 shipping + 50 cold chain = 130.
++            assertEquals(130, order.quote(1).delivery());
++        }
++    }
++
++    // ================================================================================
++    // 6. Coupons.
++    // ================================================================================
++    @Nested
++    @DisplayName("Coupons")
++    class Coupons {
++
++        @Test
++        @DisplayName("Discount applies to the discountable (stocked) base only, and is capped")
++        void discountOnDiscountableBaseCapped() throws Exception {
++            // Stocked 1000 x 2 = 2000 discountable; fresh 5000 not discountable.
++            Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
++            order.addProduct(new StockedGood("S", "Item", 1000, 10, seller(), 500), 2);
++            order.addProduct(new FreshGood("H", "Hilsa", 5000, 10, seller(), 1000), 1);
++            order.applyCoupon(new Coupon("C", 50, 20000, 0, 200)); // 50%, generous cap
++            // 50% of 2000 (stocked only) = 1000, well under the cap.
++            assertEquals(1000, order.quote(1).discount());
++        }
++
++        @Test
++        @DisplayName("An expired coupon is refused")
++        void expiredCouponThrows() {
++            Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
++            order.addProduct(new StockedGood("S", "Item", 1000, 10, seller(), 500), 1);
++            order.applyCoupon(new Coupon("C", 10, 200, 0, 50)); // valid through day 50
++            assertThrows(CouponRejectedException.class, () -> order.quote(51));
++        }
++
++        @Test
++        @DisplayName("A coupon below its minimum spend is refused")
++        void belowMinimumSpendThrows() {
++            Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
++            order.addProduct(new StockedGood("S", "Item", 500, 10, seller(), 500), 1);
++            order.applyCoupon(new Coupon("C", 10, 200, 1000, 200)); // needs 1000, subtotal is 500
++            assertThrows(CouponRejectedException.class, () -> order.quote(1));
++        }
++
++        @Test
++        @DisplayName("Coupon percentage must be a valid 0..100")
++        void couponConstructionValidated() {
++            assertThrows(IllegalArgumentException.class, () -> new Coupon("C", -1, 200, 0, 100));
++            assertThrows(IllegalArgumentException.class, () -> new Coupon("C", 101, 200, 0, 100));
++        }
++    }
++
++    // ================================================================================
++    // 7. Insurance abilities.
++    // ================================================================================
++    @Nested
++    @DisplayName("Insurance")
++    class Insurance {
++
++        @Test
++        @DisplayName("Insuring an insurable line adds a fee of 1% of its value")
++        void insurableLineAddsFee() throws Exception {
++            Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
++            order.addProduct(lamp(seller()), 2); // value 2400
++            order.insure(0);
++            // 1% of 2400 = 24, above the 20 minimum.
++            assertEquals(24, order.quote(1).insurance());
++        }
++
++        @Test
++        @DisplayName("Insurance never falls below the 20 Taka minimum")
++        void insuranceMinimumApplies() throws Exception {
++            Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
++            order.addProduct(new StockedGood("S", "Item", 1000, 10, seller(), 500), 1); // value 1000
++            order.insure(0);
++            // 1% of 1000 = 10, lifted to the 20 minimum.
++            assertEquals(20, order.quote(1).insurance());
++        }
++
++        @Test
++        @DisplayName("Insuring a line that cannot be insured is refused")
++        void insuringNonInsurableThrows() {
++            Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
++            order.addProduct(new DigitalGood("E", "E-book", 300, 100, seller()), 1); // not insurable
++            order.addAddOn(new GiftWrap());                                           // not insurable
++            assertThrows(NotInsurableException.class, () -> order.insure(0));
++            assertThrows(NotInsurableException.class, () -> order.insure(1));
++        }
++    }
++
++    // ================================================================================
++    // 8. Placement is all-or-nothing.
++    // ================================================================================
++    @Nested
++    @DisplayName("Atomic placement")
++    class AtomicPlacement {
++
++        @Test
++        @DisplayName("A declined payment reserves no stock and moves no money")
++        void declinedPaymentChangesNothing() {
++            Seller s = seller();
++            StockedGood item = lamp(s); // stock 10
++            Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
++            order.addProduct(item, 2);
++            Wallet wallet = new Wallet(100); // far too little
++            assertThrows(EmptyWalletException.class,
++                    () -> order.place(new MobileWalletPayment(wallet), 1));
++            assertEquals(10, item.remaining()); // stock untouched
++            assertEquals(100, wallet.balance()); // balance untouched
++            assertFalse(order.placed());
++        }
++
++        @Test
++        @DisplayName("An out-of-stock line reserves nothing and never reaches payment")
++        void outOfStockChangesNothing() {
++            StockedGood item = new StockedGood("S", "Item", 100, 1, seller(), 500); // stock 1
++            Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
++            order.addProduct(item, 2); // wants 2
++            Wallet wallet = new Wallet(1_000_000);
++            assertThrows(OutOfStockException.class,
++                    () -> order.place(new MobileWalletPayment(wallet), 1));
++            assertEquals(1, item.remaining());
++            assertEquals(1_000_000, wallet.balance()); // payment was never attempted
++        }
++
++        @Test
++        @DisplayName("An invalid coupon aborts placement before anything moves")
++        void invalidCouponChangesNothing() {
++            StockedGood item = lamp(seller());
++            Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
++            order.addProduct(item, 2);
++            order.applyCoupon(new Coupon("C", 10, 200, 0, 5)); // expired by day 6
++            Wallet wallet = new Wallet(1_000_000);
++            assertThrows(CouponRejectedException.class,
++                    () -> order.place(new MobileWalletPayment(wallet), 6));
++            assertEquals(10, item.remaining());
++            assertEquals(1_000_000, wallet.balance());
++        }
++
++        @Test
++        @DisplayName("A successful placement reserves stock and records the breakdown")
++        void successfulPlacement() throws Exception {
++            StockedGood item = lamp(seller());
++            Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
++            order.addProduct(item, 2);
++            order.place(new CardPayment(1_000_000), 1);
++            assertEquals(8, item.remaining());
++            assertTrue(order.placed());
++            assertNotNull(order.finalBreakdown());
++        }
++    }
++
++    // ================================================================================
++    // 9. Payment methods: distinct refusals, all catchable as the common parent.
++    // ================================================================================
++    @Nested
++    @DisplayName("Payment refusals")
++    class PaymentRefusals {
++
++        @Test
++        @DisplayName("An empty wallet throws its own kind, catchable as the parent")
++        void emptyWallet() {
++            PaymentMethod pay = new MobileWalletPayment(new Wallet(50));
++            EmptyWalletException e =
++                    assertThrows(EmptyWalletException.class, () -> pay.authorise(51));
++            assertInstanceOf(PaymentDeclinedException.class, e);
++            assertInstanceOf(CheckoutException.class, e);
++        }
++
++        @Test
++        @DisplayName("A card over its limit throws its own kind")
++        void cardOverLimit() {
++            CardPayment card = new CardPayment(100);
++            assertThrows(CardLimitExceededException.class, () -> card.authorise(101));
++            assertEquals(100, card.remainingLimit()); // nothing charged on refusal
++        }
++
++        @Test
++        @DisplayName("A card exactly at its limit succeeds and draws down to zero")
++        void cardExactlyAtLimit() throws Exception {
++            CardPayment card = new CardPayment(100);
++            card.authorise(100);
++            assertEquals(0, card.remainingLimit());
++        }
++
++        @Test
++        @DisplayName("COD at the ceiling passes; one Taka over is refused")
++        void codCeilingBoundary() throws Exception {
++            new CashOnDeliveryPayment().authorise(15000); // exactly the ceiling: allowed
++            assertThrows(CodCeilingExceededException.class,
++                    () -> new CashOnDeliveryPayment().authorise(15001));
++        }
++
++        @Test
++        @DisplayName("A wallet with exactly enough pays and lands at zero")
++        void walletExactBalance() throws Exception {
++            Wallet wallet = new Wallet(500);
++            new MobileWalletPayment(wallet).authorise(500);
++            assertEquals(0, wallet.balance());
++        }
++    }
++
++    // ================================================================================
++    // 10. Returns respect the returnable ability and the window.
++    // ================================================================================
++    @Nested
++    @DisplayName("Returns")
++    class Returns {
++
++        private Order placedOrderWith(Chargeable... units) throws Exception {
++            Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
++            for (Chargeable unit : units) {
++                if (unit instanceof CatalogItem item) {
++                    order.addProduct(item, 1);
++                } else {
++                    order.addAddOn(unit);
++                }
++            }
++            order.place(new CardPayment(1_000_000), 100);
++            return order;
++        }
++
++        @Test
++        @DisplayName("A returnable line comes back within its window")
++        void returnWithinWindow() throws Exception {
++            Order order = placedOrderWith(lamp(seller())); // stocked window is 7 days
++            order.acceptReturn(0, 105); // placed day 100, within 7 days
++            assertTrue(order.lines().get(0).returned());
++        }
++
++        @Test
++        @DisplayName("A return after the window is refused")
++        void returnPastWindowThrows() throws Exception {
++            Order order = placedOrderWith(new FreshGood("H", "Hilsa", 1600, 4, seller(), 1000));
++            // Fresh window is 2 days; day 103 is past 100 + 2.
++            assertThrows(ReturnNotAllowedException.class, () -> order.acceptReturn(0, 103));
++        }
++
++        @Test
++        @DisplayName("A non-returnable line cannot be returned")
++        void nonReturnableThrows() throws Exception {
++            Order order = placedOrderWith(new DigitalGood("E", "E-book", 300, 100, seller()));
++            assertThrows(ReturnNotAllowedException.class, () -> order.acceptReturn(0, 100));
++        }
++
++        @Test
++        @DisplayName("The same line cannot be returned twice")
++        void doubleReturnThrows() throws Exception {
++            Order order = placedOrderWith(lamp(seller()));
++            order.acceptReturn(0, 101);
++            assertThrows(ReturnNotAllowedException.class, () -> order.acceptReturn(0, 102));
++        }
++    }
++
++    // ================================================================================
++    // 11. Settlement pays each seller correctly and reconciles with the platform.
++    // ================================================================================
++    @Nested
++    @DisplayName("Settlement")
++    class Settlement {
++
++        @Test
++        @DisplayName("Per-seller payouts and platform revenue, and the whole day reconciles")
++        void settlesAndReconciles() throws Exception {
++            Seller a = new Seller("A");
++            Seller b = new Seller("B");
++            StockedGood p1 = new StockedGood("P1", "Widget", 1000, 10, a, 500); // VAT 75, comm 8%
++            DigitalGood p2 = new DigitalGood("P2", "Manual", 500, 10, b);       // VAT 25, comm 20%
++
++            Marketplace market = new Marketplace();
++            market.register(a);
++            market.register(b);
++
++            // Order 1: 2 x p1 (seller A) + 1 x p2 (seller B). Grand total 2780.
++            Order o1 = new Order(Zone.DHAKA, new DeliveryCalculator());
++            o1.addProduct(p1, 2);
++            o1.addProduct(p2, 1);
++            o1.place(new CardPayment(1_000_000), 1);
++            long grand1 = o1.finalBreakdown().grandTotal();
++            assertEquals(2780, grand1);
++            market.record(o1);
++
++            // Order 2: 1 x p1 (seller A) + gift wrap. Grand total 1220.
++            Order o2 = new Order(Zone.DHAKA, new DeliveryCalculator());
++            o2.addProduct(p1, 1);
++            o2.addAddOn(new GiftWrap());
++            o2.place(new CardPayment(1_000_000), 1);
++            long grand2 = o2.finalBreakdown().grandTotal();
++            assertEquals(1220, grand2);
++            market.record(o2);
++
++            SettlementReport report = market.settle();
++
++            // Seller A: sold 3000, commission 240, payout 2760.
++            SellerPayout pa = report.forSeller(a);
++            assertEquals(3000, pa.grossSales());
++            assertEquals(240, pa.commission());
++            assertEquals(2760, pa.payout());
++
++            // Seller B: sold 500, commission 100, payout 400.
++            assertEquals(400, report.forSeller(b).payout());
++
++            // Platform keeps commissions + add-ons + delivery + VAT + service fee - discounts.
++            assertEquals(840, report.platformRevenue());
++
++            // Nothing is created or lost: seller payouts + platform revenue == what customers paid.
++            long paidByCustomers = grand1 + grand2;
++            long distributed = pa.payout() + report.forSeller(b).payout() + report.platformRevenue();
++            assertEquals(paidByCustomers, distributed);
++        }
++
++        @Test
++        @DisplayName("A returned line reduces its seller's payout by the line value")
++        void returnReducesPayout() throws Exception {
++            Seller a = new Seller("A");
++            StockedGood p1 = new StockedGood("P1", "Widget", 1000, 10, a, 500);
++
++            Marketplace market = new Marketplace();
++            market.register(a);
++
++            Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
++            order.addProduct(p1, 2); // value 2000
++            order.place(new CardPayment(1_000_000), 1);
++            order.acceptReturn(0, 3); // within the 7-day window
++            market.record(order);
++
++            SellerPayout pa = market.settle().forSeller(a);
++            // Gross 2000, commission 160, refund 2000 -> payout 2000 - 160 - 2000 = -160.
++            assertEquals(2000, pa.refunds());
++            assertEquals(-160, pa.payout());
++        }
++    }
++
++    // ================================================================================
++    // 12. Polymorphism: one variable stands in for every payment method.
++    // ================================================================================
++    @Test
++    @DisplayName("A single PaymentMethod variable acts as wallet, card, then COD")
++    void onePaymentVariableManyForms() throws Exception {
++        PaymentMethod payment;
++
++        payment = new MobileWalletPayment(new Wallet(1000));
++        payment.authorise(100);
++
++        payment = new CardPayment(1000);
++        payment.authorise(100);
++
++        payment = new CashOnDeliveryPayment();
++        payment.authorise(100);
++        // No exception from any form: the same slot dispatched to three unrelated implementations.
++        assertTrue(true);
++    }
++
++    // ================================================================================
++    // 13. Construction-time validation: a malformed object must not come into existence.
++    // ================================================================================
++    @Nested
++    @DisplayName("Construction validation")
++    class Construction {
++
++        @Test
++        @DisplayName("A catalogue item rejects null identity, negative price, and negative stock")
++        void catalogItemValidation() {
++            Seller s = seller();
++            assertThrows(IllegalArgumentException.class,
++                    () -> new StockedGood(null, "T", 100, 1, s, 100));
++            assertThrows(IllegalArgumentException.class,
++                    () -> new StockedGood("S", " ", 100, 1, s, 100));
++            assertThrows(IllegalArgumentException.class,
++                    () -> new StockedGood("S", "T", 100, 1, null, 100));
++            assertThrows(IllegalArgumentException.class,
++                    () -> new StockedGood("S", "T", -1, 1, s, 100));
++            assertThrows(IllegalArgumentException.class,
++                    () -> new StockedGood("S", "T", 100, -1, s, 100));
++            assertThrows(IllegalArgumentException.class,
++                    () -> new StockedGood("S", "T", 100, 1, s, 0)); // non-positive weight
++        }
++
++        @Test
++        @DisplayName("A wallet cannot start with a negative balance")
++        void walletValidation() {
++            assertThrows(IllegalArgumentException.class, () -> new Wallet(-1));
++        }
++
++        @Test
++        @DisplayName("An order line rejects a non-positive quantity")
++        void orderLineQuantityValidation() {
++            Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
++            assertThrows(IllegalArgumentException.class, () -> order.addProduct(lamp(seller()), 0));
++            assertThrows(IllegalArgumentException.class, () -> order.addProduct(lamp(seller()), -2));
++        }
++    }
++
++    // ================================================================================
++    // 14. Service fee is capped.
++    // ================================================================================
++    @Test
++    @DisplayName("The service fee is capped at 100 Taka for large orders")
++    void serviceFeeIsCapped() throws Exception {
++        Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
++        order.addProduct(new StockedGood("S", "Big", 20000, 10, seller(), 500), 1);
++        // 1% of 20000 = 200, but capped at 100.
++        assertEquals(100, order.quote(1).serviceFee());
++    }
++}
+Index: KenaKata/src/main/java/kenakata/order/DeliveryCalculator.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/KenaKata/src/main/java/kenakata/order/DeliveryCalculator.java b/KenaKata/src/main/java/kenakata/order/DeliveryCalculator.java
+new file mode 100644
+--- /dev/null	(date 1785679431673)
++++ b/KenaKata/src/main/java/kenakata/order/DeliveryCalculator.java	(date 1785679431673)
+@@ -0,0 +1,4 @@
++package kenakata.order;
++
++public class DeliveryCalculator {
++}
+Index: KenaKata/src/main/java/kenakata/order/Order.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/KenaKata/src/main/java/kenakata/order/Order.java b/KenaKata/src/main/java/kenakata/order/Order.java
+new file mode 100644
+--- /dev/null	(date 1785679431674)
++++ b/KenaKata/src/main/java/kenakata/order/Order.java	(date 1785679431674)
+@@ -0,0 +1,4 @@
++package kenakata.order;
++
++public class Order {
++}
+Index: KenaKata/src/main/java/kenakata/order/PriceBreakdown.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/KenaKata/src/main/java/kenakata/order/PriceBreakdown.java b/KenaKata/src/main/java/kenakata/order/PriceBreakdown.java
+new file mode 100644
+--- /dev/null	(date 1785679431674)
++++ b/KenaKata/src/main/java/kenakata/order/PriceBreakdown.java	(date 1785679431674)
+@@ -0,0 +1,4 @@
++package kenakata.order;
++
++public class PriceBreakdown {
++}
+Index: KenaKata/src/main/java/kenakata/order/Zone.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/KenaKata/src/main/java/kenakata/order/Zone.java b/KenaKata/src/main/java/kenakata/order/Zone.java
+new file mode 100644
+--- /dev/null	(date 1785679431674)
++++ b/KenaKata/src/main/java/kenakata/order/Zone.java	(date 1785679431674)
+@@ -0,0 +1,4 @@
++package kenakata.order;
++
++public class Zone {
++}
+Index: KenaKata/src/main/java/kenakata/catalog/AddOn.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/KenaKata/src/main/java/kenakata/catalog/AddOn.java b/KenaKata/src/main/java/kenakata/catalog/AddOn.java
+new file mode 100644
+--- /dev/null	(date 1785679431667)
++++ b/KenaKata/src/main/java/kenakata/catalog/AddOn.java	(date 1785679431667)
+@@ -0,0 +1,4 @@
++package kenakata.catalog;
++
++public class AddOn {
++}
+Index: KenaKata/src/main/java/kenakata/catalog/CatalogItem.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/KenaKata/src/main/java/kenakata/catalog/CatalogItem.java b/KenaKata/src/main/java/kenakata/catalog/CatalogItem.java
+new file mode 100644
+--- /dev/null	(date 1785679431667)
++++ b/KenaKata/src/main/java/kenakata/catalog/CatalogItem.java	(date 1785679431667)
+@@ -0,0 +1,62 @@
++package kenakata.catalog;
++
++public abstract class CatalogItem {
++
++
++    private String sku;
++    private String title;
++    private double unitPrice;
++    private int stock;
++    private Seller seller;
++
++    public CatalogItem(String sku, String title, double unitPrice, int stock, Seller seller) {
++
++        if (sku == null || sku.isBlank())
++            throw new IllegalArgumentException("null sku");
++        if (title == null || title.isBlank())
++            throw new IllegalArgumentException("null title");
++        if (unitPrice < 0) throw new IllegalArgumentException("Price must be positive");
++        if (stock < 0) throw new IllegalArgumentException("Stock number must be positive");
++        if (seller == null) throw new IllegalArgumentException("null seller");
++
++        this.sku = sku;
++        this.title = title;
++        this.unitPrice = unitPrice;
++        this.stock = stock;
++        this.seller = seller;
++    }
++
++    public Seller getSeller() {
++        return seller;
++    }
++
++    public double getUnitPrice() {
++        return unitPrice;
++    }
++
++    public String getTitle() {
++        return title;
++    }
++
++    public int getStock() {
++        return stock;
++    }
++
++    public String getSku() {
++        return sku;
++    }
++
++    public abstract int unitCharge();
++
++    public abstract int unitVat();
++
++    public abstract String label();
++
++
++
++}
++
++
++
++
++
+Index: KenaKata/src/main/java/kenakata/catalog/Chargeable.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/KenaKata/src/main/java/kenakata/catalog/Chargeable.java b/KenaKata/src/main/java/kenakata/catalog/Chargeable.java
+new file mode 100644
+--- /dev/null	(date 1785679431668)
++++ b/KenaKata/src/main/java/kenakata/catalog/Chargeable.java	(date 1785679431668)
+@@ -0,0 +1,7 @@
++package kenakata.catalog;
++
++public interface Chargeable {
++    double unitVat();
++    double unitCharge();
++    String label();
++}
+Index: KenaKata/src/main/java/kenakata/catalog/DigitalGood.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/KenaKata/src/main/java/kenakata/catalog/DigitalGood.java b/KenaKata/src/main/java/kenakata/catalog/DigitalGood.java
+new file mode 100644
+--- /dev/null	(date 1785679431668)
++++ b/KenaKata/src/main/java/kenakata/catalog/DigitalGood.java	(date 1785679431668)
+@@ -0,0 +1,4 @@
++package kenakata.catalog;
++
++public class DigitalGood {
++}
+Index: KenaKata/src/main/java/kenakata/catalog/ExpressHandling.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/KenaKata/src/main/java/kenakata/catalog/ExpressHandling.java b/KenaKata/src/main/java/kenakata/catalog/ExpressHandling.java
+new file mode 100644
+--- /dev/null	(date 1785679431669)
++++ b/KenaKata/src/main/java/kenakata/catalog/ExpressHandling.java	(date 1785679431669)
+@@ -0,0 +1,4 @@
++package kenakata.catalog;
++
++public class ExpressHandling {
++}
+Index: KenaKata/src/main/java/kenakata/catalog/FreshGood.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/KenaKata/src/main/java/kenakata/catalog/FreshGood.java b/KenaKata/src/main/java/kenakata/catalog/FreshGood.java
+new file mode 100644
+--- /dev/null	(date 1785679431669)
++++ b/KenaKata/src/main/java/kenakata/catalog/FreshGood.java	(date 1785679431669)
+@@ -0,0 +1,4 @@
++package kenakata.catalog;
++
++public class FreshGood {
++}
+Index: KenaKata/src/main/java/kenakata/catalog/GiftWrapping.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/KenaKata/src/main/java/kenakata/catalog/GiftWrapping.java b/KenaKata/src/main/java/kenakata/catalog/GiftWrapping.java
+new file mode 100644
+--- /dev/null	(date 1785679431669)
++++ b/KenaKata/src/main/java/kenakata/catalog/GiftWrapping.java	(date 1785679431669)
+@@ -0,0 +1,4 @@
++package kenakata.catalog;
++
++public class GiftWrapping {
++}
+Index: KenaKata/src/main/java/kenakata/catalog/Seller.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/KenaKata/src/main/java/kenakata/catalog/Seller.java b/KenaKata/src/main/java/kenakata/catalog/Seller.java
+new file mode 100644
+--- /dev/null	(date 1785679431669)
++++ b/KenaKata/src/main/java/kenakata/catalog/Seller.java	(date 1785679431669)
+@@ -0,0 +1,17 @@
++package kenakata.catalog;
++
++public class Seller {
++    private String name;
++
++    public Seller(String name){
++        if(name==null || name.isBlank())
++            throw new IllegalArgumentException("Invalid name");
++
++        this.name=name;
++    }
++
++    public String getName() {
++        return name;
++    }
++
++}
+Index: KenaKata/src/main/java/kenakata/catalog/StockedGood.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/KenaKata/src/main/java/kenakata/catalog/StockedGood.java b/KenaKata/src/main/java/kenakata/catalog/StockedGood.java
+new file mode 100644
+--- /dev/null	(date 1785679431670)
++++ b/KenaKata/src/main/java/kenakata/catalog/StockedGood.java	(date 1785679431670)
+@@ -0,0 +1,4 @@
++package kenakata.catalog;
++
++public class StockedGood {
++}
+Index: KenaKata/src/main/java/kenakata/catalog/WarrentyPlan.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/KenaKata/src/main/java/kenakata/catalog/WarrentyPlan.java b/KenaKata/src/main/java/kenakata/catalog/WarrentyPlan.java
+new file mode 100644
+--- /dev/null	(date 1785679431670)
++++ b/KenaKata/src/main/java/kenakata/catalog/WarrentyPlan.java	(date 1785679431670)
+@@ -0,0 +1,4 @@
++package kenakata.catalog;
++
++public class WarrentyPlan {
++}
+Index: KenaKata/src/main/java/kenakata/payment/CardPayment.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/KenaKata/src/main/java/kenakata/payment/CardPayment.java b/KenaKata/src/main/java/kenakata/payment/CardPayment.java
+new file mode 100644
+--- /dev/null	(date 1785679431675)
++++ b/KenaKata/src/main/java/kenakata/payment/CardPayment.java	(date 1785679431675)
+@@ -0,0 +1,4 @@
++package kenakata.payment;
++
++public class CardPayment {
++}
+Index: KenaKata/src/main/java/kenakata/payment/CashOnDeliveryPayment.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/KenaKata/src/main/java/kenakata/payment/CashOnDeliveryPayment.java b/KenaKata/src/main/java/kenakata/payment/CashOnDeliveryPayment.java
+new file mode 100644
+--- /dev/null	(date 1785679431676)
++++ b/KenaKata/src/main/java/kenakata/payment/CashOnDeliveryPayment.java	(date 1785679431676)
+@@ -0,0 +1,4 @@
++package kenakata.payment;
++
++public class CashOnDeliveryPayment {
++}
+Index: KenaKata/src/main/java/kenakata/payment/MobileWalletPayment.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/KenaKata/src/main/java/kenakata/payment/MobileWalletPayment.java b/KenaKata/src/main/java/kenakata/payment/MobileWalletPayment.java
+new file mode 100644
+--- /dev/null	(date 1785679431676)
++++ b/KenaKata/src/main/java/kenakata/payment/MobileWalletPayment.java	(date 1785679431676)
+@@ -0,0 +1,4 @@
++package kenakata.payment;
++
++public class MobileWalletPayment {
++}
+Index: KenaKata/src/main/java/kenakata/payment/PaymentMethod.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/KenaKata/src/main/java/kenakata/payment/PaymentMethod.java b/KenaKata/src/main/java/kenakata/payment/PaymentMethod.java
+new file mode 100644
+--- /dev/null	(date 1785679431677)
++++ b/KenaKata/src/main/java/kenakata/payment/PaymentMethod.java	(date 1785679431677)
+@@ -0,0 +1,4 @@
++package kenakata.payment;
++
++public class PaymentMethod {
++}
+Index: KenaKata/src/main/java/kenakata/exceptions/CardLimitExceededException.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/KenaKata/src/main/java/kenakata/exceptions/CardLimitExceededException.java b/KenaKata/src/main/java/kenakata/exceptions/CardLimitExceededException.java
+new file mode 100644
+--- /dev/null	(date 1785679431671)
++++ b/KenaKata/src/main/java/kenakata/exceptions/CardLimitExceededException.java	(date 1785679431671)
+@@ -0,0 +1,7 @@
++package kenakata.exceptions;
++
++public class CardLimitExceededException extends PaymentDeclinedException{
++    public CardLimitExceededException(String message) {
++        super(message);
++    }
++}
+Index: KenaKata/src/main/java/kenakata/exceptions/CheckoutException.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/KenaKata/src/main/java/kenakata/exceptions/CheckoutException.java b/KenaKata/src/main/java/kenakata/exceptions/CheckoutException.java
+new file mode 100644
+--- /dev/null	(date 1785679431671)
++++ b/KenaKata/src/main/java/kenakata/exceptions/CheckoutException.java	(date 1785679431671)
+@@ -0,0 +1,7 @@
++package kenakata.exceptions;
++
++public class CheckoutException extends Exception{
++    public CheckoutException(String message) {
++        super(message);
++    }
++}
+Index: KenaKata/src/main/java/kenakata/exceptions/CouponRejectedException.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/KenaKata/src/main/java/kenakata/exceptions/CouponRejectedException.java b/KenaKata/src/main/java/kenakata/exceptions/CouponRejectedException.java
+new file mode 100644
+--- /dev/null	(date 1785679431671)
++++ b/KenaKata/src/main/java/kenakata/exceptions/CouponRejectedException.java	(date 1785679431671)
+@@ -0,0 +1,7 @@
++package kenakata.exceptions;
++
++public class CouponRejectedException extends CheckoutException{
++    public CouponRejectedException(String message) {
++        super(message);
++    }
++}
+Index: KenaKata/src/main/java/kenakata/exceptions/EmptyWalletException.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/KenaKata/src/main/java/kenakata/exceptions/EmptyWalletException.java b/KenaKata/src/main/java/kenakata/exceptions/EmptyWalletException.java
+new file mode 100644
+--- /dev/null	(date 1785679431672)
++++ b/KenaKata/src/main/java/kenakata/exceptions/EmptyWalletException.java	(date 1785679431672)
+@@ -0,0 +1,7 @@
++package kenakata.exceptions;
++
++public class EmptyWalletException extends PaymentDeclinedException{
++    public EmptyWalletException(String message) {
++        super(message);
++    }
++}
+Index: KenaKata/src/main/java/kenakata/exceptions/OutofStockException.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/KenaKata/src/main/java/kenakata/exceptions/OutofStockException.java b/KenaKata/src/main/java/kenakata/exceptions/OutofStockException.java
+new file mode 100644
+--- /dev/null	(date 1785679431672)
++++ b/KenaKata/src/main/java/kenakata/exceptions/OutofStockException.java	(date 1785679431672)
+@@ -0,0 +1,8 @@
++package kenakata.exceptions;
++
++public class OutofStockException extends CheckoutException{
++
++    public OutofStockException(String message){
++        super(message);
++    }
++}
+Index: KenaKata/src/main/java/kenakata/exceptions/PaymentDeclinedException.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/KenaKata/src/main/java/kenakata/exceptions/PaymentDeclinedException.java b/KenaKata/src/main/java/kenakata/exceptions/PaymentDeclinedException.java
+new file mode 100644
+--- /dev/null	(date 1785679431673)
++++ b/KenaKata/src/main/java/kenakata/exceptions/PaymentDeclinedException.java	(date 1785679431673)
+@@ -0,0 +1,7 @@
++package kenakata.exceptions;
++
++public class PaymentDeclinedException extends CheckoutException{
++    public PaymentDeclinedException(String message) {
++        super(message);
++    }
++}
+Index: KenaKata/src/main/java/kenakata/exceptions/ReturnNotAllowedException.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/KenaKata/src/main/java/kenakata/exceptions/ReturnNotAllowedException.java b/KenaKata/src/main/java/kenakata/exceptions/ReturnNotAllowedException.java
+new file mode 100644
+--- /dev/null	(date 1785679431673)
++++ b/KenaKata/src/main/java/kenakata/exceptions/ReturnNotAllowedException.java	(date 1785679431673)
+@@ -0,0 +1,7 @@
++package kenakata.exceptions;
++
++public class ReturnNotAllowedException extends CheckoutException{
++    public ReturnNotAllowedException(String message) {
++        super(message);
++    }
++}
+Index: .idea/Lab-11.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/Lab-11.iml b/.idea/Lab-11.iml
+new file mode 100644
+--- /dev/null	(date 1785679596199)
++++ b/.idea/Lab-11.iml	(date 1785679596199)
+@@ -0,0 +1,9 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$" />
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+--- /dev/null	(date 1785679596205)
++++ b/.idea/modules.xml	(date 1785679596205)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/Lab-11.iml" filepath="$PROJECT_DIR$/.idea/Lab-11.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1785679596210)
++++ b/.idea/vcs.xml	(date 1785679596210)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file

@@ -1,0 +1,62 @@
+package kenakata.catalog;
+
+public abstract class CatalogItem {
+
+
+    private String sku;
+    private String title;
+    private double unitPrice;
+    private int stock;
+    private Seller seller;
+
+    public CatalogItem(String sku, String title, double unitPrice, int stock, Seller seller) {
+
+        if (sku == null || sku.isBlank())
+            throw new IllegalArgumentException("null sku");
+        if (title == null || title.isBlank())
+            throw new IllegalArgumentException("null title");
+        if (unitPrice < 0) throw new IllegalArgumentException("Price must be positive");
+        if (stock < 0) throw new IllegalArgumentException("Stock number must be positive");
+        if (seller == null) throw new IllegalArgumentException("null seller");
+
+        this.sku = sku;
+        this.title = title;
+        this.unitPrice = unitPrice;
+        this.stock = stock;
+        this.seller = seller;
+    }
+
+    public Seller getSeller() {
+        return seller;
+    }
+
+    public double getUnitPrice() {
+        return unitPrice;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public String getSku() {
+        return sku;
+    }
+
+    public abstract int unitCharge();
+
+    public abstract int unitVat();
+
+    public abstract String label();
+
+
+
+}
+
+
+
+
+
