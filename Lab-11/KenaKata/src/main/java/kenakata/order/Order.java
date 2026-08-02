@@ -83,5 +83,10 @@ this.placed = true;
 this.finalBreakdown = breakdown;
 this.placement = currentDay;
 }
-
+public void acceptReturn(int lineIndex, int currentDay) throws ReturnNotAllowedException{
+    if(lineIndex <0 || lineIndex >= lines.size()){
+        throw new ReturnNotAllowedException("Invalif line index");
+    }
+    OrderLine line = lines.get(lineIndex);
+}
 
