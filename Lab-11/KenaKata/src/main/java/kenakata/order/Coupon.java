@@ -10,6 +10,7 @@ public class Coupon {
     private final int expiryDay;
 
     public Coupon(String code, int pct, long cap, long minSpeed, int expiryDay) {
+        if(pct<0 || pct>100) throw new IllegalArgumentException();
         this.code = code;
         this.pct = pct;
         this.cap = cap;
@@ -21,5 +22,7 @@ public class Coupon {
         return code;
     }
 
-    public long calculateDiscount()
+    public long calculateDiscount() {
+        return 0;
+    }
 }
