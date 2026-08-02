@@ -45,4 +45,29 @@ public abstract class CatalogItem implements Chargeable{
         if(remainingStock<qty) throw new OutOfStockException("OUT OF STOCk");
         remainingStock -= qty;
     }
+
+    public long unitCharge() {
+        return unitPrice;
+    }
+
+    public String label() {
+        return title;
+    }
+
+    public abstract long comissionOn(long linevalue);
+    public Integer weightGrams() {
+        return null;
+    }
+
+    public boolean isColdChain() {
+        return false;
+    }
+
+    public boolean isInsurable() {
+        return false;
+    }
+
+    public Integer returnWindowDays() {
+        return null;
+    }
 }
