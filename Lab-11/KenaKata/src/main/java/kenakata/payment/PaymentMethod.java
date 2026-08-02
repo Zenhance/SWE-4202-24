@@ -1,4 +1,7 @@
 package kenakata.payment;
 
-public class PaymentMethod {
+import kenakata.exceptions.PaymentDeclinedException;
+
+public interface PaymentMethod {
+    void authorise(long amount) throws PaymentDeclinedException;
 }
