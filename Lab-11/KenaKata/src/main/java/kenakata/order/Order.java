@@ -48,4 +48,8 @@ public class Order {
     public boolean placed() {
         return false;
     }
+
+    public PriceBreakdown finalBreakdown() {
+        return new PriceBreakdown(chargeables, coupon, zone);
+    }
 }
