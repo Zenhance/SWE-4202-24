@@ -19,4 +19,25 @@ public abstract class CatalogItem implements Chargeable{
         this.remainingStock=initialStock;
         this.seller=seller;
     }
+
+    public String sku() {
+        return sku;
+    }
+
+    public String title() {
+        return title;
+    }
+
+    public long unitPrice() {
+        return unitPrice;
+    }
+
+    public int remainingStock() {
+        return remainingStock;
+    }
+
+    public Seller seller() {
+        return seller;
+    }
+
 }
