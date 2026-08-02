@@ -9,7 +9,7 @@ public abstract class CatalogItem implements Chargeable{
     private int remainingStock;
     private final Seller seller;
 
-    public Catalogitem(String sku,String title,long unitPrice, int initialStock, Seller seller) {
+    public CatalogItem(String sku,String title,long unitPrice, int initialStock, Seller seller) {
         if(sku==null || sku.trim().isEmpty()) throw new IllegalArgumentException();
         if(title==null || title.trim().isEmpty()) throw new IllegalArgumentException();
         if(unitPrice<0 || initialStock<0 || seller==null) throw new IllegalArgumentException();
