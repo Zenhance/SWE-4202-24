@@ -43,29 +43,36 @@ public class Order {
     }
     line.setInsured(true);
 }
-public PriceBreakdown quote(int currentDay) throws CouponRejectedException{
-    long subtotal =0;
+public PriceBreakdown quote(int currentDay) throws CouponRejectedException {
+    long subtotal = 0;
     long discountableBase = 0;
     long vat = 0;
     long insurance = 0;
 
-    for(OrderLine line : lines){
-        subtotal+= line.lineValue();
+    for (OrderLine line : lines) {
+        subtotal += line.lineValue();
         vat += line.lineVat();
-        insurance+= line.insuranceFee();
+        insurance += line.insuranceFee();
 
-        if(line.item() instanceof StockedGood){
-            discountableBase+=line.lineValue();
+        if (line.item() instanceof StockedGood) {
+            discountableBase += line.lineValue();
         }
     }
-    long discount=0;
-    if(coupon!=null){
-        discount= coupon.calculatorDiscount(discountableBase,currentDay);
+    long discount = 0;
+    if (coupon != null) {
+        discount = coupon.calculatorDiscount(discountableBase, currentDay);
     }
-    long delivery = coupon.calculatorDelivery(lines,zone);.
-    long serviceFee=(long)Math.ceil(subtotal*0.01);
-    serviceFee=Math.min(serviceFee,100);
+    long delivery = coupon.calculatorDelivery(lines, zone);.
+    long serviceFee = (long) Math.ceil(subtotal * 0.01);
+    serviceFee = Math.min(serviceFee, 100);
 
+    long grandTotal = subtotal - discount + delivery + vat + insurance + serviceFee;
+    return new PriceBreakdown(subtotal, discount, vat, delivery, insurance, serviceFee, grandTotal);
+}
+public void place(PaymentMethod paymentMethod,int currentDay) throws  CheckoutException{
+    PriceBreakdown breakdown = quote(currentDay);
+
+    paymentMethod.authorise(breakdown.grandTotal());
 
 
 
