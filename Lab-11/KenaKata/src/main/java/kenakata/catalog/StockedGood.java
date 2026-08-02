@@ -1,6 +1,6 @@
 package kenakata.catalog;
 
-public class StockedGood extends CatalogItem implements Chargeable,Weightable,Returnable{
+public class StockedGood extends CatalogItem implements Chargeable,Weightable,Returnable,Insurable{
     protected int weight;
 
     public StockedGood(String sku, String title, long unitPrice, int stock, Seller seller, int weight){
@@ -26,5 +26,10 @@ public class StockedGood extends CatalogItem implements Chargeable,Weightable,Re
     @Override
     public double weight() {
         return weight;
+    }
+
+    @Override
+    public long insure(long quantity) {
+        return unitPrice*quantity;
     }
 }
