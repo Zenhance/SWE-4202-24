@@ -10,8 +10,10 @@ public abstract class CatalogItem implements Chargeable {
     private final long unitPrice;
     private int stock;
     private final Seller seller;
+    private String label;
+    private double unitCharge;
 
-    public CatalogItem(String sku,String title,long unitPrice, int stock,Seller seller){
+    public CatalogItem(String sku,String title,long unitPrice, int stock,Seller seller,String label,double unitCharge){
         if(sku == null || sku.isBlank() || title == null || title.isBlank() || seller == null){
             throw new IllegalArgumentException("Invalid catalog item properties");
         }
@@ -20,6 +22,8 @@ public abstract class CatalogItem implements Chargeable {
         this.unitPrice= unitPrice;
         this.stock=stock;
         this.seller=seller;
+        this.label= label;
+        this.unitCharge=unitCharge;
     }
     public String sku(){
         return sku;
@@ -33,6 +37,7 @@ public abstract class CatalogItem implements Chargeable {
     public int remaining(){
         return stock;
     }
+
     @Override
     public long unitCharge(){
         return unitPrice;
