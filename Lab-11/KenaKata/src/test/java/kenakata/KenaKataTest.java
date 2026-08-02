@@ -1,7 +1,13 @@
 package kenakata;
 
+import kenakata.addon.ExpressHandling;
+import kenakata.addon.GiftWrap;
 import kenakata.catalog.*;
+import kenakata.exception.*;
 import kenakata.exceptions.*;
+import kenakata.items.DigitalGood;
+import kenakata.items.FreshGood;
+import kenakata.items.StockedGood;
 import kenakata.order.*;
 import kenakata.payment.*;
 import kenakata.settlement.*;
