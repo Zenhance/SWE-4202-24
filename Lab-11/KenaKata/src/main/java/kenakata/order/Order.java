@@ -74,6 +74,10 @@ public void place(PaymentMethod paymentMethod,int currentDay) throws  CheckoutEx
 
     paymentMethod.authorise(breakdown.grandTotal());
 
-
+for(OrderLine line : lines){
+    if(line.item() instanceof CatalogItem catalogItem){
+        catalogItem.reverse(line.quantity());
+    }
+}
 
 }
