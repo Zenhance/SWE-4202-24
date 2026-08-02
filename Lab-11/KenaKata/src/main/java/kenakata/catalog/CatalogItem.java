@@ -2,7 +2,7 @@ package kenakata.catalog;
 
 import kenakata.exceptions.OutOfStockException;
 
-public abstract class Good implements Chargeable{
+public abstract class CatalogItem implements Chargeable{
     private String SKU;
     private String title;
     private double unitPrice;
@@ -10,7 +10,7 @@ public abstract class Good implements Chargeable{
     private Seller seller;
     private boolean isInsured;
 
-    public Good(String SKU, String title, double unitPrice, int stockCount, Seller seller) {
+    public CatalogItem(String SKU, String title, double unitPrice, int stockCount, Seller seller) {
         this.SKU = SKU;
         this.title = title;
         this.unitPrice = unitPrice;

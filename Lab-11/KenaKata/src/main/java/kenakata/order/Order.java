@@ -2,7 +2,7 @@ package kenakata.order;
 
 import kenakata.catalog.AddOn;
 import kenakata.catalog.Chargeable;
-import kenakata.catalog.Good;
+import kenakata.catalog.CatalogItem;
 import kenakata.payment.PaymentMethod;
 
 import java.util.ArrayList;
@@ -18,7 +18,7 @@ public class Order {
         this.calculator = calculator;
     }
 
-    public void addProduct(Good product, int qty) {
+    public void addProduct(CatalogItem product, int qty) {
         for (int i = 0; i < qty; i++)
             chargeables.add(product);
     }

@@ -1,6 +1,6 @@
 package kenakata.catalog;
 
-public class DigitalGood extends Good{
+public class DigitalGood extends CatalogItem {
     public DigitalGood(String SKU, String title, double unitPrice, int stockCount, Seller seller) {
         super(SKU, title, unitPrice, stockCount, seller);
     }
