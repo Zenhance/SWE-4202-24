@@ -60,4 +60,8 @@ public abstract class Product {
     public String label() { return title;}
     public long unitCharge() { return unitPrice;}
 
+    //abstract methods
+    public abstract commisionOn();
+    public abstract unitVat();
+
 }
