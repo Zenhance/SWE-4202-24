@@ -47,4 +47,12 @@ public class PriceBreakdown {
     public int insurance() {
         return  0;
     }
+
+    public int serviceFee() {
+        return 0;
+    }
+
+    public int grandTotal() {
+        return 0;
+    }
 }
