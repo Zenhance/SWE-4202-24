@@ -19,4 +19,9 @@ public class DigitalGood extends CatalogItem {
     public int commissionOn(int something) {
         return (int) Math.ceil(something * 0.2);
     }
+
+    @Override
+    public boolean returned() {
+        return false;
+    }
 }

@@ -23,4 +23,9 @@ public class StockedGood extends CatalogItem {
     public int commissionOn(int something) {
         return (int) Math.ceil(something * 0.08);
     }
+
+    @Override
+    public boolean returned() {
+        return false;
+    }
 }
