@@ -10,6 +10,14 @@ public class PriceBreakdown {
     private final long grandTotal;
 
 
-
+public PriceBreakdown(long subtotal,long discount,long vat,long delivery,long insurance,long serviceFee,long grandTotal){
+    this.subtotal=subtotal;
+    this.discount=discount;
+    this.vat=vat;
+    this.delivery=delivery;
+    this.insurance=insurance;
+    this.serviceFee=serviceFee;
+    this.grandTotal=grandTotal;
+}
 
 }
