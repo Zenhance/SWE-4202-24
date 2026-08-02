@@ -40,7 +40,8 @@ public class Order {
 
     }
 
-    public void place(PaymentMethod p) {
+    // fix the parameter
+    public void place(PaymentMethod p, int something) {
 
     }
 
