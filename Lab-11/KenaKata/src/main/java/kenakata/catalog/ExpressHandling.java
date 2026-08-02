@@ -7,4 +7,14 @@ public class ExpressHandling extends AddOn {
         return (int) Math.ceil(unitPrice * 0.075);
     }
 
+
+    public double unitCharge() {
+        return unitPrice;
+    }
+
+    public int commissionOn(int total) {
+        return (int) Math.ceil(total*0.00);
+    }
 }
+
+
