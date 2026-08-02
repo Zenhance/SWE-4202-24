@@ -33,4 +33,8 @@ public class Order {
         PriceBreakdown p = new PriceBreakdown(chargeables, coupon, zone);
         return p;
     }
+
+    public void insure(int number) {
+
+    }
 }
