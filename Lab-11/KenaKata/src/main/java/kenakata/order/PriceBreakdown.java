@@ -10,25 +10,25 @@ public class PriceBreakdown {
     private final long grandTotal;
 
     public PriceBreakdown(long subtotal,long discount, long vat,long delivery,long insurance,long serviceFee,long grandTotal){
-        if(subtotal<=0){
+        if(subtotal<0){
             throw new IllegalArgumentException("Subtotal cannot be negative");
         }
         if(discount<0){
             throw new IllegalArgumentException("Discount cannot be negative");
         }
-        if(vat<=0){
+        if(vat<0){
             throw new IllegalArgumentException("Vat cannot be negative");
         }
-        if(delivery<=0){
+        if(delivery<0){
             throw new IllegalArgumentException("Delivery charge cannot be negative");
         }
-        if(insurance<=0){
+        if(insurance<0){
             throw new IllegalArgumentException("Insurance fee cannot be negative");
         }
-        if(serviceFee<=0){
+        if(serviceFee<0){
             throw new IllegalArgumentException("Service fee cannot be negative");
         }
-        if(grandTotal<=0){
+        if(grandTotal<0){
             throw new IllegalArgumentException("Grand total cannot be negative");
         }
         this.subtotal=subtotal;

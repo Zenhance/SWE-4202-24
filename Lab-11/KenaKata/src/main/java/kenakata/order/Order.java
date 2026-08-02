@@ -3,6 +3,8 @@ package kenakata.order;
 import kenakata.catalog.CatalogItem;
 import kenakata.catalog.Chargeable;
 import kenakata.catalog.Insurable;
+import kenakata.catalog.StockedGood;
+import kenakata.exceptions.CouponRejectedException;
 import kenakata.exceptions.NotInsurableException;
 
 import java.util.ArrayList;
@@ -83,6 +85,81 @@ public class Order {
 
         insuredLines.add(lineIndex);
     }
+
+   public PriceBreakdown quote(int today) throws CouponRejectedException {
+       long subtotal=0;
+       long discountableSubtotal=0;
+       long discount=0;
+       long vat=0;
+       long delivery=0;
+       long insurance=0;
+       long serviceFee=0;
+       long grandTotal=0;
+
+       for(OrderLine line: lines){
+           CatalogItem item= line.product();
+           int quantity=line.quantity();
+
+           long lineTotal=item.unitCharge()*quantity;
+
+           subtotal+=lineTotal;
+
+           if(item instanceof StockedGood){
+               discountableSubtotal+=lineTotal;
+           }
+       }
+
+       for(Chargeable addOn: addOns){
+            subtotal+=addOn.unitCharge();
+       }
+
+
+       for(OrderLine line: lines){
+           CatalogItem item = line.product();
+           int quantity=line.quantity();
+           vat+= item.unitVat()*quantity;
+       }
+
+       for(Chargeable addOn: addOns){
+           vat+=addOn.unitVat();
+       }
+
+       if(coupon!=null){
+           if(today>coupon.validUntil()){
+               throw new CouponRejectedException("Invalid Expiry date");
+           }
+           if(discountableSubtotal<coupon.minimumSpend()){
+               throw new CouponRejectedException("Minimum spend not valid");
+           }
+
+          long calculatedDiscount=(long)Math.ceil(discountableSubtotal*coupon.percent()/100.0);
+           discount=Math.min(calculatedDiscount, coupon.maxDiscount());
+       }
+
+       delivery= deliveryCalculator.calculate(lines,zone);
+
+       for(int index: insuredLines){
+           OrderLine line = lines.get(index);
+           long lineValue=line.product().unitCharge()*line.quantity();
+           long fee=(long)Math.ceil(lineValue*0.01);
+           fee= Math.max(fee,20);
+
+           insurance+=fee;
+       }
+
+       serviceFee=(long)Math.ceil(subtotal*0.01);
+       serviceFee=Math.min(serviceFee,100);
+
+
+       grandTotal=subtotal-discount+vat+delivery+insurance+serviceFee;
+
+
+       PriceBreakdown breakdown=new PriceBreakdown(subtotal,discount,vat,delivery,insurance,serviceFee,grandTotal);
+
+       return breakdown;
+
+
+   }
 
 
 
