@@ -6,4 +6,13 @@ public class CardPayment extends PaymentMethod{
     public CardPayment(int limit) {
         this.limit = limit;
     }
+
+    @Override
+    public void authorise(int amount) {
+
+    }
+
+    public int remainingLimit() {
+        return 0;
+    }
 }
