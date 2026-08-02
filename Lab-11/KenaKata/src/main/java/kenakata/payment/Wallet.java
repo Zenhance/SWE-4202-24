@@ -29,6 +29,13 @@ public class Wallet {
         balance+=amount;
     }
 
+    public void debit(long amount){
+        if(amount>balance) {
+            throw new IllegalArgumentException("Invalid Debit Amount");
+        }
+        balance-=amount;
+    }
+
 
 }
 
