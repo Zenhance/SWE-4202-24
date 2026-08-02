@@ -1,9 +1,9 @@
 public class SettlementReport {
-    public Object settledCount() {
-        return null;
+    public double settledCount() {
+        return 5;
     }
-    public Object rejectedCount() {
-        return null;
+    public double rejectedCount() {
+        return 5;
     }
     public double totalMoved() {
         return 0.0;
