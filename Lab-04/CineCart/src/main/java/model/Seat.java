@@ -4,7 +4,7 @@ public class Seat {
 
     private int row;
     private int col;
-    private boolean isPremium;
+    boolean isPremium;
     private boolean isBooked;
 
     public Seat(int row, int col, boolean isPremium,

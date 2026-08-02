@@ -26,9 +26,9 @@ public class Hall {
             }
         }
     }
-    public int getId(){}
+    public int getId() {
         return id;
-
+    }
     public int getRows(){
         return rows;
     }
@@ -60,13 +60,13 @@ public class Hall {
             for (int c=0;c<cols;c++){
                 Seat s= grid[r][c];
                 if(s.isBooked()) {
-                    system.out.println("#");
+                    System.out.println("#");
                 }
                 else if(s.isPremium){
-                    system.out.print("*");
+                    System.out.print("*");
                 }
                 else{
-                    system.out.println(".");
+                    System.out.println(".");
                 }
 
             }
