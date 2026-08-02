@@ -1,4 +1,32 @@
 package kenakata.catalog;
 
-public class CatalogItem {
+public abstract class CatalogItem implements Chargeable {
+    private final String sku;
+    private final String title;
+    private final long unitPrice;
+    private int stock;
+    private final Seller seller;
+
+    public CatalogItem(String sku, String title, long unitPrice, int stock, Seller seller) {
+        if(sku == null || sku.isBlank()){
+            throw new IllegalArgumentException("SKU can't be blank");
+        }
+        if(title == null || title.isBlank()){
+            throw new IllegalArgumentException("title can't be blank");
+        }
+        if(unitPrice<0){
+            throw new IllegalArgumentException("price can't be negative");
+        }
+        if(stock<0){
+            throw new IllegalArgumentException("Stock can't be negative");
+        }
+        if(seller == null){
+            throw new IllegalArgumentException("Seller can't be null");
+        }
+    this.sku = sku;
+        this.title = title;
+        this.unitPrice=unitPrice;
+        this.stock = stock;
+        this.seller = seller;
+    }
 }
