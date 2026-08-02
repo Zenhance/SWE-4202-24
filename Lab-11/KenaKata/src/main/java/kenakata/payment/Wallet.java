@@ -12,4 +12,15 @@ public class Wallet {
     public long balance(){
         return balance;
     }
+
+    public void credit(long amount){
+        if(amount<0)
+            throw new IllegalArgumentException("Amount can't be negative.");
+        balance+=amount;
+    }
+    public void debit(long amount){
+        if(amount>balance)
+            throw new IllegalArgumentException("Not enough balance.");
+        balance-=amount;
+    }
 }
