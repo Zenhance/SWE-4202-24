@@ -20,4 +20,8 @@ public class SellerPayout {
     public int payout() {
         return 0;
     }
+
+    public int refunds() {
+        return 0;
+    }
 }
