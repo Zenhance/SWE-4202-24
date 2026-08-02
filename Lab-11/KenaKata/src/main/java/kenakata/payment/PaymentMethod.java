@@ -1,4 +1,5 @@
 package kenakata.payment;
 
-public class PaymentMethod {
+public abstract class PaymentMethod {
+    public abstract void authorise(int amount);
 }
