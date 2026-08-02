@@ -15,12 +15,6 @@ public class Wallet {
         return balance;
     }
 
-    public void credit(long amount){
-        if(amount <=0){ throw new IllegalArgumentException("Invalid Credit Amount");
-        }
-        balance+=amount;
-    }
-
 
 }
 
