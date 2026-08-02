@@ -4,4 +4,5 @@ public interface Chargeable {
     int unitCharge();
     int unitVat();
     int commissionOn(int something);
+    boolean returned();
 }

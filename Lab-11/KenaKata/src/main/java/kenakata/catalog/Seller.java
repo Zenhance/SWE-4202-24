@@ -1,11 +1,10 @@
 package kenakata.catalog;
 
 public class Seller {
-    private String sellerName;
-    private String sellerEmail;
+    private String name;
 
-    public Seller(String sellerName, String sellerEmail) {
-        this.sellerName = sellerName;
-        this.sellerEmail = sellerEmail;
+
+    public Seller(String name) {
+        this.name = name;
     }
 }
