@@ -12,4 +12,8 @@ public class CardPayment extends PaymentMethod {
     public void authorise(int amount) {
 
     }
+
+    public int remainingLimit() {
+        return 0;
+    }
 }
