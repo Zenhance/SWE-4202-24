@@ -1,7 +1,4 @@
 package kenakata.order;
-
-public class Zone {
-    public enum DHAKA {}
-
-    public enum OUTSIDE {}
+public enum Zone {
+    DHAKA,OUTSIDE
 }

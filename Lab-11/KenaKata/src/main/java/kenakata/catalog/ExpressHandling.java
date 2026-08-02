@@ -9,6 +9,6 @@ public class ExpressHandling implements Chargeable {
     }
 
     @Override
-    public int unitVat() {return (int) ceil(this.unitCharge()*0.075)}
+    public int unitVat() {return (int) ceil(this.unitCharge()*0.075);}
 
 }

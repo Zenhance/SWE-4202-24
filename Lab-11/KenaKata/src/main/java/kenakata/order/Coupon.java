@@ -1,6 +1,12 @@
 package kenakata.order;
 
 public class Coupon {
-    public Coupon(String eid10, int i, int i1, int i2, int i3) {
+    String code; int percent, cap, minspend, validdate;
+    public Coupon(String code, int percent, int cap, int minspend, int validdate) {
+        this.code = code;
+        this.percent = percent;
+        this.cap = cap;
+        this.minspend = minspend;
+        this.validdate = validdate;
     }
 }
