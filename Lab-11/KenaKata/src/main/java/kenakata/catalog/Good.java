@@ -2,15 +2,13 @@ package kenakata.catalog;
 
 import kenakata.exceptions.OutOfStockException;
 
-import java.io.Serializable;
-
-public abstract class Good implements Comparable{
+public abstract class Good implements Chargeable{
     private String SKU;
     private String title;
     private double unitPrice;
     private int stockCount;
     private Seller seller;
-
+    private boolean isInsured;
 
     public Good(String SKU, String title, double unitPrice, int stockCount, Seller seller) {
         this.SKU = SKU;
@@ -18,16 +16,37 @@ public abstract class Good implements Comparable{
         this.unitPrice = unitPrice;
         this.stockCount = stockCount;
         this.seller = seller;
+        isInsured = false;
     }
-    public double getUnitPrice() {
-        return unitPrice;
-    }
+
     public abstract int unitCharge();
 
     public abstract int unitVat();
 
+    public abstract int commissionOn(int something);
+
+    public String getSKU() {
+        return SKU;
+    }
+
     public String getTitle() {
         return title;
+    }
+
+    public double getUnitPrice() {
+        return unitPrice;
+    }
+
+    public int getStockCount() {
+        return stockCount;
+    }
+
+    public Seller getSeller() {
+        return seller;
+    }
+
+    public int remaining() {
+        return stockCount;
     }
 
     public void reserve(int quantity) throws Exception {
@@ -38,9 +57,7 @@ public abstract class Good implements Comparable{
         stockCount -= quantity;
     }
 
-    public int remaining() {
-        return stockCount;
+    public void insure() {
+        isInsured = true;
     }
-
-    public abstract int commissionOn(int something);
 }
