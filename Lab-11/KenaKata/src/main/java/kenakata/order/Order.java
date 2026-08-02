@@ -43,6 +43,17 @@ public class Order {
     }
     line.setInsured(true);
 }
+public PriceBreakdown quote(int currentDay) throws CouponRejectedException{
+    long subtotal =0;
+    long discountableBase = 0;
+    long vat = 0;
+    long insurance = 0;
+
+    for(OrderLine line : lines){
+        subtotal+= line.lineValue();
+        vat += line.lineVat();
+        insurance+= line.insuranceFee();
+    }
 
 
 
