@@ -1,4 +1,4 @@
-package exceptions;
+package kenakata.exceptions;
 
 public class EmptyWalletException extends PaymentDeclineException {
     public EmptyWalletException(String message) {

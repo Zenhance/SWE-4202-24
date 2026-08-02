@@ -1,6 +1,6 @@
-package catalog;
+package kenakata.catalog;
 
-import exceptions.OutOfStockException;
+import kenakata.exceptions.OutOfStockException;
 
 public abstract class CatalogItem implements Chargeable {
     private String sku;
