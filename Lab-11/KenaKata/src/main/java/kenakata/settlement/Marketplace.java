@@ -8,6 +8,7 @@ import java.util.ArrayList;
 public class Marketplace {
     private ArrayList<Seller> sellers;
     private ArrayList<Order> orders;
+    private SettlementReport report = new SettlementReport();
 
     public void register(Seller seller) {
         sellers.add(seller);
@@ -15,5 +16,9 @@ public class Marketplace {
 
     public void record(Order order) {
         orders.add(order);
+    }
+
+    public SettlementReport settle() {
+        return report;
     }
 }
