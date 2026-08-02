@@ -13,5 +13,6 @@ public abstract class CatalogItem implements Chargeable{
     return 0;}
 
     public void reserve(int i) {
+
     }
 }

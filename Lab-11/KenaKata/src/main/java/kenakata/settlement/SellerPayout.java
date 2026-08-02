@@ -13,8 +13,8 @@ public class SellerPayout {
         return 0;
     }
 
-    public Object payout() {
-    return null;
+    public int payout() {
+    return 0;
     }
 
 
@@ -23,6 +23,7 @@ public class SellerPayout {
 
     return null;
     }
+
 
 
 }

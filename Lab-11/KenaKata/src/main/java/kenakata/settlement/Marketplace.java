@@ -11,6 +11,7 @@ public class Marketplace {
     }
 
     public SettlementReport settle() {
-        return null;
+        SettlementReport S=new SettlementReport();
+        return S;
     }
 }

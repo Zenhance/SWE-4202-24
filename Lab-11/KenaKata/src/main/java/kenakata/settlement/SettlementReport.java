@@ -8,10 +8,12 @@ public class SettlementReport {
 
     }
 
-    public String platformRevenue() {
-        return "s";
+    public int platformRevenue() {
+        return 0;
     }
 
-    public SellerPayout forSeller(Seller a) {
+    public SellerPayout forSeller(Seller b) {
+        SellerPayout P=new SellerPayout();
+        return P;
     }
 }
