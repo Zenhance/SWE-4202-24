@@ -89,4 +89,12 @@ public void acceptReturn(int lineIndex, int currentDay) throws ReturnNotAllowedE
     }
     OrderLine line = lines.get(lineIndex);
 }
+if(!(line.item() instanceof Returnable returnable)){
+    throw new ReturnNotAllowedException("Item is not returnable");
+        }
+if(currentDay > placementDay + returnable.returnQindowDays()){
+    throw new ReturnNotAllowedException("Return window has expired");
+        }
+line.setReturned(true);
+}
 
