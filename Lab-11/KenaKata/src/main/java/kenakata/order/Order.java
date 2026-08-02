@@ -3,6 +3,8 @@ package kenakata.order;
 import kenakata.catalog.AddOn;
 import kenakata.catalog.Chargeable;
 import kenakata.catalog.Good;
+import kenakata.payment.PaymentMethod;
+
 import java.util.ArrayList;
 
 public class Order {
@@ -36,5 +38,13 @@ public class Order {
 
     public void insure(int number) {
 
+    }
+
+    public void place(PaymentMethod p) {
+
+    }
+
+    public boolean placed() {
+        return false;
     }
 }
