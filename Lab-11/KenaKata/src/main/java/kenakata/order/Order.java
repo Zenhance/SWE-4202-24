@@ -16,4 +16,14 @@ public class Order {
     private boolean placed = false;
     private PriceBreakdown finalBreakdown;
     private int placementDay;
+
+    public Order(Zone zone, DeliveryCalculator deliveryCalculator){
+        this.zone= zone;
+        this.deliveryCalculator = deliveryCalculator;
+    }
+
+
+
+
+
 }
