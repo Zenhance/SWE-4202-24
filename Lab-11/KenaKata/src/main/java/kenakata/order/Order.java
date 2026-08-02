@@ -62,6 +62,9 @@ public PriceBreakdown quote(int currentDay) throws CouponRejectedException{
     if(coupon!=null){
         discount= coupon.calculatorDiscount(discountableBase,currentDay);
     }
+    long delivery = coupon.calculatorDelivery(lines,zone);.
+    long serviceFee=(long)Math.ceil(subtotal*0.01);
+    serviceFee=Math.min(serviceFee,100);
 
 
 
