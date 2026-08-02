@@ -1,5 +1,7 @@
 package kenakata.order;
 
+import com.sun.source.tree.BreakTree;
+
 public class PriceBreakdown {
     private final long subtotal;
     private final long discount;
@@ -28,5 +30,16 @@ public long discount(){
 public long vat(){
     return vat;
 }
-
+public long delivery(){
+    return delivery;
+}
+public long insurance(){
+    return insurance;
+}
+public long serviceFee(){
+return serviceFee;
+}
+public long grandTotal(){
+    return grandTotal;
+}
 }
