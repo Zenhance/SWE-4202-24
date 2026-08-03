@@ -14,7 +14,7 @@ public class WarrantyPlan {
         return 18;
     }
 
-    public Charset label() {
-        return null;
+    public String label() {
+        return "Extended warranty for Table Lamp";
     }
 }
