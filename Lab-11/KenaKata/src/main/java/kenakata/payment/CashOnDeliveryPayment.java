@@ -9,6 +9,7 @@ public class CashOnDeliveryPayment implements PaymentMethod {
 
     @Override
     public void authorise(long amount) throws CodCeilingExceededException {
+        if(amount>COD_CEILING) {  throw new CodCeilingExceededException("COD LIMIT EXCEEDED"); }
 
     }
 }
