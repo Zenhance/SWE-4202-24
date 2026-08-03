@@ -13,6 +13,6 @@ public class GiftWrap implements Item {
 
     @Override
     public String label() {
-        return "Gift wrapped";
+        return "Gift wrapping";
     }
 }
