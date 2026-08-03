@@ -11,7 +11,7 @@ public Wallet(long initialBalance){
 }
 public long balance(){
 
-    return balance;//current value stored
+    return balance;//returns the current value stored
 }
 public void credit(long amount){ // deposit method
     if(amount <=0){
