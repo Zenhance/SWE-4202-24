@@ -62,7 +62,7 @@ public class PriceBreakdown {
             if (c instanceof FreshGood)
                 deliveryCharge += 50;
         }
-        if (containsOnlyDigital)
+        if (calculator.onlyColdChain(chargeables))
             return 0;
         return deliveryCharge;
     }
