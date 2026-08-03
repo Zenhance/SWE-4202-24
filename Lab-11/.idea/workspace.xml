@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51081361-6857-41f6-8e00-368f50dbeaac" name="Changes" comment="orderline">
-      <change afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/settlement/Marketplace.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/settlement/SellerPayout.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/settlement/SettlementReport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="51081361-6857-41f6-8e00-368f50dbeaac" name="Changes" comment="Marketplace">
+      <change beforePath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/settlement/SellerPayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/settlement/SellerPayout.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,30 +132,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1785213378197</updated>
-    </task>
-    <task id="LOCAL-00046" summary="seller">
-      <option name="closed" value="true" />
-      <created>1785788788747</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1785788788747</updated>
-    </task>
-    <task id="LOCAL-00047" summary="seller fix">
-      <option name="closed" value="true" />
-      <created>1785789260716</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1785789260716</updated>
-    </task>
-    <task id="LOCAL-00048" summary="warranty plan">
-      <option name="closed" value="true" />
-      <created>1785789362274</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1785789362274</updated>
     </task>
     <task id="LOCAL-00049" summary="warranty plan">
       <option name="closed" value="true" />
@@ -528,7 +501,31 @@
       <option name="project" value="LOCAL" />
       <updated>1785799207549</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="orderline">
+      <option name="closed" value="true" />
+      <created>1785800472894</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1785800472894</updated>
+    </task>
+    <task id="LOCAL-00096" summary="orderline">
+      <option name="closed" value="true" />
+      <created>1785800520479</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1785800520479</updated>
+    </task>
+    <task id="LOCAL-00097" summary="Marketplace">
+      <option name="closed" value="true" />
+      <created>1785800656310</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1785800656310</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -558,7 +555,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="freshGood" />
     <MESSAGE value="StockedGood" />
     <MESSAGE value="catalog item fix" />
     <MESSAGE value="digital good fix" />
@@ -583,6 +579,7 @@
     <MESSAGE value="coupon.order" />
     <MESSAGE value="PriceBreakdown" />
     <MESSAGE value="orderline" />
-    <option name="LAST_COMMIT_MESSAGE" value="orderline" />
+    <MESSAGE value="Marketplace" />
+    <option name="LAST_COMMIT_MESSAGE" value="Marketplace" />
   </component>
 </project>
