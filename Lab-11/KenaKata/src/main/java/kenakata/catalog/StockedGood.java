@@ -20,4 +20,19 @@ public class StockedGood extends CatalogItem implements Weighable, Insurable, Re
     public long unitVat() {
         return (long) Math.ceil(unitPrice() * 0.075);
     }
+
+    @Override
+    public long commissionOn(long lineValue) {
+        return (long) Math.ceil(lineValue * 0.08);
+    }
+
+    @Override
+    public long insurableValue() {
+        return unitPrice();
+    }
+
+    @Override
+    public int returnWindowDays() {
+        return 7;
+    }
 }
