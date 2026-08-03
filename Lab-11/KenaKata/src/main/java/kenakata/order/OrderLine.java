@@ -13,6 +13,12 @@ public class OrderLine {
         this.quantity = quantity;
     }
 
+    public Chargeable unit() {return unit;}
+    public int quantity() {return quantity;}
+    public boolean returned() { return returned; }
+
+    public boolean insured() { return insured; }
+
 
 
 
