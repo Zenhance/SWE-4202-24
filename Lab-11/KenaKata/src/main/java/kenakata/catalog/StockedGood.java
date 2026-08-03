@@ -1,21 +1,63 @@
 package kenakata.catalog;
 
-public class StockedGood {
-    public StockedGood(String s, String tableLamp, int i, int i1, Seller s1, int i2) {
+public final class StockedGood extends CatalogItem
+        implements Weighable, Insurable, Returnable, Discountable {
+
+    private final long unitWeightGrams;
+
+    public StockedGood(
+            String sku,
+            String title,
+            long unitPrice,
+            int stock,
+            Seller seller,
+            long unitWeightGrams
+    ) {
+        super(sku, title, unitPrice, stock, seller);
+
+        if (unitWeightGrams <= 0) {
+            throw new IllegalArgumentException(
+                    "Weight must be positive"
+            );
+        }
+
+        this.unitWeightGrams = unitWeightGrams;
     }
 
-    public int unitCharge() {
+    @Override
+    public long unitVat() {
+        // 7.5% VAT, rounded upward
+        return (unitCharge() * 75 + 999) / 1000;
     }
 
-    public int unitVat() {
+    @Override
+    public long commissionOn(long lineValue) {
+        if (lineValue < 0) {
+            throw new IllegalArgumentException(
+                    "Line value cannot be negative"
+            );
+        }
+        return (lineValue * 8 + 99) / 100;
     }
 
-    public int commissionOn(int i) {
+    @Override
+    public long unitWeightGrams() {
+        return unitWeightGrams;
     }
 
-    public void reserve(int i) {
+    @Override
+    public long insurableValue(int quantity) {
+        if (quantity <= 0) {
+            throw new IllegalArgumentException(
+                    "Quantity must be positive"
+            );
+        }
+
+        return unitCharge() * quantity;
     }
 
-    public int remaining() {
+    @Override
+    public int returnWindowDays() {
+        return 7;
     }
 }

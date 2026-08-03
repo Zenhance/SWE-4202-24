@@ -1,4 +1,5 @@
 package kenakata.catalog;
+
 final class Money {
 
     private Money() {

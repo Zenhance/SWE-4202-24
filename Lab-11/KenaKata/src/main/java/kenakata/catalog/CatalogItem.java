@@ -3,7 +3,7 @@ package kenakata.catalog;
 import kenakata.exceptions.OutOfStockException;
 
 /**
- * Common parent for all marketplace catalogue items.
+ * Common parent
  */
 public abstract class CatalogItem implements Chargeable {
 
@@ -89,8 +89,7 @@ public abstract class CatalogItem implements Chargeable {
     }
 
     /**
-     * Checks stock without changing it.
-     */
+     Checks stock.**/
     public final void ensureAvailable(int quantity)
             throws OutOfStockException {
 
@@ -105,8 +104,7 @@ public abstract class CatalogItem implements Chargeable {
     }
 
     /**
-     * Reserves the entire quantity or changes nothing.
-     */
+      Reserves the entire quantity **/
     public final void reserve(int quantity)
             throws OutOfStockException {
 
