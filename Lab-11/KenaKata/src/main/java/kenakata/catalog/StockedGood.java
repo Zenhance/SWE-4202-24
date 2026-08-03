@@ -4,9 +4,9 @@ public class StockedGood extends CatalogItem implements Weighable, Returnable, I
 {
     private long weightGrams;
 
-    public StockedGood(String sku, String title, long unitPrice, int stockRemaining, Seller seller, long weightGrams)
+    public StockedGood(String sku, String title, long unitPrice, int stock, Seller seller, long weightGrams)
     {
-        super(sku, title, unitPrice, stockRemaining, seller);
+        super(sku, title, unitPrice, stock, seller);
         if(weightGrams<=0)
             throw new IllegalArgumentException("Weight must be positive");
         this.weightGrams = weightGrams;
