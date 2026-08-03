@@ -28,11 +28,6 @@ public class StockedGood extends CatalogueItem implements weighable,Insurable,Re
 
 
     @Override
-    public long insuranceFee(int quantity) {
-        return 0;
-    }
-
-    @Override
     public int returnWindowDays() {
         return window_day;
     }
@@ -40,5 +35,14 @@ public class StockedGood extends CatalogueItem implements weighable,Insurable,Re
     @Override
     public int unitWeightGrams() {
         return weightgrams;
+    }
+
+    @Override
+    public long insuranceFee(int quantity) {
+
+        long cat= (long)Math.ceil(unitCharge()*0.01*quantity);
+        if(cat<20)
+            return 20;
+        else return cat;
     }
 }
