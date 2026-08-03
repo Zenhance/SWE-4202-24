@@ -38,4 +38,17 @@ public class SellerPayout {
     public long payout() {
         return payout;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        SellerPayout that = (SellerPayout) o;
+        return grossSales == that.grossSales &&
+                commission == that.commission &&
+                refunds == that.refunds &&
+                payout == that.payout &&
+                Objects.equals(seller, that.seller);
+    }
+
 }
