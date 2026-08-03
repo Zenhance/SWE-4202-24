@@ -24,6 +24,8 @@ public class Order {
         if (calculator == null)
             throw new IllegalArgumentException("Delivery calculator cannot be null");
         this.calculator = calculator;
+
+        chargeables = new ArrayList<>();
     }
 
     public void addProduct(Chargeable product, int qty) {
