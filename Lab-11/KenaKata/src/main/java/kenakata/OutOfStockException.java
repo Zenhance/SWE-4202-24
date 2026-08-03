@@ -1,4 +1,4 @@
 package kenakata;
 
-public class OutOfStockException {
+public class OutOfStockException extends Exception{
 }
