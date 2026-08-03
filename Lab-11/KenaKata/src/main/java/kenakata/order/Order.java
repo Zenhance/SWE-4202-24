@@ -76,4 +76,32 @@ public class Order {
         long grandTotal = subtotal - discount + delivery + vat + insurance + serviceFee;
         return new PriceBreakdown(subtotal, discount, delivery, vat, insurance, serviceFee, grandTotal);
     }
+
+    public void place(PaymentMethod paymentMethod, int day) throws CheckoutException {
+        if (isPlaced) {
+            throw new IllegalStateException("Order has already been placed");
+        }
+
+        PriceBreakdown bd = quote(day);
+
+        for (OrderLine line : lines) {
+            if (line.item() instanceof AbstractItem abstractItem) {
+                if (abstractItem.remaining() < line.quantity()) {
+                    throw new OutOfStockException("Insufficient stock ");
+                }
+            }
+        }
+
+        paymentMethod.authorise(bd.grandTotal());
+
+        for (OrderLine line : lines) {
+            if (line.item() instanceof AbstractItem abstractItem) {
+                abstractItem.reserve(line.quantity());
+            }
+        }
+
+        this.isPlaced = true;
+        this.placementDay = day;
+        this.finalBreakdown = bd;
+    }
 }
