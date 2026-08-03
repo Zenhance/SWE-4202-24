@@ -1,6 +1,7 @@
 package kenakata.order;
 
 import kenakata.catalog.Chargeable;
+import kenakata.catalog.DigitalGood;
 import kenakata.catalog.FreshGood;
 import kenakata.catalog.StockedGood;
 
@@ -46,6 +47,7 @@ public class PriceBreakdown {
 
     public int delivery() {
         int deliveryCharge = 0;
+        boolean containsOnlyDigital = true;
         final int DHAKA = 140;
         final int  OUTSIDE = 120;
 
@@ -53,9 +55,13 @@ public class PriceBreakdown {
         else deliveryCharge = OUTSIDE;
 
         for (Chargeable c : chargeables) {
+            if (!(c instanceof DigitalGood))
+                containsOnlyDigital = false;
             if (c instanceof FreshGood)
                 deliveryCharge += 50;
         }
+        if (containsOnlyDigital)
+            return 0;
         return deliveryCharge;
     }
 
