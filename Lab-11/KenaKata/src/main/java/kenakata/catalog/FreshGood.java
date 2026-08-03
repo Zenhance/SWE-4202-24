@@ -7,21 +7,17 @@ public class FreshGood extends CatalogItem implements Weighable, Returnable {
     private long weight;
 
     public FreshGood(String sku, String name, long price, long stock, Seller seller, long weight) {
-
         super(sku, name, price, seller);
 
         if(stock < 0) {
             throw new IllegalArgumentException("Invalid stock");
         }
-
         if(weight <= 0) {
             throw new IllegalArgumentException("Invalid weight");
         }
-
         this.stock = stock;
         this.weight = weight;
     }
-
     public long remaining() {
         return stock;
     }
@@ -31,12 +27,10 @@ public class FreshGood extends CatalogItem implements Weighable, Returnable {
             throw new IllegalArgumentException("Invalid quantity");
         }
         if(quantity > stock) {
-
             throw new OutOfStockException("Not enough stock");
         }
         stock -= quantity;
     }
-
     @Override
     public long weight() {
         return weight;
