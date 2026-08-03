@@ -41,4 +41,12 @@ public class OrderLine {
     public void markReturned() {
         this.returned = true;
     }
+
+    public long lineValue() {
+        return item.unitCharge() * quantity;
+    }
+
+    public long lineVat() {
+        return item.unitVat() * quantity;
+    }
 }
