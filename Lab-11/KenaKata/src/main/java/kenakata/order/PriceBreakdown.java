@@ -31,23 +31,22 @@ public class PriceBreakdown {
 
 
     public long insurance() {
-        return 0;
+        return insurance;
     }
 
     public long vat() {
-        return 0;
+        return vat;
     }
 
     public long delivery(){
-        return 0;
+        return delivery;
     }
 
-    public long serviceFee(){
-        return 0;
+    public long serviceFee(){return serviceFee;
     }
 
     public long  grandTotal(){
-        return 0;
+        return grandtotal;
     }
 
 
