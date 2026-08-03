@@ -2,8 +2,6 @@ package kenakata.catalog;
 
 
 
-/** A good delivered by download: no weight, never ships, lower VAT, highest commission,
- * cannot be returned or insured. */
 public final class DigitalGood extends CatalogItem {
 
     private static final double VAT= 5.0;
@@ -22,7 +20,7 @@ public final class DigitalGood extends CatalogItem {
     }
 
     @Override
-    public double vatCharge() {
-        return Math.ceil(unitCharge()*VAT);
+    public long vatCharge() {
+        return (long) Math.ceil(unitCharge()*VAT);
     }
 }
