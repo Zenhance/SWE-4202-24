@@ -1,6 +1,6 @@
 package kenakata.catalog;
 
-public interface Labled {
+public interface Labeled {
     String label();
 }
 

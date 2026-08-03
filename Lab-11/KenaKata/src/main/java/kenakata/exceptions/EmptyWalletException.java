@@ -1,4 +1,7 @@
 package kenakata.exceptions;
 
-public class EmptyWalletException {
+public class EmptyWalletException extends CheckoutException{
+    public EmptyWalletException(String message) {
+        super(message);
+    }
 }
