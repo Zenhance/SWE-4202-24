@@ -53,4 +53,14 @@ public abstract class AbstractItem implements Item {
     public Seller getSeller() {
         return seller;
     }
+
+    public void reserve(int quantity) throws OutOfStockException {
+        if (quantity <= 0) {
+            throw new IllegalArgumentException("Quantity must be positive");
+        }
+        if (quantity > stock) {
+            throw new OutOfStockException("Insufficient stock");
+        }
+        stock -= quantity;
+    }
 }
