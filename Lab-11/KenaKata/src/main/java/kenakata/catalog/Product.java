@@ -3,8 +3,8 @@ package kenakata.catalog;
 import kenakata.exceptions.OutOfStockException;
 
 public abstract class Product {
-    private final String sku;
-    private final String title;
+    private String sku;
+    private String title;
     private long unitPrice;
     private int stock;
     private Seller seller;
@@ -60,6 +60,14 @@ public abstract class Product {
         }
 
         this.stock += quantity;
+    }
+
+    //constructor for add-ons
+    public Product(long unitPrice) {
+        if (unitPrice < 0) {
+            throw new IllegalArgumentException("Unit price can not be negative.");
+        }
+        this.unitPrice = unitPrice;
     }
 
     public String label() { return title;}
