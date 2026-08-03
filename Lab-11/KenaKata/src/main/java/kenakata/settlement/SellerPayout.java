@@ -51,4 +51,19 @@ public class SellerPayout {
                 Objects.equals(seller, that.seller);
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(seller, grossSales, commission, refunds, payout);
+    }
+
+    @Override
+    public String toString() {
+        return "SellerPayout{" +
+                "seller=" + seller +
+                ", grossSales=" + grossSales +
+                ", commission=" + commission +
+                ", refunds=" + refunds +
+                ", payout=" + payout +
+                '}';
+    }
 }
