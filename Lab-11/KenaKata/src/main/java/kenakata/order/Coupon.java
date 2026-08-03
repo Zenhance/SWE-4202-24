@@ -23,6 +23,14 @@ public class Coupon {
     public long getPercentage() {return this.percentage;}
 
     public long discount(long discountableBase,int today) throws CouponRejectedException {
+        if(today>validDays) {throw new CouponRejectedException("Coupon has been expired");}
+        if(discountableBase<minSpend) {throw new CouponRejectedException("minimum spend not met");}
+
+        long discount = (long) Math.ceil(discountableBase * (percentage / 100.0));
+        return Math.min(discount, cap);
+    }
+
+
 
 
     }
