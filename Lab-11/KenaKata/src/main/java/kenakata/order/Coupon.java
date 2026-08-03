@@ -1,7 +1,5 @@
 package kenakata.order;
 
-import java.util.IllformedLocaleException;
-
 public class Coupon {
     private String code;
     private int percentage;
