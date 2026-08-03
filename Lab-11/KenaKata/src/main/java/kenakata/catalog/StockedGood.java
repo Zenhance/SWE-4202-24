@@ -5,10 +5,10 @@ import kenakata.order.Insurable;
 import kenakata.order.Weighable;
 import kenakata.settlement.Seller;
 
-public abstract class StockedGood extends CatalogItem implements Weighable, Returnable {
+public abstract class StockedGood extends CatalogItem implements Weighable, Returnable,Insurable {
     private final int weightGrams;
 
-    public StockedGood(String sku, String title, long unitPrice,Seller seller,int weightGrams){
+    public StockedGood(String sku, String title, long unitPrice,int stock,Seller seller,int weightGrams){
         super(sku,title,unitPrice,stock,seller,title,(double)unitPrice);
         if(weightGrams<=0){
             throw new IllegalArgumentException("Weight must be positive");
@@ -21,13 +21,13 @@ public abstract class StockedGood extends CatalogItem implements Weighable, Retu
         return (long) Math.ceil(unitCharge()*0.075);
     }
     @Override
-    public long commisionOn(long amount){
+    public long commissionOn(long amount){
 
         return (long) Math.ceil(amount*0.08);
     }
     @Override
     public int weightGrams(){
-        return weightGrams;
+        return this.weightGrams;
     }
     @Override
     public long insurableValue(){
