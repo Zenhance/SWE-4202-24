@@ -18,5 +18,8 @@ public class DeliveryCalculator {
                 freshLineCount++;
             }
         }
+        if (totalWeightGrams == 0 && freshLineCount == 0) {
+            return 0;
+        }
     }
 }
