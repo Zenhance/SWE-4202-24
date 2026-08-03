@@ -1,5 +1,5 @@
 package kenakata.catalog;
 
 public interface Returnable {
-    int getReturnWindowDays();
+    int returnWindowDays();
 }
