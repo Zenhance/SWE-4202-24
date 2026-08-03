@@ -36,4 +36,16 @@ public class Order {
     public void applyCoupon(Coupon coupon) {
         this.coupon = coupon;
     }
+
+    public void insure(int lineIndex) throws NonInsurableException {
+        if (lineIndex < 0 || lineIndex >= lines.size()) {
+            throw new IllegalArgumentException("Invalid line index");
+        }
+        OrderLine line = lines.get(lineIndex);
+        if (line.item() instanceof Insurable) {
+            line.setInsured(true);
+        } else {
+            throw new NonInsurableException("Non Insurable Product");
+        }
+    }
 }
