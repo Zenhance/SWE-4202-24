@@ -1,4 +1,4 @@
 package kenakata;
 
-public class CouponRejectedException {
+public class CouponRejectedException extends Exception{
 }

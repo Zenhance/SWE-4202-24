@@ -1,4 +1,4 @@
 package kenakata;
 
-public class NotInsurableException {
+public class NotInsurableException extends Exception {
 }
