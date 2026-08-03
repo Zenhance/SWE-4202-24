@@ -7,4 +7,8 @@ public class Marketplace {
 
     public void record(Order o1) {
     }
+
+    public SettlementReport settle() {
+        return null;
+    }
 }
