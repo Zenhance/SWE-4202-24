@@ -2,6 +2,9 @@ package kenakata.catalog;
 
 import kenakata.exceptions.OutOfStockException;
 
+/**
+ * Common parent for all marketplace catalogue items.
+ */
 public abstract class CatalogItem implements Chargeable {
 
     private final String sku;
@@ -18,6 +21,36 @@ public abstract class CatalogItem implements Chargeable {
             int stock,
             Seller seller
     ) {
+        if (sku == null || sku.isBlank()) {
+            throw new IllegalArgumentException(
+                    "SKU cannot be blank"
+            );
+        }
+
+        if (title == null || title.isBlank()) {
+            throw new IllegalArgumentException(
+                    "Title cannot be blank"
+            );
+        }
+
+        if (unitPrice < 0) {
+            throw new IllegalArgumentException(
+                    "Unit price cannot be negative"
+            );
+        }
+
+        if (stock < 0) {
+            throw new IllegalArgumentException(
+                    "Stock cannot be negative"
+            );
+        }
+
+        if (seller == null) {
+            throw new IllegalArgumentException(
+                    "Seller cannot be null"
+            );
+        }
+
         this.sku = sku;
         this.title = title;
         this.unitPrice = unitPrice;
@@ -25,51 +58,77 @@ public abstract class CatalogItem implements Chargeable {
         this.seller = seller;
     }
 
-    public String sku() {
+    public final String sku() {
         return sku;
     }
 
-    public String title() {
+    public final String title() {
         return title;
     }
 
-    public long unitPrice() {
+    public final long unitPrice() {
         return unitPrice;
     }
 
-    public Seller seller() {
+    public final Seller seller() {
         return seller;
     }
 
-    public int remaining() {
+    public final int remaining() {
         return remaining;
     }
 
     @Override
-    public long unitCharge() {
+    public final long unitCharge() {
         return unitPrice;
     }
 
     @Override
-    public String label() {
+    public final String label() {
         return title;
     }
 
-    public void ensureAvailable(int quantity)
+    /**
+     * Checks stock without changing it.
+     */
+    public final void ensureAvailable(int quantity)
             throws OutOfStockException {
 
+        requirePositiveQuantity(quantity);
+
+        if (quantity > remaining) {
+            throw new OutOfStockException(
+                    title + " has only " + remaining
+                            + " unit(s), requested " + quantity
+            );
+        }
     }
 
-    public void reserve(int quantity)
+    /**
+     * Reserves the entire quantity or changes nothing.
+     */
+    public final void reserve(int quantity)
             throws OutOfStockException {
 
+        ensureAvailable(quantity);
+        remaining -= quantity;
     }
 
     public abstract long commissionOn(long lineValue);
 
     protected static void requireLineValue(long lineValue) {
+        if (lineValue < 0) {
+            throw new IllegalArgumentException(
+                    "Line value cannot be negative"
+            );
+        }
     }
 
     protected static void requirePositiveQuantity(int quantity) {
+        if (quantity <= 0) {
+            throw new IllegalArgumentException(
+                    "Quantity must be positive"
+            );
+        }
     }
 }
