@@ -39,7 +39,7 @@ public class DeliveryCalculator {
         else return  120;
     }
 
-    public int billedWeight() {
+    public int billedWeight(Zone zone) {
         int totalWeight = 0;
         for (Chargeable c : chargeables) {
             if (c instanceof Weighable)
@@ -48,6 +48,8 @@ public class DeliveryCalculator {
 
         double weightInKG = (double) totalWeight / 1000;
 
-        return ((int) Math.ceil(weightInKG)) * 20;
+        if (zone == Zone.DHAKA)
+            return ((int) Math.ceil(weightInKG)) * 20;
+        else return ((int) Math.ceil(weightInKG)) * 35;
     }
 }

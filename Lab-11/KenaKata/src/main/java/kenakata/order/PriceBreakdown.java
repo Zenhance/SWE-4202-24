@@ -56,7 +56,7 @@ public class PriceBreakdown {
         if (calculator.hasFreshGood())
             deliveryCharge += 50;
 
-        deliveryCharge += calculator.billedWeight();
+        deliveryCharge += calculator.billedWeight(zone);
         return deliveryCharge;
     }
 
