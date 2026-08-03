@@ -4,6 +4,8 @@ public class MobileWalletPayment extends PaymentMethod{
     private Wallet wallet;
 
     public MobileWalletPayment(Wallet wallet) {
+        if (wallet == null)
+            throw new IllegalArgumentException("Wallet cannot be null");
         this.wallet = wallet;
     }
 
