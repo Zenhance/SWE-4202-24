@@ -20,6 +20,10 @@ public class WarrentyPlan implements Chargeable {
 
     @Override
     public String label() {
-        return "";
+        return "Warranty for " + covered.label();
+    }
+
+    public CatalogItem covered() {
+        return covered;
     }
 }
