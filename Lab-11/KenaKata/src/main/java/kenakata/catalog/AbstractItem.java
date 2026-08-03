@@ -33,4 +33,24 @@ public abstract class AbstractItem implements Item {
         this.stock = stock;
         this.seller = seller;
     }
+
+    public String getSku() {
+        return sku;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public long getUnitPrice() {
+        return unitPrice;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public Seller getSeller() {
+        return seller;
+    }
 }
