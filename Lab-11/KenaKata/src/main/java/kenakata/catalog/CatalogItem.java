@@ -40,12 +40,6 @@ public abstract class CatalogItem implements Chargeable{
         return unitPrice;
     }
 
-    public Seller getSeller() {
-        return seller;
-    }
-    public Seller seller() {
-        return seller;
-    }
 
     public String getTitle() {
         return title;
