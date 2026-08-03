@@ -40,4 +40,16 @@ public final class OrderLine {
     public boolean returned(){
         return returned;
     }
+    void markReturned(){
+        returned = true;
+    }
+    public boolean isProduct(){
+        return unit instanceof CatalogItem;
+    }
+    public CatalogItem product(){
+        if(!(unit instanceof CatalogItem item)){
+            throw new IllegalArgumentException("This line is not a product");
+        }
+        return item;
+    }
 }
