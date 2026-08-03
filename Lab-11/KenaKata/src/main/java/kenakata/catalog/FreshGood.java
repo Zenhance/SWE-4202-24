@@ -16,6 +16,9 @@ public class FreshGood extends CatalogItem {
     public int weight() {
         return weight;
     }
+    public int returnWindowDays() {
+        return 2;
+    }
 
 
     @Override
