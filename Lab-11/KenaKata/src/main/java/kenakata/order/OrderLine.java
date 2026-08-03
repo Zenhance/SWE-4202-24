@@ -30,4 +30,20 @@ public class OrderLine{
     public void setReturned(boolean returned){
         this.returned = returned;
     }
+    public long lineValue() {
+        return item.unitCharge() * quantity;
+    }
+
+    public long lineVat() {
+        return item.unitVat() * quantity;
+    }
+
+    public long insuranceFee(){
+        if(!insured) {
+            return 0;
+        }
+        long insurableValue = ((Insurable) item).insurableValue() * quantity;
+        long fee = (long) Math.ceil(insurableValue * 0.01);
+        return Math.max(fee, 20);
+    }
 }
