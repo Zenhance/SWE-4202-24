@@ -9,6 +9,9 @@ public class OrderLine {
     private boolean returned;
 
     public OrderLine(Chargeable item, int quantity) {
+        if (item == null || quantity <= 0) {
+            throw new IllegalArgumentException("Item cannot be null and quantity must be positive");
+        }
         this.item = item;
         this.quantity = quantity;
         this.insured = false;
