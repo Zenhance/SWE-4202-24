@@ -1,6 +1,6 @@
 package kenakata;
 
-public class CashOnDeliveryPayment {
+public class CashOnDeliveryPayment extends PaymentMethod {
     public void authorise(int i) {
 
     }
