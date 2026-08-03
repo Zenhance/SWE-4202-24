@@ -55,11 +55,10 @@ public class PriceBreakdown {
         if (zone == Zone.DHAKA) deliveryCharge = DHAKA;
         else deliveryCharge = OUTSIDE;
 
-        for (Chargeable c : chargeables) {
-            if (c instanceof FreshGood)
-                deliveryCharge += 50;
-        }
-        if (calculator.onlyColdChain(chargeables))
+        if (calculator.hasFreshGood(chargeables))
+            deliveryCharge += 50;
+
+        if (calculator.onlyDigitalGood(chargeables))
             return 0;
         return deliveryCharge;
     }
