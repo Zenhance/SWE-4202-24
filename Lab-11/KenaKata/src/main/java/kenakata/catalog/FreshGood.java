@@ -1,9 +1,9 @@
 package kenakata.catalog;
 
-public class FreshGood extends CatalogItem {
-    private double weight;
+public class FreshGood extends CatalogItem implements Weighable {
+    private int weight;
 
-    public FreshGood(String SKU, String title, double unitPrice, int stockCount, Seller seller, double weight) {
+    public FreshGood(String SKU, String title, double unitPrice, int stockCount, Seller seller, int weight) {
         super(SKU, title, unitPrice, stockCount, seller);
         if (weight <= 0.0)
             throw new IllegalArgumentException("Weight cannot be negative or zero");
@@ -28,5 +28,10 @@ public class FreshGood extends CatalogItem {
     @Override
     public boolean returned() {
         return false;
+    }
+
+    @Override
+    public int weight() {
+        return weight;
     }
 }
