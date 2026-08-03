@@ -31,4 +31,13 @@ public final class OrderLine {
     public long lineVat(){
         return Math.multiplyExact(unit.unitVat(),quantity);
     }
+    public boolean insured(){
+        return insured;
+    }
+    void markInsured(){
+        insured=true;
+    }
+    public boolean returned(){
+        return returned;
+    }
 }
