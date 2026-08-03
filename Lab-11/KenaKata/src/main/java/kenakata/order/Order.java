@@ -33,13 +33,12 @@ public final class Order {
         this.deliveryCalculator = deliveryCalculator;
     }
 
-    public void addProduct(CatalogItem, int quantity) {
+    public void addProduct(CatalogItem item, int quantity) {
         ensureMutable();
         if (item == null) {
             throw new IllegalArgumentException("Product must not be null");
-
-            lines.add(new OrderLine(item, quantity));
         }
+            lines.add(new OrderLine(item, quantity));
     }
 
     public void addAddOn(Chargeable addOn) {
@@ -68,7 +67,6 @@ public final class Order {
             throw new NotInsurableException("Line " + lineIndex + " cannot be insured");
         }
         line.markInsured();
-        ;
     }
 
     public PriceBreakdown quote(int currentDay) throws CheckoutException {
@@ -178,6 +176,7 @@ public final class Order {
             discount = coupon.discountFor(discountableBase,subtotal,currentDay);
         }
         long delivery =deliveryCalculator.calculate(lines,zone);
+        long serviceFee =Math.min(100, MoneyMath.ceilPercent(subtotal, 1));
         long grandTotal = subtotal;
         grandTotal = Math.subtractExact(grandTotal,discount);
         grandTotal = Math.addExact(grandTotal,delivery);
