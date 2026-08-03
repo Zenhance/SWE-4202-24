@@ -1,7 +1,7 @@
 package kenakata.exceptions;
 
-public class CODLimitExceededException extends PaymentException{
-    CODLimitExceededException(String message){
+public class CODLimitExceededException extends PaymentDeclinedException {
+    public CODLimitExceededException(String message){
         super(message);
     }
 }
