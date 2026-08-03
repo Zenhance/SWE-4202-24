@@ -46,6 +46,7 @@ public class PriceBreakdown {
     }
 
     public int delivery() {
+        DeliveryCalculator calculator = new DeliveryCalculator(chargeables);
         int deliveryCharge = 0;
         final int DHAKA = 140;
         final int  OUTSIDE = 120;
@@ -53,10 +54,10 @@ public class PriceBreakdown {
         if (zone == Zone.DHAKA) deliveryCharge = DHAKA;
         else deliveryCharge = OUTSIDE;
 
-        if (calculator.hasFreshGood(chargeables))
+        if (calculator.hasFreshGood())
             deliveryCharge += 50;
 
-        if (calculator.onlyDigitalGood(chargeables))
+        if (calculator.onlyDigitalGood())
             return 0;
         return deliveryCharge;
     }
