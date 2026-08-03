@@ -1,7 +1,7 @@
 package kenakata.order;
 
     public interface Chargeable {
-        long unitCharge();
+        double unitCharge();
 
         long unitVat();
 
