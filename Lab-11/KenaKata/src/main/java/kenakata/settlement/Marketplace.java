@@ -25,9 +25,9 @@ public class Marketplace {
         for (Seller seller : registeredSellers) {
             payoutList.add(new SellerPayout(seller));
         }
-    }
+
     long platformRevenue = 0;
-    for(Order order: placeOrders){
+    for(Order order: placedOrders){
         PriceBreakdown bd = order.finalBreakdown();
         platformRevenue += bd.delivery() + bd.vat() + bd.serviceFee() + bd.insurance()- bd.discount();
 
@@ -51,8 +51,18 @@ public class Marketplace {
                 }
             }
         }
-        return new SettlementReport(payoutlist,platformRevenue);
+        return new SettlementReport(payoutList,platformRevenue);
 }
     private SellerPayout findPayoutForSeller(List<SellerPayout>payouts,Seller seller){
+        for(SellerPayout payout : payouts){
+            if(payout.seller().equals(seller)){
+                return payout;
+            }
+        }
+        SellerPayout newPayout = new SellerPayout(seller);
+        payouts.add(newPayout);
+        return newPayout;
+
+            }
     }
-}
+
