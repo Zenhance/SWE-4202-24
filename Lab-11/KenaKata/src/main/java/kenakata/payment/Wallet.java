@@ -15,4 +15,14 @@ public class Wallet {
     public long balance() {
         return balance;
     }
+
+    public void debit(long amount) throws EmptyWalletException {
+        if (amount < 0) {
+            throw new IllegalArgumentException("Debit amount must be positive");
+        }
+        if (balance < amount) {
+            throw new EmptyWalletException("Wallet balance insufficient");
+        }
+        balance -= amount;
+    }
 }
