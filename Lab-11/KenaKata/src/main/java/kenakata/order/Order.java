@@ -1,9 +1,11 @@
 package kenakata.order;
 
+import kenakata.catalog.ExpressHandling;
 import kenakata.payment.MobileWalletPayment;
 import kenakata.catalog.CatalogItem;
 import kenakata.catalog.GiftWrap;
 import kenakata.catalog.StockedGood;
+import kenakata.payment.PaymentMethod;
 
 import java.util.Map;
 
@@ -48,5 +50,11 @@ public class Order {
     }
 
     public void addProduct(StockedGood p1, int i) {
+    }
+
+    public void addAddOn(ExpressHandling expressHandling) {
+    }
+
+    public void place(PaymentMethod payment, int today) {
     }
 }

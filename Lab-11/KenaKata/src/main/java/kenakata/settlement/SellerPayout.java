@@ -16,4 +16,8 @@ public class SellerPayout {
     public int refunds() {
         return 2000;
     }
+
+    public boolean seller() {
+        return false;
+    }
 }
