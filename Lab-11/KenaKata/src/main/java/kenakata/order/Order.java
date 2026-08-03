@@ -8,28 +8,28 @@ import java.util.List;
 import java.util.Map;
 
 public class Order {
+    public CatalogItem item;
+    public int quantity;
+    public AddOn addOn;
     public  ArrayList<OrderLine> Lines= new ArrayList<>();
     public Order(Zone zone, DeliveryCalculator delivery) {
     }
 
-    public void addProduct(StockedGood lamp, int i) {
+    public void addProduct(CatalogItem item, int quantity) {
+        this.item=item;
+        this.quantity=quantity;
+        Lines.add(new OrderLine(item,quantity));
+    }
+    public void addAddOn(AddOn addon) {
+        this.addOn=addOn;
     }
 
     public void place(PaymentMethod payment, int today) {
     }
 
-    public void addAddOn(GiftWrap giftWrap) {
-    }
-
     public void applyCoupon(Coupon eid10) {
     }
-
-    public void addProduct(FreshGood hilsa, int i) {
-    }
-
-    public void addProduct(DigitalGood ebook, int i) {
-    }
-        PriceBreakdown P=  new PriceBreakdown(5);
+    PriceBreakdown P=  new PriceBreakdown(5);
 
     public PriceBreakdown quote(int today) {
         return P;
@@ -39,9 +39,6 @@ public class Order {
     }
 
     public void acceptReturn(int i, int i1) {
-    }
-
-    public void addAddOn(ExpressHandling expressHandling) {
     }
 
     public boolean placed() {
@@ -57,9 +54,4 @@ public class Order {
         return this.Lines;
     }
 
-    public void addProduct(CatalogItem item, int i) {
-    }
-
-    public void addAddOn(Chargeable unit) {
-    }
 }
