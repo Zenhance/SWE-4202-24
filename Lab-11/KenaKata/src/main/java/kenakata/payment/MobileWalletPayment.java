@@ -4,7 +4,7 @@ import kenakata.exceptions.PaymentDeclinedException;
 
 
 
-public abstract class MobileWalletPayment implements PaymentMethod {
+public class MobileWalletPayment implements PaymentMethod {
     private final Wallet wallet;
 
     public MobileWalletPayment(Wallet wallet){
