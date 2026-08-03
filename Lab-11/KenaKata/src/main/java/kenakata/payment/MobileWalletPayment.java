@@ -1,6 +1,6 @@
 package kenakata.payment;
 
-public class MobileWalletPayment extends PaymentMethod{
+public class MobileWalletPayment implements PaymentMethod{
     private Wallet wallet;
 
     public MobileWalletPayment(Wallet wallet) {

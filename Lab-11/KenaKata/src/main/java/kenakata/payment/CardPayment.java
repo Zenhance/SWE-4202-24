@@ -1,6 +1,6 @@
 package kenakata.payment;
 
-public class CardPayment extends PaymentMethod{
+public class CardPayment implements PaymentMethod{
     private int limit;
 
     public CardPayment(int limit) {
