@@ -1,15 +1,15 @@
 package kenakata.catalog;
 
-public abstract class CatalogItem {
+public abstract class CatalogItem implements Chargeable {
 
 
-    private String sku;
-    private String title;
-    private double unitPrice;
-    private int stock;
-    private Seller seller;
+    private final String sku;
+    private final String title;
+    private final long unitPrice;
+    private final int stock;
+    private final Seller seller;
 
-    public CatalogItem(String sku, String title, double unitPrice, int stock, Seller seller) {
+    public CatalogItem(String sku, String title, long unitPrice, int stock, Seller seller) {
 
         if (sku == null || sku.isBlank())
             throw new IllegalArgumentException("null sku");
@@ -26,31 +26,32 @@ public abstract class CatalogItem {
         this.seller = seller;
     }
 
-    public Seller getSeller() {
+    public Seller seller() {
         return seller;
     }
 
-    public double getUnitPrice() {
+    public long unitPrice() {
         return unitPrice;
     }
 
-    public String getTitle() {
+    public String title() {
         return title;
     }
 
-    public int getStock() {
+    public int remaining() {
         return stock;
     }
 
-    public String getSku() {
+    public String sku() {
         return sku;
     }
 
-    public abstract int unitCharge();
+    @Override
+    public long unitCharge(){
+        return unitPrice;
+    }
 
-    public abstract int unitVat();
-
-    public abstract int commissionOn(int total);
+    public abstract long commissionOn(long totalCharge);
 
 
 
