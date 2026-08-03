@@ -1,9 +1,9 @@
 package kenakata.catalog;
 
-public class FreshGood extends AbstractItem implements Weighable, ColdChain, Insurable, Returnable {
+public class FreshGood extends CatalogItem implements Weighable, ColdChain, Insurable, Returnable {
     private int weightGrams;
 
-    public FreshGood(String sku, String title, long unitPrice, int stock, Seller seller) {
+    public FreshGood(String sku, String title, long unitPrice, int stock, Seller seller, int weightGrams) {
         super(sku, title, unitPrice, stock, seller);
         if (weightGrams <= 0) {
             throw new IllegalArgumentException("Weight must be positive");
