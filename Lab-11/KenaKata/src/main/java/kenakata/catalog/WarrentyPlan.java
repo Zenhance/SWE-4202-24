@@ -15,7 +15,7 @@ public class WarrentyPlan implements Chargeable {
 
     @Override
     public long unitCharge() {
-        return 0;
+        return (long) Math.ceil(covered.unitCharge() * 10);
     }
 
     @Override
