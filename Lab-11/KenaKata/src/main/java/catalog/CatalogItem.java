@@ -1,6 +1,6 @@
 package catalog;
 
-public class CatalogItem extends Chargable{
+public abstract class CatalogItem implements Chargable{
     private final String sku;
     private final String title;
     private final long unitPrice;
@@ -22,6 +22,14 @@ public class CatalogItem extends Chargable{
         this.unitPrice=unitPrice;
         this.remaining=remaining;
         this.seller=seller;
+    }
+
+    public String sku(){
+        return sku;
+    }
+
+    public String title(){
+        return title;
     }
 
 }
