@@ -25,6 +25,9 @@ public class SellerPayout {
     public long commission(){
         return commission;
     }
+    public Seller seller() {
+        return seller;
+    }
     public long refunds(){
         return refunds;
     }
