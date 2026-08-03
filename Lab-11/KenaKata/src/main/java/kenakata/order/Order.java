@@ -16,4 +16,12 @@ public class Order {
     private boolean isPlaced = false;
     private PriceBreakdown finalBreakdown;
     private int placementDay;
+
+    public Order(Zone zone, DeliveryCalculator deliveryCalculator) {
+        if (zone == null || deliveryCalculator == null) {
+            throw new IllegalArgumentException("Zone and DeliveryCalculator must not be null");
+        }
+        this.zone = zone;
+        this.deliveryCalculator = deliveryCalculator;
+    }
 }
