@@ -28,4 +28,8 @@ public class Order {
     public boolean placed() {
         return true;
     }
+
+    public Object finalBreakdown() {
+        return null;
+    }
 }
