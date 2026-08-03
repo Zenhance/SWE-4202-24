@@ -21,4 +21,26 @@ public class FreshGood extends Product implements Weighable, Coldchainable, Insu
     public long unitVat() {
         return 0;
     }
+
+    @Override
+    public long commissionOn() {
+        return (long) Math.ceil(unitCharge()*0.05);
+    }
+
+    @Override
+    public long insurableValue() {
+        return unitPrice();
+    }
+
+    @Override
+    public long coldChairSurcharge() {
+        return 50;
+    }
+
+    @Override
+    public int returnWindowDays() {
+        return 2;
+    }
+
+
 }
