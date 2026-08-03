@@ -44,6 +44,9 @@ public abstract class CatalogItem implements Chargeable{
     public String getTitle() {
         return title;
     }
+    public Seller getSeller() {
+        return seller;
+    }
 
     @Override
     public long unitCharge() {
