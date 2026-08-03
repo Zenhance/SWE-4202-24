@@ -6,6 +6,8 @@ public class SellerPayout {
     private Seller seller;
 
     public SellerPayout(Seller seller) {
+        if (seller == null)
+            throw new IllegalArgumentException("Seller cannot be null");
         this.seller = seller;
     }
 
