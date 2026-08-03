@@ -15,24 +15,19 @@ public class Order {
     private boolean placed = false;
     private PriceBreakdown finalBreakdown;
     private int placementDay;
-
     public Order(Zone zone, DeliveryCalculator deliveryCalculator) {
         this.zone = zone;
         this.deliveryCalculator = deliveryCalculator;
     }
-
     public void addProduct(CatalogItem item, int quantity) {
         lines.add(new OrderLine(item, quantity));
     }
-
     public void addAddOn(Chargeable addOn) {
         lines.add(new OrderLine(addOn, 1));
     }
-
     public void applyCoupon(Coupon coupon) {
         this.coupon = coupon;
     }
-
     public void insure(int lineIndex) throws NotInsurableException {
         if (lineIndex < 0 || lineIndex >= lines.size()) {
             throw new NotInsurableException("Invalid line index");
@@ -43,8 +38,7 @@ public class Order {
         }
         line.setInsured(true);
     }
-
-    public PriceBreakdown quote(int currentDay) throws CouponRejectedException {
+    public PriceBreakdown quote(int currentDay) throws CouponRejectedException{
         long subtotal = 0;
         long discountableBase = 0;
         long vat = 0;
@@ -78,5 +72,30 @@ public class Order {
         this.placed = true;
         this.finalBreakdown = breakdown;
         this.placementDay = currentDay;
+    }
+    public void acceptReturn(int lineIndex, int currentDay) throws ReturnNotAllowedException{
+        if (lineIndex < 0 || lineIndex >= lines.size()) {
+            throw new ReturnNotAllowedException("Invalid line index");
+        }
+        OrderLine line = lines.get(lineIndex);
+        if (line.returned()) {
+            throw new ReturnNotAllowedException("Line has already been returned");
+        }
+        if (!(line.item() instanceof Returnable returnable)){
+            throw new ReturnNotAllowedException("Item is not returnable");
+        }
+        if (currentDay > placementDay + returnable.returnWindowDays()){
+            throw new ReturnNotAllowedException("Return window has expired");
+        }
+        line.setReturned(true);
+    }
+    public boolean placed(){
+        return placed;
+    }
+    public PriceBreakdown finalBreakdown(){
+        return finalBreakdown;
+    }
+    public List<OrderLine> lines(){
+        return Collections.unmodifiableList(lines);
     }
 }
