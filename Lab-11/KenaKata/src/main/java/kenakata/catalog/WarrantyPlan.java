@@ -1,6 +1,6 @@
 package kenakata.catalog;
 
-public class WarrantyPlan extends AddOnLines{
+public class WarrantyPlan implements Chargeable {
     private final LineItem lineitem;
     
     public WarrantyPlan(LineItem lineItem) {

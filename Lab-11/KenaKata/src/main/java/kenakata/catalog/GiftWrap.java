@@ -1,6 +1,6 @@
 package kenakata.catalog;
 
-public class GiftWrap extends AddOnLines {
+public class GiftWrap implements Chargeable {
     @Override
     public String label() {
         return "GiftWrap";
