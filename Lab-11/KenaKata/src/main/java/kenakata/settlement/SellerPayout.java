@@ -15,5 +15,26 @@ public final class SellerPayout {
         this.commission = commission;
         this.refunds = refunds;
     }
+    public Seller seller() {
+        return seller;
+    }
+
+    public long grossSales() {
+        return grossSales;
+    }
+
+    public long commission() {
+        return commission;
+    }
+
+    public long refunds() {
+        return refunds;
+    }
+
+    public long payout() {
+        return grossSales - commission - refunds;
+    }
+}
+
 
 
