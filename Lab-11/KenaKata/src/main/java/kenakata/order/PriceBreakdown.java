@@ -10,6 +10,16 @@ public class PriceBreakdown {
     private long serviceFee;
     private long insurance;
 
+    public PriceBreakdown(long subtotal, long discount, long vat, long delivery, long insurance, long serviceFee, long grandTotal) {
+        this.subtotal = subtotal;
+        this.discount = discount;
+        this.vat = vat;
+        this.delivery = delivery;
+        this.insurance = insurance;
+        this.serviceFee = serviceFee;
+        this.grandtotal = grandTotal;
+    }
+
     public int subtotal() {
 
         return 0;
