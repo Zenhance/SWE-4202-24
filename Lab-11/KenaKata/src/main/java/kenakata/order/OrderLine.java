@@ -13,5 +13,11 @@ public final class OrderLine {
         if(unit == null){
             throw new IllegalArgumentException("Order line unit must not be null");
         }
+        if(quantity<=0){
+            throw new IllegalArgumentException("Quantity must be positive");
+        }
+        this.unit = unit;
+        this.quantity = quantity;
     }
+
 }
