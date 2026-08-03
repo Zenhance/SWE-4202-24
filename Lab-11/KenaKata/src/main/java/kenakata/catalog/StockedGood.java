@@ -1,6 +1,6 @@
 package kenakata.catalog;
 
-public class StockedGood extends Item {
+public class StockedGood extends CatalogItem {
     private final int weight;
 
     public StockedGood(String sku, String title, long unitPrice, int stock, Seller seller, int weight) {

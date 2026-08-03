@@ -9,7 +9,7 @@ import kenakata.catalog.StockedGood;
 import kenakata.exceptions.CheckoutException;
 import kenakata.order.Coupon;
 import kenakata.order.DeliveryCalculator;
-import kenakata.order.Order;
+import kenakata.order.OrderLine;
 import kenakata.order.PriceBreakdown;
 import kenakata.order.Zone;
 import kenakata.payment.CardPayment;
@@ -56,7 +56,7 @@ public final class Main {
         int today = 100;
 
         // ---- Order 1: mixed basket inside Dhaka, paid from a mobile wallet ----------------
-        Order order1 = new Order(Zone.DHAKA, delivery);
+        OrderLine order1 = new OrderLine(Zone.DHAKA, delivery);
         order1.addProduct(lamp, 2);        // stocked, weighable, discountable
         order1.addProduct(ebook, 1);       // digital, no weight, not discountable
         order1.addProduct(hilsa, 1);       // fresh, weighable, needs cold chain
@@ -72,7 +72,7 @@ public final class Main {
         System.out.println();
 
         // ---- Order 2: outside Dhaka, one insured line, paid by card -----------------------
-        Order order2 = new Order(Zone.OUTSIDE, delivery);
+        OrderLine order2 = new OrderLine(Zone.OUTSIDE, delivery);
         order2.addProduct(charger, 3);
         order2.addAddOn(new ExpressHandling());
         order2.insure(0);                  // insure the charger line (it is insurable)
@@ -85,7 +85,7 @@ public final class Main {
         System.out.println();
 
         // ---- Order 3: a checkout that the business refuses, caught and reported -----------
-        Order order3 = new Order(Zone.DHAKA, delivery);
+        OrderLine order3 = new OrderLine(Zone.DHAKA, delivery);
         order3.addProduct(fridge, 1);      // grand total is above the cash-on-delivery ceiling
         printQuote("Order 3 (inside Dhaka)", order3.quote(today));
         try {

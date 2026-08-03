@@ -149,10 +149,10 @@ class KenaKataTest {
     class FullOrder {
 
         // Rebuilds the exact order from the specification's worked example.
-        private Order workedExample() {
+        private OrderLine workedExample() {
             Seller a = new Seller("A");
             Seller b = new Seller("B");
-            Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
+            OrderLine order = new OrderLine(Zone.DHAKA, new DeliveryCalculator());
             order.addProduct(new StockedGood("L", "Lamp", 1200, 10, a, 1500), 2);
             order.addProduct(new DigitalGood("E", "E-book", 300, 100, b), 1);
             order.addProduct(new FreshGood("H", "Hilsa", 1600, 4, a, 1000), 1);
@@ -185,7 +185,7 @@ class KenaKataTest {
         @Test
         @DisplayName("An all-digital order delivers for nothing")
         void allDigitalIsFree() throws Exception {
-            Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
+            OrderLine order = new OrderLine(Zone.DHAKA, new DeliveryCalculator());
             order.addProduct(new DigitalGood("E", "E-book", 300, 100, seller()), 3);
             assertEquals(0, order.quote(1).delivery());
         }
@@ -194,7 +194,7 @@ class KenaKataTest {
         @DisplayName("Weight rounds up to the next whole billed kilogram")
         void billedWeightRoundsUp() throws Exception {
             // One 1200 g line -> 1.2 kg -> billed 2 kg -> 60 + 2*20 = 100 inside Dhaka.
-            Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
+            OrderLine order = new OrderLine(Zone.DHAKA, new DeliveryCalculator());
             order.addProduct(new StockedGood("S", "Item", 500, 10, seller(), 1200), 1);
             assertEquals(100, order.quote(1).delivery());
         }
@@ -203,7 +203,7 @@ class KenaKataTest {
         @DisplayName("Only weighable lines count; digital and add-ons are ignored")
         void ignoresWeightlessLines() throws Exception {
             // Stocked 1000 g (1 kg) plus a digital line and a gift wrap: still just 1 billed kg.
-            Order order = new Order(Zone.OUTSIDE, new DeliveryCalculator());
+            OrderLine order = new OrderLine(Zone.OUTSIDE, new DeliveryCalculator());
             order.addProduct(new StockedGood("S", "Item", 500, 10, seller(), 1000), 1);
             order.addProduct(new DigitalGood("E", "E-book", 300, 100, seller()), 1);
             order.addAddOn(new GiftWrap());
@@ -214,7 +214,7 @@ class KenaKataTest {
         @Test
         @DisplayName("Each fresh line adds a cold-chain surcharge")
         void coldChainPerFreshLine() throws Exception {
-            Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
+            OrderLine order = new OrderLine(Zone.DHAKA, new DeliveryCalculator());
             order.addProduct(new FreshGood("H", "Hilsa", 1600, 4, seller(), 1000), 1); // 1 kg
             // 60 + 1*20 shipping + 50 cold chain = 130.
             assertEquals(130, order.quote(1).delivery());
@@ -232,7 +232,7 @@ class KenaKataTest {
         @DisplayName("Discount applies to the discountable (stocked) base only, and is capped")
         void discountOnDiscountableBaseCapped() throws Exception {
             // Stocked 1000 x 2 = 2000 discountable; fresh 5000 not discountable.
-            Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
+            OrderLine order = new OrderLine(Zone.DHAKA, new DeliveryCalculator());
             order.addProduct(new StockedGood("S", "Item", 1000, 10, seller(), 500), 2);
             order.addProduct(new FreshGood("H", "Hilsa", 5000, 10, seller(), 1000), 1);
             order.applyCoupon(new Coupon("C", 50, 20000, 0, 200)); // 50%, generous cap
@@ -243,7 +243,7 @@ class KenaKataTest {
         @Test
         @DisplayName("An expired coupon is refused")
         void expiredCouponThrows() {
-            Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
+            OrderLine order = new OrderLine(Zone.DHAKA, new DeliveryCalculator());
             order.addProduct(new StockedGood("S", "Item", 1000, 10, seller(), 500), 1);
             order.applyCoupon(new Coupon("C", 10, 200, 0, 50)); // valid through day 50
             assertThrows(CouponRejectedException.class, () -> order.quote(51));
@@ -252,7 +252,7 @@ class KenaKataTest {
         @Test
         @DisplayName("A coupon below its minimum spend is refused")
         void belowMinimumSpendThrows() {
-            Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
+            OrderLine order = new OrderLine(Zone.DHAKA, new DeliveryCalculator());
             order.addProduct(new StockedGood("S", "Item", 500, 10, seller(), 500), 1);
             order.applyCoupon(new Coupon("C", 10, 200, 1000, 200)); // needs 1000, subtotal is 500
             assertThrows(CouponRejectedException.class, () -> order.quote(1));
@@ -276,7 +276,7 @@ class KenaKataTest {
         @Test
         @DisplayName("Insuring an insurable line adds a fee of 1% of its value")
         void insurableLineAddsFee() throws Exception {
-            Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
+            OrderLine order = new OrderLine(Zone.DHAKA, new DeliveryCalculator());
             order.addProduct(lamp(seller()), 2); // value 2400
             order.insure(0);
             // 1% of 2400 = 24, above the 20 minimum.
@@ -286,7 +286,7 @@ class KenaKataTest {
         @Test
         @DisplayName("Insurance never falls below the 20 Taka minimum")
         void insuranceMinimumApplies() throws Exception {
-            Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
+            OrderLine order = new OrderLine(Zone.DHAKA, new DeliveryCalculator());
             order.addProduct(new StockedGood("S", "Item", 1000, 10, seller(), 500), 1); // value 1000
             order.insure(0);
             // 1% of 1000 = 10, lifted to the 20 minimum.
@@ -296,7 +296,7 @@ class KenaKataTest {
         @Test
         @DisplayName("Insuring a line that cannot be insured is refused")
         void insuringNonInsurableThrows() {
-            Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
+            OrderLine order = new OrderLine(Zone.DHAKA, new DeliveryCalculator());
             order.addProduct(new DigitalGood("E", "E-book", 300, 100, seller()), 1); // not insurable
             order.addAddOn(new GiftWrap());                                           // not insurable
             assertThrows(NotInsurableException.class, () -> order.insure(0));
@@ -316,7 +316,7 @@ class KenaKataTest {
         void declinedPaymentChangesNothing() {
             Seller s = seller();
             StockedGood item = lamp(s); // stock 10
-            Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
+            OrderLine order = new OrderLine(Zone.DHAKA, new DeliveryCalculator());
             order.addProduct(item, 2);
             Wallet wallet = new Wallet(100); // far too little
             assertThrows(EmptyWalletException.class,
@@ -330,7 +330,7 @@ class KenaKataTest {
         @DisplayName("An out-of-stock line reserves nothing and never reaches payment")
         void outOfStockChangesNothing() {
             StockedGood item = new StockedGood("S", "Item", 100, 1, seller(), 500); // stock 1
-            Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
+            OrderLine order = new OrderLine(Zone.DHAKA, new DeliveryCalculator());
             order.addProduct(item, 2); // wants 2
             Wallet wallet = new Wallet(1_000_000);
             assertThrows(OutOfStockException.class,
@@ -343,7 +343,7 @@ class KenaKataTest {
         @DisplayName("An invalid coupon aborts placement before anything moves")
         void invalidCouponChangesNothing() {
             StockedGood item = lamp(seller());
-            Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
+            OrderLine order = new OrderLine(Zone.DHAKA, new DeliveryCalculator());
             order.addProduct(item, 2);
             order.applyCoupon(new Coupon("C", 10, 200, 0, 5)); // expired by day 6
             Wallet wallet = new Wallet(1_000_000);
@@ -357,7 +357,7 @@ class KenaKataTest {
         @DisplayName("A successful placement reserves stock and records the breakdown")
         void successfulPlacement() throws Exception {
             StockedGood item = lamp(seller());
-            Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
+            OrderLine order = new OrderLine(Zone.DHAKA, new DeliveryCalculator());
             order.addProduct(item, 2);
             order.place(new CardPayment(1_000_000), 1);
             assertEquals(8, item.remaining());
@@ -423,8 +423,8 @@ class KenaKataTest {
     @DisplayName("Returns")
     class Returns {
 
-        private Order placedOrderWith(Chargeable... units) throws Exception {
-            Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
+        private OrderLine placedOrderWith(Chargeable... units) throws Exception {
+            OrderLine order = new OrderLine(Zone.DHAKA, new DeliveryCalculator());
             for (Chargeable unit : units) {
                 if (unit instanceof CatalogItem item) {
                     order.addProduct(item, 1);
@@ -439,7 +439,7 @@ class KenaKataTest {
         @Test
         @DisplayName("A returnable line comes back within its window")
         void returnWithinWindow() throws Exception {
-            Order order = placedOrderWith(lamp(seller())); // stocked window is 7 days
+            OrderLine order = placedOrderWith(lamp(seller())); // stocked window is 7 days
             order.acceptReturn(0, 105); // placed day 100, within 7 days
             assertTrue(order.lines().get(0).returned());
         }
@@ -447,7 +447,7 @@ class KenaKataTest {
         @Test
         @DisplayName("A return after the window is refused")
         void returnPastWindowThrows() throws Exception {
-            Order order = placedOrderWith(new FreshGood("H", "Hilsa", 1600, 4, seller(), 1000));
+            OrderLine order = placedOrderWith(new FreshGood("H", "Hilsa", 1600, 4, seller(), 1000));
             // Fresh window is 2 days; day 103 is past 100 + 2.
             assertThrows(ReturnNotAllowedException.class, () -> order.acceptReturn(0, 103));
         }
@@ -455,14 +455,14 @@ class KenaKataTest {
         @Test
         @DisplayName("A non-returnable line cannot be returned")
         void nonReturnableThrows() throws Exception {
-            Order order = placedOrderWith(new DigitalGood("E", "E-book", 300, 100, seller()));
+            OrderLine order = placedOrderWith(new DigitalGood("E", "E-book", 300, 100, seller()));
             assertThrows(ReturnNotAllowedException.class, () -> order.acceptReturn(0, 100));
         }
 
         @Test
         @DisplayName("The same line cannot be returned twice")
         void doubleReturnThrows() throws Exception {
-            Order order = placedOrderWith(lamp(seller()));
+            OrderLine order = placedOrderWith(lamp(seller()));
             order.acceptReturn(0, 101);
             assertThrows(ReturnNotAllowedException.class, () -> order.acceptReturn(0, 102));
         }
@@ -488,7 +488,7 @@ class KenaKataTest {
             market.register(b);
 
             // Order 1: 2 x p1 (seller A) + 1 x p2 (seller B). Grand total 2780.
-            Order o1 = new Order(Zone.DHAKA, new DeliveryCalculator());
+            OrderLine o1 = new OrderLine(Zone.DHAKA, new DeliveryCalculator());
             o1.addProduct(p1, 2);
             o1.addProduct(p2, 1);
             o1.place(new CardPayment(1_000_000), 1);
@@ -497,7 +497,7 @@ class KenaKataTest {
             market.record(o1);
 
             // Order 2: 1 x p1 (seller A) + gift wrap. Grand total 1220.
-            Order o2 = new Order(Zone.DHAKA, new DeliveryCalculator());
+            OrderLine o2 = new OrderLine(Zone.DHAKA, new DeliveryCalculator());
             o2.addProduct(p1, 1);
             o2.addAddOn(new GiftWrap());
             o2.place(new CardPayment(1_000_000), 1);
@@ -534,7 +534,7 @@ class KenaKataTest {
             Marketplace market = new Marketplace();
             market.register(a);
 
-            Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
+            OrderLine order = new OrderLine(Zone.DHAKA, new DeliveryCalculator());
             order.addProduct(p1, 2); // value 2000
             order.place(new CardPayment(1_000_000), 1);
             order.acceptReturn(0, 3); // within the 7-day window
@@ -601,7 +601,7 @@ class KenaKataTest {
         @Test
         @DisplayName("An order line rejects a non-positive quantity")
         void orderLineQuantityValidation() {
-            Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
+            OrderLine order = new OrderLine(Zone.DHAKA, new DeliveryCalculator());
             assertThrows(IllegalArgumentException.class, () -> order.addProduct(lamp(seller()), 0));
             assertThrows(IllegalArgumentException.class, () -> order.addProduct(lamp(seller()), -2));
         }
@@ -613,7 +613,7 @@ class KenaKataTest {
     @Test
     @DisplayName("The service fee is capped at 100 Taka for large orders")
     void serviceFeeIsCapped() throws Exception {
-        Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
+        OrderLine order = new OrderLine(Zone.DHAKA, new DeliveryCalculator());
         order.addProduct(new StockedGood("S", "Big", 20000, 10, seller(), 500), 1);
         // 1% of 20000 = 200, but capped at 100.
         assertEquals(100, order.quote(1).serviceFee());

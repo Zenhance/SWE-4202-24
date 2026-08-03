@@ -1,6 +1,6 @@
 package kenakata.catalog;
 
-public class FreshGood extends Item{
+public class FreshGood extends CatalogItem {
     private final int weight;
 
     public FreshGood(String sku, String title, long unitPrice, int stock, Seller seller, int weight) {

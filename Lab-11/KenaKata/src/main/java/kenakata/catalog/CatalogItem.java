@@ -2,7 +2,7 @@ package kenakata.catalog;
 
 import kenakata.exceptions.OutOfStockException;
 
-public abstract  class Item implements Chargeable{
+public abstract  class CatalogItem implements Chargeable{
     private String SKU;
     private String title;
     private long unitPrice;
@@ -10,7 +10,7 @@ public abstract  class Item implements Chargeable{
     private Seller seller;
 
 
-    public Item(String SKU, String title, long unitPrice, int stockCount, Seller seller) {
+    public CatalogItem(String SKU, String title, long unitPrice, int stockCount, Seller seller) {
         if (SKU == null || title == null || seller == null) {
             throw new IllegalArgumentException("Invalid identity data");
         }

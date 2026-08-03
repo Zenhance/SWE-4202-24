@@ -1,4 +1,11 @@
 package kenakata.order;
 
-public class PriceBreakdown {
-}
+public record PriceBreakdown(
+        long subtotal,
+        long discount,
+        long delivery,
+        long vat,
+        long insurance,
+        long serviceFee,
+        long grandTotal
+) {}
