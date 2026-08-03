@@ -8,10 +8,11 @@ public abstract class DigitalGood extends CatalogItem {
     @Override
     public long unitVat(){
 
-        return (long) Math.ceil(unitCharge()*0.05);
+        return (long) Math.ceil(unitCharge()*0.05); //5% vat on single unit and rounds up the value
     }
     @Override
     public long commissionOn(long amount){
-        return (long) Math.ceil(amount*0.20);
+        return (long) Math.ceil(amount*0.20); //20% commission rate
+
     }
 }

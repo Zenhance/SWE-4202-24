@@ -27,23 +27,23 @@ public class Marketplace {
         }
 
         long platformRevenue = 0;
-        for (Order order : placedOrders) {
+        for (Order order : placedOrders) { //processing each placed order
             PriceBreakdown bd = order.finalBreakdown();
             platformRevenue += bd.delivery() + bd.vat() + bd.serviceFee() + bd.insurance() - bd.discount();
 
-            for (OrderLine line : order.lines()) {
+            for (OrderLine line : order.lines()) { //looks at each item separately
                 Chargeable item = line.item();
                 if (item instanceof CatalogItem catalogItem) {
                     Seller seller = catalogItem.seller();
                     SellerPayout payout = findPayoutForSeller(payoutList, seller);
 
-                    long lineValue = line.lineValue();
+                    long lineValue = line.lineValue(); //calculates total line price(unit price x quantity)
                     payout.addSales(lineValue);
 
-                    long comm = catalogItem.commissionOn(lineValue);
+                    long comm = catalogItem.commissionOn(lineValue); // take platform commission
                     payout.addCommission(comm);
                     platformRevenue += comm;
-                    if (line.returned()) {
+                    if (line.returned()) { // handle customer returns
                         payout.addRefund(lineValue);
                     }
                 } else {
@@ -53,6 +53,7 @@ public class Marketplace {
         }
         return new SettlementReport(payoutList, platformRevenue);
     }
+    //helper method
     private SellerPayout findPayoutForSeller(List<SellerPayout>payouts,Seller seller){
         for(SellerPayout payout : payouts){
             if(payout.seller().equals(seller)){

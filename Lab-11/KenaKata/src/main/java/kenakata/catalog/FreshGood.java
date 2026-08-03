@@ -18,29 +18,29 @@ public abstract class FreshGood extends CatalogItem implements Weighable,ColdCha
     @Override
     public long unitVat(){
 
-        return 0;
+        return 0; //returns 0 tk bc basic food items, fresh agri product
     }
     @Override
     public long commissionOn(long amount){
 
-        return (long)Math.ceil(amount*0.05);
+        return (long)Math.ceil(amount*0.05);//5% platform commission
     }
     @Override
     public int weightGrams(){
 
-        return weightGrams;
+        return weightGrams; //mainly returns to use for heavy packages
     }
     @Override
     public long coldChainSurcharge(){
 
-        return 50;
+        return 50; //refrigeration surcharge
     }
     @Override
     public long insurableValue(){
-        return (long) unitCharge();
+        return (long) unitCharge(); //if items gets damaged,returns the full unit price
     }
     @Override
     public int returnWindowDays(){
-        return 2;
+        return 2; //restricts the return period to 2 days
     }
 }

@@ -4,14 +4,15 @@ import kenakata.exceptions.OutOfStockException;
 import kenakata.order.Chargeable;
 import kenakata.settlement.Seller;
 
-public abstract class CatalogItem implements Chargeable {
-    private final String sku;
+public abstract class CatalogItem implements Chargeable { //implementing chargeable allows Order
+                                                          // class to process all elements through a unified interface
+    private final String sku; //product identifier code
     private final String title;
-    private final long unitPrice;
-    private int stock;
-    private final Seller seller;
-    private String label;
-    private double unitCharge;
+    private final long unitPrice; //price of one unit
+    private int stock; //number of items available
+    private final Seller seller; //merchant who owns and sells
+    private String label; //display name of the item
+    private double unitCharge; // base price of one single item
 
     public CatalogItem(String sku,String title,long unitPrice, int stock,Seller seller,String label,double unitCharge){
         if(sku == null || sku.isBlank() || title == null || title.isBlank() || seller == null){
@@ -46,7 +47,7 @@ public abstract class CatalogItem implements Chargeable {
     public String label(){
         return title;
     }
-    public void reserve(int qty)throws OutOfStockException{
+    public void reserve(int qty)throws OutOfStockException{ //decrements the product's stock when a customer places an order
         if(qty<=0){
             throw new IllegalArgumentException("Quantity must be positive");
         }
@@ -58,3 +59,4 @@ public abstract class CatalogItem implements Chargeable {
     }
     public abstract long commissionOn(long amount);
 }
+//abstract method forces every child class to supply its own calculation of commission
