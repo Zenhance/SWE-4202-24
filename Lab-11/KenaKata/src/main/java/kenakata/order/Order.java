@@ -130,4 +130,16 @@ public class Order {
 
         line.markReturned();
     }
+
+    public boolean placed() {
+        return isPlaced;
+    }
+
+    public PriceBreakdown finalBreakdown() {
+        return finalBreakdown;
+    }
+
+    public List<OrderLine> lines() {
+        return Collections.unmodifiableList(lines);
+    }
 }
