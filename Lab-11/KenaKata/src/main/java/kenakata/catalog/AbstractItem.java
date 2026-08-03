@@ -63,4 +63,16 @@ public abstract class AbstractItem implements Item {
         }
         stock -= quantity;
     }
+
+    @Override
+    public long unitCharge() {
+        return unitPrice;
+    }
+
+    @Override
+    public String label() {
+        return title;
+    }
+
+    public abstract long commissionOn(long lineValue);
 }
