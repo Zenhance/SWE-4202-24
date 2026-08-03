@@ -16,4 +16,10 @@ public class Coupon {
         this.minSpend = minSpend;
         this.validDays = validDays;
     }
+
+    public String couponCode() {return couponCode;}
+    public long getPercentage() {return this.percentage;}
+
+
+
 }
