@@ -17,4 +17,11 @@ import kenakata.exceptions.ReturnNotAllowedException;
 import kenakata.payment.PaymentMethod;
 
 public final class Order {
+    private final Zone zone;
+    private final DeliveryCalculator deliveryCalculator;
+    private final List<OrderLine> lines = new ArrayList<>();
+    private Coupon coupon;
+    private boolean placed;
+    private int placedDay=-1;
+    private PriceBreakdown finalBreakdown;
 }
