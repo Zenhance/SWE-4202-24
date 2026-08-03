@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51081361-6857-41f6-8e00-368f50dbeaac" name="Changes" comment="ExpressHandling fix">
+    <list default="true" id="51081361-6857-41f6-8e00-368f50dbeaac" name="Changes" comment="seller">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/catalog/ExpressHandling.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/catalog/ExpressHandling.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/catalog/FreshGood.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/catalog/FreshGood.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/catalog/StockedGood.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/catalog/StockedGood.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/catalog/Seller.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/catalog/Seller.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -456,7 +454,55 @@
       <option name="project" value="LOCAL" />
       <updated>1785788033490</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="ExpressHandling fix">
+      <option name="closed" value="true" />
+      <created>1785788097998</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1785788097998</updated>
+    </task>
+    <task id="LOCAL-00042" summary=".">
+      <option name="closed" value="true" />
+      <created>1785788119530</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1785788119530</updated>
+    </task>
+    <task id="LOCAL-00043" summary="giftwrap">
+      <option name="closed" value="true" />
+      <created>1785788206493</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1785788206493</updated>
+    </task>
+    <task id="LOCAL-00044" summary="giftwrap">
+      <option name="closed" value="true" />
+      <created>1785788281985</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1785788281985</updated>
+    </task>
+    <task id="LOCAL-00045" summary="giftwrap fix">
+      <option name="closed" value="true" />
+      <created>1785788338232</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1785788338232</updated>
+    </task>
+    <task id="LOCAL-00046" summary="seller">
+      <option name="closed" value="true" />
+      <created>1785788788747</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1785788788747</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -500,13 +546,16 @@
     <MESSAGE value="DigitalGood" />
     <MESSAGE value="freshGood" />
     <MESSAGE value="StockedGood" />
-    <MESSAGE value="." />
     <MESSAGE value="catalog item fix" />
     <MESSAGE value="digital good fix" />
     <MESSAGE value="fresh good fix" />
     <MESSAGE value="stocked good fix" />
     <MESSAGE value="ExpressHandling" />
     <MESSAGE value="ExpressHandling fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="ExpressHandling fix" />
+    <MESSAGE value="." />
+    <MESSAGE value="giftwrap" />
+    <MESSAGE value="giftwrap fix" />
+    <MESSAGE value="seller" />
+    <option name="LAST_COMMIT_MESSAGE" value="seller" />
   </component>
 </project>
