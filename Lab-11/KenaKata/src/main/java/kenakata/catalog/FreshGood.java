@@ -33,6 +33,11 @@ public class FreshGood extends CatalogItem  {
     }
 
     @Override
+    public String lebel() {
+        return "";
+    }
+
+    @Override
     public boolean isWeighable() {
         return true;
 
@@ -41,5 +46,8 @@ public class FreshGood extends CatalogItem  {
     @Override
     public double weight() {
         return weight;
+    }
+    public boolean isColdchain(){
+        return true;
     }
 }

@@ -16,18 +16,34 @@ public class StockedGood extends CatalogItem{
         return 0;
     }
 
-    public int commissionOn(int i) {
+    @Override
+    public long commissionOn(long i) {
+        return (long) (i*.08);
     }
 
     @Override
-    public boolean weightAble() {
+    public int returnDays() {
+        return 7;
+    }
+
+    @Override
+    public String lebel() {
+        return "";
+    }
+
+    @Override
+    public boolean insurable() {
         return true;
     }
 
-    public void reserve(int i) {
+    @Override
+    public boolean returnable() {
+        return true;
     }
 
-    public int remaining() {
+    @Override
+    public boolean isWeighable() {
+        return true;
     }
 
     @Override

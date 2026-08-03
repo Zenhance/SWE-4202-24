@@ -1,18 +1,21 @@
 package kenakata.catalog;
 
-import java.nio.charset.Charset;
 
-public class WarrantyPlan {
-    public WarrantyPlan(StockedGood lamp) {
+
+public class WarrantyPlan implements Chargeable{
+
+    @Override
+    public long unitVat() {
+        return 0;
     }
 
-    public int unitCharge() {
+    @Override
+    public long unitCharge() {
+        return 0;
     }
 
-    public int unitVat() {
-    }
-
-    public Charset label() {
-        return null;
+    @Override
+    public String lebel() {
+        return "";
     }
 }
