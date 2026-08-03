@@ -1,3 +1,5 @@
+package kenakata.payment;
+import kenakata.exceptions.EmptyWalletException;
 public class MobileWalletPayment implements PaymentMethod {
 
     private final Wallet wallet;
