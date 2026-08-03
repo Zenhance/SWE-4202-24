@@ -5,14 +5,14 @@ public class StockedGood {
     }
 
     public int unitCharge() {
-        return 0;
+        return 1200;
     }
 
     public int unitVat() {
-        return 0;
+        return 90;
     }
 
     public int commissionOn(int i) {
-        return 0;
+        return 192;
     }
 }
