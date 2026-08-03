@@ -10,8 +10,16 @@ public class PriceBreakdown {
     private Zone zone;
 
     public PriceBreakdown(ArrayList<Chargeable> chargeables, Coupon coupon, Zone zone) {
+        if (chargeables == null)
+            throw new IllegalArgumentException("ArrayList of chargeables cannot be null");
         this.chargeables = chargeables;
+
+        if (coupon == null)
+            throw new IllegalArgumentException("Coupon cannot be null");
         this.coupon = coupon;
+
+        if (zone == null)
+            throw new IllegalArgumentException("Delivery zone cannot be null");
         this.zone = zone;
     }
 

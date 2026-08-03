@@ -7,7 +7,6 @@ import kenakata.exceptions.CheckoutException;
 import kenakata.exceptions.ReturnNotAllowedException;
 import kenakata.payment.PaymentMethod;
 
-import java.nio.charset.CharacterCodingException;
 import java.util.ArrayList;
 
 public class Order {
