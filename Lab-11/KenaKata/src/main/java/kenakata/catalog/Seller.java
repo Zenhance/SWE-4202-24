@@ -12,5 +12,7 @@ public class Seller {
 public String getName(){
         return name;
 
+
 }
+
 }

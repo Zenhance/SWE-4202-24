@@ -18,5 +18,22 @@ public CatalogItem(String SKU, String title, double UnitPrice, Seller seller, in
 public double unitCharge(){
     return UnitPrice;
 }
+    public String sku() {
+        return SKU;
+    }
+
+    public String title() {
+        return title;
+    }
+
+
+
+    public Seller seller() {
+        return seller;
+    }
+
+    public int remaining() {
+        return Stock;
+    }
 
 }
