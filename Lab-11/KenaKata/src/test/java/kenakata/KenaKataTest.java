@@ -438,7 +438,7 @@ class KenaKataTest {
 
         @Test
         @DisplayName("A returnable line comes back within its window")
-        void returnWithinWindow() throws Exception {
+        void returnWithinWindow() throws Throwable {
             Order order = placedOrderWith(lamp(seller())); // stocked window is 7 days
             order.acceptReturn(0, 105); // placed day 100, within 7 days
             assertTrue(order.lines().get(0).returned());
@@ -461,7 +461,7 @@ class KenaKataTest {
 
         @Test
         @DisplayName("The same line cannot be returned twice")
-        void doubleReturnThrows() throws Exception {
+        void doubleReturnThrows() throws Throwable {
             Order order = placedOrderWith(lamp(seller()));
             order.acceptReturn(0, 101);
             assertThrows(ReturnNotAllowedException.class, () -> order.acceptReturn(0, 102));
@@ -527,7 +527,7 @@ class KenaKataTest {
 
         @Test
         @DisplayName("A returned line reduces its seller's payout by the line value")
-        void returnReducesPayout() throws Exception {
+        void returnReducesPayout() throws Throwable {
             Seller a = new Seller("A");
             StockedGood p1 = new StockedGood("P1", "Widget", 1000, 10, a, 500);
 

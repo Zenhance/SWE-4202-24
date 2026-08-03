@@ -33,7 +33,7 @@ import kenakata.settlement.SettlementReport;
  */
 public final class Main {
 
-    public static void main(String[] args) throws CheckoutException {
+    public static void main(String[] args) throws Throwable {
         // ---- Sellers and catalogue -------------------------------------------------------
         Seller alpha = new Seller("Alpha Electronics");
         Seller beta = new Seller("Beta Books");

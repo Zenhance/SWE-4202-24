@@ -9,7 +9,7 @@ private double UnitPrice;
 private int Stock;
 private Seller seller;
 
-public CatalogItem(String SKU, String title, double UnitPrice, Seller seller, int Stock){
+public CatalogItem(String SKU, String title, double UnitPrice, int Stock, Seller seller){
     this.SKU=SKU;
     this.title=title;
     this.UnitPrice=UnitPrice;

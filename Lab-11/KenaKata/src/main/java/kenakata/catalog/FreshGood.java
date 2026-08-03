@@ -3,7 +3,7 @@ package kenakata.catalog;
 public final class FreshGood extends CatalogItem
         implements Weighable, ColdChain, Insurable, Returnable {
 
-    private static final double COMISSION = 5.0;
+    private static final double COMISSION = 5.0/100.0;
     private static final long COLD_CHAIN_SURCHARGE = 50;
     private static final int RETURN_WINDOW_DAYS = 2;
 
@@ -11,7 +11,7 @@ public final class FreshGood extends CatalogItem
 
     public FreshGood(String sku, String title, long unitPrice, int stock, Seller seller,
                      long unitWeightGrams) {
-        super(sku, title, unitPrice, seller, stock);
+        super(sku, title, unitPrice, stock, seller);
         if (unitWeightGrams <= 0) {
             throw new IllegalArgumentException("Weight must be positive");
         }
@@ -42,7 +42,7 @@ public final class FreshGood extends CatalogItem
     }
 
     @Override
-    public long vatCharge() {
+    public long unitVat() {
         return 0;
     }
 }

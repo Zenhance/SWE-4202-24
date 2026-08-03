@@ -15,7 +15,7 @@ public final class MobileWalletPayment implements PaymentMethod {
     }
 
     @Override
-    public void authorise(long amount) throws  EmptyWalletException {
+    public void authorise(long amount) throws EmptyWalletException {
         wallet.debit(amount);
     }
 }

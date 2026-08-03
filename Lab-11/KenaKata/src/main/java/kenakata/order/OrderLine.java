@@ -40,7 +40,7 @@ public final class OrderLine {
     }
 
     public long vat() {
-        return content.vatCharge() * quantity;
+        return content.unitVat() * quantity;
     }
 
     public boolean insured() {

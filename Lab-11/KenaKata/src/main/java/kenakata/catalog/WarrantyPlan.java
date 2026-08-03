@@ -3,8 +3,8 @@ package kenakata.catalog;
 
 public final class WarrantyPlan implements Chargeable, Labeled {
 
-    private static final double CHARGE_RATE = 10.0;
-    private static final double VAT_RATE = 15.0;
+    private static final double CHARGE_RATE = 10.0/100.0;
+    private static final double VAT_RATE = 15.0/100.0;
 
     private final CatalogItem covered;
 
@@ -21,7 +21,7 @@ public final class WarrantyPlan implements Chargeable, Labeled {
     }
 
     @Override
-    public long vatCharge() {
+    public long unitVat() {
         return (long) Math.ceil(unitCharge()*VAT_RATE);
     }
 

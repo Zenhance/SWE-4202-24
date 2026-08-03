@@ -93,12 +93,7 @@ public final class Order {
         return new PriceBreakdown(subtotal, discount, delivery, vat, insurance, serviceFee, grandTotal);
     }
 
-    /**
-     * Places the order: reserves stock and takes payment atomically. Every reason the
-     * order could be refused -- invalid coupon, insufficient stock on any line, declined
-     * payment -- is checked before any stock is reserved or any money moves, so a refusal
-     * leaves every stock count and balance exactly as it was.
-     */
+
     public void place(PaymentMethod payment, long day) throws CheckoutException {
         PriceBreakdown breakdown = quote(day); // validates the coupon; throws before anything moves
 
@@ -122,8 +117,7 @@ public final class Order {
         this.finalBreakdown = breakdown;
     }
 
-    /** Accepts a return of the line at {@code lineIndex}, refusing if it cannot be
-     * returned, has already been returned, or is past its window. */
+
     public void acceptReturn(int lineIndex, long returnDay) throws Throwable {
         lines.get(lineIndex).markReturned(placedDay, returnDay);
     }

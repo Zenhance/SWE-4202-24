@@ -6,7 +6,7 @@ package kenakata.catalog;
 public final class GiftWrap implements Chargeable, Labeled {
 
     private static final long CHARGE = 50;
-    private static final double VAT = 7.5;
+    private static final double VAT = 7.5/100.0;
 
     @Override
     public long unitCharge() {
@@ -14,7 +14,7 @@ public final class GiftWrap implements Chargeable, Labeled {
     }
 
     @Override
-    public long vatCharge() {
+    public long unitVat() {
         return (long) Math.ceil(CHARGE*VAT);
     }
 

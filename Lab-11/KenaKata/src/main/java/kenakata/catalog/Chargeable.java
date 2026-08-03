@@ -2,6 +2,6 @@ package kenakata.catalog;
 
 public interface Chargeable {
     long unitCharge();
-    long vatCharge();
+    long unitVat();
 
 }
