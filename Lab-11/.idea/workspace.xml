@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51081361-6857-41f6-8e00-368f50dbeaac" name="Changes" comment="cod fixing">
-      <change afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/order/Coupon.java" afterDir="false" />
+    <list default="true" id="51081361-6857-41f6-8e00-368f50dbeaac" name="Changes" comment="coupon.order">
+      <change beforePath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/order/Coupon.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/order/Coupon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,62 +132,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1785213378197</updated>
-    </task>
-    <task id="LOCAL-00024" summary="DigitalGood">
-      <option name="closed" value="true" />
-      <created>1785705361725</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1785705361725</updated>
-    </task>
-    <task id="LOCAL-00025" summary="freshGood">
-      <option name="closed" value="true" />
-      <created>1785705538598</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1785705538598</updated>
-    </task>
-    <task id="LOCAL-00026" summary="StockedGood">
-      <option name="closed" value="true" />
-      <created>1785705702298</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1785705702298</updated>
-    </task>
-    <task id="LOCAL-00027" summary=".">
-      <option name="closed" value="true" />
-      <created>1785785117864</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1785785117864</updated>
-    </task>
-    <task id="LOCAL-00028" summary=".">
-      <option name="closed" value="true" />
-      <created>1785785537521</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1785785537521</updated>
-    </task>
-    <task id="LOCAL-00029" summary=".">
-      <option name="closed" value="true" />
-      <created>1785785779264</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1785785779264</updated>
-    </task>
-    <task id="LOCAL-00030" summary="catalog item fix">
-      <option name="closed" value="true" />
-      <created>1785786138566</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1785786138566</updated>
     </task>
     <task id="LOCAL-00031" summary="catalog item fix">
       <option name="closed" value="true" />
@@ -525,7 +469,63 @@
       <option name="project" value="LOCAL" />
       <updated>1785792867884</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="coupon.order">
+      <option name="closed" value="true" />
+      <created>1785793512090</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1785793512090</updated>
+    </task>
+    <task id="LOCAL-00074" summary="coupon.order added constructor">
+      <option name="closed" value="true" />
+      <created>1785793552255</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1785793552255</updated>
+    </task>
+    <task id="LOCAL-00075" summary="coupon.order added constructor">
+      <option name="closed" value="true" />
+      <created>1785793581762</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1785793581762</updated>
+    </task>
+    <task id="LOCAL-00076" summary="coupon.order added constructor">
+      <option name="closed" value="true" />
+      <created>1785793688058</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1785793688058</updated>
+    </task>
+    <task id="LOCAL-00077" summary="coupon.order added constructor">
+      <option name="closed" value="true" />
+      <created>1785793781737</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1785793781737</updated>
+    </task>
+    <task id="LOCAL-00078" summary="coupon.order">
+      <option name="closed" value="true" />
+      <created>1785794001276</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1785794001276</updated>
+    </task>
+    <task id="LOCAL-00079" summary="coupon.order">
+      <option name="closed" value="true" />
+      <created>1785795856847</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1785795856847</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -555,8 +555,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="PriceBreakdown" />
-    <MESSAGE value="catalog" />
     <MESSAGE value="automated extension skeleton" />
     <MESSAGE value="DigitalGood" />
     <MESSAGE value="freshGood" />
@@ -580,6 +578,8 @@
     <MESSAGE value="mobile wallet fixing" />
     <MESSAGE value="card pay fixing" />
     <MESSAGE value="cod fixing" />
-    <option name="LAST_COMMIT_MESSAGE" value="cod fixing" />
+    <MESSAGE value="coupon.order added constructor" />
+    <MESSAGE value="coupon.order" />
+    <option name="LAST_COMMIT_MESSAGE" value="coupon.order" />
   </component>
 </project>
