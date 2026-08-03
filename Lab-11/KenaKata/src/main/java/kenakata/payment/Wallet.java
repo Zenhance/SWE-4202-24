@@ -1,9 +1,9 @@
 package kenakata.payment;
 
 public class Wallet {
-    private double balance;
+    private long balance;
 
-    public Wallet(double balance){
+    public Wallet(long balance){
         if(balance<0)
             throw new IllegalArgumentException("Invalid Amount");
 
@@ -11,7 +11,7 @@ public class Wallet {
         this.balance =balance;
     }
 
-    public double balance() {
+    public long balance() {
         return balance;
     }
 
