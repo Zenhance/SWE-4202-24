@@ -21,5 +21,10 @@ public class DeliveryCalculator {
         if (totalWeightGrams == 0 && freshLineCount == 0) {
             return 0;
         }
+        long billedKg = (long) Math.ceil(totalWeightGrams / 1000.0);
+        long shipping = (zone == Zone.DHAKA) ? (60 + billedKg * 20) : (120 + billedKg * 35);
+        long coldChainSurcharge = freshLineCount * 50L;
+
+        return shipping + coldChainSurcharge;
     }
 }
