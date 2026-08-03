@@ -46,4 +46,8 @@ public abstract class CatalogItem implements Chargeable{
 
     public abstract long commissionOn(int amount);
 
+    public int remaining(){
+        return stock;
+    }
+
 }
