@@ -14,5 +14,8 @@ public final class SettlementReport {
         this.payouts = List.copyOf(payouts);
         this.platformRevenue = platformRevenue;
     }
+public List<SellerPayout> payouts(){
+        return Collections.unmodifiableList(payouts);
+}
 
 }
