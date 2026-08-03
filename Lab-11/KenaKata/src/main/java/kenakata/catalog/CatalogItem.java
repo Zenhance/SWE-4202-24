@@ -4,12 +4,12 @@ public abstract class CatalogItem implements Chargable {
 
 private String sku;
 private String title;
-private double unitPrice;
+private long unitPrice;
 private int stockRemaining;
 private Seller seller;
 
 
-    public CatalogItem(String sku, String title, double unitPrice, int stockRemaining, Seller seller)
+    public CatalogItem(String sku, String title, long unitPrice, int stockRemaining, Seller seller)
     {
         if (sku==null || sku.isBlank())
 throw new IllegalArgumentException( "Sku can not be null");
@@ -50,7 +50,7 @@ throw new IllegalArgumentException("Title can not be null");
     }
 
     @Override
-    public double unitCharge()
+    public long unitCharge()
     {
         return unitPrice;
     }
@@ -74,7 +74,7 @@ throw new IllegalArgumentException("Title can not be null");
             throw new OutOfStockException(label() + " has only " + stockRemaining + " units, out of " + qty);
         }
         stockRemaining=stockRemaining-qty;
-    }  public abstract double commissionOn(double lineValue);
+    }  public abstract long commissionOn(long lineValue);
 }
 
 

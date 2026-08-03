@@ -1,11 +1,10 @@
 package kenakata.catalog;
 
-
-public class StockedGood extends CatalogItem implements Weighable, Returnable, Insurable, Discountable
+public class FreshGood extends CatalogItem implements Weighable, Returnable, ColdChain
 {
-    private double weightGrams;
+    private long weightGrams;
 
-    public StockedGood(String sku, String title, double unitPrice, int stock, Seller seller, double weightGrams)
+    public FreshGood(String sku, String title, long unitPrice, int stock, Seller seller, long weightGrams)
     {
         super(sku, title, unitPrice, stock, seller);
         if(weightGrams<=0)
