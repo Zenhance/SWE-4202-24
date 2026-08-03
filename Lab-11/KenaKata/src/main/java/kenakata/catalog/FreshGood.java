@@ -27,7 +27,7 @@ public class FreshGood extends CatalogItem implements Weighable, ColdChain, Insu
         return 2;
     }
     @Override
-    public long coldChainSubcharge(){
+    public long coldChainSurcharge(){
         return 50;
     }
     @Override
