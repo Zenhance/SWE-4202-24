@@ -1,13 +1,11 @@
 package kenakata.order;
 
 public class Coupon {
-
     private String code;
     private int percentage;
     private long maximumDiscount;
     private long minimumSpend;
     private int expiryDay;
-
 
     public Coupon(String code, int percentage, long maximumDiscount, long minimumSpend, int expiryDay) {
         if(percentage < 0 || percentage > 100) {
