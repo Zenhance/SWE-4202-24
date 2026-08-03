@@ -34,7 +34,7 @@ public class OrderLine {
     }
 
     public long lineValue(){
-        return item.unitCharge()*quantity;
+        return (long)(item.unitCharge()*quantity);
     }
  public long lineVat(){
         return item.unitVat()*quantity;
@@ -45,9 +45,6 @@ public class OrderLine {
         long insurableValue= ((Insurable).item).insurableValue()*quantity;
         long fee = (long)Math.ceil(insurableValue*0.01);
         return Math.max(fee,20);
-
- }
-
-
+    }
 
 }
