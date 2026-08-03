@@ -7,15 +7,24 @@ import kenakata.catalog.FreshGood;
 import java.util.ArrayList;
 
 public class DeliveryCalculator {
+    private ArrayList<Chargeable> chargeables;
 
-    public boolean onlyDigitalGood(ArrayList<Chargeable> chargeables) {
+    public DeliveryCalculator(ArrayList<Chargeable> chargeables) {
+        this.chargeables = chargeables;
+    }
+
+    public DeliveryCalculator() {
+
+    }
+
+    public boolean onlyDigitalGood() {
         for (Chargeable c : chargeables) {
             if (!(c instanceof DigitalGood)) return false;
         }
         return true;
     }
 
-    public boolean hasFreshGood(ArrayList<Chargeable> chargeables) {
+    public boolean hasFreshGood() {
         for (Chargeable c : chargeables) {
             if (c instanceof FreshGood)
                 return true;
