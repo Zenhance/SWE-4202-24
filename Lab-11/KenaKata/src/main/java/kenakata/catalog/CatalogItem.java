@@ -1,14 +1,14 @@
 package kenakata.catalog;
 import kenakata.exceptions.OutOfStockException;
 
-public abstract class LineItem {
+public abstract class CatalogItem {
     private final String sku;
     private final String title;
     private final long price;
     private int count;
     private final Seller seller;
     
-    public LineItem(String sku, String title, long price, int count, Seller seller) {
+    public CatalogItem(String sku, String title, long price, int count, Seller seller) {
         if(sku == null || sku.isEmpty() || title == null || title.isEmpty()){
             throw new IllegalArgumentException("sku or title is null or empty");
         }

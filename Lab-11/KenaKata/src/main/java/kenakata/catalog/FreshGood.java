@@ -1,6 +1,6 @@
 package kenakata.catalog;
 
-public class FreshGood extends LineItem implements Weighable, ColdChain, Insurable, Returnable{
+public class FreshGood extends CatalogItem implements Weighable, ColdChain, Insurable, Returnable{
     private final double weight;
     
     public FreshGood(String sku, String title, long price, int count, Seller seller, double weight){

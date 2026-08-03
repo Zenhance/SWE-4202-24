@@ -1,6 +1,6 @@
 package kenakata.catalog;
 
-public class StockedGood extends LineItem implements Weighable, Insurable, Returnable{
+public class StockedGood extends CatalogItem implements Weighable, Insurable, Returnable{
     private final double weight;
     
     public StockedGood(String sku, String title, long price, int count, Seller seller, double weight) {
