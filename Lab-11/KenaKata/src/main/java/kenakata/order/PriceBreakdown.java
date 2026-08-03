@@ -66,10 +66,10 @@ public class PriceBreakdown {
     }
 
     public int serviceFee() {
-        return 0;
+        return (int) Math.ceil(subtotal() * 0.01);
     }
 
     public int grandTotal() {
-        return 0;
+        return subtotal() - discount() + delivery() + vat() + insurance() + serviceFee();
     }
 }
