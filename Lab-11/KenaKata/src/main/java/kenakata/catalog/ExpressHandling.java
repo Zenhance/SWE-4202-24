@@ -13,9 +13,9 @@ public class ExpressHandling implements Chargeable {
 
 
 
-    public int commissionOn(int total) {
-        return (int) Math.ceil(total*0.00);
-    }
+    @Override
+    public String label() {return "Express handling";}
+
 }
 
 
