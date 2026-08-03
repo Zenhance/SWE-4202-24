@@ -48,4 +48,26 @@ public class Order {
             throw new NonInsurableException("Non Insurable Product");
         }
     }
+
+    public PriceBreakdown quote(int day) throws CheckoutException {
+        long subtotal = 0;
+        long discountableBase = 0;
+        long vat = 0;
+        long insurance = 0;
+
+        for (OrderLine line : lines) {
+            long lValue = line.lineValue();
+            subtotal += lValue;
+            vat += line.lineVat();
+
+            if (line.item() instanceof StockedGood) {
+                discountableBase += lValue;
+            }
+
+            if (line.isInsured()) {
+                long insFee = (long) Math.ceil(lValue * 0.01);
+                insurance += Math.max(insFee, 20);
+            }
+        }
+    }
 }
