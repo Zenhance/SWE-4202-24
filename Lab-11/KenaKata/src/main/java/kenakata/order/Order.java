@@ -118,4 +118,19 @@ public final class Order {
             throw new IllegalArgumentException("Return day cannot be negative");
         }
         OrderLine line = lineAt(lineIndex);
-}
+        if (line.returned()) {
+            throw new ReturnNotAllowedException("The line has already been returned");
+        }
+        if (!(line.unit() instanceof Returnable returnable)) {
+            throw new ReturnNotAllowedException("The line is not returnable");
+        }
+        int finalReturnDay=placedDay +returnable.returnWindowDays();
+        if(returnDay >finalReturnDay) {
+            throw new ReturnNotAllowedException("The return window has expired");
+        }
+        line.markReturned();
+        if(line.unit() instanceof CatalogItem item){
+            item.release(line.quantity());
+        }
+
+        }
