@@ -4,6 +4,7 @@ public class Order {
     public Order(Object dhaka, DeliveryCalculator deliveryCalculator) {
     }
 
-        public void addProduct(StockedGood stockedGood, int i) {
+    public void addProduct(StockedGood stockedGood, int i) {
+
     }
 }

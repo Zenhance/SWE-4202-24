@@ -1,7 +1,8 @@
 package kenakata;
 
-public class DigitalGood {
+public class DigitalGood extends StockedGood {
     public DigitalGood(String s, String s1, int i, int i1, Seller seller) {
+        super();
     }
 
     public int unitCharge() {

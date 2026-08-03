@@ -1,7 +1,8 @@
 package kenakata;
 
-public class FreshGood {
+public class FreshGood extends StockedGood {
     public FreshGood(String s, String hilsa, int i, int i1, Seller seller, int i2) {
+        super();
     }
 
     public int unitVat() {
