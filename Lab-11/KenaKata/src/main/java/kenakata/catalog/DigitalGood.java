@@ -6,7 +6,7 @@ public class DigitalGood extends CatalogueItem {
     private static final double comission_rate=0.2;
     private static final double vat=0.05;
 
-    public StockedGood(String sku, String title, long unitprice, int livestock, Seller seller ) {
+    public DigitalGood(String sku, String title, long unitprice, int livestock, Seller seller ) {
         super(sku, title, unitprice, livestock, seller);
 
     }
