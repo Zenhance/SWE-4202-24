@@ -1,6 +1,8 @@
 package kenakata.order;
 
 import kenakata.catalog.Chargeable;
+import kenakata.catalog.FreshGood;
+import kenakata.catalog.StockedGood;
 
 import java.util.ArrayList;
 
@@ -45,11 +47,18 @@ public class PriceBreakdown {
     }
 
     public int delivery() {
+        int deliveryCharge = 0;
         final int DHAKA = 140;
         final int  OUTSIDE = 120;
 
-        if (zone == Zone.DHAKA) return DHAKA;
-        else return OUTSIDE;
+        if (zone == Zone.DHAKA) deliveryCharge = DHAKA;
+        else deliveryCharge = OUTSIDE;
+
+        for (Chargeable c : chargeables) {
+            if (c instanceof FreshGood)
+                deliveryCharge += 50;
+        }
+        return deliveryCharge;
     }
 
     public int insurance() {
