@@ -21,4 +21,14 @@ public class Seller {
         Seller seller = (Seller) o;
         return name.equals(seller.name);
     }
+
+    @Override
+    public int hashCode() {
+        return name.hashCode();
+    }
+
+    @Override
+    public String toString() {
+        return name;
+    }
 }
