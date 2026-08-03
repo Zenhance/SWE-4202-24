@@ -1,4 +1,7 @@
 package kenakata.exceptions;
 
-public class ReturnNotAllowedException {
+public class ReturnNotAllowedException extends Exception {
+    public ReturnNotAllowedException(String message) {
+        super(message);
+    }
 }
