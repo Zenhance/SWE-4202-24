@@ -15,6 +15,7 @@ public class Order {
     private boolean placed = false;
     private PriceBreakdown finalBreakdown;
     private int placementDay;
+
     public Order(Zone zone, DeliveryCalculator deliveryCalculator) {
         this.zone = zone;
         this.deliveryCalculator = deliveryCalculator;
@@ -23,6 +24,7 @@ public class Order {
     public void addProduct(CatalogItem item, int quantity) {
         lines.add(new OrderLine(item, quantity));
     }
+
     public void addAddOn(Chargeable addOn) {
         lines.add(new OrderLine(addOn, 1));
     }
@@ -30,8 +32,9 @@ public class Order {
     public void applyCoupon(Coupon coupon) {
         this.coupon = coupon;
     }
+
     public void insure(int lineIndex) throws NotInsurableException {
-        if(lineIndex < 0 || lineIndex >= lines.size()){
+        if (lineIndex < 0 || lineIndex >= lines.size()) {
             throw new NotInsurableException("Invalid line index");
         }
         OrderLine line = lines.get(lineIndex);
@@ -39,5 +42,20 @@ public class Order {
             throw new NotInsurableException("Line item is not insurable");
         }
         line.setInsured(true);
+    }
+
+    public PriceBreakdown quote(int currentDay) throws CouponRejectedException {
+        long subtotal = 0;
+        long discountableBase = 0;
+        long vat = 0;
+        long insurance = 0;
+        for (OrderLine line : lines) {
+            subtotal += line.lineValue();
+            vat += line.lineVat();
+            insurance += line.insuranceFee();
+            if (line.item() instanceof StockedGood) {
+                discountableBase += line.lineValue();
+            }
+        }
     }
 }
