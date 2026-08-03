@@ -7,4 +7,11 @@ public class Order {
     public void addProduct(StockedGood stockedGood, int i) {
 
     }
+
+    public void addAddOn(GiftWrap giftWrap) {
+    }
+
+    public void applyCoupon(Coupon eid10) {
+
+    }
 }
