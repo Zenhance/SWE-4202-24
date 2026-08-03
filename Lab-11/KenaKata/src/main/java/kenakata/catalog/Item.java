@@ -1,4 +1,4 @@
 package kenakata.catalog;
 
-public class Item {
+public interface Item extends Chargeable{
 }

@@ -1,4 +1,5 @@
 package kenakata.catalog;
 
-public class Insurable {
+public interface Insurable {
+    long insurableValue();
 }

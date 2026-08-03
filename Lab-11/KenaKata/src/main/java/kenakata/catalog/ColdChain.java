@@ -1,4 +1,5 @@
 package kenakata.catalog;
 
-public class ColdChain {
+public interface ColdChain {
+    long coldChainSurCharge();
 }
