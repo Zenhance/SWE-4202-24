@@ -18,4 +18,32 @@ public class PriceBreakdown {
         this.serviceFee = serviceFee;
         this.grandTotal = grandTotal;
     }
+
+    public long subtotal() {
+        return subtotal;
+    }
+
+    public long discount() {
+        return discount;
+    }
+
+    public long delivery() {
+        return delivery;
+    }
+
+    public long vat() {
+        return vat;
+    }
+
+    public long insurance() {
+        return insurance;
+    }
+
+    public long serviceFee() {
+        return serviceFee;
+    }
+
+    public long grandTotal() {
+        return grandTotal;
+    }
 }
