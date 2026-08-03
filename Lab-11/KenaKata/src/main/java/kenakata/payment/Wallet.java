@@ -15,14 +15,14 @@ public class Wallet {
         return balance;
     }
 
-    public void debit(double amount){
+    public void debit(long amount){
         if(amount>balance) {
             throw new IllegalArgumentException("Invalid Debit Amount");
         }
         balance-=amount;
     }
 
-    public void credit(double amount){
+    public void credit(long amount){
         if(amount<=0) {
             throw new IllegalArgumentException("Invalid Credit Amount");
         }
