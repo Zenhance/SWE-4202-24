@@ -41,4 +41,7 @@ public class Order {
     public Map<Object, Object> lines() {
         return null;
     }
+
+    public void addProduct(StockedGood p1, int i) {
+    }
 }
