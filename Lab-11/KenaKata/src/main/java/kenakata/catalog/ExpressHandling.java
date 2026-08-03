@@ -1,11 +1,11 @@
 package kenakata.catalog;
 
-public class ExpressHandling {
-    public int unitVat() {
+public class ExpressHandling implements Chargeable {
+    public long unitVat() {
         return 9;
     }
 
-    public int unitCharge() {
+    public long unitCharge() {
         return 120;
     }
 }

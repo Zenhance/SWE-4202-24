@@ -6,6 +6,7 @@ import kenakata.catalog.CatalogItem;
 import kenakata.catalog.GiftWrap;
 import kenakata.catalog.StockedGood;
 import kenakata.payment.PaymentMethod;
+import kenakata.catalog.Chargeable;
 
 import java.util.Map;
 
@@ -56,5 +57,9 @@ public class Order {
     }
 
     public void place(PaymentMethod payment, int today) {
+    }
+
+    public void addAddOn(Chargeable addOn) {
+
     }
 }

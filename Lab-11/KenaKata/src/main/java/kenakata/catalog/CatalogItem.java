@@ -1,4 +1,4 @@
 package kenakata.catalog;
 
-public class CatalogItem {
+public abstract class CatalogItem implements Chargeable {
 }

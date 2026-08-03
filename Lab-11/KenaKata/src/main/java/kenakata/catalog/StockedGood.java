@@ -1,6 +1,6 @@
 package kenakata.catalog;
 
-public class StockedGood {
+public class StockedGood extends CatalogItem {
     public StockedGood(String s, String tableLamp, int i, int i1, Seller s1, int i2) {
     }
 
@@ -8,11 +8,11 @@ public class StockedGood {
 
     }
 
-    public int unitCharge() {
+    public long unitCharge() {
         return 1200;
     }
 
-    public int unitVat() {
+    public long unitVat() {
         return 90;
     }
 

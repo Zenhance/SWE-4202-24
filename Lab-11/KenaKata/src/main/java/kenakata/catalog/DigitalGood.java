@@ -5,11 +5,11 @@ public class DigitalGood extends StockedGood {
         super();
     }
 
-    public int unitCharge() {
+    public long unitCharge() {
         return 300;
     }
 
-    public int unitVat() {
+    public long unitVat() {
         return 15;
     }
 

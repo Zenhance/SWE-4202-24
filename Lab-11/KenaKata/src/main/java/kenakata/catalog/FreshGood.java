@@ -5,7 +5,7 @@ public class FreshGood extends StockedGood {
         super();
     }
 
-    public int unitVat() {
+    public long unitVat() {
         return 0;
     }
 
