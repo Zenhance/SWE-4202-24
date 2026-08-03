@@ -37,7 +37,7 @@ public class Order {
         this.coupon = coupon;
     }
 
-    public void insure(int lineIndex) throws NonInsurableException {
+    public void insure(int lineIndex) throws NotInsurableException {
         if (lineIndex < 0 || lineIndex >= lines.size()) {
             throw new IllegalArgumentException("Invalid line index");
         }
@@ -45,7 +45,7 @@ public class Order {
         if (line.item() instanceof Insurable) {
             line.setInsured(true);
         } else {
-            throw new NonInsurableException("Non Insurable Product");
+            throw new NotInsurableException("Non Insurable Product");
         }
     }
 
@@ -105,9 +105,9 @@ public class Order {
         this.finalBreakdown = bd;
     }
 
-    public void acceptReturn(int lineIndex, int returnDay) throws NonReturnableException {
+    public void acceptReturn(int lineIndex, int returnDay) throws ReturnNotAllowedException {
         if (!isPlaced) {
-            throw new NonReturnableException("Order is not placed yet");
+            throw new ReturnNotAllowedException("Order is not placed yet");
         }
         if (lineIndex < 0 || lineIndex >= lines.size()) {
             throw new IllegalArgumentException("Invalid line index");
@@ -116,16 +116,16 @@ public class Order {
         OrderLine line = lines.get(lineIndex);
 
         if (line.returned()) {
-            throw new NonReturnableException("Line has already been returned");
+            throw new ReturnNotAllowedException("Line has already been returned");
         }
 
         if (!(line.item() instanceof Returnable returnableItem)) {
-            throw new NonReturnableException("Item is not returnable");
+            throw new ReturnNotAllowedException("Item is not returnable");
         }
 
         int window = returnableItem.returnWindowDays();
         if (returnDay > placementDay + window) {
-            throw new NonReturnableException("Return window expired");
+            throw new ReturnNotAllowedException("Return window expired");
         }
 
         line.markReturned();

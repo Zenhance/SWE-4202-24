@@ -1,6 +1,6 @@
 package kenakata.order;
 
-import kenakata.exceptions.InvalidCouponException;
+import kenakata.exceptions.CouponRejectedException;
 
 public class Coupon {
     private String code;
@@ -24,12 +24,12 @@ public class Coupon {
         return code;
     }
 
-    public long calculateDiscount(long discountableBase, int currentDay) throws InvalidCouponException {
+    public long calculateDiscount(long discountableBase, int currentDay) throws CouponRejectedException {
         if (currentDay > lastValidDay) {
-            throw new InvalidCouponException("Coupon expired");
+            throw new CouponRejectedException("Coupon expired");
         }
         if (discountableBase < minSpend) {
-            throw new InvalidCouponException("Order base below minimum spend requirement");
+            throw new CouponRejectedException("Order base below minimum spend requirement");
         }
         long discount = (long) Math.ceil(discountableBase * (percentage / 100.0));
         return Math.min(discount, cap);
