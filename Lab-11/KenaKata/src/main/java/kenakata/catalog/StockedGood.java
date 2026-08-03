@@ -2,19 +2,14 @@ package kenakata.catalog;
 
 import kenakata.exceptions.OutOfStockException;
 
-public class StockedGood extends CatalogItem
-        implements Weighable, Insurable, Returnable, Discountable {
-             private long stock;
-             private long weight;
-
+public class StockedGood extends CatalogItem implements Weighable, Insurable, Returnable, Discountable {
+        private long stock;
+        private long weight;
     public StockedGood(String sku, String name, long price, long stock, Seller seller, long weight) {
-
         super(sku, name, price, seller);
-
         if(stock < 0) {
             throw new IllegalArgumentException("Invalid stock");
         }
-
         if(weight <= 0) {
             throw new IllegalArgumentException("Invalid weight");
         }
@@ -24,19 +19,15 @@ public class StockedGood extends CatalogItem
     public long remaining() {
         return stock;
     }
-    public void reserve(int quantity)
-            throws OutOfStockException {
-
+    public void reserve(int quantity) throws OutOfStockException {
         if(quantity <= 0) {
             throw new IllegalArgumentException("Invalid quantity");
         }
-
         if(quantity > stock) {
             throw new OutOfStockException("Not enough stock");
         }
         stock -= quantity;
     }
-
     @Override
     public long weight() {
         return weight;
