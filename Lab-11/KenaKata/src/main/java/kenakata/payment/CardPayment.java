@@ -15,4 +15,12 @@ public class CardPayment implements PaymentMethod {
     public long remainingLimit() {
         return limit;
     }
+
+    @Override
+    public void authorise(long amount) throws CardLimitExceededException {
+        if (amount > limit) {
+            throw new CardLimitExceededException("Card limit exceeded");
+        }
+        limit -= amount;
+    }
 }
