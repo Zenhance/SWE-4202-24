@@ -1,5 +1,7 @@
 package kenakata.order;
 
+import kenakata.exceptions.CouponRejectedException;
+
 public class Coupon {
     private final String couponCode;
     private final long percentage;
@@ -19,6 +21,11 @@ public class Coupon {
 
     public String couponCode() {return couponCode;}
     public long getPercentage() {return this.percentage;}
+
+    public long discount(long discountableBase,int today) throws CouponRejectedException {
+
+
+    }
 
 
 
