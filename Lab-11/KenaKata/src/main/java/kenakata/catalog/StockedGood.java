@@ -10,4 +10,14 @@ public class StockedGood extends CatalogItem implements Weighable, Insurable, Re
         }
         this.weightGrams = weightGrams;
     }
+
+    @Override
+    public int weightGrams() {
+        return weightGrams;
+    }
+
+    @Override
+    public long unitVat() {
+        return (long) Math.ceil(unitPrice() * 0.075);
+    }
 }
