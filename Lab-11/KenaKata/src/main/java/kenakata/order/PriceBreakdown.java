@@ -4,7 +4,7 @@ import kenakata.catalog.*;
 import java.util.*;
 
 public class PriceBreakdown {
-    private ArrayList<Changeable> changeables;
+    private ArrayList<Chargeable> chargeables;
     private Coupon coupon;
     private Zone zone;
     
