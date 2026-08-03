@@ -1,10 +1,12 @@
 package kenakata;
 
+import java.util.Map;
+
 public class Order {
     public Order(Object dhaka, DeliveryCalculator deliveryCalculator) {
     }
 
-    public void addProduct(StockedGood stockedGood, int i) {
+    public void addProduct(CatalogItem stockedGood, int i) {
 
     }
 
@@ -30,6 +32,13 @@ public class Order {
     }
 
     public Object finalBreakdown() {
+        return null;
+    }
+
+    public void acceptReturn(int i, int i1) {
+    }
+
+    public Map<Object, Object> lines() {
         return null;
     }
 }
