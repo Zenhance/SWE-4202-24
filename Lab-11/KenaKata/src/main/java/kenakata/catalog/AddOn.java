@@ -1,10 +1,10 @@
 package kenakata.catalog;
 
 public abstract class AddOn implements Chargeable {
-    public int unitVat() {
+    public long unitVat() {
     return 0;}
 
-    public int unitCharge() {
+    public long unitCharge() {
     return 0;}
 
 }

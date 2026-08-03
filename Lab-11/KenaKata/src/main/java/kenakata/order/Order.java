@@ -20,7 +20,7 @@ public class Order {
         this.quantity=quantity;
         Lines.add(new OrderLine(item,quantity));
     }
-    public void addAddOn(AddOn addon) {
+    public void addAddOn(Chargeable addon) {
         this.addOn=addOn;
     }
 

@@ -1,8 +1,8 @@
 package kenakata.catalog;
 
 public class StockedGood extends CatalogItem{
-    public StockedGood(String s, String tableLamp, int i, int i1, Seller alpha, int i2) {
-        super();
+    public StockedGood(String SKU, String TITLE, int UnitPrize, int StockCount, Seller seller) {
+        super(SKU,TITLE,UnitPrize,StockCount,seller);
     }
 
     public double remaining() {
@@ -10,6 +10,21 @@ public class StockedGood extends CatalogItem{
 
     }
 
-    public int unitVat() {
+    @Override
+    public long unitCharge() {
+        return 0;
+    }
+
+    @Override
+    public int commissionOn() {
+        return 0;
+    }
+
+    public long unitVat() {
     return 0;}
+
+    @Override
+    public void reserve() {
+
+    }
 }
