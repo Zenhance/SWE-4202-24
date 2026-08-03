@@ -38,6 +38,26 @@ public abstract class CatalogItem implements Chargeable {
     }
 
     @Override
+    public boolean isWeighable() {
+        return Chargeable.super.isWeighable();
+    }
+
+    @Override
+    public boolean returnable() {
+        return Chargeable.super.returnable();
+    }
+
+    @Override
+    public boolean insurable() {
+        return Chargeable.super.insurable();
+    }
+
+    @Override
+    public int returnDays() {
+        return Chargeable.super.returnDays();
+    }
+
+    @Override
     public long unitCharge() {
         return 0;
     }
@@ -47,11 +67,13 @@ public abstract class CatalogItem implements Chargeable {
         return 0;
     }
 
-    public abstract long commissionOn(int i);
+    public abstract long commissionOn(long i);
 
+    @Override
     public double weight() {
-        return 0;
+        return Chargeable.super.weight();
     }
+
     public void reserve(int quantity) throws OutOfStockException {
         if(quantity>liveStock){
         throw new OutOfStockException("Please enter different value");
