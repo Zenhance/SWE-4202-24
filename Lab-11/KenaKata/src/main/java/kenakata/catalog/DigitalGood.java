@@ -1,15 +1,34 @@
 package kenakata.catalog;
 
-public class DigitalGood {
-    public DigitalGood(String s, String s1, int i, int i1, Seller seller) {
+public final class DigitalGood extends CatalogItem {
+
+    public DigitalGood(
+            String sku,
+            String title,
+            long unitPrice,
+            int stock,
+            Seller seller
+    ) {
+        super(sku, title, unitPrice, stock, seller);
     }
 
-    public int unitCharge() {
+    @Override
+    public long unitVat() {
+        return Money.ceilFraction(
+                unitCharge(),
+                5,
+                100
+        );
     }
 
-    public int unitVat() {
-    }
+    @Override
+    public long commissionOn(long lineValue) {
+        requireLineValue(lineValue);
 
-    public int commissionOn(int i) {
+        return Money.ceilFraction(
+                lineValue,
+                20,
+                100
+        );
     }
 }
