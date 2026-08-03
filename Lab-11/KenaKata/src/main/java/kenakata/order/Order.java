@@ -32,4 +32,28 @@ public final class Order {
         this.zone = zone;
         this.deliveryCalculator=deliveryCalculator;
     }
+    public void addProduct(CatalogItem,int quantity){
+        ensureMutable();
+        if(item == null){
+            throw new IllegalArgumentException("Product must not be null");
+
+ lines.add(new OrderLine(item,quantity));        }
+    }
+    public void addAddOn(Chargeable addOn){
+        ensureMutable();
+        if(addOn == null){
+            throw new IllegalArgumentException("Add-on must not be null");
+        }
+        if(addOn instanceof CatalogItem){
+            throw new IllegalArgumentException("Use addProduct for catalogue item");
+        }
+        lines.add(new OrderLine(addOn,1));
+    }
+    public void applyCoupon(Coupon coupon) {
+        ensureMutable();
+        if (coupon == null) {
+            throw new IllegalArgumentException("Coupon must not be null");
+        }
+        this.coupon = coupon;
+    }
 }
