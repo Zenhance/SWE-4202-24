@@ -7,5 +7,9 @@ public class OrderLine {
     private final int quantity;
     private boolean insured;
     private boolean returned;
+    public OrderLine(Chargeable unit, int quantity) {
+        this.unit = unit;
+        this.quantity = quantity;
+    }
 
 }
