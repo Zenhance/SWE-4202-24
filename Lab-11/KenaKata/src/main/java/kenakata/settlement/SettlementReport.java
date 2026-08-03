@@ -8,6 +8,11 @@ public final class SettlementReport {
     private final long platformRevenue;
 
     public SettlementReport(List<SellerPayout> payouts, long platformRevenue){
-
+        if(payouts == null){
+            throw new IllegalArgumentException("Payout list must not be null");
+        }
+        this.payouts = List.copyOf(payouts);
+        this.platformRevenue = platformRevenue;
     }
+
 }
