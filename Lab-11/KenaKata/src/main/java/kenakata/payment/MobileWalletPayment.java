@@ -13,7 +13,7 @@ public class MobileWalletPayment implements PaymentMethod {
     }
 
     @Override
-    public void authorize(long amount) throws EmptyWalletException {
+    public void authorise(long amount) throws EmptyWalletException {
         wallet.debit(amount);
     }
 

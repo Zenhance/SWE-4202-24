@@ -10,7 +10,7 @@ public class CardPayment implements PaymentMethod{
     }
 
     @Override
-    public void authorize(long amount) throws PaymentDeclinedException {
+    public void authorise(long amount) throws PaymentDeclinedException {
         if(amount<0)
             throw new IllegalArgumentException("Amount can't be negative.");
 

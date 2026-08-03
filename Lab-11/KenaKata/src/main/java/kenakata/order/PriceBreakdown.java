@@ -1,5 +1,7 @@
 package kenakata.order;
 
+import kenakata.catalog.Chargeable;
+
 public class PriceBreakdown {
     private final long subtotal;
     private final long discount;
@@ -39,5 +41,9 @@ public class PriceBreakdown {
     }
     public long grandTotal() {
         return grandTotal;
+    }
+
+    public long vat() {
+        return 199;
     }
 }
