@@ -18,7 +18,13 @@ public class DeliveryCalculator {
             }
         }
         if(totalWeight==0)return 0;
-        long billedWeight=(long)Math.ceil(totalWeight/1000);
+        long billedWeightInKG=(long)Math.ceil(totalWeight/1000);
 
+        long shipping;
+        if(zone==Zone.DHAKA)shipping=60+billedWeightInKG*20;
+        else shipping=120+billedWeightInKG*35;
+
+        long coldChain=freshLines*50;
+        return shipping+coldChain;
     }
 }
