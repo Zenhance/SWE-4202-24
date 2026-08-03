@@ -5,11 +5,13 @@ import kenakata.exceptions.PaymentDeclinedException;
 import javax.smartcardio.Card;
 
 public abstract class CardPayment implements PaymentMethod {
-    private long limit;
+    private long limit;// credit or debit limit
     public CardPayment(long limit){
+
         this.limit=limit;
     }
-    public long remainingList(){
+    public long remainingLimit(){
+
         return limit;
     }
     @Override
