@@ -7,8 +7,9 @@ import kenakata.settlement.Seller;
 
 public abstract class StockedGood extends CatalogItem implements Weighable, Returnable {
     private final int weightGrams;
+
     public StockedGood(String sku, String title, long unitPrice,Seller seller,int weightGrams){
-        super(sku,title,unitPrice,stock,seller);
+        super(sku,title,unitPrice,stock,seller,title,(double)unitPrice);
         if(weightGrams<=0){
             throw new IllegalArgumentException("Weight must be positive");
         }
@@ -16,10 +17,12 @@ public abstract class StockedGood extends CatalogItem implements Weighable, Retu
     }
     @Override
     public long unitVat(){
+
         return (long) Math.ceil(unitCharge()*0.075);
     }
     @Override
     public long commisionOn(long amount){
+
         return (long) Math.ceil(amount*0.08);
     }
     @Override
@@ -28,10 +31,11 @@ public abstract class StockedGood extends CatalogItem implements Weighable, Retu
     }
     @Override
     public long insurableValue(){
-        return unitCharge();
+        return (long)Math.round(unitCharge());
     }
     @Override
     public int returnWindowDays(){
+
         return 7;
     }
 }
