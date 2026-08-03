@@ -14,4 +14,14 @@ public class WarrantyPlan implements Item {
     public long unitCharge() {
         return (long) Math.ceil(coveredItem.unitPrice() * 0.10);
     }
+
+    @Override
+    public long unitVat() {
+        return (long) Math.ceil(unitCharge() * 0.15);
+    }
+
+    @Override
+    public String label() {
+        return "Warranty : ";
+    }
 }
