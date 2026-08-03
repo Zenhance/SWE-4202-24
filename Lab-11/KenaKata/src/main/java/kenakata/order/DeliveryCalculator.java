@@ -9,5 +9,14 @@ public class DeliveryCalculator {
     public long calculate(List<OrderLine> lines, Zone zone) {
         long totalWeightGrams = 0;
         int freshLineCount = 0;
+
+        for (OrderLine line : lines) {
+            if (line.item() instanceof Weighable weighable) {
+                totalWeightGrams += (long) weighable.weightGrams() * line.quantity();
+            }
+            if (line.item() instanceof ColdChain) {
+                freshLineCount++;
+            }
+        }
     }
 }
