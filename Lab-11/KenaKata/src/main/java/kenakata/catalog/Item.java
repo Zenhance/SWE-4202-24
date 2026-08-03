@@ -2,7 +2,7 @@ package kenakata.catalog;
 
 import kenakata.exceptions.OutOfStockException;
 
-public class Item implements Chargeable{
+public abstract  class Item implements Chargeable{
     private String SKU;
     private String title;
     private long unitPrice;
