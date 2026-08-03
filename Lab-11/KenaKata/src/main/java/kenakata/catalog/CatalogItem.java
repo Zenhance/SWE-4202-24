@@ -2,17 +2,7 @@ package kenakata.catalog;
 
 import kenakata.exceptions.OutOfStockException;
 
-/**
- * A listed item, of whatever kind. Every item -- stocked, digital, or fresh -- has a SKU, a
- * title, a unit price, a live stock count, and an owning seller, and can report those, report
- * how many remain, and reserve a quantity. That behaviour is identical for every kind and lives
- * here; each subclass only supplies how it takes part in the money (its VAT rate and its
- * commission rate) and which optional capabilities (weight, cold-chain, insurable, returnable)
- * it carries.
- *
- * <p>A malformed item -- null identity, negative price, negative stock -- must never come into
- * existence, so construction validates eagerly with an unchecked {@link IllegalArgumentException}.
- */
+
 public abstract class CatalogItem implements Chargeable {
 
     private final String sku;
@@ -86,6 +76,6 @@ public abstract class CatalogItem implements Chargeable {
         return title;
     }
 
-    /** The platform's commission on a line of this item's kind worth {@code lineValue} Taka. */
+
     public abstract long commissionOn(long lineValue);
 }
