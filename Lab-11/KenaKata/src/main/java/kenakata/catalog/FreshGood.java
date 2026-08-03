@@ -13,4 +13,28 @@ public class FreshGood extends CatalogItem implements Weighable,ColdChain,Insura
         }
         this.weightGrams=weightGrams;
     }
+    @Override
+    public long unitVat(){
+        return 0;
+    }
+    @Override
+    public long commissionOn(long amount){
+        return (long) Math.ceil(amount * 0.05);
+    }
+    @Override
+    public int weightGrams(){
+        return weightGrams;
+    }
+    @Override
+    public long coldChainSurcharge(){
+        return 50;
+    }
+    @Override
+    public long insurableValue(){
+        return unitCharge();
+    }
+    @Override
+    public int returnWindowDays(){
+        return 2;
+    }
 }
