@@ -15,4 +15,7 @@ public class StockedGood {
     public int commissionOn(int i) {
         return 192;
     }
+
+    public void reserve(int i) {
+    }
 }
