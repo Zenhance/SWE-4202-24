@@ -1,8 +1,12 @@
 package kenakata.catalog;
 
-public class FreshGood extends CatalogItem implements ColdChain{
-    public FreshGood(String SKU, String TITLE, int UnitPrize, int StockCount, Seller seller) {
+public class FreshGood extends CatalogItem implements Weight,Insurable,Returnable,ColdChain{
+    private final int weight;
+    public FreshGood(String SKU, String TITLE, int UnitPrize, int StockCount, Seller seller,int weight) {
         super(SKU,TITLE,UnitPrize,StockCount,seller);
+        if (weight<=0)
+            throw new IllegalArgumentException();
+        this.weight=weight;
     }
 
     @Override
@@ -12,11 +16,11 @@ public class FreshGood extends CatalogItem implements ColdChain{
 
     @Override
     public long unitCharge() {
-        return 0;
+        return UnitePrize;
     }
 
     @Override
-    public int commissionOn() {
+    public int commissionOn(int i) {
         return 0;
     }
 
@@ -26,7 +30,8 @@ public class FreshGood extends CatalogItem implements ColdChain{
     }
 
     @Override
-    public void reserve() {
-
+    public void reserve(int quantity) {
     }
+
+
 }

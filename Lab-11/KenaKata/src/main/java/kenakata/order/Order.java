@@ -12,6 +12,7 @@ public class Order {
     public int quantity;
     public AddOn addOn;
     public  ArrayList<OrderLine> Lines= new ArrayList<>();
+
     public Order(Zone zone, DeliveryCalculator delivery) {
     }
 
@@ -29,10 +30,11 @@ public class Order {
 
     public void applyCoupon(Coupon eid10) {
     }
-    PriceBreakdown P=  new PriceBreakdown(5);
+
 
     public PriceBreakdown quote(int today) {
-        return P;
+        PriceBreakdown finalBreakdown = null;
+        return finalBreakdown;
     }
 
     public void insure(int i) {

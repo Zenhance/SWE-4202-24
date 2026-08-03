@@ -1,6 +1,6 @@
 package kenakata.catalog;
 
-public class DigitalGood extends CatalogItem{
+public class DigitalGood extends CatalogItem {
     public DigitalGood(String SKU, String TITLE, int UnitPrize, int StockCount, Seller seller) {
         super(SKU,TITLE,UnitPrize,StockCount,seller);
     }
@@ -11,17 +11,17 @@ public class DigitalGood extends CatalogItem{
     }
 
     @Override
-    public int commissionOn() {
+    public int commissionOn(int i) {
         return 0;
     }
 
     @Override
     public long unitVat() {
-        return 0;
+        return UnitePrize*8;
     }
 
     @Override
-    public void reserve() {
+    public void reserve(int quantity) {
 
     }
 }
