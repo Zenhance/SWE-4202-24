@@ -4,6 +4,7 @@ import kenakata.catalog.AddOn;
 import kenakata.catalog.Chargeable;
 import kenakata.catalog.CatalogItem;
 import kenakata.exceptions.CheckoutException;
+import kenakata.exceptions.CouponRejectedException;
 import kenakata.exceptions.ReturnNotAllowedException;
 import kenakata.payment.PaymentMethod;
 
@@ -40,9 +41,18 @@ public class Order {
         this.coupon = coupon;
     }
 
-    public PriceBreakdown quote(int amount) {
+    public PriceBreakdown quote(int day) throws CouponRejectedException {
+        if (coupon != null) {
+            if (isCouponExpired(day))
+                throw new CouponRejectedException("An expired coupon is refused");
+        }
         return new PriceBreakdown(chargeables, coupon, zone);
     }
+
+    public boolean isCouponExpired(int day) {
+        return day > coupon.getLastValidDay();
+    }
+
 
     public void insure(int number) {
 
