@@ -177,5 +177,33 @@ public final class Order {
         else{
             discount = coupon.discountFor(discountableBase,subtotal,currentDay);
         }
+        long delivery =deliveryCalculator.calculate(lines,zone);
+        long grandTotal = subtotal;
+        grandTotal = Math.subtractExact(grandTotal,discount);
+        grandTotal = Math.addExact(grandTotal,delivery);
+        grandTotal = Math.addExact(grandTotal,vat);
+        grandTotal = Math.addExact(grandTotal,insurance);
+        grandTotal = Math.addExact(grandTotal,serviceFee);
+        return new PriceBreakdown(subtotal,discount,delivery,vat,insurance,serviceFee,grandTotal);
+    }
+    private Map<CatalogItem, Integer>aggregateRequiredStock() {
+        Map<CatalogItem, Integer> required = new IdentityHashMap<>();
+        for (OrderLine line : lines) {
+            if (line.unit() instanceof CatalogItem item) {
+                required.merge(item, line.quantity(), Math::addExact);
+            }
+        }
+        return required;
+    }
+    private OrderLine lineAt(int index) {
+        if (index < 0 || index >= lines.size()) {
+            throw new IllegalArgumentException("Invalid line index: " + index);
+        }
+        return lines.get(index);
+    }
+    private void ensureMutable() {
+        if (placed) {
+            throw new IllegalStateException("A placed order can no longer be modified or placed again");
+        }
     }
 }
