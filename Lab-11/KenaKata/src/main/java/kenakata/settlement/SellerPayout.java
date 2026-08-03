@@ -1,19 +1,22 @@
 package kenakata.settlement;
 
-public class SellerPayout {
-    public int refunds() {
-        return 0;
-    }
+import kenakata.catalog.Seller;
+public record SellerPayout(
+        Seller seller,
+        long grossSales,
+        long commission,
+        long refunds,
+        long payout
+) {
+    public SellerPayout {
+        if (seller == null) {
+            throw new IllegalArgumentException("Seller cannot be null");
+        }
 
-    public int payout() {
-        return 0;
-    }
-
-    public int commission() {
-        return 0;
-    }
-
-    public int grossSales() {
-        return 0;
+        if (grossSales < 0 || commission < 0 || refunds < 0) {
+            throw new IllegalArgumentException(
+                    "Settlement components cannot be negative"
+            );
+        }
     }
 }
