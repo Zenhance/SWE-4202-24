@@ -1,4 +1,4 @@
-package kenakata;
+package kenakata.catalog;
 
 import java.nio.charset.Charset;
 

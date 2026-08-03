@@ -1,4 +1,4 @@
-package kenakata;
+package kenakata.catalog;
 
 public class GiftWrap {
     public int unitVat() {

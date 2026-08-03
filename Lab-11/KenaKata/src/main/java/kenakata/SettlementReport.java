@@ -1,5 +1,7 @@
 package kenakata;
 
+import kenakata.catalog.Seller;
+
 public class SettlementReport {
     public SellerPayout forSeller(Seller a) {
         return null;

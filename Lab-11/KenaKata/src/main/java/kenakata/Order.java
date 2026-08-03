@@ -1,5 +1,9 @@
 package kenakata;
 
+import kenakata.catalog.CatalogItem;
+import kenakata.catalog.GiftWrap;
+import kenakata.catalog.StockedGood;
+
 import java.util.Map;
 
 public class Order {
