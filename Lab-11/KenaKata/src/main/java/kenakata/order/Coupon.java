@@ -6,8 +6,8 @@ public class Coupon {
     private final long maxDiscount;
     private final long minSpend;
     private final int lastValidDay;
-    public Coupon(String code, double percentage, long maxDiscount, long minSpend, int lastValidDay) {
-        if (percentage < 0 || percentage > 100) {
+    public Coupon(String code, double percentage, long maxDiscount, long minSpend, int lastValidDay){
+        if (percentage < 0 || percentage > 100){
             throw new IllegalArgumentException("Invalid percentage");
         }
         this.code = code;
@@ -16,7 +16,18 @@ public class Coupon {
         this.minSpend = minSpend;
         this.lastValidDay = lastValidDay;
     }
-    public String code() {
+    public String code(){
         return code;
+    }
+    public long calculateDiscount(long discountableBase, int currentDay) throws CouponRejectedException{
+        if (currentDay > lastValidDay){
+            throw new CouponRejectedException("Coupon has expired");
+        }
+        if (discountableBase < minSpend){
+            throw new CouponRejectedException("Order subtotal below minimum spend required for coupon");
+        }
+
+        long discount = (long) Math.ceil(discountableBase * (percentage / 100.0));
+        return Math.min(discount, maxDiscount);
     }
 }
