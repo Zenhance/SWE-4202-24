@@ -8,11 +8,11 @@ public class GiftWrapping implements Chargeable {
 
     @Override
     public long unitCharge() {
-        return 0;
+        return 50;
     }
 
     @Override
     public String label() {
-        return "";
+        return "Gift Wrapping";
     }
 }
