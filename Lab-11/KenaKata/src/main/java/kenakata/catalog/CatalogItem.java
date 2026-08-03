@@ -1,5 +1,5 @@
 package kenakata.catalog;
-
+import kenakata.exceptions.OutOfStockException;
 public abstract class CatalogItem implements Chargable {
 
 private String sku;
@@ -53,6 +53,27 @@ throw new IllegalArgumentException("Title can not be null");
     public double unitCharge()
     {
         return unitPrice;
+    }
+    public boolean canReserve(int qty)
+    {
+        if(qty<=0)
+        {
+            throw new IllegalArgumentException("Reservation quantity must be positive");
+        }
+        return qty<=remaining;
+    }
+
+    public void reserve(int qty) throws OutOfStockException
+    {
+        if(qty<=0)
+        {
+            throw new IllegalArgumentException("Reservation quantity must be positive");
+        }
+        if(qty>remaining)
+        {
+            throw new OutOfStockException(label() + " has only " + remaining + " units, out of " + qty);
+        }
+        remaining=remaining-qty;
     }
 }
 
