@@ -1,5 +1,7 @@
 package kenakata.payment;
 
+import kenakata.exceptions.EmptyWalletException;
+
 public class MobileWalletPayment implements PaymentMethod {
     private final Wallet wallet;
 
@@ -9,7 +11,7 @@ public class MobileWalletPayment implements PaymentMethod {
         this.wallet = wallet;
     }
     @Override
-    public void authorise(int amount) {
+    public void authorise(long amount) throws EmptyWalletException {
 
     }
 }
