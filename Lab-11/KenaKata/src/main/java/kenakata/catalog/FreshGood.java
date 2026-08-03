@@ -1,6 +1,6 @@
 package kenakata.catalog;
 
-public class FreshGood extends CatalogItem implements Weighable {
+public class FreshGood extends CatalogItem implements Weighable, Insurable {
     private int weight;
 
     public FreshGood(String SKU, String title, double unitPrice, int stockCount, Seller seller, int weight) {
@@ -33,5 +33,10 @@ public class FreshGood extends CatalogItem implements Weighable {
     @Override
     public int weight() {
         return weight;
+    }
+
+    @Override
+    public int insurance() {
+        return (int) Math.ceil(getUnitPrice() * 0.01);
     }
 }
