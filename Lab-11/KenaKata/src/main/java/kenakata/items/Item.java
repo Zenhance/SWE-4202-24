@@ -1,9 +1,9 @@
-package items;
+package kenakata.items;
 
-import exception.OutOfStockException;
-import settlement.Seller;
+import kenakata.exception.OutOfStockException;
+import kenakata.settlement.Seller;
 
-import java.exception.OutOfStockException;
+import kenakata.exception.OutOfStockException;
 
 public abstract class Item implements Chargeable {
     private final String sku;
@@ -48,10 +48,15 @@ public abstract class Item implements Chargeable {
         }
         stock_count-=quantity;
     }
-
-
-
-
+    @Override
+    public long UnitCharge(){
+        return unitPrice;
+    }
+    @Override
+    public String label(){
+        return title;
+    }
+    public abstract long comissionOn(long lineValue);
 
 
 }
