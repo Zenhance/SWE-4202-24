@@ -21,4 +21,11 @@ public class Order {
 
     public void insure(int i) {
     }
+
+    public void place(MobileWalletPayment mobileWalletPayment, int i) {
+    }
+
+    public boolean placed() {
+        return true;
+    }
 }
