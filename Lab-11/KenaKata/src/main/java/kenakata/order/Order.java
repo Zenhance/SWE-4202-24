@@ -104,4 +104,15 @@ public class Order {
         this.placementDay = day;
         this.finalBreakdown = bd;
     }
+
+    public void acceptReturn(int lineIndex, int returnDay) throws NonReturnableException {
+        if (!isPlaced) {
+            throw new NonReturnableException("Order is not placed yet");
+        }
+        if (lineIndex < 0 || lineIndex >= lines.size()) {
+            throw new IllegalArgumentException("Invalid line index");
+        }
+
+        OrderLine line = lines.get(lineIndex);
+    }
 }
