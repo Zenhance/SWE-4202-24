@@ -10,18 +10,20 @@ public Wallet(long initialBalance){
     this.balance= initialBalance;
 }
 public long balance(){
-    return balance;
+
+    return balance;//current value stored
 }
-public void credit(long amount){
+public void credit(long amount){ // deposit method
     if(amount <=0){
         throw new IllegalArgumentException("Credit amount must be positive");
     }
     balance+=amount;
 }
-public void debit(long amount){
-if(amount>balance){
-throw new IllegalArgumentException("Insufficient balance");
-}
-balance-=amount;
-}
+public void debit(long amount){ //withdrawal method
+    if(amount>balance){
+        throw new IllegalArgumentException("Insufficient balance");
+    }
+    balance-=amount;
+ }
+
 }
