@@ -12,7 +12,7 @@ import java.util.List;
 public class Order {
     private final Zone zone;
     private final DeliveryCalculator deliveryCalculator;
-    private final List<OrderLine> line = new ArrayList<>();
+    private final List<OrderLine> lines = new ArrayList<>();
     private Coupon coupon;
     private boolean placed = false;
     private PriceBreakdown finalBreakdown;
@@ -63,7 +63,7 @@ public class Order {
         }
         long discount = 0;
         if (coupon != null) {
-            discount = coupon.calculatorDiscount(discountableBase, currentDay);
+            discount = coupon.calculateDiscount(discountableBase, currentDay);
         }
         long delivery = deliveryCalculator.calculateDelivery(lines, zone);
         long serviceFee = (long) Math.ceil(subtotal * 0.01);
