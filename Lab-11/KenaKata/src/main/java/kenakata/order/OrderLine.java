@@ -10,6 +10,12 @@ public class OrderLine {
     private boolean returned;
 
     public OrderLine(Chargeable item , int quantity) {
+        if(item==null){
+            throw new IllegalArgumentException("item is null ");
+        }
+        if(quantity<=0){
+            throw new IllegalArgumentException("quantity is negative or zero");
+        }
         this.quantity=quantity;
         this.item=item;
         returned=false;
@@ -21,5 +27,13 @@ public class OrderLine {
     }
     public boolean isReturned(){
         return returned;
+    }
+
+    public Chargeable getItem() {
+        return item;
+    }
+
+    public int getQuantity() {
+        return quantity;
     }
 }
