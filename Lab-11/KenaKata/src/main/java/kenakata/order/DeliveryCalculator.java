@@ -31,4 +31,11 @@ public class DeliveryCalculator {
         }
         return false;
     }
+
+    public int deliveryZone(Zone zone) {
+        if (zone == Zone.DHAKA)
+            return 140;
+        else return  120;
+    }
+
 }
