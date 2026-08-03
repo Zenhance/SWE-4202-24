@@ -23,5 +23,23 @@ public final class DeliveryCalculator {
                 coldChain = Math.addExact(coldChain,chilled.coldChainSurcharge());
             }
         }
+        if(!hasWeighableLine){
+            return 0;
+        }
+        long billedKg = totalGrams/1000 + (totalGrams%1000 == 0?0:1);
+        long base;
+        long perKg;
+        if(zone==Zone.DHAKA){
+            base = 60;
+            perKg = 20;
+        } else {
+            base = 120;
+            perKg = 35;
+        }
+        long weightCharge = Math.multiplyExact(billedKg,perKg);
+        return Math.addExact(Math.addExact(base,weightCharge),coldChain);
+    }
+    public long deliveryFor(List<OrderLine> lines, Zone zone){
+        return calculate(lines,zone);
     }
 }
