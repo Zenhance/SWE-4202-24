@@ -25,4 +25,19 @@ public class FreshGood extends CatalogItem implements Weighable, ColdChain, Insu
     public long commissionOn(long lineValue) {
         return (long) Math.ceil(lineValue * 0.05);
     }
+
+    @Override
+    public long coldChainSurcharge() {
+        return 50;
+    }
+
+    @Override
+    public long insurableValue() {
+        return unitPrice();
+    }
+
+    @Override
+    public int returnWindowDays() {
+        return 2;
+    }
 }
