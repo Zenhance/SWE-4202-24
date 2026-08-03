@@ -7,6 +7,8 @@ import kenakata.catalog.ExpressHandling;
 import kenakata.catalog.Seller;
 import kenakata.catalog.StockedGood;
 import kenakata.exceptions.CheckoutException;
+import kenakata.exceptions.NotInsurableException;
+import kenakata.exceptions.ReturnNotAllowedException;
 import kenakata.order.Coupon;
 import kenakata.order.DeliveryCalculator;
 import kenakata.order.Order;
@@ -26,14 +28,14 @@ import kenakata.settlement.SettlementReport;
  * life of the marketplace": build sellers and a catalogue, assemble a few mixed orders,
  * quote them, place them against different payment methods (one is deliberately refused and
  * caught), process a return, then run the nightly settlement.
- *
+ * <p>
  * The classes it uses are deliberately different KINDS of object (stocked/digital/fresh items,
  * non-product add-ons, three payment methods) that the order and settlement treat uniformly
  * through their shared interfaces -- this file never asks "what kind are you?".
  */
 public final class Main {
 
-    public static void main(String[] args) throws CheckoutException {
+    public static void main(String[] args) throws CheckoutException, NotInsurableException, ReturnNotAllowedException {
         // ---- Sellers and catalogue -------------------------------------------------------
         Seller alpha = new Seller("Alpha Electronics");
         Seller beta = new Seller("Beta Books");
