@@ -24,4 +24,30 @@ public final class Order {
         this.zone = zone;
         this.deliveryCalculator = deliveryCalculator;
     }
+    public void addProduct(CatalogItem item, int quantity) {
+
+    }
+
+    public void addAddOn(Chargeable addOn) {
+    }
+
+    public void applyCoupon(Coupon coupon) {
+        this.coupon = coupon;
+    }
+
+    public void insure(int lineIndex) throws NotInsurableException {
+    }
+
+    public List<OrderLine> lines() {
+        return lines;
+    }
+
+    public boolean placed() {
+        return placed;
+    }
+
+    public PriceBreakdown finalBreakdown() {
+        return finalBreakdown;
+    }
+
 
