@@ -7,18 +7,12 @@ public class DigitalGood extends CatalogItem{
 
     @Override
     public long unitVat() {
-        return (long) Math.ceil(unitPrice()*0.05);
+        return (long) Math.ceil(unitCharge()*0.05);
     }
 
     @Override
     public long commissionOn(long lineValue) {
-        return 0;
+        return (long) Math.ceil(lineValue * 0.20);
     }
-
-    @Override
-    public int commissionOn(int total) {
-        return (int) Math.ceil(total*0.2);
-    }
-
 
 }
