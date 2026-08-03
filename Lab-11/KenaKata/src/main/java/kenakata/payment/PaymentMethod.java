@@ -1,6 +1,6 @@
 package kenakata.payment;
+import kenakata.exceptions.PaymentDeclinedException;
 
-public class PaymentMethod {
-    public PaymentMethod(Wallet wallet) {
-    }
+public interface PaymentMethod {
+    void authorise(long amount) throws PaymentDeclinedException;
 }
