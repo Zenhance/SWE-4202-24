@@ -18,4 +18,8 @@ public class StockedGood {
 
     public void reserve(int i) {
     }
+
+    public int remaining() {
+        return 2;
+    }
 }
