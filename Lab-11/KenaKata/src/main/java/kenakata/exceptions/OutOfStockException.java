@@ -1,6 +1,6 @@
 package kenakata.exceptions;
 
-public class OutOfStockException extends KenaKataException{
+public class OutOfStockException extends CheckoutException {
 
     public OutOfStockException(String msg) {
         super(msg);
