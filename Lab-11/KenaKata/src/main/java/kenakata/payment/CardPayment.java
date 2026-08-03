@@ -11,13 +11,12 @@ public abstract class CardPayment implements PaymentMethod {
         this.limit=limit;
     }
     public long remainingLimit(){
-
         return limit;
     }
     @Override
     public void authorise(long amount) throws PaymentDeclinedException{
         if(amount > limit){
-            throw new CardLimitExceededException("Card limit exceeded");
+            throw new CardLimitExceededException("Card limit exceeded");// if limit exceeds the card's remaining limit
         }
         limit-=amount;
     }
