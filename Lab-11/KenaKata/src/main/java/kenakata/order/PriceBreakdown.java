@@ -1,9 +1,6 @@
 package kenakata.order;
 
-import kenakata.catalog.Chargeable;
-import kenakata.catalog.DigitalGood;
-import kenakata.catalog.FreshGood;
-import kenakata.catalog.StockedGood;
+import kenakata.catalog.*;
 
 import java.util.ArrayList;
 
@@ -74,7 +71,13 @@ public class PriceBreakdown {
     }
 
     public int insurance() {
-        return  0;
+        int totalInsurance = 0;
+        for (Chargeable c : chargeables) {
+            if (c instanceof Insurable i)
+                totalInsurance += i.insurance();
+        }
+
+        return Math.max(totalInsurance, 20);
     }
 
     public int serviceFee() {
