@@ -16,8 +16,6 @@ public class PriceBreakdown {
             throw new IllegalArgumentException("ArrayList of chargeables cannot be null");
         this.chargeables = chargeables;
 
-        if (coupon == null)
-            throw new IllegalArgumentException("Coupon cannot be null");
         this.coupon = coupon;
 
         if (zone == null)
