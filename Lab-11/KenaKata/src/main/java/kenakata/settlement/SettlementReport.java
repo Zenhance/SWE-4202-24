@@ -11,14 +11,13 @@ public class SettlementReport {
         this.platformRevenue=platformRevenue;
     }
     public SellerPayout forSeller(Seller seller){
-        for(SellerPayout payout:payouts){
-            if(payout.seller().equals(seller)){
-                return payout;
+        return payouts.getOrDefault(seller, new SellerPayout(seller));
             }
-        }
-        return new SellerPayout(seller);
+    public Collection<SellerPayout> payouts() {
+        return payouts.values();
     }
-    public long platformRevenue(){
+
+    public long platformRevenue() {
         return platformRevenue;
     }
 }
