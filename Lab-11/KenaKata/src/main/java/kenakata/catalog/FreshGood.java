@@ -4,9 +4,14 @@ public class FreshGood extends CatalogItem{
 
     private final int weight;
 
-    public FreshGood(String sku, String title, long unitPrice, int stock, Seller seller) {
+    public FreshGood(String sku, String title, long unitPrice, int stock, Seller seller, int weight) {
         super(sku, title, unitPrice, stock, seller);
+
+        if(weight <= 0){throw new IllegalArgumentException("Weight must be positive");}
+        this.weight = weight;
     }
+
+
 
 
     @Override
@@ -14,6 +19,10 @@ public class FreshGood extends CatalogItem{
         return 0;
     }
 
+    @Override
+    public long commissionOn(long lineValue) {
+        return 0;
+    }
 
 
     @Override
