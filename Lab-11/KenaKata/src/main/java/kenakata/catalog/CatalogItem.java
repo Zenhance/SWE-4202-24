@@ -1,5 +1,5 @@
 package kenakata.catalog;
-import kenakata.exceptions.OutofStockException;
+import kenakata.exceptions.OutOfStockException;
 
 public abstract class CatalogItem implements Chargeable {
 
@@ -58,7 +58,7 @@ public abstract class CatalogItem implements Chargeable {
 
     public abstract long commissionOn(long lineValue);
 
-    public void reserve(int qty) throws OutofStockException
+    public void reserve(int qty) throws OutOfStockException
     {
         if(qty<=0)
         {
@@ -66,7 +66,7 @@ public abstract class CatalogItem implements Chargeable {
         }
         if(qty>stock)
         {
-            throw new OutofStockException("Out of Stock");
+            throw new OutOfStockException("Out of Stock");
         }
         stock-=qty;
     }

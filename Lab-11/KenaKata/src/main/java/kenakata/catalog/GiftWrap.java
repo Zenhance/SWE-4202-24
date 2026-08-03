@@ -1,6 +1,6 @@
 package kenakata.catalog;
 
-public class GiftWrapping implements Chargeable {
+public class GiftWrap implements Chargeable {
     @Override
     public long unitVat() {
         return (long) Math.ceil(50 * 0.075);
