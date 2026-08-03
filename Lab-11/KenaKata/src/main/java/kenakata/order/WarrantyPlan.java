@@ -11,4 +11,15 @@ public abstract class WarrantyPlan implements CatalogItem{
         this.unitCharge=unitCharge;
         this.durationMonths=durationMonths;
     }
+    @Override
+    public String label(){
+        return this.label;
+    }
+    @Override
+    public double unitCharge(){
+        return this.unitCharge;
+    }
+    public int getDurationMonths(){
+        return this.durationMonths;
+    }
 }
