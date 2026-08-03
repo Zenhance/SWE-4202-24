@@ -5,7 +5,7 @@ public final class Helper {
     private Helper() {
     }
 
-    public static int ceilPercent(int base, double percent) {
-        return (int) Math.ceil(base * percent / 100.0);
+    public static long ceilPercent(long base, double percent) {
+        return (long) Math.ceil(base * percent / 100.0);
     }
 }
