@@ -31,7 +31,6 @@ public abstract class PaymentMethod {
             if(w.balance() < i)
                 throw new EmptyWalletException("Insufficient balance");
             w.amount -= i;
-
         }
     }
 }

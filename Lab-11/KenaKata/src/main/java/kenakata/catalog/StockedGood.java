@@ -34,9 +34,4 @@ public class StockedGood extends CatalogItem implements Weighable, Insurable, Re
     }
 
     public ArrayList<StockedGood> items2 = new ArrayList<>();
-
-    public StockedGood get(int i) {
-        return null;
-    }
-
 }

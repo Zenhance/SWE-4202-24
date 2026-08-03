@@ -78,4 +78,14 @@ public class PriceBreakdown {
         int total = subtotal() - discount() + vat() + delivery() + insurance() + serviceFee();
         return total;
     }
+
+
+    public int addOnCharge(){
+        int total = 0;
+        for(Chargeable c: items){
+            if(c instanceof Addable)
+                total += c.unitCharge();
+        }
+        return total;
+    }
 }

@@ -1,46 +1,49 @@
 package kenakata.settlement;
 
+import kenakata.catalog.CatalogItem;
+import kenakata.catalog.Seller;
+import kenakata.order.Order;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class SellerPayout {
 
-    private int comm;
-    private int refund;
-    private int out;
-    private int gross;
 
-    public boolean seller() {
-        return false;
-    }
+    public Seller s;
+    public ArrayList<CatalogItem> items = new ArrayList<>();
+    public ArrayList<Integer> count = new ArrayList<>();
 
     public int commission() {
-        return 0;
-    }
-
-    public int refunds() {
-        return 0;
-    }
-
-    public int payout() {
-        return 0;
+        int total = 0;
+        for(int i = 0; i < items.size(); i++){
+            CatalogItem c = items.get(i);
+                total += ((CatalogItem) c).commissionOn(c.unitCharge()) * count.get(i);
+        }
+        return total;
     }
 
     public int grossSales() {
-        return 0;
+        int total = 0;
+        for(int i=0; i<items.size(); i++){
+            total += items.get(i).unitCharge() * count.get(i);
+        }
+        return total-refunds();
+    }
+
+    public int payout() {
+        return grossSales()-commission();
     }
 
 
-    void setComm(int comm) {
-        this.comm = comm;
-    }
-
-    void setRefund(int refund) {
-        this.refund = refund;
-    }
-
-    void setOut(int out) {
-        this.out = out;
-    }
-
-    void setGross(int gross) {
-        this.gross = gross;
+    public int refunds() {
+        int total = 0;
+        for(int i=0; i<items.size(); i++){
+            CatalogItem c = items.get(i);
+            if(c.isReturned()){
+                total += c.unitCharge()*count.get(i);
+            }
+        }
+        return total;
     }
 }

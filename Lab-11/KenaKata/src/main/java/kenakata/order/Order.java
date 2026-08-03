@@ -18,8 +18,8 @@ public class Order {
     Zone zone;
     DeliveryCalculator d;
     PriceBreakdown pb;
-    ArrayList<Chargeable> items = new ArrayList<>();
-    ArrayList<Integer> count = new ArrayList<>();
+    public ArrayList<Chargeable> items = new ArrayList<>();
+    public ArrayList<Integer> count = new ArrayList<>();
     Coupon cp;
     PaymentMethod pay;
     int payDay;
@@ -139,19 +139,28 @@ public class Order {
     public SettlementReport finalBreakdown() {
 
         SettlementReport report = new SettlementReport();
+        report.orders.add(this);
+        report.grand = pb.grandTotal();
 
         return report;
     }
 
-    public StockedGood lines() {
-        ArrayList<StockedGood> stockedGoods = new ArrayList<>();
+    public ArrayList<StockedGood> lines() {
+        ArrayList<StockedGood> out = new ArrayList<>();
+
         for(Chargeable c: items){
             if(c instanceof StockedGood)
-                stockedGoods.add((StockedGood) c);
+                out.add((StockedGood) c);
 
-            else stockedGoods.add(null);
+            else out.add(null);
         }
 
-        return stockedGoods.get(0);
+        return out;
+    }
+
+
+
+    public PriceBreakdown getPb() {
+        return pb;
     }
 }

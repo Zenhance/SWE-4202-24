@@ -12,5 +12,10 @@ public class CashOnDeliveryPayment extends PaymentMethod{
 
     }
 
-
+    @Override
+    public void authorise(int p) throws Exception{
+        if(p > 15000)
+            throw new CodCeilingExceededException("Over the cod limit");
+        super.authorise(p);
+    }
 }

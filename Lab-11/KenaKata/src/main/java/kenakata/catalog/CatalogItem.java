@@ -61,4 +61,8 @@ public abstract class CatalogItem implements Chargeable {
     public boolean isReturned() {
         return returned;
     }
+
+    public Seller getS() {
+        return s;
+    }
 }
