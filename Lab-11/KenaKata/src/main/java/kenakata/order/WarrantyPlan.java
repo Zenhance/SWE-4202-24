@@ -1,5 +1,5 @@
 import kenakata.catalog.CatalogItem;
-import kenakata.order.*;
+package kenakata.order;
 
 public abstract class WarrantyPlan implements CatalogItem{
     private String label;

@@ -15,7 +15,7 @@ public class DeliveryCalculator {
                 hasWeighable = true;
             }
             if (item instanceof ColdChain coldChain) {
-                coldChainFee += coldChainFee.coldChainSurcharge();
+                coldChainFee += coldChain.coldChainSurcharge();
             }
         }
         if (!hasWeighable) {
