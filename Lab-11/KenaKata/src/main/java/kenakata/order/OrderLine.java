@@ -18,6 +18,8 @@ public class OrderLine {
     public boolean returned() { return returned; }
 
     public boolean insured() { return insured; }
+    public long lineCharge() { return unit.unitCharge() * quantity; }
+    public long lineVat() { return unit.unitVat() * quantity; }
 
 
 
