@@ -99,4 +99,8 @@ public class Cart {
 
     public void add(ConcessionItem pop) {
     }
+
+    public int getTicketCount() {
+        return ticketCount;
+    }
 }
