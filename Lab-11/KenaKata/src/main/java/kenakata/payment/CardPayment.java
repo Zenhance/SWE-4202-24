@@ -1,4 +1,18 @@
 package kenakata.payment;
 
-public class CardPayment {
+import kenakata.exceptions.CardLimitExceededException;
+
+public class CardPayment implements PaymentMethod {
+    private long limit;
+
+    public CardPayment(long limit) {
+        if (limit < 0) {
+            throw new IllegalArgumentException("Limit cannot be negative");
+        }
+        this.limit = limit;
+    }
+
+    public long remainingLimit() {
+        return limit;
+    }
 }
