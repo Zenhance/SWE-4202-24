@@ -25,4 +25,11 @@ public class Wallet {
         }
         balance -= amount;
     }
+
+    public void credit(long amount) {
+        if (amount <= 0) {
+            throw new IllegalArgumentException("Credit amount must be positive");
+        }
+        balance += amount;
+    }
 }
