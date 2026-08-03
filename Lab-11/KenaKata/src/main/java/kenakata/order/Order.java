@@ -15,6 +15,7 @@ public class Order {
     private DeliveryCalculator calculator;
     private ArrayList<Chargeable> chargeables;
     private Coupon coupon;
+    PriceBreakdown priceBreakdown;
 
     public Order(Zone zone, DeliveryCalculator calculator) {
         if (zone == null)
@@ -26,6 +27,7 @@ public class Order {
         this.calculator = calculator;
 
         chargeables = new ArrayList<>();
+        priceBreakdown = new PriceBreakdown(chargeables, zone);
     }
 
     public void addProduct(Chargeable product, int qty) {
@@ -42,11 +44,14 @@ public class Order {
     }
 
     public PriceBreakdown quote(int day) throws CouponRejectedException {
+        priceBreakdown.setCoupon(coupon);
+
         if (coupon != null) {
             if (isCouponExpired(day))
                 throw new CouponRejectedException("An expired coupon is refused");
         }
-        return new PriceBreakdown(chargeables, coupon, zone);
+
+        return priceBreakdown;
     }
 
     public boolean isCouponExpired(int day) {
@@ -68,7 +73,7 @@ public class Order {
     }
 
     public PriceBreakdown finalBreakdown() {
-        return new PriceBreakdown(chargeables, coupon, zone);
+        return new PriceBreakdown(chargeables, zone);
     }
 
     public void acceptReturn(int serial, int day) throws ReturnNotAllowedException {
