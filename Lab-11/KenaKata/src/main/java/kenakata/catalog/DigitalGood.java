@@ -1,13 +1,5 @@
 package kenakata.catalog;
 
-public class DigitalGood {
-    public int unitCharge() {
-        return 0;
-    }
+public class DigitalGood extends CatalogItem{
 
-    public int unitVat() {
-    }
-
-    public int commissionOn(int i) {
-    }
 }
