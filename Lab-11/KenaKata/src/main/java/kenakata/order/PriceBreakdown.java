@@ -33,7 +33,11 @@ public class PriceBreakdown {
     }
 
     public int discount() {
-        int discount = (int) Math.ceil(subtotal() * coupon.getPercentage() * 0.01);
+        int discount = 0;
+        for (Chargeable c : chargeables) {
+            if (c instanceof StockedGood)
+                discount += (int) Math.ceil(c.unitCharge() * coupon.getPercentage() * 0.01);
+        }
         return Math.min(discount, coupon.getCap());
     }
 
