@@ -114,5 +114,20 @@ public class Order {
         }
 
         OrderLine line = lines.get(lineIndex);
+
+        if (line.returned()) {
+            throw new NonReturnableException("Line has already been returned");
+        }
+
+        if (!(line.item() instanceof Returnable returnableItem)) {
+            throw new NonReturnableException("Item is not returnable");
+        }
+
+        int window = returnableItem.returnWindowDays();
+        if (returnDay > placementDay + window) {
+            throw new NonReturnableException("Return window expired");
+        }
+
+        line.markReturned();
     }
 }
