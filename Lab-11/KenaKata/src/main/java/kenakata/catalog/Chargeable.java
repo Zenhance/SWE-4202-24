@@ -1,4 +1,6 @@
 package kenakata.catalog;
 
-public class Chargeable extends GiftWrap {
+public interface Chargeable {
+    long unitCharge();
+    long unitVat();
 }
