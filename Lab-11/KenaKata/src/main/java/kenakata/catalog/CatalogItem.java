@@ -21,4 +21,34 @@ public abstract class CatalogItem implements Chargeable{
         this.stock=stock;
         this.seller=seller;
     }
+    public String sku(){
+        return sku;
+    }
+    public String title(){
+        return title;
+    }
+    public Seller seller(){
+        return seller;
+    }
+    public int remaining(){
+        return stock;
+    }
+    @Override
+    public long unitCharge(){
+        return unitPrice;
+    }
+    @Override
+    public String label(){
+        return title;
+    }
+    public void reserve(int qty) throws OutOfStockException{
+        if(qty<=0){
+            throw new IllegalArgumentException("Quantity must be positive");
+        }
+        if(qty>stock){
+            throw new OutOfStockException("Not enough stock for item: " + title);
+        }
+        stock -= qty;
+    }
+    public abstract long commissionOn(long amount);
 }
