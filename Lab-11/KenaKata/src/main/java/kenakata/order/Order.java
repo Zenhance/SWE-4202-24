@@ -7,7 +7,6 @@ import kenakata.payment.PaymentMethod;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class Order {
     private Zone zone;
     private DeliveryCalculator deliveryCalculator;
@@ -26,7 +25,7 @@ public class Order {
         if(quantity <= 0) {
             throw new IllegalArgumentException("Invalid quantity");
         }
-        lines.add(new OrderLine(item, quantity));
+        lines.add(new OrderLine(item,quantity));
     }
     public void addAddOn(Chargeable addOn) {
         lines.add(new OrderLine(addOn,1));
@@ -59,7 +58,6 @@ public class Order {
             if(subtotal < coupon.minimumSpend()) {
                 throw new CouponRejectedException("Minimum spend not reached");
             }
-
             discount = (discountBase * coupon.percentage() +99) /100;
             if(discount > coupon.maximumDiscount()) {
                 discount = coupon.maximumDiscount();
@@ -67,9 +65,7 @@ public class Order {
         }
         long delivery = deliveryCalculator.calculate(lines, zone);
         long insurance = calculateInsurance();
-
         long serviceFee = (subtotal + 99) /100;
-
         if(serviceFee > 100) {
             serviceFee = 100;
         }
@@ -89,8 +85,7 @@ public class Order {
         }
         return total;
     }
-    public void insure(int index)
-            throws NotInsurableException {
+    public void insure(int index) throws NotInsurableException {
         if(index <0 || index >= lines.size()) {
             throw new NotInsurableException("Invalid line");
         }
@@ -100,8 +95,7 @@ public class Order {
         }
         line.makeInsured();
     }
-    public void place(PaymentMethod payment, int day)
-            throws CheckoutException {
+    public void place(PaymentMethod payment, int day) throws CheckoutException {
         PriceBreakdown breakdown = quote(day);
         for(OrderLine line: lines) {
             if(line.item() instanceof StockedGood) {
@@ -115,10 +109,8 @@ public class Order {
 
         for(OrderLine line: lines) {
             if(line.item() instanceof StockedGood) {
-
                 StockedGood product = (StockedGood) line.item();
-                product.reserve(line.quantity()
-                );
+                product.reserve(line.quantity());
             }
         }
         placed = true;
