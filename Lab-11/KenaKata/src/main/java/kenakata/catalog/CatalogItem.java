@@ -6,11 +6,11 @@ public abstract class CatalogItem implements Chargeable
 {
     private String sku;
     private String title;
-    private double unitPrice;
+    private long unitPrice;
     private int stockRemaining;
     private Seller seller;
 
-    public CatalogItem(String sku, String title, double unitPrice, int stockRemaining, Seller seller)
+    public CatalogItem(String sku, String title, long unitPrice, int stockRemaining, Seller seller)
     {
         if(sku==null || sku.isBlank())
             throw new IllegalArgumentException("Sku can noy be null");
@@ -51,7 +51,7 @@ public abstract class CatalogItem implements Chargeable
     }
 
     @Override
-    public double unitCharge()
+    public long unitCharge()
     {
         return unitPrice;
     }
@@ -78,5 +78,5 @@ public abstract class CatalogItem implements Chargeable
         stockRemaining=stockRemaining-qty;
     }
 
-    public abstract double commissionOn(double lineValue);
+    public abstract long commissionOn(long lineValue);
 }
