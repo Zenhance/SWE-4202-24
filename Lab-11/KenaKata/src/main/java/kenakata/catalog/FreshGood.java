@@ -30,5 +30,10 @@ public class FreshGood extends LineItem implements Weighable, ColdChain, Insurab
     public long coldChainSubcharge(){
         return 50;
     }
+    @Override
+    public long insurableValue(int quantity){
+        requirePositive(quantity);
+        return quantity*unitCharge();
+    }
     
 }

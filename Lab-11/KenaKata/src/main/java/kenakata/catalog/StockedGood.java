@@ -28,4 +28,10 @@ public class StockedGood extends LineItem implements Weighable, Insurable, Retur
     public int returnWindow() {
         return 7;
     }
+    
+    @Override
+    public long insurableValue(int quantity) {
+        requirePositive(quantity);
+        return quantity*unitCharge();
+    }
 }
