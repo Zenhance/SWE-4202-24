@@ -1,7 +1,7 @@
 package kenakata.exceptions;
 
-public class CardLimitExceededException extends CheckoutException{
-    public CardLimitExceededException(String message){
+public class CardLimitExceededException extends PaymentDeclinedException {
+    public CardLimitExceededException(String message) {
         super(message);
     }
 }

@@ -7,7 +7,7 @@ import kenakata.order.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MarketPlace {
+public class Marketplace {
     private final List<Seller> registeredSellers = new ArrayList<>();
     private final List<Order> placedOrders = new ArrayList<>();
     public void register(Seller seller) {
