@@ -10,6 +10,14 @@ public abstract class AbstractItem implements Item {
     private Seller seller;
 
     public AbstractItem(String sku, String title, long unitPrice, int stock, Seller seller) {
+
+        if (sku == null || sku.isBlank()) {
+            throw new IllegalArgumentException("SKU cannot be empty or null");
+        }
+        if (title == null || title.isBlank()) {
+            throw new IllegalArgumentException("Title cannot be empty or null");
+        }
+
         this.sku = sku;
         this.title = title;
         this.unitPrice = unitPrice;
