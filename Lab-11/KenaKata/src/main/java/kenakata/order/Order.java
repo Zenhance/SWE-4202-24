@@ -67,5 +67,16 @@ public class Order {
         long grandTotal = subtotal - discount + delivery + vat + insurance + serviceFee;
         return new PriceBreakdown(subtotal, discount, vat, delivery, insurance, serviceFee, grandTotal);
     }
+    public void place(PaymentMethod paymentMethod, int currentDay) throws CheckoutException{
+        PriceBreakdown breakdown = quote(currentDay);
+        paymentMethod.authorise(breakdown.grandTotal());
+        for (OrderLine line : lines) {
+            if (line.item() instanceof CatalogItem catalogItem) {
+                catalogItem.reserve(line.quantity());
+            }
+        }
+        this.placed = true;
+        this.finalBreakdown = breakdown;
+        this.placementDay = currentDay;
     }
 }
