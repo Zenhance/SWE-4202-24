@@ -17,5 +17,11 @@ public class SellerPayout {
         return null;
     }
 
+    public int payout(){
+        return 0;
+    }
+
+
+
 
 }
