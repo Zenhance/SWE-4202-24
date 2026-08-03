@@ -2,8 +2,6 @@ package kenakata;
 
 import kenakata.catalog.DigitalGood;
 import kenakata.catalog.FreshGood;
-import kenakata.catalog.GiftWrap;
-import kenakata.catalog.ExpressHandling;
 import kenakata.catalog.Seller;
 import kenakata.catalog.StockedGood;
 import kenakata.exceptions.CheckoutException;

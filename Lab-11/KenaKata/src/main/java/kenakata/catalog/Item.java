@@ -40,4 +40,7 @@ public abstract class Item {
 
     }
 
+    public void remaining(){
+
+    }
 }
