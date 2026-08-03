@@ -26,4 +26,7 @@ public abstract class Transaction {
         this.toId = toId;
         this.pin = pin;
     }
+
+    public void settle() {
+    }
 }

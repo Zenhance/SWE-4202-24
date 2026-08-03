@@ -1,69 +1,65 @@
 package engine;
 
-import data.ConcessionMenu;
 import data.ShowtimeBoard;
+import data.ConcessionMenu;
 import model.*;
 
 public class CheckoutEngine {
     private ShowtimeBoard board;
     private ConcessionMenu menu;
 
-    public CheckoutEngine(ShowtimeBoard board, ConcessionMenu menu){
-        this.board = board;
-        this.menu = menu;
+    public CheckoutEngine(ShowtimeBoard board, ConcessionMenu menu) {
+        this.board=board;
+        this.menu=menu;
     }
+
     public String bookTicket(Cart cart, int showtimeId, int row, int col) {
-        Showtime showtime = board.findById(showtimeId);
-        if (showtime == null){
-            String error = "Showtime not found";
-            return error;
+        if (board.findById(showtimeId) == null) return "Showtime not found";
+
+        if (cart.getOwner().getAge() < board.findById(showtimeId).getMovie().getMinAge()) {
+            return "Underage for rating" + board.findById(showtimeId).getMovie().getRating();
         }
-
-        Movie movie = showtime.getMovie();
-        if (cart.getOwner().getAge() < showtime.getMovie().getMinAge()){
-            String message = "Underage for rating " + movie.getRating();
-            return message;
+        if (board.findById(showtimeId).getHall().getSeat(row, col).isBooked()) {
+            return "Seat unavailable";
         }
+        double price=board.findById(showtimeId).getMovie().getBasePrice()*(board.findById(showtimeId).getHall().getSeat(row, col).isPremium() ? 1.30 : 1.00)
+                * (board.findById(showtimeId).isPeak() ? 1.20 : 1.00);
 
-        Seat seat = showtime.getHall().getSeat(row, col);
-        if (!seat.isAvailable()){
-            String S = "Seat unavailable";
-            return S;
-        }
+        board.findById(showtimeId).getHall().getSeat(row, col).book();
 
-        double price = movie.getBasePrice()
-                * (seat.isPremium() ? 1.30 : 1.00)
-                * (showtime.isPeak() ? 1.20 : 1.00);
-
-        seat.book();
-        Ticket ticket = new Ticket(showtime, row, col, price);
-        cart.addTicket(ticket);
-
+        Ticket t=new Ticket(board.findById(showtimeId), row, col, price);
+        cart.addTicket(t);
         return "OK";
     }
-
-    public String addConcession(Cart cart, String code, int qty){
-        if(menu.findByCode(code) == null){
-            String message = "Item not found";
-            return message;
-        }
-        if(qty <= 0){
-            String message2 = "Invalid quantity";
-            return message2;
-        }
-        else{
-            cart.addItem(menu.findByCode(code), qty);
-        }
+    public String addConcession(Cart cart, String code, int qty) {
+        if (menu.findByCode(code)==null) return "Item not found";
+        if (qty<=0) return "Invalid quantity";
+        cart.addItem(menu.findByCode(code), qty);
         return "OK";
     }
+    public double checkout(Cart cart) {
+        double ticketSubtotal=cart.sumTicketsPaid();
+        double concessionSubtotal=cart.sumConcessionsRaw();
+        double combo;
+        if (cart.hasItem("POP") && cart.hasItem("SODA")) combo=50.0;
+        else combo=0.0;
 
-//    public double checkout(Cart cart){
-//        double ticketSubtotal = cart.sumTicketsPaid();
-//        double concessionSubtotal = cart.sumConcessionsRaw();
-////        if(cart.hasItem())
-//    }
-//
-//    public String getReceipt(Cart cart){
-//
-//    }
+        double preDiscount=ticketSubtotal+concessionSubtotal-combo;
+
+        double group;
+        if (cart.ticketCount()>=4)  group=0.10*preDiscount;
+        else group=0.0;
+
+        double tier=cart.getOwner().getTierDiscount()*preDiscount;
+
+        double afterDiscounts=preDiscount-group-tier;
+        double tax=0.05*afterDiscounts;
+        double round=afterDiscounts+tax;
+        return Math.round(round*100.0)/100.0;
+    }
+    public String getReceipt(Cart cart) {
+        return String.format("Receipt\n"+"%s"+"Total"+"BDT"+"Discount", cart.getOwner().getName());
+    }
 }
+
+

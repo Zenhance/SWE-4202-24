@@ -15,14 +15,13 @@ import kenakata.order.Zone;
 import kenakata.payment.CardPayment;
 import kenakata.payment.CashOnDeliveryPayment;
 import kenakata.payment.MobileWalletPayment;
-import kenakata.payment.PaymentMethod;
 import kenakata.payment.Wallet;
 import kenakata.settlement.Marketplace;
 import kenakata.settlement.SellerPayout;
 import kenakata.settlement.SettlementReport;
 
 /**
- * Driver for the KenaKata engine. This is a hand-written demonstration of "a night in the
+ * Driver for the KenaKata engine. This is a handwritten demonstration of "a night in the
  * life of the marketplace": build sellers and a catalogue, assemble a few mixed orders,
  * quote them, place them against different payment methods (one is deliberately refused and
  * caught), process a return, then run the nightly settlement.

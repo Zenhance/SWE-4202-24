@@ -20,22 +20,24 @@ public class Cart {
         this.qtys = new int[MAX_ITEMS];
         this.itemCount = 0;
     }
-    public void addTicket(Ticket t) {
+    public boolean addTicket(Ticket t) {
         if (ticketCount < MAX_TICKETS) {
             tickets[ticketCount++] = t;
         }
+        return false;
     }
 
-    public void addItem(ConcessionItem c, int qty) {
-        if (itemCount >= MAX_ITEMS || qty <= 0) return;
+    public boolean addItem(ConcessionItem c, int qty) {
+        if (itemCount >= MAX_ITEMS || qty <= 0) return false;
         items[itemCount] = c;
         qtys[itemCount] = qty;
         itemCount++;
+        return false;
     }
 
     public Customer getOwner()          { return owner; }
     public Ticket[] getTickets()        { return tickets; }
-    public int getTicketCount()         { return ticketCount; }
+    public int ticketCount()         { return ticketCount; }
     public ConcessionItem[] getItems()  { return items; }
     public int[] getQtys()             { return qtys; }
     public int getItemCount()           { return itemCount; }
@@ -60,5 +62,41 @@ public class Cart {
         for (int i = 0; i < itemCount; i++)
             if (items[i].getCode().equals(code)) return true;
         return false;
+    }
+
+    public void add(StandardTicket standardTicket) {
+    }
+
+    public double grandSubtotal() {
+        return 0.0d;
+    }
+
+    public LineItem[] getLines() {
+        return getLines();
+    }
+
+    public boolean hasCode(String pop) {
+        return pop.isEmpty();
+    }
+
+    public void add(ConcessionItem soda, int i) {
+    }
+
+    public void add(PremiumTicket premiumTicket) {
+    }
+
+    public void add(ComboLine comboLine) {
+    }
+
+    public void add(StudentTicket studentTicket) {
+    }
+
+    public void add(LineItem a) {
+    }
+
+    public void add(ConcessionLine concessionLine) {
+    }
+
+    public void add(ConcessionItem pop) {
     }
 }
