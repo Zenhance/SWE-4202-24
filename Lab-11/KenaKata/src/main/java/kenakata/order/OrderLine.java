@@ -5,7 +5,6 @@ public class OrderLine {
     private final int quantity;
     private boolean insured = false;
     private boolean returned = false;
-    private OrderLine Insurable;
 
     public OrderLine(Chargeable item, int quantity){
         if(quantity <=0){
@@ -15,21 +14,24 @@ public class OrderLine {
         this.quantity=quantity;
     }
     public Chargeable item(){
+
         return item;
     }
     public int quantity(){
+
         return quantity;
     }
-    public boolean insured(){
-        return insured;
-    }
+
     public void setInsured(boolean insured){
+
         this.insured = insured;
     }
     public boolean returned(){
+
         return returned;
     }
     public void setReturned(boolean returned){
+
         this.returned=returned;
     }
 
@@ -37,11 +39,14 @@ public class OrderLine {
         return (long)(item.unitCharge()*quantity);
     }
  public long lineVat(){
+
         return item.unitVat()*quantity;
  }
  public long insuranceFee(){
+
         if(!insured || !(item instanceof Insurable insurable))
             return 0;
+
         long insurableValue= insurable.insurableValue()*quantity;
         long fee = (long)Math.ceil(insurableValue*0.01);
         return Math.max(fee,20);
