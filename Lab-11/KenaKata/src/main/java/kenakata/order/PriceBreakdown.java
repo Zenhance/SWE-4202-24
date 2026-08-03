@@ -1,27 +1,19 @@
 package kenakata.order;
+public record PriceBreakdown(
+        long subtotal,
+        long discount,
+        long delivery,
+        long vat,
+        long insurance,
+        long serviceFee,
+        long grandTotal
+) {
+    public PriceBreakdown {
+        if (subtotal < 0 || discount < 0 || delivery < 0 || vat < 0 || insurance < 0 || serviceFee < 0 || grandTotal < 0) {
 
-public class PriceBreakdown {
-    public PriceBreakdown(long subtotal, long discount, long delivery, long vat, long insurance, long serviceFee, long grandTotal) {
-    }
-
-    public int subtotal() {
-    }
-
-    public int discount() {
-    }
-
-    public int vat() {
-    }
-
-    public int delivery() {
-    }
-
-    public int insurance() {
-    }
-
-    public int serviceFee() {
-    }
-
-    public int grandTotal() {
+            throw new IllegalArgumentException(
+                    "Price components cannot be negative"
+            );
+        }
     }
 }
