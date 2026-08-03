@@ -8,8 +8,12 @@ public class OrderLine {
     private boolean insured;
     private boolean returned;
     public OrderLine(Chargeable unit, int quantity) {
+        if(quantity <= 0) {throw new IllegalArgumentException("quantity must be positive");}
         this.unit = unit;
         this.quantity = quantity;
     }
+
+
+
 
 }
