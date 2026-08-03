@@ -26,33 +26,33 @@ public class Marketplace {
             payoutList.add(new SellerPayout(seller));
         }
 
-    long platformRevenue = 0;
-    for(Order order: placedOrders){
-        PriceBreakdown bd = order.finalBreakdown();
-        platformRevenue += bd.delivery() + bd.vat() + bd.serviceFee() + bd.insurance()- bd.discount();
+        long platformRevenue = 0;
+        for (Order order : placedOrders) {
+            PriceBreakdown bd = order.finalBreakdown();
+            platformRevenue += bd.delivery() + bd.vat() + bd.serviceFee() + bd.insurance() - bd.discount();
 
-        for(OrderLine line : order.lines()){
-            Chargeable item = line.item();
-            if(item instanceof CatalogItem catalogItem){
-                Seller seller = catalogItem.seller();
-                SellerPayout payout = findPayoutForSeller(payoutList, seller);
+            for (OrderLine line : order.lines()) {
+                Chargeable item = line.item();
+                if (item instanceof CatalogItem catalogItem) {
+                    Seller seller = catalogItem.seller();
+                    SellerPayout payout = findPayoutForSeller(payoutList, seller);
 
-                long lineValue = line.lineValue();
-                payout.addSales(lineValue);
+                    long lineValue = line.lineValue();
+                    payout.addSales(lineValue);
 
-                long comm = catalogItem.commissionOn(lineValue);
-                payout.addCommission(comm);
-                platformRevenue+=comm;
-                if(line.returned()){
+                    long comm = catalogItem.commissionOn(lineValue);
+                    payout.addCommission(comm);
+                    platformRevenue += comm;
+                    if (line.returned()) {
                         payout.addRefund(lineValue);
-            }
-                else{
+                    }
+                } else {
                     platformRevenue += line.lineValue();
                 }
             }
         }
-        return new SettlementReport(payoutList,platformRevenue);
-}
+        return new SettlementReport(payoutList, platformRevenue);
+    }
     private SellerPayout findPayoutForSeller(List<SellerPayout>payouts,Seller seller){
         for(SellerPayout payout : payouts){
             if(payout.seller().equals(seller)){
