@@ -13,4 +13,12 @@ public class Seller {
     public String name() {
         return name;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Seller seller = (Seller) o;
+        return name.equals(seller.name);
+    }
 }
