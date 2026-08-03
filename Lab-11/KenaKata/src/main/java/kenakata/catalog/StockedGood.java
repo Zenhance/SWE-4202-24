@@ -26,4 +26,8 @@ public class StockedGood extends Item{
         return (long)Math.ceil(n*0.008);
     }
 
+    public int weight(){
+        return weight;
+    }
+
 }
