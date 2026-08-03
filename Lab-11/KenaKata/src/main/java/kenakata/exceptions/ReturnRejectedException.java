@@ -1,6 +1,6 @@
 package kenakata.exceptions;
 
-public class ReturnRejectedException extends CheckoutException{
+public class ReturnRejectedException extends CheckoutException {
     public ReturnRejectedException(String message){
         super(message);
     }
