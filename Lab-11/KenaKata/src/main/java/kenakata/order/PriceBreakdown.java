@@ -24,5 +24,36 @@ public final class PriceBreakdown {
         this.grandTotal = grandTotal;
         this.lines = lines;
     }
+    public long subtotal() {
+        return subtotal;
+    }
+
+    public long discount() {
+        return discount;
+    }
+
+    public long delivery() {
+        return delivery;
+    }
+
+    public long vat() {
+        return vat;
+    }
+
+    public long insurance() {
+        return insurance;
+    }
+
+    public long serviceFee() {
+        return serviceFee;
+    }
+
+    public long grandTotal() {
+        return grandTotal;
+    }
+
+    public List<OrderLine> lines() {
+        return lines;
+    }
 
 }
