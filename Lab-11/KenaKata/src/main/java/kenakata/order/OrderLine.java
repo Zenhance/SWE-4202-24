@@ -5,7 +5,7 @@ import kenakata.catalog.Chargeable;
 public class OrderLine
 {
     private Chargeable item;
-    private int qty;
+    private long qty;
     private boolean insured;
     private boolean returned;
 
@@ -24,7 +24,7 @@ public class OrderLine
         return item;
     }
 
-    public int qty()
+    public long qty()
     {
         return qty;
     }
