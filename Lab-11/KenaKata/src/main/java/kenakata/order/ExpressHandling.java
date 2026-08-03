@@ -2,7 +2,7 @@ package kenakata.order;
 
 public class ExpressHandling implements Chargeable{
     @Override
-    public long unitCharge(){
+    public double unitCharge(){
         return 120;
     }
     @Override
