@@ -1,9 +1,9 @@
 package kenakata.payment;
 
-public class CardPayment extends PaymentMethod {
-    private int limit;
+public class CardPayment implements PaymentMethod {
+    private long limit;
 
-    public CardPayment(int limit) {
+    public CardPayment(long limit) {
         this.limit = limit;
     }
 
