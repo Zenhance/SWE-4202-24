@@ -9,4 +9,9 @@ public class WarrantyPlan implements Item {
         }
         this.coveredItem = coveredItem;
     }
+
+    @Override
+    public long unitCharge() {
+        return (long) Math.ceil(coveredItem.unitPrice() * 0.10);
+    }
 }
