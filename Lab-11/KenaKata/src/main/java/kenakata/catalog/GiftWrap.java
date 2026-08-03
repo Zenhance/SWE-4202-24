@@ -2,7 +2,7 @@ package kenakata.catalog;
 
 
 
-/** Flat-charge add-on: gift wrapping. Earns no seller commission; belongs to the platform. */
+
 public final class GiftWrap implements Chargeable, Labeled {
 
     private static final long CHARGE = 50;

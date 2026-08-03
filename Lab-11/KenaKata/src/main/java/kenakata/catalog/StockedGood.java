@@ -18,8 +18,8 @@ public class StockedGood extends CatalogItem implements Weighable, Insurable, Re
 
 
     @Override
-    public double vatCharge() {
-        return Math.ceil(unitCharge()*VAT);
+    public long vatCharge() {
+        return (long) Math.ceil(unitCharge()*VAT);
     }
     public long commissionOn(long lineValue) {
         return (long) Math.ceil(lineValue*COMISSION);

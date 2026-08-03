@@ -17,8 +17,8 @@ public CatalogItem(String SKU, String title, double UnitPrice, Seller seller, in
     this.Stock=Stock;
 }
 
-public double unitCharge(){
-    return UnitPrice;
+public long unitCharge(){
+    return (long) UnitPrice;
 }
     public String sku() {
         return SKU;

@@ -42,7 +42,7 @@ public final class FreshGood extends CatalogItem
     }
 
     @Override
-    public double vatCharge() {
+    public long vatCharge() {
         return 0;
     }
 }
