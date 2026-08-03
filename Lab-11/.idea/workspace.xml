@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51081361-6857-41f6-8e00-368f50dbeaac" name="Changes" comment="SellerPayout">
-      <change beforePath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/settlement/SettlementReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/settlement/SettlementReport.java" afterDir="false" />
+    <list default="true" id="51081361-6857-41f6-8e00-368f50dbeaac" name="Changes" comment="SettlementReport fix">
+      <change beforePath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/order/Order.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,30 +132,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1785213378197</updated>
-    </task>
-    <task id="LOCAL-00052" summary="warranty plan">
-      <option name="closed" value="true" />
-      <created>1785789665554</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1785789665554</updated>
-    </task>
-    <task id="LOCAL-00053" summary="warranty plan fix">
-      <option name="closed" value="true" />
-      <created>1785789865264</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1785789865264</updated>
-    </task>
-    <task id="LOCAL-00054" summary="warranty plan fix">
-      <option name="closed" value="true" />
-      <created>1785789918606</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1785789918606</updated>
     </task>
     <task id="LOCAL-00055" summary="name fixing">
       <option name="closed" value="true" />
@@ -525,7 +501,31 @@
       <option name="project" value="LOCAL" />
       <updated>1785800977718</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="SellerPayout">
+      <option name="closed" value="true" />
+      <created>1785801082608</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1785801082608</updated>
+    </task>
+    <task id="LOCAL-00102" summary="SettlementReport">
+      <option name="closed" value="true" />
+      <created>1785801137674</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1785801137674</updated>
+    </task>
+    <task id="LOCAL-00103" summary="SettlementReport fix">
+      <option name="closed" value="true" />
+      <created>1785801189453</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1785801189453</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -555,8 +555,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="catalog item fix" />
-    <MESSAGE value="digital good fix" />
     <MESSAGE value="fresh good fix" />
     <MESSAGE value="stocked good fix" />
     <MESSAGE value="ExpressHandling" />
@@ -580,6 +578,8 @@
     <MESSAGE value="orderline" />
     <MESSAGE value="Marketplace" />
     <MESSAGE value="SellerPayout" />
-    <option name="LAST_COMMIT_MESSAGE" value="SellerPayout" />
+    <MESSAGE value="SettlementReport" />
+    <MESSAGE value="SettlementReport fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="SettlementReport fix" />
   </component>
 </project>
