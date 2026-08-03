@@ -2,9 +2,9 @@ package kenakata.order;
 import kenakata.catalog.CatalogItem;
 
 public abstract class WarrantyPlan implements Chargeable{
-    private String label;
-    private double unitCharge;
-    private int durationMonths;
+    private final String label;
+    private final double unitCharge;
+    private final int durationMonths;
 
     public WarrantyPlan(String label,double unitCharge,int durationMonths){
         if(unitCharge<0){
@@ -21,16 +21,22 @@ public abstract class WarrantyPlan implements Chargeable{
 
     @Override
     public String label(){
+
         return this.label;
     }
     @Override
     public double unitCharge(){
+
         return this.unitCharge;
     }
     public int getDurationMonths(){
+
         return this.durationMonths;
     }
-    public double calculateTotalCost(){
-        return unitCharge();
+
+    @Override
+    public long unitVat() {
+        return (long) Math.ceil(unitCharge * 0.075);
     }
+
 }
