@@ -12,6 +12,8 @@ public class MobileWalletPayment implements PaymentMethod {
     }
     @Override
     public void authorise(long amount) throws EmptyWalletException {
+        if(amount> wallet.balance()) {throw new EmptyWalletException("Insufficient Wallet Balance");}
+        wallet.debit(amount);
 
     }
 }

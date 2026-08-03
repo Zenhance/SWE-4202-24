@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51081361-6857-41f6-8e00-368f50dbeaac" name="Changes" comment="wallet fix">
-      <change beforePath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/payment/PaymentMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/payment/PaymentMethod.java" afterDir="false" />
+    <list default="true" id="51081361-6857-41f6-8e00-368f50dbeaac" name="Changes" comment="payment method fixing">
+      <change beforePath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/payment/MobileWalletPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/payment/MobileWalletPayment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,46 +132,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1785213378197</updated>
-    </task>
-    <task id="LOCAL-00010" summary="payment classes">
-      <option name="closed" value="true" />
-      <created>1785702040988</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1785702040988</updated>
-    </task>
-    <task id="LOCAL-00011" summary="payment classes extension">
-      <option name="closed" value="true" />
-      <created>1785702285506</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1785702285506</updated>
-    </task>
-    <task id="LOCAL-00012" summary="payment classes extension">
-      <option name="closed" value="true" />
-      <created>1785702927205</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1785702927205</updated>
-    </task>
-    <task id="LOCAL-00013" summary="payment classes extension">
-      <option name="closed" value="true" />
-      <created>1785703599793</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1785703599793</updated>
-    </task>
-    <task id="LOCAL-00014" summary="payment classes extension">
-      <option name="closed" value="true" />
-      <created>1785703677777</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1785703677777</updated>
     </task>
     <task id="LOCAL-00015" summary=".">
       <option name="closed" value="true" />
@@ -525,7 +485,47 @@
       <option name="project" value="LOCAL" />
       <updated>1785790646987</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="payment method fixing">
+      <option name="closed" value="true" />
+      <created>1785790775763</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1785790775763</updated>
+    </task>
+    <task id="LOCAL-00060" summary="payment method fixing">
+      <option name="closed" value="true" />
+      <created>1785790794539</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1785790794540</updated>
+    </task>
+    <task id="LOCAL-00061" summary="payment method fixing">
+      <option name="closed" value="true" />
+      <created>1785790835424</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1785790835425</updated>
+    </task>
+    <task id="LOCAL-00062" summary="payment method fixing">
+      <option name="closed" value="true" />
+      <created>1785791029921</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1785791029921</updated>
+    </task>
+    <task id="LOCAL-00063" summary="payment method fixing">
+      <option name="closed" value="true" />
+      <created>1785791127522</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1785791127522</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -555,7 +555,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="paymentmethod" />
     <MESSAGE value="payment classes" />
     <MESSAGE value="payment classes extension" />
     <MESSAGE value="zone enum" />
@@ -580,6 +579,7 @@
     <MESSAGE value="name fixing" />
     <MESSAGE value="." />
     <MESSAGE value="wallet fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="wallet fix" />
+    <MESSAGE value="payment method fixing" />
+    <option name="LAST_COMMIT_MESSAGE" value="payment method fixing" />
   </component>
 </project>
