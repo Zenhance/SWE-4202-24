@@ -12,6 +12,8 @@ public class CardPayment implements PaymentMethod {
 
     @Override
     public void authorise(long amount) throws CardLimitExceededException {
+        if(amount>limit) {throw new CardLimitExceededException("Card Limit Exceeded");}
+        limit -=amount;
 
     }
 
