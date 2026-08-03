@@ -1,7 +1,7 @@
 package kenakata.catalog;
 import kenakata.exceptions.OutOfStockException;
 import kenakata.order.Chargeable;
-import kenakata.settlement.Seller;
+
 public abstract class CatalogItem implements Chargeable{
     private final String sku;
     private final String title;

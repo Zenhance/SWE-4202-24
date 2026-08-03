@@ -1,5 +1,7 @@
 package kenakata.settlement;
 
+import kenakata.catalog.Seller;
+
 import java.util.List;
 public class SettlementReport {
     private final List<SellerPayout> payouts;

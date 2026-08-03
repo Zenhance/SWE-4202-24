@@ -1,6 +1,8 @@
-package kenakata.order;
+package kenakata.catalog;
 
-public class ExpressHandling implements Chargeable{
+import kenakata.order.Chargeable;
+
+public class ExpressHandling implements Chargeable {
     @Override
     public long unitCharge(){
         return 120;

@@ -1,4 +1,4 @@
-package kenakata.settlement;
+package kenakata.catalog;
 
 public class Seller {
     private final String name;
@@ -9,6 +9,10 @@ public class Seller {
         this.name=name;
     }
     public String getName(){
+        return name;
+    }
+    @Override
+    public String toString(){
         return name;
     }
 }

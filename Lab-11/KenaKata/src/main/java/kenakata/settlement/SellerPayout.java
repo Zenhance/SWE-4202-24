@@ -1,5 +1,7 @@
 package kenakata.settlement;
 
+import kenakata.catalog.Seller;
+
 public class SellerPayout {
     private final Seller seller;
     private long grossSales;
@@ -29,7 +31,5 @@ public class SellerPayout {
     public long payout(){
         return grossSales - commission-refunds;
     }
-    public Seller seller(){
-        return seller;
-    }
+
 }

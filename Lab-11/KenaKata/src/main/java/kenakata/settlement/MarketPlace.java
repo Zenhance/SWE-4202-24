@@ -1,6 +1,7 @@
 package kenakata.settlement;
 
 import kenakata.catalog.CatalogItem;
+import kenakata.catalog.Seller;
 import kenakata.order.*;
 
 import java.util.ArrayList;
