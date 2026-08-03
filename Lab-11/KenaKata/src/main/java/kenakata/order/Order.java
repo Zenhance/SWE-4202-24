@@ -110,11 +110,12 @@ public final class Order {
         placedDay = currentDay;
         finalBreakdown = breakdown;
     }
-    public void acceptReturn(int lineIndex,int returnDay) throws ReturnNotAllowedException{
-        if(!placed){
+
+    public void acceptReturn(int lineIndex, int returnDay) throws ReturnNotAllowedException {
+        if (!placed) {
             throw new ReturnNotAllowedException("Only placed orders can accept returns");
-    }
-        if(returnDay<0){
+        }
+        if (returnDay < 0) {
             throw new IllegalArgumentException("Return day cannot be negative");
         }
         OrderLine line = lineAt(lineIndex);
@@ -124,13 +125,42 @@ public final class Order {
         if (!(line.unit() instanceof Returnable returnable)) {
             throw new ReturnNotAllowedException("The line is not returnable");
         }
-        int finalReturnDay=placedDay +returnable.returnWindowDays();
-        if(returnDay >finalReturnDay) {
+        int finalReturnDay = placedDay + returnable.returnWindowDays();
+        if (returnDay > finalReturnDay) {
             throw new ReturnNotAllowedException("The return window has expired");
         }
         line.markReturned();
-        if(line.unit() instanceof CatalogItem item){
+        if (line.unit() instanceof CatalogItem item) {
             item.release(line.quantity());
         }
-
+    }
+    public List<OrderLine> lines(){
+        return Collections.unmodifiableList(lines);
+    }
+    public Zone zone() {
+        return zone;
+    }
+    public boolean placed(){
+        return placed;
+    }
+    public int placedDay(){
+        return placedDay;
+    }
+    public PriceBreakdown finalBreakdown() {
+        return finalBreakdown;
+    }
+    public Coupon coupon(){
+        return coupon;
+    }
+    private PriceBreakdown calculateBreakdown(int currentDay) throws CheckoutException{
+        long subtotal=0;
+        long vat=0;
+        long discountableBase= 0;
+        long insurance =0;
+        for(OrderLine line : lines){
+           long value = line.lineValue();
+           subtotal=Math.addExact(subtotal,value);
+           vat=Math.addExact(vat,line.lineVat());
         }
+    }
+}
