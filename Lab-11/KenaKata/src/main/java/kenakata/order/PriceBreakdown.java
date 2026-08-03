@@ -5,6 +5,10 @@ public class PriceBreakdown {
     private long subtotal;
     private long discount;
     private long grandtotal;
+    private long delivery;
+    private long vat;
+    private long serviceFee;
+    private long insurance;
 
     public int subtotal() {
 
