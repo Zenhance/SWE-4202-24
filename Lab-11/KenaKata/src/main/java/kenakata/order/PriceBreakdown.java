@@ -11,9 +11,8 @@ public class PriceBreakdown {
     private ArrayList<Chargeable> chargeables;
     private Coupon coupon;
     private Zone zone;
-    private DeliveryCalculator calculator;
 
-    public PriceBreakdown(ArrayList<Chargeable> chargeables, Coupon coupon, Zone zone, DeliveryCalculator calculator) {
+    public PriceBreakdown(ArrayList<Chargeable> chargeables, Coupon coupon, Zone zone) {
         if (chargeables == null)
             throw new IllegalArgumentException("ArrayList of chargeables cannot be null");
         this.chargeables = chargeables;
@@ -23,7 +22,6 @@ public class PriceBreakdown {
         this.zone = zone;
 
         this.coupon = coupon;
-        this.calculator = calculator;
     }
 
     public int subtotal() {
