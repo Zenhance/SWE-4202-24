@@ -1,14 +1,16 @@
 package kenakata.catalog;
 
+import kenakata.exceptions.OutOfStockException;
+
 public class Item implements Chargeable{
     private String SKU;
     private String title;
-    private double unitPrice;
-    private int stockCount;
+    private long unitPrice;
+    private int stock;
     private Seller seller;
 
 
-    public Item(String SKU, String title, double unitPrice, int stockCount, Seller seller) {
+    public Item(String SKU, String title, long unitPrice, int stockCount, Seller seller) {
         if (SKU == null || title == null || seller == null) {
             throw new IllegalArgumentException("Invalid identity data");
         }
@@ -18,7 +20,7 @@ public class Item implements Chargeable{
         this.SKU = SKU;
         this.title = title;
         this.unitPrice = unitPrice;
-        this.stockCount = stockCount;
+        this.stock = stockCount;
         this.seller = seller;
     }
 
@@ -35,7 +37,7 @@ public class Item implements Chargeable{
     }
 
     public int remaining() {
-        return stockCount;
+        return stock;
     }
 
     @Override
@@ -53,8 +55,14 @@ public class Item implements Chargeable{
         stock -= quantity;
     }
 
+    public abstract long commissionOn(long totalCharge);
 
-
-
-
+    // Capabilities
+    public boolean isWeighable() { return false; }
+    public int weight() { return 0; }
+    public boolean isFresh() { return false; }
+    public boolean isDiscountable() { return false; }
+    public boolean isInsurable() { return false; }
+    public boolean isReturnable() { return false; }
+    public int returnWindowDays() { return 0; }
 }
