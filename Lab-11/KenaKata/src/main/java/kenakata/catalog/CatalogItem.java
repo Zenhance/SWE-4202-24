@@ -39,7 +39,7 @@ public abstract class CatalogItem implements Chargeable {
     }
 
     @Override
-    public long unitCharge(){
+    public double unitCharge(){
         return unitPrice;
     }
     @Override
