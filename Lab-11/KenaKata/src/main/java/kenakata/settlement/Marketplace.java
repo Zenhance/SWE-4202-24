@@ -59,6 +59,7 @@ public final class Marketplace {
             long orderPlatform = orderCommission;
             orderPlatform = Math.addExact(orderPlatform,addOnRevenue);
             orderPlatform=Math.addExact(orderPlatform,breakdown.delivery());
+            orderPlatform=Math.addExact(orderPlatform,breakdown.vat());
             orderPlatform=Math.addExact(orderPlatform,breakdown.insurance());
             orderPlatform=Math.addExact(orderPlatform,breakdown.serviceFee());
             orderPlatform=Math.subtractExact(orderPlatform,breakdown.discount());

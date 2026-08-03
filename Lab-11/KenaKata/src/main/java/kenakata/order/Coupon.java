@@ -11,7 +11,10 @@ public final class Coupon {
 
     public Coupon(String code, int percentage, long cap, long minimumSpeed, int lastValidDay){
         if(code == null || code.isBlank()){
-            throw new IllegalArgumentException("Coupn percentage must be between 0 and 100");
+            throw new IllegalArgumentException("Coupon percentage must be between 0 and 100");
+        }
+        if (percentage < 0 || percentage > 100) {
+        throw new IllegalArgumentException("Coupon percentage must be between 0 and 100");
         }
         if(cap<0 || minimumSpeed<0 || lastValidDay<0){
             throw new IllegalArgumentException("Coupon limits cannot be negative");
