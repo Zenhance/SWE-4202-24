@@ -57,5 +57,15 @@ public class Order {
                 discountableBase += line.lineValue();
             }
         }
+        long discount=0;
+        if (coupon!=null){
+            discount=coupon.calculateDiscount(discountableBase, currentDay);
+        }
+        long delivery = deliveryCalculator.calculateDelivery(lines, zone);
+        long serviceFee = (long) Math.ceil(subtotal * 0.01);
+        serviceFee = Math.min(serviceFee, 100);
+        long grandTotal = subtotal - discount + delivery + vat + insurance + serviceFee;
+        return new PriceBreakdown(subtotal, discount, vat, delivery, insurance, serviceFee, grandTotal);
+    }
     }
 }
