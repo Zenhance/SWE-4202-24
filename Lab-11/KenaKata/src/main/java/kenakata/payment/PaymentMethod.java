@@ -4,5 +4,5 @@ import kenakata.exceptions.PaymentDeclinedException;
 
 public interface PaymentMethod {
 
-    void authorize(long amount) throws PaymentDeclinedException;
+    void authorise(long amount) throws PaymentDeclinedException;
 }
