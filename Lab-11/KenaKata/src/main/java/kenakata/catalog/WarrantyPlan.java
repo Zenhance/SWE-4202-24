@@ -4,6 +4,13 @@ public class WarrantyPlan implements Chargeable
 {
     private CatalogItem catalogItem;
 
+    public WarrantyPlan(CatalogItem catalogItem)
+    {
+        if(catalogItem==null)
+            throw new IllegalArgumentException("Catalog Item can not be null");
+        this.catalogItem = catalogItem;
+    }
+
     @Override
     public long unitCharge()
     {
