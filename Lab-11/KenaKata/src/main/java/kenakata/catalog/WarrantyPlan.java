@@ -22,6 +22,6 @@ public class WarrantyPlan implements Item {
 
     @Override
     public String label() {
-        return "Warranty : ";
+        return "Warranty : " + coveredItem.title();
     }
 }
