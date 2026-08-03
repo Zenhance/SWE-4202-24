@@ -25,5 +25,10 @@ public final class OrderLine {
     public int quantity(){
         return quantity;
     }
-
+    public long lineValue(){
+        return Math.multiplyExact(unit.unitCharge(),quantity);
+    }
+    public long lineVat(){
+        return Math.multiplyExact(unit.unitVat(),quantity);
+    }
 }
