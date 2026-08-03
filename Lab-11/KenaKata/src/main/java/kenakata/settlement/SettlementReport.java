@@ -23,7 +23,6 @@ public class SettlementReport {
                 return payout;
             }
         }
-
         return null;
     }
 }
