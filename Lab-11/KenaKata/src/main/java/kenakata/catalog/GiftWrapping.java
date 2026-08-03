@@ -3,7 +3,7 @@ package kenakata.catalog;
 public class GiftWrapping implements Chargeable {
     @Override
     public long unitVat() {
-        return 0;
+        return (long) Math.ceil(50 * 0.075);
     }
 
     @Override
