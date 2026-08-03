@@ -20,4 +20,9 @@ public class FreshGood extends CatalogItem implements Weighable, ColdChain, Insu
     public long unitVat() {
         return 0;
     }
+
+    @Override
+    public long commissionOn(long lineValue) {
+        return (long) Math.ceil(lineValue * 0.05);
+    }
 }
