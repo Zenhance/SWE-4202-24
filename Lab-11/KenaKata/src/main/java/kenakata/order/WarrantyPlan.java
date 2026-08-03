@@ -1,25 +1,13 @@
-package kenakata.order;
+import kenakata.catalog.CatalogItem;
 
-import javax.xml.catalog.Catalog;
+public class WarrantyPlan implements CatalogItem{
+    private String label;
+    private double unitCharge;
+    private int durationMonths;
 
-public abstract class WarrantyPlan implements Chargeable{
-    private final CatalogItem coveredItem;
-    public WarrantyPlan(CatalogItem coveredItem){
-        if(coveredItem==null){
-            throw new IllegalArgumentException("Covered item cannot be null");
-        }
-        this.coveredItem=coveredItem;
-    }
-    @Override
-    public long unitCharge(){
-        return (long) Math.ceil(coveredItem.unitCharge()*0.10);
-    }
-    @Override
-    public long unitVat(){
-        return (long) Math.ceil(unitCharge()*0.15);
-    }
-    @Override
-    public String label(){
-        return "Warranty for " + coveredItem.label();
+    public WarrantyPlan(String label,double unitCharge,int durationMonths){
+        this.label=label;
+        this.unitCharge=unitCharge;
+        this.durationMonths=durationMonths;
     }
 }
