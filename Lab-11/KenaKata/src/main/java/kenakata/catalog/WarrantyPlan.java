@@ -4,6 +4,8 @@ public class WarrantyPlan extends AddOn{
     private CatalogItem item;
 
     public WarrantyPlan(CatalogItem product) {
+        if (product == null)
+            throw new IllegalArgumentException("Product to be insured cannot be null");
         this.item = product;
         product.insure();
     }
