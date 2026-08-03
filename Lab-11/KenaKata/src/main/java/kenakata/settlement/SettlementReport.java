@@ -16,3 +16,16 @@ public final class SettlementReport {
         this.bySeller = bySeller;
         this.platformRevenue = platformRevenue;
     }
+    public List<SellerPayout> payouts() {
+        return payouts;
+    }
+
+    public SellerPayout forSeller(Seller seller) {
+        return bySeller.get(seller);
+    }
+
+    public long platformRevenue() {
+        return platformRevenue;
+    }
+}
+
