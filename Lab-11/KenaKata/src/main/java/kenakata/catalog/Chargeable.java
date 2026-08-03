@@ -1,8 +1,8 @@
 package kenakata.catalog;
 
 public interface Chargeable {
-    public long unitCharge();
-    public long unitVat();
-    public String label();
+    long unitCharge();
+    long unitVat();
+    String label();
     
 }
