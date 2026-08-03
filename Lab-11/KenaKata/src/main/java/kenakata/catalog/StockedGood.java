@@ -15,4 +15,11 @@ public class StockedGood {
     public int commissionOn(int i) {
         return 1;
     }
+
+    public void reserve(int i) {
+    }
+
+    public int remaining() {
+        return 1;
+    }
 }
