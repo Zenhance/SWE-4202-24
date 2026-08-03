@@ -1,8 +1,6 @@
 package kenakata.order;
 
-import kenakata.catalog.AddOn;
 import kenakata.catalog.Chargeable;
-import kenakata.catalog.CatalogItem;
 import kenakata.exceptions.CheckoutException;
 import kenakata.exceptions.CouponRejectedException;
 import kenakata.exceptions.ReturnNotAllowedException;
@@ -49,6 +47,9 @@ public class Order {
         if (coupon != null) {
             if (isCouponExpired(day))
                 throw new CouponRejectedException("An expired coupon is refused");
+            if (!hasSpentMinimum())
+                throw new CouponRejectedException("A coupon below its minimum spend is refused");
+
         }
 
         return priceBreakdown;
@@ -58,6 +59,9 @@ public class Order {
         return day > coupon.getLastValidDay();
     }
 
+    public boolean hasSpentMinimum() {
+        return priceBreakdown.discountableAmount() > coupon.getMinimumSpend();
+    }
 
     public void insure(int number) {
 
