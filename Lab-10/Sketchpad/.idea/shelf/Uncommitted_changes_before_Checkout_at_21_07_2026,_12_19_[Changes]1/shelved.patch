@@ -1,0 +1,30 @@
+Index: src/main/java/Rectangle.java
+===================================================================
+diff --git a/src/main/java/Rectangle.java b/src/main/java/Rectangle.java
+new file mode 100644
+--- /dev/null	(date 1784614315283)
++++ b/src/main/java/Rectangle.java	(date 1784614315283)
+@@ -0,0 +1,2 @@
++public class Rectangle {
++}
+Index: src/main/java/CIrcle.java
+===================================================================
+diff --git a/src/main/java/CIrcle.java b/src/main/java/CIrcle.java
+new file mode 100644
+--- /dev/null	(date 1784614315300)
++++ b/src/main/java/CIrcle.java	(date 1784614315300)
+@@ -0,0 +1,2 @@
++public class CIrcle {
++}
+Index: src/main/java/Square.java
+===================================================================
+diff --git a/src/main/java/Square.java b/src/main/java/Square.java
+new file mode 100644
+--- /dev/null	(date 1784614741681)
++++ b/src/main/java/Square.java	(date 1784614741681)
+@@ -0,0 +1,5 @@
++public abstract class Square {
++    public abstract double area();
++    public abstract String describe();
++    public abstract void draw(Canvas canvas) throws ShapeException;
++}
