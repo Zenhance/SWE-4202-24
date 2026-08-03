@@ -22,7 +22,7 @@ public class Order {
         this.zone = zone;
         this.deliveryCalculator = deliveryCalculator;
     }
-
+  // cart additions
     public void addProduct(CatalogItem item, int quantity) {
         lines.add(new OrderLine(item, quantity));
     }
@@ -34,6 +34,7 @@ public class Order {
     public void applyCoupon(Coupon coupon) {
         this.coupon = coupon;
     }
+    //insurance opt-in
 
     public void insure(int lineIndex) throws NotInsurableException {
         if (lineIndex < 0 || lineIndex >= lines.size()) {
@@ -114,6 +115,7 @@ public class Order {
     }
 
     public List<OrderLine> lines() {
-        return Collections.unmodifiableList(lines);
+
+        return Collections.unmodifiableList(lines); //protects internal order lines from external mutation
     }
 }

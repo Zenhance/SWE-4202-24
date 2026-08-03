@@ -8,8 +8,8 @@ public class PriceBreakdown {
     private final long vat;
     private final long delivery;
     private final long insurance;
-    private final long serviceFee;
-    private final long grandTotal;
+    private final long serviceFee;//GiftWrap,ExpressHandling,WarrantyPlan
+    private final long grandTotal;//(subtotal-disc)+ vat+delivery
 
 
 public PriceBreakdown(long subtotal,long discount,long vat,long delivery,long insurance,long serviceFee,long grandTotal){
@@ -37,7 +37,7 @@ public long insurance(){
     return insurance;
 }
 public long serviceFee(){
-return serviceFee;
+    return serviceFee;
 }
 public long grandTotal(){
     return grandTotal;

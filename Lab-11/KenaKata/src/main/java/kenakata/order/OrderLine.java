@@ -1,6 +1,6 @@
 package kenakata.order;
 
-public class OrderLine {
+public class OrderLine { //represents a single item row in a shopping cart or order receipt
     private final Chargeable item;
     private final int quantity;
     private boolean insured = false;
@@ -48,8 +48,8 @@ public class OrderLine {
             return 0;
 
         long insurableValue= insurable.insurableValue()*quantity;
-        long fee = (long)Math.ceil(insurableValue*0.01);
-        return Math.max(fee,20);
+        long fee = (long)Math.ceil(insurableValue*0.01);//1% premium calculation
+        return Math.max(fee,20); //min fee floor 20 tk
     }
 
 }
