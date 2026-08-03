@@ -11,17 +11,19 @@ public class PriceBreakdown {
     private ArrayList<Chargeable> chargeables;
     private Coupon coupon;
     private Zone zone;
+    private DeliveryCalculator calculator;
 
-    public PriceBreakdown(ArrayList<Chargeable> chargeables, Coupon coupon, Zone zone) {
+    public PriceBreakdown(ArrayList<Chargeable> chargeables, Coupon coupon, Zone zone, DeliveryCalculator calculator) {
         if (chargeables == null)
             throw new IllegalArgumentException("ArrayList of chargeables cannot be null");
         this.chargeables = chargeables;
 
-        this.coupon = coupon;
-
         if (zone == null)
             throw new IllegalArgumentException("Delivery zone cannot be null");
         this.zone = zone;
+
+        this.coupon = coupon;
+        this.calculator = calculator;
     }
 
     public int subtotal() {

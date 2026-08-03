@@ -41,8 +41,7 @@ public class Order {
     }
 
     public PriceBreakdown quote(int amount) {
-        PriceBreakdown p = new PriceBreakdown(chargeables, coupon, zone);
-        return p;
+        return new PriceBreakdown(chargeables, coupon, zone, calculator);
     }
 
     public void insure(int number) {
@@ -59,7 +58,7 @@ public class Order {
     }
 
     public PriceBreakdown finalBreakdown() {
-        return new PriceBreakdown(chargeables, coupon, zone);
+        return new PriceBreakdown(chargeables, coupon, zone, calculator);
     }
 
     public void acceptReturn(int serial, int day) throws ReturnNotAllowedException {
