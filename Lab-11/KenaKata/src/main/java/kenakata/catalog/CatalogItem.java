@@ -54,4 +54,13 @@ public abstract class CatalogItem implements Chargeable {
         return unitPrice;
     }
 
+    public void reserve(int quantity) throws OutOfStockException{
+        if(quantity > stock){
+            throw new OutOfStockException();
+        }
+        stock -= quantity;
+    }
+
+    public abstract long commissionOn (long lineValue);
+
 }
