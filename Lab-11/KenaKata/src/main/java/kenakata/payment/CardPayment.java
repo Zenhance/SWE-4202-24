@@ -13,7 +13,7 @@ public class CardPayment implements PaymentMethod {
 
     }
 
-    public int remainingLimit() {
-        return 0;
+    public long limit() {
+        return limit;
     }
 }

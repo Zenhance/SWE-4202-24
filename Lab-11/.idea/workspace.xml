@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51081361-6857-41f6-8e00-368f50dbeaac" name="Changes" comment="payment method fixing">
-      <change beforePath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/payment/MobileWalletPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/payment/MobileWalletPayment.java" afterDir="false" />
+    <list default="true" id="51081361-6857-41f6-8e00-368f50dbeaac" name="Changes" comment="card pay fixing">
+      <change beforePath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/payment/CardPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/payment/CardPayment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,30 +132,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1785213378197</updated>
-    </task>
-    <task id="LOCAL-00015" summary=".">
-      <option name="closed" value="true" />
-      <created>1785703814256</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1785703814256</updated>
-    </task>
-    <task id="LOCAL-00016" summary="zone enum">
-      <option name="closed" value="true" />
-      <created>1785703924432</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1785703924432</updated>
-    </task>
-    <task id="LOCAL-00017" summary="PriceBreakdown">
-      <option name="closed" value="true" />
-      <created>1785704217961</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1785704217961</updated>
     </task>
     <task id="LOCAL-00018" summary="PriceBreakdown">
       <option name="closed" value="true" />
@@ -525,7 +501,31 @@
       <option name="project" value="LOCAL" />
       <updated>1785791127522</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="payment method fixing">
+      <option name="closed" value="true" />
+      <created>1785791696249</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1785791696249</updated>
+    </task>
+    <task id="LOCAL-00065" summary="mobile wallet fixing">
+      <option name="closed" value="true" />
+      <created>1785791880314</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1785791880314</updated>
+    </task>
+    <task id="LOCAL-00066" summary="card pay fixing">
+      <option name="closed" value="true" />
+      <created>1785791990999</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1785791990999</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -555,8 +555,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="payment classes" />
-    <MESSAGE value="payment classes extension" />
     <MESSAGE value="zone enum" />
     <MESSAGE value="PriceBreakdown" />
     <MESSAGE value="catalog" />
@@ -580,6 +578,8 @@
     <MESSAGE value="." />
     <MESSAGE value="wallet fix" />
     <MESSAGE value="payment method fixing" />
-    <option name="LAST_COMMIT_MESSAGE" value="payment method fixing" />
+    <MESSAGE value="mobile wallet fixing" />
+    <MESSAGE value="card pay fixing" />
+    <option name="LAST_COMMIT_MESSAGE" value="card pay fixing" />
   </component>
 </project>
