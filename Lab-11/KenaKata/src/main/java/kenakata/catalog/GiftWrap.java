@@ -12,6 +12,6 @@ public class GiftWrap extends Product{
 
     @Override
     public long unitVat() {
-        return 0;
+        return (long) Math.ceil(unitPrice()*0.075);
     }
 }
