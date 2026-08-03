@@ -1,6 +1,7 @@
 package kenakata.catalog;
 
-public class FreshGood {
-    public FreshGood(String s, String s1, int i, int i1, Seller gamma, int i2) {
+public class FreshGood extends Item{
+    public FreshGood(String SKU, String title, double unitPrice, int stockCount, Seller seller, int weight) {
+        super(SKU, title, unitPrice, stockCount, seller, weight);
     }
 }
