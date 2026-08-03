@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51081361-6857-41f6-8e00-368f50dbeaac" name="Changes" comment="Marketplace">
-      <change beforePath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/settlement/SellerPayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/settlement/SellerPayout.java" afterDir="false" />
+    <list default="true" id="51081361-6857-41f6-8e00-368f50dbeaac" name="Changes" comment="SellerPayout">
+      <change beforePath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/settlement/SettlementReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/settlement/SettlementReport.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,30 +132,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1785213378197</updated>
-    </task>
-    <task id="LOCAL-00049" summary="warranty plan">
-      <option name="closed" value="true" />
-      <created>1785789404666</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1785789404666</updated>
-    </task>
-    <task id="LOCAL-00050" summary="warranty plan">
-      <option name="closed" value="true" />
-      <created>1785789500756</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1785789500756</updated>
-    </task>
-    <task id="LOCAL-00051" summary="warranty plan">
-      <option name="closed" value="true" />
-      <created>1785789588950</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1785789588950</updated>
     </task>
     <task id="LOCAL-00052" summary="warranty plan">
       <option name="closed" value="true" />
@@ -525,7 +501,31 @@
       <option name="project" value="LOCAL" />
       <updated>1785800656310</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="SellerPayout">
+      <option name="closed" value="true" />
+      <created>1785800781518</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1785800781518</updated>
+    </task>
+    <task id="LOCAL-00099" summary="SellerPayout">
+      <option name="closed" value="true" />
+      <created>1785800843096</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1785800843096</updated>
+    </task>
+    <task id="LOCAL-00100" summary="SellerPayout">
+      <option name="closed" value="true" />
+      <created>1785800977718</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1785800977718</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -555,7 +555,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="StockedGood" />
     <MESSAGE value="catalog item fix" />
     <MESSAGE value="digital good fix" />
     <MESSAGE value="fresh good fix" />
@@ -580,6 +579,7 @@
     <MESSAGE value="PriceBreakdown" />
     <MESSAGE value="orderline" />
     <MESSAGE value="Marketplace" />
-    <option name="LAST_COMMIT_MESSAGE" value="Marketplace" />
+    <MESSAGE value="SellerPayout" />
+    <option name="LAST_COMMIT_MESSAGE" value="SellerPayout" />
   </component>
 </project>
