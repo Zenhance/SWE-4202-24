@@ -6,7 +6,7 @@ public class GiftWrap implements OrderableLine{
 
     @Override
     public long unitVat() {
-        return (long)Math.ceil(unitCharge()*0.075);
+        return (long)Math.ceil(unitCharge()*vat);
     }
 
     @Override
