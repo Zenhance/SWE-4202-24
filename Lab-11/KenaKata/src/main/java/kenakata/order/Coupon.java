@@ -16,6 +16,8 @@ public class Coupon {
 
         if (percentage <= 0)
             throw new IllegalArgumentException("Discount percentage cannot be negative or equal to zero");
+        if (percentage > 100)
+            throw new IllegalArgumentException("Discount percentage cannot be greater than 100");
         this.percentage = percentage;
 
         if (cap <= 0)
