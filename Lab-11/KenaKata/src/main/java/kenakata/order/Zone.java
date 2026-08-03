@@ -10,4 +10,11 @@ public enum Zone {
         this.baseShippingFee = baseShippingFee;
         this.estimatedDays = estimatedDays;
     }
+    public long baseShippingFee() {
+        return baseShippingFee;
+    }
+
+    public int estimatedDays() {
+        return estimatedDays;
+    }
 }
