@@ -17,7 +17,12 @@ public class Order {
     private Coupon coupon;
 
     public Order(Zone zone, DeliveryCalculator calculator) {
+        if (zone == null)
+            throw new IllegalArgumentException("Delivery zone cannot be null");
         this.zone = zone;
+
+        if (calculator == null)
+            throw new IllegalArgumentException("Delivery calculator cannot be null");
         this.calculator = calculator;
     }
 
