@@ -20,13 +20,13 @@ public class PriceBreakdown {
         this.grandtotal = grandTotal;
     }
 
-    public int subtotal() {
+    public long subtotal() {
 
-        return 0;
+        return subtotal;
     }
 
     public long discount() {
-        return 0;
+        return discount;
     }
 
 
