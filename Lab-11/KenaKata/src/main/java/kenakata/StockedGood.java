@@ -11,4 +11,8 @@ public class StockedGood {
     public int unitVat() {
         return 0;
     }
+
+    public int commissionOn(int i) {
+        return 0;
+    }
 }
