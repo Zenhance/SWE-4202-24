@@ -12,7 +12,7 @@ import kenakata.order.PriceBreakdown;
 
 public final class Marketplace {
     private final List<Seller> sellers = new ArrayList<>();
-    private final List<Order> order = new ArrayList<>();
+    private final List<Order> orders = new ArrayList<>();
     public void register(Seller seller){
         if(seller == null){
             throw new IllegalArgumentException("Seller must not be null");
@@ -50,7 +50,7 @@ public final class Marketplace {
                     sellerTotals.commission = Math.addExact(sellerTotals.commission,commission);
                     orderCommission = Math.addExact(orderCommission,commission);
                     if(line.returned()){
-                        sellerTotals.refunds = Mtah.addExact(sellerTotals.refunds,value);
+                        sellerTotals.refunds = Math.addExact(sellerTotals.refunds,value);
                     }
                 }else{
                     addOnRevenue = Math.addExact(addOnRevenue,line.lineValue());
@@ -64,19 +64,18 @@ public final class Marketplace {
             orderPlatform=Math.addExact(orderPlatform,breakdown.discount());
             orderPlatform=Math.addExact(platformRevenue,orderPlatform);
         }
-        List<sellerPayout> payouts=new ArrayList<>();
+        List<SellerPayout> payouts=new ArrayList<>();
         for(Seller seller:sellers){
-            Total sellerTotals=totals.getOrDefault(seller,new Totals());
-            long payout=Math.subtractExact(sellerTotals.grossSales,sellerTotals.commission),sellerTotals.refunds);
-           payout.add(
-                   new SellerPayout(seller,sellerTotals.grossSales,sellerTotals.commission,sellerTotals.refunds,payout)
+            Totals sellerTotals=totals.getOrDefault(seller,new Totals());
+            long payout=Math.subtractExact(Math.subtractExact(sellerTotals.grossSales,sellerTotals.commission),sellerTotals.refunds);
+           payouts.add(new SellerPayout(seller,sellerTotals.grossSales,sellerTotals.commission,sellerTotals.refunds,payout)
            );
         }
         for(Map.Entry<Seller,Totals>entry:totals.entrySet()){
             Seller seller=entry.getKey();
             if(!containsIdentity(sellers,seller)){
-                Total sellerTotals=entry.getValue();
-                long payout=Math.subtractExact(sellerTotals.grossSales,sellerTotals.commission),sellerTotals.refunds);
+                Totals sellerTotals=entry.getValue();
+                long payout=Math.subtractExact(Math.subtractExact(sellerTotals.grossSales,sellerTotals.commission),sellerTotals.refunds);
             payouts.add(new SellerPayout(seller,sellerTotals.grossSales,sellerTotals.commission,sellerTotals.refunds,payout));
 
             }
