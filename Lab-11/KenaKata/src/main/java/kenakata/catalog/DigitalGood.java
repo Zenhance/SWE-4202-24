@@ -7,16 +7,17 @@ public class DigitalGood extends Item{
         super(sku, title, unitPrice, stock, seller);
     }
 
-    public int unitCharge(){
-        return unitPrice;
+    @Override
+    public long unitCharge() {
+        return super.unitCharge();
     }
 
-    public int unitVat(){
-        return ceil(unitPrice*5%);
+    public long unitVat(){
+        return (long)Math.ceil(unitPrice*0.05);
     }
 
-    public int commissionOn(int n){
-        return ceil(n*20%);
+    public long commissionOn(int n){
+        return (long)Math.ceil(n*0.2);
     }
 
 }

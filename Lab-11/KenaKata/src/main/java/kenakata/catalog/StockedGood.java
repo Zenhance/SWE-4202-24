@@ -14,8 +14,9 @@ public class StockedGood extends Item{
         this.weight = weight;
     }
 
-    public long unitCharge(){
-        return unitPrice;
+    @Override
+    public long unitCharge() {
+        return super.unitCharge();
     }
 
     public long unitVat(){

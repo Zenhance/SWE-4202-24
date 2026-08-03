@@ -2,21 +2,35 @@ package kenakata.catalog;
 
 
 public class FreshGood extends Item{
+    private final int weight;
 
-    public FreshGood(String sku, String title, long unitPrice, int stock, Seller seller){
+    public FreshGood(String sku, String title, long unitPrice, int stock, Seller seller,int weight){
         super(sku, title, unitPrice, stock, seller);
+
+        if(weight <= 0)
+            throw new IllegalArgumentException();
+
+        this.weight = weight;
+
     }
 
-    public int unitCharge(){
-        return unitPrice;
+    public int weight() {
+        return weight;
     }
 
-    public int unitVat(){
-        return ceil(unitPrice*0%);
+    @Override
+    public long unitCharge() {
+        return super.unitCharge();
     }
 
-    public int commissionOn(int n){
-        return ceil(n*5%);
+    @Override
+    public long unitVat() {
+        return 0;
+    }
+
+    @Override
+    public long commissionOn(long n) {
+        return (long)Math.ceil(n * 0.05);
     }
 
 }
