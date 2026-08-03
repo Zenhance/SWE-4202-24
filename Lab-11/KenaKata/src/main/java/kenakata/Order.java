@@ -14,4 +14,8 @@ public class Order {
     public void applyCoupon(Coupon eid10) {
 
     }
+
+    public PriceBreakdown quote(int i) {
+        return null;
+    }
 }
