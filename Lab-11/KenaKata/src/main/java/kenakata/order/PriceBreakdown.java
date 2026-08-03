@@ -49,5 +49,31 @@ public class PriceBreakdown {
         return grandTotal;
     }
 
+    public long getSubtotal() {
+        return subtotal;
+    }
 
+    public long getDiscount() {
+        return discount;
+    }
+
+    public long getVat() {
+        return vat;
+    }
+
+    public long getDelivery() {
+        return delivery;
+    }
+
+    public long getInsurance() {
+        return insurance;
+    }
+
+    public long getServiceFee() {
+        return serviceFee;
+    }
+
+    public long getGrandTotal() {
+        return grandTotal;
+    }
 }
