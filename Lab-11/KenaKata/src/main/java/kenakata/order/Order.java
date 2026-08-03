@@ -69,5 +69,11 @@ public class Order {
                 insurance += Math.max(insFee, 20);
             }
         }
+        long discount = (coupon != null) ? coupon.calculateDiscount(discountableBase, day) : 0;
+        long delivery = deliveryCalculator.calculate(lines, zone);
+        long serviceFee = Math.min((long) Math.ceil(subtotal * 0.01), 100);
+
+        long grandTotal = subtotal - discount + delivery + vat + insurance + serviceFee;
+        return new PriceBreakdown(subtotal, discount, delivery, vat, insurance, serviceFee, grandTotal);
     }
 }
