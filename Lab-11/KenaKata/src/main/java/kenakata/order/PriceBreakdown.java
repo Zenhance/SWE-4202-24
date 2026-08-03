@@ -1,4 +1,4 @@
-package kenakata;
+package kenakata.order;
 
 public class PriceBreakdown {
     public int subtotal() {

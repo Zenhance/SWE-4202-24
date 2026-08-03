@@ -1,4 +1,4 @@
-package kenakata;
+package kenakata.settlement;
 
 public class SellerPayout {
     public int grossSales() {

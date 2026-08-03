@@ -1,5 +1,6 @@
-package kenakata;
+package kenakata.order;
 
+import kenakata.payment.MobileWalletPayment;
 import kenakata.catalog.CatalogItem;
 import kenakata.catalog.GiftWrap;
 import kenakata.catalog.StockedGood;

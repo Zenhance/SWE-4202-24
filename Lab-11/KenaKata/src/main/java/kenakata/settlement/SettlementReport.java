@@ -1,4 +1,4 @@
-package kenakata;
+package kenakata.settlement;
 
 import kenakata.catalog.Seller;
 
