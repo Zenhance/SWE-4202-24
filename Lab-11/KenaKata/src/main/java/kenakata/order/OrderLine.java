@@ -19,5 +19,11 @@ public final class OrderLine {
         this.unit = unit;
         this.quantity = quantity;
     }
+    public Chargeable unit(){
+        return unit;
+    }
+    public int quantity(){
+        return quantity;
+    }
 
 }
