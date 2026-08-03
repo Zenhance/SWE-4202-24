@@ -32,7 +32,8 @@ public class Order {
         return null;
     }
 
-    public void insure(int i) {
+    public void insure(int idx) {
+
     }
 
     public void place(PaymentMethod payment, int today) throws CheckoutException{

@@ -15,15 +15,16 @@ public class StockedGood extends CatalogItem{
 
 
     public void reserve(int amount) throws OutOfStockException {
-        try {
+         {
             if (amount <= 0) throw new IllegalArgumentException("Amount must be positive");
             if (stock >= amount) stock -= amount;
             else {
                 throw new OutOfStockException();
             }
-        } catch (OutOfStockException | IllegalArgumentException e) {
-            stock = stock;
         }
+//        catch (OutOfStockException | IllegalArgumentException e) {
+//            stock = stock;
+//        }
     }
     public int remaining() {
         return stock;
