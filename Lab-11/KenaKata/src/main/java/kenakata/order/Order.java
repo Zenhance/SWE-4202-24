@@ -49,5 +49,15 @@ public final class Order {
     public PriceBreakdown finalBreakdown() {
         return finalBreakdown;
     }
+    public PriceBreakdown quote(int today) throws CheckoutException {
+        return new PriceBreakdown(0, 0, 0, 0, 0, 0, 0, new ArrayList<>(lines));
+    }
+
+    public void place(PaymentMethod payment, int today) throws CheckoutException {
+    }
+
+    public void acceptReturn(int lineIndex, int today) throws ReturnNotAllowedException {
+    }
+}
 
 
