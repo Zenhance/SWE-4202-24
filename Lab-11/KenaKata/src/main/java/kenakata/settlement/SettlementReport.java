@@ -1,4 +1,6 @@
 package kenakata.settlement;
+import java.util.ArrayList;
+import kenakata.catalog.Seller;
 
 
 public class SettlementReport {
