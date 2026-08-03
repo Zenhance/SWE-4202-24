@@ -40,9 +40,9 @@ public class OrderLine {
         return item.unitVat()*quantity;
  }
  public long insuranceFee(){
-        if(!insured)
+        if(!insured || !(item instanceof Insurable insurable))
             return 0;
-        long insurableValue= ((Insurable).item).insurableValue()*quantity;
+        long insurableValue= insurable.insurableValue()*quantity;
         long fee = (long)Math.ceil(insurableValue*0.01);
         return Math.max(fee,20);
     }
