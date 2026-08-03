@@ -5,6 +5,8 @@ public class FreshGood extends CatalogItem {
 
     public FreshGood(String SKU, String title, double unitPrice, int stockCount, Seller seller, double weight) {
         super(SKU, title, unitPrice, stockCount, seller);
+        if (weight <= 0.0)
+            throw new IllegalArgumentException("Weight cannot be negative or zero");
         this.weight = weight;
     }
 
