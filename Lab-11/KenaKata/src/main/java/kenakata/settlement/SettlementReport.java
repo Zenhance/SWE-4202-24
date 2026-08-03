@@ -20,5 +20,10 @@ public List<SellerPayout> payouts(){
 public long platformRevenue(){
         return platformRevenue;
 }
-
+public SellerPayout forSeller(Seller seller){
+        if(seller == null){
+            throw new IllegalArgumentException("Seller must not be null");
+        }
+        return payouts.stream().filter(payout->payout.seller()==seller).findFirst().orElseThrow(()-> new IllegalArgumentException("Seller is not in this report"));
+}
 }
