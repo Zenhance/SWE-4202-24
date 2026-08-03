@@ -1,7 +1,7 @@
-package exceptions;
+package kenakata.exceptions;
 
 public class CodCeilingExceededException extends PaymentDeclinedException{
-    public CouponRejectedException(String message){
+    public CodCeilingExceededException(String message){
         super(message);
     }
 }
