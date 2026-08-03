@@ -7,7 +7,7 @@ public class Coupon {
     private final double percentage;
     private final long maxDiscount;
     private final long minSpend;
-    private final int lastValidDay;
+    private final int lastValidDay; // coupon's last validity
     public Coupon(String code,double percentage,long maxDiscount,long minSpeed, int lastValidDay){
         if(percentage<0 || percentage > 100) {
             throw new IllegalArgumentException("Invalid percentage");
@@ -19,9 +19,10 @@ public class Coupon {
         this.lastValidDay = lastValidDay;
         }
         public String code(){
+
         return code;
     }
-    public long calculateDiscount(long discountableBase, int currentDay) throws CouponRejectedException{
+        public long calculateDiscount(long discountableBase, int currentDay) throws CouponRejectedException{
         if(currentDay > lastValidDay){
             throw new CouponRejectedException("Coupon has expired");
         }

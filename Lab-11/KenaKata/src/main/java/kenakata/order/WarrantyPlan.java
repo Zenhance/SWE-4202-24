@@ -36,7 +36,7 @@ public abstract class WarrantyPlan implements Chargeable{ //allows customers to 
 
     @Override
     public long unitVat() {
-        return (long) Math.ceil(unitCharge * 0.075);
+        return (long) Math.ceil(unitCharge * 0.075);//7.5% vat
     }
 
 }
