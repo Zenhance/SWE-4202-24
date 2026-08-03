@@ -33,9 +33,7 @@ public class PriceBreakdown {
 
     public int discount() {
         int discount = (int) Math.ceil(subtotal() * coupon.getPercentage() * 0.01);
-        if (discount > coupon.getCap())
-            return coupon.getCap();
-        return discount;
+        return Math.min(discount, coupon.getCap());
     }
 
     public int vat() {
