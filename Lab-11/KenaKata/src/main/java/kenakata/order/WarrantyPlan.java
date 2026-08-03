@@ -22,4 +22,7 @@ public abstract class WarrantyPlan implements CatalogItem{
     public int getDurationMonths(){
         return this.durationMonths;
     }
+    public double calculateTotalCost(){
+        return unitCharge();
+    }
 }
