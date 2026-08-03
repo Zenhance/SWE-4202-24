@@ -1,5 +1,5 @@
 package kenakata.catalog;
 
 public interface Insurable {
-    long getInsuranceFee(int quantity);
+    long insuranceFee(int quantity);
 }
