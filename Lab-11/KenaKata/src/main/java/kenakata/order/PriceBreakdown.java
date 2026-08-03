@@ -18,6 +18,8 @@ public class PriceBreakdown {
         this.insurance = insurance;
         this.serviceFee = serviceFee;
         this.grandtotal = grandTotal;
+
+        grandTotal= subtotal-discount+delivery+vat+insurance+serviceFee;
     }
 
     public long subtotal() {
