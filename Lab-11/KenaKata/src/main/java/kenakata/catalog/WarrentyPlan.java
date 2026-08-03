@@ -4,6 +4,7 @@ public class WarrentyPlan implements Chargeable {
     private final CatalogItem covered;
 
     public WarrentyPlan(CatalogItem covered) {
+        if(covered == null) {throw new IllegalArgumentException("Covered item can't be null");}
         this.covered = covered;
     }
 
