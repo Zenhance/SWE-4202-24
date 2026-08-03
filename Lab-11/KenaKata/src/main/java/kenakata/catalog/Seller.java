@@ -1,7 +1,7 @@
 package kenakata.catalog;
 
 public class Seller {
-    private String name;
+    private final String name;
 
     public Seller(String name){
         if(name==null || name.isBlank())
@@ -10,7 +10,7 @@ public class Seller {
         this.name=name;
     }
 
-    public String getName() {
+    public String name() {
         return name;
     }
 
