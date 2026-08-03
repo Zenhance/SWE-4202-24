@@ -18,4 +18,7 @@ public class Order {
     public PriceBreakdown quote(int i) {
         return null;
     }
+
+    public void insure(int i) {
+    }
 }
