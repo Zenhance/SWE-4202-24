@@ -1,7 +1,7 @@
 package kenakata.order;
 import kenakata.catalog.CatalogItem;
 
-public abstract class WarrantyPlan implements Chargeable{
+public abstract class WarrantyPlan implements Chargeable{ //allows customers to purchase extended warranty coverage for catalog items
     private final String label;
     private final double unitCharge;
     private final int durationMonths;
