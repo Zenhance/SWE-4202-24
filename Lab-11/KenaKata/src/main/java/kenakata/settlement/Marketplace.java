@@ -1,12 +1,11 @@
 package kenakata.settlement;
-
 import kenakata.catalog.CatalogItem;
 import kenakata.catalog.Seller;
 import kenakata.order.*;
-
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
-
+import java.util.Map;
 public class Marketplace {
     private final List<Seller> registeredSellers = new ArrayList<>();
     private final List<Order> placedOrders = new ArrayList<>();
@@ -21,9 +20,9 @@ public class Marketplace {
         }
     }
     public SettlementReport settle() {
-        List<SellerPayout> payoutsList = new ArrayList<>();
+        Map<Seller, SellerPayout> payouts = new HashMap<>();
         for (Seller s : registeredSellers) {
-            payoutsList.add(new SellerPayout(s));
+            payouts.put(s, new SellerPayout(s));
         }
         long platformRevenue = 0;
         for (Order order : placedOrders) {
@@ -33,7 +32,7 @@ public class Marketplace {
                 Chargeable item = line.item();
                 if (item instanceof CatalogItem catalogItem) {
                     Seller seller = catalogItem.seller();
-                    SellerPayout payout = findOrCreatePayout(payoutsList, seller);
+                    SellerPayout payout = payouts.computeIfAbsent(seller, SellerPayout::new);
                     long lineValue = line.lineValue();
                     payout.addSales(lineValue);
                     long comm = catalogItem.commissionOn(lineValue);
@@ -43,21 +42,10 @@ public class Marketplace {
                         payout.addRefund(lineValue);
                     }
                 } else {
-                    // Non-product add-ons revenue belongs fully to the platform
                     platformRevenue += line.lineValue();
                 }
             }
         }
-        return new SettlementReport(payoutsList, platformRevenue);
-    }
-    private SellerPayout findOrCreatePayout(List<SellerPayout> payoutsList, Seller seller) {
-        for (SellerPayout payout : payoutsList) {
-            if (payout.seller().equals(seller)) {
-                return payout;
-            }
-        }
-        SellerPayout newPayout = new SellerPayout(seller);
-        payoutsList.add(newPayout);
-        return newPayout;
+        return new SettlementReport(payouts, platformRevenue);
     }
 }
