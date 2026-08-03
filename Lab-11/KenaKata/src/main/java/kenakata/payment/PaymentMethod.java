@@ -1,7 +1,7 @@
 package kenakata.payment;
 
 public interface PaymentMethod {
-    int remainingLimit();
+    long remainingLimit();
 
-    void authorise(int i);
+    void authorise(long amount);
 }

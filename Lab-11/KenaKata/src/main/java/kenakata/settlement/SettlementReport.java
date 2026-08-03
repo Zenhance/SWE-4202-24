@@ -7,11 +7,9 @@ public class SettlementReport {
         return null;
 
     }
-
     public int platformRevenue() {
         return 0;
     }
-
     public SellerPayout forSeller(Seller b) {
         SellerPayout P=new SellerPayout();
         return P;

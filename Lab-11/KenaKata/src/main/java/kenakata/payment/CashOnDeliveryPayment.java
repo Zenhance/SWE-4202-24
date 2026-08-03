@@ -2,12 +2,11 @@ package kenakata.payment;
 
 public class CashOnDeliveryPayment implements PaymentMethod{
     @Override
-    public int remainingLimit() {
+    public long remainingLimit() {
         return 0;
     }
-
     @Override
-    public void authorise(int i) {
+    public void authorise(long amount) {
 
     }
 }
