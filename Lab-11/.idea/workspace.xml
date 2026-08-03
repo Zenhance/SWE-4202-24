@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51081361-6857-41f6-8e00-368f50dbeaac" name="Changes" comment="seller">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/catalog/Seller.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/catalog/Seller.java" afterDir="false" />
+    <list default="true" id="51081361-6857-41f6-8e00-368f50dbeaac" name="Changes" comment="warranty plan">
+      <change beforePath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/catalog/WarrentyPlan.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/catalog/WarrentyPlan.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,30 +132,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1785213378197</updated>
-    </task>
-    <task id="LOCAL-00001" summary=".">
-      <option name="closed" value="true" />
-      <created>1785213492773</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1785213492773</updated>
-    </task>
-    <task id="LOCAL-00002" summary=".">
-      <option name="closed" value="true" />
-      <created>1785686620500</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1785686620500</updated>
-    </task>
-    <task id="LOCAL-00003" summary=".">
-      <option name="closed" value="true" />
-      <created>1785699439949</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1785699439949</updated>
     </task>
     <task id="LOCAL-00004" summary="wallet fix">
       <option name="closed" value="true" />
@@ -502,7 +477,55 @@
       <option name="project" value="LOCAL" />
       <updated>1785788788747</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="seller fix">
+      <option name="closed" value="true" />
+      <created>1785789260716</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1785789260716</updated>
+    </task>
+    <task id="LOCAL-00048" summary="warranty plan">
+      <option name="closed" value="true" />
+      <created>1785789362274</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1785789362274</updated>
+    </task>
+    <task id="LOCAL-00049" summary="warranty plan">
+      <option name="closed" value="true" />
+      <created>1785789404666</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1785789404666</updated>
+    </task>
+    <task id="LOCAL-00050" summary="warranty plan">
+      <option name="closed" value="true" />
+      <created>1785789500756</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1785789500756</updated>
+    </task>
+    <task id="LOCAL-00051" summary="warranty plan">
+      <option name="closed" value="true" />
+      <created>1785789588950</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1785789588950</updated>
+    </task>
+    <task id="LOCAL-00052" summary="warranty plan">
+      <option name="closed" value="true" />
+      <created>1785789665554</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1785789665554</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -532,7 +555,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="exception" />
     <MESSAGE value="idk what happened here" />
     <MESSAGE value="wallet" />
     <MESSAGE value="wallet fix" />
@@ -556,6 +578,8 @@
     <MESSAGE value="giftwrap" />
     <MESSAGE value="giftwrap fix" />
     <MESSAGE value="seller" />
-    <option name="LAST_COMMIT_MESSAGE" value="seller" />
+    <MESSAGE value="seller fix" />
+    <MESSAGE value="warranty plan" />
+    <option name="LAST_COMMIT_MESSAGE" value="warranty plan" />
   </component>
 </project>

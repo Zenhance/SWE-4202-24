@@ -1,9 +1,9 @@
 package kenakata.catalog;
 
-public class WarrentyPlan implements Chargeable {
+public class WarrantyPlan implements Chargeable {
     private final CatalogItem covered;
 
-    public WarrentyPlan(CatalogItem covered) {
+    public WarrantyPlan(CatalogItem covered) {
         if(covered == null) {throw new IllegalArgumentException("Covered item can't be null");}
         this.covered = covered;
     }
