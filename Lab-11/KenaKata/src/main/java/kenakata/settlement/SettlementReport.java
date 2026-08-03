@@ -17,5 +17,8 @@ public final class SettlementReport {
 public List<SellerPayout> payouts(){
         return Collections.unmodifiableList(payouts);
 }
+public long platformRevenue(){
+        return platformRevenue;
+}
 
 }
