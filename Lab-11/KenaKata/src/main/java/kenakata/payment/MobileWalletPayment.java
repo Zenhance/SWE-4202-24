@@ -11,4 +11,9 @@ public class MobileWalletPayment implements PaymentMethod {
         }
         this.wallet = wallet;
     }
+
+    @Override
+    public void authorise(long amount) throws EmptyWalletException {
+        wallet.debit(amount);
+    }
 }
