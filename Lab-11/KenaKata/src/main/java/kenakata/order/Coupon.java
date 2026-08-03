@@ -30,5 +30,4 @@ public class Coupon {
         return Math.min(discount, cap);
     }
 
-
 }

@@ -2,33 +2,37 @@ package kenakata.order;
 
 public class PriceBreakdown {
 
+    private long subtotal;
+    private long discount;
+    private long grandtotal;
+
     public int subtotal() {
 
         return 0;
     }
 
-    public int discount() {
+    public long discount() {
         return 0;
     }
 
 
-    public int insurance() {
+    public long insurance() {
         return 0;
     }
 
-    public int vat() {
+    public long vat() {
         return 0;
     }
 
-    public int delivery(){
+    public long delivery(){
         return 0;
     }
 
-    public int serviceFee(){
+    public long serviceFee(){
         return 0;
     }
 
-    public int grandTotal(){
+    public long  grandTotal(){
         return 0;
     }
 
