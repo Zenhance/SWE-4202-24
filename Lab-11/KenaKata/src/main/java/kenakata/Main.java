@@ -37,7 +37,7 @@ public final class Main {
         // ---- Sellers and catalogue -------------------------------------------------------
         Seller alpha = new Seller("Alpha Electronics");
         Seller beta = new Seller("Beta Books");
-        Seller gamma = new S\eller("Gamma Fresh");
+        Seller gamma = new Seller("Gamma Fresh");
 
         // Three kinds of catalogue item -- same base type, different money rules.
         StockedGood lamp = new StockedGood("SKU-LAMP", "Table Lamp", 1200, 10, alpha, 1500);

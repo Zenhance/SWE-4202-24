@@ -1,7 +1,7 @@
 package kenakata;
 
 import kenakata.catalog.*;
-import kenakata.exception.*;
+import kenakata.exceptions.*;
 import kenakata.order.*;
 import kenakata.payment.*;
 import kenakata.settlement.*;
