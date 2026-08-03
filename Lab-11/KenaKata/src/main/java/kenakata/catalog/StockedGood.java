@@ -1,19 +1,31 @@
 package kenakata.catalog;
 
-public class StockedGood extends Good{
+public class StockedGood extends CatalogItem {
     private double weight;
+
     public StockedGood(String SKU, String title, double unitPrice, int stockCount, Seller seller, double weight) {
         super(SKU, title, unitPrice, stockCount, seller);
         this.weight = weight;
     }
 
+    @Override
     public int unitCharge() {
         return (int) Math.ceil(getUnitPrice());
     }
-    public int unitVat(){
+
+    @Override
+    public int unitVat() {
         return (int) Math.ceil(getUnitPrice() * 0.075);
     }
-    public int commissionOn(int  something) {
-        return (int) Math.ceil( something * 0.08);
+
+    // fix parameter
+    @Override
+    public int commissionOn(int something) {
+        return (int) Math.ceil(something * 0.08);
+    }
+
+    @Override
+    public boolean returned() {
+        return false;
     }
 }

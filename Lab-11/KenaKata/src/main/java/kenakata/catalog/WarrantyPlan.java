@@ -1,9 +1,9 @@
 package kenakata.catalog;
 
 public class WarrantyPlan extends AddOn{
-    private Good item;
+    private CatalogItem item;
 
-    public WarrantyPlan(Good product) {
+    public WarrantyPlan(CatalogItem product) {
         this.item = product;
         product.insure();
     }
