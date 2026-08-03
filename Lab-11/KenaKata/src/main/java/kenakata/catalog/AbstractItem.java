@@ -17,6 +17,15 @@ public abstract class AbstractItem implements Item {
         if (title == null || title.isBlank()) {
             throw new IllegalArgumentException("Title cannot be empty or null");
         }
+        if (seller == null) {
+            throw new IllegalArgumentException("Seller cannot be null");
+        }
+        if (unitPrice < 0) {
+            throw new IllegalArgumentException("Unit price cannot be negative");
+        }
+        if (stock < 0) {
+            throw new IllegalArgumentException("Stock cannot be negative");
+        }
 
         this.sku = sku;
         this.title = title;
