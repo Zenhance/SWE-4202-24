@@ -52,4 +52,14 @@ public abstract class CatalogItem implements Chargeable {
     public int remaining() {
         return stock;
     }
-}
+
+    public void reserve(int quantity) throws OutOfStockException {
+        if (quantity <= 0) {
+            throw new IllegalArgumentException("quantity must be positive");
+        }
+        if (quantity > stock) {
+            throw new OutOfStockException(
+                    "insufficient stock for " + sku + ": requested " + quantity + ", have " + stock);
+        }
+        stock -= quantity;
+    }
