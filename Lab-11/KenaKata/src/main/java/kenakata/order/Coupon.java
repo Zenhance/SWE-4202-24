@@ -19,4 +19,19 @@ public class Coupon {
         this.minSpend = minSpend;
         this.lastValidDay = lastValidDay;
     }
+
+    public String code() {
+        return code;
+    }
+
+    public long calculateDiscount(long discountableBase, int currentDay) throws InvalidCouponException {
+        if (currentDay > lastValidDay) {
+            throw new InvalidCouponException("Coupon expired");
+        }
+        if (discountableBase < minSpend) {
+            throw new InvalidCouponException("Order base below minimum spend requirement");
+        }
+        long discount = (long) Math.ceil(discountableBase * (percentage / 100.0));
+        return Math.min(discount, cap);
+    }
 }
