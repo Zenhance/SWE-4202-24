@@ -51,7 +51,10 @@ public abstract class CatalogItem implements Chargeable {
         return unitPrice;
     }
 
-    public abstract long commissionOn(long totalCharge);
+    @Override
+    public String label() {return title;}
+
+    public abstract long commissionOn(long lineValue);
 
 
 
