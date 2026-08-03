@@ -34,7 +34,7 @@ public abstract class Product {
     public int stock() {
         return stock;}
 
-    public double unitPrice() {
+    public long unitPrice() {
         return unitPrice;}
     public Seller seller() {
         return seller;}
@@ -68,6 +68,7 @@ public abstract class Product {
     public long commissionOn() {
         return 0;
     }
+
     public abstract long unitVat();
 
     public boolean isDiscountable() {
