@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51081361-6857-41f6-8e00-368f50dbeaac" name="Changes" comment="StockedGood">
-      <change beforePath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/catalog/AddOn.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/catalog/AddOn.java" afterDir="false" />
+    <list default="true" id="51081361-6857-41f6-8e00-368f50dbeaac" name="Changes" comment="ExpressHandling fix">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/catalog/ExpressHandling.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/catalog/ExpressHandling.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/catalog/FreshGood.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/catalog/FreshGood.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/catalog/StockedGood.java" beforeDir="false" afterPath="$PROJECT_DIR$/KenaKata/src/main/java/kenakata/catalog/StockedGood.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -342,7 +344,119 @@
       <option name="project" value="LOCAL" />
       <updated>1785705702298</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary=".">
+      <option name="closed" value="true" />
+      <created>1785785117864</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1785785117864</updated>
+    </task>
+    <task id="LOCAL-00028" summary=".">
+      <option name="closed" value="true" />
+      <created>1785785537521</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1785785537521</updated>
+    </task>
+    <task id="LOCAL-00029" summary=".">
+      <option name="closed" value="true" />
+      <created>1785785779264</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1785785779264</updated>
+    </task>
+    <task id="LOCAL-00030" summary="catalog item fix">
+      <option name="closed" value="true" />
+      <created>1785786138566</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1785786138566</updated>
+    </task>
+    <task id="LOCAL-00031" summary="catalog item fix">
+      <option name="closed" value="true" />
+      <created>1785786465672</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1785786465672</updated>
+    </task>
+    <task id="LOCAL-00032" summary="digital good fix">
+      <option name="closed" value="true" />
+      <created>1785786598273</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1785786598273</updated>
+    </task>
+    <task id="LOCAL-00033" summary="digital good fix">
+      <option name="closed" value="true" />
+      <created>1785786763625</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1785786763626</updated>
+    </task>
+    <task id="LOCAL-00034" summary="fresh good fix">
+      <option name="closed" value="true" />
+      <created>1785786868423</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1785786868423</updated>
+    </task>
+    <task id="LOCAL-00035" summary="fresh good fix">
+      <option name="closed" value="true" />
+      <created>1785787044907</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1785787044907</updated>
+    </task>
+    <task id="LOCAL-00036" summary="fresh good fix">
+      <option name="closed" value="true" />
+      <created>1785787298301</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1785787298301</updated>
+    </task>
+    <task id="LOCAL-00037" summary="stocked good fix">
+      <option name="closed" value="true" />
+      <created>1785787349460</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1785787349460</updated>
+    </task>
+    <task id="LOCAL-00038" summary="stocked good fix">
+      <option name="closed" value="true" />
+      <created>1785787430787</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1785787430787</updated>
+    </task>
+    <task id="LOCAL-00039" summary="ExpressHandling">
+      <option name="closed" value="true" />
+      <created>1785787919753</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1785787919753</updated>
+    </task>
+    <task id="LOCAL-00040" summary="ExpressHandling fix">
+      <option name="closed" value="true" />
+      <created>1785788033490</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1785788033490</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -379,7 +493,6 @@
     <MESSAGE value="paymentmethod" />
     <MESSAGE value="payment classes" />
     <MESSAGE value="payment classes extension" />
-    <MESSAGE value="." />
     <MESSAGE value="zone enum" />
     <MESSAGE value="PriceBreakdown" />
     <MESSAGE value="catalog" />
@@ -387,6 +500,13 @@
     <MESSAGE value="DigitalGood" />
     <MESSAGE value="freshGood" />
     <MESSAGE value="StockedGood" />
-    <option name="LAST_COMMIT_MESSAGE" value="StockedGood" />
+    <MESSAGE value="." />
+    <MESSAGE value="catalog item fix" />
+    <MESSAGE value="digital good fix" />
+    <MESSAGE value="fresh good fix" />
+    <MESSAGE value="stocked good fix" />
+    <MESSAGE value="ExpressHandling" />
+    <MESSAGE value="ExpressHandling fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="ExpressHandling fix" />
   </component>
 </project>

@@ -13,12 +13,14 @@ public class FreshGood extends CatalogItem {
         this.weight = weight;
     }
 
+
     public int weight() {
         return weight;
     }
     public int returnWindowDays() {
         return 2;
     }
+
 
 
     @Override
