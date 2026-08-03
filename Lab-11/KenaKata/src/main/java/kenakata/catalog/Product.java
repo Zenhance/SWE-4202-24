@@ -21,18 +21,23 @@ public abstract class Product {
         if (stock < 0) {
             throw new OutOfStockException("Stock must be greater than zero.");
         }
-
         this.sku = sku;
         this.title = title;
         this.stock = stock;
         this.seller = seller;
     }
 
-    public String sku() { return sku;}
-    public String title() { return title;}
-    public int stock() { return stock;}
-    public double unitPrice() { return unitPrice;}
-    public Seller seller() { return seller;}
+    public String sku() {
+        return sku;}
+    public String title() {
+        return title;}
+    public int stock() {
+        return stock;}
+
+    public double unitPrice() {
+        return unitPrice;}
+    public Seller seller() {
+        return seller;}
 
     public int remaining() { return stock;}
 
@@ -60,8 +65,12 @@ public abstract class Product {
     public String label() { return title;}
     public long unitCharge() { return unitPrice;}
 
-    //abstract methods
-    public abstract long commissionOn();
+    public long commissionOn() {
+        return 0;
+    }
     public abstract long unitVat();
 
+    public boolean isDiscountable() {
+        return false;
+    }
 }
