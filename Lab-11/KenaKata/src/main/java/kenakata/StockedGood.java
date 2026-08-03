@@ -7,4 +7,8 @@ public class StockedGood {
     public int unitCharge() {
         return 0;
     }
+
+    public int unitVat() {
+        return 0;
+    }
 }
