@@ -2,7 +2,7 @@ package kenakata.order;
 
 public abstract class GiftWrap implements Chargeable{
     @Override
-    public long unitCharge(){
+    public double unitCharge(){
         return 50;
     }
     @Override
