@@ -1,7 +1,7 @@
 package kenakata.catalog;
 
 import kenakata.exceptions.OutOfStockException;
-import kenakata.settlement.Seller;
+
 
 public abstract class CatalogueItem implements OrderableLine{
     private final String sku;
@@ -11,7 +11,7 @@ public abstract class CatalogueItem implements OrderableLine{
     private final Seller seller;
 
 
-    public CatalogueItem(String sku, String title, long unitprice,int livestock,Seller seller) {
+    public CatalogueItem(String sku, String title, long unitprice, int livestock, Seller seller) {
         if(sku==null || sku.isBlank() || title==null || title.isBlank() || seller==null){
             throw new IllegalArgumentException("MEOWWWWWWW");
         }

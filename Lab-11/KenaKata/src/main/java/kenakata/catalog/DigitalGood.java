@@ -1,6 +1,6 @@
 package kenakata.catalog;
 
-import kenakata.settlement.Seller;
+import kenakata.settlement.SellerPayOut;
 
 public class DigitalGood extends CatalogueItem {
     private static final double comission_rate=0.2;

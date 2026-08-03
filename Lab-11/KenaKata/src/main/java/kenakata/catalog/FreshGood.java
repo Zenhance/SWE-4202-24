@@ -1,6 +1,6 @@
 package kenakata.catalog;
 
-import kenakata.settlement.Seller;
+import kenakata.settlement.SellerPayOut;
 
 public class FreshGood extends CatalogueItem implements ColdChain,Returnable{
     private static final double comission_rate=0.05;
@@ -8,7 +8,7 @@ public class FreshGood extends CatalogueItem implements ColdChain,Returnable{
     private static final int window_day=2;
     private static final long cold_chain_surcharge=50;
     private final int weightgrams;
-    public FreshGood(String sku, String title, long unitprice, int livestock, Seller seller ,int weightgrams) {
+    public FreshGood(String sku, String title, long unitprice, int livestock, Seller seller , int weightgrams) {
         super(sku, title, unitprice, livestock, seller);
         if(weightgrams<=0){
             throw new IllegalArgumentException("It is not valid");
