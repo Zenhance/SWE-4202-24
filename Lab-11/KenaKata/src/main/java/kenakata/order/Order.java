@@ -161,6 +161,21 @@ public final class Order {
            long value = line.lineValue();
            subtotal=Math.addExact(subtotal,value);
            vat=Math.addExact(vat,line.lineVat());
+            if (line.unit() instanceof Discountable){
+                discountableBase = Math.addExact( discountableBase,value);
+            }
+            if(line.insured()){
+                Insurable insurable = (Insurable) line.unit();
+                long insurableValue =insurable.insurableValue(line.quantity());
+                long calculated =MoneyMath.ceilPercent(insurableValue,1);
+                long lineInsurance =Math.max(20, calculated);
+                insurance = Math.addExact(insurance,lineInsurance);
+            }
+        }
+        long discount;
+        if (coupon == null) {discount=0;}
+        else{
+            discount = coupon.discountFor(discountableBase,subtotal,currentDay);
         }
     }
 }
