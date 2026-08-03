@@ -1,4 +1,6 @@
 package kenakata.order;
+import kenakata.catalog.CatalogItem;
+
 import java.util.ArrayList;
 
 public class Order {
@@ -6,6 +8,6 @@ public class Order {
     public Coupon coupon;
     public Order(Zone zone,DeliveryCalculator deliveryCalculator) {}
 
-
+public void addProduct(CatalogItem)
 
 }
