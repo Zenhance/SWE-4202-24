@@ -63,3 +63,15 @@ public abstract class CatalogItem implements Chargeable {
         }
         stock -= quantity;
     }
+    public abstract long commissionOn(long lineValue);
+
+    @Override
+    public long unitCharge() {
+        return unitPrice;
+    }
+
+    @Override
+    public String label() {
+        return title;
+    }
+}
