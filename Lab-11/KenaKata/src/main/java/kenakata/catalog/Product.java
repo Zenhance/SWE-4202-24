@@ -5,7 +5,7 @@ import kenakata.exceptions.OutOfStockException;
 public abstract class Product {
     private final String sku;
     private final String title;
-    private final long unitPrice;
+    private long unitPrice;
     private int stock;
     private Seller seller;
 
