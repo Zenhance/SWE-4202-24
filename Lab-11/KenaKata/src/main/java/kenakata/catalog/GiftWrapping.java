@@ -1,4 +1,18 @@
 package kenakata.catalog;
 
-public class GiftWrapping {
+public class GiftWrapping implements Chargeable {
+    @Override
+    public long unitVat() {
+        return 0;
+    }
+
+    @Override
+    public long unitCharge() {
+        return 0;
+    }
+
+    @Override
+    public String label() {
+        return "";
+    }
 }
