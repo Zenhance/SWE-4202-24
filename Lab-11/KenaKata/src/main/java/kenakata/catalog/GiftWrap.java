@@ -17,4 +17,7 @@ public class GiftWrap implements Chargeable{
     public String lebel() {
         return "";
     }
+
+    public String label() {
+    }
 }

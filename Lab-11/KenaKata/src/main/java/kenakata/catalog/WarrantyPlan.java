@@ -4,6 +4,9 @@ package kenakata.catalog;
 
 public class WarrantyPlan implements Chargeable{
 
+    public WarrantyPlan(StockedGood lamp) {
+    }
+
     @Override
     public long unitVat() {
         return 0;
@@ -15,7 +18,7 @@ public class WarrantyPlan implements Chargeable{
     }
 
     @Override
-    public String lebel() {
+    public String label() {
         return "";
     }
 }

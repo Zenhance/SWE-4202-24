@@ -1,6 +1,10 @@
-package kenakata;
+package kenakata.payment;
 
-public class PaymentMethod {
-    public void authorise(int i) {
+import kenakata.exceptions.CardLimitExceededException;
+import kenakata.exceptions.PaymentDeclinedException;
+
+public abstract class   PaymentMethod {
+     public void authorise(long value) throws PaymentDeclinedException {
+
     }
 }

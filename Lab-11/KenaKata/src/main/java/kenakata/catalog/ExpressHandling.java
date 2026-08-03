@@ -13,7 +13,8 @@ public class ExpressHandling implements Chargeable{
     }
 
     @Override
-    public String lebel() {
+    public String label() {
         return "";
     }
+
 }

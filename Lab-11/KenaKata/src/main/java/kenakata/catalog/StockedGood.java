@@ -27,7 +27,7 @@ public class StockedGood extends CatalogItem{
     }
 
     @Override
-    public String lebel() {
+    public String label() {
         return "";
     }
 

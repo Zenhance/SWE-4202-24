@@ -21,7 +21,7 @@ public interface Chargeable {
     default int returnDays(){
         return 0;
     }
-    String lebel();
+    String label();
 
 
 }
