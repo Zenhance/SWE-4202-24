@@ -8,7 +8,6 @@ public abstract class CatalogItem implements Chargeable{
     private double unitPrice;
     private int stockCount;
     private Seller seller;
-    private boolean isInsured;
 
     public CatalogItem(String SKU, String title, double unitPrice, int stockCount, Seller seller) {
         if (SKU == null)
@@ -34,8 +33,6 @@ public abstract class CatalogItem implements Chargeable{
         if (seller == null)
             throw new IllegalArgumentException("Seller cannot be null");
         this.seller = seller;
-
-        isInsured = false;
     }
 
     public abstract int unitCharge();
@@ -75,9 +72,5 @@ public abstract class CatalogItem implements Chargeable{
         if (quantity <= 0)
             throw new IllegalArgumentException("Cannot reserve non-positive quantity");
         stockCount -= quantity;
-    }
-
-    public void insure() {
-        isInsured = true;
     }
 }
