@@ -19,9 +19,11 @@ public class Order
     private DeliveryCalculator deliveryCalculator;
     public final List<OrderLine> lines = new ArrayList<>();
     private Coupon coupon;
-    private boolean placed;
-    private int placedDay;
-    public PriceBreakdown finalBreakdown;
+    public PriceBreakdown priceBreakdown;
+    private ArrayList<Chargeable> items;
+    private ArrayList<Integer> quantities;
+    private ArrayList<Boolean> insured;
+    private ArrayList<Boolean> returned;
 
     public Order(Zone zone, DeliveryCalculator deliveryCalculator)
     {
@@ -35,17 +37,23 @@ public class Order
 
     public void addProduct(CatalogItem item, int qty)
     {
-
+        items.add(item);
+        quantities.add(qty);
+        insured.add(false);
+        returned.add(false);
     }
 
     public void addAddOn(Chargeable addOn)
     {
-
+        items.add(addOn);
+        quantities.add(1);
+        insured.add(false);
+        returned.add(false);
     }
 
-    public void applyCoupon(Coupon eid10)
+    public void applyCoupon(Coupon coupon)
     {
-
+        this.coupon=coupon;
     }
 
     public PriceBreakdown quote(int day) throws CheckoutException
@@ -65,12 +73,12 @@ public class Order
 
     public boolean placed()
     {
-        return placed;
+        return false;
     }
 
     public PriceBreakdown finalBreakdown()
     {
-        return finalBreakdown;
+        return null;
     }
 
     public void acceptReturn(int serial, int day) throws ReturnNotAllowedException

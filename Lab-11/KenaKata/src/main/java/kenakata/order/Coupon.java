@@ -1,5 +1,7 @@
 package kenakata.order;
 
+import kenakata.exceptions.CouponRejectedException;
+
 public class Coupon
 {
     private String code;
@@ -40,5 +42,11 @@ public class Coupon
     public int lastValidDays()
     {
         return lastValidDays;
+    }
+
+    public long calculateDiscount(long amount,int day)throws CouponRejectedException
+    {
+        if(day<lastValidDays) throw new CouponRejectedException("Coupon not valid yet");
+        return (long)Math.ceil(amount*percentage/100.0);
     }
 }

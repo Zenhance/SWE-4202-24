@@ -1,5 +1,6 @@
 package kenakata.payment;
 
+import kenakata.exceptions.EmptyWalletException;
 import kenakata.exceptions.PaymentDeclinedException;
 
 public class MobileWalletPayment implements PaymentMethod
@@ -14,8 +15,10 @@ public class MobileWalletPayment implements PaymentMethod
     }
 
     @Override
-    public void authorise(long amount) throws PaymentDeclinedException
+    public void authorise(long amount) throws EmptyWalletException
     {
+        if(wallet.balance()<amount)
+            throw new EmptyWalletException("Not enough balance");
         wallet.debit(amount);
     }
 }
