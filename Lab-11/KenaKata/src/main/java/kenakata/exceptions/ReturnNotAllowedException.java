@@ -1,6 +1,4 @@
-package kenakata.exception;
-
-import java.nio.charset.CharacterCodingException;
+package kenakata.exceptions;
 
 public class ReturnNotAllowedException extends CheckoutException {
     public ReturnNotAllowedException(String message){

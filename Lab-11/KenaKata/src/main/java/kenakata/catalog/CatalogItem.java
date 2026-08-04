@@ -1,18 +1,16 @@
-package kenakata.items;
+package kenakata.catalog;
 
-import kenakata.exception.OutOfStockException;
+import kenakata.exceptions.OutOfStockException;
 import kenakata.settlement.Seller;
 
-import kenakata.exception.OutOfStockException;
-
-public abstract class Item implements Chargeable {
-    private final String sku;
-    private final String title;
-    private final long unitPrice;
-    private final Seller seller;
+public abstract class CatalogItem implements Chargeable {
+    public String sku;
+    public static String title;
+    public final long unitPrice;
+    public final Seller seller;
     private int stock_count;
 
-    protected Item(String sku, String title ,long unitPrice,int stock,Seller seller){
+    protected CatalogItem(String sku, String title , long unitPrice, int stock, Seller seller){
         if(sku==null ||sku.isBlank()){
             throw new IllegalArgumentException("sku must not be empty");
 
@@ -38,6 +36,11 @@ public abstract class Item implements Chargeable {
 
 
     }
+
+    public static String title() {
+        return title;
+    }
+
     public void reserve(int quantity) throws OutOfStockException{
         if(quantity<=0){
             throw new IllegalArgumentException("quantity must be positive");
@@ -56,7 +59,12 @@ public abstract class Item implements Chargeable {
     public String label(){
         return title;
     }
-    public abstract long comissionOn(long lineValue);
+    public abstract long commissionOn(long lineValue);
+
+
+    public abstract int remaining();
+
+    public abstract String sku();
 
 
 }

@@ -1,4 +1,4 @@
-package kenakata.items;
+package kenakata.catalog;
 
 public interface Insurable {
 }

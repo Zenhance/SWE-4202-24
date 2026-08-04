@@ -2,23 +2,22 @@ package kenakata;
 
 import kenakata.catalog.DigitalGood;
 import kenakata.catalog.FreshGood;
-import kenakata.catalog.GiftWrap;
-import kenakata.catalog.ExpressHandling;
-import kenakata.catalog.Seller;
+import kenakata.addon.GiftWrap;
+import kenakata.addon.ExpressHandling;
 import kenakata.catalog.StockedGood;
 import kenakata.exceptions.CheckoutException;
+import kenakata.exceptions.OutOfStockException;
 import kenakata.order.Coupon;
 import kenakata.order.DeliveryCalculator;
 import kenakata.order.Order;
 import kenakata.order.PriceBreakdown;
 import kenakata.order.Zone;
-import kenakata.payment.CardPayment;
-import kenakata.payment.CashOnDeliveryPayment;
-import kenakata.payment.MobileWalletPayment;
-import kenakata.payment.PaymentMethod;
+import kenakata.payment.Card;
+import kenakata.payment.CashOnDelivery;
 import kenakata.payment.Wallet;
+import kenakata.payment.PaymentMethod;
 import kenakata.settlement.Marketplace;
-import kenakata.settlement.SellerPayout;
+import kenakata.settlement.*;
 import kenakata.settlement.SettlementReport;
 
 /**
@@ -33,7 +32,7 @@ import kenakata.settlement.SettlementReport;
  */
 public final class Main {
 
-    public static void main(String[] args) throws CheckoutException {
+    public static void main(String[] args) throws CheckoutException, OutOfStockException {
         // ---- Sellers and catalogue -------------------------------------------------------
         Seller alpha = new Seller("Alpha Electronics");
         Seller beta = new Seller("Beta Books");
@@ -65,7 +64,7 @@ public final class Main {
         printQuote("Order 1 (inside Dhaka)", order1.quote(today));
 
         Wallet wallet = new Wallet(5000);
-        PaymentMethod payment = new MobileWalletPayment(wallet);   // one variable, any payment form
+        PaymentMethod payment = new Wallet(wallet);   // one variable, any payment form
         order1.place(payment, today);
         marketplace.record(order1);
         System.out.println("Order 1 placed. Wallet balance now Tk " + wallet.balance());
@@ -78,7 +77,7 @@ public final class Main {
         order2.insure(0);                  // insure the charger line (it is insurable)
         printQuote("Order 2 (outside Dhaka)", order2.quote(today));
 
-        payment = new CardPayment(3000);   // same variable, now a card
+        payment = new Card(3000);   // same variable, now a card
         order2.place(payment, today);
         marketplace.record(order2);
         System.out.println("Order 2 placed by card.");
@@ -89,7 +88,7 @@ public final class Main {
         order3.addProduct(fridge, 1);      // grand total is above the cash-on-delivery ceiling
         printQuote("Order 3 (inside Dhaka)", order3.quote(today));
         try {
-            order3.place(new CashOnDeliveryPayment(), today);
+            order3.place(new CashOnDelivery(), today);
             System.out.println("Order 3 placed.");
         } catch (CheckoutException refused) {
             // A refused checkout throws; nothing was reserved or charged. We carry on.

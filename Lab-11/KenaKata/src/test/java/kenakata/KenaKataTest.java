@@ -1,19 +1,24 @@
 package kenakata;
 
 import kenakata.addon.ExpressHandling;
-import kenakata.addon.GiftWrap;
+import kenakata.addon.*;
 import kenakata.catalog.*;
-import kenakata.exception.*;
 import kenakata.exceptions.*;
-import kenakata.items.DigitalGood;
-import kenakata.items.FreshGood;
-import kenakata.items.StockedGood;
+import kenakata.catalog.DigitalGood;
+import kenakata.catalog.FreshGood;
+import kenakata.catalog.StockedGood;
 import kenakata.order.*;
-import kenakata.payment.*;
-import kenakata.settlement.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
+import kenakata.payment.Card;
+import kenakata.payment.CashOnDelivery;
+import kenakata.payment.PaymentMethod;
+import kenakata.payment.Wallet;
+import kenakata.settlement.Marketplace;
+import kenakata.settlement.Seller;
+import kenakata.settlement.SellerPayout;
+import kenakata.settlement.SettlementReport;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -326,7 +331,7 @@ class KenaKataTest {
             order.addProduct(item, 2);
             Wallet wallet = new Wallet(100); // far too little
             assertThrows(EmptyWalletException.class,
-                    () -> order.place(new MobileWalletPayment(wallet), 1));
+                    () -> order.place(new Wallet(wallet), 1));
             assertEquals(10, item.remaining()); // stock untouched
             assertEquals(100, wallet.balance()); // balance untouched
             assertFalse(order.placed());
@@ -340,7 +345,7 @@ class KenaKataTest {
             order.addProduct(item, 2); // wants 2
             Wallet wallet = new Wallet(1_000_000);
             assertThrows(OutOfStockException.class,
-                    () -> order.place(new MobileWalletPayment(wallet), 1));
+                    () -> order.place(new Wallet(wallet), 1));
             assertEquals(1, item.remaining());
             assertEquals(1_000_000, wallet.balance()); // payment was never attempted
         }
@@ -354,7 +359,7 @@ class KenaKataTest {
             order.applyCoupon(new Coupon("C", 10, 200, 0, 5)); // expired by day 6
             Wallet wallet = new Wallet(1_000_000);
             assertThrows(CouponRejectedException.class,
-                    () -> order.place(new MobileWalletPayment(wallet), 6));
+                    () -> order.place(new Wallet(wallet), 6));
             assertEquals(10, item.remaining());
             assertEquals(1_000_000, wallet.balance());
         }
@@ -365,7 +370,7 @@ class KenaKataTest {
             StockedGood item = lamp(seller());
             Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
             order.addProduct(item, 2);
-            order.place(new CardPayment(1_000_000), 1);
+            order.place(new Card(1_000_000), 1);
             assertEquals(8, item.remaining());
             assertTrue(order.placed());
             assertNotNull(order.finalBreakdown());
@@ -382,7 +387,7 @@ class KenaKataTest {
         @Test
         @DisplayName("An empty wallet throws its own kind, catchable as the parent")
         void emptyWallet() {
-            PaymentMethod pay = new MobileWalletPayment(new Wallet(50));
+            PaymentMethod pay = new Wallet(new Wallet(50));
             EmptyWalletException e =
                     assertThrows(EmptyWalletException.class, () -> pay.authorise(51));
             assertInstanceOf(PaymentDeclinedException.class, e);
@@ -392,7 +397,7 @@ class KenaKataTest {
         @Test
         @DisplayName("A card over its limit throws its own kind")
         void cardOverLimit() {
-            CardPayment card = new CardPayment(100);
+            Card card = new Card(100);
             assertThrows(CardLimitExceededException.class, () -> card.authorise(101));
             assertEquals(100, card.remainingLimit()); // nothing charged on refusal
         }
@@ -400,7 +405,7 @@ class KenaKataTest {
         @Test
         @DisplayName("A card exactly at its limit succeeds and draws down to zero")
         void cardExactlyAtLimit() throws Exception {
-            CardPayment card = new CardPayment(100);
+            Card card = new Card(100);
             card.authorise(100);
             assertEquals(0, card.remainingLimit());
         }
@@ -408,16 +413,16 @@ class KenaKataTest {
         @Test
         @DisplayName("COD at the ceiling passes; one Taka over is refused")
         void codCeilingBoundary() throws Exception {
-            new CashOnDeliveryPayment().authorise(15000); // exactly the ceiling: allowed
+            new CashOnDelivery().authorise(15000); // exactly the ceiling: allowed
             assertThrows(CodCeilingExceededException.class,
-                    () -> new CashOnDeliveryPayment().authorise(15001));
+                    () -> new CashOnDelivery().authorise(15001));
         }
 
         @Test
         @DisplayName("A wallet with exactly enough pays and lands at zero")
         void walletExactBalance() throws Exception {
             Wallet wallet = new Wallet(500);
-            new MobileWalletPayment(wallet).authorise(500);
+            new Wallet(wallet).authorise(500);
             assertEquals(0, wallet.balance());
         }
     }
@@ -438,7 +443,7 @@ class KenaKataTest {
                     order.addAddOn(unit);
                 }
             }
-            order.place(new CardPayment(1_000_000), 100);
+            order.place(new Card(1_000_000), 100);
             return order;
         }
 
@@ -497,7 +502,7 @@ class KenaKataTest {
             Order o1 = new Order(Zone.DHAKA, new DeliveryCalculator());
             o1.addProduct(p1, 2);
             o1.addProduct(p2, 1);
-            o1.place(new CardPayment(1_000_000), 1);
+            o1.place(new Card(1_000_000), 1);
             long grand1 = o1.finalBreakdown().grandTotal();
             assertEquals(2780, grand1);
             market.record(o1);
@@ -506,7 +511,7 @@ class KenaKataTest {
             Order o2 = new Order(Zone.DHAKA, new DeliveryCalculator());
             o2.addProduct(p1, 1);
             o2.addAddOn(new GiftWrap());
-            o2.place(new CardPayment(1_000_000), 1);
+            o2.place(new Card(1_000_000), 1);
             long grand2 = o2.finalBreakdown().grandTotal();
             assertEquals(1220, grand2);
             market.record(o2);
@@ -542,7 +547,7 @@ class KenaKataTest {
 
             Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
             order.addProduct(p1, 2); // value 2000
-            order.place(new CardPayment(1_000_000), 1);
+            order.place(new Card(1_000_000), 1);
             order.acceptReturn(0, 3); // within the 7-day window
             market.record(order);
 
@@ -561,13 +566,13 @@ class KenaKataTest {
     void onePaymentVariableManyForms() throws Exception {
         PaymentMethod payment;
 
-        payment = new MobileWalletPayment(new Wallet(1000));
+        payment = new Wallet(new Wallet(1000));
         payment.authorise(100);
 
-        payment = new CardPayment(1000);
+        payment = new Card(1000);
         payment.authorise(100);
 
-        payment = new CashOnDeliveryPayment();
+        payment = new CashOnDelivery();
         payment.authorise(100);
         // No exception from any form: the same slot dispatched to three unrelated implementations.
         assertTrue(true);
