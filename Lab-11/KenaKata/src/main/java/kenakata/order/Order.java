@@ -37,6 +37,14 @@ public void addAddOn(Chargeable e){
 
     }
 
+    public void acceptReturn(int i1,int i2){
+
+    }
+
+    public void returned(){
+
+    }
+
 
 
 
