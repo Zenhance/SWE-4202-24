@@ -16,6 +16,7 @@ public class Order {
     private PriceBreakdown priceBreakdown;
     private boolean hasStock = true;
     private String itemOutOfStock;
+    private boolean isOrderPlaceable = false;
 
     public Order(Zone zone, DeliveryCalculator calculator) {
         if (zone == null)
@@ -88,11 +89,12 @@ public class Order {
                 item.reduceStockCount();
             }
         }
+        this.isOrderPlaceable = true;
         p.authorise(priceBreakdown.grandTotal());
     }
 
     public boolean placed() {
-        return false;
+        return isOrderPlaceable;
     }
 
     public PriceBreakdown finalBreakdown() {
