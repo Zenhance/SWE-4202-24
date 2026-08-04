@@ -15,5 +15,7 @@ public class MobileWalletPayment implements PaymentMethod{
     public void authorise(int amount) throws EmptyWalletException {
         if (amount > wallet.balance())
             throw new EmptyWalletException("Not enough balance");
+
+       wallet.debit(amount);
     }
 }
