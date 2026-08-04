@@ -1,11 +1,8 @@
 package kenakata.order;
 
-import kenakata.catalog.CatalogItem;
-import kenakata.catalog.Chargeable;
-import kenakata.catalog.Insurable;
-import kenakata.catalog.StockedGood;
-import kenakata.exceptions.CouponRejectedException;
-import kenakata.exceptions.NotInsurableException;
+import kenakata.catalog.*;
+import kenakata.exceptions.*;
+import kenakata.payment.PaymentMethod;
 
 import java.util.ArrayList;
 
@@ -162,6 +159,75 @@ public class Order {
    }
 
 
+    public void place(PaymentMethod payment, int today)
+            throws CouponRejectedException,
+            OutOfStockException,
+            PaymentDeclinedException {
+
+
+        PriceBreakdown breakdown = quote(today);
+
+
+        for (OrderLine line : lines) {
+
+            if (line.product().remaining() < line.quantity()) {
+
+                throw new OutOfStockException(
+                        "Only " + line.product().remaining()
+                                + " items remaining.");
+            }
+        }
+
+
+        payment.authorise(breakdown.grandTotal());
+
+
+        for (OrderLine line : lines) {
+            line.product().reserve(line.quantity());
+        }
+
+
+        placed = true;
+        finalBreakdown = breakdown;
+        placeDay = today;
+    }
+
+    public void acceptReturn(int lineIndex, int today)
+            throws ReturnNotAllowedException {
+
+        OrderLine line = lines.get(lineIndex);
+
+        if (!(line.product() instanceof Returnable item)) {
+            throw new ReturnNotAllowedException("Item is not returnable");
+        }
+
+        if (line.returned()) {
+            throw new ReturnNotAllowedException("Already returned");
+        }
+
+        if (today > placeDay + item.returnWindowDays()) {
+            throw new ReturnNotAllowedException("Return window expired");
+        }
+
+        line.markReturned();
+    }
+
+
+    public Coupon coupon() {
+        return coupon;
+    }
+
+    public Zone zone() {
+        return zone;
+    }
+
+    public int placeDay() {
+        return placeDay;
+    }
+
+    public ArrayList<Integer> insuredLines() {
+        return insuredLines;
+    }
 
 
 
