@@ -8,9 +8,12 @@ import kenakata.catalog.StockedGood;
 import kenakata.payment.PaymentMethod;
 import kenakata.catalog.Chargeable;
 
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Order {
+    private final List<OrderLine> lines = new ArrayList<>();
+
     public Order(Object dhaka, DeliveryCalculator deliveryCalculator) {
     }
 
@@ -43,11 +46,12 @@ public class Order {
         return null;
     }
 
-    public void acceptReturn(int i, int i1) {
+    public PriceBreakdown acceptReturn(int i, int i1) {
+        return null;
     }
 
-    public Map<Object, Object> lines() {
-        return null;
+    public List<OrderLine> lines() {
+        return lines;
     }
 
     public void addProduct(StockedGood p1, int i) {
@@ -60,6 +64,5 @@ public class Order {
     }
 
     public void addAddOn(Chargeable addOn) {
-
     }
 }
