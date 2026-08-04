@@ -1,13 +1,16 @@
 package kenakata.order;
 
+import kenakata.catalog.CatalogItem;
 import kenakata.catalog.Chargeable;
 
 public class OrderLine {
     private final Chargeable unit;
+    private final CatalogItem item;
     private final int quantity;
     private boolean insured;
     private boolean returned;
-    public OrderLine(Chargeable unit, int quantity) {
+    public OrderLine(Chargeable unit, CatalogItem item, int quantity) {
+        this.item = item;
         if(quantity <= 0) {throw new IllegalArgumentException("quantity must be positive");}
         this.unit = unit;
         this.quantity = quantity;
