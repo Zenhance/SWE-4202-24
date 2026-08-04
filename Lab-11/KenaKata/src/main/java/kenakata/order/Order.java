@@ -24,6 +24,8 @@ public class Order {
 
 
     public Order(Zone zone,DeliveryCalculator deliveryCalculator){
+       if(zone==null) throw new IllegalArgumentException("Zone can't be null");
+       if(deliveryCalculator==null) throw new IllegalArgumentException("Delivery calculator can't be null");
         this.zone=zone;
         this.deliveryCalculator=deliveryCalculator;
     }
