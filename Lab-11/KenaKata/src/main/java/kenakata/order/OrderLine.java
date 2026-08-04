@@ -8,6 +8,14 @@ public class OrderLine {
     private boolean returned;
 
     public OrderLine(Chargeable unit, int quantity) {
+        if (unit == null) {
+            throw new IllegalArgumentException("Line unit cannot be null.");
+        }
+
+        if (quantity <= 0) {
+            throw new IllegalArgumentException("Quantity must be positive");
+        }
+
         this.unit = unit;
         this.quantity = quantity;
         this.returned = false;
