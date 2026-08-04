@@ -49,6 +49,12 @@ public void addAddOn(Chargeable e){
         return false;
     }
 
+    public PriceBreakdown finalBreakdown() {
+        return null;
+    }
+
+
+
 
 
 
