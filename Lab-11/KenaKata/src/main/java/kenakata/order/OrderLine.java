@@ -21,7 +21,20 @@ public class OrderLine {
         this.returned = false;
     }
 
-    public boolean isReturned() {
-        return false;
+    public Chargeable unit() {
+        return unit;
+    }
+
+    public int quantity() {
+        return quantity;
+    }
+
+    public boolean returned() {
+        return returned;
+    }
+
+
+    void markReturned() {
+        returned = true;
     }
 }
