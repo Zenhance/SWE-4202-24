@@ -58,8 +58,8 @@ public abstract class CatalogItem implements Chargeable, Insurable{
         return unitPrice;
     }
 
-    public int getStockCount() {
-        return stockCount;
+    public void reduceStockCount() {
+        this.stockCount--;
     }
 
     public Seller getSeller() {

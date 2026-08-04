@@ -76,13 +76,18 @@ public class Order {
             ((Insurable) c).insure();
     }
 
-    // check the parameter
     public void place(PaymentMethod p, int day) throws CheckoutException {
         if (!hasStock)
             throw new OutOfStockException("Item: " + itemOutOfStock + " is out-of-stock");
         if (coupon != null)
             if (day > coupon.getLastValidDay())
                 throw new CouponRejectedException("Coupon has expired");
+
+        for (Chargeable c : chargeables) {
+            if (c instanceof CatalogItem item) {
+                item.reduceStockCount();
+            }
+        }
         p.authorise(priceBreakdown.grandTotal());
     }
 
