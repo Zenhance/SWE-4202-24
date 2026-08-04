@@ -28,7 +28,7 @@ public abstract class CatalogItem implements Chargeable{
         return stockCount;
     }
 
-    public CatalogItem(String sku, String title, int unitPrice, int stockCount){
+    public CatalogItem(String sku, String title, int unitPrice, int stockCount,Seller seller){
         if(sku==null||sku.isBlank()||title==null||title.isBlank()) {
             throw new IllegalArgumentException("SKU and title cannot be blank");
         }
@@ -47,6 +47,7 @@ public abstract class CatalogItem implements Chargeable{
         this.title=title;
         this.unitPrice=unitPrice;
         this.stockCount=stockCount;
+        this.seller=seller;
     }
     public synchronized void reserve(int quantity)throws OutOfStockException{
         if(quantity<=0){

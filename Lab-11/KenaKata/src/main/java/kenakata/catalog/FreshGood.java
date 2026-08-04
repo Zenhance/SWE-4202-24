@@ -3,7 +3,7 @@ package kenakata.catalog;
 public class FreshGood extends CatalogItem{
     private final int weightGrams;
     public FreshGood(String sku,String title,int unitPrice,int stockCount,Seller seller,int weightGrams){
-        super(sku,title,unitPrice,stockCount);
+        super(sku,title,unitPrice,stockCount,seller);
         if(weightGrams<=0){
             throw new IllegalArgumentException("Weight must be positive");
         }
