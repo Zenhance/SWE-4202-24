@@ -1,9 +1,16 @@
 package kenakata.catalog;
 
-public class ExpressHandling {
-    public int unitVat() {
+public class ExpressHandling implements Chargeable{
+    @Override
+    public long unitCharge() {
+        return 120;
+    }
+    public long unitVat(){
+        return (long)Math.ceil(120*0.075)
     }
 
-    public int unitCharge() {
+    @Override
+    public String label() {
+        return "Express handling";
     }
 }
