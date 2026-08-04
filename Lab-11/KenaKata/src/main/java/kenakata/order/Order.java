@@ -1,5 +1,6 @@
 package kenakata.order;
 
+import kenakata.catalog.CatalogItem;
 import kenakata.catalog.Chargeable;
 import kenakata.catalog.Insurable;
 import kenakata.exceptions.CheckoutException;
@@ -30,7 +31,7 @@ public class Order {
         priceBreakdown = new PriceBreakdown(chargeables, zone);
     }
 
-    public void addProduct(Chargeable product, int qty) {
+    public void addProduct(CatalogItem product, int qty) {
         for (int i = 0; i < qty; i++)
             chargeables.add(product);
     }
