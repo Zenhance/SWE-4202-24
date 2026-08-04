@@ -14,8 +14,7 @@ public class DeliveryCalculator
         {
             if(line.item() instanceof Weighable weighable)
             {
-                totalWeight=totalWeight+weighable.weightGrams()+line.qty();
-            }
+                totalWeight += (long) weighable.weightGrams() * line.quantity();            }
             if(line.item() instanceof FreshGood)
             {
                 freshlines++;
