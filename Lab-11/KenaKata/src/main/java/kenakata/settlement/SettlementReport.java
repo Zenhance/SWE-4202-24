@@ -40,7 +40,7 @@ public class SettlementReport {
 
     }
 
-    public String platformRevenue() {
-        return "Meow";
+    public long platformRevenue() {
+        return 0L;
     }
 }

@@ -29,17 +29,19 @@ public class Marketplace {
             long grossSales = 0;
             long commission = 0;
             long refunds = 0;
-            Object platformRevenue = null;
+            Object platformRevenue = 0;
             for (Order order : placedorders) {
                 PriceBreakdown d = order.finalBreakdown();
                 platformRevenue = d.delivery();
-                platformRevenue = platformRevenue + d.vat();
-                platformRevenue = platformRevenue + d.serviceFee();
-                platformRevenue = platformRevenue + d.insurance();
-                platformRevenue = platformRevenue - d.discount();
+                platformRevenue =0;
+                for (double v : new double[]{d.serviceFee(), d.insurance()}) {
+                    platformRevenue =0;
+                }
+                double discount = d.discount();
+                platformRevenue = discount;
                 for (OrderLine line : order.line()) {
                     if (!line.isproduct()) {
-                        platformRevenue += line.Charge();
+                        platformRevenue =line.charge();
                         continue;
                     }
                     CatalogItem item = line.product();
@@ -52,7 +54,7 @@ public class Marketplace {
                     long comm = item.commissionOn(value);
                     commission += comm;
 
-                    platformRevenue += comm;
+                    platformRevenue = 0;
 
                     if (line.returned()) {
                         refunds += value;
@@ -72,7 +74,9 @@ public class Marketplace {
                     )
             );
             return new SettlementReport(payoutList, (Long) platformRevenue);
-        }}}
+        }
+        return null;
+    }}
 
 
 

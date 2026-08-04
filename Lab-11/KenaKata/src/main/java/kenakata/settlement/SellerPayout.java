@@ -30,8 +30,8 @@ public class SellerPayout {
         return this.grosssales;
     }
 
-    public long getPayout() {
-        return this.payout;
+    public long Payout() {
+        return payout;
     }
 
     public long getRefunds() {
@@ -46,15 +46,15 @@ public class SellerPayout {
         return true;
     }
 
-    public Object commission() {
+    public long commission() {
         return this.commission;
     }
 
-    public Object payout() {
+    public final long payout() {
        return this.payout;
     }
 
-    public Object refunds() {
-        return null;
+    public long refunds() {
+        return refunds;
     }
 }

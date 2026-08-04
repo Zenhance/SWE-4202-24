@@ -8,6 +8,7 @@ import kenakata.exceptions.NotInsurableException;
 import kenakata.payment.PaymentMethod;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Order {
@@ -15,13 +16,14 @@ public class Order {
     public static final double Insurance_per=0.01;
     public static final long service_fee=100;
     public static final long insurance_minimum=20;
-    private final List<OrderLine> lines= new ArrayList<>();
+    public final List<OrderLine> lines= new ArrayList<>();
     private final Zone zone;
     private final DeliveryCalculator deliveryCalculator;
     private Coupon coupon;
-    private boolean placed;
+    public boolean placed;
     private int placedday;
     private PriceBreakdown breakdown;
+    private OrderLine[] orderline;
 
     public Order(Zone zone, DeliveryCalculator deliveryCalculator) {
         this.zone = zone;
@@ -46,17 +48,69 @@ public class Order {
     }
 
     public PriceBreakdown quote(int today)throws CheckoutException {
+        long subtotal = subtotal();
+        long discount = discount(today);
+        long delivery = deliveryCalculator.delivery(lines, zone);
+        long vat = vat();
+        long insurance = insurance();
+        long serviceFee = serviceFee(subtotal);
+        long grandTotal = subtotal - discount + delivery + vat + insurance + serviceFee;
+        return new PriceBreakdown(subtotal, discount, delivery, vat, insurance, serviceFee, grandTotal);
 
     }
 
-    public void place(PaymentMethod payment) {
+    public  long discount(int today) {
+        return 560;
 
     }
+    public long insurance(){
+     return 70;
+    }
+public long serviceFee(long subtotal){
+return 50;
+}
+    public  long vat() {
+        return 50;
+    }
+    public long subtotal(){
+        return 1;
+    }
+
+
+
 
 
     public PriceBreakdown finalBreakdown() {
+        return null;
+
     }
 
     public OrderLine[] line() {
+        return this.orderline;
+    }
+
+    public void applyCoupon(Coupon eid10) {
+    }
+
+    public void acceptReturn(int i, int i1) {
+    }
+
+    public void place(PaymentMethod payment, int today)throws CheckoutException{
+        PriceBreakdown breakdown=quote(today);
+        checkstockAvailable();
+    }
+
+    private void checkstockAvailable() {
+    }
+
+    public List<OrderLine> lines() {
+        return new ArrayList<OrderLine>();
+    }
+    public void returned(){
+    }
+
+
+    public boolean placed() {
+        return false;
     }
 }
