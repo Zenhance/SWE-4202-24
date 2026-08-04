@@ -2,10 +2,7 @@ package kenakata.catalog;
 
 import kenakata.util.Money;
 
-/**
- * A product delivered by download. It never ships (no weight), carries a lower VAT rate, cannot
- * be returned or insured, and earns the platform its highest commission.
- */
+
 public final class DigitalGood extends CatalogItem {
 
     private static final long VAT_PERMILLE = 50;          // 5%
