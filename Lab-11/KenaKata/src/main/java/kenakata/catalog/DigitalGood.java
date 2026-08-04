@@ -5,7 +5,7 @@ public class DigitalGood extends CatalogItem{
         super(sku,title,unitPrice,stockCount,seller);
     }
     public long unitVat(){
-        return (long)Math.ceil(unitCharge());
+        return (long)Math.ceil(unitCharge()*0.05);
     }
 
     @Override
