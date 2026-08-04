@@ -37,4 +37,8 @@ public class SellerPayout {
     public long getRefunds() {
         return this.refunds;
     }
+
+    public Object grossSales() {
+        return this.grosssales;
+    }
 }
