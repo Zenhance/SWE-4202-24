@@ -5,6 +5,7 @@ import kenakata.catalog.DigitalGood;
 import kenakata.catalog.GiftWrap;
 import kenakata.catalog.StockedGood;
 import kenakata.exceptions.CouponRejectedException;
+import kenakata.exceptions.EmptyWalletException;
 import kenakata.exceptions.NotInsurableException;
 import kenakata.payment.MobileWalletPayment;
 
@@ -34,7 +35,7 @@ public class Order {
     public void insure(int i) throws NotInsurableException {
     }
 
-    public void place(MobileWalletPayment mobileWalletPayment, int i) {
+    public void place(MobileWalletPayment mobileWalletPayment, int i) throws EmptyWalletException {
     }
 
     public boolean placed() {
