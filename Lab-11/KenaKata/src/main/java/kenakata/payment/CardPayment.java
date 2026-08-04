@@ -4,7 +4,7 @@ import kenakata.exceptions.PaymentDeclinedException;
 
 import javax.smartcardio.Card;
 
-public abstract class CardPayment implements PaymentMethod {
+public class CardPayment implements PaymentMethod {
     private long limit;// credit or debit limit
     public CardPayment(long limit){
 
