@@ -16,7 +16,7 @@ public class SettlementReport {
     public ArrayList<Order> orders = new ArrayList<>();
 
     //public ArrayList<Chargeable> items = new ArrayList<>();
-    //ArrayList<SellerPayout> payouts = new ArrayList<>();
+    ArrayList<SellerPayout> payouts = new ArrayList<>();
     //public SellerPayout[] payouts() {
 
 
@@ -60,11 +60,20 @@ public class SettlementReport {
                 }
             }
         }
-
+        payouts.add(sp);
         return sp;
     }
 
     public long grandTotal() {
         return grand;
+    }
+
+    public SellerPayout[] payouts() {
+        int n = payouts.size();
+        SellerPayout [] payouts1 = new SellerPayout[n];
+        for(int i=0; i<n; i++){
+            payouts1[i] = payouts.get(i);
+        }
+        return payouts1;
     }
 }

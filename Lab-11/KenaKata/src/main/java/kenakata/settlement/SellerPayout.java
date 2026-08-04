@@ -46,4 +46,8 @@ public class SellerPayout {
         }
         return total;
     }
+
+    public Seller seller() {
+        return s;
+    }
 }

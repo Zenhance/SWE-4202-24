@@ -7,6 +7,7 @@ import kenakata.catalog.ExpressHandling;
 import kenakata.catalog.Seller;
 import kenakata.catalog.StockedGood;
 import kenakata.exceptions.CheckoutException;
+import kenakata.exceptions.ReturnNotAllowedException;
 import kenakata.order.Coupon;
 import kenakata.order.DeliveryCalculator;
 import kenakata.order.Order;
@@ -33,7 +34,7 @@ import kenakata.settlement.SettlementReport;
  */
 public final class Main {
 
-    /*public static void main(String[] args) throws CheckoutException {
+    public static void main(String[] args) throws Exception {
         // ---- Sellers and catalogue -------------------------------------------------------
         Seller alpha = new Seller("Alpha Electronics");
         Seller beta = new Seller("Beta Books");
@@ -125,5 +126,5 @@ public final class Main {
         System.out.println("  Insurance   Tk " + b.insurance());
         System.out.println("  Service fee Tk " + b.serviceFee());
         System.out.println("  Grand total Tk " + b.grandTotal());
-    }*/
+    }
 }
