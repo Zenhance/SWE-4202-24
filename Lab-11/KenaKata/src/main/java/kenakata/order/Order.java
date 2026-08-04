@@ -43,6 +43,10 @@ public class Order {
         finalBreakdown=null;
     }
 
+    public ArrayList<Chargeable> addOns(){
+        return addOns;
+    }
+
     public void addProduct(CatalogItem product, int quantity){
         OrderLine line = new OrderLine(product,quantity );
         lines.add(line);
@@ -169,12 +173,8 @@ public class Order {
 
 
         for (OrderLine line : lines) {
-
             if (line.product().remaining() < line.quantity()) {
-
-                throw new OutOfStockException(
-                        "Only " + line.product().remaining()
-                                + " items remaining.");
+                throw new OutOfStockException("Only " + line.product().remaining() + " items remaining.");
             }
         }
 
