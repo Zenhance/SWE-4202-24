@@ -10,15 +10,15 @@ public class PriceBreakdown {
     public String delivery() {
     }
 
-    public String vat() {
+    public  vat() {
     }
 
-    public String insurance() {
+    public void insurance() {
     }
 
-    public String serviceFee() {
+    public long serviceFee() {
     }
 
-    public String grandTotal() {
+    public long grandTotal() {
     }
 }
