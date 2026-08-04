@@ -32,7 +32,7 @@ public class Marketplace {
         }
         long totalCustomerPayment=0;
         for(Order order:recordedOrders){
-            totalCustomerPayment+=order.finalBreakdown().grandTotal;
+            totalCustomerPayment+=order.finalBreakdown().grandTotal();
             for (OrderLine line: order.lines()){
                 if(line.item() instanceof CatalogItem item){
                     Seller seller=item.seller();
