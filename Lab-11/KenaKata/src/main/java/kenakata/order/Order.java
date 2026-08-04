@@ -4,6 +4,7 @@ import kenakata.catalog.CatalogItem;
 import kenakata.catalog.Chargeable;
 import kenakata.catalog.Insurable;
 import kenakata.exceptions.CheckoutException;
+import kenakata.exceptions.CouponRejectedException;
 import kenakata.exceptions.NotInsurableException;
 import kenakata.exceptions.ReturnNotAllowedException;
 import kenakata.payment.PaymentMethod;
@@ -54,8 +55,38 @@ public class Order {
             this.coupon=coupon;
     }
 
-    public PriceBreakdown quote(int day){
-        return null;
+    public PriceBreakdown quote(int day) throws CouponRejectedException {
+        long subtotal=0;
+        long discountable=0;
+        long vat=0;
+        long insurance=0;
+
+        for(int i=0;i<items.size();i++){
+            Chargeable item=items.get(i);
+            int quantity=quantities.get(i);
+
+            subtotal+=item.unitCharge()*quantity;
+            vat+=item.unitVat()*quantity;
+
+            if(insured.get(i)&& item instanceof Insurable insurable){
+                long value=insurable.insure(quantity);
+                long fee = (long)Math.ceil(value*0.01);
+
+                insurance+=Math.max(20,fee);
+            }
+        }
+        long discount=0;
+        if(coupon!=null){
+            discount=coupon.calculateDiscount(discount,day);
+        }
+
+        long delivery=deliveryCalculator.calculate(items,quantities,zone);
+        long serviceFee=Math.min(100,(long)Math.ceil(subtotal*0.01));
+
+        long grandTotal=subtotal-discount+delivery+vat+insurance+serviceFee;
+        priceBreakdown=new PriceBreakdown(subtotal,discount,delivery,vat,insurance,serviceFee,grandTotal);
+
+        return priceBreakdown;
     }
 
     public void insure(long quantity){

@@ -43,4 +43,8 @@ public class Coupon {
         return lastValidDay;
     }
 
+    public long calculateDiscount(long amount,int day)throws CouponRejectedException{
+        if(day<lastValidDay) throw new CouponRejectedException("Coupon not valid yet");
+        return (long)Math.ceil(amount*percentage/100.0);
+    }
 }
