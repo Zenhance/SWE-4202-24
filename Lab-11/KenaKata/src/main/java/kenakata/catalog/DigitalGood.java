@@ -12,7 +12,7 @@ public class DigitalGood extends CatalogItem {
 
     @Override
     public int commissionOn(int i) {
-        return 0;
+        return (int) Math.ceil(i*0.2);
     }
 
     @Override

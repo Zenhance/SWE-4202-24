@@ -22,7 +22,7 @@ public class StockedGood extends CatalogItem implements Weight, Insurable, Retur
 
     @Override
     public long unitCharge() {
-        return 0;
+        return UnitePrize;
     }
 
     @Override
