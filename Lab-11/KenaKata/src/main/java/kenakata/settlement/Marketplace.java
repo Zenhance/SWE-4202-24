@@ -13,7 +13,7 @@ import kenakata.order.PriceBreakdown;
 public final class Marketplace {
 
     private final List<Seller>sellers=new ArrayList<>();
-    private final List<Order> rders=new ArrayList<>();
+    private final List<Order> oders=new ArrayList<>();
 
     public void register(Seller seller) {
         if (seller==null) {
@@ -29,7 +29,7 @@ public final class Marketplace {
         if (!order.placed()) {
             throw new IllegalStateException("only a placed order can be recorded");
         }
-        Order.add(order);
+
     }
 
     /** Runs settlement over every order recorded so far. */
@@ -45,6 +45,7 @@ public final class Marketplace {
 
         long platformRevenue = 0;
 
+        Order[] orders = new Order[0];
         for (Order order : orders) {
             PriceBreakdown breakdown = order.finalBreakdown();
             long orderCommission = 0;
@@ -54,7 +55,7 @@ public final class Marketplace {
                 if (line.chargeable() instanceof CatalogItem item) {
                     long lineValue = line.lineCharge();
                     long commission = item.commissionOn(lineValue);
-                    Seller seller = item.seller();
+                    Seller seller = new seller();
 
                     grossSales.merge(seller, lineValue, Long::sum);
                     commissions.merge(seller, commission, Long::sum);
