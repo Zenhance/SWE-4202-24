@@ -1,11 +1,16 @@
 package kenakata.catalog;
 
+import kenakata.exceptions.OutOfStockException;
+
 public class StockedGood extends CatalogItem {
-    public StockedGood(String s, String tableLamp, int i, int i1, Seller s1, int i2) {
+    private int stock;
+
+    public StockedGood(String sku, String title, int unitPrice, int stock, Seller seller, int weightGrams
+    ) {
+        this.stock = stock;
     }
 
     public StockedGood() {
-
     }
 
     public long unitCharge() {
@@ -20,10 +25,15 @@ public class StockedGood extends CatalogItem {
         return 192;
     }
 
-    public void reserve(int i) {
+    public void reserve(int quantity) throws OutOfStockException {
+        if (quantity > stock) {
+            throw new OutOfStockException();
+        }
+
+        stock -= quantity;
     }
 
     public int remaining() {
-        return 2;
+        return stock;
     }
 }

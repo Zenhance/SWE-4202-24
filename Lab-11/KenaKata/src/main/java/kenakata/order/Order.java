@@ -7,6 +7,7 @@ import kenakata.catalog.GiftWrap;
 import kenakata.catalog.StockedGood;
 import kenakata.payment.PaymentMethod;
 import kenakata.catalog.Chargeable;
+import kenakata.exceptions.CheckoutException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -60,7 +61,7 @@ public class Order {
     public void addAddOn(ExpressHandling expressHandling) {
     }
 
-    public void place(PaymentMethod payment, int today) {
+    public void place(PaymentMethod payment, int today) throws CheckoutException {
     }
 
     public void addAddOn(Chargeable addOn) {
