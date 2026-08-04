@@ -6,7 +6,7 @@ public class ColdChain implements Chargeable{
     }
 
     public int unitCharge(){
-        return 80;
+        return 50;
     }
 
     public int unitVat(){
