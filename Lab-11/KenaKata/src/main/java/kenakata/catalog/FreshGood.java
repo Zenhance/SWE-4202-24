@@ -39,4 +39,9 @@ public class FreshGood extends CatalogItem implements Weighable, Insurable {
     public int insurance() {
         return (int) Math.ceil(getUnitPrice() * 0.01);
     }
+
+    @Override
+    public void insure() {
+
+    }
 }

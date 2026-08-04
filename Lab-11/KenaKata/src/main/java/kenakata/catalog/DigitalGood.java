@@ -1,5 +1,7 @@
 package kenakata.catalog;
 
+import kenakata.exceptions.NotInsurableException;
+
 public class DigitalGood extends CatalogItem {
     public DigitalGood(String SKU, String title, double unitPrice, int stockCount, Seller seller) {
         super(SKU, title, unitPrice, stockCount, seller);
@@ -23,5 +25,15 @@ public class DigitalGood extends CatalogItem {
     @Override
     public boolean returned() {
         return false;
+    }
+
+    @Override
+    public int insurance() {
+        return 0;
+    }
+
+    @Override
+    public void insure() throws NotInsurableException {
+        throw new NotInsurableException("Digital good cannot be insured");
     }
 }
