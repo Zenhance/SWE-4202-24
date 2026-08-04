@@ -1,5 +1,8 @@
 package kenakata.order;
 
+import kenakata.exceptions.CheckoutException;
+import kenakata.exceptions.CouponRejectedException;
+
 public class Coupon {
     private final String code;
     private final int percentage;
@@ -37,5 +40,19 @@ public class Coupon {
     }
     public int getExpiryDay(){
         return expiryDay;
+    }
+
+    public long discountFor(long discountableBase, long subtotal, int currentDay) throws CheckoutException {
+        if(discountableBase<0 || subtotal<0 || currentDay<0){
+            throw new IllegalArgumentException("Cannot be negative");
+        }
+        if(currentDay>expiryDay){
+            throw new CouponRejectedException("Coupon has expired");
+        }
+        if(subtotal<minimumSpend){
+            throw new CouponRejectedException("");
+        }
+        long calculatedDiscount = (long)Math.ceil((double)discountableBase * percentage);
+        return Math.min(cap,calculatedDiscount);
     }
 }
