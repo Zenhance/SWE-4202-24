@@ -5,6 +5,8 @@ import kenakata.catalog.GiftWrap;
 import kenakata.catalog.StockedGood;
 import kenakata.payment.MobileWalletPayment;
 
+import java.util.Map;
+
 public class Order {
     public Order(Object dhaka, DeliveryCalculator deliveryCalculator) {
     }
@@ -35,5 +37,11 @@ public class Order {
 
     public @org.jspecify.annotations.Nullable Object finalBreakdown() {
         return null;
+    }
+
+    public void acceptReturn(int i, int i1) {
+    }
+
+    public Map<Object, Object> lines() {
     }
 }
