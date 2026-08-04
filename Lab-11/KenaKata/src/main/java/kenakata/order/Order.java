@@ -3,10 +3,7 @@ package kenakata.order;
 import kenakata.catalog.CatalogItem;
 import kenakata.catalog.Chargeable;
 import kenakata.catalog.Insurable;
-import kenakata.exceptions.CheckoutException;
-import kenakata.exceptions.CouponRejectedException;
-import kenakata.exceptions.NotInsurableException;
-import kenakata.exceptions.ReturnNotAllowedException;
+import kenakata.exceptions.*;
 import kenakata.payment.PaymentMethod;
 
 import java.util.ArrayList;
@@ -16,7 +13,9 @@ public class Order {
     private DeliveryCalculator calculator;
     private ArrayList<Chargeable> chargeables;
     private Coupon coupon;
-    PriceBreakdown priceBreakdown;
+    private PriceBreakdown priceBreakdown;
+    private boolean hasStock = true;
+    private String itemOutOfStock;
 
     public Order(Zone zone, DeliveryCalculator calculator) {
         if (zone == null)
@@ -34,6 +33,11 @@ public class Order {
     public void addProduct(CatalogItem product, int qty) {
         for (int i = 0; i < qty; i++)
             chargeables.add(product);
+        if (qty > product.remaining()) {
+            hasStock = false;
+            itemOutOfStock = product.getTitle();
+        }
+
     }
 
     public void addAddOn(Chargeable addOn) {
@@ -74,6 +78,8 @@ public class Order {
 
     // check the parameter
     public void place(PaymentMethod p, int day) throws CheckoutException {
+        if (!hasStock)
+            throw new OutOfStockException(itemOutOfStock + " is out-of-stock");
         p.authorise(priceBreakdown.grandTotal());
     }
 
