@@ -41,6 +41,8 @@ public class PriceBreakdown {
     }
 
     public int discount() {
+        if (coupon == null)
+            return 0;
         int discount = 0;
         discount += (int) Math.ceil(discountableAmount() * coupon.getPercentage() * 0.01);
 
