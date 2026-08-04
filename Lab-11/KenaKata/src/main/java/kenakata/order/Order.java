@@ -78,7 +78,7 @@ public class Order {
                     discountableBase += line.lineCharge();
                 }
                 if (line.insured()) {
-                    long fee = (long) Main.ceil(line.lineCharge() * 0.01);
+                    long fee = (long)Math.ceil(line.lineCharge() * 0.01);
                     insuranceFee += Math.max(fee, 20);
                 }
             }
