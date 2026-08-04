@@ -1,6 +1,7 @@
 package kenakata.order;
 import kenakata.catalog.CatalogItem;
 import kenakata.catalog.Chargeable;
+import kenakata.payment.PaymentMethod;
 
 
 import javax.sound.sampled.Line;
@@ -26,6 +27,12 @@ public void addAddOn(Chargeable e){
     public PriceBreakdown qoute(int i){
         return null;
     }
+
+    public void insure(int idx){
+
+    }
+
+
 
 
 
