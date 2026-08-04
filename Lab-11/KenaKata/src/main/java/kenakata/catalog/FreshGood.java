@@ -5,8 +5,9 @@ public class FreshGood extends StockedGood {
         super();
     }
 
+    @Override
     public long unitVat() {
-        return 0;
+        return 0L;
     }
 
     public int commissionOn(int i) {
