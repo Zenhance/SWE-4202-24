@@ -72,12 +72,17 @@ public class PriceBreakdown {
 
     public int insurance() {
         int totalInsurance = 0;
+        boolean noInsuredItem = true;
         for (Chargeable c : chargeables) {
-            if (c instanceof Insurable i)
+            if ((c instanceof Insurable i) && i.isInsured()) {
+                noInsuredItem = false;
                 totalInsurance += i.insurance();
+            }
         }
 
-        return Math.max(totalInsurance, 20);
+        if (!noInsuredItem)
+            return Math.max(totalInsurance, 20);
+        return 0;
     }
 
     public int serviceFee() {
