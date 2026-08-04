@@ -57,11 +57,8 @@ public class Marketplace {
                         continue;
                     }
 
-                    long value =
-                            line.product().unitCharge() * line.quantity();
-
+                    long value = line.product().unitCharge() * line.quantity();
                     grossSales += value;
-
                     commission += line.product().commissionOn(value);
 
                     if (line.returned()) {
@@ -89,14 +86,9 @@ public class Marketplace {
             platformRevenue -= b.discount();
 
             for (var line : order.lines()) {
-
-                long value =
-                        line.product().unitCharge() * line.quantity();
-
-                platformRevenue +=
-                        line.product().commissionOn(value);
+                long value = line.product().unitCharge() * line.quantity();
+                platformRevenue += line.product().commissionOn(value);
             }
-
             for (var addOn : order.addOns()) {
                 platformRevenue += addOn.unitCharge();
             }
