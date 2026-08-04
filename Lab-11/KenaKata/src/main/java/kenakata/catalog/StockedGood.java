@@ -26,6 +26,10 @@ public class StockedGood extends CatalogItem {
     }
 
     public void reserve(int quantity) throws OutOfStockException {
+        if (quantity <= 0) {
+            throw new IllegalArgumentException("Reservation must be positive");
+        }
+
         if (quantity > stock) {
             throw new OutOfStockException();
         }
