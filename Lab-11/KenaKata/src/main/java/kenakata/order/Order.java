@@ -25,7 +25,7 @@ public void addAddOn(Chargeable e){
         this.coupon = coupon;
     }
 
-    public PriceBreakdown qoute(int i){
+    public PriceBreakdown quote(int i){
         return null;
     }
 
