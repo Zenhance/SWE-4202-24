@@ -1,85 +1,84 @@
 package kenakata.settlement;
 
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-import kenakata.catalog.CatalogItem;
+import kenakata.catalog.AbstractItem;
 import kenakata.catalog.Seller;
 import kenakata.order.Order;
 import kenakata.order.OrderLine;
 import kenakata.order.PriceBreakdown;
 
+import java.util.*;
 
-public final class Marketplace {
-
-    private final List<Seller>sellers=new ArrayList<>();
-    private final List<Order> rders=new ArrayList<>();
+public class Marketplace {
+    private final List<Seller> sellers = new ArrayList<>();
+    private final List<Order> recordedOrders = new ArrayList<>();
 
     public void register(Seller seller) {
-        if (seller==null) {
-            throw new IllegalArgumentException("seller must not be null");
+        if (seller == null) {
+            throw new IllegalArgumentException("Seller cannot be null");
         }
-        sellers.add(seller);
+        if (!sellers.contains(seller)) {
+            sellers.add(seller);
+        }
+    }
+
+    public void add(Order order) {
+        record(order);
     }
 
     public void record(Order order) {
-        if (order == null) {
-            throw new IllegalArgumentException("order must not be null");
+        if (order == null || !order.placed()) {
+            throw new IllegalArgumentException("Order must be placed before recording");
         }
-        if (!order.placed()) {
-            throw new IllegalStateException("only a placed order can be recorded");
-        }
-        Order.add(order);
+        recordedOrders.add(order);
     }
 
-    /** Runs settlement over every order recorded so far. */
     public SettlementReport settle() {
-        Map<Seller, Long> grossSales = new LinkedHashMap<>();
-        Map<Seller, Long> commissions = new LinkedHashMap<>();
-        Map<Seller, Long> refunds = new LinkedHashMap<>();
-        for (Seller seller : sellers) {
-            grossSales.put(seller, 0L);
-            commissions.put(seller, 0L);
-            refunds.put(seller, 0L);
+        Map<Seller, Long> grossSalesMap = new HashMap<>();
+        Map<Seller, Long> commissionMap = new HashMap<>();
+        Map<Seller, Long> refundsMap = new HashMap<>();
+
+        for (Seller s : sellers) {
+            grossSalesMap.put(s, 0L);
+            commissionMap.put(s, 0L);
+            refundsMap.put(s, 0L);
         }
 
-        long platformRevenue = 0;
+        long totalCustomerPayment = 0;
 
-        for (Order order : orders) {
-            PriceBreakdown breakdown = order.finalBreakdown();
-            long orderCommission = 0;
-            long orderAddOnCharges = 0;
+        for (Order order : recordedOrders) {
+            PriceBreakdown bd = order.finalBreakdown();
+            totalCustomerPayment += bd.grandTotal();
 
-            for (OrderLine line:order.lines()) {
-                if (line.chargeable() instanceof CatalogItem item) {
-                    long lineValue = line.lineCharge();
-                    long commission = item.commissionOn(lineValue);
-                    Seller seller = item.seller();
+            for (OrderLine line : order.lines()) {
+                if (line.item() instanceof AbstractItem abstractItem) {
+                    Seller seller = abstractItem.seller();
+                    long lineValue = line.lineValue();
+                    long comm = abstractItem.commissionOn(lineValue);
 
-                    grossSales.merge(seller, lineValue, Long::sum);
-                    commissions.merge(seller, commission, Long::sum);
-                    orderCommission += commission;
+                    grossSalesMap.put(seller, grossSalesMap.getOrDefault(seller, 0L) + lineValue);
+                    commissionMap.put(seller, commissionMap.getOrDefault(seller, 0L) + comm);
 
                     if (line.returned()) {
-                        refunds.merge(seller, lineValue, Long::sum);
+                        refundsMap.put(seller, refundsMap.getOrDefault(seller, 0L) + lineValue);
                     }
-                } else {
-                    orderAddOnCharges += line.lineCharge();
                 }
             }
-
-            platformRevenue += orderCommission + orderAddOnCharges
-                    + breakdown.delivery() + breakdown.vat() + breakdown.serviceFee()
-                    - breakdown.discount();
         }
 
-        Map<Seller, SellerPayout> payouts = new LinkedHashMap<>();
+        List<SellerPayout> payouts = new ArrayList<>();
+        long totalSellerPayouts = 0;
+
         for (Seller seller : sellers) {
-            payouts.put(seller, new SellerPayout(seller, grossSales.get(seller),
-                    commissions.get(seller), refunds.get(seller)));
+            long gross = grossSalesMap.getOrDefault(seller, 0L);
+            long comm = commissionMap.getOrDefault(seller, 0L);
+            long ref = refundsMap.getOrDefault(seller, 0L);
+            long netPayout = gross - comm - ref;
+
+            payouts.add(new SellerPayout(seller, gross, comm, ref, netPayout));
+            totalSellerPayouts += netPayout;
         }
 
+        long platformRevenue = totalCustomerPayment - totalSellerPayouts;
         return new SettlementReport(payouts, platformRevenue);
     }
 }
