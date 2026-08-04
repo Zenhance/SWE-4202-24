@@ -45,6 +45,13 @@ public void addAddOn(Chargeable e){
 
     }
 
+    public boolean placed(){
+        return false;
+    }
+
+
+
+
 
 
 
