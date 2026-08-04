@@ -28,7 +28,7 @@ public abstract class CatalogItem implements Chargeable{
         return stockCount;
     }
 
-    public CatalogItem(int sku, String title, int unitPrice, int stockCount){
+    public CatalogItem(String sku, String title, int unitPrice, int stockCount){
         if(sku==null||title==null||title.isBlank()){
             throw new IllegalArgumentException("SKU and title cannot be blank");
             if(unitPrice<0){
