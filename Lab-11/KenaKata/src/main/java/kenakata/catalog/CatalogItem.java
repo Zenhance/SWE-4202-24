@@ -29,4 +29,5 @@ public abstract class CatalogItem implements Chargeable {
         this.stock = stock;
         this.seller = seller;
     }
+
 }
