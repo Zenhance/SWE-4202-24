@@ -61,15 +61,23 @@ public class OrderLine {
     }
 
     public long lineCharge() {
-        if(product == null)
-            throw new IllegalStateException();
-        return product.unitCharge() * quantity;
+        if (product != null) {
+            return product.unitCharge() * quantity;
+        }
+        if (addOn != null) {
+            return addOn.unitCharge() * quantity;
+        }
+        throw new IllegalStateException("OrderLine has neither a product nor an add-on.");
     }
 
     public long lineVat() {
-        if(product == null)
-            throw new IllegalStateException();
-        return product.unitVat() * quantity;
+        if (product != null) {
+            return product.unitVat() * quantity;
+        }
+        if (addOn != null) {
+            return addOn.unitVat() * quantity;
+        }
+        throw new IllegalStateException("OrderLine has neither a product nor an add-on.");
     }
 }
 
