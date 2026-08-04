@@ -84,13 +84,14 @@ public class Order {
             if (day > coupon.getLastValidDay())
                 throw new CouponRejectedException("Coupon has expired");
 
+        p.authorise(priceBreakdown.grandTotal());
+        this.isOrderPlaceable = true;
+
         for (Chargeable c : chargeables) {
             if (c instanceof CatalogItem item) {
                 item.reduceStockCount();
             }
         }
-        this.isOrderPlaceable = true;
-        p.authorise(priceBreakdown.grandTotal());
     }
 
     public boolean placed() {
