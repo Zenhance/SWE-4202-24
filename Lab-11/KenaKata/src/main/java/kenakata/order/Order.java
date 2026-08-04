@@ -30,7 +30,7 @@ public class Order {
     }
 
     public void addAddOn(Chargeable addOn) {
-        lines.add(new OrderLine(addOn, 1))
+        lines.add(new OrderLine(addOn, 1));
     }
 
     public void applyCoupon(Coupon coupon) {
