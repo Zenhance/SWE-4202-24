@@ -12,7 +12,7 @@ public class GiftWrap implements Chargeable{
     }
 
     public String label() {
-        return "Gift wrap";
+        return "Gift wrapping";
     }
 
 
