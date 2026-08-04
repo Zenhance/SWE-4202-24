@@ -11,7 +11,7 @@ public class DigitalGood extends CatalogItem {
     }
     @Override
     public double commissionOn(long price) {
-        return Math.ceil((double)price*0.08);
+        return Math.ceil((double)price*0.2);
     }
     @Override
     public String label(){
