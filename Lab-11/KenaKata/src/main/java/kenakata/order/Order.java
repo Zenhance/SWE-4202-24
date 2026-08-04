@@ -4,6 +4,7 @@ import kenakata.catalog.*;
 import kenakata.exceptions.CouponRejectedException;
 import kenakata.exceptions.EmptyWalletException;
 import kenakata.exceptions.NotInsurableException;
+import kenakata.exceptions.ReturnNotAllowedException;
 import kenakata.payment.MobileWalletPayment;
 import kenakata.payment.PaymentMethod;
 
@@ -30,6 +31,7 @@ public class Order {
         return finalBreakdown;
     }
 
+
     public void insure(int i) throws NotInsurableException {
     }
 
@@ -40,14 +42,15 @@ public class Order {
         return true;
     }
 
-    public @org.jspecify.annotations.Nullable Object finalBreakdown() {
-        return null;
+    public PriceBreakdown finalBreakdown() {
+        return finalBreakdown;
     }
 
-    public void acceptReturn(int i, int i1) {
+    public void acceptReturn(int i, int i1) throws ReturnNotAllowedException {
     }
 
     public Map<Object, Object> lines() {
+
     }
 
     public void addAddOn(Chargeable unit) {
