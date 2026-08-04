@@ -96,7 +96,7 @@ public class Order {
     public void place(PaymentMethod paymentMethod,int day) throws CheckoutException {
         PriceBreakdown breakdown = quote(day);
         List<CatalogItem> reservedItems = new ArrayList<>();
-        List<Iterator> reservedQuantities = new ArrayList<>();
+        List<Integer> reservedQuantities = new ArrayList<>();
         try {
             for (OrderLine line : lines) {
                 if (line.item() instanceof CatalogItem item) {
