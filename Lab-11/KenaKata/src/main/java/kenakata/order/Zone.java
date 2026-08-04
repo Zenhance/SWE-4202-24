@@ -2,7 +2,7 @@ package kenakata.order;
 
 public enum Zone {
     DHAKA(60,1),
-    OUTSIDE_DHAKA(120,3);
+    OUTSIDE(120,3);
     private final long baseShippingFee;
     private final int estimatedDays;
 
