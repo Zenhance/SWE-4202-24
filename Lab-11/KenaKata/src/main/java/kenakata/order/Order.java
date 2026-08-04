@@ -4,11 +4,14 @@ import kenakata.catalog.CatalogItem;
 import kenakata.catalog.DigitalGood;
 import kenakata.catalog.GiftWrap;
 import kenakata.catalog.StockedGood;
+import kenakata.exceptions.CouponRejectedException;
 import kenakata.payment.MobileWalletPayment;
 
 import java.util.Map;
 
 public class Order {
+
+    private PriceBreakdown finalBreakdown;
     public Order(Object dhaka, DeliveryCalculator deliveryCalculator) {
     }
 
@@ -22,9 +25,9 @@ public class Order {
     public void applyCoupon(Coupon eid10) {
     }
 
-    public Object quote(int i) {
+    public PriceBreakdown quote(int i) throws CouponRejectedException {
 
-        return null;
+        return finalBreakdown;
     }
 
     public void insure(int i) {

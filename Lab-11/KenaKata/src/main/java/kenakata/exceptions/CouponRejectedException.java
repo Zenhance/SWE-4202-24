@@ -1,4 +1,8 @@
 package kenakata.exceptions;
 
-public class CouponRejectedException {
+public final class CouponRejectedException extends CheckoutException {
+
+    public CouponRejectedException(String message) {
+        super(message);
+    }
 }
