@@ -15,7 +15,7 @@ public class StockedGood extends CatalogItem implements Chargeable,Weightable,Re
 
     @Override
     public long unitVat() {
-        return (long) Math.ceil(weight * 0.075);
+        return (long) Math.ceil(unitPrice * 0.075);
     }
 
     @Override
