@@ -1,8 +1,10 @@
 package kenakata.order;
 
 import kenakata.catalog.Chargeable;
+import kenakata.catalog.Insurable;
 import kenakata.exceptions.CheckoutException;
 import kenakata.exceptions.CouponRejectedException;
+import kenakata.exceptions.NotInsurableException;
 import kenakata.exceptions.ReturnNotAllowedException;
 import kenakata.payment.PaymentMethod;
 
@@ -63,8 +65,10 @@ public class Order {
         return priceBreakdown.discountableAmount() > coupon.getMinimumSpend();
     }
 
-    public void insure(int number) {
-
+    public void insure(int index) throws NotInsurableException {
+        Chargeable c = chargeables.get(index);
+        if (c instanceof Insurable)
+            ((Insurable) c).insure();
     }
 
     // check the parameter
