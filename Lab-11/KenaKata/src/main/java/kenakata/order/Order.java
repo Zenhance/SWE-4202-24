@@ -32,6 +32,10 @@ public void addAddOn(Chargeable e){
 
     }
 
+    public void place(PaymentMethod payment,int today){
+
+    }
+
 
 
 
