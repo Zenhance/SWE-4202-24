@@ -1,7 +1,7 @@
 package kenakata.catalog;
 
 public class DigitalGood extends CatalogItem{
-    public DigitalGood(int sku,String title,int unitPrice,int stockCount,Seller seller){
+    public DigitalGood(String sku,String title,int unitPrice,int stockCount,Seller seller){
         super(sku,title,unitPrice,stockCount,seller);
     }
     public long unitVat(){

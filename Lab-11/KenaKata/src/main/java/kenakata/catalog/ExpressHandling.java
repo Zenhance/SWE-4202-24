@@ -6,7 +6,7 @@ public class ExpressHandling implements Chargeable{
         return 120;
     }
     public long unitVat(){
-        return (long)Math.ceil(120*0.075)
+        return (long)Math.ceil(120*0.075);
     }
 
     @Override

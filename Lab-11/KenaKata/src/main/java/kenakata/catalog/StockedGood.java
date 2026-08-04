@@ -2,7 +2,7 @@ package kenakata.catalog;
 
 public class StockedGood extends CatalogItem{
    private final int weightGrams;
-   public StockedGood(int sku,String title,int unitPrice,int stockCount,Seller seller,int weightGrams){
+   public StockedGood(String sku,String title,int unitPrice,int stockCount,Seller seller,int weightGrams){
        super(sku, title, unitPrice, stockCount);
        if(weightGrams<=0){
            throw new IllegalArgumentException("Weight must be positive");

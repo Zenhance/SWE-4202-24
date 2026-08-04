@@ -22,4 +22,5 @@ public class WarrantyPlan implements Chargeable{
     public String label() {
         return "Warranty for "+item.title();
     }
+
 }

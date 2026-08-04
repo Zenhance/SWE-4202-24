@@ -3,14 +3,14 @@ package kenakata.catalog;
 import kenakata.exceptions.OutOfStockException;
 
 public abstract class CatalogItem implements Chargeable{
-    protected int sku;
+    protected String sku;
     protected String title;
     protected int unitPrice;
     protected int stockCount;
     protected Seller seller;
 
 
-    public int sku() {
+    public String sku() {
         return sku;
     }
 
