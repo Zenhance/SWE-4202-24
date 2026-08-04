@@ -5,30 +5,38 @@ public class Coupon {
     private int discountAmount;
     private int expiryDay;
 
-    public Coupon (String code,int discountAmount,int expiryDay){
-        this.code=code;
-        this.discountAmount=discountAmount;
-        this.expiryDay=expiryDay;
+    public Coupon(String code, int discountAmount, int expiryDay) {
+        this.code = code;
+        this.discountAmount = discountAmount;
+        this.expiryDay = expiryDay;
     }
 
-    public String getCode(){
+    public String getCode() {
         return code;
     }
-    public int getDiscountAmount(){
+
+    public int getDiscountAmount() {
         return discountAmount;
     }
-    public int getExpiryDay(){
+
+    public int getExpiryDay() {
         return expiryDay;
     }
-    public boolean isExpired(int currentDay){
-        return currentDay>expiryDay;
-    }
-    public long computeDiscount(long subtotal,int currentDay){
-        return 0;
+
+    public boolean isExpired(int currentDay) {
+        return currentDay > expiryDay;
     }
 
-    if(discountAmount>subtotal){
-        return subtotal;
+    public long computeDiscount(long subtotal, int currentDay) {
+
+        if (isExpired(currentDay)) {
+            return 0;
+        }
+
+        if (discountAmount > subtotal) {
+            return subtotal;
+        }
+
+        return discountAmount;
     }
-    return discountAmount;
 }
