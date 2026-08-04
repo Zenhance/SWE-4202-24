@@ -1,6 +1,6 @@
 package kenakata.catalog;
 
-public interface OrderableLine {
+public interface Chargeable {
 
    long unitVat();
 

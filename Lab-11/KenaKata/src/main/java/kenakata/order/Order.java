@@ -2,7 +2,7 @@ package kenakata.order;
 
 import kenakata.catalog.CatalogItem;
 import kenakata.catalog.Insurable;
-import kenakata.catalog.OrderableLine;
+import kenakata.catalog.Chargeable;
 import kenakata.exceptions.CheckoutException;
 import kenakata.exceptions.NotInsurableException;
 
@@ -29,7 +29,7 @@ public class Order {
     public void addProduct(CatalogItem item , int qty){
         lines.add(new OrderLine(item,qty));
     }
-    public void addAddOn(OrderableLine addon){
+    public void addAddOn(Chargeable addon){
         lines.add(new OrderLine(addon,1));
     }
     public void applycoupon(Coupon coupon){

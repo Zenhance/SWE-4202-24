@@ -1,6 +1,6 @@
 package kenakata.catalog;
 
-public class GiftWrap implements OrderableLine{
+public class GiftWrap implements Chargeable {
     private static final double vat=0.075;
     private static final int wrapping_charge=50;
 

@@ -2,16 +2,16 @@ package kenakata.order;
 
 
 import kenakata.catalog.CatalogItem;
-import kenakata.catalog.OrderableLine;
+import kenakata.catalog.Chargeable;
 
 public class OrderLine {
-    private final OrderableLine item;
+    private final Chargeable item;
     private final int quantity;
     private boolean insured;
     private boolean returned;
 
 
-    public OrderLine(OrderableLine item, int quantity) {
+    public OrderLine(Chargeable item, int quantity) {
         if(item==null)
             throw new IllegalArgumentException("Invalid");
         if(quantity<=0)
@@ -19,7 +19,7 @@ public class OrderLine {
         this.item = item;
         this.quantity = quantity;
     }
-    public OrderableLine getItem(){
+    public Chargeable getItem(){
         return item;
     }
     public int getQuantity(){

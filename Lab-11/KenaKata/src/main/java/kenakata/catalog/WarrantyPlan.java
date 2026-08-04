@@ -1,6 +1,6 @@
 package kenakata.catalog;
 
-public class WarrantyPlan implements OrderableLine{
+public class WarrantyPlan implements Chargeable {
     private static final double vat=0.15;
     private static final double charge= 0.1;
     private final CatalogItem item;
