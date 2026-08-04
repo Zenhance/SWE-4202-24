@@ -1,35 +1,20 @@
 package kenakata.payment;
 
-import kenakata.exceptions.EmptyWalletException;
+import kenakata.exceptions.*;
 
-public class Wallet{
+public class Wallet {
+    private long balance;
 
-    private int balance;
-
-    public Wallet(int balance){
+    public Wallet(long balance) {
+        if (balance < 0) throw new IllegalArgumentException("Wallet balance cannot be negative");
         this.balance = balance;
     }
 
-    public double getBalance(){
-        return balance;
-    }
+    public long balance() { return balance; }
 
-    public boolean debit(double amount) {
-        if(amount <= 0){
-            return false;
-        }
-        if(balance >= amount){
-            balance -= amount;
-            return true;
-        }
-        return false;
-    }
-
-    public boolean credit(double amount) {
-        if(amount <= 0){
-            return false;
-        }
-        balance += amount;
-        return true;
+    public void deduct(long amount) throws EmptyWalletException {
+        if (amount > balance) throw new EmptyWalletException("Insufficient wallet balance");
+        balance -= amount;
     }
 }
+

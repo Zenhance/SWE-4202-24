@@ -1,4 +1,8 @@
 package kenakata.payment;
 
-public class PaymentMethod {
+import kenakata.exceptions.*;
+
+public interface PaymentMethod {
+    void authorise(long amount) throws CheckoutException, CardLimitExceededException,  EmptyWalletException;
 }
+
