@@ -1,6 +1,4 @@
-package kenakata.order;
-
-import kenakata.catalog.Chargeable;
+package kenakata.catalog;
 
 public class GiftWrap implements Chargeable {
     private static final double CHARGE=50;
