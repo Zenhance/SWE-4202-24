@@ -1,6 +1,11 @@
 package kenakata.catalog;
 
 public class Seller {
-    public Seller(String seller) {
+    private String name;
+    public Seller(String name) {
+        if (name == null || name.isBlank()) {
+            throw new IllegalArgumentException("Seller name must not be null or blank");
+        }
+        this.name = name;
     }
 }
