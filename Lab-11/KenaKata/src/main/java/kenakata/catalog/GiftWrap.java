@@ -12,6 +12,6 @@ public class GiftWrap implements Chargeable{
 
     @Override
     public String label() {
-        return "Gift Wrapping";
+        return "Gift wrapping";
     }
 }
