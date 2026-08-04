@@ -1,7 +1,7 @@
 package kenakata.catalog;
 import kenakata.exceptions.OutOfStockException;
 
-public abstract class CatalogItem {
+public abstract class CatalogItem implements Chargeable {
     private final String sku;
     private final String title;
     private final long price;
@@ -60,5 +60,10 @@ public abstract class CatalogItem {
         if(value <= 0 ){
             throw new IllegalArgumentException("value is negative");
         }
+    }
+
+    public final void release(int quantity){
+        requirePositive(quantity);
+        count = Math.addExact(count, quantity);
     }
 }
