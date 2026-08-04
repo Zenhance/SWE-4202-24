@@ -45,7 +45,7 @@ public class Order {
         if (line.item() instanceof CatalogItem item && item.isInsurable()) {
             line.setInsured(true);
         } else {
-            throw new NotInsurableException("Line item is not insurable")
+            throw new NotInsurableException("Line item is not insurable");
         }
     }
 
