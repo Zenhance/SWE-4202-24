@@ -1,10 +1,10 @@
 package kenakata.settlement;
 import kenakata.catalog.CatalogItem;
+import kenakata.catalog.Seller;
 import kenakata.order.*;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.RecursiveTask;
 
 public class Marketplace {
     private final List<Seller> registeredSellers = new ArrayList<>();

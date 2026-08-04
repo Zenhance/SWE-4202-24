@@ -2,7 +2,6 @@ package kenakata.catalog;
 
 import kenakata.exceptions.OutOfStockException;
 import kenakata.order.Chargeable;
-import kenakata.settlement.Seller;
 
 public abstract class CatalogItem implements Chargeable { //implementing chargeable allows Order
                                                           // class to process all elements through a unified interface
@@ -27,24 +26,30 @@ public abstract class CatalogItem implements Chargeable { //implementing chargea
         this.unitCharge=unitCharge;
     }
     public String sku(){
+
         return sku;
     }
     public String title(){
+
         return title;
     }
     public Seller seller(){
+
         return seller;
     }
     public int remaining(){
+
         return stock;
     }
 
     @Override
     public double unitCharge(){
+
         return unitPrice;
     }
     @Override
     public String label(){
+
         return title;
     }
     public void reserve(int qty)throws OutOfStockException{ //decrements the product's stock when a customer places an order

@@ -1,6 +1,8 @@
-package kenakata.order;
+package kenakata.catalog;
 
-public class GiftWrap implements Chargeable{
+import kenakata.order.Chargeable;
+
+public class GiftWrap implements Chargeable {
     @Override
     public double unitCharge(){
         return 50;

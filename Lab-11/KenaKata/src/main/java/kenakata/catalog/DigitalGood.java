@@ -1,5 +1,4 @@
 package kenakata.catalog;
-import kenakata.settlement.Seller;
 
 public abstract class DigitalGood extends CatalogItem {
     public DigitalGood(String sku, String title, long unitPrice,int stock, Seller seller){

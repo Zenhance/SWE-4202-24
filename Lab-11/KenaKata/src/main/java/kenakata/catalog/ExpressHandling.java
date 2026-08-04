@@ -1,6 +1,8 @@
-package kenakata.order;
+package kenakata.catalog;
 
-public class ExpressHandling implements Chargeable{ //dispatch charge
+import kenakata.order.Chargeable;
+
+public class ExpressHandling implements Chargeable { //dispatch charge
     @Override
     public double unitCharge(){
         return 120; // cost per order

@@ -3,7 +3,6 @@ import kenakata.order.ColdChain;
 import kenakata.order.Insurable;
 import kenakata.order.Returnable;
 import kenakata.order.Weighable;
-import kenakata.settlement.Seller;
 
 public abstract class FreshGood extends CatalogItem implements Weighable,ColdChain,Insurable,Returnable {
     private final int weightGrams;

@@ -3,9 +3,8 @@ package kenakata.catalog;
 import kenakata.order.Returnable;
 import kenakata.order.Insurable;
 import kenakata.order.Weighable;
-import kenakata.settlement.Seller;
 
-public abstract class StockedGood extends CatalogItem implements Weighable, Returnable,Insurable {
+public class StockedGood extends CatalogItem implements Weighable, Returnable,Insurable {
     private final int weightGrams;
 
     public StockedGood(String sku, String title, long unitPrice,int stock,Seller seller,int weightGrams){
