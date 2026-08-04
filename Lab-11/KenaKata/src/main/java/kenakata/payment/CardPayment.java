@@ -1,4 +1,4 @@
 package kenakata.payment;
 
-public class CardPayment {
+public class CardPayment extends PaymentMethod{
 }
