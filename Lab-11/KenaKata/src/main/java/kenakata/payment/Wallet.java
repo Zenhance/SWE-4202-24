@@ -14,8 +14,14 @@ public class Wallet  {
         return this.balance;
     }
   public void debit(int amount){
+        if(amount>balance)
+            throw new IllegalArgumentException("Invalid");
+        balance-=amount;
+  }
+    public void crebit(int amount){
         if(amount<=0)
             throw new IllegalArgumentException("Invalid");
-  }
+        balance+=amount;
+    }
 
 }
