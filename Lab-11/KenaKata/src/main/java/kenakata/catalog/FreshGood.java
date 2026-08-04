@@ -35,5 +35,9 @@ public class FreshGood extends CatalogItem implements Weighable, ColdChain, Insu
         requirePositive(quantity);
         return quantity*unitCharge();
     }
+    @Override
+    public String label(){
+        return "Fresh Good";
+    }
     
 }
