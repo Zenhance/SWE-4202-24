@@ -53,6 +53,10 @@ public void addAddOn(Chargeable e){
         return null;
     }
 
+    public ArrayList<Line> lines() {
+        return Lines;
+    }
+
 
 
 
