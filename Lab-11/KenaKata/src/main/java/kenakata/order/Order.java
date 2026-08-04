@@ -1,5 +1,6 @@
 package kenakata.order;
 
+import kenakata.catalog.CatalogItem;
 import kenakata.catalog.DigitalGood;
 import kenakata.catalog.GiftWrap;
 import kenakata.catalog.StockedGood;
@@ -11,7 +12,8 @@ public class Order {
     public Order(Object dhaka, DeliveryCalculator deliveryCalculator) {
     }
 
-    public void addProduct(StockedGood stockedGood, int i) {
+    public void addProduct(CatalogItem item, int quantity) {
+
     }
 
     public void addAddOn(GiftWrap giftWrap) {

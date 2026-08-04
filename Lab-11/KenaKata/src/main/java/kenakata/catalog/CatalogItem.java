@@ -1,5 +1,7 @@
 package kenakata.catalog;
 
+import kenakata.exceptions.OutOfStockException;
+
 public abstract class CatalogItem implements Chargeable {
     private String sku;
     private String title;

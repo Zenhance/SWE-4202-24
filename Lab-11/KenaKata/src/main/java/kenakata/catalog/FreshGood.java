@@ -1,10 +1,12 @@
 package kenakata.catalog;
 
-public class FreshGood {
-    public FreshGood(String s, String hilsa, int i, int i1, Seller seller, int i2) {
+public class FreshGood extends CatalogItem {
+    public FreshGood(String sku, String title, long unitPrice, int stock, Seller seller,
+                     long weightPerUnitGrams) {
+        super(sku, title, unitPrice, stock, seller);
     }
 
-    public int unitVat() {
+    public long unitVat() {
         return 1;
     }
 

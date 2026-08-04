@@ -1,14 +1,16 @@
 package kenakata.catalog;
 
-public class StockedGood {
-    public StockedGood(String s, String tableLamp, int i, int i1, Seller s1, int i2) {
+public class StockedGood extends CatalogItem{
+    public StockedGood(String sku, String title, long unitPrice, int stock, Seller seller,
+                       long weightPerUnitGrams) {
+        super(sku, title, unitPrice, stock, seller);
     }
 
-    public int unitCharge() {
+    public long  unitCharge() {
         return 1;
     }
 
-    public int unitVat() {
+    public long  unitVat() {
         return 1;
     }
 
