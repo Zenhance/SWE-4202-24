@@ -112,7 +112,7 @@ public final class Main {
                     + ", refunds Tk " + payout.refunds()
                     + " -> payout Tk " + payout.payout());
         }
-        System.out.println("Platform revenue: Tk " + report.platformRevenue());
+         System.out.println("Platform revenue: Tk " + report.platformRevenue());
     }
 
     // Prints a full price breakdown for one order's quote.

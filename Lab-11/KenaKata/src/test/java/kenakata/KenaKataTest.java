@@ -1,13 +1,21 @@
 package kenakata;
 
+import kenakata.catalog.ExpressHandling;
+import kenakata.catalog.Seller;
+import kenakata.catalog.StockedGood;
 import kenakata.catalog.*;
 import kenakata.exceptions.*;
 import kenakata.order.*;
 import kenakata.payment.*;
 import kenakata.settlement.*;
+import kenakata.order.DeliveryCalculator;
+import kenakata.order.Order;
+import kenakata.order.Zone;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
+import kenakata.settlement.Marketplace;
+import kenakata.settlement.SellerPayout;
 
 import static org.junit.jupiter.api.Assertions.*;
 
