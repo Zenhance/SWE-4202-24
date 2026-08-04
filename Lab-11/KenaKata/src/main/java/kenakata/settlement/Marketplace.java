@@ -74,11 +74,11 @@ public class Marketplace {
             long ref = refundsMap.getOrDefault(seller, 0L);
             long netPayout = gross - comm - ref;
 
-            payouts.add(new SellerPayout(seller, gross, comm, ref, netPayout));
+            payouts.add(new SellerPayout(seller, gross, comm, ref));
             totalSellerPayouts += netPayout;
         }
 
         long platformRevenue = totalCustomerPayment - totalSellerPayouts;
-        return new SettlementReport(payouts, platformRevenue);
+        return new SettlementReport((Map<Seller, SellerPayout>) payouts, platformRevenue);
     }
 }

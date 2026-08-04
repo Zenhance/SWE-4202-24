@@ -2,40 +2,33 @@ package kenakata.order;
 
 import kenakata.catalog.Chargeable;
 
-public class OrderLine
-{
-    private Chargeable item;
-    private int qty;
+public class OrderLine {
+    private final Chargeable item;
+    private final int quantity;
     private boolean insured;
     private boolean returned;
 
-    public OrderLine(Chargeable item, int qty)
-    {
-        if(item==null)
-            throw new IllegalArgumentException("Item can not be null");
-        if(qty<=0)
-            throw new IllegalArgumentException("Quantity must be positive");
+    public OrderLine(Chargeable item, int quantity) {
+        if (item == null || quantity <= 0) {
+            throw new IllegalArgumentException("Item cannot be null and quantity must be positive");
+        }
         this.item = item;
-        this.qty = qty;
+        this.quantity = quantity;
+        this.insured = false;
+        this.returned = false;
     }
 
-    public Chargeable item()
-    {
-        return item;
-    }
+    public Chargeable item() { return item; }
+    public Chargeable chargeable() { return item; }
 
-    public int qty()
-    {
-        return qty;
-    }
+    public int quantity() { return quantity; }
+    public boolean isInsured() { return insured; }
+    public void setInsured(boolean insured) { this.insured = insured; }
+    public boolean returned() { return returned; }
+    public void markReturned() { this.returned = true; }
 
-    public boolean insured()
-    {
-        return insured;
-    }
+    public long lineValue() { return item.unitCharge() * quantity; }
+    public long lineCharge() { return lineValue(); }
 
-    public boolean returned()
-    {
-        return returned;
-    }
+    public long lineVat() { return item.unitVat() * quantity; }
 }
