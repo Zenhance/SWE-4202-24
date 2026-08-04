@@ -9,8 +9,8 @@ public class OrderLine {
     private final Chargeable addOn;
     private final int quantity;
     
-    private boolean insured;
-    private boolean returned;
+    protected boolean insured;
+    protected boolean returned;
     
     public OrderLine(CatalogItem product, int quantity) {
         if (product == null)
@@ -48,7 +48,7 @@ public class OrderLine {
         return insured;
     }
     
-    public void insure() {
+    public void markInsured() {
         insured = true;
     }
     
@@ -58,6 +58,18 @@ public class OrderLine {
     
     public void markReturned() {
         returned = true;
+    }
+
+    public long lineCharge() {
+        if(product == null)
+            throw new IllegalStateException();
+        return product.unitCharge() * quantity;
+    }
+
+    public long lineVat() {
+        if(product == null)
+            throw new IllegalStateException();
+        return product.unitVat() * quantity;
     }
 }
 
