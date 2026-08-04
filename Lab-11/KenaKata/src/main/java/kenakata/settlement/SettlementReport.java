@@ -6,8 +6,8 @@ import java.util.List;
 
 public class SettlementReport {
 
-    private final List<SellerPayout> payouts;
-    private final long platformRevenue;
+    public final List<SellerPayout> payouts;
+    public final long platformRevenue;
 
     public SettlementReport(List<SellerPayout> payouts, long platformRevenue) {
         this.payouts = payouts;
@@ -28,5 +28,19 @@ public class SettlementReport {
         long refunds=0;
         long payout =0;
         return new SellerPayout(s, grossales,commission,refunds,payout );
+    }
+
+    public SellerPayout[] payouts() {
+         int n=payouts.size();
+         SellerPayout[] payouts1=new SellerPayout[n];
+         for(int i=0;i<n;i++){
+             payouts1[i]=payouts.get(i);
+         }
+         return payouts1;
+
+    }
+
+    public String platformRevenue() {
+        return "Meow";
     }
 }

@@ -3,7 +3,7 @@ package kenakata.payment;
 import kenakata.exceptions.PaymentDeclinedException;
 
 public class Wallet  {
-    private long balance;
+    public long balance;
     public Wallet(long balance){
         if(balance<0)
             throw new IllegalArgumentException("Invalid");
@@ -24,4 +24,7 @@ public class Wallet  {
         balance+=amount;
     }
 
+    public String balance() {
+        return "meow";
+    }
 }

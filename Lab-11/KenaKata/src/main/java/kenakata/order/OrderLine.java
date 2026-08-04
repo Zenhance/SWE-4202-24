@@ -57,4 +57,7 @@ public class OrderLine {
         return (CatalogItem) item;
    }
 
+    public Object charge() {
+        return null;
+    }
 }

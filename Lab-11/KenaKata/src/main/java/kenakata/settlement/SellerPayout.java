@@ -3,11 +3,11 @@ package kenakata.settlement;
 import kenakata.catalog.Seller;
 
 public class SellerPayout {
-    private final Seller seller;
+    public final Seller seller;
     private final long grosssales;
-    private final long commission;
-    private  final long refunds;
-    private final long payout;
+    public final long commission;
+    public final long refunds;
+    public final long payout;
 
 
     public SellerPayout(Seller seller, long grosssales, long commission, long refunds, long payout) {
@@ -40,5 +40,21 @@ public class SellerPayout {
 
     public Object grossSales() {
         return this.grosssales;
+    }
+
+    public boolean seller() {
+        return true;
+    }
+
+    public Object commission() {
+        return this.commission;
+    }
+
+    public Object payout() {
+       return this.payout;
+    }
+
+    public Object refunds() {
+        return null;
     }
 }
