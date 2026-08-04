@@ -1,4 +1,4 @@
-public class ShapeTooSmallException extends ShapeDrawingException{
+public class ShapeTooSmallException extends ShapeDrawException{
     public ShapeTooSmallException(String message){
         super(message);
     }
