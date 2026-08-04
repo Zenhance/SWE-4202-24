@@ -9,8 +9,11 @@ import java.util.Map;
 
 public class Order {
     public CatalogItem item;
+    public Coupon coupon;
+    public PaymentMethod payment;
     public int quantity;
     public AddOn addOn;
+    public PriceBreakdown P;
     public  ArrayList<OrderLine> Lines= new ArrayList<>();
 
     public Order(Zone zone, DeliveryCalculator delivery) {
@@ -26,15 +29,20 @@ public class Order {
     }
 
     public void place(PaymentMethod payment, int today) {
+        this.payment=payment;
+
     }
 
-    public void applyCoupon(Coupon eid10) {
+    public void applyCoupon(Coupon coupon) {
+        if (coupon==null)
+            throw new IllegalArgumentException();
+        this.coupon=coupon;
     }
 
 
     public PriceBreakdown quote(int today) {
-        PriceBreakdown finalBreakdown = null;
-        return finalBreakdown;
+        P = null;
+        return P;
     }
 
     public void insure(int i) {
@@ -46,12 +54,10 @@ public class Order {
     public boolean placed() {
     return true;
     }
-
     public PriceBreakdown finalBreakdown() {
-        PriceBreakdown finalBreakdown = null;
-        return finalBreakdown;
+        P = null;
+        return P;
     }
-
     public ArrayList<OrderLine> lines() {
         return this.Lines;
     }
