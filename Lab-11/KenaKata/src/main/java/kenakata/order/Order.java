@@ -19,6 +19,16 @@ public void addAddOn(Chargeable e){
         Lines.add(new Line(e));
 }
 
+    public void applyCoupon(Coupon coupon){
+        this.coupon = coupon;
+    }
+
+    public PriceBreakdown qoute(int i){
+        return null;
+    }
+
+
+
 
 
 
