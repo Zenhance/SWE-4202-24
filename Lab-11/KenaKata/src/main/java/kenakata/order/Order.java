@@ -29,14 +29,14 @@ public class Order {
     }
 
     public void addProduct(CatalogItem item, int quantity) {
-
-        if (quantity <= 0)
-            throw new IllegalArgumentException();
-
+        if (placed)
+            throw new IllegalStateException();
         lines.add(new OrderLine(item, quantity));
     }
 
     public void addAddOn(Chargeable addOn) {
+        if (placed)
+            throw new IllegalStateException();
         lines.add(new OrderLine(addOn));
     }
 
@@ -53,11 +53,48 @@ public class Order {
     }
 
     public void applyCoupon(Coupon coupon) {
+        if (coupon == null)
+            throw new IllegalArgumentException();
+        if (placed)
+            throw new IllegalStateException();
         this.coupon = coupon;
     }
 
-    public void place(PaymentMethod paymentMethod, long amount){
+    public void place(PaymentMethod paymentMethod, int day) throws CheckoutException {
+        if (paymentMethod == null) {
+            throw new IllegalArgumentException();
+        }
+        if (placed) {
+            throw new IllegalStateException();
+        }
+        if (day < 0) {
+            throw new IllegalArgumentException();
+        }
 
+        PriceBreakdown breakdown = calculateBreakdown(day);
+
+        List<OrderLine> reserved = new ArrayList<>();
+
+        try {
+            for (OrderLine line : lines) {
+                if (line.getProduct() != null) {
+                    line.getProduct().reserve(line.getQuantity());
+                    reserved.add(line);
+                }
+            }
+
+            paymentMethod.authorise(breakdown.grandTotal());
+
+            placed = true;
+            this.placedDay = day;
+            finalBreakdown = breakdown;
+
+        } catch (CheckoutException e) {
+            for (OrderLine line : reserved) {
+                line.getProduct().release(line.getQuantity());
+            }
+            throw e;
+        }
     }
 
     public void insure(int lineIndex) throws NotInsurableException {
@@ -107,7 +144,7 @@ public class Order {
         return lines.get(index);
     }
 
-    public PriceBreakdown calculateBreakdown(int currentDay) throws CheckoutException {
+    private PriceBreakdown calculateBreakdown(int currentDay) throws CheckoutException {
         if (currentDay < 0) {
             throw new IllegalArgumentException("");
         }
