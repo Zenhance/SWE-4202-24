@@ -1,5 +1,7 @@
 package kenakata.settlement;
 
+import kenakata.catalog.Seller;
+
 import java.util.List;
 
 public class SettlementReport {
@@ -18,5 +20,13 @@ public class SettlementReport {
 
     public long getPlatformRevenue() {
         return this.platformRevenue;
+    }
+
+    public SellerPayout forSeller(Seller s) {
+        long grossales=0;
+        long commission=0;
+        long refunds=0;
+        long payout =0;
+        return new SellerPayout(s, grossales,commission,refunds,payout );
     }
 }
