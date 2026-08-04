@@ -57,6 +57,9 @@ public abstract class CatalogItem implements Chargeable{
         }
         stockCount-=quantity;
     }
+    public String label(){
+        return title;
+    }
 
 
     public abstract boolean isDiscountable();
