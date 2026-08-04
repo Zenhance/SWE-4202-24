@@ -1,4 +1,8 @@
 package kenakata.exceptions;
 
-public class NotInsurableException {
+public class NotInsurableException extends CheckoutException {
+
+    public NotInsurableException(String message) {
+        super(message);
+    }
 }
