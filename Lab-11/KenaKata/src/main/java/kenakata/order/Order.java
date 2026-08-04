@@ -33,6 +33,14 @@ public class Order {
         this.coupon = coupon;
     }
 
+    public void place(CashOnDeliveryPayment cashOnDeliveryPayment, int today) {
+    }
+
+    public void acceptReturn(int i, int i1) {
+    }
+
+    public PriceBreakdown quote(int today) {
+    }
 }
 
 
