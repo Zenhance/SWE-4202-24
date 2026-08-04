@@ -29,8 +29,9 @@ public abstract class CatalogItem implements Chargeable{
     }
 
     public CatalogItem(String sku, String title, int unitPrice, int stockCount){
-        if(sku==null||title==null||title.isBlank()){
+        if(sku==null||sku.isBlank()||title==null||title.isBlank()) {
             throw new IllegalArgumentException("SKU and title cannot be blank");
+        }
             if(unitPrice<0){
                 throw new IllegalArgumentException("Unit Price can not be negative");
             }
@@ -40,7 +41,7 @@ public abstract class CatalogItem implements Chargeable{
             if(seller==null){
                 throw new IllegalArgumentException("Seller can't be null");
             }
-        }
+
 
         this.sku=sku;
         this.title=title;
