@@ -1,19 +1,22 @@
 package kenakata.order;
+import kenakata.catalog.Chargeable;
 import kenakata.catalog.FreshGood;
 import kenakata.catalog.Weightable;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class DeliveryCalculator {
-
-    public long calculate(List<OrderLine>lines,Zone zone){
+    public long calculate(ArrayList<Chargeable> items,ArrayList<Integer> quantities,Zone zone){
         int totalWeight=0,freshLines=0;
 
-        for(OrderLine line:lines){
-            if(line.item() instanceof Weightable weightable){
-                totalWeight+=weightable.weight()*line.quantity();
+        for(int i=0;i<items.size();i++){
+            Chargeable item=items.get(i);
+            int quantity=quantities.get(i);
+            if(item instanceof Weightable weightable){
+                totalWeight+=weightable.weight()*quantity;
             }
-            if(line.item() instanceof FreshGood){
+            if(item instanceof FreshGood){
                 freshLines++;
             }
         }
