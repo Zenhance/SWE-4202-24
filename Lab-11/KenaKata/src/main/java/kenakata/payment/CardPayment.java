@@ -9,7 +9,7 @@ public class CardPayment implements PaymentMethod{
         this.limit=limit;
     }
 
-    public int getRemaininglimit() {
+    public int remainingLimit() {
         return this.limit;
     }
 
