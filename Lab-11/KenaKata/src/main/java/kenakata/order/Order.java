@@ -1,6 +1,8 @@
 package kenakata.order;
 import kenakata.catalog.CatalogItem;
 
+
+import javax.sound.sampled.Line;
 import java.util.ArrayList;
 
 public class Order {
@@ -8,6 +10,8 @@ public class Order {
     public Coupon coupon;
     public Order(Zone zone,DeliveryCalculator deliveryCalculator) {}
 
-public void addProduct(CatalogItem)
+public void addProduct(CatalogItem item,int amount){
+        Lines.add(new Line(item,amount));
+}
 
 }
