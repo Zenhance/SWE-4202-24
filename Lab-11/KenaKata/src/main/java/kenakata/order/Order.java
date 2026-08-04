@@ -2,7 +2,10 @@ package kenakata.order;
 
 import kenakata.catalog.CatalogItem;
 import kenakata.catalog.Chargeable;
+import kenakata.catalog.FreshGood;
+import kenakata.catalog.StockedGood;
 import kenakata.exceptions.CheckoutException;
+import kenakata.exceptions.NotInsurableException;
 import kenakata.payment.PaymentMethod;
 
 import java.util.ArrayList;
@@ -32,7 +35,8 @@ public class Order {
         return null;
     }
 
-    public void insure(int idx) {
+    public void insure(int idx) throws NotInsurableException {
+        if(!(Lines.get(idx).item instanceof StockedGood ||Lines.get(idx).item instanceof FreshGood )) throw new NotInsurableException();
 
     }
 

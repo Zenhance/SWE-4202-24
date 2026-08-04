@@ -1,4 +1,4 @@
 package kenakata.exceptions;
 
-public class CheckedExceptions extends Exception {
+public class CheckedExceptions extends CheckoutException {
 }
