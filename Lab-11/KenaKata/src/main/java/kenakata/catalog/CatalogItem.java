@@ -61,4 +61,8 @@ public abstract class CatalogItem implements Chargeable {
         }
         stock -= quantity;
     }
+    @Override
+    public final String label() {
+        return title;
+    }
 }

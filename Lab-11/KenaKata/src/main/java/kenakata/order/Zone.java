@@ -1,9 +1,22 @@
 package kenakata.order;
 
-public class Zone {
-    public static final Object DHAKA = ;
-    public static final Object OUTSIDE = ;
+public enum Zone {
+    DHAKA(60, 20),
+    OUTSIDE(120, 35);
 
-    public class DHAKA {
+    private  long baseFee;
+    private  long perKgFee;
+
+    Zone(long baseFee, long perKgFee) {
+        this.baseFee = baseFee;
+        this.perKgFee = perKgFee;
+    }
+
+    public long baseFee() {
+        return baseFee;
+    }
+
+    public long perKgFee() {
+        return perKgFee;
     }
 }

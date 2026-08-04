@@ -1,5 +1,7 @@
 package kenakata.order;
-
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import kenakata.catalog.*;
 import kenakata.exceptions.CouponRejectedException;
 import kenakata.exceptions.EmptyWalletException;
@@ -8,10 +10,11 @@ import kenakata.exceptions.ReturnNotAllowedException;
 import kenakata.payment.MobileWalletPayment;
 import kenakata.payment.PaymentMethod;
 
+import java.util.ArrayList;
 import java.util.Map;
 
 public class Order {
-
+    private final List<OrderLine> lines = new ArrayList<>();
     private PriceBreakdown finalBreakdown;
     public Order(Object dhaka, DeliveryCalculator deliveryCalculator) {
     }
@@ -49,10 +52,15 @@ public class Order {
     public void acceptReturn(int i, int i1) throws ReturnNotAllowedException {
     }
 
-    public Map<Object, Object> lines() {
 
+
+    public List<OrderLine> lines() {
+        return Collections.unmodifiableList(lines);
     }
 
     public void addAddOn(Chargeable unit) {
+    }
+
+    public void addAddOn(ExpressHandling expressHandling) {
     }
 }

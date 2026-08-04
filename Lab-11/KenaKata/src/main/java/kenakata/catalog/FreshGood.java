@@ -9,6 +9,9 @@ public class FreshGood extends CatalogItem {
     public long unitVat() {
         return 1;
     }
+    public long unitCharge() {
+        return 1;
+    }
 
     public int commissionOn(int i) {
         return 1;

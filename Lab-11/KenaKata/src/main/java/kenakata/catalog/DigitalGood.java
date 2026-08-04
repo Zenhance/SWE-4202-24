@@ -5,11 +5,11 @@ public class DigitalGood extends CatalogItem{
         super(sku, title, unitPrice, stock, seller);
     }
 
-    public int unitCharge() {
+    public long unitCharge() {
         return 1;
     }
 
-    public int unitVat() {
+    public long unitVat() {
         return 1;
     }
 

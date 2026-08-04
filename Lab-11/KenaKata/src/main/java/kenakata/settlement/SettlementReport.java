@@ -10,4 +10,8 @@ public class SettlementReport {
     public int platformRevenue() {
         return 1;
     }
+
+    public SellerPayout[] payouts() {
+        return null;
+    }
 }
