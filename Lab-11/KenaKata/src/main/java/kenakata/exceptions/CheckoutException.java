@@ -1,6 +1,6 @@
 package kenakata.exceptions;
 
-public class CheckoutException extends java.lang.Exception {
+public class CheckoutException extends Exception {
     public CheckoutException(){
         super();
     }
