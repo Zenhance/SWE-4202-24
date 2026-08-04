@@ -10,6 +10,12 @@ public abstract class CatalogItem implements Chargeable{
     protected Seller seller;
 
     public CatalogItem(String sku, String title, long unitPrice, int stock, Seller seller){
+        if(sku==null || sku.isEmpty()) throw new IllegalArgumentException("SKU can't be empty");
+        if(title==null || title.isEmpty()) throw new IllegalArgumentException("Title can't be empty");
+        if(unitPrice<0) throw new IllegalArgumentException("Unit price can't be negative");
+        if(stock<0) throw new IllegalArgumentException("Stock can't be negative");
+        if(seller==null) throw new IllegalArgumentException("Seller can't be null");
+
         this.sku=sku;
         this.title=title;
         this.unitPrice=unitPrice;

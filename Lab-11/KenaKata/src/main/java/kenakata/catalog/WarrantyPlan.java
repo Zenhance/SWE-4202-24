@@ -4,6 +4,7 @@ public class WarrantyPlan implements Chargeable{
 
     protected CatalogItem catalog;
     public WarrantyPlan(CatalogItem catalog) {
+        if(catalog==null) throw new IllegalArgumentException("Catalog can't be null");
         this.catalog=catalog;
     }
 
