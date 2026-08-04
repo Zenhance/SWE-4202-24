@@ -5,7 +5,7 @@ import kenakata.catalog.Seller;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SettlementReport {
+public final class SettlementReport {
 
     private final List<SellerPayout> payouts;
     private final long platformRevenue;
@@ -32,6 +32,9 @@ public class SettlementReport {
         throw new IllegalArgumentException("Seller not found.");
     }
 
+    public List<SellerPayout> payouts() {
+        return payouts;
+    }
     public long platformRevenue() {
         return platformRevenue;
     }
