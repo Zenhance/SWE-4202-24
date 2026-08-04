@@ -1,6 +1,7 @@
 package kenakata.order;
 
 
+import kenakata.catalog.CatalogueItem;
 import kenakata.catalog.OrderableLine;
 
 public class OrderLine {
@@ -49,4 +50,11 @@ public class OrderLine {
    public  long Charge(){
         return  item.unitCharge()*quantity;
    }
+   public boolean isproduct(){
+        return item instanceof CatalogueItem;
+   }
+   public CatalogueItem product(){
+        return (CatalogueItem) item;
+   }
+
 }
