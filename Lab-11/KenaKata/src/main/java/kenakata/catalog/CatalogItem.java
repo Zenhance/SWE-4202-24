@@ -20,11 +20,11 @@ public abstract class CatalogItem implements Chargeable{
    public Seller seller(){
         return seller;
    }
-    public int unitPrice() {
+    public long unitCharge() {
         return unitPrice;
     }
 
-    public int stockCount() {
+    public int remaining() {
         return stockCount;
     }
 
@@ -58,7 +58,8 @@ public abstract class CatalogItem implements Chargeable{
         stockCount-=quantity;
     }
 
-public abstract boolean isDiscountable();
+
+    public abstract boolean isDiscountable();
     public abstract boolean isWeighable();
     public abstract int weightGrams();
     public abstract boolean needsColdChain();
