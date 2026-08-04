@@ -10,12 +10,12 @@ public class DigitalGood extends CatalogItem
     @Override
     public long unitVat()
     {
-        return 0;
+        return (long)Math.ceil(unitCharge()*0.05) ;
     }
 
     @Override
     public long commissionOn(long lineValue)
     {
-        return 0;
+        return (long)(lineValue*0.2);
     }
 }

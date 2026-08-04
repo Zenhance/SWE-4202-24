@@ -1,6 +1,6 @@
 package kenakata.catalog;
 
-public class FreshGood extends CatalogItem implements Weighable, Returnable, ColdChain
+public class FreshGood extends CatalogItem implements Weighable, Returnable, ColdChain, Insurable
 {
     private long weightGrams;
 
@@ -27,12 +27,17 @@ public class FreshGood extends CatalogItem implements Weighable, Returnable, Col
     @Override
     public long commissionOn(long lineValue)
     {
-        return 0;
+        return (long)Math.ceil(lineValue*0.05);
     }
 
     @Override
     public int returnWindowDays()
     {
-        return 7;
+        return 2;
+    }
+
+    @Override
+    public long insure(long quantity) {
+        return unitCharge()*quantity;
     }
 }
