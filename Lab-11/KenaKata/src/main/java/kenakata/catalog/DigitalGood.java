@@ -1,4 +1,4 @@
 package kenakata.catalog;
 
-public class DigitalGood {
+public class stockedGood DigitalGood {
 }
