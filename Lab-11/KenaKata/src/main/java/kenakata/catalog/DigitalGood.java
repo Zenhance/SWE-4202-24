@@ -5,12 +5,14 @@ public class DigitalGood extends StockedGood {
         super();
     }
 
+    @Override
     public long unitCharge() {
-        return 300;
+        return 300L;
     }
 
+    @Override
     public long unitVat() {
-        return 15;
+        return 15L;
     }
 
     public int commissionOn(int i) {

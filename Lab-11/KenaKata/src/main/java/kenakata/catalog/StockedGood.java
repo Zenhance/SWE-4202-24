@@ -9,11 +9,11 @@ public class StockedGood extends CatalogItem {
     }
 
     public long unitCharge() {
-        return 1200;
+        return 1200L;
     }
 
     public long unitVat() {
-        return 90;
+        return 90L;
     }
 
     public int commissionOn(int i) {
