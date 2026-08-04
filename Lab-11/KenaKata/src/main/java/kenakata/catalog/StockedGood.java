@@ -16,6 +16,11 @@ public class StockedGood extends CatalogItem implements Weight, Insurable, Retur
     }
 
     @Override
+    public int weight() {
+        return weight;
+    }
+
+    @Override
     public long unitCharge() {
         return 0;
     }
@@ -30,5 +35,10 @@ public class StockedGood extends CatalogItem implements Weight, Insurable, Retur
 
     @Override
     public void reserve(int quantity) {
+    }
+
+    @Override
+    public long insurableValue() {
+        return 0;
     }
 }

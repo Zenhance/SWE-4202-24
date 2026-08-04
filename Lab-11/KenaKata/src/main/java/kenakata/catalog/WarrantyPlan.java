@@ -4,8 +4,9 @@ import javax.naming.directory.Attribute;
 
 public class WarrantyPlan extends AddOn {
 
-    public WarrantyPlan(StockedGood lamp) {
-        super();
+    public CatalogItem item;
+    public WarrantyPlan(CatalogItem item) {
+        this.item=item;
     }
 
     public String label() {
@@ -13,7 +14,7 @@ public class WarrantyPlan extends AddOn {
 
     @Override
     public long unitCharge() {
-        return 0;
+        return (long) (item.UnitePrize*0.01);
     }
 
     @Override

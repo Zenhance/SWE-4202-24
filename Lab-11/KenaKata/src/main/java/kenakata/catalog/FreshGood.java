@@ -25,6 +25,11 @@ public class FreshGood extends CatalogItem implements Weight,Insurable,Returnabl
     }
 
     @Override
+    public int weight() {
+        return weight;
+    }
+
+    @Override
     public long unitVat() {
         return 0;
     }
@@ -34,4 +39,8 @@ public class FreshGood extends CatalogItem implements Weight,Insurable,Returnabl
     }
 
 
+    @Override
+    public long insurableValue() {
+        return 0;
+    }
 }
