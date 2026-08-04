@@ -1,5 +1,7 @@
 package kenakata.catalog;
 
+import kenakata.exceptions.NotInsurableException;
+
 public class FreshGood extends CatalogItem implements Weighable, Insurable {
     private int weight;
 
@@ -41,7 +43,7 @@ public class FreshGood extends CatalogItem implements Weighable, Insurable {
     }
 
     @Override
-    public void insure() {
-
+    public void insure() throws NotInsurableException {
+        super.insure();
     }
 }
