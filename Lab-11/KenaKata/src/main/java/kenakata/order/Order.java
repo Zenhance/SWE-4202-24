@@ -42,7 +42,7 @@ public class Order {
         return true;
     }
 
-    public Object finalBreakdown() {
+    public PriceBreakdown finalBreakdown() {
         return null;
     }
 
