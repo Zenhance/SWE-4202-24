@@ -8,6 +8,7 @@ import kenakata.exceptions.CouponRejectedException;
 import kenakata.exceptions.EmptyWalletException;
 import kenakata.exceptions.NotInsurableException;
 import kenakata.payment.MobileWalletPayment;
+import kenakata.payment.PaymentMethod;
 
 import java.util.Map;
 
@@ -35,7 +36,7 @@ public class Order {
     public void insure(int i) throws NotInsurableException {
     }
 
-    public void place(MobileWalletPayment mobileWalletPayment, int i) throws EmptyWalletException {
+    public void place(PaymentMethod payment, int i) throws EmptyWalletException {
     }
 
     public boolean placed() {
