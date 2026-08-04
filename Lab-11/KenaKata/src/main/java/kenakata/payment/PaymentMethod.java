@@ -1,6 +1,7 @@
 package kenakata.payment;
+import kenakata.exceptions.CheckoutException;
 
-public class PaymentMethod {
-    public void authorise(int i) {
-    }
+public interface PaymentMethod {
+    void authorise(long amount) throws CheckoutException;
+
 }
