@@ -1,22 +1,40 @@
 package kenakata.settlement;
 
+import kenakata.catalog.Seller;
+
 public class SellerPayOut {
-    private final String id;
-    private final String name;
+    private final Seller seller;
+    private final long grosssales;
+    private final long commission;
+    private  final long refunds;
+    private final long payout;
 
-    public SellerPayOut(String id, String name) {
-        if(id==null || id.isBlank() || name==null || name.isBlank()){
-            throw new IllegalArgumentException(("it is invalid"));
-        }
-        this.id = id;
-        this.name = name;
+
+    public SellerPayOut(Seller seller, long grosssales, long commission, long refunds, long payout) {
+        this.seller = seller;
+        this.grosssales = grosssales;
+        this.commission = commission;
+        this.refunds = refunds;
+        this.payout = payout;
     }
 
-    public String getName() {
-        return this.name;
+    public Seller getSeller() {
+        return this.seller;
     }
 
-    public String getId() {
-        return this.id;
+    public long getCommission() {
+        return this.commission;
+    }
+
+    public long getGrosssales() {
+        return this.grosssales;
+    }
+
+    public long getPayout() {
+        return this.payout;
+    }
+
+    public long getRefunds() {
+        return this.refunds;
     }
 }
