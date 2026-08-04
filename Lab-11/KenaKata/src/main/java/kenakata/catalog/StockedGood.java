@@ -1,8 +1,6 @@
 package kenakata.catalog;
 
-import kenakata.settlement.SellerPayOut;
-
-public class StockedGood extends CatalogueItem implements weighable,Insurable,Returnable{
+public class StockedGood extends CatalogItem implements weighable,Insurable,Returnable{
     private static final double comission_rate=0.08;
     private static final double vat=0.075;
     private static final int window_day=7;

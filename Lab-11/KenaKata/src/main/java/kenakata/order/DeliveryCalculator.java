@@ -2,7 +2,7 @@ package kenakata.order;
 
 import kenakata.catalog.ColdChain;
 import kenakata.catalog.weighable;
-import kenakata.catalog.CatalogueItem;
+import kenakata.catalog.CatalogItem;
 
 import java.util.List;
 
@@ -20,7 +20,7 @@ public long delivery(List<OrderLine>lines ,Zone zone) {
         if (!(line.isproduct())) {
             continue;
         }
-        CatalogueItem item = line.product();
+        CatalogItem item = line.product();
         if (item instanceof weighable weighable) {
             totalgrams += weighable.unitWeightGrams() * line.getQuantity();
         }

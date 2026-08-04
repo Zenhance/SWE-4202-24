@@ -1,8 +1,6 @@
 package kenakata.catalog;
 
-import kenakata.settlement.SellerPayOut;
-
-public class FreshGood extends CatalogueItem implements ColdChain,Returnable{
+public class FreshGood extends CatalogItem implements ColdChain,Returnable{
     private static final double comission_rate=0.05;
     private static final double vat=0.0;
     private static final int window_day=2;

@@ -1,6 +1,6 @@
 package kenakata.order;
 
-import kenakata.catalog.CatalogueItem;
+import kenakata.catalog.CatalogItem;
 import kenakata.catalog.Insurable;
 import kenakata.catalog.OrderableLine;
 import kenakata.exceptions.CheckoutException;
@@ -26,7 +26,7 @@ public class Order {
         this.zone = zone;
         this.deliveryCalculator = deliveryCalculator;
     }
-    public void addProduct(CatalogueItem item ,int qty){
+    public void addProduct(CatalogItem item , int qty){
         lines.add(new OrderLine(item,qty));
     }
     public void addAddOn(OrderableLine addon){
@@ -47,6 +47,7 @@ public class Order {
     public PriceBreakdown quote(int today)throws CheckoutException {
 
     }
+    public void place(Pay)
 
 
 

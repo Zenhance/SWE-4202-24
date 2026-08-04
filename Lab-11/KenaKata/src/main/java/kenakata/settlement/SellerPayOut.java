@@ -1,10 +1,10 @@
 package kenakata.settlement;
 
-public class Seller {
+public class SellerPayOut {
     private final String id;
     private final String name;
 
-    public Seller(String id, String name) {
+    public SellerPayOut(String id, String name) {
         if(id==null || id.isBlank() || name==null || name.isBlank()){
             throw new IllegalArgumentException(("it is invalid"));
         }
