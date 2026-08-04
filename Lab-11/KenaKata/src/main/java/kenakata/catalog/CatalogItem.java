@@ -75,6 +75,10 @@ throw new IllegalArgumentException("Title can not be null");
         }
         stockRemaining=stockRemaining-qty;
     }  public abstract long commissionOn(long lineValue);
+    public int remaining()
+    {
+        return stockRemaining;
+    }
 }
 
 
