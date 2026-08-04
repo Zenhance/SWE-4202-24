@@ -81,4 +81,8 @@ public abstract class CatalogItem implements Chargeable, Insurable{
     public void insure() throws NotInsurableException {
         this.isInsured = true;
     }
+
+    public boolean isInsured() {
+        return isInsured;
+    }
 }

@@ -15,4 +15,8 @@ public abstract class AddOn implements Chargeable, Insurable{
     public int insurance() {
         return 0;
     }
+
+    public boolean isInsured() {
+        return false;
+    }
 }
