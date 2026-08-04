@@ -24,7 +24,7 @@ public class Marketplace {
     }
 
     public SettlementReport settle(){
-        List<SellerPayOut>payoutList= new ArrayList<>();
+        List<SellerPayout>payoutList= new ArrayList<>();
         for(Seller seller : sellerss) {
             long grossSales = 0;
             long commission = 0;
@@ -63,7 +63,7 @@ public class Marketplace {
             }
             long payout = grossSales - commission - refunds;
             payoutList.add(
-                    new SellerPayOut(
+                    new SellerPayout(
                             seller,
                             grossSales,
                             commission,
@@ -71,12 +71,9 @@ public class Marketplace {
                             payout
                     )
             );
-            return new SettlementReport(
-                    payoutList,
-                    platformRevenue
-            );
+            return new SettlementReport(payoutList, (Long) platformRevenue);
+        }}}
 
-        }
 
 
 

@@ -4,15 +4,15 @@ import java.util.List;
 
 public class SettlementReport {
 
-    private final List<SellerPayOut> payouts;
+    private final List<SellerPayout> payouts;
     private final long platformRevenue;
 
-    public SettlementReport(List<SellerPayOut> payouts, long platformRevenue) {
+    public SettlementReport(List<SellerPayout> payouts, long platformRevenue) {
         this.payouts = payouts;
         this.platformRevenue = platformRevenue;
     }
 
-    public List<SellerPayOut> getPayouts() {
+    public List<SellerPayout> getPayouts() {
         return this.payouts;
     }
 

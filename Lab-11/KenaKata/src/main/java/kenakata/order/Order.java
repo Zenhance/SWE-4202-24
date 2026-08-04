@@ -5,6 +5,7 @@ import kenakata.catalog.Insurable;
 import kenakata.catalog.Chargeable;
 import kenakata.exceptions.CheckoutException;
 import kenakata.exceptions.NotInsurableException;
+import kenakata.payment.PaymentMethod;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,8 +48,15 @@ public class Order {
     public PriceBreakdown quote(int today)throws CheckoutException {
 
     }
-    public void place(Pay)
+
+    public void place(PaymentMethod payment) {
+
+    }
 
 
+    public PriceBreakdown finalBreakdown() {
+    }
 
+    public OrderLine[] line() {
+    }
 }

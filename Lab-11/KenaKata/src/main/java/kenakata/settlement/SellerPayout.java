@@ -2,7 +2,7 @@ package kenakata.settlement;
 
 import kenakata.catalog.Seller;
 
-public class SellerPayOut {
+public class SellerPayout {
     private final Seller seller;
     private final long grosssales;
     private final long commission;
@@ -10,7 +10,7 @@ public class SellerPayOut {
     private final long payout;
 
 
-    public SellerPayOut(Seller seller, long grosssales, long commission, long refunds, long payout) {
+    public SellerPayout(Seller seller, long grosssales, long commission, long refunds, long payout) {
         this.seller = seller;
         this.grosssales = grosssales;
         this.commission = commission;
