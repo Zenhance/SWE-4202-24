@@ -79,7 +79,10 @@ public class Order {
     // check the parameter
     public void place(PaymentMethod p, int day) throws CheckoutException {
         if (!hasStock)
-            throw new OutOfStockException(itemOutOfStock + " is out-of-stock");
+            throw new OutOfStockException("Item: " + itemOutOfStock + " is out-of-stock");
+        if (coupon != null)
+            if (day > coupon.getLastValidDay())
+                throw new CouponRejectedException("Coupon has expired");
         p.authorise(priceBreakdown.grandTotal());
     }
 
