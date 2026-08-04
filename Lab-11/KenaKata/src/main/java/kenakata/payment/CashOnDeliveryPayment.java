@@ -1,6 +1,6 @@
 package kenakata.payment;
 import kenakata.exceptions.CheckoutException;
-import kenakata.exceptions.CodCeilingExceededException
+import kenakata.exceptions.CodCeilingExceededException;
 public class CashOnDeliveryPayment implements PaymentMethod{
     private static final long CEILING=15000;
 
