@@ -7,29 +7,33 @@ public class SellerPayout {
     private long grossSales;
     private long commission;
     private long refunds;
+    private final long payout;
 
-    public SellerPayout(Seller seller){
-        this.seller=seller;
+    public SellerPayout(Seller seller, long grossSales, long commission, long refunds, long payout) {
+        this.seller = seller;
+        this.grossSales = grossSales;
+        this.commission = commission;
+        this.refunds = refunds;
+        this.payout = payout;
     }
-    public void addSales(long amount){
-        this.grossSales+=amount;
-    }
-    public void addCommission(long amount){
-        this.commission+=amount;
-    }
-    public void addRefund(long amount){
-        this.refunds+=amount;
-    }
-    public long grossSales(){
-        return grossSales;
-    }
-    public long refunds(){
-        return refunds;
-    }
-    public long payout(){
-        return grossSales-commission-refunds;
-    }
-    public Seller seller(){
+    public Seller seller() {
         return seller;
     }
+
+    public long grossSales() {
+        return grossSales;
+    }
+    public long commission() {
+        return commission;
+    }
+
+    public long refunds() {
+        return refunds;
+    }
+
+    public long payout() {
+        return payout;
+    }
 }
+
+
