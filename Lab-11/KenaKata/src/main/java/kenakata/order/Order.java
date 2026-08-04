@@ -1,6 +1,5 @@
 package kenakata.order;
 
-//import kenakata.catalog.AddOn;
 import kenakata.catalog.CatalogItem;
 import kenakata.catalog.Chargeable;
 import kenakata.exceptions.CheckoutException;

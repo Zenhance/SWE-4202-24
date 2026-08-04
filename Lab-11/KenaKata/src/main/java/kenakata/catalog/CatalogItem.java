@@ -2,52 +2,34 @@ package kenakata.catalog;
 
 import kenakata.exceptions.OutOfStockException;
 
-public abstract  class CatalogItem implements Chargeable{
-    private String SKU;
-    private String title;
-    private long unitPrice;
+public abstract class CatalogItem implements Chargeable {
+    private final String sku;
+    private final String title;
+    private final long unitPrice;
     private int stock;
-    private Seller seller;
+    private final Seller seller;
 
-
-    public CatalogItem(String SKU, String title, long unitPrice, int stockCount, Seller seller) {
-        if (SKU == null || title == null || seller == null) {
+    protected CatalogItem(String sku, String title, long unitPrice, int stock, Seller seller) {
+        if (sku == null || sku.trim().isEmpty() || title == null || title.trim().isEmpty() || seller == null) {
             throw new IllegalArgumentException("Invalid identity data");
         }
-        if (unitPrice < 0 || stockCount < 0) {
+        if (unitPrice < 0 || stock < 0) {
             throw new IllegalArgumentException("Negative price or stock");
         }
-        this.SKU = SKU;
+        this.sku = sku;
         this.title = title;
         this.unitPrice = unitPrice;
-        this.stock = stockCount;
+        this.stock = stock;
         this.seller = seller;
     }
 
-    public String getSKU() {
-        return SKU;
-    }
+    public String sku() { return sku; }
+    public String title() { return title; }
+    public Seller seller() { return seller; }
+    public int remaining() { return stock; }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public Seller getSeller() {
-        return seller;
-    }
-
-    public int remaining() {
-        return stock;
-    }
-
-    @Override
-    public long unitCharge() {
-        return unitPrice;
-    }
-    @Override
-    public String label() {
-        return title;
-    }
+    @Override public long unitCharge() { return unitPrice; }
+    @Override public String label() { return title; }
 
     public void reserve(int quantity) throws OutOfStockException {
         if (quantity <= 0) throw new IllegalArgumentException("Quantity must be positive");

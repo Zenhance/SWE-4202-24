@@ -1,4 +1,4 @@
-package kenakata;
+/*package kenakata;
 
 import kenakata.catalog.DigitalGood;
 import kenakata.catalog.FreshGood;
@@ -30,7 +30,7 @@ import kenakata.settlement.SettlementReport;
  * The classes it uses are deliberately different KINDS of object (stocked/digital/fresh items,
  * non-product add-ons, three payment methods) that the order and settlement treat uniformly
  * through their shared interfaces -- this file never asks "what kind are you?".
- */
+
 public final class Main {
 
     public static void main(String[] args) throws CheckoutException {
@@ -127,3 +127,4 @@ public final class Main {
         System.out.println("  Grand total Tk " + b.grandTotal());
     }
 }
+*/
