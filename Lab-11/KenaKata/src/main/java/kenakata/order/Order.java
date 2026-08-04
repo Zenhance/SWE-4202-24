@@ -9,16 +9,16 @@ import javax.sound.sampled.Line;
 import java.util.ArrayList;
 
 public class Order {
-    ArrayList<Line> Lines = new ArrayList<>();
+    ArrayList<OrderLine> Lines = new ArrayList<>();
     public Coupon coupon;
     public Order(Zone zone,DeliveryCalculator deliveryCalculator) {}
 
 public void addProduct(CatalogItem item,int amount){
-        Lines.add(new Line(item,amount));
+        Lines.add(new OrderLine(item,amount));
 }
 
 public void addAddOn(Chargeable e){
-        Lines.add(new Line(e));
+        Lines.add(new OrderLine(e));
 }
 
     public void applyCoupon(Coupon coupon){
@@ -53,23 +53,8 @@ public void addAddOn(Chargeable e){
         return null;
     }
 
-    public ArrayList<Line> lines() {
+    public ArrayList<OrderLine> lines() {
         return Lines;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
