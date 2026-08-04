@@ -3,6 +3,7 @@ package kenakata.order;
 import kenakata.catalog.CatalogItem;
 import kenakata.catalog.Chargeable;
 import kenakata.catalog.Insurable;
+import kenakata.catalog.Returnable;
 import kenakata.exceptions.CheckoutException;
 import kenakata.exceptions.CouponRejectedException;
 import kenakata.exceptions.NotInsurableException;
@@ -102,6 +103,14 @@ public class Order {
     }
 
     public void acceptReturn(int serial, int day) throws ReturnNotAllowedException {
+        Chargeable item=items.get(serial);
+        if(!(item instanceof Returnable r)){
+            throw new ReturnNotAllowedException("Item is not returnable");
+        }
+        if(returned.get(serial)) throw new ReturnNotAllowedException("Item already returned");
+
+        if(day>r.returnWindow())throw new ReturnNotAllowedException("Return window exceeded");
+        returned.set(serial,true);
     }
 
     public List<OrderLine> lines(){
