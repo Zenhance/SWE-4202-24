@@ -25,29 +25,31 @@ public class Marketplace {
 
     public SettlementReport settle(){
         List<SellerPayOut>payoutList= new ArrayList<>();
-        for(Seller seller : sellerss){
+        for(Seller seller : sellerss) {
             long grossSales = 0;
             long commission = 0;
             long refunds = 0;
-            for(Order order:placedorders){
-                PriceBreakdown d=order.finalBreakdown();
-                Object platformRevenue = d.delivery();
+            Object platformRevenue = null;
+            for (Order order : placedorders) {
+                PriceBreakdown d = order.finalBreakdown();
+                platformRevenue = d.delivery();
                 platformRevenue = platformRevenue + d.vat();
                 platformRevenue = platformRevenue + d.serviceFee();
                 platformRevenue = platformRevenue + d.insurance();
                 platformRevenue = platformRevenue - d.discount();
-                for(OrderLine line: order.line()){
+                for (OrderLine line : order.line()) {
                     if (!line.isproduct()) {
                         platformRevenue += line.Charge();
                         continue;
-                    } CatalogItem item = line.product();
+                    }
+                    CatalogItem item = line.product();
 
                     if (item.getSeller() != seller) {
                         continue;
                     }
-                    long value =line.Charge();
-                    grossSales+=value;
-                    long comm=item.commissionOn(value);
+                    long value = line.Charge();
+                    grossSales += value;
+                    long comm = item.commissionOn(value);
                     commission += comm;
 
                     platformRevenue += comm;
@@ -58,7 +60,8 @@ public class Marketplace {
 
 
                 }
-            }long payout=grossSales - commission - refunds;
+            }
+            long payout = grossSales - commission - refunds;
             payoutList.add(
                     new SellerPayOut(
                             seller,
