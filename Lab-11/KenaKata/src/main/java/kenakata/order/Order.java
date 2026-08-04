@@ -1,9 +1,6 @@
 package kenakata.order;
 
-import kenakata.catalog.CatalogItem;
-import kenakata.catalog.DigitalGood;
-import kenakata.catalog.GiftWrap;
-import kenakata.catalog.StockedGood;
+import kenakata.catalog.*;
 import kenakata.exceptions.CouponRejectedException;
 import kenakata.exceptions.EmptyWalletException;
 import kenakata.exceptions.NotInsurableException;
@@ -51,5 +48,8 @@ public class Order {
     }
 
     public Map<Object, Object> lines() {
+    }
+
+    public void addAddOn(Chargeable unit) {
     }
 }

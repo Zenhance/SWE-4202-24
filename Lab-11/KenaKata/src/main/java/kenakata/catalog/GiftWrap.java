@@ -1,11 +1,11 @@
 package kenakata.catalog;
 
-public class GiftWrap {
-    public int unitCharge() {
+public class GiftWrap implements Chargeable {
+    public long unitCharge() {
         return 1;
     }
 
-    public int unitVat() {
+    public long unitVat() {
         return 1;
     }
 
