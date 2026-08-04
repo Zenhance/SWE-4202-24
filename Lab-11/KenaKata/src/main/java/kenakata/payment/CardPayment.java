@@ -1,10 +1,21 @@
 package kenakata.payment;
+import kenakata.exceptions.CardLimitExceededException;
+import kenakata.exceptions.CheckoutException;
 
-public class CardPayment {
-    public int remainingLimit() {
+public class CardPayment implements PaymentMethod{
+    private long remainingLimit;
+    public CardPayment(long limit){
+        this.remainingLimit=limit;
+    }
+    public long remainingLimit(){
+        return remainingLimit;
     }
 
-    public void authorise(int i) {
-
+    @Override
+    public void authorise(long amount) throws CardLimitExceededException {
+        if(amount>remainingLimit){
+            throw new CardLimitExceededException("Card limit exceeded");
+        }
+        remainingLimit-=amount;
     }
 }
