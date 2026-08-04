@@ -2,6 +2,7 @@ package kenakata.payment;
 
 public class MobileWalletPayment implements PaymentMethod{
     public Wallet wallet;
+    public long amount;
     public MobileWalletPayment(Wallet wallet) {
         if (wallet==null)
             throw new IllegalArgumentException();
@@ -12,7 +13,7 @@ public class MobileWalletPayment implements PaymentMethod{
     }
     @Override
     public long remainingLimit() {
-        return 0;
+        return wallet.balance;
     }
     @Override
     public void authorise(long amount)  {

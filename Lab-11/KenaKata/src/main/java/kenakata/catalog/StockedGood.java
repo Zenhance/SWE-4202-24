@@ -27,7 +27,7 @@ public class StockedGood extends CatalogItem implements Weight, Insurable, Retur
 
     @Override
     public int commissionOn(int i) {
-        return 0;
+        return (int) Math.ceil(i*0.08);
     }
 
     public long unitVat() {

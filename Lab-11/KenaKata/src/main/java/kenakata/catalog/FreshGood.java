@@ -21,7 +21,7 @@ public class FreshGood extends CatalogItem implements Weight,Insurable,Returnabl
 
     @Override
     public int commissionOn(int i) {
-        return 0;
+        return (int) (i*0.05);
     }
 
     @Override
