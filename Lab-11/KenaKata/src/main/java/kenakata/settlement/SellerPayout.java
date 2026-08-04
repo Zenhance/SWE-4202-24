@@ -1,6 +1,9 @@
 package kenakata.settlement;
-
-public class SellerPayout {
-    public long payout() {
-    }
-}
+import kenakata.catalog.Seller;
+public record SellerPayout(
+        Seller seller;
+        long grossSales;
+        long commission;
+        long refunds;
+        long payout;
+) {}

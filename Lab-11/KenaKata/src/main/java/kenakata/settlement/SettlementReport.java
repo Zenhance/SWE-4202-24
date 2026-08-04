@@ -1,11 +1,15 @@
 package kenakata.settlement;
 
-import kenakata.catalog.Seller;
+import java.util.List;
 
-public class SettlementReport {
-    public SellerPayout forSeller(Seller b) {
-    }
-
-    public int platformRevenue() {
+public record SettlementReport(
+        List<SellerPayout>payouts,
+        long platformRevenue
+) {
+    public SellerPayout forSeller(kenakata.catalog.Seller seller){
+        return payouts.stream()
+                .filter(p ->p.seller().equals(seller))
+                .findFirst()
+                .orElseThrow(()-> new IllegalArgumentException("Seller not found in settlement report"));
     }
 }
