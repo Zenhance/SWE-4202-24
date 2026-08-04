@@ -1,6 +1,7 @@
 package kenakata.order;
 import kenakata.catalog.CatalogItem;
 import kenakata.catalog.Chargeable;
+import kenakata.exceptions.CheckoutException;
 import kenakata.payment.PaymentMethod;
 
 
@@ -32,9 +33,11 @@ public void addAddOn(Chargeable e){
 
     }
 
-    public void place(PaymentMethod payment,int today){
+    public void place(PaymentMethod payment,int today) throws CheckoutException {
 
     }
+
+
 
 
 
