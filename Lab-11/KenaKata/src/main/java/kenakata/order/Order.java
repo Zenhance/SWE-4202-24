@@ -73,7 +73,7 @@ public class Order {
 
     // check the parameter
     public void place(PaymentMethod p, int day) throws CheckoutException {
-
+        p.authorise(priceBreakdown.grandTotal());
     }
 
     public boolean placed() {
