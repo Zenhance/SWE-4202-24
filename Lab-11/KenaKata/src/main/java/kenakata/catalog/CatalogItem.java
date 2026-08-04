@@ -37,7 +37,7 @@ public abstract class CatalogItem implements Chargeable {
     public String title() {
         return title;
     }
-    public double seller(){
+    public Seller seller(){
         return seller;
     }
     public String label(){
