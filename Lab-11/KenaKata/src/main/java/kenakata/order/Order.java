@@ -15,6 +15,12 @@ public void addProduct(CatalogItem item,int amount){
         Lines.add(new Line(item,amount));
 }
 
-public void addAddOn(Chargeable e)
+public void addAddOn(Chargeable e){
+        Lines.add(new Line(e));
+}
+
+
+
+
 
 }
