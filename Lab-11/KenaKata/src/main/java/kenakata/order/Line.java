@@ -8,6 +8,7 @@ public class Line {
     Chargeable charge;
     int quantity;
     public Line(CatalogItem item, int quantity) {
+        if(quantity<=0) throw new IllegalArgumentException();
         this.item = item;
         this.quantity = quantity;
     }

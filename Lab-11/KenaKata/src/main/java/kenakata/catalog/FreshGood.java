@@ -6,6 +6,8 @@ public class FreshGood extends CatalogItem {
     int Stock,weight;
     public FreshGood(String SKU, String title, int unitprice, int stock, Seller seller, int Weight) {
         super(SKU,title,unitprice,seller);
+        if(Weight<=0) throw new IllegalArgumentException();
+        if(stock<0) throw new IllegalArgumentException();
         this.Stock = stock;
         this.weight = Weight;
     }

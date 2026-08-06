@@ -6,8 +6,11 @@ import static java.lang.Math.ceil;
 
 public class StockedGood extends CatalogItem{
     int weight,stock;
-    public StockedGood(String SKU, String title, int unitprice, int stock, Seller s1, int Weight) {
-        super(SKU, title, unitprice, s1);
+    public StockedGood(String SKU, String title, int unitprice, int stock, Seller s1, int Weight){
+        super(SKU,title,unitprice,s1);
+        if(Weight<=0) throw new IllegalArgumentException();
+        if(stock<0) throw new IllegalArgumentException();
+
         this.weight = Weight;
         this.stock = stock;
     }

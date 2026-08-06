@@ -5,7 +5,8 @@ public abstract class CatalogItem implements Chargeable{
     String title;
     int unitprice;
     Seller seller;
-    public CatalogItem(String SKU, String title, int unitprice, Seller s1) {
+    public CatalogItem(String SKU, String title, int unitprice, Seller s1) throws IllegalArgumentException {
+        if(SKU==null||title==null||title==" "||unitprice<=0||s1==null) throw new IllegalArgumentException();
         this.SKU = SKU;
         this.title = title;
         this.unitprice = unitprice;

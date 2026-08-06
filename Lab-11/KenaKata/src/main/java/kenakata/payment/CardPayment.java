@@ -9,12 +9,12 @@ public class CardPayment extends PaymentMethod{
     }
 
     public int remainingLimit() {
-        return amount;
+        return 0;
     }
-    public void authorise(int amount) throws CardLimitExceededException {
+    public void authorise(int amount) {
         if(this.amount < amount) {
             this.amount-=amount;
         }
-        else throw new CardLimitExceededException();
+
     }
 }
