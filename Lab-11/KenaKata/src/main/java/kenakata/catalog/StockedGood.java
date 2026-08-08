@@ -3,9 +3,9 @@ package kenakata.catalog;
 
 public class StockedGood extends CatalogItem implements Weighable, Returnable, Insurable, Discountable
 {
-    private double weightGrams;
+    private long weightGrams;
 
-    public StockedGood(String sku, String title, double unitPrice, int stock, Seller seller, double weightGrams)
+    public StockedGood(String sku, String title, long unitPrice, int stock, Seller seller, long weightGrams)
     {
         super(sku, title, unitPrice, stock, seller);
         if(weightGrams<=0)
@@ -22,18 +22,22 @@ public class StockedGood extends CatalogItem implements Weighable, Returnable, I
     @Override
     public long unitVat()
     {
-        return 0;
+        return (long)Math.ceil(weightGrams*0.075);
     }
 
     @Override
     public long commissionOn(long lineValue)
     {
-        return 0;
+        return (long)Math.ceil(lineValue*0.08);
     }
 
     @Override
     public int returnWindowDays()
     {
         return 7;
+    }
+    @Override
+    public long insure(long quantity) {
+        return unitCharge()*quantity;
     }
 }
