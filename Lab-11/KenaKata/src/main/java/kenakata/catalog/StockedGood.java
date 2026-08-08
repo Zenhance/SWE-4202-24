@@ -1,11 +1,11 @@
 package kenakata.catalog;
 
-import kenakata.exceptions.NotInsurableException;
-import kenakata.exceptions.ReturnNotAllowedException;
+import kenakata.exceptions.*;
 
 public class StockedGood extends CatalogItem implements Weighable, Insurable, Returnable{
     private int weight;
     private boolean isReturnable;
+    private boolean hasReturned = false;
 
     public StockedGood(String SKU, String title, double unitPrice, int stockCount, Seller seller, int weight) {
         super(SKU, title, unitPrice, stockCount, seller);
@@ -53,6 +53,8 @@ public class StockedGood extends CatalogItem implements Weighable, Insurable, Re
         isReturnable = dayPassed <= 7; // return window for StockedGood is 7 days
         if (!isReturnable)
             throw new ReturnNotAllowedException("Return window is over");
+
+        hasReturned = true;
     }
 
     @Override
@@ -63,5 +65,10 @@ public class StockedGood extends CatalogItem implements Weighable, Insurable, Re
     @Override
     public boolean returned() {
         return isReturnable;
+    }
+
+    @Override
+    public boolean hasReturned() {
+        return hasReturned;
     }
 }

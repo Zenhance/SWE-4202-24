@@ -5,6 +5,7 @@ import kenakata.exceptions.*;
 public class FreshGood extends CatalogItem implements Weighable, Insurable, Returnable {
     private int weight;
     private boolean isReturnable;
+    private boolean hasReturned = false;
 
     public FreshGood(String SKU, String title, double unitPrice, int stockCount, Seller seller, int weight) {
         super(SKU, title, unitPrice, stockCount, seller);
@@ -51,6 +52,8 @@ public class FreshGood extends CatalogItem implements Weighable, Insurable, Retu
         isReturnable = dayPassed <= 2; // return window for FreshGood is 2 days
         if (!isReturnable)
             throw new ReturnNotAllowedException("Return window is over");
+
+        hasReturned = true;
     }
 
     @Override
@@ -58,9 +61,13 @@ public class FreshGood extends CatalogItem implements Weighable, Insurable, Retu
         return isReturnable;
     }
 
-
     @Override
     public boolean returned() {
         return isReturnable;
+    }
+
+    @Override
+    public boolean hasReturned() {
+        return hasReturned;
     }
 }
