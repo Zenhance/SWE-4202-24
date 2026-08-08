@@ -1,8 +1,6 @@
 package kenakata.order;
 
-import kenakata.catalog.CatalogItem;
-import kenakata.catalog.Chargeable;
-import kenakata.catalog.Insurable;
+import kenakata.catalog.*;
 import kenakata.exceptions.*;
 import kenakata.payment.PaymentMethod;
 
@@ -17,6 +15,7 @@ public class Order {
     private boolean hasStock = true;
     private String itemOutOfStock;
     private boolean isOrderPlaceable = false;
+    private int dayOfPlacement;
 
     public Order(Zone zone, DeliveryCalculator calculator) {
         if (zone == null)
@@ -77,11 +76,12 @@ public class Order {
             ((Insurable) c).insure();
     }
 
-    public void place(PaymentMethod p, int day) throws CheckoutException {
+    public void place(PaymentMethod p, int dayOfPlacement) throws CheckoutException {
+        this.dayOfPlacement = dayOfPlacement;
         if (!hasStock)
             throw new OutOfStockException("Item: " + itemOutOfStock + " is out-of-stock");
         if (coupon != null)
-            if (day > coupon.getLastValidDay())
+            if (dayOfPlacement > coupon.getLastValidDay())
                 throw new CouponRejectedException("Coupon has expired");
 
         p.authorise(priceBreakdown.grandTotal());
@@ -102,8 +102,12 @@ public class Order {
         return new PriceBreakdown(chargeables, zone);
     }
 
-    public void acceptReturn(int serial, int day) throws ReturnNotAllowedException {
+    public void acceptReturn(int index, int dayOfReturn) throws ReturnNotAllowedException {
+        if (!(chargeables.get(index) instanceof Returnable)) {
+            throw new ReturnNotAllowedException("Cannot return this item");
+        }
 
+        ((Returnable) chargeables.get(index)).returnProduct(dayOfPlacement, dayOfReturn);
     }
 
     public ArrayList<Chargeable> lines() {
