@@ -10,6 +10,12 @@ public class SettlementReport {
     private ArrayList<Seller> sellers;
     private ArrayList<SellerPayout> payouts;
 
+    public SettlementReport(ArrayList<Order> orders, ArrayList<Seller> sellers) {
+        this.orders = orders;
+        this.sellers = sellers;
+    }
+
+
     public SellerPayout forSeller(Seller seller) {
         return new SellerPayout(seller);
     }
