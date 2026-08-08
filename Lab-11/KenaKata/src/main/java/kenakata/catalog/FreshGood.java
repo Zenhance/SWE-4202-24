@@ -1,9 +1,10 @@
 package kenakata.catalog;
 
-import kenakata.exceptions.NotInsurableException;
+import kenakata.exceptions.*;
 
-public class FreshGood extends CatalogItem implements Weighable, Insurable {
+public class FreshGood extends CatalogItem implements Weighable, Insurable, Returnable {
     private int weight;
+    private boolean isReturnable;
 
     public FreshGood(String SKU, String title, double unitPrice, int stockCount, Seller seller, int weight) {
         super(SKU, title, unitPrice, stockCount, seller);
@@ -28,11 +29,6 @@ public class FreshGood extends CatalogItem implements Weighable, Insurable {
     }
 
     @Override
-    public boolean returned() {
-        return false;
-    }
-
-    @Override
     public int weight() {
         return weight;
     }
@@ -47,5 +43,24 @@ public class FreshGood extends CatalogItem implements Weighable, Insurable {
     @Override
     public void insure() throws NotInsurableException {
         super.insure();
+    }
+
+    @Override
+    public void returnProduct(int dayOfPlacement, int dayOfReturn) throws ReturnNotAllowedException {
+        int dayPassed = dayOfReturn - dayOfPlacement;
+        isReturnable = dayPassed <= 2; // return window for FreshGood is 2 days
+        if (!isReturnable)
+            throw new ReturnNotAllowedException("Return window is over");
+    }
+
+    @Override
+    public boolean isReturnable() {
+        return isReturnable;
+    }
+
+
+    @Override
+    public boolean returned() {
+        return isReturnable;
     }
 }
