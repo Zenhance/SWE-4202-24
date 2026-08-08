@@ -1,14 +1,18 @@
 package kenakata.catalog;
 
-public class StockedGood extends CatalogItem implements Chargeable {
+public class StockedGood extends CatalogItem implements Chargeable,Weightable,Insurable,Returnable {
     private int weightGrams;
 
-    StockedGood(String sku, String title, long unitPrice, int stock, Seller seller, int weightGrams) {
+    public StockedGood(String sku, String title, long unitPrice, int stock, Seller seller, int weightGrams) {
         super(sku, title, unitPrice, stock, seller);
         if(weightGrams<=0)
             throw new IllegalArgumentException("weight must be positive");
         this.weightGrams=weightGrams;
     }
+
+
+
+
 
 
     public int getWeightGrams() {
@@ -23,4 +27,16 @@ public class StockedGood extends CatalogItem implements Chargeable {
     public long commissionOn(int amount) {
         return (long) Math.ceil(amount*0.08);
     }
+    @Override
+    public double weight() {
+        return weightGrams;
+    }
+    public long insurableValue(int quantity) {
+        return unitPrice*quantity;
+    }
+    public int getReturnWindow() {
+        return 0;
+    }
+
+
 }

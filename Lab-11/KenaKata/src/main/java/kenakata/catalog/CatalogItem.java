@@ -2,7 +2,7 @@ package kenakata.catalog;
 
 import kenakata.exceptions.OutOfStockException;
 
-public abstract class CatalogItem  {
+public abstract class CatalogItem implements Chargeable  {
     protected String sku;
     protected String title;
     protected long unitPrice;
@@ -22,4 +22,19 @@ public abstract class CatalogItem  {
         stock-=quantity;
     }
 
+    @Override
+    public long unitCharge() {
+        return unitPrice;
+    }
+
+
+    @Override
+    public abstract long unitVat();
+
+
+    public abstract long commissionOn(int amount) ;
+
+    public int remaining() {
+        return stock;
+    }
 }
