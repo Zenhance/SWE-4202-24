@@ -19,6 +19,6 @@ public class Marketplace {
     }
 
     public SettlementReport settle() {
-        return report;
+        return new SettlementReport(orders, sellers);
     }
 }

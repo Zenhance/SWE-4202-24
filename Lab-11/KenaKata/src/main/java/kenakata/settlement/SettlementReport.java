@@ -17,7 +17,9 @@ public class SettlementReport {
 
 
     public SellerPayout forSeller(Seller seller) {
-        return new SellerPayout(seller);
+        SellerPayout payout = new SellerPayout(seller);
+
+        return payout;
     }
 
     public int platformRevenue() {
