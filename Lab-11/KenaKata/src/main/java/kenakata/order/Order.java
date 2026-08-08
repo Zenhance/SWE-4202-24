@@ -103,11 +103,14 @@ public class Order {
     }
 
     public void acceptReturn(int index, int dayOfReturn) throws ReturnNotAllowedException {
-        if (!(chargeables.get(index) instanceof Returnable)) {
+        if (!(chargeables.get(index) instanceof Returnable r)) {
             throw new ReturnNotAllowedException("Cannot return this item");
         }
 
-        ((Returnable) chargeables.get(index)).returnProduct(dayOfPlacement, dayOfReturn);
+        if (r.hasReturned())
+            throw new ReturnNotAllowedException("Already returned product");
+
+        r.returnProduct(dayOfPlacement, dayOfReturn);
     }
 
     public ArrayList<Chargeable> lines() {
