@@ -1,6 +1,7 @@
 package kenakata.order;
 
 import kenakata.catalog.CatalogItem;
+import kenakata.catalog.GiftWrap;
 
 import java.util.ArrayList;
 
@@ -22,4 +23,9 @@ public class Order {
      public void applyCupon(Coupon coupon){
         this.coupon=coupon;
      }
-}
+     public void addAddOn(GiftWrap giftWrap){
+
+     }
+
+     }
+
