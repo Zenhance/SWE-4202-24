@@ -7,7 +7,7 @@ public class Wallet {
         this.balance=balance;
     }
 
-    public int getBalance() {
+    public int balance() {
         return balance;
     }
 
@@ -19,4 +19,6 @@ public class Wallet {
         if(amount>balance) throw new IllegalArgumentException("not enough balance");
         balance-=amount;
     }
+
+
 }
