@@ -1,8 +1,16 @@
 package kenakata.payment;
 
-public class CardPayment {
-    private int amount;
-    public CardPayment(int amount) {
-       this.amount = amount;
+import kenakata.exceptions.CardLimitExceededException;
+import kenakata.exceptions.PaymentDeclinedException;
+
+
+public class CardPayment implements PaymentMethod {
+    private long amount;
+    public CardPayment(long n) {
+        if (n < 0) {
+            throw new IllegalArgumentException();
+        }
+
+        this.amount = n;
     }
 }
