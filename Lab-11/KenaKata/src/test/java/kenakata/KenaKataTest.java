@@ -2,8 +2,6 @@ package kenakata;
 
 import kenakata.catalog.*;
 import kenakata.exceptions.OutOfStockException;
-import kenakata.order.DeliveryCalculator;
-import kenakata.order.Zone;
 import kenakata.settlement.Marketplace;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
