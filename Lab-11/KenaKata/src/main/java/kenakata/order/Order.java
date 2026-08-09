@@ -39,6 +39,7 @@ public class Order {
     }
 
 
-
-     }
+    public void insure(int i) {
+    }
+}
 
