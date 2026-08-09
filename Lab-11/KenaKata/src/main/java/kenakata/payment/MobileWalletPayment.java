@@ -12,6 +12,17 @@ public class MobileWalletPayment implements PaymentMethod {
         this.wallet = wallet;
     }
 
+    @Override
+    public void authorise(long amount)
+            throws PaymentDeclinedException {
+
+        if (amount <= 0) {
+            throw new IllegalArgumentException();
+        }
+
+        wallet.debit(amount);
+    }
+
     public Wallet wallet() {
         return wallet;
     }
