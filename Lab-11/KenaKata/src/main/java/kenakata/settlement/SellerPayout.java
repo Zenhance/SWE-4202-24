@@ -12,7 +12,7 @@ public class SellerPayout {
         this.commission = commission;
         this.refunds = refunds;
     }
-    public Seller getSeller() {
+    public Seller seller() {
         return seller;
     }
     public long grossSales(){
