@@ -29,10 +29,15 @@ public class StockedGood extends Item{
         return (long) Math.ceil(n * 0.08);
     }
 
-    public int weight() {
+
+    public long weightGrams() {
         return weight;
     }
 
+    @Override
+    public String label() {
+        return title();
+    }
 
     public long insurableValue(int quantity) {
         return unitCharge() * quantity;
