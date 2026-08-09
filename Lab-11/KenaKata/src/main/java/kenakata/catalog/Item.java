@@ -1,46 +1,81 @@
 package kenakata.catalog;
 
-public abstract class Item {
-    protected String sku;
-    protected String title;
-    protected long unitPrice;
-    protected int stock;
-    protected Seller seller;
+import kenakata.exceptions.OutOfStockException;
 
-  public Item(String sku, String title, long unitPrice, int stock, Seller seller) {
-      if (sku == null || title == null || unitPrice < 0 || stock < 0 || seller == null) {
-          throw new IllegalArgumentException();
-      }
-      this.sku = sku;
-      this.title = title;
-      this.unitPrice = unitPrice;
-      this.stock = stock;
-      this.seller = seller;
-  }
-  public String getSku() {
+public abstract class Item implements CatalogItem {
+
+    private String sku;
+    private String title;
+    private long unitPrice;
+    private int stock;
+    private Seller seller;
+
+    public Item(String sku, String title, long unitPrice,
+                int stock, Seller seller) {
+
+        if (sku == null || sku.isBlank()
+                || title == null || title.isBlank()
+                || unitPrice < 0
+                || stock < 0
+                || seller == null) {
+
+            throw new IllegalArgumentException();
+        }
+
+        this.sku = sku;
+        this.title = title;
+        this.unitPrice = unitPrice;
+        this.stock = stock;
+        this.seller = seller;
+    }
+
+    @Override
+    public String sku() {
         return sku;
     }
 
-    public String getTitle() {
-  return title;}
-
-    public long getUnitPrice() {
-      return unitPrice;
+    @Override
+    public String title() {
+        return title;
     }
 
-    public int getStock() {
-      return stock;
+    @Override
+    public long unitPrice() {
+        return unitPrice;
     }
 
-    public Seller getSeller() {
-      return seller;
+    @Override
+    public Seller seller() {
+        return seller;
     }
 
-    public void reserve(int quantity){
-
+    @Override
+    public int remaining() {
+        return stock;
     }
 
-    public void remaining(){
+    @Override
+    public void reserve(int quantity) throws OutOfStockException {
 
+        if (quantity <= 0) {
+            throw new IllegalArgumentException();
+        }
+
+        if (quantity > stock) {
+            throw new OutOfStockException();
+        }
+
+        stock -= quantity;
     }
+
+    @Override
+    public long unitCharge() {
+        return unitPrice;
+    }
+
+    @Override
+    public abstract long unitVat();
+
+    @Override
+    public abstract long commissionOn(long amount);
 }
