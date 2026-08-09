@@ -1,6 +1,7 @@
 package kenakata.order;
 
 import kenakata.catalog.CatalogItem;
+import kenakata.catalog.ExpressHandling;
 import kenakata.catalog.GiftWrap;
 import kenakata.payment.PaymentMethod;
 
@@ -24,7 +25,7 @@ public class Order {
      public void applyCoupon(Coupon coupon){
         this.coupon=coupon;
      }
-     public void addAddOn(GiftWrap giftWrap){
+     public void addAddOn(ExpressHandling giftWrap){
 
      }
      public PriceBreakdown quote(int currentDay){
@@ -33,6 +34,11 @@ public class Order {
   public void place(PaymentMethod paymentMethod,int currentDay){
 
   }
+
+    public void addAddOn(GiftWrap giftWrap) {
+    }
+
+
 
      }
 
