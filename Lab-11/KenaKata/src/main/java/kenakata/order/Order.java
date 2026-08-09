@@ -20,12 +20,13 @@ public class Order {
      public void addProduct (CatalogItem item,int quantity){
         lines.add(new Line(item, quantity));
      }
-     public void applyCupon(Coupon coupon){
+     public void applyCoupon(Coupon coupon){
         this.coupon=coupon;
      }
      public void addAddOn(GiftWrap giftWrap){
 
      }
+
 
      }
 
