@@ -14,6 +14,20 @@ public class CardPayment implements PaymentMethod {
         this.remainingLimit = limit;
     }
 
+    @Override
+    public void authorise(long amount)
+            throws PaymentDeclinedException {
+
+        if (amount <= 0) {
+            throw new IllegalArgumentException();
+        }
+
+        if (amount > remainingLimit) {
+            throw new CardLimitExceededException();
+        }
+
+        remainingLimit -= amount;
+    }
 
     public long remainingLimit() {
         return remainingLimit;
