@@ -11,16 +11,13 @@ public class SettlementReport {
         this.payouts = new ArrayList<>();
         this.platformRevenue = 0;
     }
-    public SettlementReport(List<SellerPayout> payouts, long platformRevenue) {
-        this.payouts = payouts;
-        this.platformRevenue = platformRevenue;
-    }
+
 
     public List<SellerPayout> getPayouts() {
         return payouts;
     }
 
-    public long getPlatformRevenue() {
+    public long platformRevenue() {
         return platformRevenue;
     }
 
