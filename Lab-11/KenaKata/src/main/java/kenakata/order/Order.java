@@ -2,6 +2,7 @@ package kenakata.order;
 
 import kenakata.catalog.CatalogItem;
 import kenakata.catalog.GiftWrap;
+import kenakata.payment.PaymentMethod;
 
 import java.util.ArrayList;
 
@@ -29,7 +30,9 @@ public class Order {
      public PriceBreakdown quote(int currentDay){
 
      }
+  public void place(PaymentMethod paymentMethod,int currentDay){
 
+  }
 
      }
 
