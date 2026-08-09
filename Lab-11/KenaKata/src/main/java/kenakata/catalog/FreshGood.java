@@ -1,7 +1,8 @@
 package kenakata.catalog;
 
 
-public class FreshGood extends Item{
+public class FreshGood extends Item implements Weighted, ColdChain, Insurable, Returnable {
+
     private final int weight;
 
     public FreshGood(String sku, String title, long unitPrice, int stock, Seller seller,int weight){
@@ -14,7 +15,9 @@ public class FreshGood extends Item{
 
     }
 
-    public int weight() {
+
+    @Override
+    public long weightGrams() {
         return weight;
     }
 
@@ -29,8 +32,25 @@ public class FreshGood extends Item{
     }
 
     @Override
+    public String label(){
+        return title();
+    }
+
+    @Override
     public long commissionOn(long n) {
         return (long)Math.ceil(n * 0.05);
+    }
+
+    public long insurableValue(int quantity) {
+        if (quantity <= 0) {
+            throw new IllegalArgumentException();
+        }
+
+        return unitCharge() * quantity;
+    }
+
+    public int returnWindow() {
+        return 2;
     }
 
 }

@@ -16,7 +16,7 @@ public class DigitalGood extends Item{
         return (long)Math.ceil(unitPrice*0.05);
     }
 
-    public long commissionOn(int n){
+    public long commissionOn(long n){
         return (long)Math.ceil(n*0.2);
     }
 
