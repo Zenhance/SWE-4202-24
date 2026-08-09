@@ -19,16 +19,27 @@ public class StockedGood extends Item{
         return super.unitCharge();
     }
 
-    public long unitVat(){
-        return (long)Math.ceil(unitPrice*0.075);
+    @Override
+    public long unitVat() {
+        return (long) Math.ceil(unitCharge() * 0.075);
     }
 
-    public long commissionOn(int n){
-        return (long)Math.ceil(n*0.008);
+    @Override
+    public long commissionOn(long n) {
+        return (long) Math.ceil(n * 0.08);
     }
 
-    public int weight(){
+    public int weight() {
         return weight;
+    }
+
+
+    public long insurableValue(int quantity) {
+        return unitCharge() * quantity;
+    }
+
+    public int returnWindow() {
+        return 7;
     }
 
 }
