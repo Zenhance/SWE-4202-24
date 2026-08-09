@@ -12,8 +12,13 @@ public class DigitalGood extends Item{
         return super.unitCharge();
     }
 
+    @Override
+    public String label() {
+        return title();
+    }
+
     public long unitVat(){
-        return (long)Math.ceil(unitPrice*0.05);
+        return (long)Math.ceil(unitCharge()*0.05);
     }
 
     public long commissionOn(long n){
