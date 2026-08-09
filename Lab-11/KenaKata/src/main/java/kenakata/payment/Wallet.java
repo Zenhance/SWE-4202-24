@@ -14,4 +14,30 @@ public class Wallet {
         this.balance = balance;
     }
 
+    public long balance() {
+        return balance;
+    }
+
+    public void debit(long amount)
+            throws EmptyWalletException {
+
+        if (amount <= 0) {
+            throw new IllegalArgumentException();
+        }
+
+        if (amount > balance) {
+            throw new EmptyWalletException();
+        }
+
+        balance -= amount;
+    }
+
+    public void credit(long amount) {
+
+        if (amount <= 0) {
+            throw new IllegalArgumentException();
+        }
+
+        balance += amount;
+    }
 }
