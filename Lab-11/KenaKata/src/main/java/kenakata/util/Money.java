@@ -14,14 +14,4 @@ public final class Money {
         long numerator = base * permille;
         return (numerator + 999) / 1000;
     }
-
-    public static long ceilDiv(long numerator, long denominator) {
-        if (denominator <= 0) {
-            throw new IllegalArgumentException("");
-        }
-        if (numerator == 0) {
-            return 0;
-        }
-        return (numerator + denominator - 1) / denominator;
-    }
 }

@@ -24,7 +24,7 @@ public final class SettlementReport {
         return bySeller.get(seller);
     }
 
-    public long platformRevenue() {
+    public long platformRevenue(){
         return platformRevenue;
     }
 }
