@@ -1,6 +1,6 @@
 package kenakata.catalog;
 
-public abstract class CatalogItem implements Chargable {
+public abstract class CatalogItem implements Chargeable {
     protected CatalogItem(String sku, String title, long price, int stock, Seller seller){
     }
 
