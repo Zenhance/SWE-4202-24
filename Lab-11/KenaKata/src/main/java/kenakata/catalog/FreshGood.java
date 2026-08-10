@@ -1,8 +1,8 @@
 package kenakata.catalog;
 
 public class FreshGood extends StockedGood {
-    public FreshGood(String s, String hilsa, int i, int i1, Seller seller, int i2) {
-        super();
+    public FreshGood(String sku, String title, int unitPrice, int stock, Seller seller, int weightGrams) {
+        super(sku, title, unitPrice, stock, seller, weightGrams);
     }
 
     @Override

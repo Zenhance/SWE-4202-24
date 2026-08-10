@@ -7,14 +7,8 @@ public class StockedGood extends CatalogItem {
 
     public StockedGood(String sku, String title, int unitPrice, int stock, Seller seller, int weightGrams
     ) {
+        super(unitPrice);
         this.stock = stock;
-    }
-
-    public StockedGood() {
-    }
-
-    public long unitCharge() {
-        return 1200L;
     }
 
     public long unitVat() {

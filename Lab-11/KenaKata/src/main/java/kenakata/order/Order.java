@@ -22,9 +22,6 @@ public class Order {
         lines.add(new OrderLine(item, quantity));
     }
 
-    public void addAddOn(GiftWrap giftWrap) {
-    }
-
     public void applyCoupon(Coupon eid10) {
 
     }
@@ -55,12 +52,10 @@ public class Order {
         return lines;
     }
 
-    public void addAddOn(ExpressHandling expressHandling) {
-    }
-
     public void place(PaymentMethod payment, int today) throws CheckoutException {
     }
 
     public void addAddOn(Chargeable addOn) {
+        lines.add(new OrderLine(addOn, 1));
     }
 }

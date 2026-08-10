@@ -1,13 +1,8 @@
 package kenakata.catalog;
 
-public class DigitalGood extends StockedGood {
-    public DigitalGood(String s, String s1, int i, int i1, Seller seller) {
-        super();
-    }
-
-    @Override
-    public long unitCharge() {
-        return 300L;
+public class DigitalGood extends CatalogItem {
+    public DigitalGood(String sku, String title, int unitPrice, int stock, Seller seller) {
+        super(unitPrice);
     }
 
     @Override
