@@ -59,6 +59,11 @@ public class Order {
             vat += line.unit().unitVat() * line.quantity();
         }
 
+        long delivery = deliveryCalculator.calculate(lines, zone);
+
+        long serviceFee = (long) Math.ceil(subtotal * 0.01);
+        serviceFee = Math.min(serviceFee, 100);
+
         return new PriceBreakdown(subtotal, discount, 0, vat, 0, 0);
     }
 
