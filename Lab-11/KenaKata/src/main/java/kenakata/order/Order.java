@@ -204,4 +204,17 @@ public class Order {
         }
         line.markReturned(today);
     }
+    public void insure(int index) throws NotInsurableException {
+        if (index < 0 || index >= lines.size()) {
+            throw new IllegalArgumentException();
+        }
+
+        OrderLine line = lines.get(index);
+
+        if (!(line.item() instanceof kenakata.catalog.Insurable)) {
+            throw new NotInsurableException("Item is not insurable");
+        }
+
+        line.insure();
+    }
 }
