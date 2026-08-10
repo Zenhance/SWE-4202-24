@@ -16,8 +16,12 @@ import java.util.List;
 public class Order {
     private final List<OrderLine> lines = new ArrayList<>();
     private Coupon coupon;
+    private final Zone zone;
+    private final DeliveryCalculator deliveryCalculator;
 
-    public Order(Object dhaka, DeliveryCalculator deliveryCalculator) {
+    public Order(Zone zone, DeliveryCalculator deliveryCalculator) {
+        this.zone = zone;
+        this.deliveryCalculator = deliveryCalculator;
     }
 
     public void addProduct(CatalogItem item, int quantity) {
