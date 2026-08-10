@@ -58,9 +58,9 @@ public final class OrderLine {
         insured = true;
     }
 
-    void markReturned(long placedDay, long returnDay) throws Throwable {
+    void markReturned(long placedDay, long returnDay) throws Exception {
         if (!(content instanceof Returnable returnable)) {
-            throw new Throwable("This line cannot be returned");
+            throw new Exception("This line cannot be returned");
         }
         if (returned) {
             throw new ReturnNotAllowedException("This line has already been returned");

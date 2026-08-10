@@ -48,7 +48,7 @@ public long unitCharge(){
             throw new OutOfStockException(
                     title + ": only " + Stock + " remaining, requested " + quantity);
         }
-        Stock -= quantity;
+        Stock -=  quantity;
     }
 
 }

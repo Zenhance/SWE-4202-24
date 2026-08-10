@@ -118,7 +118,7 @@ public final class Order {
     }
 
 
-    public void acceptReturn(int lineIndex, long returnDay) throws Throwable {
+    public void acceptReturn(int lineIndex, long returnDay) throws Exception {
         lines.get(lineIndex).markReturned(placedDay, returnDay);
     }
 }
