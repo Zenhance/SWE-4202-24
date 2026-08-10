@@ -1,4 +1,4 @@
 package kenakata.exceptions;
 
-public class CardLimitExceedException {
+public class CardLimitExceedException extends Throwable {
 }
