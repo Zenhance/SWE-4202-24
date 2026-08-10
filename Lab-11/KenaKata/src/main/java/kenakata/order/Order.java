@@ -26,8 +26,13 @@ public class Order {
 
     }
 
-    public PriceBreakdown quote(int i) {
-        return null;
+    public PriceBreakdown quote(int today) {
+        long subtotal = 0;
+
+        for (OrderLine line : lines) {
+            subtotal += line.unit().unitCharge() * line.quantity();
+        }
+        return new PriceBreakdown(subtotal, 0, 0, 0, 0, 0);
     }
 
     public void insure(int i) {
