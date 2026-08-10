@@ -2,20 +2,37 @@ package kenakata.catalog;
 
 import kenakata.exceptions.OutOfStockException;
 
-public abstract class CatalogItem{
+public abstract class CatalogItem implements Chargeable{
+
     private final String sku;
     private final String title;
     private final long unitPrice;
     private int stock;
     private final Seller seller;
 
-    public CatalogItem(String sku, String title, long unitPrice, int stock, Seller seller){
-        if (sku == null || sku.isBlank() || title == null || title.isBlank() || seller == null){
-            throw new IllegalArgumentException("SKU, title, and seller must not be null.");
+    protected CatalogItem(
+            String sku,
+            String title,
+            long unitPrice,
+            int stock,
+            Seller seller) {
+
+        if (sku == null || sku.isBlank()){
+            throw new IllegalArgumentException("SKU is required");
         }
-        if (unitPrice < 0 || stock < 0){
-            throw new IllegalArgumentException("Price and stock cannot be negative.");
+        if (title == null || title.isBlank()){
+            throw new IllegalArgumentException("Title is required");
         }
+        if (unitPrice < 0){
+            throw new IllegalArgumentException("Price cannot be negative");
+        }
+        if (stock < 0){
+            throw new IllegalArgumentException("Stock cannot be negative");
+        }
+        if (seller == null){
+            throw new IllegalArgumentException("Seller is required");
+        }
+
         this.sku = sku;
         this.title = title;
         this.unitPrice = unitPrice;
@@ -23,42 +40,44 @@ public abstract class CatalogItem{
         this.seller = seller;
     }
 
-    public String getSku(){
-        return sku;}
-    public String getTitle(){
-        return title;}
-    public long getUnitPrice(){
-        return unitPrice;}
-    public int getStock(){
-        return stock;}
-    public Seller getSeller(){
-        return seller;}
-
+    public String sku() {
+        return sku;
+    }
+    public String title(){
+        return title;
+    }
+    public long unitPrice(){
+        return unitPrice;
+    }
+    public Seller seller(){
+        return seller;
+    }
+    public int remaining(){
+        return stock;
+    }
+    @Override
+    public long unitCharge(){
+        return unitPrice;
+    }
+    @Override
+    public String label(){
+        return title;
+    }
     public void reserve(int quantity) throws OutOfStockException{
-        if (quantity <= 0){
-            throw new IllegalArgumentException("Quantity must be positive.");
+        if (quantity <= 0) {
+            throw new IllegalArgumentException(
+                    "Quantity must be positive"
+            );
         }
-        if (this.stock < quantity){
-            throw new OutOfStockException("Insufficient stock for item: " + title);
+        if (quantity > stock) {
+            throw new OutOfStockException(
+                    "Not enough stock for " + title
+            );
         }
-        this.stock -= quantity;
+        stock -= quantity;
     }
 
-    public void releaseStock(int quantity){
-        this.stock += quantity;
-    }
+    public abstract long unitVat();
 
-    public abstract long getVatPerUnit();
-    public abstract double getCommissionRate();
-
-    public boolean hasWeight(){
-        return false; }
-    public int getWeightGramsPerUnit(){
-        return 0; }
-    public boolean isColdChain(){
-        return false; }
-    public boolean isInsurable(){
-        return false; }
-    public boolean isReturnable(){
-        return false; }
+    public abstract long commissionOn(long value);
 }
