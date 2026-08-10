@@ -1,42 +1,46 @@
 package kenakata.catalog;
 
-public class StockedGood extends CatalogItem{
-    private final int weightGrams;
-
-    public StockedGood(String sku, String title, long unitPrice, int stock, Seller seller, int weightGrams){
+public class StockedGood extends CatalogItem
+        implements Weighable, Insurable, Returnable {
+    private final long weightGrams;
+    public StockedGood(
+            String sku,
+            String title,
+            long unitPrice,
+            int stock,
+            Seller seller,
+            long weightGrams){
         super(sku, title, unitPrice, stock, seller);
-        if (weightGrams < 0) {
-            throw new IllegalArgumentException("Weight cannot be negative.");
+        if (weightGrams <= 0) {
+            throw new IllegalArgumentException(
+                    "Weight must be positive"
+            );
         }
         this.weightGrams = weightGrams;
     }
     @Override
-    public long getVatPerUnit() {
-        return (long) Math.ceil(getUnitPrice() * 0.075);
+    public long unitVat(){
+        return (long) Math.ceil(unitCharge() * 0.075);
     }
-
     @Override
-    public double getCommissionRate(){
-        return 0.08;
+    public long commissionOn(long value){
+        return (long) Math.ceil(value * 0.08);
     }
-
     @Override
-    public boolean hasWeight(){
-        return true;
-    }
-
-    @Override
-    public int getWeightGramsPerUnit(){
+    public long weightGrams() {
         return weightGrams;
     }
-
     @Override
-    public boolean isInsurable(){
-        return true;
+    public long insurableValue(int quantity){
+        if (quantity <= 0){
+            throw new IllegalArgumentException(
+                    "Quantity must be positive"
+            );
+        }
+        return unitCharge() * quantity;
     }
-
     @Override
-    public boolean isReturnable(){
-        return true;
+    public int returnWindowDays(){
+        return 7;
     }
 }
