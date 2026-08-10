@@ -17,27 +17,27 @@ public class PriceBreakdown {
         this.serviceFee = serviceFee;
     }
 
-    public long getSubtotal() {
+    public long Subtotal() {
         return subtotal;
     }
 
-    public long getDiscount() {
+    public long Discount() {
         return discount;
     }
 
-    public long getDelivery() {
+    public long Delivery() {
         return delivery;
     }
 
-    public long getVat() {
+    public long Vat() {
         return vat;
     }
 
-    public long getInsurance() {
+    public long Insurance() {
         return insurance;
     }
 
-    public long getServiceFee() {
+    public long ServiceFee() {
         return serviceFee;
     }
 }

@@ -83,5 +83,10 @@ public abstract class CatalogItem implements Chargeable {
     public int remaining(){
         return liveStock;
     }
+
+    @Override
+    public boolean isColdchain() {
+        return Chargeable.super.isColdchain();
+    }
 }
 

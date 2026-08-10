@@ -12,7 +12,9 @@ public interface Chargeable {
     default boolean insurable(){
         return false;
     }
-
+    default boolean isColdchain(){
+        return false;
+    }
 
 
     default double weight(){
