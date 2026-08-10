@@ -1,4 +1,5 @@
 package kenakata.catalog;
 
-public class Weighable {
+public interface Weighable {
+    int weightGrams();
 }

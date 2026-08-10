@@ -2,13 +2,14 @@ package kenakata.catalog;
 
 import kenakata.exceptions.OutOfStockException;
 
-public class StockedGood extends CatalogItem {
+public class StockedGood extends CatalogItem implements Weighable {
     private int stock;
+    private final int weightGrams;
 
     public StockedGood(String sku, String title, int unitPrice, int stock, Seller seller, int weightGrams
     ) {
         super(unitPrice, stock);
-        this.stock = stock;
+        this.weightGrams = weightGrams;
     }
 
     public long unitVat() {
@@ -33,5 +34,10 @@ public class StockedGood extends CatalogItem {
 
     public int remaining() {
         return stock;
+    }
+
+    @Override
+    public int weightGrams() {
+        return weightGrams;
     }
 }
