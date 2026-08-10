@@ -1,0 +1,68 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'swe4202'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:6.0.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+// Generics mistakes are warnings by default. Here they are shown, loudly.
+tasks.withType(JavaCompile).configureEach {
+    options.compilerArgs << '-Xlint:unchecked' << '-Xlint:rawtypes'
+}
+
+application {
+    // ./gradlew run  -- the finished platform
+    mainClass = 'shop.Main'
+}
+
+// ./gradlew cases  -- the worked test cases, with Input / Expected / Actual
+tasks.register('cases', JavaExec) {
+    group = 'verification'
+    description = 'Runs the worked test cases and prints expected vs actual output.'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'checks.DokanCases'
+}
+
+// ./gradlew intern  -- the five pains of the code you are replacing
+tasks.register('intern', JavaExec) {
+    group = 'application'
+    description = "Demonstrates the three failures of the intern's untyped shop."
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'intern.InternDemo'
+}
+
+// ./gradlew strict -- compiles with warnings as errors: no raw types, no unchecked
+// warnings. Run it after you have deleted the intern package.
+tasks.register('strict', JavaCompile) {
+    group = 'verification'
+    description = 'Compiles main sources with -Werror: no raw types, no unchecked warnings.'
+    source = sourceSets.main.java
+    classpath = sourceSets.main.compileClasspath
+    destinationDirectory = layout.buildDirectory.dir('classes/strict')
+    options.compilerArgs = ['-Xlint:unchecked', '-Xlint:rawtypes', '-Werror']
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events 'passed', 'failed', 'skipped'
+        showStandardStreams = false
+    }
+}
