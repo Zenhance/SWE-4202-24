@@ -14,9 +14,7 @@ public class OrderLine{
             throw new IllegalArgumentException("Item cannot be null");
         }
         if (quantity <= 0){
-            throw new IllegalArgumentException(
-                    "Quantity must be positive"
-            );
+            throw new IllegalArgumentException("Quantity must be positive");
         }
         this.item = item;
         this.quantity = quantity;
@@ -34,10 +32,10 @@ public class OrderLine{
         return returned;
     }
     public void insure(){
-        this.insured = true;
+        insured = true;
     }
     public void markReturned(){
-        this.returned = true;
+        returned = true;
     }
     public int placedDay(){
         return placedDay;
@@ -48,22 +46,22 @@ public class OrderLine{
     public int returnedDay(){
         return returnedDay;
     }
-    public void setReturnedDay(int returnedDay){
+    public void setReturnedDay(int returnedDay) {
         this.returnedDay = returnedDay;
     }
     public long charge(){
         return item.unitCharge() * quantity;
     }
     public long vat(){
-        return item.unitVat() * (long) quantity;
+        return item.unitVat() * quantity;
     }
     public boolean isProduct(){
         return item instanceof CatalogItem;
     }
     public CatalogItem catalogItem(){
-        if (!(item instanceof CatalogItem catalogItem)) {
-            return null;
+        if (item instanceof CatalogItem){
+            return (CatalogItem) item;
         }
-        return catalogItem;
+        return null;
     }
 }
