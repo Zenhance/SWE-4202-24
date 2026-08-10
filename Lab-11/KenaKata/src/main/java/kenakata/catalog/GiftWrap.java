@@ -19,5 +19,6 @@ public class GiftWrap implements Chargeable{
     }
 
     public String label() {
+        return null;
     }
 }

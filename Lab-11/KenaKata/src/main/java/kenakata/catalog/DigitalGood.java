@@ -13,6 +13,11 @@ public class DigitalGood extends CatalogItem{
 
 
     @Override
+    public String lebel() {
+        return "";
+    }
+
+    @Override
     public String label() {
         return "";
     }

@@ -1,4 +1,4 @@
-package kenakata;
+package kenakata.exceptions;
 
 
 import kenakata.exceptions.CheckoutException;

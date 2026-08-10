@@ -1,6 +1,6 @@
 package kenakata.payment;
 
-import kenakata.Wallet;
+
 import kenakata.exceptions.EmptyWalletException;
 import kenakata.exceptions.PaymentDeclinedException;
 import kenakata.payment.PaymentMethod;

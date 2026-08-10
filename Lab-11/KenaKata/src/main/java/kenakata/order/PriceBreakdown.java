@@ -1,12 +1,35 @@
 package kenakata.order;
 
-public class PriceBreakdown {
-    private final long subtotal;
-    private final long discount;
-    private final long vat;
-    private final long delivery;
-    private final long insurance;
-    private final long serviceFee;
+
+
+public record PriceBreakdown(long subtotal, long discount, long delivery, long vat, long insurance, long serviceFee, long grandTotal
+) {
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*public class PriceBreakdown {
+    public final long subtotal;
+    public final long discount;
+    public final long vat;
+    public final long delivery;
+    public final long insurance;
+    public final long serviceFee;
 
     public PriceBreakdown(long subtotal, long discount, long vat, long delivery, long insurance, long serviceFee) {
         this.subtotal = subtotal;
@@ -40,4 +63,5 @@ public class PriceBreakdown {
     public long ServiceFee() {
         return serviceFee;
     }
-}
+}*/
+

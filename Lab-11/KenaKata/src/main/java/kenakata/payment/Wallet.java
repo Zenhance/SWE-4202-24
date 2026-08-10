@@ -1,4 +1,4 @@
-package kenakata;
+package kenakata.payment;
 
 import kenakata.exceptions.EmptyWalletException;
 
@@ -9,7 +9,7 @@ public class Wallet {
         this.balance = balance;
     }
 
-    public long getBalance() {
+    public long balance() {
         return balance;
     }
     public void debit(long amount) throws EmptyWalletException{

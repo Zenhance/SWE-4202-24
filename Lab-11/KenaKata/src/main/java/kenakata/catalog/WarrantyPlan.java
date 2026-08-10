@@ -18,6 +18,11 @@ public class WarrantyPlan implements Chargeable{
     }
 
     @Override
+    public String lebel() {
+        return "";
+    }
+
+    @Override
     public String label() {
         return "";
     }

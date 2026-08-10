@@ -1,4 +1,4 @@
-package kenakata;
+package kenakata.settlement;
 
 import kenakata.catalog.Seller;
 import kenakata.order.Order;
@@ -10,6 +10,7 @@ public class Marketplace {
     public void record(Order order) {
     }
 
-    public Object settle() {
+    public SettlementReport settle() {
+        return null;
     }
 }

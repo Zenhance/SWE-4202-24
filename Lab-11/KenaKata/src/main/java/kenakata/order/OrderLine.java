@@ -6,7 +6,7 @@ public class OrderLine {
     private final Chargeable item;
     private final int unit;
     private  boolean insured;
-    private  boolean returned;
+    public   boolean returned;
 
     public OrderLine(Chargeable item, int unit) {
         this.item = item;
@@ -27,7 +27,7 @@ public class OrderLine {
         return insured;
     }
 
-    public boolean isReturned() {
+    public boolean returned() {
         return returned;
     }
 

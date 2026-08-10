@@ -21,4 +21,8 @@ public class CardPayment extends PaymentMethod {
         }
         limit -= value;
     }
+
+    public long remainingLimit() {
+        return limit;
+    }
 }
