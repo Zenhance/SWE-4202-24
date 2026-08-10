@@ -13,7 +13,7 @@ public class SettlementReport {
     }
 
 
-    public List<SellerPayout> getPayouts() {
+    public List<SellerPayout> payouts() {
         return payouts;
     }
 
