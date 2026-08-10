@@ -3,24 +3,27 @@ package kenakata.catalog;
 
 
 public class WarrantyPlan implements Chargeable{
+    private final CatalogItem item;
 
-    public WarrantyPlan(StockedGood lamp) {
+    public WarrantyPlan( CatalogItem item) {
+        this.item = item;
+    }
+
+    public CatalogItem getItem() {
+        return item;
     }
 
     @Override
     public long unitVat() {
-        return 0;
+        return (long) Math.ceil(unitCharge() * 0.15);
     }
 
     @Override
     public long unitCharge() {
-        return 0;
+        return (long) Math.ceil(item.unitCharge() * 0.10);
     }
 
-    @Override
-    public String lebel() {
-        return "";
-    }
+
 
     @Override
     public String label() {

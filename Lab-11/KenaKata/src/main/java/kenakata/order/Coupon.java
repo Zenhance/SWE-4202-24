@@ -9,7 +9,10 @@ public class Coupon {
     private final int exp;
     private final double minSpend;
 
-    public Coupon(String code, double discount, double cap, int exp, double minSpend) {
+    public Coupon(String code, double discount, double cap, double minSpend, int exp) {
+        if (discount < 0 || discount > 100) {
+            throw new IllegalArgumentException("Discount percentage must be between 0 and 100");
+        }
         this.code = code;
         this.discount = discount;
         this.cap = cap;
@@ -36,7 +39,7 @@ public class Coupon {
     public double getMinSpend() {
         return minSpend;
     }
-    public double CalculateDis(double base, int today) throws CouponRejectedException {
+    public double calculateDiscount(double base, int today) throws CouponRejectedException {
         if(base<minSpend){
             throw new CouponRejectedException("You need to add more product to use this coupon " + code);
         }

@@ -24,8 +24,6 @@ public interface Chargeable {
         return 0;
     }
 
-    String lebel();
-
     String label();
 
 

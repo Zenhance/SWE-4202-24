@@ -347,7 +347,7 @@ class KenaKataTest {
             order.addProduct(item, 2);
             order.applyCoupon(new Coupon("C", 10, 200, 0, 5)); // expired by day 6
             Wallet wallet = new Wallet(1_000_000);
-            assertThrows(CouponRejectedException.class,
+                assertThrows(CouponRejectedException.class,
                     () -> order.place(new MobileWalletPayment(wallet), 6));
             assertEquals(10, item.remaining());
             assertEquals(1_000_000, wallet.balance());

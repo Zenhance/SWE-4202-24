@@ -7,6 +7,9 @@ public class CardPayment extends PaymentMethod {
     private long limit;
 
     public CardPayment(long limit) {
+        if (limit < 0) {
+            throw new IllegalArgumentException("Card limit cannot be negative");
+        }
         this.limit = limit;
     }
 

@@ -9,6 +9,9 @@ public class OrderLine {
     public   boolean returned;
 
     public OrderLine(Chargeable item, int unit) {
+        if (unit <= 0) {
+            throw new IllegalArgumentException("Quantity must be positive");
+        }
         this.item = item;
         this.unit = unit;
         this.insured = false;

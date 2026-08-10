@@ -32,10 +32,7 @@ public class FreshGood extends CatalogItem  {
         return 2;
     }
 
-    @Override
-    public String lebel() {
-        return "";
-    }
+
 
     @Override
     public String label() {

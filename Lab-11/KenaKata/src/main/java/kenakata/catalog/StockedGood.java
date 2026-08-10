@@ -5,15 +5,18 @@ public class StockedGood extends CatalogItem{
 
     public StockedGood(String sku, String title, long unitPrice, int remaining, Seller seller, double weight) {
         super(sku, title, unitPrice, remaining, seller);
+        if(weight<=0){
+            throw new IllegalArgumentException("Weight must be positive");
+        }
         this.weight = weight;
     }
 
     public long unitCharge() {
-        return 0;
+        return getUnitPrice();
     }
 
     public long unitVat() {
-        return 0;
+        return (long) Math.ceil(getUnitPrice() * 0.075);
     }
 
     @Override
@@ -26,10 +29,7 @@ public class StockedGood extends CatalogItem{
         return 7;
     }
 
-    @Override
-    public String lebel() {
-        return "";
-    }
+
 
     @Override
     public String label() {

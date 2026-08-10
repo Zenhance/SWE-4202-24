@@ -47,6 +47,14 @@ public abstract class CatalogItem implements Chargeable {
         return Chargeable.super.returnable();
     }
 
+
+
+
+    @Override
+    public String label() {
+        return "";
+    }
+
     @Override
     public boolean insurable() {
         return Chargeable.super.insurable();
@@ -59,7 +67,7 @@ public abstract class CatalogItem implements Chargeable {
 
     @Override
     public long unitCharge() {
-        return 0;
+        return unitPrice;
     }
 
     @Override

@@ -6,6 +6,8 @@ import kenakata.catalog.Chargeable;
 import kenakata.catalog.GiftWrap;
 import kenakata.catalog.StockedGood;
 import kenakata.exceptions.CheckoutException;
+import kenakata.exceptions.NotInsurableException;
+import kenakata.exceptions.ReturnNotAllowedException;
 import kenakata.payment.MobileWalletPayment;
 import kenakata.payment.PaymentMethod;
 
@@ -21,6 +23,7 @@ public  List<OrderLine> lines =  new ArrayList<>();
 private Coupon coupon;
 private boolean placed;
 private PriceBreakdown priceBreakdown;
+private int placementDay;
 
     public Order(Zone zone, DeliveryCalculator deliveryCalculator) {
         this.zone = zone;
@@ -31,7 +34,15 @@ private PriceBreakdown priceBreakdown;
         lines.add(new OrderLine(item, quantity));
     }
 
-    public void insure(int i) {
+    public void insure(int i) throws NotInsurableException {
+        if (i < 0 || i >= lines.size()) {
+            throw new IndexOutOfBoundsException("Invalid line index");
+        }
+        OrderLine line = lines.get(i);
+        if (!line.getItem().insurable()) {
+            throw new NotInsurableException("Not Insurable");
+        }
+        line.setInsured(true);
     }
 
     public void applyCoupon(Coupon c) {
@@ -52,20 +63,27 @@ private PriceBreakdown priceBreakdown;
         return null;
     }
 
-    public void acceptReturn(int i, int i1) {
-
+    public void acceptReturn(int index, int day) throws ReturnNotAllowedException {
+        OrderLine line = lines.get(index);
+        Chargeable item = line.getItem();
+        if(!item.returnable()|| day> placementDay+ item.returnDays()){
+            throw new ReturnNotAllowedException("Product is not returnable now ");
+        }
+        line.setReturned(true);
     }
 
 
     public PriceBreakdown quote(int i) {
+
         return null;
     }
 
     public void place(PaymentMethod payment, int today) throws CheckoutException {
+
     }
 
-    public ArrayList<OrderLine> lines() {
-        return null;
+    public List<OrderLine> lines() {
+        return lines;
     }
 }
 

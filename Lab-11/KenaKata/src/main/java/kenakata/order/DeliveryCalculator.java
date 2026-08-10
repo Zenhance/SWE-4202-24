@@ -23,7 +23,7 @@ public class DeliveryCalculator {
                     deliveryFee = (long) (Math.ceil(weight)*20 + 60);
                 }
                 else {
-                    deliveryFee = (long) (Math.ceil(weight)*20 + 120);
+                    deliveryFee = (long) (Math.ceil(weight)*35 + 120);
                 }
             }
         return deliveryFee+(freshGoods* 50L);

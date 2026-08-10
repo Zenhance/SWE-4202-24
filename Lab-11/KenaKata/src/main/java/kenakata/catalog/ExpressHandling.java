@@ -4,18 +4,15 @@ public class ExpressHandling implements Chargeable{
 
     @Override
     public long unitVat() {
-        return 0;
+        return 9;
     }
 
     @Override
     public long unitCharge() {
-        return 0;
+        return 120;
     }
 
-    @Override
-    public String lebel() {
-        return "";
-    }
+
 
     @Override
     public String label() {

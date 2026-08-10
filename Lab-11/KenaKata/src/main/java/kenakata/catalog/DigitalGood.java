@@ -11,10 +11,9 @@ public class DigitalGood extends CatalogItem{
         return (long) (i*.20);
     }
 
-
     @Override
-    public String lebel() {
-        return "";
+    public long unitVat() {
+        return (long) Math.ceil(getUnitPrice() * 0.05);
     }
 
     @Override

@@ -6,6 +6,9 @@ public class Wallet {
     private long balance;
 
     public Wallet(long balance) {
+        if(balance<0){
+            throw new IllegalArgumentException("balance cannot be negative");
+        }
         this.balance = balance;
     }
 
