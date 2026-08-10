@@ -10,6 +10,21 @@ private int Stock;
 private Seller seller;
 
 public CatalogItem(String SKU, String title, double UnitPrice, int Stock, Seller seller){
+    if (SKU == null) {
+        throw new IllegalArgumentException("SKU cannot be null");
+    }
+    if (title == null || title.isBlank()) {
+        throw new IllegalArgumentException("Title cannot be blank");
+    }
+    if (seller == null) {
+        throw new IllegalArgumentException("Seller cannot be null");
+    }
+    if (UnitPrice < 0) {
+        throw new IllegalArgumentException("Unit price cannot be negative");
+    }
+    if (Stock < 0) {
+        throw new IllegalArgumentException("Stock cannot be negative");
+    }
     this.SKU=SKU;
     this.title=title;
     this.UnitPrice=UnitPrice;
