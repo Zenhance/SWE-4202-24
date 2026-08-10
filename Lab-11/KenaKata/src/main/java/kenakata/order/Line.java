@@ -13,7 +13,7 @@ public class Line {
         this.quantity = quantity;
     }
 
-    public boolean isReturned() {
+    public boolean returned() {
         return returned;
     }
 
