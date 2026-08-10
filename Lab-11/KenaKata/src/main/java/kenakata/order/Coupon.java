@@ -13,33 +13,31 @@ public class Coupon {
             long minimumSpend,
             int validThroughDay
     ) {
-        if (code == null || code.isBlank()) {
+        if (code == null || code.isBlank()){
             throw new IllegalArgumentException("Coupon code is required");
         }
-
-        if (percentage < 0 || percentage > 100) {
+        if (percentage < 0 || percentage > 100){
             throw new IllegalArgumentException(
                     "Coupon percentage must be between 0 and 100"
             );
         }
-        if (cap < 0) {
+        if (cap < 0){
             throw new IllegalArgumentException(
                     "Coupon cap cannot be negative"
             );
         }
-        if (minimumSpend < 0) {
+        if (minimumSpend < 0){
             throw new IllegalArgumentException(
                     "Minimum spend cannot be negative"
             );
         }
-
         this.code = code;
         this.percentage = percentage;
         this.cap = cap;
         this.minimumSpend = minimumSpend;
         this.validThroughDay = validThroughDay;
     }
-    public String code() {
+    public String code(){
         return code;
     }
     public long discount(long discountableBase, int currentDay)
@@ -49,18 +47,17 @@ public class Coupon {
                     "Coupon has expired"
             );
         }
-        if (discountableBase < minimumSpend) {
+        if (discountableBase < minimumSpend){
             throw new CouponRejectedException(
                     "Minimum spend not reached"
             );
         }
-        if (discountableBase < 0) {
+        if (discountableBase < 0){
             throw new IllegalArgumentException(
                     "Discountable base cannot be negative"
             );
         }
-        long discount =
-                (long) Math.ceil(discountableBase * percentage / 100.0);
+        long discount = (long) Math.ceil(discountableBase * percentage / 100.0);
         return Math.min(discount, cap);
     }
 }
