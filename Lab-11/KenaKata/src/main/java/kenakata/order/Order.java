@@ -1,6 +1,7 @@
 package kenakata.order;
 
 import kenakata.catalog.ExpressHandling;
+import kenakata.exceptions.CouponRejectedException;
 import kenakata.payment.MobileWalletPayment;
 import kenakata.catalog.CatalogItem;
 import kenakata.catalog.GiftWrap;
@@ -27,13 +28,34 @@ public class Order {
         this.coupon = coupon;
     }
 
-    public PriceBreakdown quote(int today) {
+    public PriceBreakdown quote(int today) throws CouponRejectedException {
         long subtotal = 0;
 
         for (OrderLine line : lines) {
             subtotal += line.unit().unitCharge() * line.quantity();
         }
-        return new PriceBreakdown(subtotal, 0, 0, 0, 0, 0);
+
+        long discountableBase = 0;
+
+        for (OrderLine line : lines) {
+            if (line.unit() instanceof StockedGood) {
+                discountableBase += line.unit().unitCharge() * line.quantity();
+            }
+        }
+
+        long discount = 0;
+
+        if (coupon != null) {
+            discount = coupon.discount(discountableBase, today);
+        }
+
+        long vat = 0;
+
+        for (OrderLine line : lines) {
+            vat += line.unit().unitVat() * line.quantity();
+        }
+
+        return new PriceBreakdown(subtotal, discount, 0, vat, 0, 0);
     }
 
     public void insure(int i) {

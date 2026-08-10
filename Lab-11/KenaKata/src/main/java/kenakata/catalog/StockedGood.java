@@ -7,7 +7,7 @@ public class StockedGood extends CatalogItem {
 
     public StockedGood(String sku, String title, int unitPrice, int stock, Seller seller, int weightGrams
     ) {
-        super(unitPrice);
+        super(unitPrice, stock);
         this.stock = stock;
     }
 

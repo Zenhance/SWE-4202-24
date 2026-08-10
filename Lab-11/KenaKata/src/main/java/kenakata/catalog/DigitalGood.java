@@ -2,7 +2,7 @@ package kenakata.catalog;
 
 public class DigitalGood extends CatalogItem {
     public DigitalGood(String sku, String title, int unitPrice, int stock, Seller seller) {
-        super(unitPrice);
+        super(unitPrice, stock);
     }
 
     @Override
