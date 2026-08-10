@@ -22,6 +22,6 @@ public final class GiftWrap implements Chargeable, Labeled {
 
     @Override
     public String label() {
-        return "Gift wrap";
+        return "Gift wrapping";
     }
 }
