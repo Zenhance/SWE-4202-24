@@ -14,6 +14,7 @@ import java.util.List;
 
 public class Order {
     private final List<OrderLine> lines = new ArrayList<>();
+    private Coupon coupon;
 
     public Order(Object dhaka, DeliveryCalculator deliveryCalculator) {
     }
@@ -22,8 +23,8 @@ public class Order {
         lines.add(new OrderLine(item, quantity));
     }
 
-    public void applyCoupon(Coupon eid10) {
-
+    public void applyCoupon(Coupon coupon) {
+        this.coupon = coupon;
     }
 
     public PriceBreakdown quote(int today) {
