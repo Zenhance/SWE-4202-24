@@ -1,7 +1,10 @@
 package kenakata.catalog;
 
 public class WarrantyPlan implements Chargeable {
-    public WarrantyPlan(StockedGood lamp) {
+    public WarrantyPlan(StockedGood coveredItem) {
+        if (coveredItem == null) {
+            throw new IllegalArgumentException("Covered item cannot be null.");
+        }
     }
 
     public long unitCharge() {
