@@ -2,14 +2,14 @@ package main.java.kenakata.catalog;
 
 import main.java.kenakata.exceptions.OutOfStockException;
 
-public abstract class CatalogItem implements Chargeable{
+public abstract class CatalogItem implements main.java.kenakata.catalog.Chargeable {
     private String sku;
     private String title;
     private long unitPrice;
     private int stock;
-    private Seller seller;
+    private main.java.kenakata.catalog.Seller seller;
 
-    public CatalogItem(String sku, String title, long unitPrice, int stock, Seller seller){
+    public CatalogItem(String sku, String title, long unitPrice, int stock, main.java.kenakata.catalog.Seller seller){
 
         if(sku==null || sku.isBlank()){
             throw new IllegalArgumentException("sku cannot be null");
@@ -43,7 +43,7 @@ public abstract class CatalogItem implements Chargeable{
     public long getUnitPrice(){
         return unitPrice;
     }
-    public Seller getSeller(){
+    public main.java.kenakata.catalog.Seller getSeller(){
         return seller;
     }
     public int getRemaining(){
