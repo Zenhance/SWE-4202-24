@@ -55,8 +55,14 @@ public class Order {
             subtotal += line.charge();
             vat += line.vat();
 
-            if (line.item() instanceof Weighable w) {
-                weight += (long) w.unitWeightGrams() * line.quantity();
+            if (line.item() instanceof StockedGood) {
+                StockedGood item = (StockedGood) line.item();
+                weight += item.weightGrams() * line.quantity();
+            }
+
+            if (line.item() instanceof FreshGood) {
+                FreshGood item = (FreshGood) line.item();
+                weight += item.weightGrams() * line.quantity();
             }
 
             if (line.item() instanceof FreshGood) {
