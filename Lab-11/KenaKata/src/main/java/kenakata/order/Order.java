@@ -18,8 +18,8 @@ public class Order {
     public Order(Object dhaka, DeliveryCalculator deliveryCalculator) {
     }
 
-    public void addProduct(CatalogItem stockedGood, int i) {
-
+    public void addProduct(CatalogItem item, int quantity) {
+        lines.add(new OrderLine(item, quantity));
     }
 
     public void addAddOn(GiftWrap giftWrap) {
@@ -53,9 +53,6 @@ public class Order {
 
     public List<OrderLine> lines() {
         return lines;
-    }
-
-    public void addProduct(StockedGood p1, int i) {
     }
 
     public void addAddOn(ExpressHandling expressHandling) {
