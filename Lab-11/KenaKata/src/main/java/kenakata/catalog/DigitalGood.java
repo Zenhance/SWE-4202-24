@@ -21,6 +21,6 @@ public final class DigitalGood extends CatalogItem {
 
     @Override
     public long unitVat() {
-        return (long) Math.ceil(unitCharge()*VAT/100.0);
+        return (long) Math.ceil(unitCharge()*VAT);
     }
 }
