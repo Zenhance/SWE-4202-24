@@ -30,10 +30,12 @@ public class OrderLine {
     public boolean isReturned() {
         return returned;
     }
-    public boolean makeIsured(){
-        return true;
+
+    public void setInsured(boolean insured) {
+        this.insured = insured;
     }
-    private boolean makeReturned(){
-        return true;
+
+    public void setReturned(boolean returned) {
+        this.returned = returned;
     }
 }
