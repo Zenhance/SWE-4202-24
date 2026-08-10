@@ -8,4 +8,8 @@ public class Seller {
         }
         this.name=name;
     }
+
+    public String getName(){
+        return name;
+    }
 }
