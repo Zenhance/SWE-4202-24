@@ -26,8 +26,7 @@ public final class StockedGood extends CatalogItem
 
     @Override
     public long unitVat() {
-        // 7.5% VAT, rounded upward
-        return (unitCharge() * 75 + 999) / 1000;
+        return (unitCharge() * (75/10) + 999) / 100;
     }
 
     @Override
