@@ -65,6 +65,39 @@ public abstract class CatalogItem implements Chargeable {
         return title;
     }
 
+    public final void ensureAvailable(int quantity)
+            throws OutOfStockException {
 
+        requirePositiveQuantity(quantity);
+
+        if (quantity > remaining) {
+            throw new OutOfStockException(
+                    title + " has only " + remaining +
+                            " unit(s), requested " + quantity
+            );
+        }
     }
 
+    public final void reserve(int quantity)
+            throws OutOfStockException {
+
+        ensureAvailable(quantity);
+        remaining -= quantity;
+    }
+
+    public abstract long commissionOn(long lineValue);
+
+    protected static void requireLineValue(long lineValue) {
+        if (lineValue < 0)
+            throw new IllegalArgumentException(
+                    "Line value cannot be negative"
+            );
+    }
+
+    protected static void requirePositiveQuantity(int quantity) {
+        if (quantity <= 0)
+            throw new IllegalArgumentException(
+                    "Quantity must be positive"
+            );
+    }
+}
