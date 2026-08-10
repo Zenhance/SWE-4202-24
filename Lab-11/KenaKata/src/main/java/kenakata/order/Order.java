@@ -2,8 +2,11 @@ package kenakata.order;
 
 import kenakata.catalog.CatalogItem;
 import kenakata.catalog.Chargeable;
+import kenakata.catalog.ColdChain;
 import kenakata.catalog.Insurable;
 import kenakata.catalog.Returnable;
+import kenakata.catalog.Weighable;
+import kenakata.exceptions.CheckoutException;
 import kenakata.exceptions.CouponRejectedException;
 import kenakata.exceptions.NotInsurableException;
 import kenakata.exceptions.OutOfStockException;
@@ -26,6 +29,7 @@ public class Order {
     private int placedDay = -1;
 
     public Order(Zone zone, DeliveryCalculator deliveryCalculator) {
+
         if (zone == null) {
             throw new IllegalArgumentException("Zone cannot be null");
         }
@@ -43,7 +47,9 @@ public class Order {
     public void addProduct(CatalogItem item, int quantity) {
 
         if (item == null) {
-            throw new IllegalArgumentException("Product cannot be null");
+            throw new IllegalArgumentException(
+                    "Product cannot be null"
+            );
         }
 
         if (quantity <= 0) {
@@ -58,7 +64,9 @@ public class Order {
     public void addAddOn(Chargeable addOn) {
 
         if (addOn == null) {
-            throw new IllegalArgumentException("Add-on cannot be null");
+            throw new IllegalArgumentException(
+                    "Add-on cannot be null"
+            );
         }
 
         lines.add(new OrderLine(addOn, 1));
@@ -67,13 +75,16 @@ public class Order {
     public void applyCoupon(Coupon coupon) {
 
         if (coupon == null) {
-            throw new IllegalArgumentException("Coupon cannot be null");
+            throw new IllegalArgumentException(
+                    "Coupon cannot be null"
+            );
         }
 
         this.coupon = coupon;
     }
 
-    public void insure(int lineIndex) throws NotInsurableException {
+    public void insure(int lineIndex)
+            throws NotInsurableException {
 
         OrderLine line = getLine(lineIndex);
 
@@ -92,8 +103,10 @@ public class Order {
         return calculateBreakdown(today);
     }
 
-    public void place(PaymentMethod payment, int today)
-            throws Exception {
+    public void place(
+            PaymentMethod payment,
+            int today
+    ) throws CheckoutException {
 
         if (payment == null) {
             throw new IllegalArgumentException(
@@ -107,83 +120,90 @@ public class Order {
             );
         }
 
-        PriceBreakdown breakdown = calculateBreakdown(today);
+        // First calculate everything.
+        // If coupon is invalid, nothing happens.
+        PriceBreakdown breakdown =
+                calculateBreakdown(today);
+
+        // Check stock BEFORE payment.
         for (OrderLine line : lines) {
 
             if (line.isProduct()) {
 
                 CatalogItem item =
-                        (CatalogItem) line.item();
+                        line.catalogItem();
 
                 if (item.remaining() < line.quantity()) {
+
                     throw new OutOfStockException(
-                            "Not enough stock for " + item.title()
+                            "Not enough stock for "
+                                    + item.title()
                     );
                 }
             }
         }
-        payment.authorise(breakdown.grandTotal());
-        for (OrderLine line : lines) {
 
+        // Payment happens only after all stock checks pass.
+        payment.authorise(
+                breakdown.grandTotal()
+        );
+        // Reserve stock only after successful payment.
+        for (OrderLine line : lines) {
             if (line.isProduct()) {
 
-                CatalogItem item =
-                        (CatalogItem) line.item();
-
-                item.reserve(line.quantity());
+                line.catalogItem().reserve(
+                        line.quantity()
+                );
             }
         }
-
         placed = true;
         placedDay = today;
         finalBreakdown = breakdown;
-
         for (OrderLine line : lines) {
-            line.markPlaced(today);
+            line.setPlacedDay(today);
         }
     }
-
-    public void acceptReturn(int lineIndex, int today)
-            throws ReturnNotAllowedException {
-
-        if (!placed){
+    public void acceptReturn(
+            int lineIndex,
+            int today
+    ) throws ReturnNotAllowedException {
+        if (!placed) {
             throw new ReturnNotAllowedException(
                     "Order has not been placed"
             );
         }
-
         OrderLine line = getLine(lineIndex);
-
         if (!(line.item() instanceof Returnable returnable)) {
             throw new ReturnNotAllowedException(
                     "This line is not returnable"
             );
         }
-
         if (line.returned()) {
             throw new ReturnNotAllowedException(
                     "This line has already been returned"
             );
         }
-
-        int window = returnable.returnWindowDays();
-
-        if (today > line.placeDay() + window) {
-            throw new ReturnNotAllowedException(
-                    "Return window has expired"
-            );
-        }
-
-        if (today < line.placeDay()) {
+        if (today < line.placedDay()) {
             throw new ReturnNotAllowedException(
                     "Invalid return day"
             );
         }
 
-        line.markReturned(today);
+        if (today >
+                line.placedDay()
+                        + returnable.returnWindowDays()) {
+
+            throw new ReturnNotAllowedException(
+                    "Return window has expired"
+            );
+        }
+
+        line.markReturned();
+        line.setReturnedDay(today);
     }
 
     public List<OrderLine> lines() {
+
         return Collections.unmodifiableList(lines);
     }
 
@@ -210,6 +230,7 @@ public class Order {
     private OrderLine getLine(int index) {
 
         if (index < 0 || index >= lines.size()) {
+
             throw new IllegalArgumentException(
                     "Invalid line index"
             );
@@ -218,8 +239,9 @@ public class Order {
         return lines.get(index);
     }
 
-    private PriceBreakdown calculateBreakdown(int today)
-            throws CouponRejectedException {
+    private PriceBreakdown calculateBreakdown(
+            int today
+    ) throws CouponRejectedException {
 
         long subtotal = 0;
         long vat = 0;
@@ -227,69 +249,94 @@ public class Order {
 
         long discountableBase = 0;
 
+        long totalWeightGrams = 0;
+        int freshLineCount = 0;
+
         for (OrderLine line : lines) {
 
             Chargeable item = line.item();
 
-            long lineCharge =
-                    item.unitCharge() * line.quantity();
+            long lineCharge = line.charge();
 
             subtotal += lineCharge;
-            long unitVat = item.unitVat();
 
-            vat += unitVat * line.quantity();
+            vat += line.vat();
 
+            // Only StockedGood is discountable.
+            if (line.isProduct()) {
 
-            if (line.isProduct()
-                    && isDiscountable((CatalogItem) item)) {
+                CatalogItem catalogItem =
+                        line.catalogItem();
 
-                discountableBase += lineCharge;
-            }
+                if (isDiscountable(catalogItem)) {
 
-            if (line.insured()
-                    && item instanceof Insurable) {
+                    discountableBase += lineCharge;
+                }
 
-                long value = getInsurableValue(
-                        (CatalogItem) item,
-                        line.quantity()
-                );
+                // Calculate total weight.
+                if (catalogItem instanceof Weighable weighable) {
 
-                long fee = (long) Math.ceil(value * 0.01);
+                    totalWeightGrams +=
+                            weighable.weightGrams()
+                                    * line.quantity();
+                }
 
-                insurance += Math.max(20, fee);
+                // Each fresh line adds one cold-chain surcharge.
+                if (catalogItem instanceof ColdChain) {
+
+                    freshLineCount++;
+                }
+
+                // Insurance.
+                if (line.insured()) {
+
+                    Insurable insurable =
+                            (Insurable) catalogItem;
+
+                    long value =
+                            insurable.insurableValue(
+                                    line.quantity()
+                            );
+
+                    long fee =
+                            (long) Math.ceil(
+                                    value * 0.01
+                            );
+
+                    insurance +=
+                            Math.max(20, fee);
+                }
             }
         }
 
         long discount = 0;
 
         if (coupon != null) {
+
             discount =
-                    coupon.discountFor(
+                    coupon.discount(
                             discountableBase,
                             today
                     );
         }
-
         long delivery =
-                deliveryCalculator.calculate(lines, zone);
-
+                deliveryCalculator.calculate(
+                        zone,
+                        totalWeightGrams,
+                        freshLineCount
+                );
         long serviceFee =
-                (long) Math.ceil(subtotal * 0.01);
-
-        serviceFee = Math.min(serviceFee, 100);
-
-        return new PriceBreakdown(subtotal, discount, vat, delivery, insurance, serviceFee);
+                (long) Math.ceil(
+                        subtotal * 0.01
+                );
+        serviceFee =
+                Math.min(serviceFee, 100);
+        long grandTotal = subtotal - discount + delivery + vat + insurance + serviceFee;
+        return new PriceBreakdown(subtotal, discount, delivery, vat, insurance, serviceFee, grandTotal);
     }
-
-    private boolean isDiscountable(CatalogItem item) {
-
+    private boolean isDiscountable(
+            CatalogItem item
+    ) {
         return item instanceof kenakata.catalog.StockedGood;
-    }
-
-    private long getInsurableValue(
-            CatalogItem item,
-            int quantity) {
-
-        return item.unitCharge() * quantity;
     }
 }
