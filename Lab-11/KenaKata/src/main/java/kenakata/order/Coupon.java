@@ -45,7 +45,7 @@ public final class Coupon {
             throw new CouponRejectedException(
                     "Coupon " + code + " requires a minimum spend of Tk " + minimumSpend);
         }
-        long raw = (long) Math.ceil(discountableBase* percent);
+        long raw = (long) Math.ceil(discountableBase* percent/100);
         return Math.min(raw, cap);
     }
 }
