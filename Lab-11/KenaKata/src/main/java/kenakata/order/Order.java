@@ -146,7 +146,7 @@ public class Order {
     public void acceptReturn(int lineIndex, int today)
             throws ReturnNotAllowedException {
 
-        if (!placed) {
+        if (!placed){
             throw new ReturnNotAllowedException(
                     "Order has not been placed"
             );
