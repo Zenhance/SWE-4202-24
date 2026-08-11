@@ -88,7 +88,13 @@ public final class Shelf<T extends Item> {
      * Takes the first item with this name off the shelf. True if one was there.
      */
     public boolean remove(String name) {
-        throw new UnsupportedOperationException("TODO: Shelf.remove");
+        for (int i = 0; i < items.size(); i++) {
+            if (items.get(i).name().equals(name)) {
+                items.remove(i);
+                return true;
+            }
+        }
+        return false;
     }
 
     /**
