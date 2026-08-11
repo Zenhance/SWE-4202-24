@@ -42,11 +42,8 @@ public final class Counter<T> {
     public int count(T value) {
         for(int i=0;i<values.size();i++){
             if(values.get(i).equals(value)){
-
-
+                return count.get(i);
             }
-
-
         }
     }
 
