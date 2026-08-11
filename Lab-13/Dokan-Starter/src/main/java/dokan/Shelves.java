@@ -27,15 +27,13 @@ public final class Shelves {
         }
         return Box.of(cheapest);
     }
-    public static  <T extends Item> List<T> keep(
-            Shelf<T> shelf,
-            Check<? super T> check) {
+    public static  <T extends Item> List<T> keep(Shelf<T> shelf, Check<? super T> check) {
 
         List<T> result = new ArrayList<>();
         for (int i = 0; i < shelf.size(); i++) {
             T item = shelf.get(i);
 
-            if (check.test(item)) {
+            if (check.passes(item)) {
                 result.add(item);
             }
         }
