@@ -43,7 +43,17 @@ return Box.of(cheapest);
      * of Books. Writing {@code Check<T>} here would reject that.
      */
     public static <T extends Item> List<T> keep(Shelf<T> shelf, Check<? super T> check) {
+            List<T> result = new ArrayList<>();
 
+            for (int i = 0; i < shelf.size(); i++) {
+                T item = shelf.get(i);
+
+                if (check.passes(item)) {
+                    result.add(item);
+                }
+            }
+
+            return result;
     }
 
     /**
@@ -55,7 +65,21 @@ return Box.of(cheapest);
      * An empty list has no largest value, so refuse it.
      */
     public static <T extends Comparable<T>> T max(List<T> values) {
-        throw new UnsupportedOperationException("TODO: Shelves.max");
+        if (values.isEmpty()) {
+            throw new IllegalArgumentException("empty list");
+        }
+
+        T maximum = values.get(0);
+
+        for (int i = 1; i < values.size(); i++) {
+            T current = values.get(i);
+
+            if (current.compareTo(maximum) > 0) {
+                maximum = current;
+            }
+        }
+
+        return maximum;
     }
 
     /**
@@ -66,6 +90,13 @@ return Box.of(cheapest);
      * {@code List<T>} here would reject that perfectly sensible line.
      */
     public static <T extends Item> int addAll(Shelf<T> shelf, List<? extends T> items) {
-        throw new UnsupportedOperationException("TODO: Shelves.addAll");
+        int added = 0;
+        for (T item : items) {
+            if (!shelf.add(item)) {
+                break;
+            }
+            added++;
+        }
+        return added;
     }
 }
