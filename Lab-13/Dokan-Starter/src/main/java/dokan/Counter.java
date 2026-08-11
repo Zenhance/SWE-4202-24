@@ -1,4 +1,6 @@
 package dokan;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 /**
  * TODO (step 3). Counts how many times each value has been seen.
