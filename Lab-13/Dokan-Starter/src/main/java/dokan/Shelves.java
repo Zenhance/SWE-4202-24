@@ -43,7 +43,13 @@ public final class Shelves {
      * of Books. Writing {@code Check<T>} here would reject that.
      */
     public static <T extends Item> List<T> keep(Shelf<T> shelf, Check<? super T> check) {
-        return null;
+        List<T> kept= new ArrayList<>();
+        for(T item: shelf.items()){
+            if(check.passes(item)){
+                kept.add(item);
+            }
+        }
+        return kept;
     }
 
     /**
@@ -59,6 +65,11 @@ public final class Shelves {
             throw new IllegalArgumentException("value must not be empty");
         }
         T best=values.get(0);
+        for(T value:values){
+            if(value.compareTo(best)>0){
+                best=value;
+            }
+        }
         return best;
     }
 
@@ -71,6 +82,12 @@ public final class Shelves {
      */
     public static <T extends Item> int addAll(Shelf<T> shelf, List<? extends T> items) {
         int added=0;
+        for(T item: items){
+            if(!shelf.add(item)){
+                break;
+            }
+            added++;
+        }
         return added;
     }
 }
