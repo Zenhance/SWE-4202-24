@@ -19,10 +19,11 @@ import java.util.Map;
  * </ul>
  */
 public final class Counter<T> {
+    private final Map<T, Integer>counts=new LinkedHashMap<>();
 
     /** Records one more sighting of {@code value}. */
     public void add(T value) {
-        throw new UnsupportedOperationException("TODO: Counter.add");
+        counts.put(value,counts.getOrDefault(value,0)+1);
     }
 
     /** How many times {@code value} has been added. Zero if never. */
