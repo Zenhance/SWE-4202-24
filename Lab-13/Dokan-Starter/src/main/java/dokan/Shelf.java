@@ -48,8 +48,8 @@ public final class Shelf<T extends Item> {
         if(isFull()){
             return false;
         }
-
-
+        items.add(item);
+        return true;
     }
 
     public T get(int index) {
