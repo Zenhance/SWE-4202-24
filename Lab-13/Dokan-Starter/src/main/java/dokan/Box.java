@@ -66,6 +66,10 @@ public final class Box<T> {
 
     @Override
     public String toString() {
+        if(isEmpty()){
+            return "Box(empty)";
+        }
+        return "Box("+value+")";
 
     }
 }
