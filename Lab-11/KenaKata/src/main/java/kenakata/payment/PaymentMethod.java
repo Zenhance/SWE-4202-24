@@ -1,4 +1,5 @@
 package kenakata.payment;
 
-public class PaymentMethod {
+public interface PaymentMethod {
+    public void pay();
 }

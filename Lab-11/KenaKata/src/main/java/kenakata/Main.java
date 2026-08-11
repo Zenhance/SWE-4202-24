@@ -15,7 +15,6 @@ import kenakata.order.Zone;
 import kenakata.payment.CardPayment;
 import kenakata.payment.CashOnDeliveryPayment;
 import kenakata.payment.MobileWalletPayment;
-import kenakata.payment.PaymentMethod;
 import kenakata.payment.Wallet;
 import kenakata.settlement.Marketplace;
 import kenakata.settlement.SellerPayout;
