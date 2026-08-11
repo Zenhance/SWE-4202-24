@@ -1,5 +1,8 @@
 package dokan;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * TODO (step 3). Counts how many times each value has been seen.
  *
@@ -18,23 +21,54 @@ package dokan;
  */
 public final class Counter<T> {
 
+    private final List<T> uniqueItems = new ArrayList<>();
+    private final List<Integer> counts = new ArrayList<>();
+
     /** Records one more sighting of {@code value}. */
     public void add(T value) {
-        throw new UnsupportedOperationException("TODO: Counter.add");
+        int index = uniqueItems.indexOf(value);
+
+        if (index == -1) {
+            uniqueItems.add(value);
+            counts.add(1);
+        } else {
+            int currentCount = counts.get(index);
+            counts.set(index, currentCount + 1);
+        }
     }
 
     /** How many times {@code value} has been added. Zero if never. */
     public int count(T value) {
-        throw new UnsupportedOperationException("TODO: Counter.count");
+        int index = uniqueItems.indexOf(value);
+        if (index == -1) {
+            return 0; // Item not found
+        }
+        return counts.get(index);
     }
 
     /** How many different values have been counted. */
     public int distinct() {
-        throw new UnsupportedOperationException("TODO: Counter.distinct");
+        return uniqueItems.size();
     }
 
     /** The value seen most often, or an empty box if nothing has been counted yet. */
     public Box<T> mostCommon() {
-        throw new UnsupportedOperationException("TODO: Counter.mostCommon");
+        if (uniqueItems.isEmpty()) {
+            return Box.empty();
+        }
+
+        int maxIndex = 0;
+        int maxCount = counts.get(0);
+
+        // Find the index of the highest count
+        for (int i = 1; i < counts.size(); i++) {
+            if (counts.get(i) > maxCount) {
+                maxCount = counts.get(i);
+                maxIndex = i;
+            }
+        }
+
+        // Return the item that corresponds to the highest count
+        return Box.of(uniqueItems.get(maxIndex));
     }
 }

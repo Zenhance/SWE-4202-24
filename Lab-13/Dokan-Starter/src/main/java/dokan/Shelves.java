@@ -1,6 +1,6 @@
 package dokan;
 
-import java.util.List;
+import java.util.*;
 
 /**
  * TODO (step 4). Helpers that work on any shelf, of any kind of item.
@@ -22,7 +22,18 @@ public final class Shelves {
 
     /** The cheapest item on the shelf, or an empty box if the shelf is empty. */
     public static <T extends Item> Box<T> cheapest(Shelf<T> shelf) {
-        throw new UnsupportedOperationException("TODO: Shelves.cheapest");
+        if (shelf.isEmpty()) {
+            return Box.empty();
+        }
+
+        T cheapestItem = null;
+        for (T item : shelf.items()) {
+            if (cheapestItem == null || item.priceTaka() < cheapestItem.priceTaka()) {
+                cheapestItem = item;
+            }
+        }
+
+        return Box.of(cheapestItem);
     }
 
     /**
@@ -33,7 +44,13 @@ public final class Shelves {
      * of Books. Writing {@code Check<T>} here would reject that.
      */
     public static <T extends Item> List<T> keep(Shelf<T> shelf, Check<? super T> check) {
-        throw new UnsupportedOperationException("TODO: Shelves.keep");
+        List<T> keeping = new ArrayList<>();
+        for (T item : shelf.items()) {
+            if (check.passes(item)) {
+                keeping.add(item);
+            }
+        }
+        return keeping;
     }
 
     /**
