@@ -1,5 +1,6 @@
 package dokan;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -30,13 +31,15 @@ import java.util.List;
  */
 public final class Shelf<T extends Item> {
     private final int capacity;
+    private final List<T> items;
 
 
-    public Shelf(int capacity)
+    public Shelf(int capacity,List<T> items)
     {
         this.capacity=capacity;
        if(capacity<1)
            throw new IllegalArgumentException("Capacity can't be less than one");
+       this.items=new ArrayList<>();
 
     }
 
