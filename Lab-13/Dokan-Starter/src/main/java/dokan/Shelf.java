@@ -33,8 +33,10 @@ public final class Shelf<T extends Item> {
 
 
     public Shelf(int capacity)
-    { this.capacity=capacity;
-        throw new UnsupportedOperationException("TODO: Shelf constructor");
+    {
+        this.capacity=capacity;
+       if(capacity<1)
+           throw new IllegalArgumentException("");
     }
 
     /** Puts an item on the shelf. Returns false, without adding, if the shelf is full. */
