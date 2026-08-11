@@ -48,12 +48,20 @@ public final class Box<T> {
 
     /** The value inside. Opening an empty box is a programming mistake, so throw. */
     public T get() {
+        if (isEmpty()) {
+            throw new IllegalArgumentException();
+        }
+
         return value;
     }
 
     /** The value inside, or {@code fallback} if the box is empty. */
     public T orElse(T fallback) {
-        throw new UnsupportedOperationException("TODO: Box.orElse");
+        if (isEmpty()) {
+            return fallback;
+        }
+
+        return value;
     }
 
     @Override
