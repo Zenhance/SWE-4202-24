@@ -37,8 +37,6 @@ public final class Marketplace {
     }
 
     public SettlementReport settle() {
-
-        // seller -> {gross sales, commission, refunds}
         Map<Seller, long[]> totals = new LinkedHashMap<>();
 
         for (Seller seller : sellers) {
@@ -74,7 +72,6 @@ public final class Marketplace {
                     }
 
                 } else {
-                    // Add-on charge belongs to the platform.
                     platformRevenue += line.charge();
                 }
             }

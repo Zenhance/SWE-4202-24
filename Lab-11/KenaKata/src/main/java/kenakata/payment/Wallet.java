@@ -38,7 +38,7 @@ public final class Wallet {
     }
 
     public void credit(long amount) {
-        if (amount <= 0) {
+        if (amount < 0) {
             throw new IllegalArgumentException(
                     "Credit amount must be positive"
             );
