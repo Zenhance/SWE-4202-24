@@ -64,10 +64,23 @@ public class Order {
         long serviceFee = (long) Math.ceil(subtotal * 0.01);
         serviceFee = Math.min(serviceFee, 100);
 
-        return new PriceBreakdown(subtotal, discount, delivery, vat, 0, 0);
+        long insurance = 0;
+
+        for (OrderLine line : lines) {
+            if (line.insured()) {
+                long lineValue = line.unit().unitCharge() * line.quantity();
+
+                long insuranceFee = (long) Math.ceil(lineValue * 0.01);
+
+                insurance += insuranceFee;
+            }
+        }
+
+        return new PriceBreakdown(subtotal, discount, delivery, vat, insurance, serviceFee);
     }
 
-    public void insure(int i) {
+    public void insure(int index) {
+        lines.get(index).markInsured();
     }
 
     public void place(MobileWalletPayment mobileWalletPayment, int i) {

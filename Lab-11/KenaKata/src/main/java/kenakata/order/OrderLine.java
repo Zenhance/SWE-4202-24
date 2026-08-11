@@ -6,6 +6,7 @@ public class OrderLine {
     private final Chargeable unit;
     private final int quantity;
     private boolean returned;
+    private boolean insured;
 
     public OrderLine(Chargeable unit, int quantity) {
         if (unit == null) {
@@ -19,6 +20,7 @@ public class OrderLine {
         this.unit = unit;
         this.quantity = quantity;
         this.returned = false;
+        this.insured = false;
     }
 
     public Chargeable unit() {
@@ -33,8 +35,15 @@ public class OrderLine {
         return returned;
     }
 
-
     void markReturned() {
         returned = true;
+    }
+
+    public boolean insured() {
+        return insured;
+    }
+
+    public void markInsured() {
+        insured = true;
     }
 }

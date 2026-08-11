@@ -10,6 +10,10 @@ public class Coupon {
     private final int lastValidDay;
 
     public Coupon(String code, int percentage, long cap, long minimumSpend, int lastValidDay) {
+        if (percentage < 0 || percentage > 100) {
+            throw new IllegalArgumentException("Coupon percentage must be between 0 and 100.");
+        }
+
         this.code = code;
         this.percentage = percentage;
         this.cap = cap;

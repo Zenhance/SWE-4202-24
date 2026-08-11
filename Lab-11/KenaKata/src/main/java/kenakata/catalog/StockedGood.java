@@ -2,7 +2,7 @@ package kenakata.catalog;
 
 import kenakata.exceptions.OutOfStockException;
 
-public class StockedGood extends CatalogItem implements Weighable {
+public class StockedGood extends CatalogItem implements Weighable,Insurable {
     private int stock;
     private final int weightGrams;
 
