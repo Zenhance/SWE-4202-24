@@ -1,5 +1,6 @@
 package dokan;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -30,33 +31,49 @@ import java.util.List;
  */
 public final class Shelf<T extends Item> {
 
+    private final List<T> items;
+    private final int capacity;
+
     public Shelf(int capacity) {
-        throw new UnsupportedOperationException("TODO: Shelf constructor");
+        if (capacity < 1) {
+            throw new IllegalArgumentException("");
+        }
+        this.capacity = capacity;
+        this.items = new ArrayList<>(capacity);
+
     }
 
     /** Puts an item on the shelf. Returns false, without adding, if the shelf is full. */
     public boolean add(T item) {
-        throw new UnsupportedOperationException("TODO: Shelf.add");
+        if (isFull()) {
+            return false;
+        }
+        items.add(item);
+        return true;
     }
 
     public T get(int index) {
-        throw new UnsupportedOperationException("TODO: Shelf.get");
+        if (index < 0 || index >= items.size()) {
+            throw new IndexOutOfBoundsException("");
+        }
+        return items.get(index);
+
     }
 
     public int size() {
-        throw new UnsupportedOperationException("TODO: Shelf.size");
+        return items.size();
     }
 
     public int capacity() {
-        throw new UnsupportedOperationException("TODO: Shelf.capacity");
+        return capacity;
     }
 
     public boolean isFull() {
-        throw new UnsupportedOperationException("TODO: Shelf.isFull");
+        return items.size() == capacity;
     }
 
     public boolean isEmpty() {
-        throw new UnsupportedOperationException("TODO: Shelf.isEmpty");
+        return items.isEmpty();
     }
 
     public boolean contains(String name) {
