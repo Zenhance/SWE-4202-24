@@ -112,12 +112,12 @@ public final class Shelf<T extends Item> {
      * The items, as a list the caller cannot use to change the shelf.
      */
     public List<T> items() {
-        throw new UnsupportedOperationException("TODO: Shelf.items");
+        return Collections.unmodifiableList(items);
     }
 
     @Override
     public String toString() {
         // The test cases print shelves, so this should look like a list.
-        throw new UnsupportedOperationException("TODO: Shelf.toString");
+        return items.toString();
     }
 }
