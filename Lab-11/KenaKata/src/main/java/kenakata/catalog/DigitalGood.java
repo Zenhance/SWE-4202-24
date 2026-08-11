@@ -1,6 +1,6 @@
 package kenakata.catalog;
 
-public class DigitalGood extends CatalogItem{
+public class DigitalGood extends CatalogItem implements Chargeable{
     public DigitalGood(String sku, String title, long unitPrice, int stock, Seller seller) {
         super(sku, title, unitPrice, stock, seller);
     }
@@ -10,7 +10,7 @@ public class DigitalGood extends CatalogItem{
     }
 
     public long unitVat() {
-        return 1;
+        return (long) Math.ceil( getUnitPrice()*.05);
     }
 
     public int commissionOn(int i) {

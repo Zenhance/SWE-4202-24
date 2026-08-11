@@ -11,7 +11,7 @@ public class StockedGood extends CatalogItem{
     }
 
     public long  unitVat() {
-        return 1;
+        return (long) Math.ceil( getUnitPrice()*.075);
     }
 
     public int commissionOn(int i) {

@@ -1,21 +1,22 @@
 package kenakata.catalog;
 
-import java.util.Collection;
 
-public class WarrantyPlan {
-    public WarrantyPlan(StockedGood lamp) {
+public class WarrantyPlan implements Chargeable {
+    private CatalogItem item;
+    public WarrantyPlan(CatalogItem item) {
+        this.item=item;
     }
 
-    public int unitCharge() {
-        return 1;
+    public long unitCharge() {
+        return (long) Math.ceil(item.getUnitPrice()*.1);
     }
 
-    public int unitVat() {
-        return 1;
+    public long unitVat() {
+        return (long) Math.ceil( item.getUnitPrice()*.15);
     }
-    Collection<Object> Object;
-    public Collection<Object> label() {
 
-        return Object;
+    public String label() {
+
+        return "Warrantly for "+ item.getTitle();
     }
 }

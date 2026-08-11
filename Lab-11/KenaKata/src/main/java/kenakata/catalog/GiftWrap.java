@@ -2,14 +2,14 @@ package kenakata.catalog;
 
 public class GiftWrap implements Chargeable {
     public long unitCharge() {
-        return 1;
+        return 50;
     }
 
     public long unitVat() {
-        return 1;
+        return (long) Math.ceil(50*.075);
     }
 
     public String label() {
-        return "Ab";
+        return "Gift Wrapping";
     }
 }

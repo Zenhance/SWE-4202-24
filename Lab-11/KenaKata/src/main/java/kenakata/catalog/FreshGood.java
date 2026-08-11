@@ -7,7 +7,7 @@ public class FreshGood extends CatalogItem {
     }
 
     public long unitVat() {
-        return 1;
+        return 0;
     }
     public long unitCharge() {
         return 1;
