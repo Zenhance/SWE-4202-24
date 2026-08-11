@@ -8,4 +8,11 @@ public final class Counter<T>{
     public void add(T value){
         counts.put(value,count(value)+1);
     }
+    public int count(T value){
+        return counts.getOrDefault(value, 0);
+    }
+    public int distinct() {
+        return counts.size();
+    }
+
 }
