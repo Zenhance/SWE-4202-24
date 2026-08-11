@@ -58,10 +58,14 @@ public final class Box<T> {
         if(isEmpty()) {
             throw new UnsupportedOperationException("TODO: Box.orElse");
         }
+        return value;
     }
 
     @Override
     public String toString() {
+        if(isEmpty()) {
+            return "Box(empty)";
+        }
         throw new UnsupportedOperationException("TODO: Box.toString");
     }
 }
