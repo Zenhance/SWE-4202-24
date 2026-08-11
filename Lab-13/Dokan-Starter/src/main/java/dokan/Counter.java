@@ -49,7 +49,7 @@ public final class Counter<T> {
 
     /** How many different values have been counted. */
     public int distinct() {
-        throw new UnsupportedOperationException("TODO: Counter.distinct");
+        return values.size();
     }
 
     /** The value seen most often, or an empty box if nothing has been counted yet. */
