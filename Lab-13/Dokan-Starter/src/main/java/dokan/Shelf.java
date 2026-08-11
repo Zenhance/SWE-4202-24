@@ -46,4 +46,16 @@ public final class Shelf<T extends Item> {
         items.add(item);
         return true;
     }
+    public T get(int index){
+        return items.get(index);
+    }
+    public int size(){
+        return items.size();
+    }
+    public int capacity(){
+        return capacity;
+    }
+    public boolean isFull(){
+        return size()==capacity;
+    }
 }
