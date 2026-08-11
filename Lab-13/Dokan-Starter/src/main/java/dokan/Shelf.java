@@ -81,7 +81,7 @@ public final class Shelf<T extends Item> {
 
     /** Takes the first item with this name off the shelf. True if one was there. */
     public boolean remove(String name) {
-        throw new UnsupportedOperationException("TODO: Shelf.remove");
+        return items.remove(name);
     }
 
     /** What everything on the shelf is worth. This is the method the bound pays for. */
