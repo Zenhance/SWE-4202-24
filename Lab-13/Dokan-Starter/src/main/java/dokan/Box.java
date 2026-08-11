@@ -22,10 +22,18 @@ package dokan;
  * </ul>
  */
 public final class Box<T> {
+    private final T value;
+
+    private Box(T value) {
+        this.value=value;
+    }
 
     /** A box holding {@code value}. Refuse null: a full box holding nothing is a lie. */
     public static <T> Box<T> of(T value) {
-        throw new UnsupportedOperationException("TODO: Box.of");
+        if(value==null) {
+            throw new UnsupportedOperationException("Value cannot be null");
+        }
+        return new Box<>(value);
     }
 
     /** An empty box. */
