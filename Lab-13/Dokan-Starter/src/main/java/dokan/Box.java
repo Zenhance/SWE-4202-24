@@ -49,6 +49,9 @@ public final class Box<T> {
 
     /** The value inside. Opening an empty box is a programming mistake, so throw. */
     public T get() {
+        if(isEmpty()){
+            throw new IllegalArgumentException();
+        }
 
 
     }
