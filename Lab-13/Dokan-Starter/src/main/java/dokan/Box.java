@@ -42,21 +42,24 @@ return new Box<>(value);
     }
 
     public boolean isEmpty() {
-        throw new UnsupportedOperationException("TODO: Box.isEmpty");
+return value==null;
     }
 
     /** The value inside. Opening an empty box is a programming mistake, so throw. */
     public T get() {
-        throw new UnsupportedOperationException("TODO: Box.get");
+if(isEmpty()){
+    throw new IllegalStateException("Box is empty");
+}
+return value;
     }
 
     /** The value inside, or {@code fallback} if the box is empty. */
     public T orElse(T fallback) {
-        throw new UnsupportedOperationException("TODO: Box.orElse");
+return isEmpty() ?fallback:value;
     }
 
     @Override
     public String toString() {
-        throw new UnsupportedOperationException("TODO: Box.toString");
+return isEmpty()?"Box(empty)":"Box("+value+")";
     }
 }
