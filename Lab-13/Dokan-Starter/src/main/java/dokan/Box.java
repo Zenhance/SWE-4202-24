@@ -41,8 +41,7 @@ public final class Box<T> {
     }
 
     public boolean isEmpty() {
-        if(value == null) return true;
-        return false;
+        return value == null;
     }
 
     /** The value inside. Opening an empty box is a programming mistake, so throw. */
