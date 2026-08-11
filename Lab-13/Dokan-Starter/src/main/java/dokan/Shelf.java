@@ -1,6 +1,7 @@
 package dokan;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -52,5 +53,15 @@ public final class Shelf<T extends Item> {
             }
         }
         return false;
+    }
+    public int totalPriceTaka(){
+        int total=0;
+        for(T item: items){
+            total+=item.priceTaka();
+        }
+        return total;
+    }
+    public List<T> items(){
+        return Collections.unmodifiableList(items);
     }
 }
