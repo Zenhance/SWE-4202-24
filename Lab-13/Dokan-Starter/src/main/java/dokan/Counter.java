@@ -62,15 +62,12 @@ public final class Counter<T> {
         for(int i=1;i<values.size();i++){
             if(count.get(i)>highest){
                 highest=count.get(i);
+                mostCommon=values.get(i);
 
 
             }
 
 
-        }
-
-
-
-
+        } return Box.of(mostCommon);
     }
 }
