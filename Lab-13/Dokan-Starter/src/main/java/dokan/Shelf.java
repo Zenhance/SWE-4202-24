@@ -35,7 +35,7 @@ public final class Shelf<T extends Item> {
 
     public Shelf(int capacity){
         if(capacity<1){
-            throw new IllegalStateException("Capacity must be at least 1");
+            throw new IllegalArgumentException("Capacity must be at least 1");
         }
         this.capacity = capacity;
         this.items = new ArrayList<>();
