@@ -50,5 +50,9 @@ public final class Box<T> {
   public T orElse(T fallback){
       return isEmpty() ? fallback : value;
   }
+    @Override
+    public String toString() {
+        return isEmpty() ? "Box(empty)" : "Box(" + value + ")";
+    }
 }
 
