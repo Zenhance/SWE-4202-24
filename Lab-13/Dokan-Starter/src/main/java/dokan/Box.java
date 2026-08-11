@@ -22,7 +22,7 @@ package dokan;
  * </ul>
  */
 public final class Box<T> {
-    private T value;
+    private final T value;
     public Box(T value){
         this.value=value;
     }
@@ -50,16 +50,17 @@ public final class Box<T> {
     /** The value inside. Opening an empty box is a programming mistake, so throw. */
     public T get() {
         if(isEmpty()){
-            throw new IllegalStateException("Box can't be empty");
+            throw new IllegalStateException("Box can't be empty"); }
             return value;
-
-        }
-
 
     }
 
+
     /** The value inside, or {@code fallback} if the box is empty. */
     public T orElse(T fallback) {
+        if(isEmpty()){
+            return fallback;
+        }
 
 
         throw new UnsupportedOperationException("TODO: Box.orElse");
