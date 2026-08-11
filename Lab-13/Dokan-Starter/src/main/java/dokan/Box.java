@@ -50,7 +50,10 @@ public final class Box<T> {
 
     /** The value inside. Opening an empty box is a programming mistake, so throw. */
     public T get() {
-        throw new UnsupportedOperationException("TODO: Box.get");
+        if (isEmpty()) {
+            throw new IllegalStateException("Box is empty");
+        }
+        return value;
     }
 
     /** The value inside, or {@code fallback} if the box is empty. */
