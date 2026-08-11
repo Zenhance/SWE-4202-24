@@ -3,18 +3,7 @@ package dokan;
 import java.util.List;
 import java.util.concurrent.RecursiveTask;
 
-/**
- * TODO (step 4). Helpers that work on any shelf, of any kind of item.
- *
- * <p>Every method here is a <strong>static generic method</strong>: the {@code <T>}
- * sits on the method, not on the class. That is why callers write
- * {@code Shelves.cheapest(books)} and never {@code Shelves.<Book>cheapest(books)} —
- * the compiler works the type out from the argument. This is called
- * <em>inference</em>, and it is why generic code stays readable.
- *
- * <p>The wildcards in these signatures are the marked part. Do not "simplify" them;
- * unit tests pin them, and the lab sheet explains each one.
- */
+
 public final class Shelves {
 
     private Shelves() {
@@ -69,4 +58,21 @@ public final class Shelves {
         }
         return maximum;
     }
+    public static <T extends Item> int addAll(
+            Shelf<T> shelf,
+            List<? extends T> items) {
+
+        int added = 0;
+
+        for (T item : items) {
+            if (shelf.add(item)) {
+                added++;
+            } else {
+                break;
+            }
+        }
+
+        return added;
+    }
+}
 

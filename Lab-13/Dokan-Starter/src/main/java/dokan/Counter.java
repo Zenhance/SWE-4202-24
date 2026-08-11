@@ -1,6 +1,7 @@
 package dokan;
 
 import java.util.HashMap;
+import java.util.Map;
 
 
 public final class Counter<T> {
