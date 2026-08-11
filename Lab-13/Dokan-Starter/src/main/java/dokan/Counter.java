@@ -1,5 +1,9 @@
 package dokan;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+
 /**
  * TODO (step 3). Counts how many times each value has been seen.
  *
@@ -17,24 +21,50 @@ package dokan;
  * </ul>
  */
 public final class Counter<T> {
+    Map<T,Integer> items = new HashMap<>();
 
     /** Records one more sighting of {@code value}. */
     public void add(T value) {
-        throw new UnsupportedOperationException("TODO: Counter.add");
+        boolean avilable = false;
+        for(Map.Entry<T,Integer> entry: items.entrySet()) {
+            if(Objects.equals(entry.getValue(),value)){
+                avilable = true;
+                entry.setValue(entry.getValue()+1);
+                break;
+            }
+        }
+        if(!avilable){
+            items.put(value,1);
+        }
+
     }
 
     /** How many times {@code value} has been added. Zero if never. */
     public int count(T value) {
-        throw new UnsupportedOperationException("TODO: Counter.count");
+        for(Map.Entry<T,Integer> entry: items.entrySet()) {
+            if(Objects.equals(entry.getValue(),value)) return entry.getValue();
+        }
+        return 0;
     }
 
     /** How many different values have been counted. */
     public int distinct() {
-        throw new UnsupportedOperationException("TODO: Counter.distinct");
+        return items.size();
     }
 
     /** The value seen most often, or an empty box if nothing has been counted yet. */
     public Box<T> mostCommon() {
-        throw new UnsupportedOperationException("TODO: Counter.mostCommon");
+        int max = -99;
+        for(Map.Entry<T,Integer> entry: items.entrySet()) {
+            if(entry.getValue() > max){
+                max = entry.getValue();
+            }
+        }
+        for(Map.Entry<T,Integer> entry: items.entrySet()) {
+            if(entry.getValue()==max){
+                return (Box<T>) entry.getKey();
+            }
+        }
+        return Box.empty();
     }
 }
