@@ -1,5 +1,6 @@
 package dokan;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -22,7 +23,17 @@ public final class Shelves {
 
     /** The cheapest item on the shelf, or an empty box if the shelf is empty. */
     public static <T extends Item> Box<T> cheapest(Shelf<T> shelf) {
-        throw new UnsupportedOperationException("TODO: Shelves.cheapest");
+       if (shelf.isEmpty()) {
+           return new Box<>(null);
+       }
+       T cheapest = shelf.get(0);
+       for(int i = 1; i < shelf.size(); i++) {
+           T item = shelf.get(i);
+           if(item.priceTaka() < cheapest.priceTaka()) {
+               cheapest = item;
+           }
+       }
+       return new Box<>(cheapest);
     }
 
     /**
@@ -33,7 +44,13 @@ public final class Shelves {
      * of Books. Writing {@code Check<T>} here would reject that.
      */
     public static <T extends Item> List<T> keep(Shelf<T> shelf, Check<? super T> check) {
-        throw new UnsupportedOperationException("TODO: Shelves.keep");
+        List<T> items = new ArrayList<>(shelf.size());
+        for(T x : shelf.items()){
+            if(check.passes(x)) {
+                items.add(x);
+            }
+        }
+        return items;
     }
 
     /**
@@ -45,7 +62,16 @@ public final class Shelves {
      * An empty list has no largest value, so refuse it.
      */
     public static <T extends Comparable<T>> T max(List<T> values) {
-        throw new UnsupportedOperationException("TODO: Shelves.max");
+        if(values == null || values.isEmpty()) {
+            throw new IllegalArgumentException();
+        }
+        T max = values.get(0);
+        for(int i = 1; i < values.size(); i++) {
+            if(values.get(i).compareTo(max) > 0) {
+                max = values.get(i);
+            }
+        }
+        return max;
     }
 
     /**
@@ -56,6 +82,14 @@ public final class Shelves {
      * {@code List<T>} here would reject that perfectly sensible line.
      */
     public static <T extends Item> int addAll(Shelf<T> shelf, List<? extends T> items) {
-        throw new UnsupportedOperationException("TODO: Shelves.addAll");
+        int added = 0;
+        for(T item : items) {
+            if(shelf.isFull()){
+                return added;
+            }
+            shelf.add(item);
+            added++;
+        }
+        return added;
     }
 }
