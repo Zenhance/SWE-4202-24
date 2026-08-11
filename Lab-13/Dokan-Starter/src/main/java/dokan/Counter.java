@@ -56,6 +56,8 @@ public final class Counter<T> {
     public Box<T> mostCommon() {
 
         if(values.isEmpty()) return Box.empty();
+        return Box.empty();
+
 
     }
 }
