@@ -22,7 +22,10 @@ package dokan;
  * </ul>
  */
 public final class Box<T> {
-
+    private final T value;
+    private Box(T value){
+        this.value = value;
+    }
     /** A box holding {@code value}. Refuse null: a full box holding nothing is a lie. */
     public static <T> Box<T> of(T value) {
         throw new UnsupportedOperationException("TODO: Box.of");
@@ -34,7 +37,9 @@ public final class Box<T> {
     }
 
     public boolean isEmpty() {
+
         throw new UnsupportedOperationException("TODO: Box.isEmpty");
+
     }
 
     /** The value inside. Opening an empty box is a programming mistake, so throw. */
