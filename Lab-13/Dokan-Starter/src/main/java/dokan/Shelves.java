@@ -42,4 +42,14 @@ public final class Shelves {
             Check<? super T> check) {
 
         List<T> result = new ArrayList<>();
+        for (int i = 0; i < shelf.size(); i++) {
+            T item = shelf.get(i);
+
+            if (check.test(item)) {
+                result.add(item);
+            }
+        }
+
+        return result;
+    }
 
