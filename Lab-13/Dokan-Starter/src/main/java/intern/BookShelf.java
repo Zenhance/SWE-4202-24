@@ -6,9 +6,7 @@ import shop.Book;
  * THE INTERN'S BOOK SHELF — copy one of two.
  *
  * <p>This is the copy somebody remembered to fix: see the line marked FIXED, which
- * closes the gap after a removal. {@link SnackShelf} is the same thirty lines
- * <em>without</em> that fix, because it is a copy, not another instance of the same
- * class.
+ * closes the gap after a removal.
  */
 public class BookShelf {
 
@@ -23,6 +21,7 @@ public class BookShelf {
         if (count == slots.length) {
             return false;
         }
+
         slots[count++] = book;
         return true;
     }
@@ -38,22 +37,25 @@ public class BookShelf {
     public boolean remove(String name) {
         for (int i = 0; i < count; i++) {
             if (slots[i].name().equals(name)) {
-                // FIXED: shift the rest down and shrink, so no hole is left behind.
                 for (int j = i; j < count - 1; j++) {
                     slots[j] = slots[j + 1];
                 }
                 slots[--count] = null;
+
                 return true;
             }
         }
+
         return false;
     }
 
     public int totalPriceTaka() {
         int total = 0;
+
         for (int i = 0; i < count; i++) {
             total += slots[i].priceTaka();
         }
+
         return total;
     }
 }
