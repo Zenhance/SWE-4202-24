@@ -1,5 +1,6 @@
 package dokan;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -22,8 +23,25 @@ public final class Shelves {
 
     /** The cheapest item on the shelf, or an empty box if the shelf is empty. */
     public static <T extends Item> Box<T> cheapest(Shelf<T> shelf) {
-        throw new UnsupportedOperationException("TODO: Shelves.cheapest");
+
+        if (shelf.isEmpty()) {
+            return Box.empty();
+        }
+
+        T cheapest = shelf.get(0);
+
+        for (int i = 1; i < shelf.size(); i++) {
+            T current = shelf.get(i);
+
+            if (current.priceTaka() < cheapest.priceTaka()) {
+                cheapest = current;
+            }
+        }
+
+        return Box.of(cheapest);
     }
+
+
 
     /**
      * The items on the shelf that pass the check, in shelf order.
@@ -32,10 +50,12 @@ public final class Shelves {
      * items, so a check written for any {@code Item} works perfectly well on a shelf
      * of Books. Writing {@code Check<T>} here would reject that.
      */
-    public static <T extends Item> List<T> keep(Shelf<T> shelf, Check<? super T> check) {
+    public static <T extends Item> List<T> keep(
+            Shelf<T> shelf,
+            Check<? super T> check) {
+
         throw new UnsupportedOperationException("TODO: Shelves.keep");
     }
-
     /**
      * The largest of the values.
      *
