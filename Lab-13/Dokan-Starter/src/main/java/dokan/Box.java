@@ -34,9 +34,9 @@ public final class Box<T> {
     }
 
     /** An empty box. */
-    public static <T> Box<T> empty() {
+    public static <T> Box<T> empty() throws IllegalStateException {
 
-        throw new UnsupportedOperationException("TODO: Box.empty");
+        throw new IllegalStateException("");
     }
 
     public boolean isEmpty() {
