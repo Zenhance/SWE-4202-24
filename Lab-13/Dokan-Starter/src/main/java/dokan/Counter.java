@@ -38,6 +38,14 @@ public final class Counter<T> {
 
     /** The value seen most often, or an empty box if nothing has been counted yet. */
     public Box<T> mostCommon() {
+        if(counts.isEmpty()) {
+            return Box.empty();
+        }
+        T bestValue=null;
+        int bestCount=-1;
+        for(Map.Entry<T,Integer>entry:counts.entrySet()) {
+
+        }
         throw new UnsupportedOperationException("TODO: Counter.mostCommon");
     }
 }
