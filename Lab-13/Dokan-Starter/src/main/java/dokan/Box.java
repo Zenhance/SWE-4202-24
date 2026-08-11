@@ -1,5 +1,7 @@
 package dokan;
 
+import com.sun.source.tree.BreakTree;
+
 /**
  * TODO (step 1). A small box that holds either one value of type {@code T}, or
  * nothing at all.
@@ -25,9 +27,14 @@ public final class Box<T> {
   private final T value;
   private final boolean present;
 
-  private box(T value,boolean present){
+  private Box(T value,boolean present){
   this.value=value;
   this.present=present;
   }
+
+  public static <T>Box<T>of(T value){
+      return new Box<>(value,true);
+  }
+
 }
 
