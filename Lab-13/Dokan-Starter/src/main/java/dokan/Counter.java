@@ -1,6 +1,6 @@
 package dokan;
 import java.util.HashMap;
-import java.util.Map
+import java.util.Map;
 /**
  * TODO (step 3). Counts how many times each value has been seen.
  *
@@ -37,6 +37,19 @@ return counts.size();
 
     /** The value seen most often, or an empty box if nothing has been counted yet. */
     public Box<T> mostCommon() {
-        throw new UnsupportedOperationException("TODO: Counter.mostCommon");
+        if (counts.isEmpty()) {
+            return Box.empty();
+        }
+        T best = null;
+        int highest = -1;
+        for (Map.Entry<T, Integer> entry : counts.entrySet()) {
+            if (entry.getValue() > highest) {
+                highest = entry.getValue();
+
+                best = entry.getKey();
+            }
+        }
+        return Box.of(best);
+
     }
 }
