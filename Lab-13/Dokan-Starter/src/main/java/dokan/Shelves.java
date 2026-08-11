@@ -52,4 +52,21 @@ public final class Shelves {
 
         return result;
     }
+    public static <T extends Comparable<T>> T max(List<T> values) {
+
+        if (values.isEmpty()) {
+            throw new IllegalArgumentException("List is empty");
+        }
+
+        T maximum = values.get(0);
+
+        for (int i = 1; i < values.size(); i++) {
+            T current = values.get(i);
+
+            if (current.compareTo(maximum) > 0) {
+                maximum = current;
+            }
+        }
+        return maximum;
+    }
 
