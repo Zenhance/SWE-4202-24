@@ -42,15 +42,16 @@ public final class Box<T> {
 
 
     /** An empty box. */
+    @SuppressWarnings("unchecked")
     public static <T> Box<T> empty() {
-        throw new UnsupportedOperationException("TODO: Box.empty");
+        return (Box<T>) EMPTY;
     }
-
-
 
     public boolean isEmpty() {
-        throw new UnsupportedOperationException("TODO: Box.isEmpty");
+        return value == null;
     }
+
+
 
 
 
