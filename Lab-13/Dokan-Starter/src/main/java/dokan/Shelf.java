@@ -71,7 +71,8 @@ public final class Shelf<T extends Item> {
     }
 
     public boolean isEmpty() {
-        throw new UnsupportedOperationException("TODO: Shelf.isEmpty");
+//        throw new UnsupportedOperationException("TODO: Shelf.isEmpty");
+        return items().isEmpty();
     }
 
     public boolean contains(String name) {
