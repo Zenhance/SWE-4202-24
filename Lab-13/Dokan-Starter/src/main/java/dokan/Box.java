@@ -50,12 +50,12 @@ public final class Box<T> {
     }
 
     /** The value inside, or {@code fallback} if the box is empty. */
-    public T orElse(T fallback) {
-        throw new UnsupportedOperationException("TODO: Box.orElse");
+    public T orElse(T fallback){
+        return isEmpty()? fallback: value;
     }
 
     @Override
     public String toString() {
-        throw new UnsupportedOperationException("TODO: Box.toString");
+        return isEmpty()? "box is empty":"Box: ("+ value +")";
     }
 }
