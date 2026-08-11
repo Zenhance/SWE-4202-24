@@ -63,15 +63,19 @@ return capacity;
     }
 
     public boolean isFull() {
-        throw new UnsupportedOperationException("TODO: Shelf.isFull");
+return size()==capacity;
     }
 
     public boolean isEmpty() {
-        throw new UnsupportedOperationException("TODO: Shelf.isEmpty");
+return items.isEmpty();
     }
-
     public boolean contains(String name) {
-        throw new UnsupportedOperationException("TODO: Shelf.contains");
+      for(T item:items){
+          if(item.name().equals(name)){
+              return true;
+          }
+      }
+      return false;
     }
 
     /** Takes the first item with this name off the shelf. True if one was there. */
