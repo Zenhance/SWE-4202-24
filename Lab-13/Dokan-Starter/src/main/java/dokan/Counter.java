@@ -1,4 +1,6 @@
 package dokan;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * TODO (step 3). Counts how many times each value has been seen.
@@ -17,6 +19,8 @@ package dokan;
  * </ul>
  */
 public final class Counter<T> {
+    private final List<T> values;
+    private final List<Integer> count;
 
     /** Records one more sighting of {@code value}. */
     public void add(T value) {
