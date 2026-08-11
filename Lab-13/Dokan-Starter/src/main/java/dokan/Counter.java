@@ -31,6 +31,9 @@ public final class Counter<T> {
     public void add(T value) {
 
        for(int i=0;i<values.size();i++){
+           if(values.get(i).equals(value)){
+
+           }
 
        };
     }
