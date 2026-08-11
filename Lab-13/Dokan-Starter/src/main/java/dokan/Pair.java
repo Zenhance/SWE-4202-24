@@ -10,21 +10,25 @@ import java.util.Objects;
  * fields, no casts, no {@code Object} anywhere. Only {@link #swapped()} is left for
  * you — and it is the interesting one.
  */
-public final class Pair<A, B> {
+public final class Pair<A, B>
+{
 
     private final A first;
     private final B second;
 
-    public Pair(A first, B second) {
+    public Pair(A first, B second)
+    {
         this.first = Objects.requireNonNull(first, "first");
         this.second = Objects.requireNonNull(second, "second");
     }
 
-    public A first() {
+    public A first()
+    {
         return first;
     }
 
-    public B second() {
+    public B second()
+    {
         return second;
     }
 
@@ -35,12 +39,14 @@ public final class Pair<A, B> {
      * as a {@code Pair<Integer, String>} — the type parameters swap places along with
      * the values, and the compiler will hold you to it. The body is one line.
      */
-    public Pair<B, A> swapped() {
-        throw new UnsupportedOperationException("TODO: Pair.swapped");
+    public Pair<B, A> swapped()
+    {
+        return new Pair<>(second,first);
     }
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         return "(" + first + ", " + second + ")";
     }
 }
