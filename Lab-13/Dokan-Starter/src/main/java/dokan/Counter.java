@@ -41,9 +41,12 @@ public final class Counter<T> {
     /** How many times {@code value} has been added. Zero if never. */
     public int count(T value) {
         for(int i=0;i<values.size();i++){
+            if(values.get(i).equals(value)){
+
+            }
 
 
-        };
+        }
     }
 
     /** How many different values have been counted. */
