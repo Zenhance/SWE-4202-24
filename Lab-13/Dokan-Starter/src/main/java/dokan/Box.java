@@ -38,6 +38,8 @@ public final class Box<T> {
   public static <T>Box<T>empty(){
       return new Box<>(null,false);
   }
-
+  public boolean isEmpty(){
+      return !present;
+  }
 }
 
