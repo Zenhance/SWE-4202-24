@@ -54,6 +54,8 @@ public final class Counter<T> {
 
     /** The value seen most often, or an empty box if nothing has been counted yet. */
     public Box<T> mostCommon() {
-        throw new UnsupportedOperationException("TODO: Counter.mostCommon");
+
+        if(values.isEmpty()) return Box.empty();
+
     }
 }
