@@ -7,11 +7,7 @@ import kenakata.catalog.ExpressHandling;
 import kenakata.catalog.Seller;
 import kenakata.catalog.StockedGood;
 import kenakata.exceptions.CheckoutException;
-import kenakata.order.Coupon;
-import kenakata.order.DeliveryCalculator;
-import kenakata.order.Order;
-import kenakata.order.PriceBreakdown;
-import kenakata.order.Zone;
+import kenakata.order.*;
 import kenakata.payment.CardPayment;
 import kenakata.payment.CashOnDeliveryPayment;
 import kenakata.payment.MobileWalletPayment;
@@ -91,7 +87,7 @@ public final class Main {
         try {
             order3.place(new CashOnDeliveryPayment(), today);
             System.out.println("Order 3 placed.");
-        } catch (CheckoutException refused) {
+        } catch ( CheckoutException refused) {
             // A refused checkout throws; nothing was reserved or charged. We carry on.
             System.out.println("Order 3 refused: " + refused.getMessage());
             System.out.println("Refrigerator stock is still " + fridge.remaining());
