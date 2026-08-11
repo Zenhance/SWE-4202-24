@@ -1,5 +1,8 @@
 package dokan;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * TODO (step 3). Counts how many times each value has been seen.
  *
@@ -17,6 +20,8 @@ package dokan;
  * </ul>
  */
 public final class Counter<T> {
+
+
 
     /** Records one more sighting of {@code value}. */
     public void add(T value) {

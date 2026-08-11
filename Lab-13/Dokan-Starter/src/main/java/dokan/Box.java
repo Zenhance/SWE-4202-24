@@ -30,7 +30,11 @@ public final class Box<T> {
 
     /** A box holding {@code value}. Refuse null: a full box holding nothing is a lie. */
     public static <T> Box<T> of(T value) {
-        throw new UnsupportedOperationException("TODO: Box.of");
+        if(value==null){
+            throw new IllegalArgumentException("value cant be empty");
+        }
+        return new Box<>(value);
+        //throw new UnsupportedOperationException("TODO: Box.of");
     }
 
     /** An empty box. */
@@ -64,6 +68,8 @@ public final class Box<T> {
 
     @Override
     public String toString() {
-        throw new UnsupportedOperationException("TODO: Box.toString");
+
+        return isEmpty()? "Box(empty)" : "Box(" + value + ")";
+        //throw new UnsupportedOperationException("TODO: Box.toString");
     }
 }
