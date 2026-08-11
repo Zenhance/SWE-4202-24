@@ -57,7 +57,8 @@ public final class Shelf<T extends Item> {
     }
 
     public int capacity() {
-        throw new UnsupportedOperationException("TODO: Shelf.capacity");
+        return capacity;
+
     }
 
     public boolean isFull() {
