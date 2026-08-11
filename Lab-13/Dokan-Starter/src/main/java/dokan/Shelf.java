@@ -98,6 +98,6 @@ public final class Shelf<T extends Item> {
     @Override
     public String toString() {
         // The test cases print shelves, so this should look like a list.
-        throw new UnsupportedOperationException("TODO: Shelf.toString");
+        return items().toString();
     }
 }
