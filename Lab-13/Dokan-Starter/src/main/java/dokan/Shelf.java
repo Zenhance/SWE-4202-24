@@ -36,7 +36,8 @@ public final class Shelf<T extends Item> {
     {
         this.capacity=capacity;
        if(capacity<1)
-           throw new IllegalArgumentException("");
+           throw new IllegalArgumentException("Capacity can't be less than one");
+
     }
 
     /** Puts an item on the shelf. Returns false, without adding, if the shelf is full. */
