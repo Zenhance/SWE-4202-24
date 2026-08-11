@@ -1,5 +1,6 @@
 package dokan;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -29,43 +30,56 @@ import java.util.List;
  * caller change the shelf.
  */
 public final class Shelf<T extends Item> {
+    List<T> items = new ArrayList<>();
+    private final int capacity;
 
     public Shelf(int capacity) {
-        throw new UnsupportedOperationException("TODO: Shelf constructor");
+        this.capacity = capacity;
     }
 
     /** Puts an item on the shelf. Returns false, without adding, if the shelf is full. */
     public boolean add(T item) {
-        throw new UnsupportedOperationException("TODO: Shelf.add");
+        if(items.size() == capacity) return false;
+        items.add(item);
+        return true;
     }
 
     public T get(int index) {
-        throw new UnsupportedOperationException("TODO: Shelf.get");
+        return items.get(index);
     }
 
     public int size() {
-        throw new UnsupportedOperationException("TODO: Shelf.size");
+        return items.size();
     }
 
     public int capacity() {
-        throw new UnsupportedOperationException("TODO: Shelf.capacity");
+        return capacity;
     }
 
     public boolean isFull() {
-        throw new UnsupportedOperationException("TODO: Shelf.isFull");
+        if(items.size() == capacity) return true;
+        return false;
     }
 
     public boolean isEmpty() {
-        throw new UnsupportedOperationException("TODO: Shelf.isEmpty");
+        if(items.size() == 0) return true;
+        return false;
     }
 
     public boolean contains(String name) {
-        throw new UnsupportedOperationException("TODO: Shelf.contains");
+        for(T item : items) {
+            if(item.name().equals(name)) return true;
+        }
+        return false;
     }
 
     /** Takes the first item with this name off the shelf. True if one was there. */
     public boolean remove(String name) {
-        throw new UnsupportedOperationException("TODO: Shelf.remove");
+        if(contains(name)){
+            items.remove(name);
+            return true;
+        }
+        return false;
     }
 
     /** What everything on the shelf is worth. This is the method the bound pays for. */
