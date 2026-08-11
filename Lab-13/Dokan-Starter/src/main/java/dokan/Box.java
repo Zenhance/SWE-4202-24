@@ -1,5 +1,7 @@
 package dokan;
 
+import java.util.Objects;
+
 /**
  * TODO (step 1). A small box that holds either one value of type {@code T}, or
  * nothing at all.
@@ -34,14 +36,15 @@ public final class Box<T> {
      * A box holding {@code value}. Refuse null: a full box holding nothing is a lie.
      */
     public static <T> Box<T> of(T value) {
-        throw new UnsupportedOperationException("TODO: Box.of");
+        Objects.requireNonNull(value, "Box value cannot be null");
+        return new Box<>(value);
     }
 
     /**
      * An empty box.
      */
     public static <T> Box<T> empty() {
-        throw new UnsupportedOperationException("TODO: Box.empty");
+        return (Box<T>) EMPTY;
     }
 
     public boolean isEmpty() {
