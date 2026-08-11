@@ -16,7 +16,9 @@ public class StockedGood extends CatalogItem{
     }
 
 
-
+    public int getWeight() {
+        return weight;
+    }
     public void reserve(int amount) throws OutOfStockException {
          {
             if (amount <= 0) throw new IllegalArgumentException("Amount must be positive");

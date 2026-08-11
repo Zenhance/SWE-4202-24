@@ -7,6 +7,8 @@ public class Line {
     CatalogItem item;
     Chargeable charge;
     int quantity;
+    public boolean insurable=false;
+
     public Line(CatalogItem item, int quantity) {
         if(quantity<=0) throw new IllegalArgumentException();
         this.item = item;
