@@ -42,12 +42,15 @@ public final class Box<T> {
     }
 
     public boolean isEmpty() {
-        return value=="";
+        return value==null;
     }
 
     /** The value inside. Opening an empty box is a programming mistake, so throw. */
     public T get() {
-        throw new UnsupportedOperationException("TODO: Box.get");
+        if() {
+            throw new UnsupportedOperationException("TODO: Box.get");
+        }
+        return value;
     }
 
     /** The value inside, or {@code fallback} if the box is empty. */
