@@ -80,22 +80,32 @@ return items.isEmpty();
 
     /** Takes the first item with this name off the shelf. True if one was there. */
     public boolean remove(String name) {
-        throw new UnsupportedOperationException("TODO: Shelf.remove");
+  for(int i=0;i<items.size();i++){
+      if(items.get(i).name().equals(name)){
+          items.remove(i);
+          return true;
+      }
+        }
+  return false;
     }
 
     /** What everything on the shelf is worth. This is the method the bound pays for. */
     public int totalPriceTaka() {
-        throw new UnsupportedOperationException("TODO: Shelf.totalPriceTaka");
+int total=0;
+for(T item:items){
+    total+=item.priceTaka();
+}
+return total;
     }
 
     /** The items, as a list the caller cannot use to change the shelf. */
     public List<T> items() {
-        throw new UnsupportedOperationException("TODO: Shelf.items");
+return Collections.unmodifiableList(items);
     }
 
     @Override
     public String toString() {
         // The test cases print shelves, so this should look like a list.
-        throw new UnsupportedOperationException("TODO: Shelf.toString");
+        return items.toString();
     }
 }
