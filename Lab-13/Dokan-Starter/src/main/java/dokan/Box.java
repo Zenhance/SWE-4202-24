@@ -39,12 +39,12 @@ public final class Box<T> {
     }
 
     public boolean isEmpty() {
-        value==null;
+        return value==null;
     }
 
     /** The value inside. Opening an empty box is a programming mistake, so throw. */
     public T get() {
-        if isEmpty(){
+        if (isEmpty()){
             throw new IllegalStateException("Box is empty");
         }
         return value;
@@ -52,7 +52,7 @@ public final class Box<T> {
 
     /** The value inside, or {@code fallback} if the box is empty. */
     public T orElse(T fallback) {
-        if isEmpty(){
+        if (isEmpty()){
             return fallback;
         }
         return value;
@@ -60,7 +60,7 @@ public final class Box<T> {
 
     @Override
     public String toString() {
-        if isEmpty(){
+        if (isEmpty()){
             return "Box is empty";
         }
         return "Box[" + value + "]";
