@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="79c88fef-0012-4e90-979c-ba967dc6d07e" name="Changes" comment=".">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/checks/CompileFailWitnesses.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/checks/DokanCases.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dokan/Box.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dokan/Check.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dokan/Counter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dokan/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dokan/Pair.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dokan/Shelf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dokan/Shelves.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/intern/BookShelf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/intern/InternDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/intern/ObjectShelf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/intern/SnackShelf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/shop/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/shop/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/shop/Sample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/shop/SimCard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/shop/Snack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/checks/DokanTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Dokan-Starter" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Dokan-Starter" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Dokan-Starter" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="application" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="3HktEPbAssvRIFDyFPp5q20GLtE" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Merging 39-riju",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/cse/IdeaProjects/SWE-4202-24/Lab-13/Dokan-Starter",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="79c88fef-0012-4e90-979c-ba967dc6d07e" name="Changes" comment="" />
+      <created>1786423781484</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1786423781484</updated>
+    </task>
+    <task id="LOCAL-00001" summary=".">
+      <option name="closed" value="true" />
+      <created>1786423937045</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1786423937045</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
+  </component>
+</project>
