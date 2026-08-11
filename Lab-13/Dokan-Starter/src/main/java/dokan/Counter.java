@@ -34,14 +34,15 @@ public final class Counter<T> {
            if(values.get(i).equals(value)){
                count.set(i,count.get(i)+1);
            }
-
-       }
+       }values.add(value);
+       count.add(1);
     }
 
     /** How many times {@code value} has been added. Zero if never. */
     public int count(T value) {
         for(int i=0;i<values.size();i++){
             if(values.get(i).equals(value)){
+
 
             }
 
