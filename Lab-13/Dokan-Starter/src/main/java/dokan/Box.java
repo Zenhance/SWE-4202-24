@@ -42,7 +42,7 @@ public final class Box<T> {
     }
 
     public boolean isEmpty() {
-        throw new UnsupportedOperationException("TODO: Box.isEmpty");
+        return value=="";
     }
 
     /** The value inside. Opening an empty box is a programming mistake, so throw. */
