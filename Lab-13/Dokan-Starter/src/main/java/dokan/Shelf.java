@@ -31,12 +31,14 @@ import java.util.List;
 public final class Shelf<T extends Item> {
     private final Object[] slot;
     private int count=0;
+    private int meow;
 
     public Shelf(int capacity) {
         if(capacity<=0)
            throw new IllegalArgumentException("Invalid");
         this.slot = new Object[capacity];
         this.count=0;
+        this.meow=capacity;
 
     }
 
@@ -63,7 +65,9 @@ public final class Shelf<T extends Item> {
     }
 
     public boolean isFull() {
-        throw new UnsupportedOperationException("TODO: Shelf.isFull");
+        if(count<=meow)
+            return true;
+        else return false;
     }
 
     public boolean isEmpty() {
@@ -71,12 +75,23 @@ public final class Shelf<T extends Item> {
     }
 
     public boolean contains(String name) {
-        throw new UnsupportedOperationException("TODO: Shelf.contains");
+       for(int i=0;i<count;i++){
+           if(((Item)slot[i]).name().equals(name))
+               return true;
+       }return false;
     }
 
     /** Takes the first item with this name off the shelf. True if one was there. */
     public boolean remove(String name) {
-        throw new UnsupportedOperationException("TODO: Shelf.remove");
+        for(int i=0;i<count;i++){
+            if(((Item)slot[i]).name().equals(name)){
+                for(int j=i;j<count-1;j++){
+                    slot[j]=slot[j+1];
+                }
+                slot[count--]=null;
+                        return true;
+            }
+        }return false;
     }
 
     /** What everything on the shelf is worth. This is the method the bound pays for. */
