@@ -1,6 +1,8 @@
 package dokan;
 
 import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * TODO (step 2). A shelf of fixed capacity holding items of one kind.
@@ -29,12 +31,20 @@ import java.util.List;
  * caller change the shelf.
  */
 public final class Shelf<T extends Item> {
+    private final int capacity;
+    private final List<T> items;
 
     public Shelf(int capacity) {
-        throw new UnsupportedOperationException("TODO: Shelf constructor");
+        if (capacity < 1) {
+            throw new IllegalArgumentException("Capacity must be at least 1");
+        }
+        this.capacity = capacity;
+        this.items = new ArrayList<>();
     }
 
-    /** Puts an item on the shelf. Returns false, without adding, if the shelf is full. */
+    /**
+     * Puts an item on the shelf. Returns false, without adding, if the shelf is full.
+     */
     public boolean add(T item) {
         throw new UnsupportedOperationException("TODO: Shelf.add");
     }
@@ -63,17 +73,23 @@ public final class Shelf<T extends Item> {
         throw new UnsupportedOperationException("TODO: Shelf.contains");
     }
 
-    /** Takes the first item with this name off the shelf. True if one was there. */
+    /**
+     * Takes the first item with this name off the shelf. True if one was there.
+     */
     public boolean remove(String name) {
         throw new UnsupportedOperationException("TODO: Shelf.remove");
     }
 
-    /** What everything on the shelf is worth. This is the method the bound pays for. */
+    /**
+     * What everything on the shelf is worth. This is the method the bound pays for.
+     */
     public int totalPriceTaka() {
         throw new UnsupportedOperationException("TODO: Shelf.totalPriceTaka");
     }
 
-    /** The items, as a list the caller cannot use to change the shelf. */
+    /**
+     * The items, as a list the caller cannot use to change the shelf.
+     */
     public List<T> items() {
         throw new UnsupportedOperationException("TODO: Shelf.items");
     }
