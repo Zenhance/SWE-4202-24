@@ -13,15 +13,6 @@ public abstract class Item implements CatalogItem {
     public Item(String sku, String title, long unitPrice,
                 int stock, Seller seller) {
 
-        if (sku == null || sku.isBlank()
-                || title == null || title.isBlank()
-                || unitPrice < 0
-                || stock < 0
-                || seller == null) {
-
-            throw new IllegalArgumentException();
-        }
-
         this.sku = sku;
         this.title = title;
         this.unitPrice = unitPrice;
@@ -47,25 +38,6 @@ public abstract class Item implements CatalogItem {
     @Override
     public Seller seller() {
         return seller;
-    }
-
-    @Override
-    public int remaining() {
-        return stock;
-    }
-
-    @Override
-    public void reserve(int quantity) throws OutOfStockException {
-
-        if (quantity <= 0) {
-            throw new IllegalArgumentException();
-        }
-
-        if (quantity > stock) {
-            throw new OutOfStockException();
-        }
-
-        stock -= quantity;
     }
 
     @Override

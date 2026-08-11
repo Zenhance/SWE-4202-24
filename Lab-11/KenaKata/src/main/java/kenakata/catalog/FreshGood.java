@@ -41,16 +41,14 @@ public class FreshGood extends Item implements Weighted, ColdChain, Insurable, R
         return (long)Math.ceil(n * 0.05);
     }
 
-    public long insurableValue(int quantity) {
-        if (quantity <= 0) {
-            throw new IllegalArgumentException();
-        }
+    public void reserve(int n){
 
-        return unitCharge() * quantity;
+    }
+    public int remaining(){
+        return 0;
     }
 
-    public int returnWindow() {
-        return 2;
+    public long insurableValue(){
+        return 0;
     }
-
 }

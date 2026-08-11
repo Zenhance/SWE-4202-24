@@ -39,12 +39,5 @@ public class StockedGood extends Item{
         return title();
     }
 
-    public long insurableValue(int quantity) {
-        return unitCharge() * quantity;
-    }
-
-    public int returnWindow() {
-        return 7;
-    }
 
 }

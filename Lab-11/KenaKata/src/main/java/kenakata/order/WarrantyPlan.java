@@ -29,7 +29,5 @@ public class WarrantyPlan implements Chargeable {
         return "Warranty for " + coveredItem.title();
     }
 
-    public CatalogItem coveredItem() {
-        return coveredItem;
-    }
+
 }

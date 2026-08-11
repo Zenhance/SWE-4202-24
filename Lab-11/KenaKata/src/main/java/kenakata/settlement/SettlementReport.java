@@ -1,4 +1,5 @@
 package kenakata.settlement;
+import kenakata.catalog.Seller;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,6 +20,16 @@ public class SettlementReport {
 
     public long platformRevenue() {
         return platformRevenue;
+    }
+
+
+    public SellerPayout forSeller(Seller seller){
+        for(SellerPayout payout : payouts){
+            if(payout.seller().equals(seller)){
+                return payout;
+            }
+        }
+        return new SellerPayout(seller, 0, 0, 0);
     }
 
 }
