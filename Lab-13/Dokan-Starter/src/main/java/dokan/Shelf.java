@@ -34,7 +34,7 @@ public final class Shelf<T extends Item> {
     private final List<T> items;
 
 
-    public Shelf(int capacity,List<T> items)
+    public Shelf(int capacity)
     {
         this.capacity=capacity;
        if(capacity<1)
