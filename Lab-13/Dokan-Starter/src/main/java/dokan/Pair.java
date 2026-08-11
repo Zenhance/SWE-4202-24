@@ -35,8 +35,9 @@ public final class Pair<A, B> {
      * as a {@code Pair<Integer, String>} — the type parameters swap places along with
      * the values, and the compiler will hold you to it. The body is one line.
      */
-    public Pair<B, A> swapped() {
-        throw new UnsupportedOperationException("TODO: Pair.swapped");
+    public Pair<B, A> swapped()
+    {
+        return new Pair<>(second,first);
     }
 
     @Override
