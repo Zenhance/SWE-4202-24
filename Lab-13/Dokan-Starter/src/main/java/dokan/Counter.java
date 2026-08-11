@@ -1,5 +1,8 @@
 package dokan;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * TODO (step 3). Counts how many times each value has been seen.
  *
@@ -18,15 +21,17 @@ package dokan;
  */
 public final class Counter<T> {
 
+    private final Map<T, Integer> counts = new HashMap<>();
     /** Records one more sighting of {@code value}. */
     public void add(T value) {
-        throw new UnsupportedOperationException("TODO: Counter.add");
+        counts.merge(value, 1, Integer::sum);
     }
 
     /** How many times {@code value} has been added. Zero if never. */
     public int count(T value) {
-        throw new UnsupportedOperationException("TODO: Counter.count");
+        return counts.getOrDefault(value, 0);
     }
+
 
     /** How many different values have been counted. */
     public int distinct() {
