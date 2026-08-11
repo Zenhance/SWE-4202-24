@@ -47,7 +47,7 @@ public final class Box<T> {
 
     /** The value inside. Opening an empty box is a programming mistake, so throw. */
     public T get() {
-        if() {
+        if(isEmpty()) {
             throw new UnsupportedOperationException("TODO: Box.get");
         }
         return value;
@@ -55,7 +55,9 @@ public final class Box<T> {
 
     /** The value inside, or {@code fallback} if the box is empty. */
     public T orElse(T fallback) {
-        throw new UnsupportedOperationException("TODO: Box.orElse");
+        if(isEmpty()) {
+            throw new UnsupportedOperationException("TODO: Box.orElse");
+        }
     }
 
     @Override
