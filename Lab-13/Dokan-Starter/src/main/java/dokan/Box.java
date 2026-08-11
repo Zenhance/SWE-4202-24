@@ -22,6 +22,14 @@ package dokan;
  * </ul>
  */
 public final class Box<T> {
+    private static boolean empty;
+    private T value;
+
+    public Box(T value) {
+        this.value = value;
+    }
+
+    public Box() {}
 
     /** A box holding {@code value}. Refuse null: a full box holding nothing is a lie. */
     public static <T> Box<T> of(T value) {
