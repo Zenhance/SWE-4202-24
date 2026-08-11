@@ -29,8 +29,11 @@ import java.util.List;
  * caller change the shelf.
  */
 public final class Shelf<T extends Item> {
+    private final int capacity;
 
-    public Shelf(int capacity) {
+
+    public Shelf(int capacity)
+    { this.capacity=capacity;
         throw new UnsupportedOperationException("TODO: Shelf constructor");
     }
 
