@@ -48,7 +48,8 @@ public final class Shelf<T extends Item> {
     }
 
     public T get(int index) {
-        throw new UnsupportedOperationException("TODO: Shelf.get");
+        return items.get(index);
+
     }
 
     public int size() {
@@ -62,7 +63,9 @@ public final class Shelf<T extends Item> {
     }
 
     public boolean isFull() {
-        throw new UnsupportedOperationException("TODO: Shelf.isFull");
+        return items.size()>=capacity;
+
+
     }
 
     public boolean isEmpty() {
