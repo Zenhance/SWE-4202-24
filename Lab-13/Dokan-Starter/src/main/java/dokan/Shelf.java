@@ -53,7 +53,7 @@ public final class Shelf<T extends Item> {
     }
 
     public T get(int index) {
-        throw new UnsupportedOperationException("TODO: Shelf.get");
+        return items.get(index);
     }
 
     public int size() {
