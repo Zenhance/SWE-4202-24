@@ -1,6 +1,7 @@
 package dokan;
 
 import java.util.List;
+import java.util.ArrayList;
 
 /**
  * TODO (step 2). A shelf of fixed capacity holding items of one kind.
@@ -29,14 +30,22 @@ import java.util.List;
  * caller change the shelf.
  */
 public final class Shelf<T extends Item> {
+    private final List<T> items;
+    private final int capacity;
 
     public Shelf(int capacity) {
-        throw new UnsupportedOperationException("TODO: Shelf constructor");
+        this.capacity = capacity;
+        this.items = new ArrayList<>();
     }
 
     /** Puts an item on the shelf. Returns false, without adding, if the shelf is full. */
     public boolean add(T item) {
-        throw new UnsupportedOperationException("TODO: Shelf.add");
+        if (items.size() >= capacity) {
+            return false;
+        }
+
+        items.add(item);
+        return true;
     }
 
     public T get(int index) {
@@ -44,7 +53,7 @@ public final class Shelf<T extends Item> {
     }
 
     public int size() {
-        throw new UnsupportedOperationException("TODO: Shelf.size");
+        return items.size();
     }
 
     public int capacity() {
@@ -70,7 +79,13 @@ public final class Shelf<T extends Item> {
 
     /** What everything on the shelf is worth. This is the method the bound pays for. */
     public int totalPriceTaka() {
-        throw new UnsupportedOperationException("TODO: Shelf.totalPriceTaka");
+        int total = 0;
+
+        for (T item : items) {
+            total += item.priceTaka();
+        }
+
+        return total;
     }
 
     /** The items, as a list the caller cannot use to change the shelf. */
