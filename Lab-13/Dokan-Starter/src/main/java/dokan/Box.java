@@ -29,17 +29,24 @@ public final class Box<T> {
     /** A box holding {@code value}. Refuse null: a full box holding nothing is a lie. */
     public static <T> Box<T> of(T value) {
         throw new UnsupportedOperationException("TODO: Box.of");
+
     }
 
     /** An empty box. */
     public static <T> Box<T> empty() {
-        throw new UnsupportedOperationException("TODO: Box.empty");
+//        throw new UnsupportedOperationException("TODO: Box.empty");
+        return new Box<>(null);
     }
 
     public boolean isEmpty() {
 
-        throw new UnsupportedOperationException("TODO: Box.isEmpty");
-
+//        throw new UnsupportedOperationException("TODO: Box.isEmpty");
+            if(value == null){
+                return true;
+            }
+            else{
+                return false;
+            }
     }
 
     /** The value inside. Opening an empty box is a programming mistake, so throw. */
