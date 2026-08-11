@@ -22,6 +22,11 @@ public final class Counter<T> {
     private final List<T> values;
     private final List<Integer> count;
 
+    public Counter(){
+        values = new ArrayList<>();
+        count =new ArrayList<>();
+    }
+
     /** Records one more sighting of {@code value}. */
     public void add(T value) {
         throw new UnsupportedOperationException("TODO: Counter.add");

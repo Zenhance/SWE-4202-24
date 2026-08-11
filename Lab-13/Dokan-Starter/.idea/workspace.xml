@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79c88fef-0012-4e90-979c-ba967dc6d07e" name="Changes" comment="shelf class fixes" />
+    <list default="true" id="79c88fef-0012-4e90-979c-ba967dc6d07e" name="Changes" comment="counter" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -363,7 +363,31 @@
       <option name="project" value="LOCAL" />
       <updated>1786428214130</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="shelf class fixes">
+      <option name="closed" value="true" />
+      <created>1786428335786</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1786428335787</updated>
+    </task>
+    <task id="LOCAL-00032" summary="shelf class fixes">
+      <option name="closed" value="true" />
+      <created>1786428400951</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1786428400951</updated>
+    </task>
+    <task id="LOCAL-00033" summary="counter">
+      <option name="closed" value="true" />
+      <created>1786428761767</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1786428761767</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -389,6 +413,7 @@
     <MESSAGE value="shelf getindex fix" />
     <MESSAGE value="shelf method fixes" />
     <MESSAGE value="shelf class fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="shelf class fixes" />
+    <MESSAGE value="counter" />
+    <option name="LAST_COMMIT_MESSAGE" value="counter" />
   </component>
 </project>
