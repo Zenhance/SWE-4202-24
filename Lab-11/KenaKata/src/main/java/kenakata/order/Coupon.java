@@ -43,13 +43,5 @@ public class Coupon {
         return discount;
     }
 
-    public String code() {
-        return code;
-    }
-
-    public int percent() {
-        return percent;
-    }
-
 
 }

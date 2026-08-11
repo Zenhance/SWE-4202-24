@@ -3,7 +3,6 @@ package kenakata.order;
 import kenakata.catalog.CatalogItem;
 import kenakata.catalog.ColdChain;
 import kenakata.catalog.Insurable;
-import kenakata.catalog.Returnable;
 import kenakata.catalog.Weighted;
 import kenakata.exceptions.CheckoutException;
 import kenakata.exceptions.NotInsurableException;
@@ -26,10 +25,6 @@ public class Order {
     private int placedDay = -1;
 
     public Order(Zone zone, DeliveryCalculator deliveryCalculator) {
-        if (zone == null || deliveryCalculator == null) {
-            throw new IllegalArgumentException();
-        }
-
         this.zone = zone;
         this.deliveryCalculator = deliveryCalculator;
     }
