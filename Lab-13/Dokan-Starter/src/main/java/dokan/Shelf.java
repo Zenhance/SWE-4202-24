@@ -1,6 +1,7 @@
 package dokan;
 
 import java.util.List;
+import java.util.ArrayList;
 
 /**
  * TODO (step 2). A shelf of fixed capacity holding items of one kind.
@@ -29,8 +30,14 @@ import java.util.List;
  * caller change the shelf.
  */
 public final class Shelf<T extends Item> {
+    private final int capacity;
+    private final List<T> storage;
+
 
     public Shelf(int capacity) {
+
+        this.capacity=capacity;
+        this.storage= new ArrayList<>();
         throw new UnsupportedOperationException("TODO: Shelf constructor");
     }
 
