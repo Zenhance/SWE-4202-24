@@ -32,7 +32,9 @@ public final class Box<T> {
     public static <T> Box<T> of(T value)
     {
         if(value==null)
-        throw new NullPointerException();
+        throw new NullPointerException("Value can't be null");
+        return new Box<>(value);
+
     }
 
     /** An empty box. */
@@ -47,7 +49,8 @@ public final class Box<T> {
 
     /** The value inside. Opening an empty box is a programming mistake, so throw. */
     public T get() {
-        throw new UnsupportedOperationException("TODO: Box.get");
+
+
     }
 
     /** The value inside, or {@code fallback} if the box is empty. */
