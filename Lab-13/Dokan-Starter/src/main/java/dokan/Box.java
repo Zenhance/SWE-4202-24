@@ -35,6 +35,9 @@ public final class Box<T> {
   public static <T>Box<T>of(T value){
       return new Box<>(value,true);
   }
+  public static <T>Box<T>empty(){
+      return new Box<>(null,false);
+  }
 
 }
 
