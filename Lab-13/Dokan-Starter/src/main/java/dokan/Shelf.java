@@ -51,7 +51,8 @@ public final class Shelf<T extends Item> {
     }
 
     public int size() {
-        throw new UnsupportedOperationException("TODO: Shelf.size");
+//        throw new UnsupportedOperationException("TODO: Shelf.size");
+        return items().size();
     }
 
     public int capacity() {
