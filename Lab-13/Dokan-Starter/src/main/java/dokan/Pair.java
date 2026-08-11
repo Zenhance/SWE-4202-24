@@ -36,7 +36,7 @@ public final class Pair<A, B> {
      * the values, and the compiler will hold you to it. The body is one line.
      */
     public Pair<B, A> swapped() {
-        throw new UnsupportedOperationException("TODO: Pair.swapped");
+        return new Pair<>(second,first);
     }
 
     @Override
@@ -44,3 +44,5 @@ public final class Pair<A, B> {
         return "(" + first + ", " + second + ")";
     }
 }
+
+//generics can do this, value order and type order staying in sync. case-6 wanted value swapped and case-7 wanted type to be swapped

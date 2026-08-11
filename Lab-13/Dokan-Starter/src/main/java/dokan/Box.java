@@ -42,7 +42,7 @@ public final class Box<T> {
 
     /** The value inside. Opening an empty box is a programming mistake, so throw. */
     public T get() {
-        if(isEmpty())throw new UnsupportedOperationException("Box is empty");
+        if(isEmpty())throw new IllegalStateException("Box is empty");
         return value;
     }
 
@@ -58,3 +58,6 @@ public final class Box<T> {
 }
 //every method here didnt actually do any work and threw exception errors.
 // Every method now store, check and retrieve the value correctly instead of being empty
+
+//test-3:Unsuppor means this operation isnt supported at all. Since get() is a legal method,
+//we use illegalstate...
