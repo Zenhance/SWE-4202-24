@@ -55,24 +55,37 @@ public final class Shelf<T extends Item> {
     }
 
     public int size() {
-        throw new UnsupportedOperationException("TODO: Shelf.size");
+        return items.size();
     }
 
+
     public int capacity() {
-        throw new UnsupportedOperationException("TODO: Shelf.capacity");
+        return capacity;
     }
 
     public boolean isFull() {
-        throw new UnsupportedOperationException("TODO: Shelf.isFull");
+        return items.size() >= capacity;
     }
+
 
     public boolean isEmpty() {
-        throw new UnsupportedOperationException("TODO: Shelf.isEmpty");
+        return items.isEmpty();
     }
 
+
     public boolean contains(String name) {
-        throw new UnsupportedOperationException("TODO: Shelf.contains");
+        if (name == null) {
+            return false;
+        }
+        for (T item : items) {
+            if (item.name().equals(name)) {
+                return true;
+            }
+        }
+        return false;
     }
+
+
 
     /** Takes the first item with this name off the shelf. True if one was there. */
     public boolean remove(String name) {
