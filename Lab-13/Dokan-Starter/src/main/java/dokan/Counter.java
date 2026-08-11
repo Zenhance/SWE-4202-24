@@ -1,5 +1,8 @@
 package dokan;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 /**
  * TODO (step 3). Counts how many times each value has been seen.
  *
@@ -18,10 +21,17 @@ package dokan;
  */
 public final class Counter<T> {
 
+    private final Map<T, Integer> counts = new LinkedHashMap<>();
+
     /** Records one more sighting of {@code value}. */
     public void add(T value) {
-        throw new UnsupportedOperationException("TODO: Counter.add");
+        if (value == null) {
+            return;
+        }
+        counts.put(value, counts.getOrDefault(value, 0) + 1);
     }
+
+
 
     /** How many times {@code value} has been added. Zero if never. */
     public int count(T value) {
