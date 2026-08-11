@@ -1,5 +1,6 @@
 package kenakata.catalog;
 
+
 public class DigitalGood extends CatalogItem{
     public DigitalGood(
             String sku,
