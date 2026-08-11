@@ -50,6 +50,19 @@ public final class Counter<T> {
 
     /** The value seen most often, or an empty box if nothing has been counted yet. */
     public Box<T> mostCommon() {
-        throw new UnsupportedOperationException("TODO: Counter.mostCommon");
-    }
-}
+        if (counts.isEmpty()) {
+            return Box.empty();
+        }
+
+        T best = null;
+        int maxCount = -1;
+
+        for (Map.Entry<T, Integer> entry : counts.entrySet()) {
+            if (entry.getValue() > maxCount) {
+                maxCount = entry.getValue();
+                best = entry.getKey();
+            }
+        }
+
+        return best == null ? Box.empty() : Box.of(best);
+    }}
