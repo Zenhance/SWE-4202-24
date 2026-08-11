@@ -66,6 +66,6 @@ public final class Box<T> {
         if(isEmpty()) {
             return "Box(empty)";
         }
-        throw new UnsupportedOperationException("TODO: Box.toString");
+        return "Box(" + value + ")";
     }
 }
