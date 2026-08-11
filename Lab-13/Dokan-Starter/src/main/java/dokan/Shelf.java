@@ -46,7 +46,10 @@ public final class Shelf<T extends Item> {
      * Puts an item on the shelf. Returns false, without adding, if the shelf is full.
      */
     public boolean add(T item) {
-        throw new UnsupportedOperationException("TODO: Shelf.add");
+        if (isFull()) {
+            return false;
+        }
+        return items.add(item);
     }
 
     public T get(int index) {
