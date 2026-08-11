@@ -93,6 +93,7 @@ public final class Shelf<T extends Item> {
     /** The items, as a list the caller cannot use to change the shelf. */
     public List<T> items() {
         throw new UnsupportedOperationException("TODO: Shelf.items");
+
     }
 
     @Override
