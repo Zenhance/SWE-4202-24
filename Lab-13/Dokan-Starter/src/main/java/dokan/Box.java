@@ -25,31 +25,37 @@ import com.sun.source.tree.BreakTree;
  */
 public final class Box<T> {
   private final T value;
-  private final boolean present;
 
-  private Box(T value,boolean present){
+  private Box(T value){
   this.value=value;
-  this.present=present;
   }
 
   public static <T>Box<T>of(T value){
-      return new Box<>(value,true);
+      if (value == null) {
+          throw new NullPointerException("value");
+      }
+      return new Box<>(value);
   }
-  public static <T>Box<T>empty(){
-      return new Box<>(null,false);
-  }
-  public boolean isEmpty(){
-      return !present;
-  }
+
+    public static <T> Box<T> empty() {
+        return new Box<>(null);
+    }
+
+    public boolean isEmpty() {
+        return value == null;
+    }
+
     public T get() {
         if (isEmpty()) {
             throw new IllegalStateException("Box is empty");
         }
         return value;
     }
-  public T orElse(T fallback){
-      return isEmpty() ? fallback : value;
-  }
+
+    public T orElse(T fallback) {
+        return isEmpty() ? fallback : value;
+    }
+
     @Override
     public String toString() {
         return isEmpty() ? "Box(empty)" : "Box(" + value + ")";
