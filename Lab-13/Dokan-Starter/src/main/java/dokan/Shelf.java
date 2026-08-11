@@ -65,11 +65,11 @@ public final class Shelf<T extends Item> {
     }
 
     public boolean isFull() {
-        throw new UnsupportedOperationException("TODO: Shelf.isFull");
+        return size()==capacity;
     }
 
     public boolean isEmpty() {
-        throw new UnsupportedOperationException("TODO: Shelf.isEmpty");
+        return items.isEmpty();
     }
 
     public boolean contains(String name) {
