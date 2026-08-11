@@ -29,12 +29,18 @@ public final class Counter<T> {
 
     /** Records one more sighting of {@code value}. */
     public void add(T value) {
-        throw new UnsupportedOperationException("TODO: Counter.add");
+
+       for(int i=0;i<values.size();i++){
+
+       };
     }
 
     /** How many times {@code value} has been added. Zero if never. */
     public int count(T value) {
-        throw new UnsupportedOperationException("TODO: Counter.count");
+        for(int i=0;i<values.size();i++){
+
+
+        };
     }
 
     /** How many different values have been counted. */
