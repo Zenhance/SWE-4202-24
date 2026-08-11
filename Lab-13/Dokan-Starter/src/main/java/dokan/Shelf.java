@@ -42,9 +42,6 @@ public final class Shelf<T extends Item> {
         this.items = new ArrayList<>();
     }
 
-    public Shelf(int capacity) {
-        throw new UnsupportedOperationException("TODO: Shelf constructor");
-    }
 
     /** Puts an item on the shelf. Returns false, without adding, if the shelf is full. */
     public boolean add(T item) {
