@@ -39,7 +39,7 @@ public final class Shelf<T extends Item> {
         this.capacity=capacity;
         this.items=new ArrayList<>(capacity);
 
-        
+
     }
 
     /** Puts an item on the shelf. Returns false, without adding, if the shelf is full. */
@@ -52,7 +52,8 @@ public final class Shelf<T extends Item> {
     }
 
     public int size() {
-        throw new UnsupportedOperationException("TODO: Shelf.size");
+        return items.size();
+
     }
 
     public int capacity() {
