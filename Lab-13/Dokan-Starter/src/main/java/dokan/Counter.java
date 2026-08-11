@@ -35,9 +35,11 @@ public final class Counter<T> {
 
     /** How many times {@code value} has been added. Zero if never. */
     public int count(T value) {
-        throw new UnsupportedOperationException("TODO: Counter.count");
+        if (value == null) {
+            return 0;
+        }
+        return counts.getOrDefault(value, 0);
     }
-
     /** How many different values have been counted. */
     public int distinct() {
         throw new UnsupportedOperationException("TODO: Counter.distinct");
