@@ -51,6 +51,7 @@ public final class Box<T> {
     public T get() {
         if(isEmpty()){
             throw new IllegalStateException("Box can't be empty");
+            return value;
 
         }
 
@@ -59,6 +60,8 @@ public final class Box<T> {
 
     /** The value inside, or {@code fallback} if the box is empty. */
     public T orElse(T fallback) {
+
+
         throw new UnsupportedOperationException("TODO: Box.orElse");
     }
 
