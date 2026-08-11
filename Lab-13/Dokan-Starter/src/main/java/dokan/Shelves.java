@@ -1,5 +1,6 @@
 package dokan;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -22,7 +23,21 @@ public final class Shelves {
 
     /** The cheapest item on the shelf, or an empty box if the shelf is empty. */
     public static <T extends Item> Box<T> cheapest(Shelf<T> shelf) {
-        throw new UnsupportedOperationException("TODO: Shelves.cheapest");
+        if(shelf.isEmpty()){
+            return Box.empty();
+        }
+
+        T cheapest=shelf.get(0);
+
+        for(int i=1; i<shelf.size()-1;i++){
+            T current=shelf.get(i);
+
+            if(current.priceTaka()<cheapest.priceTaka()){
+                cheapest=current;
+            }
+        }
+
+        return Box.of(cheapest);
     }
 
     /**
@@ -33,7 +48,16 @@ public final class Shelves {
      * of Books. Writing {@code Check<T>} here would reject that.
      */
     public static <T extends Item> List<T> keep(Shelf<T> shelf, Check<? super T> check) {
-        throw new UnsupportedOperationException("TODO: Shelves.keep");
+        List<T> kept=new ArrayList<>();
+
+        for(int i=shelf.size()-1;i>=0;i--){
+            T item=shelf.get(i);
+
+            if(!check.passes(item)){
+                kept.add(item);
+            }
+        }
+        return kept;
     }
 
     /**
