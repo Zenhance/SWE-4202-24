@@ -30,7 +30,11 @@ public final class Box<T> {
         this.value = value;
     }
     public static <T> Box<T> of(T value) {
-        throw new UnsupportedOperationException("TODO: Box.of");
+        if (value == null) {
+            throw new NullPointerException("value");
+        }
+
+        return new Box<>(value);
     }
 
     /** An empty box. */
@@ -44,7 +48,7 @@ public final class Box<T> {
 
     /** The value inside. Opening an empty box is a programming mistake, so throw. */
     public T get() {
-        throw new UnsupportedOperationException("TODO: Box.get");
+        return value;
     }
 
     /** The value inside, or {@code fallback} if the box is empty. */
