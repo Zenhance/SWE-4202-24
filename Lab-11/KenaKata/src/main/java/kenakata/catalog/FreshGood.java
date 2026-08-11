@@ -25,7 +25,7 @@ public class FreshGood extends CatalogItem{
 
     @Override
     public int weightGrams() {
-        return 0;
+        return weightGrams;
     }
 
     @Override
