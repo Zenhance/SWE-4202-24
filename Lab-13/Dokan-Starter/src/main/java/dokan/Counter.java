@@ -59,6 +59,11 @@ public final class Counter<T> {
         return Box.empty();
         int highest=count.get(0);
         T mostCommon=values.get(0);
+        for(int i=1;i<values.size();i++){
+            if(count.get(i)>highest){
+
+
+            }
 
 
         }
