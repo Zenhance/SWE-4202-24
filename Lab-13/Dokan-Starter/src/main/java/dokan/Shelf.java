@@ -30,12 +30,20 @@ import java.util.List;
  * caller change the shelf.
  */
 public final class Shelf<T extends Item> {
-     private final int capacity;
-     private final List<T> items = new ArrayList<>();
+    private final int capacity;
+    private final List<T> items = new ArrayList<>();
 
-  public Shelf(int capacity){
-      if(capacity<0){
-          throw new IllegalArgumentException("Capacity cant be negative");
-      }
-      this.capacity=capacity;
-  }
+    public Shelf(int capacity) {
+        if (capacity < 0) {
+            throw new IllegalArgumentException("Capacity cant be negative");
+        }
+        this.capacity = capacity;
+    }
+    public boolean add(T item){
+        if(isFull()){
+            return false;
+        }
+        items.add(item);
+        return true;
+    }
+}
