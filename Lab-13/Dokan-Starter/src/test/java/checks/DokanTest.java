@@ -227,7 +227,7 @@ class DokanTest {
 
         private Counter<String> sales() {
             Counter<String> counter = new Counter<>();
-            counter.add("Chanachur");
+            counter.+add("Chanachur");
             counter.add("Biscuit");
             counter.add("Chanachur");
             counter.add("Chips");
