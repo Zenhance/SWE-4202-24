@@ -96,14 +96,15 @@ public final class Shelf<T extends Item> {
     public int totalPriceTaka() {
         int total=0;
         for(T item : items){
+            total=total+item.priceTaka();
 
         }
-        throw new UnsupportedOperationException("TODO: Shelf.totalPriceTaka");
+        return total;
     }
 
     /** The items, as a list the caller cannot use to change the shelf. */
     public List<T> items() {
-        throw new UnsupportedOperationException("TODO: Shelf.items");
+        return items;
     }
 
     @Override
