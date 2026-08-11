@@ -33,15 +33,20 @@ public final class Box<T> {
         return new Box<>(value);
    }
 
-
-
+ public static <T> Box<T> empty()
+ {
+     return new Box<>(null);
+ }
     public boolean isEmpty() {
-        throw new UnsupportedOperationException("TODO: Box.isEmpty");
+        return value == null;
     }
 
     /** The value inside. Opening an empty box is a programming mistake, so throw. */
     public T get() {
-        throw new UnsupportedOperationException("TODO: Box.get");
+        if(isEmpty()){
+            throw new IllegalArgumentException("Box is empty");
+        }
+        return value;
     }
 
     /** The value inside, or {@code fallback} if the box is empty. */
