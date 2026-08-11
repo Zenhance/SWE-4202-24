@@ -36,7 +36,10 @@ public final class Pair<A, B> {
      * the values, and the compiler will hold you to it. The body is one line.
      */
     public Pair<B, A> swapped() {
-        throw new UnsupportedOperationException("TODO: Pair.swapped");
+
+        //throw new UnsupportedOperationException("TODO: Pair.swapped");
+        return new Pair<>(second, first);
+
     }
 
     @Override
