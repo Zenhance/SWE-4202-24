@@ -37,4 +37,9 @@ public final class Shelves {
         }
         return Box.of(cheapest);
     }
+    public static  <T extends Item> List<T> keep(
+            Shelf<T> shelf,
+            Check<? super T> check) {
+
+        List<T> result = new ArrayList<>();
 
