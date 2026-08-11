@@ -10,8 +10,8 @@ public final class Shelf<T extends Item> {
     private final List<T> items = new ArrayList<>();
 
     public Shelf(int capacity) {
-        if (capacity < 0) {
-            throw new IllegalArgumentException("Capacity cant be negative");
+        if (capacity < 1) {
+            throw new IllegalArgumentException("Capacity must be at least one");
         }
         this.capacity = capacity;
     }
