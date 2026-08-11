@@ -1,40 +1,43 @@
 package dokan;
 
-/**
- * TODO (step 3). Counts how many times each value has been seen.
- *
- * <p>Rahim uses it to find his best-selling item, but notice that {@code T} has
- * <em>no bound at all</em> here — this class does not need to know what an item is,
- * so it does not ask. The very same class counts Strings, Integers, Books or anything
- * else. Write it once, use it everywhere.
- *
- * <p>Hints:
- * <ul>
- *   <li>A {@code Map<T, Integer>} is all the state you need.</li>
- *   <li>{@link #mostCommon()} returns a {@code Box<T>}: the type parameter travels
- *       from this generic class straight into the other one. When nothing has been
- *       counted, that is an empty box — no null, no special case at the call site.</li>
- * </ul>
- */
+import java.util.HashMap;
+import java.util.Map;
+
 public final class Counter<T> {
 
-    /** Records one more sighting of {@code value}. */
+    private final Map<T, Integer> counts = new HashMap<>();
+
     public void add(T value) {
-        throw new UnsupportedOperationException("TODO: Counter.add");
+        counts.put(value, counts.getOrDefault(value, 0) + 1);
     }
 
-    /** How many times {@code value} has been added. Zero if never. */
+
     public int count(T value) {
-        throw new UnsupportedOperationException("TODO: Counter.count");
+        return counts.getOrDefault(value, 0);
     }
 
-    /** How many different values have been counted. */
+
     public int distinct() {
-        throw new UnsupportedOperationException("TODO: Counter.distinct");
+        return counts.size();
     }
 
-    /** The value seen most often, or an empty box if nothing has been counted yet. */
+
     public Box<T> mostCommon() {
-        throw new UnsupportedOperationException("TODO: Counter.mostCommon");
+
+        if (counts.isEmpty()) {
+            return Box.empty();
+        }
+
+        T mostCommonValue = null;
+        int highestCount = 0;
+
+        for (Map.Entry<T, Integer> entry : counts.entrySet()) {
+            if (entry.getValue() > highestCount) {
+                highestCount = entry.getValue();
+                mostCommonValue = entry.getKey();
+            }
+        }
+
+        return Box.of(mostCommonValue);
     }
 }
