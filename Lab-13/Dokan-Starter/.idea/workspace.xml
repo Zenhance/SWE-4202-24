@@ -68,7 +68,20 @@
     "project.structure.side.proportion": "0.0"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.DokanTest">
+    <configuration name="DokanCases" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="checks.DokanCases" />
+      <module name="Dokan-Starter.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="checks.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DokanTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -96,6 +109,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.DokanTest" />
+        <item itemvalue="Application.DokanCases" />
       </list>
     </recent_temporary>
   </component>

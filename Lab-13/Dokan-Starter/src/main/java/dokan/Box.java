@@ -61,13 +61,11 @@ public final class Box<T> {
         if(isEmpty()){
             return fallback;
         }
-
-
-        throw new UnsupportedOperationException("TODO: Box.orElse");
+        return value;
     }
 
     @Override
     public String toString() {
-        throw new UnsupportedOperationException("TODO: Box.toString");
+
     }
 }
