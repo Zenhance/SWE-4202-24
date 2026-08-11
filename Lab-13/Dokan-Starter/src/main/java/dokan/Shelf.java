@@ -53,7 +53,10 @@ public final class Shelf<T extends Item> {
     }
 
     public T get(int index) {
-        throw new UnsupportedOperationException("TODO: Shelf.get");
+        if (index < 0 || index >= items.size()) {
+            throw new IndexOutOfBoundsException("Index out of bounds: " + index);
+        }
+        return items.get(index);
     }
 
     public int size() {
