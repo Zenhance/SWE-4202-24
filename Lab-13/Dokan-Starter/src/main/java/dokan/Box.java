@@ -47,5 +47,8 @@ public final class Box<T> {
       }
       return value;
   }
+  public T orElse(T fallback){
+      return isEmpty() ? fallback : value;
+  }
 }
 
