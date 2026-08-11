@@ -36,7 +36,7 @@ public final class Pair<A, B> {
      * the values, and the compiler will hold you to it. The body is one line.
      */
     public Pair<B, A> swapped() {
-        return Pair<>(second,first) ;
+        return new Pair<>(second,first) ;
     }
 
     @Override
