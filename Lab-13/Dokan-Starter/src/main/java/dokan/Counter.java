@@ -22,21 +22,40 @@ public final class Counter<T> {
     private final List<Integer> counts= new ArrayList<>();
     /** Records one more sighting of {@code value}. */
     public void add(T value) {
-        throw new UnsupportedOperationException("TODO: Counter.add");
+
+        int index= values.indexOf(value);
+        if(index==-1){
+            values.add(value);
+            counts.add(1);
+
+        }
+        else{
+            counts.set(index,counts.get(index)+1);
+        }
+        //throw new UnsupportedOperationException("TODO: Counter.add");
     }
 
     /** How many times {@code value} has been added. Zero if never. */
     public int count(T value) {
-        throw new UnsupportedOperationException("TODO: Counter.count");
+        int index=values.indexOf(value);
+        if(index==-1){
+            return 0;
+        }
+        else{
+            return counts.get(index);
+        }
+        //throw new UnsupportedOperationException("TODO: Counter.count");
     }
 
     /** How many different values have been counted. */
     public int distinct() {
-        throw new UnsupportedOperationException("TODO: Counter.distinct");
+        return values.size();
+        //throw new UnsupportedOperationException("TODO: Counter.distinct");
     }
 
     /** The value seen most often, or an empty box if nothing has been counted yet. */
     public Box<T> mostCommon() {
+
         throw new UnsupportedOperationException("TODO: Counter.mostCommon");
     }
 }
