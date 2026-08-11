@@ -29,8 +29,10 @@ public final class Box<T> {
 
 
     /** A box holding {@code value}. Refuse null: a full box holding nothing is a lie. */
-    public static <T> Box<T> of(T value) {
-        throw new UnsupportedOperationException("TODO: Box.of");
+    public static <T> Box<T> of(T value)
+    {
+        if(value==null)
+        throw new NullPointerException();
     }
 
     /** An empty box. */
