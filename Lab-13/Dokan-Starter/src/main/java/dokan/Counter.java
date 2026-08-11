@@ -14,5 +14,11 @@ public final class Counter<T>{
     public int distinct() {
         return counts.size();
     }
+    public Box<T> mostCommon() {
+        if (counts.isEmpty()) {
+            return Box.empty();
+        }
 
+        T mostCommon = null;
+        int highestCount = -1;
 }
