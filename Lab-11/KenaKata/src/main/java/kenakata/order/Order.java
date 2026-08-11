@@ -64,7 +64,7 @@ public class Order {
         long serviceFee = (long) Math.ceil(subtotal * 0.01);
         serviceFee = Math.min(serviceFee, 100);
 
-        return new PriceBreakdown(subtotal, discount, 0, vat, 0, 0);
+        return new PriceBreakdown(subtotal, discount, delivery, vat, 0, 0);
     }
 
     public void insure(int i) {

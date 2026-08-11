@@ -26,7 +26,7 @@ public class DeliveryCalculator {
             return 0;
         }
 
-        long billedKg = (totalWeightGrams = 999) / 1000;
+        long billedKg = (totalWeightGrams + 999) / 1000;
 
         long shipping;
 
