@@ -29,22 +29,33 @@ import java.util.List;
  * caller change the shelf.
  */
 public final class Shelf<T extends Item> {
+    private final Object[] slot;
+    private int count=0;
 
     public Shelf(int capacity) {
-        throw new UnsupportedOperationException("TODO: Shelf constructor");
+        if(capacity<=0)
+           throw new IllegalArgumentException("Invalid");
+        this.slot = new Object[capacity];
+        this.count=0;
+
     }
 
     /** Puts an item on the shelf. Returns false, without adding, if the shelf is full. */
     public boolean add(T item) {
-        throw new UnsupportedOperationException("TODO: Shelf.add");
+        if (count >= slot.length) {
+            return false;
+        }
+        slot[count] = item;
+        count++;
+        return true;
     }
 
     public T get(int index) {
-        throw new UnsupportedOperationException("TODO: Shelf.get");
+        return (T)slot[index];
     }
 
     public int size() {
-        throw new UnsupportedOperationException("TODO: Shelf.size");
+        return count;
     }
 
     public int capacity() {
@@ -70,7 +81,11 @@ public final class Shelf<T extends Item> {
 
     /** What everything on the shelf is worth. This is the method the bound pays for. */
     public int totalPriceTaka() {
-        throw new UnsupportedOperationException("TODO: Shelf.totalPriceTaka");
+        int total=0;
+        for(int i=0;i<count;i++){
+            total+=((Item)slot[i]).priceTaka();
+        }
+        return total;
     }
 
     /** The items, as a list the caller cannot use to change the shelf. */
