@@ -95,7 +95,7 @@ public abstract class CatalogItem implements Chargeable {
     }
 
     protected static void requirePositiveQuantity(int quantity) {
-        if (quantity <= 0)
+        if (quantity < 0)
             throw new IllegalArgumentException(
                     "Quantity must be positive"
             );

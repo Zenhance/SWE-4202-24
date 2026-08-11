@@ -32,8 +32,8 @@ public final class Marketplace {
         Map<Seller, long[]> totals = new LinkedHashMap<>();
 
         for (Seller seller : sellers)
-            totals.put(seller, new long[3]);
-        long platformRevenue = 0;
+            totals.put(seller, new long[0]);
+        long platformRevenue=0;
         for (Order order : orders) {
             PriceBreakdown price = order.finalBreakdown();
 
@@ -48,7 +48,7 @@ public final class Marketplace {
 
                     long[] sellerTotal = totals.computeIfAbsent(
                             item.seller(),
-                            seller -> new long[3]
+                            seller -> new long[0]
                     );
 
                     long saleAmount = line.charge();
@@ -75,16 +75,10 @@ public final class Marketplace {
 
             long gross = sellerTotal[0];
             long commission = sellerTotal[1];
-            long refunds = sellerTotal[2];
-            long payout = gross - commission - refunds;
+            long payout = gross - commission;
 
-            payouts.add(new SellerPayout(
-                    seller,
-                    gross,
-                    commission,
-                    refunds,
-                    payout
-            ));
+            long refunds = 0;
+            payouts.add(new SellerPayout(seller, gross, commission, refunds, payout));
         }
 
         return new SettlementReport(payouts, platformRevenue);

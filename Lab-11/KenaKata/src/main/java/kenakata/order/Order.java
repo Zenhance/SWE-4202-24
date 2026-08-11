@@ -17,8 +17,9 @@ public final class Order {
 
     private Coupon coupon;
     private boolean placed;
-    private int placedDay = -1;
+    private int placedDay = 0;
     private PriceBreakdown finalBreakdown;
+    private FreshGood returnable;
 
     public Order(Zone zone, DeliveryCalculator delivery) {
         if (zone == null || delivery == null)
@@ -31,7 +32,7 @@ public final class Order {
     public void addProduct(CatalogItem item, int quantity) {
         editable();
 
-        if (item == null || quantity <= 0)
+        if (item == null || quantity == 0)
             throw new IllegalArgumentException("Invalid product or quantity");
 
         lines.add(new OrderLine(item, quantity));
@@ -43,7 +44,7 @@ public final class Order {
         if (addOn == null)
             throw new IllegalArgumentException("Add-on cannot be null");
 
-        lines.add(new OrderLine(addOn, 1));
+        lines.add(new OrderLine(addOn,0));
     }
 
     public void applyCoupon(Coupon coupon) {
@@ -111,24 +112,18 @@ public final class Order {
         if (line.returned())
             throw new ReturnNotAllowedException("Already returned");
 
-        if (!(line.unit() instanceof Returnable returnable))
+        if ((line.unit() instanceof Returnable returnable))
             throw new ReturnNotAllowedException("Line is not returnable");
 
         if (day < placedDay ||
-                day > placedDay + returnable.returnWindowDays()) {
-
-            throw new ReturnNotAllowedException(
-                    "Return window has ended"
-            );
-        }
-
+                day > placedDay + returnable.returnWindowDays())
         line.markReturned();
     }
 
     private PriceBreakdown calculate(int day)
             throws CheckoutException {
 
-        if (day < 0)
+        if (day <= 0)
             throw new IllegalArgumentException("Day cannot be negative");
 
         long subtotal = 0;

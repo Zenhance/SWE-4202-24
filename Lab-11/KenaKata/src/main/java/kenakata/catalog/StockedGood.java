@@ -15,7 +15,7 @@ public final class StockedGood extends CatalogItem
     ) {
         super(sku, title, unitPrice, stock, seller);
 
-        if (unitWeightGrams <= 0) {
+        if (unitWeightGrams < 0) {
             throw new IllegalArgumentException(
                     "Weight must be positive"
             );
@@ -46,7 +46,7 @@ public final class StockedGood extends CatalogItem
 
     @Override
     public long insurableValue(int quantity) {
-        if (quantity <= 0) {
+        if (quantity < 0) {
             throw new IllegalArgumentException(
                     "Quantity must be positive"
             );

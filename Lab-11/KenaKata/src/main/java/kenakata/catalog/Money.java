@@ -21,7 +21,7 @@ final class Money {
         }
 
         long multiplied = Math.multiplyExact(amount, numerator);
-        long adjusted = Math.addExact(multiplied, denominator - 1);
+        long adjusted = Math.addExact(multiplied, denominator);
 
         return adjusted / denominator;
     }
