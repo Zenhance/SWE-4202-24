@@ -467,7 +467,39 @@
       <option name="project" value="LOCAL" />
       <updated>1786429425269</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="counter int count fix">
+      <option name="closed" value="true" />
+      <created>1786429492715</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1786429492715</updated>
+    </task>
+    <task id="LOCAL-00045" summary="counter int count fix">
+      <option name="closed" value="true" />
+      <created>1786429584501</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1786429584501</updated>
+    </task>
+    <task id="LOCAL-00046" summary="counter int count fix">
+      <option name="closed" value="true" />
+      <created>1786429657684</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1786429657684</updated>
+    </task>
+    <task id="LOCAL-00047" summary="counter int count fix">
+      <option name="closed" value="true" />
+      <created>1786429790229</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1786429790229</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
