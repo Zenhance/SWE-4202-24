@@ -32,10 +32,10 @@ public final class Counter<T> {
 
        for(int i=0;i<values.size();i++){
            if(values.get(i).equals(value)){
-
+               count.set(i,count.get(i)+1);
            }
 
-       };
+       }
     }
 
     /** How many times {@code value} has been added. Zero if never. */
