@@ -53,16 +53,19 @@ public final class Shelf<T extends Item> {
     }
 
     public int capacity() {
-        throw new UnsupportedOperationException("TODO: Shelf.capacity");
+        return capacity;
     }
 
     public boolean isFull() {
-        throw new UnsupportedOperationException("TODO: Shelf.isFull");
+        return items().size() == capacity;
+    }
+/*
+    public boolean isEmpty() {
+        if (items().size()>capacity)
+            return true;
     }
 
-    public boolean isEmpty() {
-        throw new UnsupportedOperationException("TODO: Shelf.isEmpty");
-    }
+ */
 
     public boolean contains(String name) {
         throw new UnsupportedOperationException("TODO: Shelf.contains");
