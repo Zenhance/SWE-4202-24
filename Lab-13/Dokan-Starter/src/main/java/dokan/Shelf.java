@@ -94,6 +94,10 @@ public final class Shelf<T extends Item> {
 
     /** What everything on the shelf is worth. This is the method the bound pays for. */
     public int totalPriceTaka() {
+        int total=0;
+        for(T item : items){
+
+        }
         throw new UnsupportedOperationException("TODO: Shelf.totalPriceTaka");
     }
 
