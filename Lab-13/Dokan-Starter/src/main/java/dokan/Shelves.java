@@ -1,6 +1,7 @@
 package dokan;
 
 import java.util.List;
+import java.util.ArrayList;
 
 /**
  * TODO (step 4). Helpers that work on any shelf, of any kind of item.
@@ -22,7 +23,17 @@ public final class Shelves {
 
     /** The cheapest item on the shelf, or an empty box if the shelf is empty. */
     public static <T extends Item> Box<T> cheapest(Shelf<T> shelf) {
-        throw new UnsupportedOperationException("TODO: Shelves.cheapest");
+        if(shelf.isEmpty()){
+            return Box.empty();
+        }
+        T cheapest=shelf.get(0);
+        for (int i=1;i<shelf.size();i++){
+            T current=shelf.get(i);
+            if(current.priceTaka()<cheapest.priceTaka()){
+                cheapest=current;
+            }
+        }
+        return Box.of(cheapest);
     }
 
     /**
@@ -33,7 +44,13 @@ public final class Shelves {
      * of Books. Writing {@code Check<T>} here would reject that.
      */
     public static <T extends Item> List<T> keep(Shelf<T> shelf, Check<? super T> check) {
-        throw new UnsupportedOperationException("TODO: Shelves.keep");
+        List<T> result=new ArrayList<>();
+        for(T item:shelf.items()){
+            if(check.passes(item)){
+                result.add(item);
+            }
+        }
+        return result;
     }
 
     /**
@@ -45,7 +62,17 @@ public final class Shelves {
      * An empty list has no largest value, so refuse it.
      */
     public static <T extends Comparable<T>> T max(List<T> values) {
-        throw new UnsupportedOperationException("TODO: Shelves.max");
+        if(values.isEmpty()){
+            throw new IllegalArgumentException("Cannot find maximum of empty list");
+        }
+        T largest=values.get(0);
+        for(int i=0;i< values.size();i++){
+            T current=values.get(i);
+            if(current.compareTo(largest)>0){
+                largest=current;
+            }
+        }
+        return largest;
     }
 
     /**
@@ -56,6 +83,13 @@ public final class Shelves {
      * {@code List<T>} here would reject that perfectly sensible line.
      */
     public static <T extends Item> int addAll(Shelf<T> shelf, List<? extends T> items) {
-        throw new UnsupportedOperationException("TODO: Shelves.addAll");
+        int added=0;
+        for(T item: items){
+            if(!shelf.add(item)){
+                break;
+            }
+            added++;
+        }
+        return added;
     }
 }

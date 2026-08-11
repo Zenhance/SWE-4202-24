@@ -65,7 +65,7 @@ public final class Shelf<T extends Item> {
     }
 
     public boolean isEmpty() {
-        items.isEmpty();
+        return items.isEmpty();
     }
 
     public boolean contains(String name) {
