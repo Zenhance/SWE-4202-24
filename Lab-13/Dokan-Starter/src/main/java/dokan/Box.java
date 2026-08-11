@@ -23,32 +23,43 @@ package dokan;
  */
 public final class Box<T> {
 
+    T value;
+    private Box(T value) {
+        this.value = value;
+    }
     /** A box holding {@code value}. Refuse null: a full box holding nothing is a lie. */
     public static <T> Box<T> of(T value) {
-        throw new UnsupportedOperationException("TODO: Box.of");
+        if(value == null)throw new NullPointerException("value is null");
+
+        return new Box<>(value);
+
     }
 
     /** An empty box. */
     public static <T> Box<T> empty() {
-        throw new UnsupportedOperationException("TODO: Box.empty");
+        return new Box<>(null);
     }
 
     public boolean isEmpty() {
-        throw new UnsupportedOperationException("TODO: Box.isEmpty");
+        if(value == null) return true;
+        return false;
     }
 
     /** The value inside. Opening an empty box is a programming mistake, so throw. */
     public T get() {
-        throw new UnsupportedOperationException("TODO: Box.get");
+        if(this.isEmpty()) throw new IllegalStateException("value is empty");
+        return value;
     }
 
     /** The value inside, or {@code fallback} if the box is empty. */
-    public T orElse(T fallback) {
-        throw new UnsupportedOperationException("TODO: Box.orElse");
+    public T orElse(T fallback)
+    {
+        return fallback;
     }
 
     @Override
     public String toString() {
-        throw new UnsupportedOperationException("TODO: Box.toString");
+        if(value!=null) return "Box("+value+")";
+        else return "Box(empty)";
     }
 }
