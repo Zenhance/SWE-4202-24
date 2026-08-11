@@ -29,14 +29,20 @@ import java.util.List;
  * caller change the shelf.
  */
 public final class Shelf<T extends Item> {
-
+        private final int capacity;
     public Shelf(int capacity) {
-        throw new UnsupportedOperationException("TODO: Shelf constructor");
+//        throw new UnsupportedOperationException("TODO: Shelf constructor");
+        this.capacity = capacity;
     }
 
     /** Puts an item on the shelf. Returns false, without adding, if the shelf is full. */
     public boolean add(T item) {
-        throw new UnsupportedOperationException("TODO: Shelf.add");
+//        throw new UnsupportedOperationException("TODO: Shelf.add");
+            if(isFull())
+                return false;
+            else {
+                return items().add(item);
+            }
     }
 
     public T get(int index) {
