@@ -27,6 +27,7 @@ public final class Box<T> {
 
     public Box(T value) {
         this.value = value;
+        empty = false;
     }
 
     public Box() {}
