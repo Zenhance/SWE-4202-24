@@ -44,7 +44,7 @@ public final class Counter<T> {
             if(values.get(i).equals(value)){
                 return count.get(i);
             }
-        }
+        } return 0;
     }
 
     /** How many different values have been counted. */
