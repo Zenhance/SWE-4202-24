@@ -34,23 +34,29 @@ public final class Box<T> {
     }
 
     /** An empty box. */
-    public static <T> Box<T> empty() throws IllegalStateException {
+    public static <T> Box<T> empty() {
 
-        throw new IllegalStateException("");
+        return new Box<>(null);
     }
 
     public boolean isEmpty() {
-        throw new UnsupportedOperationException("TODO: Box.isEmpty");
+
+        return true;
     }
 
     /** The value inside. Opening an empty box is a programming mistake, so throw. */
-    public T get() {
-        throw new UnsupportedOperationException("TODO: Box.get");
+    public T get() throws IllegalStateException {
+
+        if(isEmpty()) {
+           throw new IllegalStateException("Empty box.");
+        }
+
+        return value;
     }
 
     /** The value inside, or {@code fallback} if the box is empty. */
     public T orElse(T fallback) {
-        throw new UnsupportedOperationException("TODO: Box.orElse");
+        return isEmpty()? fallback:value;
     }
 
     @Override
