@@ -49,6 +49,6 @@ public final class Counter<T> {
                 bestCount= entry.getValue();
             }
         }
-        throw new UnsupportedOperationException("TODO: Counter.mostCommon");
+        return Box.of(bestValue);
     }
 }
