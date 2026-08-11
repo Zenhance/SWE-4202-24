@@ -41,12 +41,12 @@ public final class Box<T> {
   public boolean isEmpty(){
       return !present;
   }
-  public T get(){
-      if(isEmpty()){
-          throw new IllegalArgumentException("Box is empty");
-      }
-      return value;
-  }
+    public T get() {
+        if (isEmpty()) {
+            throw new IllegalStateException("Box is empty");
+        }
+        return value;
+    }
   public T orElse(T fallback){
       return isEmpty() ? fallback : value;
   }
