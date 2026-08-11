@@ -1,4 +1,8 @@
 package dokan;
+import java.util.List;
+import java.util.ArrayList;
+
+
 
 /**
  * TODO (step 3). Counts how many times each value has been seen.
@@ -17,24 +21,44 @@ package dokan;
  * </ul>
  */
 public final class Counter<T> {
-
+    private final List<T> values = new ArrayList<>();
+    private final List<Integer> counts = new ArrayList<>();
     /** Records one more sighting of {@code value}. */
     public void add(T value) {
-        throw new UnsupportedOperationException("TODO: Counter.add");
+        for (int i = 0; i < values.size(); i++) {
+            if (values.get(i).equals(value)) {
+                counts.set(i, counts.get(i) + 1);
+                return;
+            }
+        }
+        values.add(value);
+        counts.add(1);
     }
 
     /** How many times {@code value} has been added. Zero if never. */
     public int count(T value) {
-        throw new UnsupportedOperationException("TODO: Counter.count");
-    }
+        for (int i = 0; i < values.size(); i++) {
+            if (values.get(i).equals(value)) {
+                return counts.get(i);
+            }
+        }
+        return 0; }
 
     /** How many different values have been counted. */
     public int distinct() {
-        throw new UnsupportedOperationException("TODO: Counter.distinct");
-    }
+    return values.size();}
 
     /** The value seen most often, or an empty box if nothing has been counted yet. */
     public Box<T> mostCommon() {
-        throw new UnsupportedOperationException("TODO: Counter.mostCommon");
-    }
-}
+        if (values.isEmpty()) {
+            return Box.empty();
+        }
+        int bestIndex = 0;
+        for (int i = 1; i < values.size(); i++) {
+            if (counts.get(i) > counts.get(bestIndex)) {
+                bestIndex = i;
+            }
+        }
+        return Box.of(values.get(bestIndex));
+    }}
+
