@@ -76,7 +76,8 @@ public final class Shelf<T extends Item> {
     }
 
     public boolean contains(String name) {
-        throw new UnsupportedOperationException("TODO: Shelf.contains");
+//        throw new UnsupportedOperationException("TODO: Shelf.contains");
+        return items().contains(name);
     }
 
     /** Takes the first item with this name off the shelf. True if one was there. */
