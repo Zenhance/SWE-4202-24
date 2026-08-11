@@ -28,12 +28,12 @@ public final class Counter<T> {
 
     /** How many times {@code value} has been added. Zero if never. */
     public int count(T value) {
-        throw new UnsupportedOperationException("TODO: Counter.count");
+        return counts.getOrDefault(value,0);
     }
 
     /** How many different values have been counted. */
     public int distinct() {
-        throw new UnsupportedOperationException("TODO: Counter.distinct");
+        return counts.size();
     }
 
     /** The value seen most often, or an empty box if nothing has been counted yet. */
