@@ -57,6 +57,10 @@ public final class Counter<T> {
 
         if(values.isEmpty()) return Box.empty();
         return Box.empty();
+        int highest=count.get(0);
+        T mostCommon=values.get(0);
+
+
 
 
     }
