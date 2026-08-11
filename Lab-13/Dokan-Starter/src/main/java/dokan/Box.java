@@ -70,6 +70,9 @@ public final class Box<T> {
 
     @Override
     public String toString() {
-        throw new UnsupportedOperationException("TODO: Box.toString");
+        if (empty)
+            return "Box(empty)";
+        return "Box(" + value + ")";
+        //throw new UnsupportedOperationException("TODO: Box.toString");
     }
 }
