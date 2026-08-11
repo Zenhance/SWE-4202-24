@@ -1,5 +1,7 @@
 package dokan;
 
+import java.util.Objects;
+
 /**
  * TODO (step 1). A small box that holds either one value of type {@code T}, or
  * nothing at all.
@@ -57,9 +59,11 @@ public final class Box<T> {
 
     /** The value inside. Opening an empty box is a programming mistake, so throw. */
     public T get() {
-        throw new UnsupportedOperationException("TODO: Box.get");
+        if (isEmpty()) {
+            throw new IllegalStateException("Cannot get value from an empty Box");
+        }
+        return value;
     }
-
 
 
     /** The value inside, or {@code fallback} if the box is empty. */
