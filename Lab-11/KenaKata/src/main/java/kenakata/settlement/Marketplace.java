@@ -17,42 +17,33 @@ public final class Marketplace {
     private final List<Order> orders = new ArrayList<>();
 
     public void register(Seller seller) {
-        if (seller == null) {
+        if (seller == null)
             throw new IllegalArgumentException("Seller cannot be null");
-        }
-
-        if (!sellers.contains(seller)) {
+        if (!sellers.contains(seller))
             sellers.add(seller);
-        }
     }
-
     public void record(Order order) {
-        if (order == null || !order.placed()) {
-            throw new IllegalArgumentException(
-                    "Only placed orders can be recorded"
-            );
-        }
+        if (order == null || !order.placed())
+            throw new IllegalArgumentException("Only placed orders can be recorded");
 
         orders.add(order);
     }
-
     public SettlementReport settle() {
         Map<Seller, long[]> totals = new LinkedHashMap<>();
 
-        for (Seller seller : sellers) {
+        for (Seller seller : sellers)
             totals.put(seller, new long[3]);
-        }
-
         long platformRevenue = 0;
-
         for (Order order : orders) {
-
             PriceBreakdown price = order.finalBreakdown();
 
-            platformRevenue += price.delivery() + price.vat() + price.insurance() + price.serviceFee() - price.discount();
+            platformRevenue += price.delivery()
+                    + price.vat()
+                    + price.insurance()
+                    + price.serviceFee()
+                    - price.discount();
 
             for (OrderLine line : order.lines()) {
-
                 if (line.unit() instanceof CatalogItem item) {
 
                     long[] sellerTotal = totals.computeIfAbsent(
@@ -60,16 +51,15 @@ public final class Marketplace {
                             seller -> new long[3]
                     );
 
-                    long value = line.charge();
-                    long commission = item.commissionOn(value);
+                    long saleAmount = line.charge();
+                    long commission = item.commissionOn(saleAmount);
 
-                    sellerTotal[0] += value;
+                    sellerTotal[0] += saleAmount;
                     sellerTotal[1] += commission;
                     platformRevenue += commission;
 
-                    if (line.returned()) {
-                        sellerTotal[2] += value;
-                    }
+                    if (line.returned())
+                        sellerTotal[2] += saleAmount;
 
                 } else {
                     platformRevenue += line.charge();
@@ -80,17 +70,20 @@ public final class Marketplace {
         List<SellerPayout> payouts = new ArrayList<>();
 
         for (Map.Entry<Seller, long[]> entry : totals.entrySet()) {
+            Seller seller = entry.getKey();
+            long[] sellerTotal = entry.getValue();
 
-            long gross = entry.getValue()[0];
-            long commission = entry.getValue()[1];
-            long refunds = entry.getValue()[2];
+            long gross = sellerTotal[0];
+            long commission = sellerTotal[1];
+            long refunds = sellerTotal[2];
+            long payout = gross - commission - refunds;
 
             payouts.add(new SellerPayout(
-                    entry.getKey(),
+                    seller,
                     gross,
                     commission,
                     refunds,
-                    gross - commission - refunds
+                    payout
             ));
         }
 
