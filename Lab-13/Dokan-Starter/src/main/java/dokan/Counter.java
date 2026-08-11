@@ -44,7 +44,10 @@ public final class Counter<T> {
         T bestValue=null;
         int bestCount=-1;
         for(Map.Entry<T,Integer>entry:counts.entrySet()) {
-
+            if(entry.getValue()>bestCount) {
+                bestValue=entry.getKey();
+                bestCount= entry.getValue();
+            }
         }
         throw new UnsupportedOperationException("TODO: Counter.mostCommon");
     }
