@@ -1,6 +1,7 @@
 package dokan;
 
 import java.util.List;
+import java.util.ArrayList;
 
 /**
  * TODO (step 4). Helpers that work on any shelf, of any kind of item.
@@ -22,7 +23,16 @@ public final class Shelves {
 
     /** The cheapest item on the shelf, or an empty box if the shelf is empty. */
     public static <T extends Item> Box<T> cheapest(Shelf<T> shelf) {
-        throw new UnsupportedOperationException("TODO: Shelves.cheapest");
+        Box<T> best=Box.empty();
+        int bestPrice=Integer.MAX_VALUE;
+
+        for(T item : shelf.items()){
+            if(item.priceTaka()<bestPrice){
+                bestPrice=item.priceTaka();
+                best=Box.of(item);
+            }
+        }
+        return best;
     }
 
     /**
@@ -33,7 +43,7 @@ public final class Shelves {
      * of Books. Writing {@code Check<T>} here would reject that.
      */
     public static <T extends Item> List<T> keep(Shelf<T> shelf, Check<? super T> check) {
-        throw new UnsupportedOperationException("TODO: Shelves.keep");
+        return null;
     }
 
     /**
@@ -45,7 +55,11 @@ public final class Shelves {
      * An empty list has no largest value, so refuse it.
      */
     public static <T extends Comparable<T>> T max(List<T> values) {
-        throw new UnsupportedOperationException("TODO: Shelves.max");
+        if(values.isEmpty()){
+            throw new IllegalArgumentException("value must not be empty");
+        }
+        T best=values.get(0);
+        return best;
     }
 
     /**
@@ -56,6 +70,7 @@ public final class Shelves {
      * {@code List<T>} here would reject that perfectly sensible line.
      */
     public static <T extends Item> int addAll(Shelf<T> shelf, List<? extends T> items) {
-        throw new UnsupportedOperationException("TODO: Shelves.addAll");
+        int added=0;
+        return added;
     }
 }
