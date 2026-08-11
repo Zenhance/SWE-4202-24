@@ -1,18 +1,19 @@
-public class location {
+//naming the classes in small letters were getting me into trouble, so here's a full rewrite of Location.java exactly as it was but class name as capital
+public class Location {
 
 
     String label;
     double x;
     double y;
 
-    public location(String label, double x, double y) {
+    public Location(String label, double x, double y) {
 
         this.label = label;
         this.x = x;
         this.y = y;
     }
 
-    public location(double x, double y) {
+    public Location(double x, double y) {
         this.label = "Unknown";
         this.x = x;
         this.y = y;
@@ -24,29 +25,24 @@ public class location {
     }
     public double getX(){
 
-return x;
+        return x;
     }
-public double getY()
-{
-    return y;
+    public double getY()
+    {
+        return y;
 
-}
-public double distanceTo(location other)
-{double distX = other.x - this.x;
- double distY = other.y - this.y;
- return Math.sqrt(distX*distX + distY*distY); /*prreviously, accidentally put the entire distX*distX + distY*distY part inside quotes
+    }
+    public double distanceTo(Location other)
+    {double distX = other.x - this.x;
+        double distY = other.y - this.y;
+        return Math.sqrt(distX*distX + distY*distY); /*prreviously, accidentally put the entire distX*distX + distY*distY part inside quotes
 and accidentally typed dot instead of asterisk */}
 
-public String toString()
-{
-    return String.format("%s (%.2f %.2f)" , label, x, y); //needed to put a comma before label
+    public String toString()
+    {
+        return String.format("%s (%.2f %.2f)", label, x, y); //previously forgot to put a comma before label
+
+    }
 
 }
-
-}
-
-
-//previously, accidentally used one more extra curly brace
-
-
-
+//previously put an additional curly brace

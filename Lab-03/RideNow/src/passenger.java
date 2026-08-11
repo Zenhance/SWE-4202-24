@@ -1,19 +1,20 @@
-public class passenger
-{ 
-  private  int id;
-    private String name;
-    private double rating;
+//capitalized the p in passenger
+public class Passenger
+{
+    int id;
+    String name;
+    double rating;
 
-public passenger (int id, String name, double rating)
+    public Passenger (int id, String name, double rating)
     {
-          this.id=id;
-          this.name=name;
-          this.rating=rating;
+        this.id=id;
+        this.name=name;
+        this.rating=rating;
     }
-    public passenger (int id, String name)
+    public Passenger (int id, String name)
     { this.rating=5.0;
-     this.id=id;
-     this.name=name;
+        this.id=id;
+        this.name=name;
     }
 
 
@@ -23,7 +24,7 @@ public passenger (int id, String name, double rating)
     }
     public String getName()
     {
-     return name;
+        return name;
     }
     public double getRating ()
     {
@@ -31,24 +32,12 @@ public passenger (int id, String name, double rating)
     }
     public void updateRating (double newRating)
     {
-     this.rating=newRating;
-        
+        this.rating=newRating;
+
     }
     public String toString()
     {
-      return String.format("Passenger[%d] %s (%.2f)", id, name, rating);
-        
+        return String.format("Passenger[%d] %s (%.2f)", id, name, rating);
+
     }
 }
-
-
-
-
-
-
-}
-
-
-
-
-
