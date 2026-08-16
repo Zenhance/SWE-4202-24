@@ -32,22 +32,25 @@ public class Order {
             subTotal += line.item.unitCharge() * line.quantity;
         }
         long discount = 0;
-        if(coupon.validDate >= day && coupon.minSpend <= subTotal) {
-            long temp = 0;
-            for(OrderLines line : orderLines) {
-                if(line.item instanceof StockedGood){
-                     temp += (long) Math.ceil(line.item.unitCharge() * line.quantity);
+        if(coupon != null) {
+            if(coupon.validDate >= day && coupon.minSpend <= subTotal) {
+                long temp = 0;
+                for(OrderLines line : orderLines) {
+                    if(line.item instanceof StockedGood){
+                        temp += (long) Math.ceil(line.item.unitCharge() * line.quantity);
+                    }
                 }
-            }
-            temp = (long) Math.ceil(temp * coupon.percentage / 100);
-            if(temp > coupon.cap) {
-                discount = coupon.cap;
+                temp = (long) Math.ceil(temp * coupon.percentage / 100);
+                if(temp > coupon.cap) {
+                    discount = coupon.cap;
+                }else{
+                    discount = temp;
+                }
             }else{
-                discount = temp;
+                throw new CouponRejectedException("COUPON_REJECTED");
             }
-        }else{
-            throw new CouponRejectedException("COUPON_REJECTED");
         }
+
         long vat = 0;
         for(OrderLines line : orderLines) {
             vat += (long) Math.ceil(line.item.unitVat() * line.quantity);
