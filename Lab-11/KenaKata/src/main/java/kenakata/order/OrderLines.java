@@ -1,13 +1,18 @@
 package kenakata.order;
 
 import kenakata.catalog.CatalogItem;
+import kenakata.catalog.Chargeable;
 
 public class OrderLines {
-    private CatalogItem  catalogItem;
-    private double amount;
-    public OrderLines(CatalogItem catalogItem, double amount) {
+    protected CatalogItem  catalogItem;
+    protected int quantity;
+    Chargeable chargeable;
+    public OrderLines(CatalogItem catalogItem, int quantity) {
         this.catalogItem = catalogItem;
-        this.amount = amount;
+        this.quantity = quantity;
+    }
+    public OrderLines(Chargeable chargeable) {
+        this.chargeable = chargeable;
     }
 
 
