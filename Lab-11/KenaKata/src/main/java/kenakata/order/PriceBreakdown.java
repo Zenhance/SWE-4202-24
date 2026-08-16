@@ -27,6 +27,9 @@ public class PriceBreakdown {
     }
 
     public long insurance() {
+        if(insurance < 20){
+           this.insurance = 20;
+        }
         return insurance;
     }
 
