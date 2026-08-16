@@ -7,11 +7,11 @@ public class FreshGood extends CatalogItem implements Chargeable {
         this.weight = weight;
     }
 
-    public int unitVat() {
+    public long unitVat() {
         return 0;
     }
 
-    public int commissionOn(int i) {
-        return 0;
+    public long commissionOn(long amount) {
+        return (long) Math.ceil(amount * 0.05);
     }
 }
