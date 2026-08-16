@@ -11,9 +11,7 @@ public class Wallet {
     }
 
     public String balance() {
-        return "0";
+        return ""+amount;
     }
-    public void authorise(int amount) {
-        if(amount<=this.amount) this.amount-=amount;
-    }
+
 }
