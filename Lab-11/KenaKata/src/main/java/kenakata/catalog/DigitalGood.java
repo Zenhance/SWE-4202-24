@@ -5,15 +5,15 @@ public class DigitalGood extends CatalogItem implements Chargeable {
         super(sku,  title, unitPrice, stock, seller);
     }
 
-    public int unitCharge() {
-        return 0;
+    public long unitCharge() {
+        return getUnitPrice();
     }
 
-    public int unitVat() {
-        return 0;
+    public long unitVat() {
+        return (long) Math.ceil(getUnitPrice() * 0.05);
     }
 
-    public int commissionOn(int i) {
-        return 0;
+    public long commissionOn(long amount) {
+        return (long) Math.ceil(amount * 0.2);
     }
 }
