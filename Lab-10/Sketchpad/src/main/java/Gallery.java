@@ -15,5 +15,9 @@ public class Gallery {
         return shapes.size();
     }
 
+    public void render(){
+
+    }
+
 
 }
