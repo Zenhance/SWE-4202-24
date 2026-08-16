@@ -63,5 +63,9 @@ public abstract class CatalogItem implements Chargeable {
         return getStock();
     }
 
+    public long getWeight(){
+        return 0;
+    }
+
 
 }
