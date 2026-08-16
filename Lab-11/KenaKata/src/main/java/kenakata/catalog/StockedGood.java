@@ -17,8 +17,8 @@ public class StockedGood extends CatalogItem implements Chargeable {
         return (long) Math.ceil(getUnitPrice() * 0.075);
     }
 
-    public long commissionOn(int i) {
-        return (long) Math.ceil(i * 0.08);
+    public long commissionOn(int amount) {
+        return (long) Math.ceil(amount * 0.08);
     }
 
     public void reserve(int i) {
