@@ -7,6 +7,9 @@ public class StockedGood extends CatalogItem implements Chargeable {
     int weight;
     public StockedGood(String sku, String title, long unitPrice, int stock, Seller seller, int weight) {
         super(sku, title, unitPrice, stock, seller);
+        if(weight <= 0){
+            throw new IllegalArgumentException("weight must be greater than 0");
+        }
         this.weight = weight;
     }
 
