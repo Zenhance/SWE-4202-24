@@ -11,11 +11,11 @@ public abstract class CatalogItem implements Chargeable {
     private Seller seller;
     private int reservedStock;
 
-    public CatalogItem(String sku, String title, long unitPrice,int stock, Seller seller) {
-        if (sku == null || sku.isEmpty()) {
+    public CatalogItem(String sku, String title, long unitPrice,int stock, Seller seller)  {
+        if (sku == null || sku.isBlank()) {
             throw new IllegalArgumentException("sku is required");
         }
-        if (title == null || title.isEmpty()) {
+        if (title == null || title.isBlank()) {
             throw new IllegalArgumentException("title is required");
         }
         if (unitPrice < 0) {
@@ -23,6 +23,9 @@ public abstract class CatalogItem implements Chargeable {
         }
         if (stock < 0) {
             throw new IllegalArgumentException("stock can't be negative");
+        }
+        if(seller == null) {
+            throw new IllegalArgumentException("seller is required");
         }
         this.sku = sku;
         this.title = title;
