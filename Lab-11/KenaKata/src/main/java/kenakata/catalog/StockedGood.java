@@ -4,6 +4,7 @@ import kenakata.order.Order;
 
 public class StockedGood extends CatalogItem implements Chargeable {
     public StockedGood(String s, String tableLamp, int i, int i1, Seller s1, int i2) {
+        super(s, tableLamp, i, i1, s1);
     }
 
     public int unitCharge() {
