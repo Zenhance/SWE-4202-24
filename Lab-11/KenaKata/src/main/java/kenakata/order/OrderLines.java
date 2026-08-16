@@ -6,7 +6,7 @@ import kenakata.catalog.Chargeable;
 public class OrderLines {
     protected int quantity;
     Chargeable item;
-
+    protected boolean insured = false;
     public OrderLines(Chargeable item, int quantity) {
         this.item = item;
         this.quantity = quantity;
