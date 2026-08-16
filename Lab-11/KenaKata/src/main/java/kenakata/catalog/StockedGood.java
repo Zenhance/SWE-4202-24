@@ -1,5 +1,6 @@
 package kenakata.catalog;
 
+import kenakata.exceptions.OutOfStockException;
 import kenakata.order.Order;
 
 public class StockedGood extends CatalogItem implements Chargeable {
@@ -21,10 +22,7 @@ public class StockedGood extends CatalogItem implements Chargeable {
         return (long) Math.ceil(amount * 0.08);
     }
 
-    public void reserve(int i) {
-    }
 
-    public int remaining() {
-        return 0;
-    }
+
+
 }
