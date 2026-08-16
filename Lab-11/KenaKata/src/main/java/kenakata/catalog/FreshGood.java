@@ -1,8 +1,10 @@
 package kenakata.catalog;
 
 public class FreshGood extends CatalogItem implements Chargeable {
-    public FreshGood(String s, String hilsa, int i, int i1, Seller seller, int i2) {
-        super(s, hilsa, i, i1, seller);
+    int weight;
+    public FreshGood(String sku, String title, long unitPrice, int stock, Seller seller, int weight) {
+        super(sku, title, unitPrice, stock, seller);
+        this.weight = weight;
     }
 
     public int unitVat() {
