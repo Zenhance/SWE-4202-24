@@ -20,7 +20,7 @@ public class DeliveryCalculator {
                     if (lines.item instanceof FreshGood) {
                         total += (coldSurcharge * lines.quantity) + (perKG * Math.ceil(weight / 1000.0));
                     } else {
-                        total += (perKG * (weight / 1000.0));
+                        total += (perKG * Math.ceil(weight / 1000.0));
                     }
                 }
             }
