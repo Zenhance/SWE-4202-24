@@ -25,6 +25,10 @@ public class StockedGood extends CatalogItem implements Chargeable {
         return (long) Math.ceil(amount * 0.08);
     }
 
+    public long getWeight(){
+        return this.weight;
+    }
+
 
 
 
