@@ -31,6 +31,9 @@ public class PriceBreakdown {
     }
 
     public long serviceFee() {
+        if(serviceFee >= 100){
+            this.serviceFee = 100;
+        }
         return serviceFee;
     }
 
