@@ -1,31 +1,40 @@
 package kenakata.order;
 
 public class PriceBreakdown {
-    public int subtotal() {
-        return 0;
+    long subtotal, discount, vat, delivery, insurance, serviceFee;
+    PriceBreakdown(long subtotal, long discount, long vat, long delivery, long insurance, long serviceFee) {
+        this.subtotal = subtotal;
+        this.discount = discount;
+        this.vat = vat;
+        this.delivery = delivery;
+        this.insurance = insurance;
+        this.serviceFee = serviceFee;
+    }
+    public long subtotal() {
+        return subtotal;
     }
 
-    public int discount() {
-        return 0;
+    public long discount() {
+        return discount;
     }
 
-    public int vat() {
-        return 0;
+    public long vat() {
+        return vat;
     }
 
-    public int delivery() {
-        return 0;
+    public long delivery() {
+        return delivery;
     }
 
-    public int insurance() {
-        return 0;
+    public long insurance() {
+        return insurance;
     }
 
-    public int serviceFee() {
-        return 0;
+    public long serviceFee() {
+        return serviceFee;
     }
 
-    public int grandTotal() {
-        return 0;
+    public long grandTotal() {
+        return subtotal - discount + vat + delivery + insurance + serviceFee;
     }
 }
