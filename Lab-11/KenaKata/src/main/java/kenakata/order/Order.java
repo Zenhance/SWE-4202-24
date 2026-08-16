@@ -62,9 +62,7 @@ public class Order {
         for(OrderLines line : orderLines) {
             if(line.insured){
                 long temp = (long) Math.ceil(line.item.unitCharge() * line.quantity * 0.01);
-                if(temp >= 20){
-                    insurance += temp;
-                }
+                insurance += temp;
             }
         }
         long delivery = deliveryCalculator.calculateDelivery(orderLines, zone);
