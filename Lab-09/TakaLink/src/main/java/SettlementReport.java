@@ -15,4 +15,16 @@ public class SettlementReport {
     public boolean isSettled(Transaction transaction) {
         return settledTransactions.contains(transaction);
     }
+
+    public Object errorOf(Transaction bad1) {
+        return bad1;
+    }
+
+    public double totalMoved() {
+        return 0.0;
+    }
+
+    public double totalFees() {
+        return 0.0;
+    }
 }
