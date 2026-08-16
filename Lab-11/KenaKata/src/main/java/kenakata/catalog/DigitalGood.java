@@ -1,8 +1,8 @@
 package kenakata.catalog;
 
 public class DigitalGood extends CatalogItem implements Chargeable {
-    public DigitalGood(String s, String s1, int i, int i1, Seller seller) {
-        super(s, s1, i, i1, seller);
+    public DigitalGood(String sku, String title, long unitPrice, int stock, Seller seller) {
+        super(sku,  title, unitPrice, stock, seller);
     }
 
     public int unitCharge() {
