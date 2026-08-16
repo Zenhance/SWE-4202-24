@@ -3,20 +3,22 @@ package kenakata.catalog;
 import kenakata.order.Order;
 
 public class StockedGood extends CatalogItem implements Chargeable {
-    public StockedGood(String s, String tableLamp, int i, int i1, Seller s1, int i2) {
-        super(s, tableLamp, i, i1, s1);
+    int weight;
+    public StockedGood(String sku, String title, long unitPrice, int stock, Seller seller, int weight) {
+        super(sku, title, unitPrice, stock, seller);
+        this.weight = weight;
     }
 
-    public int unitCharge() {
-        return 0;
+    public long unitCharge() {
+        return getUnitPrice();
     }
 
-    public int unitVat() {
-        return 0;
+    public long unitVat() {
+        return (long) Math.ceil(getUnitPrice() * 0.075);
     }
 
-    public int commissionOn(int i) {
-        return 0;
+    public long commissionOn(int i) {
+        return (long) Math.ceil(i * 0.08);
     }
 
     public void reserve(int i) {
