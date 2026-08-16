@@ -3,6 +3,7 @@ package kenakata.order;
 import kenakata.catalog.*;
 import kenakata.exceptions.CheckoutException;
 import kenakata.exceptions.CouponRejectedException;
+import kenakata.exceptions.NotInsurableException;
 import kenakata.payment.MobileWalletPayment;
 import kenakata.payment.PaymentMethod;
 
@@ -78,7 +79,11 @@ public class Order {
         this.coupon = c;
     }
 
-    public void insure(int i) {
+    public void insure(int index) throws NotInsurableException {
+        if(!(orderLines.get(index).item instanceof StockedGood ||orderLines.get(index).item instanceof FreshGood )){
+            throw new NotInsurableException("NOT INSUREABLE");
+        }
+        orderLines.get(index).insured = true;
     }
 
     public void place(PaymentMethod p, int i) throws CheckoutException {
