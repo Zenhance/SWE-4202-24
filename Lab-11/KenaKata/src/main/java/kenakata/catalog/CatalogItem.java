@@ -16,10 +16,10 @@ public abstract class CatalogItem implements Chargeable {
             throw new IllegalArgumentException("title is required");
         }
         if (unitPrice < 0) {
-            throw new IllegalArgumentException("unitPrice cant't be negative");
+            throw new IllegalArgumentException("unitPrice can't be negative");
         }
         if (stock < 0) {
-            throw new IllegalArgumentException("stock cant't be negative");
+            throw new IllegalArgumentException("stock can't be negative");
         }
         this.sku = sku;
         this.title = title;
