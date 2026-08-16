@@ -1,18 +1,19 @@
 package kenakata.catalog;
 
+import javax.xml.catalog.Catalog;
 import java.awt.*;
 
 public class WarrantyPlan implements Chargeable {
-    private StockedGood stockedGood;
-    public WarrantyPlan(StockedGood good) {
-        if(stockedGood == null) {
-            throw new IllegalArgumentException("stockedGood cannot be null");
+    private CatalogItem catalogItem;
+    public WarrantyPlan(CatalogItem catalogItem) {
+        if(catalogItem == null) {
+            throw new IllegalArgumentException("Item cannot be null");
         }
-        this.stockedGood = good;
+        this.catalogItem = catalogItem;
     }
 
     public long unitCharge() {
-        return (long) Math.ceil(stockedGood.unitCharge() * 0.1);
+        return (long) Math.ceil(catalogItem.getUnitPrice() * 0.1);
     }
 
     public long unitVat() {
@@ -20,6 +21,6 @@ public class WarrantyPlan implements Chargeable {
     }
 
     public String label() {
-        return "Table Lamp";
+        return catalogItem.getTitle();
     }
 }
