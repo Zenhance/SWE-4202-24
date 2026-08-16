@@ -57,7 +57,7 @@ public class Order {
 
         long insurance = 0;
         for(OrderLines line : orderLines) {
-            if(line.item instanceof StockedGood || line.item instanceof FreshGood){
+            if(line.insured){
                 long temp = (long) Math.ceil(line.item.unitCharge() * line.quantity * 0.01);
                 if(temp >= 20){
                     insurance += temp;
