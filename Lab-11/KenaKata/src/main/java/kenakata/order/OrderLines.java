@@ -7,6 +7,7 @@ public class OrderLines {
     protected int quantity;
     Chargeable item;
     protected boolean insured = false;
+    protected boolean placed = false;
     public OrderLines(Chargeable item, int quantity) {
         this.item = item;
         this.quantity = quantity;

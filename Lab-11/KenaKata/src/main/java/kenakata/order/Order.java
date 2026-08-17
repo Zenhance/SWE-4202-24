@@ -16,7 +16,7 @@ import java.util.Map;
 public class Order {
     Zone zone;
     Coupon coupon;
-    private PaymentMethod paymentMethod;
+    PaymentMethod paymentMethod;
     List<OrderLines> orderLines = new ArrayList<>();
     DeliveryCalculator deliveryCalculator;
 
@@ -87,8 +87,9 @@ public class Order {
         orderLines.get(index).insured = true;
     }
 
-    public void place(PaymentMethod p, int i) throws CheckoutException {
+    public void place(PaymentMethod p, int date) throws CheckoutException {
         this.paymentMethod = p;
+
     }
 
     public boolean placed() {
