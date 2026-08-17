@@ -1,34 +1,65 @@
 package kenakata.order;
 
+import kenakata.catalog.Chargeable;
+import kenakata.catalog.DigitalGood;
 import kenakata.catalog.FreshGood;
 import kenakata.catalog.Weighable;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class DeliveryCalculator
 {
-    public long calculate(Zone zone, List<OrderLine> lines)
+    private ArrayList<Chargeable> chargeable;
+
+    public DeliveryCalculator(ArrayList<Chargeable> chargeable)
     {
-        long totalWeight=0,freshlines=0;
-        for(OrderLine line : lines)
+        this.chargeable = chargeable;
+    }
+
+    public DeliveryCalculator()
+    {
+
+    }
+
+    public boolean onlyDigitalGood()
+    {
+        for (Chargeable c : chargeable)
         {
-            if(line.item() instanceof Weighable weighable)
-            {
-                totalWeight=totalWeight+weighable.weightGrams()+line.qty();
-            }
-            if(line.item() instanceof FreshGood)
-            {
-                freshlines++;
-            }
+            if (!(c instanceof DigitalGood)) return false;
         }
-        if(totalWeight==0)return 0;
-        long billedWeightInKG=(long)Math.ceil(totalWeight/1000);
+        return true;
+    }
 
-        long shipping;
-        if(zone==Zone.DHAKA)shipping=60+billedWeightInKG*20;
-        else shipping=120+billedWeightInKG*35;
+    public boolean hasFreshGood()
+    {
+        for (Chargeable c : chargeable)
+        {
+            if (c instanceof FreshGood)
+                return true;
+        }
+        return false;
+    }
 
-        long coldChain=freshlines*50;
-        return shipping+coldChain;
+    public int deliveryZone(Zone zone)
+    {
+        if (zone == Zone.DHAKA)
+            return 60;
+        else return  120;
+    }
+
+    public int billedWeight(Zone zone)
+    {
+        int totalWeight = 0;
+        for (Chargeable c : chargeable)
+        {
+            if (c instanceof Weighable)
+                totalWeight += ((Weighable) c).weightGrams();
+        }
+
+        double weightInKG = (double) totalWeight / 1000;
+
+        if (zone == Zone.DHAKA)
+            return ((int) Math.ceil(weightInKG)) * 20;
+        else return ((int) Math.ceil(weightInKG)) * 35;
     }
 }
