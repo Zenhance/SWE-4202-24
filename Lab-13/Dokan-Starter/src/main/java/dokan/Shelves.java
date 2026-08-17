@@ -88,6 +88,17 @@ public final class Shelves {
      * {@code List<T>} here would reject that perfectly sensible line.
      */
     public static <T extends Item> int addAll(Shelf<T> shelf, List<? extends T> items) {
-        throw new UnsupportedOperationException("TODO: Shelves.addAll");
+        int added = 0;
+
+        for (T item : items){
+            if (shelf.add(item)){
+                added++;
+            }
+            else {
+                break;
+            }
+        }
+        return added;
+        //throw new UnsupportedOperationException("TODO: Shelves.addAll");
     }
 }
