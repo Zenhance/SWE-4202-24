@@ -1,5 +1,6 @@
 package dokan;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -45,7 +46,12 @@ public final class Shelves {
      * of Books. Writing {@code Check<T>} here would reject that.
      */
     public static <T extends Item> List<T> keep(Shelf<T> shelf, Check<? super T> check) {
-        throw new UnsupportedOperationException("TODO: Shelves.keep");
+        List<T> result = new ArrayList<>();
+        for (T item : shelf.items()){
+            result.add(item);
+        }
+        return result;
+        //throw new UnsupportedOperationException("TODO: Shelves.keep");
     }
 
     /**
@@ -57,7 +63,21 @@ public final class Shelves {
      * An empty list has no largest value, so refuse it.
      */
     public static <T extends Comparable<T>> T max(List<T> values) {
-        throw new UnsupportedOperationException("TODO: Shelves.max");
+
+        if (values==null || values.isEmpty()){
+            throw new IllegalArgumentException("values list cant be empty");
+        }
+
+        T maxValue = values.get(0);
+
+        for (T value : values){
+            if(value.compareTo(maxValue)>0){
+                maxValue = value;
+            }
+        }
+
+        return maxValue;
+        //throw new UnsupportedOperationException("TODO: Shelves.max");
     }
 
     /**
