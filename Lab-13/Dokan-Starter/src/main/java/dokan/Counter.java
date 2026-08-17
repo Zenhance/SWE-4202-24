@@ -45,7 +45,15 @@ public final class Counter<T> {
 
     /** How many different values have been counted. */
     public int distinct() {
-        throw new UnsupportedOperationException("TODO: Counter.distinct");
+
+        List<T> diff = new ArrayList<>();
+        for(T item : items){
+            if(!diff.contains(item)){
+                diff.add(item);
+            }
+        }
+        return diff.size();
+        // throw new UnsupportedOperationException("TODO: Counter.distinct");
     }
 
     /** The value seen most often, or an empty box if nothing has been counted yet. */
