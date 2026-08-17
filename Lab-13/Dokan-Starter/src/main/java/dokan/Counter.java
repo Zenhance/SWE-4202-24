@@ -32,7 +32,15 @@ public final class Counter<T> {
 
     /** How many times {@code value} has been added. Zero if never. */
     public int count(T value) {
-        throw new UnsupportedOperationException("TODO: Counter.count");
+
+        int count = 0;
+        for (T item : items){
+            if(item.equals(value)){
+                count++;
+            }
+        }
+        return count;
+        //throw new UnsupportedOperationException("TODO: Counter.count");
     }
 
     /** How many different values have been counted. */
