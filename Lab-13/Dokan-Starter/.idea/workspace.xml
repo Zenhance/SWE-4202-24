@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e7634e3a-ee2e-4b30-8e7b-4844033ec1f5" name="Changes" comment="Implement counting functionality in Counter class; add methods to record sightings and retrieve counts of values" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="33" />
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Dokan-Starter" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Dokan-Starter" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Dokan-Starter" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="application" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="3.321959918410104E-91" />
+      <entry key="S2" value="3.476827615780775E-23" />
+      <entry key="S5" value="2.126873750062891E-9" />
+      <entry key="S10" value="1.0429663454039242E-4" />
+      <entry key="S30" value="0.18537373856779787" />
+      <entry key="S60" value="1.453507998872361" />
+      <entry key="M2" value="5.0511405715557345" />
+      <entry key="M5" value="15.047404474928515" />
+      <entry key="M10" value="27.195106685445644" />
+      <entry key="M15" value="34.93300360707736" />
+      <entry key="M30" value="46.410866146675154" />
+      <entry key="H1" value="54.23743891514843" />
+      <entry key="H2" value="58.84458172748543" />
+      <entry key="H4" value="61.349226658956" />
+      <entry key="D1" value="63.54764544966723" />
+      <entry key="W1" value="63.93511378133156" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.0000000202150077" />
+      <entry key="MS500" value="1.0308607824251954" />
+      <entry key="S2" value="1.6223724173399878" />
+      <entry key="S5" value="2.237302502120315" />
+      <entry key="S10" value="2.5696954627447215" />
+      <entry key="S30" value="3.0713759228043593" />
+      <entry key="S60" value="4.629941715415599" />
+      <entry key="M2" value="8.9936758735577" />
+      <entry key="M5" value="20.81200758317619" />
+      <entry key="M10" value="34.656925009685175" />
+      <entry key="M15" value="43.80769333080621" />
+      <entry key="M30" value="58.14984077846598" />
+      <entry key="H1" value="68.48611810811553" />
+      <entry key="H2" value="74.77921734072471" />
+      <entry key="H4" value="78.26397003338577" />
+      <entry key="D1" value="81.35898484541183" />
+      <entry key="W1" value="81.90796500187274" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="2.7504181303261568E-5" />
+      <entry key="MS500" value="0.13398946226257924" />
+      <entry key="S2" value="1.0122875296909166" />
+      <entry key="S5" value="1.8376981899040266" />
+      <entry key="S10" value="2.3228105188375086" />
+      <entry key="S30" value="3.151889277380187" />
+      <entry key="S60" value="5.9994936314331335" />
+      <entry key="M2" value="13.959569561464658" />
+      <entry key="M5" value="35.78097117353514" />
+      <entry key="M10" value="61.787930795178205" />
+      <entry key="M15" value="78.68738077502064" />
+      <entry key="M30" value="104.52602869010383" />
+      <entry key="H1" value="122.7034139353832" />
+      <entry key="H2" value="133.6128887461369" />
+      <entry key="H4" value="139.60751145670088" />
+      <entry key="D1" value="144.90564889973075" />
+      <entry key="W1" value="145.8429377286985" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="3I3KenzB2VxnGy7JS8ooQiDqTZu" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Dokan-Starter [cases].executor": "Run",
+    "Gradle.Dokan-Starter [intern].executor": "Run",
+    "Gradle.Dokan-Starter.executor": "Run",
+    "Gradle.DokanTest.executor": "Run",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "48-waseef",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Gradle.Dokan-Starter [cases]">
+    <configuration name="Dokan-Starter [cases]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="cases" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Dokan-Starter [intern]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="intern" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Dokan-Starter" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="DokanTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;checks.DokanTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.Dokan-Starter [cases]" />
+        <item itemvalue="Gradle.DokanTest" />
+        <item itemvalue="Gradle.Dokan-Starter [intern]" />
+        <item itemvalue="Gradle.Dokan-Starter" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-34e2839f716b-intellij.indexing.shared.core-IU-262.9437.185" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.9437.185" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task id="LOCAL-00001" summary="Enhance Box class value retrieval; add error handling in get method and implement orElse method for fallback value">
+      <option name="closed" value="true" />
+      <created>1786420217662</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1786420217662</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Fix exceptions in Box class; update get method to throw IllegalStateException and implement swapped method in Pair class; complete Shelf class constructor and methods for item management">
+      <option name="closed" value="true" />
+      <created>1786421434810</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1786421434810</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Implement Shelf class methods; complete add, isFull, contains, and totalPriceTaka methods; remove TODO comments and improve item management">
+      <option name="closed" value="true" />
+      <created>1786421772261</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1786421772261</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Implement remove method in Shelf class; add functionality to remove an item by name from the shelf">
+      <option name="closed" value="true" />
+      <created>1786421914472</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1786421914472</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Implement counting functionality in Counter class; add methods to record sightings and retrieve counts of values">
+      <option name="closed" value="true" />
+      <created>1786422143474</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1786422143474</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e7634e3a-ee2e-4b30-8e7b-4844033ec1f5" name="Changes" comment="Implement counting functionality in Counter class; add methods to record sightings and retrieve counts of values" />
+      <created>1786987911614</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1786987911614</updated>
+      <workItem from="1786987913236" duration="56000" />
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Enhance Box class value retrieval; add error handling in get method and implement orElse method for fallback value" />
+    <MESSAGE value="Fix exceptions in Box class; update get method to throw IllegalStateException and implement swapped method in Pair class; complete Shelf class constructor and methods for item management" />
+    <MESSAGE value="Implement Shelf class methods; complete add, isFull, contains, and totalPriceTaka methods; remove TODO comments and improve item management" />
+    <MESSAGE value="Implement remove method in Shelf class; add functionality to remove an item by name from the shelf" />
+    <MESSAGE value="Implement counting functionality in Counter class; add methods to record sightings and retrieve counts of values" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement counting functionality in Counter class; add methods to record sightings and retrieve counts of values" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/checks/DokanTest.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
