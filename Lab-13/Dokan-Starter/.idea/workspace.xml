@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f84e8f8-0ff3-4e07-82bb-c9acbc43fcc7" name="Changes" comment="final">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/intern/BookShelf.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/intern/InternDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/intern/ObjectShelf.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/intern/SnackShelf.java" beforeDir="false" />
-    </list>
+    <list default="true" id="1f84e8f8-0ff3-4e07-82bb-c9acbc43fcc7" name="Changes" comment="final" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
