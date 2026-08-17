@@ -22,7 +22,19 @@ public final class Shelves {
 
     /** The cheapest item on the shelf, or an empty box if the shelf is empty. */
     public static <T extends Item> Box<T> cheapest(Shelf<T> shelf) {
-        throw new UnsupportedOperationException("TODO: Shelves.cheapest");
+       if(shelf.isEmpty()){
+           return Box.empty();
+       }
+       T cheapestItem = null;
+
+       for (T item : shelf.items()){
+           if (cheapestItem == null || item.priceTaka() < cheapestItem.priceTaka()){
+               cheapestItem=item;
+           }
+
+       }
+        return Box.of(cheapestItem);
+        // throw new UnsupportedOperationException("TODO: Shelves.cheapest");
     }
 
     /**
