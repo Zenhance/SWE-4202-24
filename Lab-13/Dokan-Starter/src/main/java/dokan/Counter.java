@@ -1,6 +1,7 @@
 package dokan;
 
-import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -21,11 +22,12 @@ import java.util.Map;
  */
 public final class Counter<T> {
 
-
+    private final List<T> items = new ArrayList<>();
 
     /** Records one more sighting of {@code value}. */
     public void add(T value) {
-        throw new UnsupportedOperationException("TODO: Counter.add");
+        items.add(value);
+        //throw new UnsupportedOperationException("TODO: Counter.add");
     }
 
     /** How many times {@code value} has been added. Zero if never. */
