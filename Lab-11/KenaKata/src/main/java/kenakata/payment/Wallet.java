@@ -10,8 +10,8 @@ public class Wallet {
         this.amount = amount;
     }
 
-    public String balance() {
-        return ""+amount;
+    public int balance() {
+        return amount;
     }
 
 }

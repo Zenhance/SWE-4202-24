@@ -149,7 +149,7 @@ class KenaKataTest {
     class FullOrder {
 
         // Rebuilds the exact order from the specification's worked example.
-        private Order workedExample() {
+        private Order workedExample()  {
             Seller a = new Seller("A");
             Seller b = new Seller("B");
             Order order = new Order(Zone.DHAKA, new DeliveryCalculator());

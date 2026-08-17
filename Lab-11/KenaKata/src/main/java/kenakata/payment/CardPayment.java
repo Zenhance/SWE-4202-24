@@ -1,20 +1,23 @@
 package kenakata.payment;
 
 import kenakata.exceptions.CardLimitExceededException;
+import kenakata.exceptions.EmptyWalletException;
 
 public class CardPayment extends PaymentMethod{
     int amount;
-    public CardPayment(int i) {
-        this.amount = i;
+
+    public CardPayment(int amount) {
+        this.amount = amount;
     }
 
     public int remainingLimit() {
-        return 0;
+        return amount;
     }
-    public void authorise(int amount) {
-        if(this.amount < amount) {
+    public void authorise(int amount) throws CardLimitExceededException{
+        if(this.amount >= amount) {
             this.amount-=amount;
         }
+        else throw new CardLimitExceededException();
 
     }
 }

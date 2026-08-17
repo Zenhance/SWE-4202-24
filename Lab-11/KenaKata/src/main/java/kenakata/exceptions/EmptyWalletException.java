@@ -1,4 +1,4 @@
 package kenakata.exceptions;
 
-public class EmptyWalletException extends CheckedExceptions{
+public class EmptyWalletException extends PaymentDeclinedException{
 }

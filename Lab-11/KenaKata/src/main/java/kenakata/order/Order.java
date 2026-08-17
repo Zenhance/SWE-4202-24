@@ -4,9 +4,7 @@ import kenakata.catalog.CatalogItem;
 import kenakata.catalog.Chargeable;
 import kenakata.catalog.FreshGood;
 import kenakata.catalog.StockedGood;
-import kenakata.exceptions.CheckoutException;
-import kenakata.exceptions.CouponRejectedException;
-import kenakata.exceptions.NotInsurableException;
+import kenakata.exceptions.*;
 import kenakata.payment.PaymentMethod;
 
 import java.util.ArrayList;
@@ -19,6 +17,9 @@ public class Order {
     public Coupon coupon;
     DeliveryCalculator deliveryCal;
     Zone zone;
+    int placedate;
+    PriceBreakdown fin;
+    Boolean place=false;
 
     public Order(Zone zone, DeliveryCalculator deliveryCalculator) {
         this.zone = zone;
@@ -26,10 +27,18 @@ public class Order {
     }
 
     public void addProduct(CatalogItem item, int amount) {
-        Lines.add(new Line(item,amount));
+        Line line = new Line(item, amount);
+        Lines.add(line);
+        try {
+            item.reserve(amount);
+        }
+        catch(Exception e) {
+            lines().remove(line);
+        }
     }
     public void addAddOn(Chargeable e) {
-        Lines.add(new Line(e));
+        Line line = new Line(e);
+        Lines.add(line);
     }
 
     public void applyCoupon(Coupon coupon) {
@@ -53,8 +62,8 @@ public class Order {
             }
         if (coupon != null && (coupon.validdate < day || coupon.minspend > subtotal))
             throw new CouponRejectedException();
-        for(Line line : Lines) if(line.insurable) insurance+=(int) (0.01*line.item.unitCharge());
-        for(Line line : Lines) if(line.insurable) insurance+=max(20,insurance);
+        for(Line line : Lines) if(line.insurable) insurance+=(int) (0.01*(line.item.unitCharge()*line.quantity));
+        for(Line line : Lines) if(line.insurable) insurance=max(20,insurance);
 
         servicefee =(int)min(ceil(subtotal*0.01),100);
         for(Line line : Lines)
@@ -73,25 +82,29 @@ public class Order {
     }
 
     public void place(PaymentMethod payment, int today) throws CheckoutException{
-
+        placedate=today;
+        if(coupon!=null&&coupon.validdate < today) throw new CouponRejectedException();
+        fin= quote(today);
+        place=true;
     }
 
-    public void acceptReturn(int idx, int day) {
+    public void acceptReturn(int idx, int day) throws ReturnNotAllowedException {
+    if(!lines().get(idx).returnable||lines().get(idx).returned) throw new ReturnNotAllowedException();
+    if(lines().get(idx).item instanceof StockedGood ) if(day>placedate+7) throw new ReturnNotAllowedException();
+    if(lines().get(idx).item instanceof FreshGood ) if(day>placedate+2) throw new ReturnNotAllowedException();
+    lines().get(idx).returned=true;
     }
 
     public boolean placed() {
-        return false;
+        return place;
     }
 
     public PriceBreakdown finalBreakdown() {
-        return null;
+        return fin;
     }
 
     public ArrayList<Line> lines() {
         return Lines;
     }
 
-    public void returned() {
-
-    }
 }
