@@ -31,56 +31,44 @@ import java.util.List;
 public final class Shelf<T extends Item> {
 
     public Shelf(int capacity) {
-        throw new UnsupportedOperationException("TODO: Shelf constructor");
     }
 
     /** Puts an item on the shelf. Returns false, without adding, if the shelf is full. */
     public boolean add(T item) {
-        throw new UnsupportedOperationException("TODO: Shelf.add");
     }
 
     public T get(int index) {
-        throw new UnsupportedOperationException("TODO: Shelf.get");
     }
 
     public int size() {
-        throw new UnsupportedOperationException("TODO: Shelf.size");
     }
 
     public int capacity() {
-        throw new UnsupportedOperationException("TODO: Shelf.capacity");
     }
 
     public boolean isFull() {
-        throw new UnsupportedOperationException("TODO: Shelf.isFull");
     }
 
     public boolean isEmpty() {
-        throw new UnsupportedOperationException("TODO: Shelf.isEmpty");
     }
 
     public boolean contains(String name) {
-        throw new UnsupportedOperationException("TODO: Shelf.contains");
     }
 
     /** Takes the first item with this name off the shelf. True if one was there. */
     public boolean remove(String name) {
-        throw new UnsupportedOperationException("TODO: Shelf.remove");
     }
 
     /** What everything on the shelf is worth. This is the method the bound pays for. */
     public int totalPriceTaka() {
-        throw new UnsupportedOperationException("TODO: Shelf.totalPriceTaka");
     }
 
     /** The items, as a list the caller cannot use to change the shelf. */
     public List<T> items() {
-        throw new UnsupportedOperationException("TODO: Shelf.items");
     }
 
     @Override
     public String toString() {
         // The test cases print shelves, so this should look like a list.
-        throw new UnsupportedOperationException("TODO: Shelf.toString");
     }
 }

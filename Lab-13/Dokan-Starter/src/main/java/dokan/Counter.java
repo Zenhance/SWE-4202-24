@@ -16,21 +16,18 @@ package dokan;
  *       counted, that is an empty box — no null, no special case at the call site.</li>
  * </ul>
  */
-public final class Counter<T> {
+public final class  Counter<T> {
 
     /** Records one more sighting of {@code value}. */
     public void add(T value) {
-        throw new UnsupportedOperationException("TODO: Counter.add");
     }
 
     /** How many times {@code value} has been added. Zero if never. */
     public int count(T value) {
-        throw new UnsupportedOperationException("TODO: Counter.count");
     }
 
     /** How many different values have been counted. */
     public int distinct() {
-        throw new UnsupportedOperationException("TODO: Counter.distinct");
     }
 
     /** The value seen most often, or an empty box if nothing has been counted yet. */
