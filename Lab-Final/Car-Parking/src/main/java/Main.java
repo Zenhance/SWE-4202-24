@@ -114,10 +114,9 @@ public class Main {
             else if (field[0].equals("MAXSTAY")) {
                 maxStay = Integer.parseInt(field[1]);
 
-            } else if (field[0].equals("COUNT")) {
-                System.out.println(parkedVehicles.size());
+            }
 
-            } else if (field[0].equals("BIKE") || field[0].equals("CAR") || field[0].equals("REGULAR")) {
+            else if (field[0].equals("BIKE") || field[0].equals("CAR") || field[0].equals("REGULAR")) {
 
                 VehicleType vType = VehicleType.valueOf(field[0]);
                 String numPlate = field[1];
@@ -157,6 +156,12 @@ public class Main {
                 } else {
                     refused++;
                 }
+
+            }
+
+
+            else if (field[0].equals("COUNT")) {
+                System.out.println(parkedVehicles.size());
 
             } else if (field[0].equals("FREE")) {
                 SlotType st = SlotType.valueOf(field[1]);
