@@ -8,5 +8,8 @@ public abstract class Vehicle {
         this.registration = registration;
         this.pass = pass;
     }
+    public String getRegistration(){
+        return registration;
+    }
 
 }
