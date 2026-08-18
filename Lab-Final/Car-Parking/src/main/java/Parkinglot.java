@@ -97,6 +97,11 @@ public class Parkinglot {
     public int totalEarned() {
         return totalEarned;
     }
+    public Integer billFor(String plate) {
+        Vehicle v = parkedVehicles.get(plate);
+        if (v == null) {
+            return null;
+        }
 
 }
 
