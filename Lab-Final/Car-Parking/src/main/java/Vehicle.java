@@ -24,9 +24,7 @@ public abstract class Vehicle {
         this(number, "NONE");
     }
 
-    public abstract int firstHourCharge ();
-    public abstract int furtherHourCharge ();
-    public abstract int Surcharge ();
+
 
     public int getHoursPassed() {
         return hoursPassed;

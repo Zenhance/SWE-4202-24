@@ -62,6 +62,12 @@ public class Main {
                 if (p != null)
                     System.out.println(p.getRefused()/* the number you worked out */);
             }
+            else if (field[0].equals("BILL")) {
+                    System.out.println("NONE");
+            }
+            else if (field[0].equals("EARNED")) {
+                    System.out.println("NONE");
+            }
             // ... one branch per keyword ...
 
         }

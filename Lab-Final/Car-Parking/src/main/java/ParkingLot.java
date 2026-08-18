@@ -15,9 +15,11 @@ public class ParkingLot {
     CalculateCharge c = new CalculateCharge();
 
     ArrayList<Vehicle> vehicles = new ArrayList<>();
-    ArrayList<Vehicle> bikes = new ArrayList<>();
+    /*ArrayList<Vehicle> bikes = new ArrayList<>();
     ArrayList<Vehicle> regulars = new ArrayList<>();
-    ArrayList<Vehicle> larges = new ArrayList<>();
+    ArrayList<Vehicle> larges = new ArrayList<>();*/
+    ArrayList<Vehicle> slotted = new ArrayList<>();
+    ArrayList<String> slottedAt = new ArrayList<>();
 
     public ParkingLot(int maxBikeSlot, int maxRegularSlot, int maxLargeSlot) {
         this.maxBikeSlot = maxBikeSlot;
@@ -39,17 +41,17 @@ public class ParkingLot {
 
     private String addBike(Bike bike){
         if(bikeSlot < maxBikeSlot) {
-            bikes.add(bike);
+            slotted.add(bike);
             bikeSlot++;
             return "BIKE";
         }
         else if(regularSlot < maxRegularSlot) {
-            regulars.add(bike);
+            slotted.add(bike);
             regularSlot++;
             return "REGULAR";
         }
         else if(largeSlot < maxLargeSlot) {
-            larges.add(bike);
+            slotted.add(bike);
             largeSlot++;
             return "LARGE";
         }
@@ -61,12 +63,12 @@ public class ParkingLot {
 
     private String addCar(Car car){
         if(regularSlot < maxRegularSlot) {
-            regulars.add(car);
+            slotted.add(car);
             regularSlot++;
             return "REGULAR";
         }
         else if(largeSlot < maxLargeSlot) {
-            larges.add(car);
+            slotted.add(car);
             largeSlot++;
             return "LARGE";
 
@@ -79,7 +81,7 @@ public class ParkingLot {
 
     private String addTruck(Truck truck){
         if(largeSlot < maxLargeSlot) {
-            larges.add(truck);
+            slotted.add(truck);
             largeSlot++;
             return "LARGE";
         }
@@ -107,6 +109,12 @@ public class ParkingLot {
         return null;
     }
 
+    public void leave (String number){
+        Vehicle v = search(number);
+        vehicles.remove(v);
+        count--;
+    }
+
 
     public int getRefused() {
         return refused;
@@ -128,20 +136,5 @@ public class ParkingLot {
         return maxLargeSlot-largeSlot;
     }
 
-    public ArrayList<Vehicle> getLarges() {
-        return larges;
-    }
-
-    public ArrayList<Vehicle> getRegulars() {
-        return regulars;
-    }
-
-    public ArrayList<Vehicle> getBikes() {
-        return bikes;
-    }
-
-    public ArrayList<Vehicle> getVehicles() {
-        return vehicles;
-    }
 
 }
