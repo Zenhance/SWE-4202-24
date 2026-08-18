@@ -15,19 +15,23 @@ while(input.hasNextLine()){
         continue;
     }
 
-    String[] field=line.split("\\s+");
+    String[] field=line.split(" ");
     String command=field[0];
 
     if(command.equals("END")){
         break;
     }
-    try{
-        if(command.equals("SLOTS")){
+try{
+    if(command.equals("SLOTS")){
+        int bikeSlots=Integer.parseInt(field[1]);
+        int regularSlots=Integer.parseInt(field[2]);
+        int largerSlots=Integer.parseInt(field[3]);
 
-            int bike=Integer.parseInt()
-        }
+    }
+    else if(command.equals("MAXSTAY")){
+        int hours=Integer.parseInt(field[1]);
+        park.setMaxStay(hours);
     }
 }
-
     }
 }

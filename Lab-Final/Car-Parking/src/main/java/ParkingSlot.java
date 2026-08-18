@@ -1,10 +1,10 @@
 public class ParkingSlot {
     private String type;
-    private Vehicle vehicle;
+    private Vehicle vehicles;
 
     public ParkingSlot(String type){
         this.type=type;
-        this.vehicle=vehicle;
+        this.vehicles = vehicles;
 
     }
 
@@ -13,15 +13,15 @@ public class ParkingSlot {
     }
 
     public boolean isFree(){
-        return vehicle==null;
+        return vehicles ==null;
     }
 
     public void park(Vehicle vehicle){
-        this.vehicle=vehicle;
+        this.vehicles =vehicle;
     }
 
     public void makeFree(){
-        this.vehicle=null;
+        this.vehicles =null;
     }
 
     public int getFirstHourPrice(){
