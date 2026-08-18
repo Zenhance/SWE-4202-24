@@ -34,5 +34,22 @@ public class ParkingSlot {
         else{return 50;}
     }
 
-    public int getNextHourPrice
+    public int getNextHourPrice(){
+        if(type.equals("BIKE")){
+            return 5;
+        }
+        else if(type.equals(("REGULAR"))){
+            return 20;
+        }
+        else{return 40;}
+    }
+    public int getSurcharge(){
+        if(type.equals("BIKE")){
+            return 0;
+        }
+        else if(type.equals("REGULAR")){
+            return 15;
+        }
+        else{return 25;}
+    }
 }
