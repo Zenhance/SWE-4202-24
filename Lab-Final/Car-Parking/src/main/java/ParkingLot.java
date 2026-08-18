@@ -68,4 +68,23 @@ public void register(Vehicle vehicle){
     }
     refusedCount=refusedCount+1;
 }
+public SlotType slotOf(String plate){
+       Vehicle v=parkedVehicles.get(plate);
+       if(v==null){
+           return null;
+       }
+       return v.getKeptSlot();
+    }
+    public int freeCount(SlotType type){
+        return getFreeSlots(type);
+    }
+    public int parkedCount(){
+        return parkedVehicles.size();
+    }
+    public int refusedCount(){
+        return refusedCount;
+    }
+    public int totalEarned(){
+        return totalEarned;
+    }
 }
