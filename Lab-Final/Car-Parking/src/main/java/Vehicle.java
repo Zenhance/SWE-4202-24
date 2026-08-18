@@ -3,7 +3,10 @@ public class Vehicle
 {
     BIKE, CAR, TRUCK
 }
-
+    public enum DiscountScheme
+    {
+        NONE, STUDENT, WEEKEND
+    }
     private String numberPlate;
     private int entranceTime;
     private Category category;
