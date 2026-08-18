@@ -1,4 +1,7 @@
 package Exception;
 
-public class UnknownPlateException {
+public class UnknownPlateException extends Exception {
+    public UnknownPlateException(String message){
+        super(message);
+    }
 }

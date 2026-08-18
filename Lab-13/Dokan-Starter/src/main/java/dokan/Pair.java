@@ -16,8 +16,8 @@ public final class Pair<A, B> {
     private final B second;
 
     public Pair(A first, B second) {
-        this.first = Objects.requireNonNull(first, "first");
-        this.second = Objects.requireNonNull(second, "second");
+        this.first = first;
+        this.second = second;
     }
 
     public A first() {
@@ -36,11 +36,12 @@ public final class Pair<A, B> {
      * the values, and the compiler will hold you to it. The body is one line.
      */
     public Pair<B, A> swapped() {
-        throw new UnsupportedOperationException("TODO: Pair.swapped");
+       return new Pair<>(second, first);
     }
 
     @Override
     public String toString() {
+
         return "(" + first + ", " + second + ")";
     }
 }

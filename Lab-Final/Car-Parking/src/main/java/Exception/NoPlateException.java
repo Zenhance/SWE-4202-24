@@ -1,4 +1,7 @@
 package Exception;
 
-public class NoPlateException {
+public class NoPlateException extends Exception {
+    public  NoPlateException(String message){
+        super(message);
+    }
 }
