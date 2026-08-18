@@ -141,6 +141,16 @@ public class ParkingLot {
         return v.slot.type.toString();
         }
 
+        public void leave(String plate) throws NotFoundException{
+        Vehicle v = findVehicle(plate);
+        if(v==null){
+            throw new NotFoundException();
+        }
+        earned = earned + calculateBill(v,false);
+        v.slot.vehicle = null;
+        vehicles.remove(v);
+        }
+
 
     }
 
