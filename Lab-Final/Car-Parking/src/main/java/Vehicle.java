@@ -2,13 +2,13 @@ import java.util.ServiceLoader;
 
 public class Vehicle {
     private final String Vehicleplate;
-    private final int hour;
+    private final int hourEntered;
     private final Category category;
     private final slotType keptslot;
 
-    public Vehicle(String vehicleplate, int hour, Category category, slotType keptslot) {
+    public Vehicle(String vehicleplate, int hourEntered, Category category, slotType keptslot) {
         this.Vehicleplate = vehicleplate;
-        this.hour = hour;
+        this.hourEntered = hourEntered;
         this.category = category;
         this.keptslot = keptslot;
     }
@@ -17,7 +17,7 @@ public class Vehicle {
     return null;
     }
 
-    public int getHour(){
+    public int getHourEntered(){
         return 0;
     }
 
