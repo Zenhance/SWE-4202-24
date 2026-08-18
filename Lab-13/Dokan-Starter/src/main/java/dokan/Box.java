@@ -61,6 +61,6 @@ public final class Box<T> {
 
     @Override
     public String toString() {
-        return present? "Box =" +value : "Box is empty";
+        return present? "Box(" +value +")" : "Box(empty)";
     }
 }

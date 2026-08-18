@@ -1,5 +1,7 @@
 public class Circle extends Shape{
     private final double radius;
+    double area;
+
     public Circle(double radius){
         if(radius<=0)
             throw new IllegalArgumentException("Radius is too smoll");
@@ -15,16 +17,16 @@ public class Circle extends Shape{
     }
     @Override
     public String describe(){
-        return String.format(Circle(radius=%.2f,area=%.2f),radius,area();
+        return String.format("Circle(radius=%.2f,area= %.2f)",radius,area());
     }
     @Override
     public void draw(Canvas canvas)throws ShapeException{
         double area=area();
-        if(area>canvas.capacity)
+        if(area>canvas.capacity())
             throw new ShapeTooLargeException("Invalid");
         if(area<1)
             throw new ShapeTooSmallException("Invalid");
-        canva.circle(radius);
+        canvas.circle(radius);
     }
 
 
