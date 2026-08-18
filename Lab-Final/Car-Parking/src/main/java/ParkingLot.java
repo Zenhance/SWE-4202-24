@@ -8,24 +8,61 @@ public class ParkingLot {
     int earned;
     int refused;
 
-    public ParkingLot(int bike, int regular, int large){
-        earned=0;
-        refused=0;
+    public ParkingLot(int bike, int regular, int large) {
+        earned = 0;
+        refused = 0;
 
-        for(int i=0;i<bike;i++){
+        for (int i = 0; i < bike; i++) {
             slots.add(new Slot(SlotType.BIKE));
         }
 
-        for(int i=0;i<regular;i++){
+        for (int i = 0; i < regular; i++) {
             slots.add(new Slot(SlotType.REGULAR));
         }
 
-        for(int i=0;i<large;i++){
+        for (int i = 0; i < large; i++) {
             slots.add(new Slot(SlotType.LARGE));
         }
     }
 
-    public void setMaxStay(int x){
-        maxStay=x;
+    public void setMaxStay(int x) {
+        maxStay = x;
     }
-}
+
+    public Vehicle findVehicle(String plate) {
+        for (int i = 0; i < vehicles.size(); i++) {
+            if (vehicles.get(i).plate.equals(plate)) {
+                return vehicles.get(i);
+            }
+        }
+        return null;
+    }
+
+    public void enter(Vehicle v) throws RefusalException {
+        if (v.plate.equals("-") || v.plate.length() == 0) {
+            throw new NoPlateException();
+        }
+        Slot chosen = null;
+        SlotType[] wanted = v.getWantedSlots();
+
+        for (int i = 0; i < wanted.length; i++) {
+            for (int j = 0; j < slots.size(); j++) {
+                Slot s = slots.get(j);
+
+                if (s.type == wanted[i] && s.isFree()) {
+                    chosen = s;
+                    break;
+                }
+            }
+        }
+            if (chosen == null) {
+                throw new NoSlotException();
+            }
+            chosen.vehicle = v;
+            v.slot = chosen;
+
+            vehicles.add(v);
+        }
+        public int getFirstRate(SlotType type){}
+    }
+
