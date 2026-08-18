@@ -1,5 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
+import Exception.NoplateException;
+import Exception.NoslotException;
+import Exception.NoVehicleFoundException;
 
 public class Carkpark {
     private int freeBike;
@@ -35,5 +38,38 @@ public class Carkpark {
             }
         }
         return null;
+     }
+
+     private void changeFreeCount(SlotType type,int count){
+        switch (type){
+            case BIKE -> freeBike+=count;
+            case REGULAR -> freeRegular+=count;
+            case LARGE -> freeLarge+=count;
+        }
+     }
+
+     public void arrive(Vehicle vehicle) throws NoplateException,NoslotException{
+        if(vehicle.getPlate()==null || vehicle.getPlate().equals("-")){
+            throw new NoplateException("Arrived vehicle do not have a plate");
+        }
+        for(SlotType candidate: vehicle.acceptanceOrder()){
+            if(freeCount(candidate)>0){
+                changeFreeCount(candidate,-1);
+                vehicle.setCurrentSlot(candidate);
+                parkedVehicle.add(vehicle);
+                return;
+            }
+        }
+        throw new NoslotException();
+     }
+
+     public void leave(String plate)throws NoVehicleFoundException{
+        Vehicle vehicle=find(plate);
+        if(vehicle==null){
+            throw new NoVehicleFoundException("The plate number "+ plate + "is not in the park");
+        }
+       // earned+=billedFor(vehicle,Math.max(1, vehicle.getHoursStood()));
+        changeFreeCount(vehicle.getCurrentSlot(),1);
+        parkedVehicle.remove(vehicle);
      }
 }
