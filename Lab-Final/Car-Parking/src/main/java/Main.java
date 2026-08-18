@@ -17,14 +17,12 @@ public class Main {
                 );
 
         String line;
-
         while ((line = reader.readLine()) != null) {
             line = line.trim();
 
             if (line.equals("END")) {
                 break;
             }
-
             processor.process(line);
         }
     }
