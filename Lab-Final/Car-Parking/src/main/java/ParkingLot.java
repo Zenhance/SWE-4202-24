@@ -22,8 +22,7 @@ public class ParkingLot {
                 slots.add(new Slot(SlotType.LARGE));
             }
         }
-    public void arrive(Vehicle vehicle)
-            throws ParkingException {
+    public void arrive(Vehicle vehicle) throws ParkingException {
         if (vehicle.getPlate().equals("-")) {
             throw new ParkingException();
         }
@@ -61,5 +60,52 @@ public class ParkingLot {
         int bill = calculateBill(vehicle, slot, billHours);
         earned += bill;
         slot.removeVehicle();
+    }
+    public String bill(String plate) throws ParkingException {
+            Slot slot = findVehicle(plate);
+            if (slot == null) {
+            throw new ParkingException();
+        }
+            Vehicle vehicle = slot.getVehicle();
+            int hours = Math.max(1, vehicle.getHours());
+            return String.valueOf(calculateBill(vehicle, slot, hours);
+        );
+    }
+
+    private Slot findVehicle(String plate) {
+    }
+
+    private int calculateBill(Vehicle vehicle, Slot slot, int hours) {
+            SlotType slotType = slot.getType();
+        int bill = slotType.getFirstHour() + (hours - 1) * slotType.getFurtherHour();
+        if (slotType != vehicle.getAcceptedSlots()[0]) {
+            bill += slotType.getSurcharge();
+        }
+        bill = vehicle.applyDiscount(bill);
+        return Math.max(0, bill);
+    }
+    public String slot(String plate) throws ParkingException {
+            Slot slot = findVehicle(plate);
+            if (slot == null) throw new ParkingException();
+            return slot.getType().name();
+    }
+    public int free(String kind) {
+            SlotType type = SlotType.valueOf(kind);
+            int count = 0;
+            for (Slot slot : slots) {
+                if (slot.getType() == type && slot.isFree()) {
+                    count++;
+            }
+        }
+        return count;
+    }
+    public int count() {
+        int count = 0;
+        for (Slot slot : slots) {
+            if (!slot.isFree()) {
+                count++;
+            }
+        }
+        return count;
     }
 }
