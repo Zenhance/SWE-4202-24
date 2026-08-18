@@ -23,8 +23,4 @@ public abstract class Vehicle {
         this(number, "NONE");
     }
 
-
-
-
-
 }

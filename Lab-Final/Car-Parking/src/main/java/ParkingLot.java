@@ -10,7 +10,7 @@ public class ParkingLot {
     int largeSlot = 0;
 
     static int count = 0;
-    static int returned = 0;
+    static int refused = 0;
 
     static ArrayList<Vehicle> vehicles = new ArrayList<>();
     static ArrayList<Vehicle> bikes = new ArrayList<>();
@@ -25,6 +25,7 @@ public class ParkingLot {
 
     public void enterVehicle(Vehicle v){
         vehicles.add(v);
+        count++;
     }
 
     private static Vehicle search(String number){
@@ -51,8 +52,8 @@ public class ParkingLot {
             return "LARGE";
         }
         else {
-            returned++;
-            return null;
+            refused++;
+            return "NONE";
         }
     }
 
@@ -69,8 +70,8 @@ public class ParkingLot {
 
         }
         else {
-            returned++;
-            return null;
+            refused++;
+            return "NONE";
         }
     }
 
@@ -81,8 +82,8 @@ public class ParkingLot {
             return "LARGE";
         }
         else {
-            returned++;
-            return null;
+            refused++;
+            return "NONE";
         }
     }
 
@@ -104,6 +105,8 @@ public class ParkingLot {
         return null;
     }
 
+
+
     public static ArrayList<Vehicle> getLarges() {
         return larges;
     }
@@ -121,6 +124,8 @@ public class ParkingLot {
     }
 
     public static int getReturned() {
-        return returned;
+        return refused;
     }
+
+
 }
