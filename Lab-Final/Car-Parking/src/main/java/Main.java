@@ -65,7 +65,7 @@ public class Main {
                 int hours = Integer.parseInt(field[1]);
             }else if (field[0].equals("LEAVE")) {
                 String plate = field[1];
-
+                parkingLot.leavePlate(plate);
             }else if (field[0].equals("BILL")) {
 
             }else if (field[0].equals("SLOT")) {
