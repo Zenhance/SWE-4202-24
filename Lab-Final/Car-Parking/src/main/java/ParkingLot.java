@@ -24,10 +24,6 @@ public class ParkingLot {
         }
     public void arrive(Vehicle vehicle)
             throws ParkingException {
-
-        /*
-         * "-" means the plate was blank.
-         */
         if (vehicle.getPlate().equals("-")) {
             throw new ParkingException();
         }
@@ -37,5 +33,29 @@ public class ParkingLot {
             throw new ParkingException();
         }
         slot.setVehicle(vehicle);
+    }
+    private Slot findFreeSlot(SlotType[] acceptedSlots) {
+        for (SlotType type : acceptedSlots) {
+            for (Slot slot : slots) {
+                if (slot.getType() == type && slot.isFree()) {
+                    return slot;
+                }
+            }
+        }
+        return null;
+    }
+    public void passTime(int hours) {
+        for (Slot slot : slots) {
+            if (!slot.isFree()) slot.getVehicle().addHours(hours);
+        }
+        for (Slot slot : slots) {
+            if (!slot.isFree() && slot.getVehicle().getHours() >= maxStay) {
+                evict(slot);
+            }
+        }
+    }
+    private void evict(Slot slot) {
+            Vehicle vehicle = slot.getVehicle();
+            int removalHours = (maxStay + 9)/10;
     }
 }
