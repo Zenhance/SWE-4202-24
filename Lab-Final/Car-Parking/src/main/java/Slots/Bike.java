@@ -1,11 +1,18 @@
 package Slots;
 
+import java.util.ArrayList;
+
 public class Bike extends Slot{
-    int count;
+    private static int count;
+    public ArrayList b = new ArrayList<>();
     public int firstHour=10;
     public int regularHour=5;
     public int surcharge=0;
-    int slotsAvailable(){
+    public int slotsAvailable(){
         return count;
     }
+    public Bike(String s){
+        b.add(s);
+    }
+
 }
