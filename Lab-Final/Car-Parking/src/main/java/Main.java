@@ -28,12 +28,6 @@ public class Main {
                     break;
 
 
-                case "SLOTS":
-                    Bike.setBikeSlot(Integer.parseInt(field[1]));
-
-                    Regular.setRegularSlot(Integer.parseInt(field[2]));
-
-                    Truck.setTruckSlot(Integer.parseInt(field[3]));
 
                 case "MAXSTAY":
                     int hours = Integer.parseInt(field[1]);
