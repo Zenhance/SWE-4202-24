@@ -7,9 +7,8 @@ public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
+        int MAX_STAY = 0;
         List<Slot> vehicles = new ArrayList<>();
-
-        int total = 0;
 
         while (input.hasNextLine()) {
             String line = input.nextLine().trim();
@@ -31,6 +30,7 @@ public class Main {
                 }
                 case "MAXSTAY" -> {
                     int hours = Integer.parseInt(field[1]);
+                    MAX_STAY = hours;
                     Slot.setMAXSTAY(hours);
                 }
 
@@ -67,7 +67,10 @@ public class Main {
 
                 case "PASSTIME" -> {
                     for (Slot v : vehicles){
-                        v.passtime(Integer.parseInt(field[1]) - 1);
+                        if(!v.passtime(Integer.parseInt(field[1]) - 1)){
+                            Slot.earning(v.calculatefee());
+                            vehicles.remove(v);
+                        }
                     }
                 }
 
@@ -78,7 +81,7 @@ public class Main {
                             else if (v instanceof Regular) Regular.freeUpslot();
                             else Large.freeUpslot();
 
-                            total += v.calculatefee();
+                            Slot.earning(v.calculatefee());
                             vehicles.remove(v);
                             break;
                         }
@@ -122,7 +125,7 @@ public class Main {
 
                 case "EARNED" -> {
 
-                    System.out.println(total);
+                    System.out.println(Slot.getEarned());
                 }
 
                 case "REFUSED" -> {

@@ -2,6 +2,7 @@ import static java.lang.Math.max;
 
 public abstract class Slot {
 
+    int totalpasstime = 0;
     protected int hours = 0;
     protected static int countTotal = 0;
     protected boolean surchargeApplicable;
@@ -27,6 +28,7 @@ public abstract class Slot {
 
     private static int MAXSTAY;
     protected static int refused = 0;
+    public static int earned = 0;
 
 
 
@@ -36,8 +38,14 @@ public abstract class Slot {
         refused++;
     }
 
-    public void passtime(int hours){
+    public boolean passtime(int hours){
         this.hours = hours;
+        totalpasstime += hours;
+
+        if(totalpasstime > MAXSTAY){
+            return false;
+        }
+        return true;
     }
 
     public static void setMAXSTAY(int hours){
@@ -61,6 +69,13 @@ public abstract class Slot {
     }
 
 
+    public static void earning(int value){
+        earned += value;
+    }
+
+    public static int getEarned() {
+        return earned;
+    }
 
     public static int getCount(){
         return countTotal;
