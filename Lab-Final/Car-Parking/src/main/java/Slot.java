@@ -17,12 +17,18 @@ public class Slot {
     public Vehicle getVehicle() {
         return vehicle;
     }
-
+    public void setVehicle(Vehicle vehicle) {
+        this.vehicle = vehicle;
+    }
     public void park(Vehicle vehicle) {
         this.vehicle = vehicle;
     }
 
     public void remove() {
         this.vehicle = null;
+    }
+
+    public void removeVehicle() {
+
     }
 }

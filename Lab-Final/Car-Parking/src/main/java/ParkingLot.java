@@ -57,5 +57,9 @@ public class ParkingLot {
     private void evict(Slot slot) {
             Vehicle vehicle = slot.getVehicle();
             int removalHours = (maxStay + 9)/10;
+            int billHours = maxStay + removalHours;
+        int bill = calculateBill(vehicle, slot, billHours);
+        earned += bill;
+        slot.removeVehicle();
     }
 }
