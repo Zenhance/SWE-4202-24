@@ -39,4 +39,7 @@ public class Slot {
     public int getSurcharge(){
         return surcharge;
     }
+    public int totalFee(){
+        return getFirstHourFee() + getLaterHourFee() + getSurcharge();
+    }
 }
