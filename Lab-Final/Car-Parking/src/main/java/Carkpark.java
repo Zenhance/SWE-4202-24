@@ -72,4 +72,10 @@ public class Carkpark {
         changeFreeCount(vehicle.getCurrentSlot(),1);
         parkedVehicle.remove(vehicle);
      }
+     public void passTime(int hours){
+        List<Vehicle> toEvict= new ArrayList<>();
+        for(Vehicle v: parkedVehicle){
+            v.addHours(hours);
+        }
+     }
 }
