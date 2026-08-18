@@ -27,11 +27,11 @@ public class Main {
 
                 case "PASSTIME" -> park.passTime(Integer.parseInt(field[1]));
 
-                //case "LEAVE" -> leave(park, field[1]);
+                case "LEAVE" -> leave(park, field[1]);
 
-                // case "BILL" -> printBill(park, field[1]);
+                 case "BILL" -> printBill(park, field[1]);
 
-                // case "SLOT" -> printSlot(park, field[1]);
+                 case "SLOT" -> printSlot(park, field[1]);
 
                 case "FREE" -> System.out.println(park.freeSlots(SlotKind.valueOf(field[1])));
 
