@@ -7,7 +7,7 @@ public abstract class Vehicle {
     public Vehicle(String plate,Discount discount,int hours,slots slot){
         this.plate=plate;
         this.discount=discount;
-        this.hours=hours;
+        this.hours=0;
         this.slot=slot;
     }
 
