@@ -3,6 +3,14 @@ public class Car extends Vehicle {
         super(plate, category);
     }
 
+    @Override
+    public slotType[] prefferedSlot() {
+        return new slotType[]{
+                slotType.REGULAR,
+                slotType.LARGE
+        }
+
+
 
 
 
