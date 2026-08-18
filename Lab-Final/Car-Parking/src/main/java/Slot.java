@@ -21,6 +21,15 @@ public abstract class Slot {
         this.currentVehicle = null;
     }
 
+    public int calculateBill(int hours, VehicleType vehicleType, Discount discount) {
+        int effectiveHours = (hours == 0) ? 1 : hours;
+        int baseFee = getFirstHourRate() + (effectiveHours - 1) * getFurtherHourRate();
+        return baseFee;
+
+
+
+    }
+
 
 
 
