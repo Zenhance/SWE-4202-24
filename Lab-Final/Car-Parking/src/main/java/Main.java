@@ -29,14 +29,30 @@ public class Main {
                     int hours = scanner.nextInt();
                     Slot.setMaxStay(hours);
                 }
-                case "BIKE" -> {}
-                case "CAR" -> {}
-                case "TRUCK" -> {}
-                case "PASSTIME" -> {}
-                case "LEAVE" ->{}
-                case "BILL" ->{}
-                case "SLOT" -> {}
-                case "FREE" ->{}
+                case "BIKE" -> {
+                    admitVehicle("BIKE" , " " , " ");
+                }
+                case "CAR" -> {
+                    admitVehicle("CAR" , " " , " ");
+                }
+                case "TRUCK" -> {
+                    admitVehicle();
+                }
+                case "PASSTIME" -> {
+                    admitVehicle();
+                }
+                case "LEAVE" -> {
+                    admitVehicle();
+                }
+                case "BILL" -> {
+                    admitVehicle();
+                }
+                case "SLOT" -> {
+                    admitVehicle();
+                }
+                case "FREE" -> {
+                    admitVehicle();
+                }
                 case "COUNT" -> System.out.println(activeSlots.size());
                 case "EARNED" -> System.out.println(Slot.getTotalEarned());
                 case "REFUSED" -> System.out.println(Slot.getTotalDeclined());
@@ -45,6 +61,27 @@ public class Main {
                 }
             }
         }
+
+    }
+
+    private static void admitVehicle(String vehicleType, String plate, String scheme) {
+
+        if ("-".equals(plate)) {
+            Slot.incrementDeclined();
+            return;
+        }
+
+        int occupiedBike = 0;
+        int occupiedRegular = 0;
+        int occupiedLarge = 0;
+
+        for (Slot s : activeSlots) {
+            if (s instanceof Bike) occupiedBike++;
+            else if (s instanceof Regular) occupiedRegular++;
+            else if (s instanceof Large) occupiedLarge++;
+        }
+
+        Slot allocatedSlot = null;
 
     }
 }
