@@ -86,6 +86,17 @@ public class Parkinglot {
         return v.getKeptslot();
     }
 
+    public int freeCount(slotType type) {
+        return getFreeSlots(type);
+    }
+
+    public int parkedCount() {
+        return parkedVehicles.size();
+    }
+    public int refusedCount() {
+        return refusedCount;
+    }
+
 
 
 
