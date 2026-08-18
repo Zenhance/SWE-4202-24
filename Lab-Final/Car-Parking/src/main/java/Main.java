@@ -103,4 +103,17 @@ public class Main {
         }
         return count;
     }
+    static int billFor(String plate) {
+        int i = indexOf(plate);
+        if (i == -1 || parkedIn.get(i).equals("")) return 0;
+
+        String type = types.get(i);
+        String parkedSlot = parkedIn.get(i);
+
+        int h = Math.max(1, hoursParked.get(i));
+
+        int firstHourRate = 0;
+        int furtherHourRate = 0;
+        int surchargeAmt = 0;
+    }
 }
