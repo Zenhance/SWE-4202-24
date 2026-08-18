@@ -1,5 +1,3 @@
-public class MissingPlateException extends RuntimeException {
-    public MissingPlateException(String message) {
-        super(message);
-    }
+public final class MissingPlateException
+        extends ParkingException {
 }
