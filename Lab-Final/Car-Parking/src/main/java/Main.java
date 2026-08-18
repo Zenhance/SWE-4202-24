@@ -4,6 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+        Parkinglot lot= new Parkinglot();
 
         while (input.hasNextLine()) {
             String line = input.nextLine().trim();
@@ -22,7 +23,8 @@ public class Main {
                     lot.setSlots(bike, regular, large);
             } else if (command.equals("MAXSTAY")) {
                 int hours = Integer.parseInt(field[1]);
-                // ... do something with hours ...
+
+                lot.setMaxStay(hours);
             } else if (command.equals("COUNT")) {
                 System.out.println(/* the number you worked out */);
             }
