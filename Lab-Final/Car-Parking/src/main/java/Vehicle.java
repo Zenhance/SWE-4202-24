@@ -12,7 +12,6 @@ public abstract class Vehicle {
         this.hoursStood = 0;
         this.currentSlot = null;
     }
-
     public abstract List<SlotType> acceptanceOrder();
 
     public SlotType homeSlot(){
