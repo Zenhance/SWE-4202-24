@@ -102,6 +102,10 @@ public class Parkinglot {
         if (v == null) {
             return null;
         }
+        int hoursParked = time - v.getEntryTime();
+        return calculateFee(v, hoursParked);
+    }
+
 
 }
 
