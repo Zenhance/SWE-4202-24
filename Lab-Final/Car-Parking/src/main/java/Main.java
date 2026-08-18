@@ -1,9 +1,11 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import static java.lang.Integer.parseInt;
+
 public class Main {
-    int bikeSlots,regularSlots,largeSlots;
-    int freeBike, freeRegular, freeLarge;
+    static int bikeSlots,regularSlots,largeSlots;
+    static int freeBike, freeRegular, freeLarge;
 
     ArrayList<String> plates = new ArrayList<>();
     ArrayList<String> types = new ArrayList<>();
@@ -24,6 +26,13 @@ public class Main {
 
             if (firstWord.equals("END")) {
                 break;
+            }else if(firstWord.equals("SLOTS")){
+                bikeSlots = parseInt(field[1]);
+                regularSlots = parseInt(field[2]);
+                largeSlots = parseInt(field[3]);
+                freeBike = bikeSlots;
+                freeRegular = regularSlots;
+                freeLarge = largeSlots;
             }
         }
 
