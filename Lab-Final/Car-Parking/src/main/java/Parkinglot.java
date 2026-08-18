@@ -27,5 +27,22 @@ public void setMaxStay(int hrs) {
     maxStayhrs = hrs;
 }
 public void advanceTime(int hrs){
-    time+=hrs;
+    currentTime+=hrs;
 }
+private int getFreeSlots(SlotType type){
+    if(type==SlotType.BIKE){
+        return bikeFree;
+    }
+    else if(type==SlotType.REGULAR){
+        return regularFree;
+    }
+    else{
+        return largeFree;
+    }
+}
+private void takeOneSlot(SlotType type){
+    if(type==SlotType.BIKE){
+        bikeFree = bikeFree-1;
+    }
+}
+
