@@ -23,20 +23,44 @@ public class Main {
                 int hours = Integer.parseInt(field[1]);
                 parkingLot.setMaxHours(hours);
             } else if (field[0].equals("BIKE")) {
-                String plate = field[1];
-                String discount =  field[2];
-                bike = new Bike(plate, discount);
-                parkingLot.addVehicle(bike);
+                try {
+                    if (field.length == 1 || field.length == 2) {
+                        throw new IllegalArgumentException("No numberPlate");
+                    }
+
+                    String plate = field[1];
+                    String discount =  field[2];
+                    bike = new Bike(plate, discount);
+                    parkingLot.addVehicle(bike);
+                } catch (IllegalArgumentException e) {
+                    parkingLot.refused++;
+                }
             }else if (field[0].equals("CAR")) {
-                String plate = field[1];
-                String discount =  field[2];
-                car = new Car(plate, discount);
-                parkingLot.addVehicle(car);
+                try {
+                    if (field.length == 1 || field.length == 2) {
+                        throw new IllegalArgumentException("No numberPlate");
+                    }
+
+                    String plate = field[1];
+                    String discount =  field[2];
+                    car = new Car(plate, discount);
+                    parkingLot.addVehicle(car);
+                } catch (IllegalArgumentException e) {
+                    parkingLot.refused++;
+                }
             }else if (field[0].equals("TRUCK")) {
-                String plate = field[1];
-                String discount =  field[2];
-                truck = new Truck(plate, discount);
-                parkingLot.addVehicle(truck);
+                try {
+                    if (field.length == 1 || field.length == 2) {
+                        throw new IllegalArgumentException("No numberPlate");
+                    }
+
+                    String plate = field[1];
+                    String discount =  field[2];
+                    truck = new Truck(plate, discount);
+                    parkingLot.addVehicle(truck);
+                } catch (IllegalArgumentException e) {
+                    parkingLot.refused++;
+                }
             }else if (field[0].equals("PASSTIME")) {
                 int hours = Integer.parseInt(field[1]);
             }else if (field[0].equals("LEAVE")) {

@@ -53,23 +53,52 @@ public class ParkingLot {
         this.largeCapacity = largeCapacity;
     }
     public void addVehicle(Vehicle vehicle) {
+        boolean added = false;
         if(vehicle instanceof Bike){
             if(bikeCapacity != 0){
                 bikeSlots.add(vehicle);
+                added = true;
             }else if(regularCapacity != 0){
                 regularSlots.add(vehicle);
+                added = true;
             }else if(largeCapacity != 0){
                 largeSlots.add(vehicle);
+                added = true;
+            }
+            try{
+                if(added == false){
+                    throw new NoSlotLeftException("No slots left");
+                }
+            }catch(NoSlotLeftException e){
+                refused++;
             }
         }else if(vehicle instanceof Car){
             if(regularCapacity != 0){
                 regularSlots.add(vehicle);
+                 added = true ;
+
             }else if(largeCapacity != 0){
                 largeSlots.add(vehicle);
+                 added = true;
+            }
+            try{
+                if(added == false){
+                    throw new NoSlotLeftException("No slots left");
+                }
+            }catch(NoSlotLeftException e){
+                refused++;
             }
         }else if(vehicle instanceof Truck){
             if(largeCapacity != 0){
                 largeSlots.add(vehicle);
+                added = true;
+            }
+            try{
+                if(added == false){
+                    throw new NoSlotLeftException("No slots left");
+                }
+            }catch(NoSlotLeftException e){
+                refused++;
             }
         }
     }
