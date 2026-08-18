@@ -30,11 +30,11 @@ public class Main {
 
 
             }
-                else if(command.equals("PASSTIME"){
+                else if(command.equals("BIKE"){
 
             }
 
-            else if(command.equals("LEAVE")){
+            else if(command.equals("CAR")){
 
 
             }
@@ -47,8 +47,7 @@ public class Main {
             }
 
             else if(command.equals("REFUSED"){
-
-
+                System.out.println(lot.refusedCount());
             }
             // ... one branch per keyword ...
         }
