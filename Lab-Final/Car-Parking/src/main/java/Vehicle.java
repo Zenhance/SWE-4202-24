@@ -10,13 +10,12 @@ public abstract class Vehicle {
             case "NONE" -> this.scheme = Scheme.NONE;
             case "STUDENT" -> this.scheme = Scheme.STUDENT;
             case "WEEKEND" -> this.scheme = Scheme.WEEKEND;
-
+            default -> this.scheme = Scheme.NONE;
         }
     }
 
     Vehicle(String number){
-        this(number, Scheme.NONE);
+        this(number, "NONE");
     }
-
 
 }
