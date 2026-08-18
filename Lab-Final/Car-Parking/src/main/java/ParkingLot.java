@@ -34,62 +34,74 @@ public class ParkingLot {
         return null;
     }
 
-    private void addBike(Bike bike){
+    private String addBike(Bike bike){
         if(bikeSlot < maxBikeSlot) {
             bikes.add(bike);
             bikeSlot++;
+            return "BIKE";
         }
-        else if(regularSlot < maxBikeSlot) {
+        else if(regularSlot < maxRegularSlot) {
             regulars.add(bike);
             regularSlot++;
+            return "REGULAR";
         }
         else if(largeSlot < maxLargeSlot) {
             larges.add(bike);
             largeSlot++;
+            return "LARGE";
         }
-        else returned++;
+        else {
+            returned++;
+            return null;
+        }
     }
 
-    private void addCar(Car car){
-        if(regularSlot < maxBikeSlot) {
+    private String addCar(Car car){
+        if(regularSlot < maxRegularSlot) {
             regulars.add(car);
             regularSlot++;
+            return "REGULAR";
         }
         else if(largeSlot < maxLargeSlot) {
             larges.add(car);
             largeSlot++;
+            return "LARGE";
+
         }
-        else returned++;
+        else {
+            returned++;
+            return null;
+        }
     }
 
-    private void addTruck(Truck truck){
-        if(regularSlot < maxBikeSlot) {
-            regulars.add(truck);
-            regularSlot++;
-        }
-        else if(largeSlot < maxLargeSlot) {
+    private String addTruck(Truck truck){
+        if(largeSlot < maxLargeSlot) {
             larges.add(truck);
             largeSlot++;
+            return "LARGE";
         }
-        else returned++;
+        else {
+            returned++;
+            return null;
+        }
     }
 
-    public void slotVehicle (String number){
+    public String slotVehicle (String number){
         Vehicle v = search(number);
         if (v != null){
-            if (v instanceof Bike){
-                Bike bike = (Bike)v;
-                addBike(bike);
+            if (v instanceof Bike bike){
+                return addBike(bike);
             }
-            else if (v instanceof Car){
-                Car car = (Car)v;
+            else if (v instanceof Car car){
                 addCar(car);
+                return addCar(car);
             }
-            else if (v instanceof Truck){
-                Truck truck = (Truck)v;
+            else if (v instanceof Truck truck){
                 addTruck(truck);
+                return addTruck(truck);
             }
         }
+        return null;
     }
 
     public static ArrayList<Vehicle> getLarges() {
