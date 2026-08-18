@@ -2,15 +2,18 @@ package Parking;
 
 import Slot.Slot;
 import Slot.SlotType;
+import Slot.DiscountScheme;
 
 import Vehicle.Vehicle;
-import Slot.DiscountScheme;
+
 import Exception.NoPlateException;
 import Exception.NoSlotException;
 import Exception.UnknownPlateException;
+
 import java.util.ArrayList;
 
 public class CarPark {
+
     private ArrayList<Slot> slots;
     private ArrayList<Vehicle> vehicles;
 
@@ -20,30 +23,37 @@ public class CarPark {
     private int earned;
     private int refused;
 
+    public CarPark(ArrayList<Slot> slots, int maxStay) {
 
-
-    public CarPark(ArrayList<Slot> slots, int maxStay){
-        if(slots==null){
+        if (slots == null) {
             throw new IllegalArgumentException("slots cannot be null");
         }
-        if(maxStay<0){
-            throw new IllegalArgumentException("Maximum stay cannot be less than 0");
+
+        if (maxStay < 0) {
+            throw new IllegalArgumentException(
+                    "Maximum stay cannot be less than 0"
+            );
         }
-        this.slots=slots;
-        this.maxStay=maxStay;
-        this.vehicles=new ArrayList<>();
 
-        this.currentTime=0;
-        this.earned=0;
-        this.refused=0;
+        this.slots = slots;
+        this.vehicles = new ArrayList<>();
 
+        this.maxStay = maxStay;
+        this.currentTime = 0;
+
+        this.earned = 0;
+        this.refused = 0;
     }
 
-    private Slot findAvailableSlot(Vehicle vehicle){
+    private Slot findAvailableSlot(Vehicle vehicle) {
+
         SlotType[] acceptedTypes = vehicle.getAcceptedSlotTypes();
-        for(SlotType type: acceptedTypes){
-            for(Slot slot: slots){
-                if(slot.getType()== type && slot.isFree()){
+
+        for (SlotType type : acceptedTypes) {
+
+            for (Slot slot : slots) {
+
+                if (slot.getType() == type && slot.isFree()) {
                     return slot;
                 }
             }
@@ -52,80 +62,110 @@ public class CarPark {
         return null;
     }
 
-    public void parkVehicle(Vehicle vehicle) throws NoPlateException, NoSlotException {
-        if(vehicle==null || vehicle.getNumberPlate()==null || vehicle.getNumberPlate().isBlank()){
+    public void parkVehicle(Vehicle vehicle)
+            throws NoPlateException, NoSlotException {
+
+        if (vehicle == null
+                || vehicle.getNumberPlate() == null
+                || vehicle.getNumberPlate().isBlank()) {
+
             throw new NoPlateException("Vehicle has no plate");
         }
 
-        Slot slot= findAvailableSlot(vehicle);
-        if(slot==null){
+        if (findVehicle(vehicle.getNumberPlate()) != null) {
+            throw new NoPlateException("Duplicate plate");
+        }
+
+        Slot slot = findAvailableSlot(vehicle);
+
+        if (slot == null) {
             throw new NoSlotException("No suitable slot found");
         }
+
         vehicle.setEntryTime(currentTime);
 
         slot.park(vehicle);
-        vehicles.add(vehicle);
 
+        vehicles.add(vehicle);
     }
 
-    private Vehicle findVehicle(String plate){
-        for(Vehicle vehicle: vehicles ){
-            if(vehicle.getNumberPlate().equals(plate)){
+    private Vehicle findVehicle(String plate) {
+
+        for (Vehicle vehicle : vehicles) {
+
+            if (vehicle.getNumberPlate().equals(plate)) {
                 return vehicle;
             }
         }
+
         return null;
     }
 
-    private Slot findSlot(Vehicle vehicle){
-        for(Slot slot: slots){
-            if(slot.getVehicle()==vehicle){
+    private Slot findSlot(Vehicle vehicle) {
+
+        for (Slot slot : slots) {
+
+            if (slot.getVehicle() == vehicle) {
                 return slot;
             }
         }
+
         return null;
     }
 
-    private int calculateBaseBill(Slot slot, int hours){
-        if(hours<1){
-            hours=1;
-        }
-        int firsthour;
-        int furtherhour;
-        int surcharge=0;
+    private int calculateBaseBill(Slot slot, int hours) {
 
-        if(slot.getType()==SlotType.BIKE){
-            firsthour=10;
-            furtherhour=5;
-        }else if(slot.getType()==SlotType.REGULAR){
-            firsthour=30;
-            furtherhour=20;
-            surcharge=15;
-        }else{
-            firsthour=50;
-            furtherhour=40;
-            surcharge=25;
+        if (hours < 1) {
+            hours = 1;
         }
-        return firsthour+(hours-1)*furtherhour+surcharge;
+
+        int firstHour;
+        int furtherHour;
+        int surcharge = 0;
+
+        if (slot.getType() == SlotType.BIKE) {
+
+            firstHour = 10;
+            furtherHour = 5;
+
+        } else if (slot.getType() == SlotType.REGULAR) {
+
+            firstHour = 30;
+            furtherHour = 20;
+            surcharge = 15;
+
+        } else {
+
+            firstHour = 50;
+            furtherHour = 40;
+            surcharge = 25;
+        }
+
+        return firstHour
+                + (hours - 1) * furtherHour
+                + surcharge;
     }
 
+    private int applyDiscount(int bill, DiscountScheme discountScheme) {
 
-    private int applyDiscount(int bill,  DiscountScheme discountScheme){
-        if(discountScheme== DiscountScheme.NONE){
+        if (discountScheme == DiscountScheme.NONE) {
             return bill;
         }
 
-        if(discountScheme==  DiscountScheme.STUDENT){
-            return bill-(bill*20/100);
+        if (discountScheme == DiscountScheme.STUDENT) {
+            return bill - (bill * 20 / 100);
         }
-        if(discountScheme==  DiscountScheme.WEEKEND){
-            return Math.max(0, bill-10);
+
+        if (discountScheme == DiscountScheme.WEEKEND) {
+            return Math.max(0, bill - 10);
         }
 
         return bill;
     }
 
-    public int getBill(String plate) throws UnknownPlateException {
+    public int getBill(String plate)
+            throws UnknownPlateException {
+
         Vehicle vehicle = findVehicle(plate);
 
         if (vehicle == null) {
@@ -138,8 +178,12 @@ public class CarPark {
 
         int bill = calculateBaseBill(slot, hours);
 
-        return applyDiscount(bill, vehicle.getDiscountScheme()  );
+        return applyDiscount(
+                bill,
+                vehicle.getDiscountScheme()
+        );
     }
+
     public SlotType getSlotType(String plate)
             throws UnknownPlateException {
 
@@ -168,6 +212,7 @@ public class CarPark {
         int bill = getBill(plate);
 
         slot.removeVehicle();
+
         vehicles.remove(vehicle);
 
         earned += bill;
@@ -176,6 +221,7 @@ public class CarPark {
     }
 
     public void passTime(int hours) {
+
         if (hours < 0) {
             throw new IllegalArgumentException(
                     "Time cannot be negative"
@@ -187,26 +233,17 @@ public class CarPark {
         ArrayList<Vehicle> toRemove = new ArrayList<>();
 
         for (Vehicle vehicle : vehicles) {
+
             int stay = currentTime - vehicle.getEntryTime();
 
             if (stay >= maxStay) {
+
                 Slot slot = findSlot(vehicle);
 
-                int bill = calculateBaseBill(slot, maxStay);
-
-                int removalHours = (maxStay + 9) / 10;
-
-                int furtherHour;
-
-                if (slot.getType() == SlotType.BIKE) {
-                    furtherHour = 5;
-                } else if (slot.getType() == SlotType.REGULAR) {
-                    furtherHour = 20;
-                } else {
-                    furtherHour = 40;
-                }
-
-                bill += furtherHour * removalHours;
+                int bill = calculateBaseBill(
+                        slot,
+                        stay
+                );
 
                 bill = applyDiscount(
                         bill,
@@ -216,6 +253,7 @@ public class CarPark {
                 earned += bill;
 
                 slot.removeVehicle();
+
                 toRemove.add(vehicle);
             }
         }
@@ -224,9 +262,11 @@ public class CarPark {
     }
 
     public int getFreeSlots(SlotType type) {
+
         int count = 0;
 
         for (Slot slot : slots) {
+
             if (slot.getType() == type && slot.isFree()) {
                 count++;
             }
@@ -258,7 +298,10 @@ public class CarPark {
     public int getMaxStay() {
         return maxStay;
     }
-
-
-
 }
+
+
+
+
+
+
