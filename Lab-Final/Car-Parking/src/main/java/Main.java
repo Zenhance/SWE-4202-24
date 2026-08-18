@@ -5,26 +5,25 @@ public class Main {
         Scanner input = new Scanner(System.in);
         ParkingLot lot = new ParkingLot();
 
-        while(input.hasNextLine()){
-            String line=input.nextLine().trim();
-            if(line.isEmpty()){
+        while (input.hasNextLine()) {
+            String line = input.nextLine().trim();
+            if (line.isEmpty()) {
                 continue;
             }
 
-            String[] field=line.split(" ");
-            String command=field[0];
-            if(command.equals("END")) {
+            String[] field = line.split(" ");
+            String command = field[0];
+            if (command.equals("END")) {
                 break;
-            }else if(command.equals("SLOTS")) {
-                int bike=Integer.parseInt(field[1]);
-                int regular=Integer.parseInt(field[2]);
-                int large=Integer.parseInt(field[3]);
-                lot.setSlots(bike,regular,large);
-            }else if(command.equals("MAXSTAY")) {
-                int hours=Integer.parseInt(field[1]);
+            } else if (command.equals("SLOTS")) {
+                int bike = Integer.parseInt(field[1]);
+                int regular = Integer.parseInt(field[2]);
+                int large = Integer.parseInt(field[3]);
+                lot.setSlots(bike, regular, large);
+            } else if (command.equals("MAXSTAY")) {
+                int hours = Integer.parseInt(field[1]);
                 lot.setMaxStay(hours);
-            }
-            else if (command.equals("BIKE") || command.equals("CAR") || command.equals("TRUCK")) {
+            } else if (command.equals("BIKE") || command.equals("CAR") || command.equals("TRUCK")) {
                 String plate = field[1];
                 Category category = Category.valueOf(field[2]);
                 Vehicle vehicle = createVehicle(command, plate, category);
@@ -39,37 +38,38 @@ public class Main {
                 } else {
                     System.out.println(slot.name());
                 }
-            }
-            else if(command.equals("FREE")) {
+            } else if (command.equals("FREE")) {
                 SlotType type = SlotType.valueOf(field[1]);
                 System.out.println(lot.freeCount(type));
-            }
-            else if(command.equals("COUNT")) {
+            } else if (command.equals("COUNT")) {
                 System.out.println(lot.parkedCount());
-            }
-            else if(command.equals("REFUSED")) {
+            } else if (command.equals("REFUSED")) {
                 System.out.println(lot.refusedCount());
-            }
-            else if(command.equals("BILL")) {
+            } else if (command.equals("BILL")) {
                 Integer bill = lot.billFor(field[1]);
-                if(bill==null) {
+                if (bill == null) {
                     System.out.println("NONE");
-                }
-                else{
+                } else {
                     System.out.println(bill);
                 }
-            }
-            else if(command.equals("EARNED")) {
+            } else if (command.equals("EARNED")) {
                 System.out.println(lot.totalEarned());
-            }
-            else if(command.equals("PASSTIME")) {
-                int hours=Integer.parseInt(field[1]);
+            } else if (command.equals("PASSTIME")) {
+                int hours = Integer.parseInt(field[1]);
                 lot.advanceTime(hours);
-            }
-            else if(command.equals("LEAVE")) {
+            } else if (command.equals("LEAVE")) {
                 lot.leave(field[1]);
             }
         }
     }
-
-}
+            private static Vehicle createVehicle(String command, String plate, Category category){
+                if (command.equals("BIKE")) {
+                    return new Bike(plate, category);
+                } else if (command.equals("CAR")) {
+                    return new Car(plate, category);
+                } else {
+                    return new Truck(plate, category);
+                }
+            }
+        }
+    

@@ -4,7 +4,7 @@ public class Car extends Vehicle {
     }
 
     @Override
-    public SlotType[] slotpreference() {
+    public SlotType[] slotPreference() {
         return new SlotType[]{
                 SlotType.REGULAR,
                 SlotType.LARGE
