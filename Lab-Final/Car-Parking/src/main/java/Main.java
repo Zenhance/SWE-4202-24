@@ -44,3 +44,21 @@ public class Main {
         scanner.close();
     }
 
+    private static void handleEntry(ParkingLot park, String typeStr, String plate, String schemeStr) throws ParkRefusalException {
+        DiscountScheme scheme = switch (schemeStr) {
+            case "STUDENT" -> new StudentDiscount();
+            case "WEEKEND" -> new WeekendDiscount();
+            default -> new NoDiscount();
+        };
+
+        Vehicle vehicle = switch (typeStr) {
+            case "BIKE" -> new Motorcycle(plate, scheme);
+            case "CAR" -> new Car(plate, scheme);
+            case "TRUCK" -> new Truck(plate, scheme);
+            default -> throw new IllegalArgumentException("Unknown type: " + typeStr);
+        };
+
+        park.parkVehicle(vehicle);
+    }
+}
+
