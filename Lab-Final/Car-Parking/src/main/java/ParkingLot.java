@@ -53,6 +53,37 @@ public class ParkingLot {
         vehicle.setOversized(!assignedSlot.equals(preferences[0]));
         parkedVehicles.add(vehicle);
     }
+    private boolean hasFreeSlot(String slot){
+        if (slot.equals("BIKE")) {
+            return freeBike > 0;
+        }
+        else if (slot.equals("REGULAR")) {
+            return freeRegular > 0;
+        }
+        else {
+            return freeLarge > 0;
+        }
+    }
+    private void takeSlot(String slot) {
+        if(slot.equals("BIKE")) {
+            freeBike--;
+        }
+        else if(slot.equals("REGULAR")) {
+            freeRegular--;
+        }
+        else{
+            freeLarge--;
+        }
+    }
+    private void releaseSlot(String slot) {
+        if (slot.equals("BIKE")) {
+            freeBike++;
+        } else if (slot.equals("REGULAR")) {
+            freeRegular++;
+        } else {
+            freeLarge++;
+        }
+    }
     public String getSlot(String registration) {
         Vehicle vehicle = findVehicle(registration);
         if (vehicle == null) {
@@ -135,31 +166,6 @@ public class ParkingLot {
             }
         }
     }
-    private boolean hasFreeSlot(String slot){
-        if (slot.equals("BIKE")) {
-            return freeBike > 0;
-        }
-        else if (slot.equals("REGULAR")) {
-            return freeRegular > 0;
-        }
-        else {
-            return freeLarge > 0;
-        }
-    }
-    private void takeSlot(String slot) {
-        if(slot.equals("BIKE")) {
-            freeBike--;
-        }
-        else if(slot.equals("REGULAR")) {
-            freeRegular--;
-        }
-        else{
-            freeLarge--;
-        }
-    }
-
-
-
 }
 
 
