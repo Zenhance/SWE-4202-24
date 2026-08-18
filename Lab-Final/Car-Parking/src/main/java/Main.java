@@ -59,6 +59,17 @@ public class Main {
                     System.out.println(bill);
                 }
             }
+            else if(command.equals("EARNED")) {
+                System.out.println(lot.totalEarned());
+            }
+            else if(command.equals("PASSTIME")) {
+                int hours=Integer.parseInt(field[1]);
+                lot.advanceTime(hours);
+            }
+            else if(command.equals("LEAVE")) {
+                lot.leave(field[1]);
+            }
         }
     }
+
 }
