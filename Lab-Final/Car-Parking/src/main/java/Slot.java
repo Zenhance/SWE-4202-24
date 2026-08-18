@@ -1,5 +1,8 @@
 public abstract class Slot {
     private Vehicle currentVehicle = null;
+
+
+
     public abstract String getKindName();
     public abstract int getFirstHourRate();
     public abstract int getFurtherHourRate();
@@ -21,14 +24,10 @@ public abstract class Slot {
         this.currentVehicle = null;
     }
 
-    public int calculateBill(int hours, VehicleType vehicleType, Discount discount) {
-        int effectiveHours = (hours == 0) ? 1 : hours;
-        int baseFee = getFirstHourRate() + (effectiveHours - 1) * getFurtherHourRate();
-        return baseFee;
-
-
-
+    public static void setMaxStay(int hours) {
     }
+
+
 
 
 
