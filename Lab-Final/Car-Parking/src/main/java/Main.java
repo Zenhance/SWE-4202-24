@@ -97,10 +97,7 @@ public class Main {
             else if (field[0].equals("BILL")) {
 
                 try {
-
-                    System.out.println(
-                            park.bill(field[1])
-                    );
+                    System.out.println(park.bill(field[1]));
 
                 } catch (VehicleNotFoundException e) {
 
@@ -112,11 +109,7 @@ public class Main {
             else if (field[0].equals("SLOT")) {
 
                 try {
-
-                    System.out.println(
-                            park.slot(field[1])
-                    );
-
+                    System.out.println(park.slot(field[1]));
                 } catch (VehicleNotFoundException e) {
 
                     park.addRefusal();
@@ -127,9 +120,7 @@ public class Main {
             else if (field[0].equals("LEAVE")) {
 
                 try {
-
                     park.leave(field[1]);
-
                 } catch (VehicleNotFoundException e) {
 
                     park.addRefusal();
@@ -138,30 +129,22 @@ public class Main {
 
             else if (field[0].equals("FREE")) {
 
-                System.out.println(
-                        park.free(field[1])
-                );
+                System.out.println(park.free(field[1]));
             }
 
             else if (field[0].equals("COUNT")) {
 
-                System.out.println(
-                        park.count()
-                );
+                System.out.println(park.count());
             }
 
            else if(field[0].equals("EARNED")){
 
-                System.out.println(
-                        park.earned()
-                );
+                System.out.println(park.earned());
             }
 
             else if (field[0].equals("REFUSED")) {
 
-                System.out.println(
-                        park.refused()
-                );
+                System.out.println(park.refused());
             }
         }
     }
