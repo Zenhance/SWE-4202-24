@@ -133,4 +133,60 @@ public class Main {
         return slot.applySchemeDiscount(baseFee + surchargeFee);
     }
 
+    private static void leave(String plate) {
+        Slot foundSlot = findSlotByPlate(plate);
+        if (foundSlot == null) {
+
+            Slot.incrementDeclined();
+        } else {
+            Slot.addEarned(foundSlot.calculateFee());
+            activeSlots.remove(foundSlot);
+        }
+    }
+
+    private static void printSlotKind(String plate) {
+        Slot foundSlot = findSlotByPlate(plate);
+        if (foundSlot == null) {
+            System.out.println("NONE");
+        } else {
+            if (foundSlot instanceof Bike) {
+                System.out.println("BIKE");
+            } else if (foundSlot instanceof Regular) {
+                System.out.println("REGULAR");
+            } else if (foundSlot instanceof Large) {
+                System.out.println("LARGE");
+            }
+        }
+    }
+
+    private static void printFreeSlots(String kind) {
+        int occupied = 0;
+        int capacity = 0;
+
+        if ("BIKE".equals(kind)) {
+            capacity = maxBikeSlots;
+            for (Slot s : activeSlots) if (s instanceof Bike) occupied++;
+        } else if ("REGULAR".equals(kind)) {
+            capacity = maxRegularSlots;
+            for (Slot s : activeSlots) if (s instanceof Regular) occupied++;
+        } else if ("LARGE".equals(kind)) {
+            capacity = maxLargeSlots;
+            for (Slot s : activeSlots) if (s instanceof Large) occupied++;
+        }
+
+        System.out.println(capacity - occupied);
+    }
+
+    private static Slot findSlotByPlate(String plate) {
+        for (Slot s : activeSlots) {
+            if (s.getLicense().equals(plate)) {
+                return s;
+            }
+        }
+        return null;
+    }
+
+    private static void printBill(String plate) {
+
+    }
 }
