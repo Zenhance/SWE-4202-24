@@ -20,5 +20,8 @@ public abstract class Vehicle {
 
     public int getHours(){
     return hours;}
-    }
 
+    public ParkingSlot getSlot(){
+    return slot;
+    }
+    }
