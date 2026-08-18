@@ -30,4 +30,12 @@ public class Vehicle {
     public int getParkedHours(int current){
         return current - entry;
     }
+
+    private Slot slot;
+    public void setSlot(Slot slot){
+        this.slot = slot;
+    }
+    public Slot getSlot(){
+        return slot;
+    }
 }
