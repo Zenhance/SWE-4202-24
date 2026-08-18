@@ -97,14 +97,22 @@ public class Parkinglot {
         return refusedCount;
     }
 
-
-
-
-
-
-
-
+    public int totalEarned() {
+        return totalEarned;
     }
+    public Integer billFor(String plate) {
+        Vehicle v = parkedVehicles.get(plate);
+        if (v == null) {
+            return null;
+        }
+        int hoursParked = time - v.getTime();
+        return calculateFee(v, hoursParked);
+    }
+
+
+
+
+}
 
 
 
