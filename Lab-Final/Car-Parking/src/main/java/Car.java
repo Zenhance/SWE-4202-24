@@ -10,6 +10,7 @@ public class Car extends Vehicle {
                 SlotType.LARGE
         };
     }
+    @Override
     public int hourlyRate(){
         return 20;
     }
