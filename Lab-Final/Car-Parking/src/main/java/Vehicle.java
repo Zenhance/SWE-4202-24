@@ -14,8 +14,11 @@ public abstract class Vehicle {
     public String getPlate() {
         return Plate;
     }
-
-
     public String getScheme() {
         return Scheme;
     }
+
+    public int getHours(){
+    return hours;}
+    }
+
