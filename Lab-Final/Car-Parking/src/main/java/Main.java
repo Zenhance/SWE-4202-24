@@ -35,6 +35,7 @@ public class Main {
                             vehicles.add(new Motorcycle(field[1]));
                             try {
                                 vehicles.get(vehicles.size()-1).park();
+                                vehicles.get(vehicles.size()-1).setSlotType(slots.get(i));
                             }
                             catch (NullPointerException e) {
                                 System.out.println(e.getMessage());
@@ -49,6 +50,7 @@ public class Main {
                             vehicles.add(new Car(field[1]));
                             try {
                                 vehicles.get(vehicles.size()-1).park();
+                                vehicles.get(vehicles.size()-1).setSlotType(slots.get(i));
                             }
                             catch (NullPointerException e) {
                                 System.out.println(e.getMessage());
@@ -63,6 +65,7 @@ public class Main {
                             vehicles.add(new Truck(field[1]));
                             try {
                                 vehicles.get(vehicles.size()-1).park();
+                                vehicles.get(vehicles.size()-1).setSlotType(slots.get(i));
                             }
                             catch (NullPointerException e) {
                                 System.out.println(e.getMessage());
