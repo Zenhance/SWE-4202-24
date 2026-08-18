@@ -60,22 +60,16 @@ public class ParkingLot {
                 regularSlots.add(vehicle);
             }else if(largeCapacity != 0){
                 largeSlots.add(vehicle);
-            }else{
-                throw new NoSlotLeftException("No slots left on parking lot for bike");
             }
         }else if(vehicle instanceof Car){
             if(regularCapacity != 0){
                 regularSlots.add(vehicle);
             }else if(largeCapacity != 0){
                 largeSlots.add(vehicle);
-            }else{
-                throw new NoSlotLeftException("No slots left on parking lot for Car");
             }
         }else if(vehicle instanceof Truck){
             if(largeCapacity != 0){
                 largeSlots.add(vehicle);
-            }else{
-                throw new NoSlotLeftException("No slots left on parking lot for Truck");
             }
         }
     }
