@@ -35,12 +35,19 @@ public class Main {
             Vehicle vehicle = new Car(plate, category);
             lot.register(vehicle);
 
-        }
-        else if (command.equals("TRUCK")) {
+        } else if (command.equals("TRUCK")) {
             String plate = field[1];
             Category category = Category.valueOf(field[2]);
             Vehicle vehicle = new Truck(plate, category);
             lot.register(vehicle);
-    }
+        } else if (command.equals("SLOT")) {
+            SlotType slot = lot.slotOf(field[1]);
+            if (slot == null) {
+                System.out.println("NONE");
+            } else {
+                System.out.println(slot.name());
+            }
 
+        }
+    }
 }
