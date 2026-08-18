@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -54,6 +55,7 @@ public class CarPark {
         if (vehicle == null) {
             throw new UnknownPlateException();
         }
+
 }
     private void changeOccupied(SlotKind kind, int delta){
         if(kind == SlotKind.BIKE){
@@ -66,5 +68,13 @@ public class CarPark {
             largeOccupied+=delta;
         }
     }
+    private int computeBill(Vehicle vehicle, int hours){
+        SlotKind slot= vehicle.slot;
+        int fee = slot.firstHour + (hours - 1) * slot.furtherHour;
+        if (slot!=vehicle.ownKind()){
+            fee+=slot.surcharge;
+        }return vehicle.scheme.apply(fee);
+    }
 
 }
+

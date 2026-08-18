@@ -9,9 +9,10 @@ public enum Scheme {
             return bill - (20 * bill) / 100;
         }
     },
-WEEKEND {
-        int apply(int bill){
-            return Math.max(0,bill-10);
+    WEEKEND {
+        int apply(int bill) {
+            return Math.max(0, bill - 10);
         }
-    }
+    };
+    abstract int apply(int bill);
 }
