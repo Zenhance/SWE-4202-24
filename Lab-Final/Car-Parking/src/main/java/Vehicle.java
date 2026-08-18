@@ -17,6 +17,14 @@ public abstract class Vehicle {
         return hours;
     }
 
+    public int getBillableHours() {
+        if (hours == 0) {
+            return 1;
+        }
+
+        return hours;
+    }
+
     public void addHours(int passedHours) {
         hours += passedHours;
     }
