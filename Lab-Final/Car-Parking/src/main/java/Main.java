@@ -53,6 +53,8 @@ public class Main {
 
 
             }  else if (command.equals("LEAVE")) {
-                lot.leave(field[1]);
+                lot.leave(field[1]); }
+                else if (command.equals("EARNED")) {
+                    System.out.println(lot.totalEarned());
         }
     } } }
