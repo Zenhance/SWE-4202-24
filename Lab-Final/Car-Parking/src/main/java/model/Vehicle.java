@@ -15,7 +15,6 @@ public abstract class Vehicle {
         if(licencePlate==null){
             throw new InvalidLicensePlateException();
         }
-
         this.licencePlate = licencePlate;
         this.permit = permit;
     }

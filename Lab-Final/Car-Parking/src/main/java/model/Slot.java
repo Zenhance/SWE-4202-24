@@ -18,14 +18,14 @@ public class Slot {
             surcharge = 0;
         }
         else if(type.equals("REGULAR")){
-            firstHourCHarge = 10;
-            extraHourCHarge = 5;
-            surcharge = 0;
+            firstHourCHarge = 30;
+            extraHourCHarge = 20;
+            surcharge = 15;
         }
         else {
-            firstHourCHarge = 10;
-            extraHourCHarge = 5;
-            surcharge = 0;
+            firstHourCHarge = 50;
+            extraHourCHarge = 40;
+            surcharge = 25;
         }
     }
 
