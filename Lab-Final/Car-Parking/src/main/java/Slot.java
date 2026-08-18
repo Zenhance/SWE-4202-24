@@ -13,6 +13,9 @@ public  class Slot {
     public vehicles getVehicle() {
         return this.vehicle;
     }
+    public void setVehicle(vehicles vehicle) {
+         this.vehicle=vehicle;
+    }
     public boolean isFree(){
         return vehicle ==null;
     }
