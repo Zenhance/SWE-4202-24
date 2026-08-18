@@ -166,26 +166,32 @@ public class CommandProcessor {
         carPark.leave(plate);
     }
 
-    private void processBill(String[] parts)
-            throws VehicleNotFoundException {
+    private void processBill(String[] parts) {
 
         String plate = parts[1];
 
-        int bill = carPark.getBill(plate);
-
-        System.out.println(bill);
-    }
-    private void processSlot(String[] parts)
-            throws VehicleNotFoundException {
-
-        String plate = parts[1];
-
-        SlotType type = carPark.getSlotType(plate);
-
-        if (type == null) {
+        try {
+            int bill = carPark.getBill(plate);
+            System.out.println(bill);
+        } catch (VehicleNotFoundException e) {
             System.out.println("NONE");
-        } else {
-            System.out.println(type);
+        }
+    }
+
+    private void processSlot(String[] parts) {
+
+        String plate = parts[1];
+
+        try {
+            SlotType type = carPark.getSlotType(plate);
+
+            if (type == null) {
+                System.out.println("NONE");
+            } else {
+                System.out.println(type);
+            }
+        } catch (VehicleNotFoundException e) {
+            System.out.println("NONE");
         }
     }
 
