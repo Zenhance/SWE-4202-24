@@ -1,0 +1,62 @@
+package main.java;
+
+import java.util.ArrayList;
+
+public class ParkingLot {
+    private ArrayList<Slot> slots;
+    private int currentHour;
+    private int maxStay;
+    private int earned;
+    private int refused;
+
+    public ParkingLot( int bikeslots, int regular, int large, int maxStay) {
+        slots = new ArrayList<>();
+        this.currentHour = 0;
+        this.maxStay = maxStay;
+        this.earned = 0;
+        this.refused = 0;
+        for(int i =0; i<bikeslots; i++){
+            slots.add(new BikeSlot());
+        }
+        for(int i =0; i<regular; i++){
+            slots.add(new RegularSlot());
+        }
+        for(int i =0; i<large; i++){
+            slots.add(new LargeSlot());
+        }
+
+    }
+
+    public ParkingLot(int currentHour, int earned, int refused) {
+        this.currentHour = currentHour;
+        this.earned = earned;
+        this.refused = refused;
+    }
+
+    public int getCurrentHour() {
+        return currentHour;
+    }
+
+    public int getMaxStay() {
+        return maxStay;
+    }
+
+    public int getEarned() {
+        return earned;
+    }
+
+    public int getRefused() {
+        return refused;
+    }
+    public void addRefusal(){
+        refused++;
+    }
+    public Slot findFreeSlot(String type){
+        for(Slot slot : slots){
+            if (!slot.isOccupied() && slot.getSlot().equalsIgnoreCase(type)) {
+                return slot;
+            }
+        }
+        return null;
+    }
+}

@@ -16,5 +16,6 @@ public abstract class Vehicle {
     public Scheme getScheme() {
         return scheme;
     }
-    public abstract String getPrefferedSlot();
+    public abstract String[] getPrefferedSlot();
+    public abstract String getDefaultSlot();
 }

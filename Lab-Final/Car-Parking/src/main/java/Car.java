@@ -6,7 +6,15 @@ public class Car extends Vehicle{
     }
 
     @Override
-    public String getPrefferedSlot() {
+    public String[] getPrefferedSlot() {
+        return new String[] {"BIKE", "REGULAR", "LARGE"};
+    }
+
+    @Override
+    public String getDefaultSlot() {
         return "REGULAR";
     }
+
+
+
 }

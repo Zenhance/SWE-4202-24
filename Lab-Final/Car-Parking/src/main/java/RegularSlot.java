@@ -2,7 +2,7 @@ package main.java;
 
 public class RegularSlot extends Slot{
 
-    public RegularSlot(int firstHourRate, int furtherHourRate, int surchargeRate) {
+    public RegularSlot() {
         super(30, 20, 15);
     }
 

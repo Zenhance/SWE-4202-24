@@ -1,7 +1,7 @@
 package main.java;
 
 public class BikeSlot extends Slot{
-    public BikeSlot(int firstHourRate, int furtherHourRate, int surchargeRate) {
+    public BikeSlot() {
         super(10, 5, 0);
     }
 
