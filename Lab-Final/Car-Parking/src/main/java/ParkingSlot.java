@@ -11,5 +11,16 @@ public class ParkingSlot {
      public Vehicle getVehicle() {
          return vehicle;
      }
+     public boolean isFree() {
+         return vehicle == null;
+     }
+
+    public void park(Vehicle vehicle) {
+        this.vehicle = vehicle;
+        vehicle.setSlot(this);
+    }
+    public void free(){
+         this.vehicle = null;
+    }
 
 }
