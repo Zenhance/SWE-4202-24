@@ -61,6 +61,13 @@ public class Main {
                     System.out.println(lot.refusedCount());
 
                 }
+                else if (command.equals("BILL")) {
+                    Integer bill = lot.billFor(field[1]);
+                    if (bill == null) {
+                        System.out.println("NONE");
+                    } else {
+                        System.out.println(bill);
+                    }
 
                 } else if (command.equals("PASSTIME")) {
                     int hours = Integer.parseInt(field[1]);
