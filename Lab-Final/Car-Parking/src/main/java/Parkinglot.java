@@ -8,6 +8,20 @@ public class Parkinglot {
     private int bikeFree;
     private int regularFree;
     private int largeFree;
+    private HashMap<String,Vehicle>parkedVehicles = new HashMap<>();
+    private int maxStayhrs;
+    private int time=0;
+    private int refusedCount=0;
+    private int totalEarned=0;
+
+    public void setSlots(int bike,int regular,int large){
+        bikeTotal=bike;
+        regularTotal=regular;
+        largeTotal=large;
+        regularFree=regular;
+        largeFree=large;
+    }
+
 
 
 
