@@ -1,2 +1,5 @@
-public class PlateNotInThePark extends Exception{
+public class PlateNotInThePark extends ParkingException{
+    public PlateNotInThePark(String message) {
+        super(message);
+    }
 }
