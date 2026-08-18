@@ -1,5 +1,5 @@
-public class Bike extends Vehicle{
-    public Bike(String plate, Discount discount, int hours, slotsType slot){
+public class BIKE extends Vehicle{
+    public BIKE(String plate, Discount discount, int hours, slotsType slot){
         super(plate, discount, hours, slot);
     }
     public slotsType[] slots(){
