@@ -1,4 +1,4 @@
-public class NoPlateException extends Exception{
+public class NoPlateException extends RefusalException{
     public NoPlateException(){
         super("No plate");
     }
