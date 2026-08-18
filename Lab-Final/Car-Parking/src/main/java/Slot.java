@@ -20,6 +20,8 @@ public class Slot {
         return vehicle;
     }
 
-
+    public void occupy(Vehicle vehicle){
+        this.vehicle=vehicle;
+    }
 
 }
