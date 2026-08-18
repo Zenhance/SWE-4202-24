@@ -19,4 +19,10 @@ public abstract class Vehicle {
     public int getEntryTime(){
         return entryTime;
     }
+    public void park(SlotType slot,int getTime){
+        this.keptSlot=slot;
+        this.entryTime=getTime;
+    }
+    public abstract SlotType[] slotpreference();
+    public abstract int hourlyRate();
 }
