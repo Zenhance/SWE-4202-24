@@ -12,5 +12,4 @@ abstract class Vehicle {
         hours = 0;
     }
 
-
 }
