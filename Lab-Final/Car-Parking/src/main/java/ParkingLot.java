@@ -12,9 +12,9 @@ public class ParkingLot {
 
     int earned = 0;
     private int maxHours;
-     int bikeCapacity;
-     int regularCapacity;
-     int largeCapacity;
+    int bikeCapacity;
+    int regularCapacity;
+    int largeCapacity;
     int count = 0;
     int refused = 0;
     public ParkingLot(int bikeCapacity, int regularCapacity, int largeCapacity) {
@@ -51,6 +51,33 @@ public class ParkingLot {
 
     public void setLargeCapacity(int largeCapacity) {
         this.largeCapacity = largeCapacity;
+    }
+    public void addVehicle(Vehicle vehicle) {
+        if(vehicle instanceof Bike){
+            if(bikeCapacity != 0){
+                bikeSlots.add(vehicle);
+            }else if(regularCapacity != 0){
+                regularSlots.add(vehicle);
+            }else if(largeCapacity != 0){
+                largeSlots.add(vehicle);
+            }else{
+                throw new NoSlotLeftException("No slots left on parking lot for bike");
+            }
+        }else if(vehicle instanceof Car){
+            if(regularCapacity != 0){
+                regularSlots.add(vehicle);
+            }else if(largeCapacity != 0){
+                largeSlots.add(vehicle);
+            }else{
+                throw new NoSlotLeftException("No slots left on parking lot for Car");
+            }
+        }else if(vehicle instanceof Truck){
+            if(largeCapacity != 0){
+                largeSlots.add(vehicle);
+            }else{
+                throw new NoSlotLeftException("No slots left on parking lot for Truck");
+            }
+        }
     }
     public void addBike(Vehicle vehicle){
         bikeSlots.add(vehicle);
