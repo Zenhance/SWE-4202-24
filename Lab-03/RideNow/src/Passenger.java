@@ -1,29 +1,32 @@
 public class Passenger {
+   private int id;
+   private String name;
+   private double rating;
 
-    private final int    id;
-    private final String name;
-    private double       rating;
-
-    public Passenger(int id, String name, double rating) {
-        this.id     = id;
-        this.name   = name;
+    public Passenger(int id, String name, double rating){
+        this.id = id;
+        this.name = name;
         this.rating = rating;
     }
-
-    public Passenger(int id, String name) {
-        this(id, name, 5.0);   // delegate to full constructor
+    public Passenger(int id, String name){
+      this.id = id;
+      this.name = name;
+    }
+    public int getId() {
+        return id;
+    }
+    public String getName(){
+        return name;
+    }
+    public double getRating(){
+        return rating ;
     }
 
-    public int    getId()     { return id; }
-    public String getName()   { return name; }
-    public double getRating() { return rating; }
-
-    public void updateRating(double newRating) {
+    public void updateRating(double newRating){
         this.rating = newRating;
     }
 
-    @Override
-    public String toString() {
-        return String.format("Passenger[%d] %s (%.2f)", id, name, rating);
-    }
+public String toString(){
+    return String.format("Passenger[%d] %s (%.2f)",id,name,rating);
+}
 }

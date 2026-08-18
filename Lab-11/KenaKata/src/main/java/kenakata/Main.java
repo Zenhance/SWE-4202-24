@@ -2,8 +2,6 @@ package kenakata;
 
 import kenakata.catalog.DigitalGood;
 import kenakata.catalog.FreshGood;
-import kenakata.catalog.GiftWrap;
-import kenakata.catalog.ExpressHandling;
 import kenakata.catalog.Seller;
 import kenakata.catalog.StockedGood;
 import kenakata.exceptions.CheckoutException;
@@ -20,6 +18,8 @@ import kenakata.payment.Wallet;
 import kenakata.settlement.Marketplace;
 import kenakata.settlement.SellerPayout;
 import kenakata.settlement.SettlementReport;
+import kenakata.order.GiftWrap;
+import kenakata.order.ExpressHandling;
 
 /**
  * Driver for the KenaKata engine. This is a hand-written demonstration of "a night in the
