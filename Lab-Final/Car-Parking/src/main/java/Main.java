@@ -180,10 +180,17 @@ public class Main {
                 System.out.println(v.calculateBill(currentTime, maxStay));
             }
 
+            else if (field[0].equals("SLOT")) {
+                Vehicle v = findVehicle(parkedVehicles, field[1]);
+
+                System.out.println(v.slotType);
+            }
+
+
         }
     }
 
-    private Vehicle findVehicle(List<Vehicle> list, String numPlate) {
+    private static Vehicle findVehicle(List<Vehicle> list, String numPlate) {
         for (Vehicle v : list) {
             if (v.numPlate.equals(numPlate))
                 return v;
