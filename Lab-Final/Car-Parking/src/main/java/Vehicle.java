@@ -14,6 +14,10 @@ public abstract class Vehicle {
     public String getPass(){
         return pass;
     }
+    public String getAssignedSlot(){
+        return assignedSlot;
+    }
+
 
 
 
