@@ -3,9 +3,15 @@ public abstract class Vehicle {
     int hoursPassed;
     Scheme scheme;
 
-    public Vehicle(String numberPlate, Scheme scheme) {
+    public Vehicle(String numberPlate, String discount) {
         this.numberPlate = numberPlate;
-        this.scheme = scheme;
+        if(discount.equals(Scheme.NONE)) {
+            this.scheme = Scheme.NONE;
+        }else if(discount.equals(Scheme.STUDENT)){
+            this.scheme = Scheme.STUDENT;
+        }else if(discount.equals(Scheme.WEEKEND)){
+            this.scheme = Scheme.WEEKEND;
+        }
     }
 
 }
