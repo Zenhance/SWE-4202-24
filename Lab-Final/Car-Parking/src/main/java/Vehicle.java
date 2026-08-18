@@ -6,6 +6,17 @@ public abstract class Vehicle {
     protected Vehicle(String vehiclePlate,Category category){
        this.vehiclePlate=vehiclePlate;
        this.category=category;
-
+    }
+    public String getVehiclePlate(){
+        return vehiclePlate;
+    }
+    public Category getCategory(){
+        return category;
+    }
+    public SlotType getKeptSlot(){
+        return keptSlot;
+    }
+    public int getEntryTime(){
+        return entryTime;
     }
 }
