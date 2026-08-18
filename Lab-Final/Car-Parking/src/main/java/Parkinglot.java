@@ -21,6 +21,16 @@ public class Parkinglot {
         regularFree=regular;
         largeFree=large;
     }
+    public void setMaxStay(int hrs){
+        maxStayhrs=hrs;
+    }
+    public void advanceTime(int hrs){
+        time+=hrs;
+    }
+
+
+
+
 
 
 
