@@ -20,7 +20,9 @@ public abstract class Vehicle {
     public void setAssignedSlot(String assignedSlot){
         this.assignedSlot = assignedSlot;
     }
-
+    public int getEntryTime(){
+        return entryTime;
+    }
 
 
 
