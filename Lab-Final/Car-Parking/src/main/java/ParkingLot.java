@@ -42,7 +42,7 @@ public class ParkingLot {
         }
     }
 
-
-
-
+    public void setMaxStay(int maxStay) {
+        this.maxStay = maxStay;
+    }
 }
