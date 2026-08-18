@@ -5,6 +5,7 @@ public abstract class Vehicle {
     protected String number;
     protected Scheme scheme;
     public static int maxHours;
+    protected int hoursPassed = 0;
 
 
     Vehicle(String number, String schemeS) {
@@ -23,4 +24,11 @@ public abstract class Vehicle {
         this(number, "NONE");
     }
 
+    public abstract int firstHourCharge ();
+    public abstract int furtherHourCharge ();
+    public abstract int Surcharge ();
+
+    public int getHoursPassed() {
+        return hoursPassed;
+    }
 }

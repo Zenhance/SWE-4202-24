@@ -22,7 +22,8 @@ public class Main {
                 // ... do something with hours ...
                 Vehicle.maxHours = hours;
             } else if (field[0].equals("COUNT")) {
-                System.out.println(/* the number you worked out */);
+                if(p!=null)
+                    System.out.println(p.getCount()/* the number you worked out */);
             } else if (field[0].equals("SLOTS") && field.length >= 4) {
                 int bike = Integer.parseInt(field[1]);
                 int regular = Integer.parseInt(field[2]);
@@ -47,8 +48,20 @@ public class Main {
                 Vehicle v = new Truck(field[1], field[2]);
                 if (p != null)
                     p.enterVehicle(v);
+            } else if (field[0].equals("FREE")) {
+                if(p != null) {
+                    if (field[1].equals("BIKE"))
+                        System.out.println(p.getFreeBikeSlot());
+                    if (field[1].equals("REGULAR"))
+                        System.out.println(p.getFreeRegularSlot());
+                    if (field[1].equals("LARGE"))
+                        System.out.println(p.getFreeLargeSlot());
+                }
             }
-
+            else if (field[0].equals("REFUSED")) {
+                if (p != null)
+                    System.out.println(p.getRefused()/* the number you worked out */);
+            }
             // ... one branch per keyword ...
 
         }

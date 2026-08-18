@@ -12,6 +12,8 @@ public class ParkingLot {
     int count = 0;
     int refused = 0;
 
+    CalculateCharge c = new CalculateCharge();
+
     ArrayList<Vehicle> vehicles = new ArrayList<>();
     ArrayList<Vehicle> bikes = new ArrayList<>();
     ArrayList<Vehicle> regulars = new ArrayList<>();
@@ -106,7 +108,7 @@ public class ParkingLot {
     }
 
 
-    public int getReturned() {
+    public int getRefused() {
         return refused;
     }
 
@@ -141,7 +143,5 @@ public class ParkingLot {
     public ArrayList<Vehicle> getVehicles() {
         return vehicles;
     }
-
-
 
 }
