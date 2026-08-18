@@ -21,6 +21,7 @@ public class Regular extends Slot{
     }
 
     public static void freeUpslot(){
+        countTotal--;
         count--;
     }
 

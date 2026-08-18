@@ -21,6 +21,7 @@ public class Large extends Slot{
     }
 
     public static void freeUpslot(){
+        countTotal--;
         count--;
     }
 

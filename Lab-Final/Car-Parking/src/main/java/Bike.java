@@ -24,6 +24,7 @@ public class Bike extends Slot{
     }
 
     public static void freeUpSlot(){
+        countTotal--;
         count--;
     }
 

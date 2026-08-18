@@ -11,8 +11,6 @@ public class Main {
 
         int total = 0;
 
-        int prevpasstime = 1;
-
         while (input.hasNextLine()) {
             String line = input.nextLine().trim();
             if (line.isEmpty()) {
@@ -69,8 +67,7 @@ public class Main {
 
                 case "PASSTIME" -> {
                     for (Slot v : vehicles){
-                        v.passtime(Integer.parseInt(field[1]) - prevpasstime);
-                        prevpasstime = Integer.parseInt(field[1]);
+                        v.passtime(Integer.parseInt(field[1]) - 1);
                     }
                 }
 
@@ -81,6 +78,7 @@ public class Main {
                             else if (v instanceof Regular) Regular.freeUpslot();
                             else Large.freeUpslot();
 
+                            total += v.calculatefee();
                             vehicles.remove(v);
                             break;
                         }
@@ -123,9 +121,7 @@ public class Main {
                 }
 
                 case "EARNED" -> {
-                    for (Slot v : vehicles){
-                        total += v.calculatefee();
-                    }
+
                     System.out.println(total);
                 }
 

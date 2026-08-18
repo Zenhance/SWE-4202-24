@@ -3,7 +3,7 @@ import static java.lang.Math.max;
 public abstract class Slot {
 
     protected int hours = 0;
-    private static int countTotal = 0;
+    protected static int countTotal = 0;
     protected boolean surchargeApplicable;
     protected String license;
     protected boolean StudentScheme = false;
@@ -59,6 +59,7 @@ public abstract class Slot {
 
         return fee;
     }
+
 
 
     public static int getCount(){
