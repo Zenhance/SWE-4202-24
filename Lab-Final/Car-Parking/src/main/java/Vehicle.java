@@ -17,6 +17,9 @@ public abstract class Vehicle {
     public String getAssignedSlot(){
         return assignedSlot;
     }
+    public void setAssignedSlot(String assignedSlot){
+        this.assignedSlot = assignedSlot;
+    }
 
 
 
