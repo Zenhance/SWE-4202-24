@@ -41,4 +41,12 @@ public abstract class Slot {
     public int totalCharge() {
         return getFirstHourFee() + getLaterFee() + getSurcharge();
     }
+
+    public boolean isFree() {
+        return isFree;
+    }
+
+    public void equiped() {
+        isFree = false;
+    }
 }
