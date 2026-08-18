@@ -33,30 +33,30 @@ import kenakata.settlement.SettlementReport;
  */
 public final class Main {
 
-    public static void main(String[] args) throws CheckoutException {
+    public static void main(String[] args) throws kenakata.CheckoutException {
         // ---- Sellers and catalogue -------------------------------------------------------
-        Seller alpha = new Seller("Alpha Electronics");
+        kenakata.Seller alpha = new Seller("Alpha Electronics");
         Seller beta = new Seller("Beta Books");
         Seller gamma = new Seller("Gamma Fresh");
 
         // Three kinds of catalogue item -- same base type, different money rules.
-        StockedGood lamp = new StockedGood("SKU-LAMP", "Table Lamp", 1200, 10, alpha, 1500);
+        kenakata.StockedGood lamp = new StockedGood("SKU-LAMP", "Table Lamp", 1200, 10, alpha, 1500);
         StockedGood charger = new StockedGood("SKU-CHRG", "USB Charger", 800, 20, alpha, 300);
         StockedGood fridge = new StockedGood("SKU-FRIDGE", "Refrigerator", 20000, 3, alpha, 50000);
         DigitalGood ebook = new DigitalGood("SKU-EBK", "E-book: Clean OOP", 300, 1000, beta);
         FreshGood hilsa = new FreshGood("SKU-HILSA", "Hilsa 1kg", 1600, 4, gamma, 1000);
 
-        Marketplace marketplace = new Marketplace();
+        kenakata.Marketplace marketplace = new Marketplace();
         marketplace.register(alpha);
         marketplace.register(beta);
         marketplace.register(gamma);
 
-        DeliveryCalculator delivery = new DeliveryCalculator();
-        Coupon eid10 = new Coupon("EID10", 10, 200, 1000, 150);
+        kenakata.DeliveryCalculator delivery = new DeliveryCalculator();
+        kenakata.Coupon eid10 = new Coupon("EID10", 10, 200, 1000, 150);
         int today = 100;
 
         // ---- Order 1: mixed basket inside Dhaka, paid from a mobile wallet ----------------
-        Order order1 = new Order(Zone.DHAKA, delivery);
+        kenakata.Order order1 = new Order(Zone.DHAKA, delivery);
         order1.addProduct(lamp, 2);        // stocked, weighable, discountable
         order1.addProduct(ebook, 1);       // digital, no weight, not discountable
         order1.addProduct(hilsa, 1);       // fresh, weighable, needs cold chain
@@ -64,7 +64,7 @@ public final class Main {
         order1.applyCoupon(eid10);
         printQuote("Order 1 (inside Dhaka)", order1.quote(today));
 
-        Wallet wallet = new Wallet(5000);
+        kenakata.Wallet wallet = new Wallet(5000);
         PaymentMethod payment = new MobileWalletPayment(wallet);   // one variable, any payment form
         order1.place(payment, today);
         marketplace.record(order1);

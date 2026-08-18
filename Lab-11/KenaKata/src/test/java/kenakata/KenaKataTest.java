@@ -152,6 +152,7 @@ class KenaKataTest {
         private Order workedExample() {
             Seller a = new Seller("A");
             Seller b = new Seller("B");
+            Object Zone;
             Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
             order.addProduct(new StockedGood("L", "Lamp", 1200, 10, a, 1500), 2);
             order.addProduct(new DigitalGood("E", "E-book", 300, 100, b), 1);
@@ -185,6 +186,7 @@ class KenaKataTest {
         @Test
         @DisplayName("An all-digital order delivers for nothing")
         void allDigitalIsFree() throws Exception {
+            Object Zone;
             Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
             order.addProduct(new DigitalGood("E", "E-book", 300, 100, seller()), 3);
             assertEquals(0, order.quote(1).delivery());
@@ -316,6 +318,7 @@ class KenaKataTest {
         void declinedPaymentChangesNothing() {
             Seller s = seller();
             StockedGood item = lamp(s); // stock 10
+            Object Zone;
             Order order = new Order(Zone.DHAKA, new DeliveryCalculator());
             order.addProduct(item, 2);
             Wallet wallet = new Wallet(100); // far too little
@@ -376,7 +379,7 @@ class KenaKataTest {
         @Test
         @DisplayName("An empty wallet throws its own kind, catchable as the parent")
         void emptyWallet() {
-            PaymentMethod pay = new MobileWalletPayment(new Wallet(50));
+            MobileWalletPayment pay = new MobileWalletPayment(new Wallet(50));
             EmptyWalletException e =
                     assertThrows(EmptyWalletException.class, () -> pay.authorise(51));
             assertInstanceOf(PaymentDeclinedException.class, e);
