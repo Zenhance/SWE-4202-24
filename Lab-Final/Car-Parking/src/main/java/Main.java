@@ -41,9 +41,17 @@ public class Main {
                 discounts.add(field[2]);
                 parkedIn.add(firstWord);
                 hoursParked.add(0);
+            }else if (firstWord.equals("SLOT")) {
+
+            } else if (firstWord.equals("FREE")) {
+
+            }else if (firstWord.equals("COUNT")) {
 
             }
-        }
+
+
+
+            }
 
     }
 }
