@@ -47,7 +47,17 @@ public class Main {
             } else {
                 System.out.println(slot.name());
             }
+         else if (command.equals("FREE")) {
+                SlotType type = SlotType.valueOf(field[1]);
+                System.out.println(lot.freeCount(type));
 
+            } else if (command.equals("COUNT")) {
+                System.out.println(lot.parkedCount());
+
+            } else if (command.equals("REFUSED")) {
+                System.out.println(lot.refusedCount());
+
+            }
         }
     }
 }
