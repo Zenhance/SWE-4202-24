@@ -8,16 +8,7 @@ public class vehicles {
         this.chocolate = chocolate;
         this.h=0;
     }
-    public int check(String ow){
-        if(ow.equals("BIKE")){
-            return 9;
-        }
-        if(ow.equals("CAR")){
-            return 99;
-        }
-       else
-        return 999;
-    }
+
 
     public String getMeow() {
         return this.meow;

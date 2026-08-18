@@ -22,6 +22,6 @@ public  class Slot {
     public void remove(vehicles vehicle){
         this.vehicle=null;
     }
-    public
+
 
 }
