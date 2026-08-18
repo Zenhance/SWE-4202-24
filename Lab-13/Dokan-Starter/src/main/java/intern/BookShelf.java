@@ -2,14 +2,7 @@ package intern;
 
 import shop.Book;
 
-/**
- * THE INTERN'S BOOK SHELF — copy one of two.
- *
- * <p>This is the copy somebody remembered to fix: see the line marked FIXED, which
- * closes the gap after a removal. {@link SnackShelf} is the same thirty lines
- * <em>without</em> that fix, because it is a copy, not another instance of the same
- * class.
- */
+
 public class BookShelf {
 
     private final Book[] slots;

@@ -2,13 +2,7 @@ package intern;
 
 import shop.Sample;
 
-/**
- * Run this first: {@code ./gradlew intern}
- *
- * <p>Three things are wrong with the intern's shop, and this makes all three happen in
- * front of you. Each one is a mistake the compiler could have caught, if only somebody
- * had told it what was on the shelf.
- */
+
 public final class InternDemo {
 
     public static void main(String[] args) {

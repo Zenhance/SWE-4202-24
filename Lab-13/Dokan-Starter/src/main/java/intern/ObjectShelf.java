@@ -1,12 +1,5 @@
 package intern;
 
-/**
- * THE INTERN'S SHELF. This is the code you are replacing.
- *
- * <p>It holds {@code Object}, so it will hold anything at all and tell you nothing
- * about what came back out. Every caller has to cast, and every cast is a promise the
- * compiler cannot check.
- */
 public class ObjectShelf {
 
     private final Object[] slots;
