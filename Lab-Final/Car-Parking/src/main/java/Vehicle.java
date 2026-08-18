@@ -9,4 +9,10 @@ public abstract class Vehicle {
         this.category = category;
 
     }
+    public String getPlate(){
+        return plate;
+    }
+    public Category getCategory(){
+        return category;
+    }
 }
