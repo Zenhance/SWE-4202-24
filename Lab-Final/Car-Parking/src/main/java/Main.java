@@ -129,5 +129,10 @@ public class Main {
             furtherHourRate = 40;
             surchargeAmt = 25;
         }
+        int bill = firstHourRate + (h - 1) * furtherHourRate;
+        boolean inOwnSlot = false;
+        if (type.equals("BIKE") && parkedSlot.equals("BIKE")) inOwnSlot = true;
+        if (type.equals("CAR") && parkedSlot.equals("REGULAR")) inOwnSlot = true;
+        if (type.equals("TRUCK") && parkedSlot.equals("LARGE")) inOwnSlot = true;
     }
 }
