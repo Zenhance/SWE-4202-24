@@ -1,3 +1,3 @@
 public enum Category {
-    BIKE , CAR, TRUCK;
+    STUDENT,NONE,WEEKEND;
 }
