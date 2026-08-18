@@ -6,11 +6,11 @@ abstract class Vehicle {
     int hours;
     Discount discount;
 
-    public Vehicle(String plate, Discount discount){
+    public Vehicle(String plate){
         this.Plate = plate;
-        this.discount = discount;
         slot=null;
         hours = 0;
     }
+
 
 }
