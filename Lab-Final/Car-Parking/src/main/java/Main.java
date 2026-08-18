@@ -115,5 +115,19 @@ public class Main {
         int firstHourRate = 0;
         int furtherHourRate = 0;
         int surchargeAmt = 0;
+
+        if (parkedSlot.equals("BIKE")) {
+            firstHourRate = 10;
+            furtherHourRate = 5;
+            surchargeAmt = 0;
+        } else if (parkedSlot.equals("REGULAR")) {
+            firstHourRate = 30;
+            furtherHourRate = 20;
+            surchargeAmt = 15;
+        } else if (parkedSlot.equals("LARGE")) {
+            firstHourRate = 50;
+            furtherHourRate = 40;
+            surchargeAmt = 25;
+        }
     }
 }
