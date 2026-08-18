@@ -15,7 +15,7 @@ public class Parkinglot {
     private int time=0;
     private int refusedCount=0;
     private int totalEarned=0;
-}
+
 public void setSlots(int bike,int regular,int large){
     bikeTotal=bike;
     regularTotal=regular;
@@ -40,9 +40,14 @@ private int getFreeSlots(SlotType type){
         return largeFree;
     }
 }
-private void takeOneSlot(SlotType type){
-    if(type==SlotType.BIKE){
-        bikeFree = bikeFree-1;
+private void takeOneSlot(SlotType type) {
+    if (type == SlotType.BIKE) {
+        bikeFree = bikeFree - 1;
+    } else if (type == SlotType.REGULAR) {
+        regularFree = regularFree - 1;
+    } else {
+        largeFree = largeFree - 1;
     }
 }
+
 
