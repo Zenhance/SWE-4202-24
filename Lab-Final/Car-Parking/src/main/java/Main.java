@@ -33,6 +33,20 @@ public class Main {
                 Vehicle vehicle = new Car(field[1], field[2]);
                 parkingLot.park(vehicle);
             }
+            else if (command.equals("TRUCK")) {
+                Vehicle vehicle = new Truck(field[1], field[2]);
+                parkingLot.park(vehicle);
+            }
+            else if (command.equals("SLOT")) {
+                System.out.println(parkingLot.getSlot(field[1])
+                );
+            }
+            else if (command.equals("FREE")) {
+                System.out.println(parkingLot.getFreeSlots(field[1])
+                );
+            }
+
+
 
 
 
