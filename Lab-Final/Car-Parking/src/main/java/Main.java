@@ -21,6 +21,12 @@ public class Main {
                 int largeSlots = Integer.parseInt(field[3]);
                 parkingLot.setSlots(bikeSlots, regularSlots, largeSlots);
             }
+            else if (command.equals("MAXSTAY")) {
+                int hours = Integer.parseInt(field[1]);
+                parkingLot.setMaxStay(hours);
+            }
+
+
         }
 
     }
