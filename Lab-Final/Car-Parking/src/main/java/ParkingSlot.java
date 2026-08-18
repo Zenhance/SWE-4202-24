@@ -5,6 +5,9 @@ public class ParkingSlot {
      public ParkingSlot(String type, Vehicle vehicle) {
          this.type = type;
      }
+     public ParkingSlot(String type){
+         this.type = type;
+     }
      public String getType() {
          return type;
      }
