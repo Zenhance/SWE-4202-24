@@ -25,6 +25,17 @@ public class Main {
                 int hours = Integer.parseInt(field[1]);
                 parkingLot.setMaxStay(hours);
             }
+            else if (command.equals("BIKE")) {
+                Vehicle vehicle = new Bike(field[1], field[2]);
+                parkingLot.park(vehicle);
+            }
+            else if (command.equals("CAR")) {
+                Vehicle vehicle = new Car(field[1], field[2]);
+                parkingLot.park(vehicle);
+            }
+
+
+
 
 
         }
