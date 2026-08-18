@@ -14,4 +14,23 @@ public abstract class Vehicle {
     }
 
     public abstract List<SlotType> acceptanceOrder();
+
+    public SlotType homeSlot(){
+        return acceptanceOrder().get(0);
+    }
+    public String getPlate(){
+        return plate;
+    }
+    public DiscountScheme getScheme(){
+        return scheme;
+    }
+    public int addHours(int hours){
+        this.hoursStood += hours;
+    }
+    public SlotType getCurrentSlot(){
+        return currentSlot;
+    }
+    public void setCurrentSlot(SlotType currentSlot){
+        this.currentSlot = currentSlot;
+    }
 }
