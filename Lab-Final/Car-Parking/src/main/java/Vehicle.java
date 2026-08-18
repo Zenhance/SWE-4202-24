@@ -5,7 +5,7 @@ public abstract class Vehicle {
     private int hoursStayed;
     private DiscountScheme scheme;
     private SlotType type;
-    public Vehicle(String numberPlate,int hoursStayed){
+    public Vehicle(String numberPlate,DiscountScheme scheme){
         this.numberPlate=numberPlate;
         this.hoursStayed=0;
         this.scheme=scheme;
@@ -31,4 +31,5 @@ public abstract class Vehicle {
         hoursStayed+=hours;
     }
     public abstract List<SlotType> acceptanceOrder();
+
 }
