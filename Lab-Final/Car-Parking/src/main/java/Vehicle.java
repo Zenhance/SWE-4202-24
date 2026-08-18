@@ -26,6 +26,12 @@ public abstract class Vehicle {
     public void setEntryTime(int entryTime) {
         this.entryTime = entryTime;
     }
+    public boolean isOversized() {
+        return oversized;
+    }
+    public void setOversized(boolean oversized) {
+        this.oversized = oversized;
+    }
 
 
 
