@@ -59,7 +59,22 @@ public final class Shelves {
      * An empty list has no largest value, so refuse it.
      */
     public static <T extends Comparable<T>> T max(List<T> values) {
-        throw new UnsupportedOperationException("TODO: Shelves.max");
+        if (values.isEmpty()) {
+            throw new IllegalArgumentException();
+        }
+        T maximum = values.get(0);
+
+        for (int i = 1; i < values.size(); i++) {
+            T current = values.get(i);
+
+            if (current.compareTo(maximum) > 0) {
+                maximum = current;
+            }
+        }
+
+        return maximum;
+
+
     }
 
     /**
@@ -70,6 +85,12 @@ public final class Shelves {
      * {@code List<T>} here would reject that perfectly sensible line.
      */
     public static <T extends Item> int addAll(Shelf<T> shelf, List<? extends T> items) {
-        throw new UnsupportedOperationException("TODO: Shelves.addAll");
+        int added=0;
+        for(T item:items){
+            if(!shelf.add(item))break;
+            added++;
+        }
+
+        return added;
     }
 }
