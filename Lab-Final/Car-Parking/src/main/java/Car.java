@@ -10,4 +10,7 @@ public class Car extends Vehicle {
                 SlotType.LARGE
         };
     }
+    public int hourlyRate(){
+        return 20;
+    }
 }
