@@ -28,6 +28,10 @@ public class Main {
                 carPark = new CarPark(bikeSlots, regularSlots, largeSlots);
             }
 
+            if (command.equals("MAXSTAY")) {
+                int maximumStay = Integer.parseInt(field[1]);
+                carPark.setMaximumStay(maximumStay);
+            }
         }
     }
 }

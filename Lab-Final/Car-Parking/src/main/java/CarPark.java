@@ -6,6 +6,7 @@ public class CarPark {
     private final int regularSlots;
     private final int largeSlots;
     private final List<Slot> slots = new ArrayList<>();
+    private int maximumStay;
 
     public CarPark(int bikeSlots, int regularSlots, int largeSlots) {
         this.bikeSlots = bikeSlots;
@@ -51,5 +52,9 @@ public class CarPark {
         for (Slot slot : slots) {
             slot.passTime(passedHours);
         }
+    }
+
+    public void setMaximumStay(int maximumStay) {
+        this.maximumStay = maximumStay;
     }
 }
