@@ -1,3 +1,4 @@
-public abstract class Slot {
+public abstract class Slot{
     abstract int fee();
 }
+

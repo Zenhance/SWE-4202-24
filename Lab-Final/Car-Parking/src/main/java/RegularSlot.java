@@ -9,5 +9,6 @@ public class RegularSlot extends Slot {
         return first_hour + (hour - 1) * further_hour;
     }
 
+
 // surcharge when other slot come
 }
