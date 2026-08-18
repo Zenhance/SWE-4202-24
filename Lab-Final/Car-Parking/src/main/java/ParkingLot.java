@@ -1,11 +1,36 @@
 import java.util.HashMap;
 public class ParkingLot {
-    private int bikeTotal,regularTotal,LargeTotal;
+    private int bikeTotal,regularTotal,largeTotal;
     private int bikeFree,regularFree,largeFree;
     private HashMap<String,Vehicle> parkedVehicles=new HashMap<>();
     private int maxStayhrs;
     private int time=0;
     private int refusedCount=0;
     private int totalEarned=0;
+public void setSlots(int bike,int regular,int large){
+    bikeTotal=bike;
+    regularTotal=regular;
+    largeTotal=large;
+    bikeFree=bike;
+    regularFree=regular;
+    largeFree=large;
+}
+public void setMaxStay(int hrs){
+    maxStayhrs=hrs;
+}
+public void advanceTime(int hrs){
+    time+=hrs;
+}
+private int getFreeSlots(SlotType type){
+    if(type==SlotType.BIKE){
+        return bikeFree;
+    }
+    else if(type==SlotType.REGULAR){
+        return regularFree;
+    }
+    else{
+        return largeFree;
+    }
+}
 
 }
