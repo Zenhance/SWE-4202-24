@@ -45,7 +45,7 @@ public class Main {
             }else if (firstWord.equals("SLOT")) {
                 System.out.println(parkVehicle(field[1]));
             } else if (firstWord.equals("FREE")) {
-
+                System.out.println(freeSlots(field[1]));
             }else if (firstWord.equals("COUNT")) {
 
             }else if(firstWord.equals("REFUSED")){
@@ -88,5 +88,11 @@ public class Main {
         refusedCount++;
         return "REFUSED";
 
+    }
+
+    static int freeSlots(String category) {
+        if (category.equals("BIKE")) return freeBike;
+        if (category.equals("REGULAR")) return freeRegular;
+        return freeLarge;
     }
 }
