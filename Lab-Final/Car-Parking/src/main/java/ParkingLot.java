@@ -35,11 +35,11 @@ public class ParkingLot {
         }
     }
 
-    private int takeOneSlot(SlotType type) {
+    private void takeOneSlot(SlotType type) {
         if (type == SlotType.BIKE) {
             bikeFree = bikeFree - 1;
         } else if (type == SlotType.REGULAR) {
-            regularFree = bikeFree - 1;
+            regularFree = regularFree - 1;
         } else {
             largeFree = largeFree - 1;
         }
@@ -62,7 +62,7 @@ public void register(Vehicle vehicle){
         if(getFreeSlots(type)>0){
         takeOneSlot(type);
         vehicle.park(type,time);
-        parkedVehicles.put(vehicle.getPlate(),vehicle);
+        parkedVehicles.put(vehicle.getVehiclePlate(),vehicle);
         return;
         }
     }
@@ -106,5 +106,18 @@ public SlotType slotOf(String plate){
         returnOneSlot(v.getKeptSlot());
         return fee;
     }
-
+private int  calculateFee(Vehicle v,int hoursParked){
+        int hours=hoursParked;
+        if(hours<1){
+            hours=1;
+        }
+        int fee=v.hourlyRate()*hours;
+        if(hours>maxStayhrs){
+            fee=fee+v.hourlyRate()*(hours-maxStayhrs);
+        }
+        if(v.getCategory()==Category.STUDENT){
+            fee=fee/2;
+        }
+        return fee;
+}
 }
