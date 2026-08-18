@@ -14,7 +14,7 @@ public class Bike extends Slot{
         if(surchargeApplicable){
             fee += 0;
         }
-        fee = feeAfterSurchage(fee);
+        fee = feeAfterScheme(fee);
 
         earning(fee);
 

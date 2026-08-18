@@ -51,7 +51,7 @@ public abstract class Slot {
         surchargeApplicable = true;
     }
 
-    protected int feeAfterSurchage(int fee){
+    protected int feeAfterScheme(int fee){
         if (StudentScheme){
             fee = fee - (20*fee/100);
         }
