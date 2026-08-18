@@ -29,7 +29,7 @@ import shop.Snack;
  * trace cannot show. Run it with {@code ./gradlew test}.
  */
 @DisplayName("Dokan")
-class DokanTest {
+class /DokanTest {
 
     private static Shelf<Book> bookShelf() {
         Shelf<Book> shelf = new Shelf<>(4);

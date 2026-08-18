@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b575d6a-2357-405a-9506-d7e7d71db259" name="Changes" comment="Before, Counter was only an incomplete generic class with method definitions but no working counting logic. Now  we use a Map&lt;T, Integer&gt; to store each value and its frequency, allowing Counter to count occurrences, find distinct values, and return the most common value.">
+    <list default="true" id="2b575d6a-2357-405a-9506-d7e7d71db259" name="Changes" comment="fixed errors">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dokan/Shelves.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dokan/Shelves.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/checks/DokanTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/checks/DokanTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +152,23 @@
       <option name="project" value="LOCAL" />
       <updated>1786420082800</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Before Shelves contained incomplete generic helper methods. I implemented those methods so they can perform common operations on different kinds of shelves while preserving type safety through generics and wildcards.">
+      <option name="closed" value="true" />
+      <created>1786420675875</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1786420675875</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fixed errors">
+      <option name="closed" value="true" />
+      <created>1786421195947</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1786421195947</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,6 +179,8 @@
     <MESSAGE value="fixed pair" />
     <MESSAGE value="Shelf now is a fixed capacity generic container that only accepts Item types and gives us safe add, remove, search, and price operations." />
     <MESSAGE value="Before, Counter was only an incomplete generic class with method definitions but no working counting logic. Now  we use a Map&lt;T, Integer&gt; to store each value and its frequency, allowing Counter to count occurrences, find distinct values, and return the most common value." />
-    <option name="LAST_COMMIT_MESSAGE" value="Before, Counter was only an incomplete generic class with method definitions but no working counting logic. Now  we use a Map&lt;T, Integer&gt; to store each value and its frequency, allowing Counter to count occurrences, find distinct values, and return the most common value." />
+    <MESSAGE value="Before Shelves contained incomplete generic helper methods. I implemented those methods so they can perform common operations on different kinds of shelves while preserving type safety through generics and wildcards." />
+    <MESSAGE value="fixed errors" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed errors" />
   </component>
 </project>
