@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Bike extends Vehicle{
@@ -5,8 +6,10 @@ public class Bike extends Vehicle{
         super(numberPlate,discount);
     }
     public List<Slot> acceptanceOrder(){
-        return List.of(
-               Slot.BIKE,Slot.REGULAR,Slot.LARGE
-        );
+        List<Slot> slots=new ArrayList<>();
+        slots.add(Slot.BIKE);
+        slots.add(Slot.REGULAR);
+        slots.add(Slot.LARGE);
+        return slots;
     }
 }
