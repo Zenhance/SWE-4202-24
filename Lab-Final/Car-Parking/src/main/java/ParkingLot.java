@@ -87,4 +87,24 @@ public SlotType slotOf(String plate){
     public int totalEarned(){
         return totalEarned;
     }
+    public Integer billFor(String plate){
+        Vehicle v=parkedVehicles.get(plate);
+        if(v==null){
+            return null;
+        }
+        int hoursParked=time-v.getEntryTime();
+        return calculateFee(v,hoursParked);
+    }
+    public Integer leave(String plate){
+        Vehicle v=parkedVehicles.remove(plate);
+        if(v==null){
+            return null;
+        }
+        int hoursParked=time-v.getEntryTime();
+        int fee=calculateFee(v,hoursParked);
+        totalEarned=totalEarned+fee;
+        returnOneSlot(v.getKeptSlot());
+        return fee;
+    }
+
 }
