@@ -20,6 +20,10 @@ public class Main {
             int regular = Integer.parseInt(field[2]);
             int large = Integer.parseInt(field[3]);
             lot.setSlots(bike, regular, large);
+        } else if (command.equals("MAXSTAY")) {
+            int hours = Integer.parseInt(field[1]);
+            lot.setMaxStay(hours);
+
         }
     }
 }
