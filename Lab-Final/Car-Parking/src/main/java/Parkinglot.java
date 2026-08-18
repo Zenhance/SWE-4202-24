@@ -110,6 +110,11 @@ public class Parkinglot {
     }
 
     private int calculateFee(Vehicle v, int hoursParked) {
+        int hours = hoursParked;
+        if (hours < 1) {
+            hours = 1;
+        }
+        int fee = v.hourlyRate() * hours;
 
 
 
