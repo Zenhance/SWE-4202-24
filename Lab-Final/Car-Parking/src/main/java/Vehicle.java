@@ -13,7 +13,7 @@ public abstract class Vehicle {
     public abstract List<SlotKind> acceptableSlotKinds();
 
     public SlotKind belongsIn() {
-        return null;
+        return acceptableSlotKinds().get(0);
     }
 
     public String getPlate() {
@@ -25,10 +25,21 @@ public abstract class Vehicle {
     }
 
     public void addHours(int hours) {
+        this.hoursStood += hours;
     }
 
     public int calculateBill(Slot slot) {
-        return 0;
+        int h = Math.max(1, hoursStood);
+        return calculateBillForHours(slot, h);
+    }
+
+    public int calculateBillForHours(Slot slot, int hours) {
+        SlotKind slotKind = slot.getKind();
+        int raw = slotKind.firstHourFee() + (hours - 1) * slotKind.furtherHourFee();
+        if (!slotKind.equals(belongsIn())) {
+            raw += slotKind.surcharge();
+        }
+        return discountScheme.apply(raw);
     }
 
     public DiscountScheme getDiscountScheme() {
