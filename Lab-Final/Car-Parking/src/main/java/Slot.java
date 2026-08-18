@@ -24,8 +24,6 @@ public enum Slot{
     public int getSurcharge() {
         return surcharge;
     }
-
-
 }
 
 
