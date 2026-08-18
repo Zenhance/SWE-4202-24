@@ -3,9 +3,13 @@ public class Truck extends Vehicle{
         super(plate,category);
     }
     @Override
-    public SlotType[] prefferedSlot(){
+    public SlotType[] prefferedSlot() {
         return new SlotType[]{
                 SlotType.LARGE
         };
     }
-}
+        @Override
+        public int hourlyRate(){
+            return 30;
+        }
+    }
