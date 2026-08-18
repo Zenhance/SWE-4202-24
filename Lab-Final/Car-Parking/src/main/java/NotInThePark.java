@@ -1,5 +1,5 @@
 public abstract class NotInThePark extends Exception {
-    protected NoSlotException(String plate) {
+    protected NotInThePark(String plate) {
         super(plate);
     }
 }
