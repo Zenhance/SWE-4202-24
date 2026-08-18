@@ -14,12 +14,29 @@ public class Main {
             String command = field[0];
 
             if (command.equals("END")) {
-                break;
+                break; }
+                else if (command.equals("SLOTS")) {
+                    int bike = Integer.parseInt(field[1]);
+                    int regular = Integer.parseInt(field[2]);
+                    int large = Integer.parseInt(field[3]);
+                    lot.setSlots(bike, regular, large);
             } else if (command.equals("MAXSTAY")) {
                 int hours = Integer.parseInt(field[1]);
                 // ... do something with hours ...
-            } else if (field[0].equals("COUNT")) {
+            } else if (command.equals("COUNT")) {
                 System.out.println(/* the number you worked out */);
+            }
+                else if(command.equals("PASSTIME"){
+
+            }
+
+            else if(command.equals("LEAVE")){
+
+
+            }
+
+            else if(command.equals("TRUCK")){
+
             }
             // ... one branch per keyword ...
         }
