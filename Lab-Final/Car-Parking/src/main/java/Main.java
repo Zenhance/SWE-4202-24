@@ -21,4 +21,16 @@ public class Main {
             }
         }
     }
+
+    public static void createSlots(ArrayList<Slot> list, int bike, int regular, int large) {
+        for (int i = 0; i < bike; i++) {
+            list.add(new BikeSlot());
+        }
+        for (int i = 0; i < regular; i++) {
+            list.add(new RegularSlot());
+        }
+        for (int i = 0; i < large; i++) {
+            list.add(new LargeSlot());
+        }
+    }
 }
