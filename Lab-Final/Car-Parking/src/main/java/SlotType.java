@@ -1,7 +1,7 @@
 public enum SlotType {
     BIKE(10,5,0),
-    CAR(30,20,15),
-    TRUCK(50,40,25);
+    REGULAR(30,20,15),
+    LARGE(50,40,25);
     private int firstHour;
     private int furtherHour;
     private int surcharge;
