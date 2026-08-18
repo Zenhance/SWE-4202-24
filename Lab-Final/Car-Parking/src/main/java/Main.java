@@ -10,6 +10,11 @@ public class Main {
             if (line.isEmpty()){
                 continue;
             }
+            String[] field = line.split("\\s+");
+            String command = field[0];
+            if (command.equals("END")){
+                break;
+            }
         }
 
     }
