@@ -1,4 +1,4 @@
-public class Truck class Truck extends Vehicle {
+public class Truck extends Vehicle {
 
     public Truck(String plate, String scheme) {
         super(plate, scheme);
