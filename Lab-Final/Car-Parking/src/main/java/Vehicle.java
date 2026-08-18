@@ -1,9 +1,13 @@
 public class Vehicle
 {
-
     public enum Category
     {
         BIKE, CAR, TRUCK
+    }
+
+    public enum DiscountScheme
+    {
+        NONE, STUDENT, WEEKEND
     }
 
     private String numberPlate;
