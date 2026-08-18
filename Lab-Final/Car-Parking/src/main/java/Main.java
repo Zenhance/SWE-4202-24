@@ -26,7 +26,9 @@ public class Main {
 
                 lot.setMaxStay(hours);
             } else if (command.equals("COUNT")) {
-                System.out.println(/* the number you worked out */);
+                System.out.println(lot.parkedCount());
+
+
             }
                 else if(command.equals("PASSTIME"){
 
@@ -38,6 +40,7 @@ public class Main {
             }
 
             else if(command.equals("TRUCK")){
+
 
             }
             // ... one branch per keyword ...
