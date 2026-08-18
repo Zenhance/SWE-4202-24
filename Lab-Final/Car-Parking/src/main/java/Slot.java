@@ -20,4 +20,18 @@ public abstract class Slot {
         }
 
     }
+
+    public abstract int calculateFee();
+
+    public void timeSpent(int hours) {
+        this.hours += hours;
+    }
+
+    public void setSurchargeApplied(boolean diffVehicle) {
+        this.surchargeApplied = diffVehicle;
+    }
+
+    public String getLicense() {
+        return license;
+    }
 }
