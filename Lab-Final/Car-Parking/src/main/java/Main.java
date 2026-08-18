@@ -166,6 +166,12 @@ public class Main {
                     System.out.println(largeCap - largeOcc);
                 }
 
+            } else if (field[0].equals("EARNED")) {
+                System.out.println(totalEarned);
+            }
+
+            else if (field[0].equals("REFUSED")) {
+                System.out.println(refused);
             }
 
         }
