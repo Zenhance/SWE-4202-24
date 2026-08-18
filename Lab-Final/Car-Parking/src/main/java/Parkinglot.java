@@ -63,6 +63,12 @@ public class Parkinglot {
     }
 
 
+    private void setRegularFree(){
+
+        }
+    }
+
+
 
 
 
