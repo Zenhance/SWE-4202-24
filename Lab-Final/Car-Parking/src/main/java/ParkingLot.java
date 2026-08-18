@@ -80,6 +80,34 @@ public class ParkingLot {
     public int getRefused() {
         return refused;
     }
+    private int calculateBill(Vehicle vehicle) {
+        int firstHourFee;
+        int extraHourFee;
+        if (vehicle.getAssignedSlot().equals("BIKE")) {
+            firstHourFee = 10;
+            extraHourFee = 5;
+        } else if (vehicle.getAssignedSlot().equals("REGULAR")) {
+            firstHourFee = 30;
+            extraHourFee = 20;
+        } else {
+            firstHourFee = 50;
+            extraHourFee = 40;
+        }
+        if (vehicle.isOversized()) {
+            firstHourFee = firstHourFee * 3 / 2;
+        }
+        int stayedHours = currentTime - vehicle.getEntryTime();
+        int bill = firstHourFee;
+        if (stayedHours > 1) {
+            bill += (stayedHours - 1) * extraHourFee;
+        }
+        if (vehicle.getPass().equals("STUDENT")) {
+            bill = bill * 80 / 100;
+        } else if (vehicle.getPass().equals("WEEKEND")) {
+            bill -= firstHourFee;
+        }
+        return bill;
+    }
     public Integer getBill(String registration) {
         Vehicle vehicle = findVehicle(registration);
         if (vehicle == null) {
@@ -87,6 +115,7 @@ public class ParkingLot {
         }
         return calculateBill(vehicle);
     }
+
 
 }
 
