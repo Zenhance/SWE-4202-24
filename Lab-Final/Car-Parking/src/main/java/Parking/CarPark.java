@@ -1,14 +1,15 @@
 package Parking;
 
 import Slot.Slot;
+import Slot.SlotType;
+
 import Vehicle.Vehicle;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class CarPark {
     private ArrayList<Slot> slots;
-    private HashMap<String, Vehicle> vehicles;
+    private ArrayList<Vehicle> vehicles;
 
     private int maxStay;
     private int currentTime;
@@ -27,10 +28,25 @@ public class CarPark {
         }
         this.slots=slots;
         this.maxStay=maxStay;
+        this.vehicles=new ArrayList<>();
 
         this.currentTime=0;
         this.earned=0;
         this.refused=0;
 
     }
+
+    private Slot findAvailableSlot(Vehicle vehicle){
+        SlotType[] acceptedTypes = vehicle.getAcceptedSlotTypes();
+        for(SlotType type: acceptedTypes){
+            for(Slot slot: slots){
+                if(slot.getType()== type && slot.isFree()){
+                    return slot;
+                }
+            }
+        }
+
+        return null;
+    }
+
 }
