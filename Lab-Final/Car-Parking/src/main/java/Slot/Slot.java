@@ -33,6 +33,12 @@ public class Slot {
         this.vehicle=vehicle;
     }
 
+    public Vehicle removeVehicle(){
+        Vehicle removed=vehicle;
+        vehicle=null;
+        return removed;
+    }
+
 
 
 
