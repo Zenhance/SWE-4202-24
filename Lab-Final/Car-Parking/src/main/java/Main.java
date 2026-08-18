@@ -27,7 +27,7 @@ public class Main {
                 ParkingLot p = new ParkingLot(bike, regular, large);
             }
             else if (field[0].equals("SLOT")) {
-                Vehicle v = Vehicle.search(field[1]);
+                Vehicle v = ParkingLot.search(field[1]);
                     if (v != null) {
                         //Slot s = new Slot(v);
                     }

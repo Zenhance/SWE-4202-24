@@ -1,15 +1,28 @@
 import java.util.ArrayList;
 
 public class ParkingLot {
+    int maxBikeSlot;
+    int maxRegularSlot;
+    int maxLargeSlot;
+
     int bikeSlot;
     int regularSlot;
     int largeSlot;
-    static ArrayList<Vehicle> vehicles = new ArrayList<>();
 
-    public ParkingLot(int bikeSlot, int regularSlot, int largeSlot) {
-        this.bikeSlot = bikeSlot;
-        this.regularSlot = regularSlot;
-        this.largeSlot = largeSlot;
+
+    static ArrayList<Vehicle> vehicles = new ArrayList<>();
+    static ArrayList<Vehicle> bikes = new ArrayList<>();
+    static ArrayList<Vehicle> regulars = new ArrayList<>();
+    static ArrayList<Vehicle> larges = new ArrayList<>();
+
+    public ParkingLot(int maxBikeSlot, int maxRegularSlot, int maxLargeSlot) {
+        this.maxBikeSlot = maxBikeSlot;
+        this.maxRegularSlot = maxRegularSlot;
+        this.maxLargeSlot = maxLargeSlot;
+
+        this.bikeSlot = maxBikeSlot;
+        this.regularSlot = maxRegularSlot;
+        this.largeSlot = maxLargeSlot;
     }
 
     public void enterVehicle(Vehicle v){
@@ -24,7 +37,20 @@ public class ParkingLot {
     }
 
     public void slotVehicle (String number){
+        Vehicle v = search(number);
+        if(v != null){
+            Bike bike;
+            Car car;
+            Truck truck;
 
+            if(v instanceof Bike){
+                bike = (Bike)v;
+                if(bikeSlot < maxBikeSlot) bikes.add(bike);
+
+            }
+        }
     }
+
+
 
 }
