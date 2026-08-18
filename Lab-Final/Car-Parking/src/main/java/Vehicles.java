@@ -5,11 +5,8 @@ public class Vehicles {
     String plate;
     String slot;
     String scheme;
-    Boolean evict=false;
-    int time=1;
-    int fee(){
-        int fee=fee+(time-1)*fee;
-    }
+    int time=0;
+
     public Vehicles(String plate) {
         this.plate = plate;
     }
