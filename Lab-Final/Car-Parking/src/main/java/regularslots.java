@@ -1,9 +1,9 @@
-public class regularslots extends Slot implements Surcharge{
+public class regularslots  implements Surcharge{
     private static final int firsthour_fee=30;
     private static final int furtherhour_fee=20;
-    @Override
-    public long fee() {
-        return 0;
+
+    public long fee(int h,int bill) {
+        return firsthour_fee+(h-1)*furtherhour_fee+bill;
     }
 
     @Override
