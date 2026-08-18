@@ -4,7 +4,6 @@ public abstract class Slot {
     private int laterFee;
     private int surcharge;
 
-
     public Slot() {
         this.isFree = true;
     }
@@ -37,5 +36,9 @@ public abstract class Slot {
 
     public int getSurcharge() {
         return surcharge;
+    }
+
+    public int totalCharge() {
+        return getFirstHourFee() + getLaterFee() + getSurcharge();
     }
 }
