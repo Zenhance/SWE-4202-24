@@ -1,3 +1,3 @@
-public enum spotType {
+public enum slotType {
     BIKE, REGULAR, LARGE;
 }
