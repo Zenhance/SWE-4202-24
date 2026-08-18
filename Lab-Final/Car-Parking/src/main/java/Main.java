@@ -74,5 +74,10 @@ public class Main {
     static String parkVehicle(String plate){
         int i = indexOf(plate);
         String type = types.get(i);
+        if(type.equals("BIKE")){
+            if (freeBike > 0) { freeBike--; parkedIn.set(i, "BIKE"); return "BIKE"; }
+            if (freeRegular > 0) { freeRegular--; parkedIn.set(i, "REGULAR"); return "REGULAR"; }
+            if (freeLarge > 0) { freeLarge--; parkedIn.set(i, "LARGE"); return "LARGE"; }
+        }
     }
 }
