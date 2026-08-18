@@ -178,5 +178,14 @@ public class Main {
         int i = indexOf(plate);
         if (i == -1 || parkedIn.get(i).equals("")) return;
         totalEarned += billFor(plate);
+        String category = parkedIn.get(i);
+        if (category.equals("BIKE")){
+            freeBike++;
+        } else if (category.equals("REGULAR")) {
+            freeRegular++;
+        } else {
+            freeLarge++;
+        }
+        }
     }
-}
+
