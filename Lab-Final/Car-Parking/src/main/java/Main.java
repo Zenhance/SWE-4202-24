@@ -48,6 +48,8 @@ public class Main {
 
             }else if (firstWord.equals("COUNT")) {
 
+            }else if(firstWord.equals("REFUSED")){
+                System.out.println(refusedCount);
             }
 
 
