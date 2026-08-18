@@ -10,6 +10,6 @@ public class TRUCK extends Vehicle{
         };
     }
     public int hourlyRate(){
-        return 50;
+        return 40;
     }
 }
