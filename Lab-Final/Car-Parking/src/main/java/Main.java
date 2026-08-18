@@ -1,7 +1,5 @@
 import java.util.Scanner;
-
 public class Main {
-
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         ParkingLot parkingLot = new ParkingLot();
@@ -53,15 +51,29 @@ public class Main {
             }
             else if (command.equals("BILL")) {
                 Integer bill = parkingLot.getBill(field[1]);
-
-
-
-
-
-
-
-
+                if (bill == null){
+                    System.out.println("NONE");
+                }else {
+                    System.out.println(bill);
+                }
+            }
+            else if (command.equals("PASSTIME")) {
+                int hours = Integer.parseInt(field[1]);
+                parkingLot.passTime(hours);
+            }
+            else if (command.equals("LEAVE")) {
+                parkingLot.leave(field[1]);
+            }
+            else if (command.equals("EARNED")) {
+                System.out.println(parkingLot.getEarned());
+            }
         }
-
     }
 }
+
+
+
+
+
+
+
