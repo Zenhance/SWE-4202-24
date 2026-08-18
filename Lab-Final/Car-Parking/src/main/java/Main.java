@@ -185,6 +185,11 @@ public class Main {
 
                 System.out.println(v.slotType);
             }
+            else if (field[0].equals("LEAVE")) {
+                Vehicle v = findVehicle(parkedVehicles, field[1]);
+
+                parkedVehicles.remove(v);
+            }
 
 
         }
