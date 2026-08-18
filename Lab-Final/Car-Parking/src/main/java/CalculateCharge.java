@@ -11,7 +11,7 @@ public class CalculateCharge {
     private final int largeSurcharge = 25;
 
 
-    public int bill (Vehicle v, String slot) {
+    public int baseBill (Vehicle v, String slot) {
         int base = 0;
         if (slot.equals("LARGE")) {
             base += largeBase;
@@ -29,4 +29,6 @@ public class CalculateCharge {
         }
         return base;
     }
+
+    //public int discount()
 }
