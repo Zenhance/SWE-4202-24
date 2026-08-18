@@ -28,4 +28,8 @@ public class VehicleManagement {
     public int countVehicles(){
         return vehicles.size();
     }
+
+    public List<Vehicle> getVehicles(){
+        return vehicles;
+    }
 }
