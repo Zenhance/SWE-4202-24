@@ -8,9 +8,7 @@ public class ParkingLot{
     private int refused = 0;
     private int earned = 0;
     private final ArrayList<Vehicle> parkedVehicles = new ArrayList<>();
-
     public void setSlots(int bikeSlots, int regularSlots, int largeSlots) {
-
         freeBike = bikeSlots;
         freeRegular = regularSlots;
         freeLarge = largeSlots;
@@ -55,16 +53,23 @@ public class ParkingLot{
         parkedVehicles.add(vehicle);
     }
     public String getSlot(String registration) {
-
         Vehicle vehicle = findVehicle(registration);
-
-
         if (vehicle == null) {
-
             return "NONE";
         }
-
-
         return vehicle.getAssignedSlot();
     }
+    public int getFreeSlots(String slot){
+        if (slot.equals("BIKE")) {
+            return freeBike;
+        }
+        else if (slot.equals("REGULAR")){
+            return freeRegular;
+        }
+        else{
+            return freeLarge;
+        }
+    }
+
+
 
