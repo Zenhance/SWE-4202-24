@@ -1,4 +1,7 @@
+import java.util.ArrayList;
+
 public abstract class Vehicle {
+    public ArrayList<ParkingSlot> Slots= new ArrayList<>();
     private String registration,pass;
     private String assignedSlot;
     private int entryTime;
@@ -15,12 +18,6 @@ public abstract class Vehicle {
         return discount;
     }
     public abstract String getKind();
-    public String getRegistration() {
-        return registration;
-    }
-    public String getPass() {
-        return pass;
-    }
     public String getAssignedSlot() {
         return assignedSlot;
     }
