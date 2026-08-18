@@ -135,6 +135,11 @@ public class Parkinglot {
         if (v == null) {
             return null;
         }
+        int hoursParked =time - v.getTime();
+        int fee = calculateFee(v, hoursParked);
+        totalEarned = totalEarned + fee;
+        returnOneSlot(v.getKeptslot());
+        return fee;}
 
 
 
