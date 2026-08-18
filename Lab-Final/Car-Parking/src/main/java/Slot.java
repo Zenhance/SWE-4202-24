@@ -1,10 +1,10 @@
 package src.main.java;
 
-public class Slots {
+public class Slot {
     Vehicle vehicle;
     SlotType type;
 
-    public Slots(SlotType type){
+    public Slot(SlotType type){
         this.type=type;
          vehicle = null;
     }
