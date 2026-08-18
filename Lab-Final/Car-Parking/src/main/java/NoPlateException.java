@@ -1,5 +1,5 @@
-public class NoPlateException {
-    public NoPlateException(String message){
-        super(message);
+public class NoPlateException extends Exception{
+    public NoPlateException(){
+        super("No plate");
     }
 }
