@@ -1,5 +1,5 @@
 public class LargeSlot extends Slot{
-    public LargeSlot(String slotNumber) {
+    public LargeSlot(int slotNumber) {
         super(slotNumber);
     }
 }

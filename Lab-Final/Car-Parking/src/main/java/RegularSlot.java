@@ -1,5 +1,5 @@
 public class RegularSlot extends Slot {
-    RegularSlot(String slotNumber) {
+    RegularSlot(int slotNumber) {
         super(slotNumber);
     }
 }
