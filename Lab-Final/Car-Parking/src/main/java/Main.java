@@ -62,8 +62,13 @@ public class Main {
             }
 
 
-
             }
 
+    }
+    static int indexOf(String plate) {
+        for (int i = 0; i < plates.size(); i++) {
+            if (plates.get(i).equals(plate)) return i;
+        }
+        return -1;
     }
 }
