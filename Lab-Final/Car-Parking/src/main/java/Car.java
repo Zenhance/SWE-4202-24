@@ -1,10 +1,7 @@
 import java.util.List;
 
 public final class Car extends Vehicle {
-    public Car(
-            String plate,
-            DiscountScheme discount
-    ) {
+    public Car(String plate, DiscountScheme discount) {
         super(plate, discount);
     }
 
