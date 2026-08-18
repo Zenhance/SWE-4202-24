@@ -11,10 +11,11 @@ public class Main {
                 continue;
             }
             String[] field = line.split(" ");
+            String command = field[0];
 
-            if (field[0].equals("END")) {
+            if (command.equals("END")) {
                 break;
-            } else if (field[0].equals("MAXSTAY")) {
+            } else if (command.equals("MAXSTAY")) {
                 int hours = Integer.parseInt(field[1]);
                 // ... do something with hours ...
             } else if (field[0].equals("COUNT")) {
