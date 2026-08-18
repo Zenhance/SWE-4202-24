@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -13,11 +14,24 @@ public class Main {
 
             if (field[0].equals("END")) {
                 break;
-            } else if (field[0].equals("MAXSTAY")) {
-                int hours = Integer.parseInt(field[1]);
-                // ... do something with hours ...
-            } else if (field[0].equals("COUNT")) {
-                System.out.println(/* the number you worked out */);
+            }
+            ArrayList<Slot> slots = new ArrayList<>();
+            ArrayList<Vehicle> vehicles = new ArrayList<>();
+            switch (field[0]) {
+                case "SLOTS" -> {
+                    int bike = Integer.parseInt(field[1]);
+                    int regular = Integer.parseInt(field[2]);
+                    int large = Integer.parseInt(field[3]);
+                    createSlots(slots, bike, regular, large);
+                }
+                case "MAXSTAY" -> {
+                    int hours = Integer.parseInt(field[1]);
+                    Vehicle.setMaxTimeStay(hours);
+                }
+                case "COUNT" -> {
+
+                    System.out.println(/* the number you worked out */);
+                }
             }
         }
     }
