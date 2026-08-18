@@ -1,4 +1,4 @@
-public class NoSlotAvailableException extends Exception{
+public class NoSlotAvailableException extends ParkingException{
     public NoSlotAvailableException(){
         super("");
     }

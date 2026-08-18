@@ -34,10 +34,20 @@ public class CarPark {
         if (kind == SlotKind.REGULAR) return regularOccupied;
         return largeOccupied;
     }
-    public void enter(Vehicle vehicle) throws ParkingException {
+    public void enter(Vehicle vehicle) throws ParkingException, {
         if (vehicle.plate.equals("")) {
             throw new NoPlateException();
         }
+        for (SlotKind kind : vehicle.acceptOrder()) {
+            if (occupiedOf(kind) < capacityOf(kind)) {
+                changeOccupied(kind, 1);
+                vehicle.slot = kind;
+                vehicles.put(vehicle.plate, vehicle);
+                return;
+            }
+            throw new NoSlotAvailableException();
+        }
+
 }
     public void leave(String plate) throws ParkingException {
         Vehicle vehicle = vehicles.get(plate);
@@ -45,4 +55,16 @@ public class CarPark {
             throw new UnknownPlateException();
         }
 }
+    private void changeOccupied(SlotKind kind, int delta){
+        if(kind == SlotKind.BIKE){
+            bikeOccupied+=delta;
+        }
+        else if(kind == SlotKind.REGULAR){
+            regularOccupied+=delta;
+        }
+        else{
+            largeOccupied+=delta;
+        }
+    }
+
 }
