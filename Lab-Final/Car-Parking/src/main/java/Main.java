@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -13,12 +14,45 @@ public class Main {
 
             if (field[0].equals("END")) {
                 break;
-            } else if (field[0].equals("MAXSTAY")) {
-                int hours = Integer.parseInt(field[1]);
-                // ... do something with hours ...
-            } else if (field[0].equals("COUNT")) {
-                System.out.println(/* the number you worked out */);
             }
+            ArrayList<Slot> slots = new ArrayList<>();
+            ArrayList<Vehicle> vehicles = new ArrayList<>();
+            switch (field[0]) {
+                case "SLOTS" -> {
+                    int bike = Integer.parseInt(field[1]);
+                    int regular = Integer.parseInt(field[2]);
+                    int large = Integer.parseInt(field[3]);
+                    createSlots(slots, bike, regular, large);
+                }
+                case "MAXSTAY" -> {
+                    int hours = Integer.parseInt(field[1]);
+                    Vehicle.setMaxTimeStay(hours);
+                }
+                case "BIKE" -> {
+                    vehicles.add(new Motorcycle(field[1]));
+                }
+                case "CAR" -> {
+                    vehicles.add(new Car(field[1]));
+                }
+                case "TRUCK" -> {
+                    vehicles.add(new Truck(field[1]));
+                }
+                case "COUNT" -> {
+                    System.out.println(/* the number you worked out */);
+                }
+            }
+        }
+    }
+
+    public static void createSlots(ArrayList<Slot> list, int bike, int regular, int large) {
+        for (int i = 0; i < bike; i++) {
+            list.add(new BikeSlot());
+        }
+        for (int i = 0; i < regular; i++) {
+            list.add(new RegularSlot());
+        }
+        for (int i = 0; i < large; i++) {
+            list.add(new LargeSlot());
         }
     }
 }
