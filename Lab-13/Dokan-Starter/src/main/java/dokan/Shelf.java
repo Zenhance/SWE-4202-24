@@ -36,6 +36,9 @@ private final int capacity;
 
     public Shelf(int capacity)
     {
+        if(capacity<1){
+            throw new IllegalArgumentException("capacity must be atleast 1");
+        }
         this.capacity=capacity;
         this.items=new ArrayList<>();
     }

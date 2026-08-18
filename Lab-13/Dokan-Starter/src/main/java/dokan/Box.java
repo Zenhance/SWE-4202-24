@@ -33,7 +33,7 @@ public final class Box<T> {
      */
     public static <T> Box<T> of(T value) {
         if (value == null) {
-            throw new IllegalArgumentException("value cannot be null");
+            throw new NullPointerException("value cannot be null");
         }
         return new Box<>(value);
     }
