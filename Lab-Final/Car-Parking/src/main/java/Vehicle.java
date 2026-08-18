@@ -28,7 +28,14 @@ public abstract class Vehicle {
     public int getHoursStood() {
         return hoursStood;
     }
+    public void addHours(int hours){
+        hoursStood+=hours;
+    }
     public SlotType getCurrentSlot(){
         return currentSlot;
+    }
+
+    public void setCurrentSlot(SlotType currentSlot) {
+        this.currentSlot = currentSlot;
     }
 }
