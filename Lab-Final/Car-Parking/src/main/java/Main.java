@@ -5,4 +5,10 @@ public class Main {
                 Scanner input = new Scanner(System.in);
                 Parkinglot lot = new Parkinglot();
     }
+    while(input.hasNextLine()){
+        String line = input.nextLine().trim();
+        if (line.isEmpty()) {
+            continue;
+        }
+    }
 }
