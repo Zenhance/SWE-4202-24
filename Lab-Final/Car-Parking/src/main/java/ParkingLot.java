@@ -19,4 +19,30 @@ public class ParkingLot {
         };
     }
 
+    private Vehicle findVehicle(String plate) {
+        for (Vehicle v : activeVehicles) {
+            if (v.getPlate().equals(plate)) {
+                return v;
+            }
+        }
+        return null;
+    }
+
+    public void setupSlots(int bikeCount, int regCount, int largeCount){
+        for (int i = 0; i < bikeCount; i++){
+            bikeSlots.add(new Slot(SlotKind.BIKE, 10, 5, 0));
+        }
+
+        for (int i = 0; i < regCount; i++){
+            regularSlots.add(new Slot(SlotKind.REGULAR, 30, 20, 15));
+        }
+
+        for (int i = 0; i < largeCount; i++){
+            largeSlots.add(new Slot(SlotKind.LARGE, 50, 40, 25));
+        }
+    }
+
+
+
+
 }
