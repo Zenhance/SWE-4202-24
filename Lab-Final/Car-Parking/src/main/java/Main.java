@@ -71,4 +71,8 @@ public class Main {
         }
         return -1;
     }
+    static String parkVehicle(String plate){
+        int i = indexOf(plate);
+        String type = types.get(i);
+    }
 }
