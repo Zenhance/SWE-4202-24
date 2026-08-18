@@ -7,7 +7,7 @@ public class Slot {
     public Slot(SlotType slot, VehicleType vehicle, boolean isOccupied, String  regName){
         this.slot=slot;
         this.vehicle=vehicle;
-        this.isOccupied=False;
+        this.isOccupied=false;
         this.regName=regName;
     }
 
