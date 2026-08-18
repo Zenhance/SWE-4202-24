@@ -4,7 +4,7 @@ public abstract class Vehicle {
     SlotKind slot;
     final Scheme scheme;
 
-    Vehicle(String platte) {
+    Vehicle(String plate,Scheme scheme) {
         this.plate = plate;
         this.hoursStood = 0;
         this.scheme = scheme;
