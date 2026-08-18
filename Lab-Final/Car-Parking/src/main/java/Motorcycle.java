@@ -1,7 +1,7 @@
 import java.util.List;
 
 public class Motorcycle extends Vehicle {
-    protected Motorcycle(String plate) {
+    public Motorcycle(String plate) {
         super(plate);
     }
 
