@@ -29,10 +29,7 @@ public class Parkinglot {
     }
 
 
-
-
-
-
-
-
+    public void setBikeFree(int bikeFree) {
+        this.bikeFree = bikeFree;
+    }
 }
