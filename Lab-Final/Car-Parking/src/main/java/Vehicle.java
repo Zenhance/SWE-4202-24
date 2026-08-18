@@ -55,4 +55,14 @@ public class Vehicle {
     }
 
 
+    public int calculateEvictionBill(int maxStay) {
+        int rawBill = assignedSlot.calculateRawBill(this, maxStay);
+
+        int removalHours = (maxStay + 9) / 10;
+        rawBill += removalHours * assignedSlot.getNextHourRate();
+
+        return discountScheme.applyDiscount(rawBill);
+    }
+
+
 }
