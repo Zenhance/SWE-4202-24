@@ -8,24 +8,26 @@ public class Parkinglot {
     private int bikeFree;
     private int regularFree;
     private int largeFree;
-    private HashMap<String,Vehicle>parkedVehicles = new HashMap<>();
+    private HashMap<String, Vehicle> parkedVehicles = new HashMap<>();
     private int maxStayhrs;
-    private int time=0;
-    private int refusedCount=0;
-    private int totalEarned=0;
+    private int time = 0;
+    private int refusedCount = 0;
+    private int totalEarned = 0;
 
-    public void setSlots(int bike,int regular,int large){
-        bikeTotal=bike;
-        regularTotal=regular;
-        largeTotal=large;
-        regularFree=regular;
-        largeFree=large;
+    public void setSlots(int bike, int regular, int large) {
+        bikeTotal = bike;
+        regularTotal = regular;
+        largeTotal = large;
+        regularFree = regular;
+        largeFree = large;
     }
-    public void setMaxStay(int hrs){
-        maxStayhrs=hrs;
+
+    public void setMaxStay(int hrs) {
+        maxStayhrs = hrs;
     }
-    public void advanceTime(int hrs){
-        time+=hrs;
+
+    public void advanceTime(int hrs) {
+        time += hrs;
     }
 
 
@@ -38,3 +40,22 @@ public class Parkinglot {
             return largeFree;
         }
     }
+
+    private void takeOneSlot(slotType type) {
+        if (type == slotType.BIKE) {
+            bikeFree = bikeFree - 1;
+        } else if (type == slotType.REGULAR) {
+            regularFree = regularFree - 1;
+        } else {
+            largeFree = largeFree - 1;
+        }
+    }
+
+
+
+
+
+
+}
+
+
