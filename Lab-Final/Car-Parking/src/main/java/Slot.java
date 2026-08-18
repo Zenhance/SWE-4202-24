@@ -33,6 +33,10 @@ public abstract class Slot {
         this.surchargeApplied = diffVehicle;
     }
 
+    public boolean isSurchargeApplied() {
+        return surchargeApplied;
+    }
+
     public String getLicense() {
         return license;
     }
