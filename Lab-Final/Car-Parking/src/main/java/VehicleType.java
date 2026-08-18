@@ -1,5 +1,5 @@
 public enum VehicleType {
-    TRUCk,
+    TRUCK,
     CAR,
     BIKE
 }

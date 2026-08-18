@@ -1,7 +1,7 @@
 import java.util.List;
 
-public class Motorcycle extends Vehicle {
-    public Motorcycle(String plate,DiscountScheme discountScheme) {
+public class Bike extends Vehicle {
+    public Bike(String plate, DiscountScheme discountScheme) {
         super(plate,discountScheme);
     }
 
