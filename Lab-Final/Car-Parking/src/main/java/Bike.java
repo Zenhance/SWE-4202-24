@@ -8,8 +8,17 @@ public class Bike extends Slot{
     }
 
     @Override
-    public int fee() {
-        return 0;
+    public int calculatefee() {
+        int fee = 10 + hours*5;
+
+        if(surchargeApplicable){
+            fee += 0;
+        }
+        fee = feeAfterSurchage(fee);
+
+        earning(fee);
+
+        return fee;
     }
 
     public int getBikeCount(){

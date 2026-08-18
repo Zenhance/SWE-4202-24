@@ -1,14 +1,12 @@
+import static java.lang.Math.max;
+
 public abstract class Slot {
 
-    private static int MAXSTAY;
-    private int hours;
-    private static int count = 0;
-    public static int refused = 0;
-    public static int earned = 0;
+    protected int hours;
 
-    String license;
-    boolean StudentScheme = false;
-    boolean WeekendScheme = false;
+    protected String license;
+    protected boolean StudentScheme = false;
+    protected boolean WeekendScheme = false;
 
     public Slot(String license, String Scheme){
         hours = 1;
@@ -26,7 +24,16 @@ public abstract class Slot {
         count++;
     }
 
-    public abstract int fee();
+    private static int MAXSTAY;
+    private static int count = 0;
+    protected static int refused = 0;
+    protected static int earned = 0;
+    protected boolean surchargeApplicable = false;
+
+
+
+
+    public abstract int calculatefee();
 
     public void refused(){
         refused++;
@@ -38,5 +45,29 @@ public abstract class Slot {
 
     public static void setMAXSTAY(int hours){
         MAXSTAY = hours;
+    }
+
+    public void surcharge(boolean isHoldingDiffVehicle){
+        surchargeApplicable = true;
+    }
+
+    protected int feeAfterSurchage(int fee){
+        if (StudentScheme){
+            fee = fee - (20*fee/100);
+        }
+
+        else if (WeekendScheme){
+            fee = max(0, fee-10);
+        }
+
+        return fee;
+    }
+
+    public void earning(int fee){
+        earned += fee;
+    }
+
+    public int getEarned(){
+        return earned;
     }
 }
