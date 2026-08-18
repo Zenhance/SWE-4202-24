@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        // just a comment to commit "SOLUTION DONE"
         Scanner input = new Scanner(System.in);
         ParkingLot parkingLot = null;
         Bike bike = null;
