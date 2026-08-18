@@ -20,6 +20,7 @@ public class Fee {
         } else if (vehicle.scheme.equals("WEEKEND")) {
             fee = max(0, fee - 10);
         }
+
         return fee;
     }
 }
