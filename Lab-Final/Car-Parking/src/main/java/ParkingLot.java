@@ -31,7 +31,7 @@ public class ParkingLot {
 
     public void setupSlots(int bikeCount, int regCount, int largeCount){
         for (int i = 0; i < bikeCount; i++){
-            bikeSlots.add(new Slot(SlotKind.BIKE, 10, 5, 0));
+            bikeSlots.add(new Slot(SlotKind.BIKE, 15, 15, 15));
         }
 
         for (int i = 0; i < regCount; i++){
@@ -84,6 +84,49 @@ public class ParkingLot {
             totalEarned += v.calculateEvictionBill(maxStay);
             getSlotList(v.getAssignedSlot().getKind()).add(v.getAssignedSlot());
         }
+    }
+
+    public void leaveVehicle(String plate) throws ParkRefusalException {
+        Vehicle v = findVehicle(plate);
+        if (v == null) {
+            throw new VehicleNotFoundException();
+        }
+
+        activeVehicles.remove(v);
+        totalEarned += v.calculateCurrentBill();
+        getSlotList(v.getAssignedSlot().getKind()).add(v.getAssignedSlot());
+    }
+
+    public String getBill(String plate) {
+        Vehicle v = findVehicle(plate);
+        if (v == null) return "NONE";
+        return String.valueOf(v.calculateCurrentBill());
+    }
+
+    public String getSlotKind(String plate) {
+        Vehicle v = findVehicle(plate);
+        if (v == null) return "NONE";
+        return v.getAssignedSlot().getKind().name();
+    }
+
+    public int getFreeCount(SlotKind kind) {
+        return getSlotList(kind).size();
+    }
+
+    public int getActiveCount() {
+        return activeVehicles.size();
+    }
+
+    public int getTotalEarned() {
+        return totalEarned;
+    }
+
+    public int getTotalRefused() {
+        return totalRefused;
+    }
+
+    public void incrementRefused() {
+        totalRefused++;
     }
 
 
