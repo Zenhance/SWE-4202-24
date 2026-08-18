@@ -23,6 +23,9 @@ public abstract class Vehicle {
     public int getEntryTime(){
         return entryTime;
     }
+    public void setEntryTime(int entryTime) {
+        this.entryTime = entryTime;
+    }
 
 
 
