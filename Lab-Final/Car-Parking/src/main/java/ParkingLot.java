@@ -55,66 +55,63 @@ public class ParkingLot {
                 }
             }
         }
-            if (chosen == null) {
-                throw new NoSlotException();
-            }
-            chosen.vehicle = v;
-            v.slot = chosen;
-
-            vehicles.add(v);
+        if (chosen == null) {
+            throw new NoSlotException();
         }
-        public int getFirstRate(SlotType type){
-        if(type == SlotType.BIKE){
+        chosen.vehicle = v;
+        v.slot = chosen;
+
+        vehicles.add(v);
+    }
+
+    public int getFirstRate(SlotType type) {
+        if (type == SlotType.BIKE) {
             return 10;
-        }
-        else if(type == SlotType.REGULAR){
+        } else if (type == SlotType.REGULAR) {
+            return 30;
+        } else {
             return 30;
         }
-        else{
-            return 30;
-        }
-        }
+    }
 
-        public int getFurthrRate(SlotType type){
-        if(type == SlotType.BIKE){
+    public int getFurthrRate(SlotType type) {
+        if (type == SlotType.BIKE) {
             return 5;
-        }
-        else if(type == SlotType.REGULAR){
+        } else if (type == SlotType.REGULAR) {
             return 20;
-        }
-        else{
+        } else {
             return 40;
         }
+    }
+
+    public int getSurcharge(SlotType type) {
+        if (type == SlotType.BIKE) {
+            return 0;
+        } else if (type == SlotType.REGULAR) {
+            return 15;
+        } else {
+            return 25;
         }
-        public int getSurcharge(SlotType type){
-            if(type == SlotType.BIKE){
-                return 0;
-            }
-            else if(type == SlotType.REGULAR){
-                return 15;
-            }
-            else{
-                return 25;
-            }
-        }
-        public int calculateBill(Vehicle v, boolean eviction){
+    }
+
+    public int calculateBill(Vehicle v, boolean eviction) {
         SlotType type = v.slot.type;
-        int h= v.hours;
+        int h = v.hours;
 
-        if(eviction){
-            h=maxStay;
+        if (eviction) {
+            h = maxStay;
         }
 
-        int bill= getFirstRate(type);
-        if(h>1){
-            bill = bill+(h-1)*getFurthrRate(type);
+        int bill = getFirstRate(type);
+        if (h > 1) {
+            bill = bill + (h - 1) * getFurthrRate(type);
         }
 
         SlotType ownType = v.getWantedSlots()[0];
-        if(type!=ownType){
-            bill = bill+getSurcharge(type);
+        if (type != ownType) {
+            bill = bill + getSurcharge(type);
         }
-        if(eviction) {
+        if (eviction) {
             int removalHours = maxStay / 10;
             if (maxStay % 10 != 0) {
                 removalHours++;
@@ -123,51 +120,59 @@ public class ParkingLot {
         }
         bill = v.discount.getDiscountedBill(bill);
         return bill;
-        }
+    }
 
-        public int bill(String plate) throws NotFoundException{
+    public int bill(String plate) throws NotFoundException {
         Vehicle v = findVehicle(plate);
-        if(v==null){
+        if (v == null) {
             throw new NotFoundException();
         }
-        return calculateBill(v,false);
-        }
+        return calculateBill(v, false);
+    }
 
-        public String getSlot(String plate) throws NotFoundException{
+    public String getSlot(String plate) throws NotFoundException {
         Vehicle v = findVehicle(plate);
-        if(v== null){
+        if (v == null) {
             throw new NotFoundException();
         }
         return v.slot.type.toString();
-        }
+    }
 
-        public void leave(String plate) throws NotFoundException{
+    public void leave(String plate) throws NotFoundException {
         Vehicle v = findVehicle(plate);
-        if(v==null){
+        if (v == null) {
             throw new NotFoundException();
         }
-        earned = earned + calculateBill(v,false);
+        earned = earned + calculateBill(v, false);
         v.slot.vehicle = null;
         vehicles.remove(v);
-        }
+    }
 
-        public void passTime(int h){
-        for(int i=0; i< vehicles.size(); i++){
-            vehicles.get(i).hours = vehicles.get(i).hours+h;
+    public void passTime(int h) {
+        for (int i = 0; i < vehicles.size(); i++) {
+            vehicles.get(i).hours = vehicles.get(i).hours + h;
         }
         ArrayList<Vehicle> removeList = new ArrayList<Vehicle>();
-        for(int i=0; i< vehicles.size(); i++){
+        for (int i = 0; i < vehicles.size(); i++) {
             Vehicle v = vehicles.get(i);
-            if(v.hours>=maxStay){
-                earned = earned + calculateBill(v.true);
+            if (v.hours >= maxStay) {
+                earned = earned + calculateBill(v. true);
                 v.slot.vehicle = null;
                 removeList.add(v);
             }
         }
-        for(int i=0; i<removeList.size(); i++){
+        for (int i = 0; i < removeList.size(); i++) {
             vehicles.remove(removeList.get(i));
         }
-        }
-
     }
 
+    public int freeSlots(SlotType type) {
+        int count = 0;
+        for (int i = 0; i < slots.size(); i++) {
+            if (slots.get(i).type == type && slots.get(i).isFree()) {
+                count++;
+            }
+        }
+        return count;
+    }
+}
