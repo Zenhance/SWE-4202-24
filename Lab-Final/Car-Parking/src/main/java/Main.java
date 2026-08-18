@@ -10,5 +10,7 @@ public class Main {
         if (line.isEmpty()) {
             continue;
         }
+        String[] field = line.split(" ");
+        String command = field[0];
     }
 }
