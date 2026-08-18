@@ -23,11 +23,9 @@ public class Main {
 
             else if (field[0].equals("SLOTS")) {
 
-                park = new CarPark(
-                        Integer.parseInt(field[1]),
+                park = new CarPark(Integer.parseInt(field[1]),
                         Integer.parseInt(field[2]),
-                        Integer.parseInt(field[3])
-                );
+                        Integer.parseInt(field[3]));
             }
 
             else if (field[0].equals("MAXSTAY")) {
