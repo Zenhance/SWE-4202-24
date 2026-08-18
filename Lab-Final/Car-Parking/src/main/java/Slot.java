@@ -1,9 +1,7 @@
 public abstract class Slot {
-    private final int count;
     private boolean isFree;
 
-    public Slot(int count) {
-        this.count = count;
+    public Slot() {
         this.isFree = true;
     }
 }
