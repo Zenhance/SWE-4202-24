@@ -84,9 +84,9 @@ public class Main {
                     }
                 }
                 case "LEAVE" -> {
-                    boolean vehicleInPark = false;
-                    int leavingCarIndex = 0;
-                    for (int i = 0; i < vehicles.size(); i++) {
+                    try {
+                        int leavingCarIndex = isVehicleInPark(vehicles, field[2]);
+                        vehicles.remove(leavingCarIndex);
 
                         if (vehicles.get(i).getPlate().equals(field[2])) {
                             vehicleInPark = true;
