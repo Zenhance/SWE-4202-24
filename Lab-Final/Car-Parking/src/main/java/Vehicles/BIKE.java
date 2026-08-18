@@ -1,9 +1,7 @@
 package Vehicles;
-import Refusals.NoPlateException;
 import Refusals.NoSpaceAvailableException;
 import Slots.*;
-import Records.*;
-import Slots.slotCount;
+
 
 import static Records.slotCount.Count;
 import static Records.slotCount.RefuseCount;
@@ -11,16 +9,20 @@ import static Records.slotCount.RefuseCount;
 public class BIKE implements Discountable{
     String numPlate;
     String scheme;
-    if(bikeCount()>0){
-        Bike slot = new Bike();
+    public BIKE(String numPlate,String scheme){
+        this.numPlate=numPlate;
+        this.scheme=scheme;
+    }
+    if(){
+        Bike slot = new Bike(numPlate);
         Count();
     }
-    else if(regularCount()>0){
-        Regular slot=new Regular();
+    else if(){
+        Regular slot=new Regular(numPlate);
         Count();
     }
-    else if(largeCount()>0){
-        Large slot=new Large();
+    else if(){
+        Large slot=new Large(numPlate);
         Count();
     }
     else{

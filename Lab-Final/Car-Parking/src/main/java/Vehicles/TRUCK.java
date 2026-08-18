@@ -7,8 +7,12 @@ import static Records.slotCount.RefuseCount;
 public class TRUCK implements Discountable{
     String numPlate;
     String scheme;
+    public TRUCK(String numPlate,String scheme){
+        this.numPlate=numPlate;
+        this.scheme=scheme;
+    }
     if(){
-        Large slot=new Large();
+        Large slot=new Large(numPlate);
         Count();
     }
     else{

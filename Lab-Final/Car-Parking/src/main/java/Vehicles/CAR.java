@@ -8,12 +8,16 @@ import static Records.slotCount.RefuseCount;
 public class CAR implements Discountable{
     String numPlate;
     String scheme;
+    public CAR(String numPlate,String scheme){
+        this.numPlate=numPlate;
+        this.scheme=scheme;
+    }
     if(){
-        Regular slot=new Regular();
+        Regular slot=new Regular(numPlate);
         Count();
     }
     else if(){
-        Large slot=new Large();
+        Large slot=new Large(numPlate);
         Count();
     }
     else{
