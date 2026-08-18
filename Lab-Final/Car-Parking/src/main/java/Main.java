@@ -14,7 +14,7 @@ public class Main {
 
 
         Scanner input = new Scanner(System.in);
-        while (input.hasNextLine()) {
+        while (!end && input.hasNextLine()) {
             String line = input.nextLine().trim();
             if (line.isEmpty()) {
                 continue;
@@ -24,9 +24,16 @@ public class Main {
 
             switch(field[0]){
                 case "END":
+                    end=true;
                     break;
 
 
+                case "SLOTS":
+                    Bike.setBikeSlot(Integer.parseInt(field[1]));
+
+                    Regular.setRegularSlot(Integer.parseInt(field[2]));
+
+                    Truck.setTruckSlot(Integer.parseInt(field[3]));
 
                 case "MAXSTAY":
                     int hours = Integer.parseInt(field[1]);
@@ -36,6 +43,7 @@ public class Main {
                 case "BIKE":
                     if (Bike.getBikeSlot() > 0){
                         vehicles.add(new Bike(field[1], field[2]));
+
                     }
                     else if (Regular.getRegularSlot() > 0){
                         vehicles.add(new Regular(field[1], field[2]));
@@ -105,13 +113,13 @@ public class Main {
                     for (Slot v : vehicles) {
                         if (v.getNumPlate().equals(field[1])) {
                             if (v instanceof Bike){
-                                System.out.println("BIKE");
+                                vehicleType="Bike";
                             }
                             else if (v instanceof Regular){
-                                System.out.println("REGULAR");
+                                vehicleType="Regular";
                             }
                             else {
-                                System.out.println("LARGE");
+                            vehicleType="Large";
                             }
 
                             break;

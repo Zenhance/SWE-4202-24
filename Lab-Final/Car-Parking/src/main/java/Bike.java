@@ -8,11 +8,12 @@ public class Bike extends Slot{
 
 
 
-    Bike(String numPlate) {
-        super(numPlate);
-        bikeSlot++;
 
+
+    public static void setBikeSlot(int bikeSlot) {
+        Bike.bikeSlot = bikeSlot;
     }
+
     @Override
     protected void fee() {
         int x=10+5*PASSTIME;

@@ -8,10 +8,12 @@ public class Truck extends Slot{
 
 
 
-    Truck(String numPlate) {
-        super(numPlate);
-truckSlot++;
+
+
+    public static void setTruckSlot(int truckSlot) {
+        Truck.truckSlot = truckSlot;
     }
+
     @Override
     protected void fee() {
         int x=50+40*PASSTIME;

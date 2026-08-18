@@ -8,11 +8,11 @@ public class Regular extends Slot{
         super(numPlate, Scheme);
         regularSlot++;
     }
-    Regular(String numPlate) {
-        super(numPlate);
-        regularSlot++;
-    }
 
+
+    public static void setRegularSlot(int regularSlot) {
+        Regular.regularSlot = regularSlot;
+    }
 
     @Override
     protected void fee() {

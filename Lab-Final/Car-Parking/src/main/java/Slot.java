@@ -17,9 +17,7 @@ public abstract class Slot {
 
 
 
-    Slot(String numPlate){
-        this.numPlate=numPlate;
-    }
+
     Slot(String numPlate, String Scheme){
         this.numPlate=numPlate;
         this.Scheme=Scheme;
