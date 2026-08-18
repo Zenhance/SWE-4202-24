@@ -133,5 +133,14 @@ public class ParkingLot {
         return calculateBill(v,false);
         }
 
+        public String getSlot(String plate) throws NotFoundException{
+        Vehicle v = findVehicle(plate);
+        if(v== null){
+            throw new NotFoundException();
+        }
+        return v.slot.type.toString();
+        }
+
+
     }
 
