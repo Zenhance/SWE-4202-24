@@ -1,56 +1,61 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public final class CarPark {
+private final List<Slot> slots = new ArrayList<>();
+
+
+    private int maximumStay;
+    private int earned;
     private int refused;
 
-    public CarPark(
-            int bikeSlots,
-            int regularSlots,
-            int largeSlots
+    public CarPark(int bikeSlots, int regularSlots, int largeSlots
     ) {
+        addSlots(SlotKind.BIKE, bikeSlots);
+        addSlots(SlotKind.REGULAR, regularSlots);
+        addSlots(SlotKind.LARGE, largeSlots);
+    }
+
+    private void addSlots(SlotKind kind, int count) {
+        for (int i = 0; i < count; i++) {
+            slots.add(new Slot(kind));
+        }
     }
 
     public void setMaximumStay(int maximumStay) {
+        this.maximumStay = maximumStay;
     }
 
     public void admit(Vehicle vehicle)
-            throws ParkingException {
-    }
+        throws ParkingException{
+        if(vehicle.plate()==null||vehicle.plate().isBlank()||vehicle.plate().equals("-")){
+            throw new MissingPlateException();
+        }
+            for(SlotKind acceptedKind:vehicle.acceptedSlots()){
 
-    public void passTime(int hours) {
-    }
+            for (Slot slot : slots) {
+                if (slot.kind() == acceptedKind
+                        && slot.isFree()) {
 
-    public void leave(String plate)
+                    slot.park(vehicle);
+                    return;
+                }
+            }
+        }
+throw new NoAvailableSlotException();
+    }
+    private Slot findVehicle(String plate)
             throws VehicleNotFoundException {
-    }
 
-    public int bill(String plate)
-            throws VehicleNotFoundException {
+        for (Slot slot : slots) {
+            if (!slot.isFree()
+                    && slot.vehicle()
+                    .plate().equals(plate)) {
 
-        return 0;
-    }
+                return slot;
+            }
+        }
 
-    public SlotKind slotOf(String plate)
-            throws VehicleNotFoundException {
-
-        return null;
-    }
-
-    public int freeSlots(SlotKind kind) {
-        return 0;
-    }
-
-    public int vehicleCount() {
-        return 0;
-    }
-
-    public int earned() {
-        return 0;
-    }
-
-    public int refused() {
-        return refused;
-    }
-
-    public void recordRefusal() {
-        refused++;
+        throw new VehicleNotFoundException();
     }
 }
