@@ -23,6 +23,6 @@ public abstract class Vehicle {
         this.keptSlot=slot;
         this.entryTime=getTime;
     }
-    public abstract SlotType[] slotpreference();
+    public abstract SlotType[] slotPreference();
     public abstract int hourlyRate();
 }
