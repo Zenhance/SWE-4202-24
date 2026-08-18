@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3eee41f1-9cc5-426c-b742-937113d94276" name="Changes" comment="initial commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dokan/Shelf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dokan/Shelf.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,39 +84,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Dokan-Starter [:checks.DokanCases.main()].executor": "Run",
-    "Gradle.Dokan-Starter [:intern.InternDemo.main()].executor": "Run",
-    "Gradle.Dokan-Starter [assemble].executor": "Run",
-    "Gradle.Dokan-Starter [cases].executor": "Run",
-    "Gradle.Dokan-Starter [dependencies].executor": "Run",
-    "Gradle.Dokan-Starter [intern].executor": "Run",
-    "Gradle.Dokan-Starter [run].executor": "Run",
-    "Gradle.Dokan-Starter [strict].executor": "Run",
-    "Gradle.DokanTest.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "53-fatema",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/User/Documents/SWE-4202-24/Lab-13/Dokan-Starter",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Dokan-Starter [:checks.DokanCases.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Dokan-Starter [:intern.InternDemo.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Dokan-Starter [assemble].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Dokan-Starter [cases].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Dokan-Starter [dependencies].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Dokan-Starter [intern].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Dokan-Starter [run].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Dokan-Starter [strict].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.DokanTest.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;53-fatema&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Documents/SWE-4202-24/Lab-13/Dokan-Starter&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Gradle.DokanTest">
-    <configuration name="DokanCases" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="checks.DokanCases" />
+    <configuration name="InternDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="intern.InternDemo" />
       <module name="Dokan-Starter.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="checks.*" />
+          <option name="PATTERN" value="intern.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -230,8 +231,8 @@
         <item itemvalue="Gradle.DokanTest" />
         <item itemvalue="Gradle.Dokan-Starter [cases]" />
         <item itemvalue="Gradle.Dokan-Starter [strict]" />
+        <item itemvalue="Application.InternDemo" />
         <item itemvalue="Gradle.Dokan-Starter [run]" />
-        <item itemvalue="Application.DokanCases" />
       </list>
     </recent_temporary>
   </component>
@@ -259,7 +260,15 @@
       <option name="project" value="LOCAL" />
       <updated>1786428614032</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1786429770374</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1786429770374</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,11 +285,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/intern/InternDemo.java</url>
           <line>11</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/dokan/Pair.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/build.gradle</url>
