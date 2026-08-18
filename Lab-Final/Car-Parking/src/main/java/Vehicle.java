@@ -1,11 +1,17 @@
-public class Vehicle {
-    public final VehicleKind kind;
+public abstract class Vehicle {
+    public final String plate;
+    public int hoursStood;
     public final SlotKind slot;
-    public final int parkedAt;
+    public final Scheme scheme;
 
-    Vehicle(VehicleKind kind, SlotKind slot, int parkedAt){
-        this.kind=kind;
+    Vehicle(String plate, int hoursStood,SlotKind slot,Scheme scheme){
+        this.plate=plate;
+        this.hoursStood=hoursStood;
         this.slot=slot;
-        this.parkedAt=parkedAt;
+        this.scheme=scheme;
+    }
+    abstract SlotKind[] acceptOrder();
+    SlotKind ownKind(){
+        return acceptOrder()[0];
     }
 }
