@@ -6,7 +6,7 @@ import Slot.SlotType;
 public abstract class Vehicle {
     private final String numberPlate;
     private final DiscountScheme discountScheme;
-    private   int entryTime;
+    private int entryTime;
 
     public Vehicle(String numberPlate, DiscountScheme discountScheme){
         if(numberPlate==null ){
