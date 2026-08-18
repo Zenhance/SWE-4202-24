@@ -7,7 +7,7 @@ public class Slot {
     }
 
     public boolean isFree() {
-        return false;
+        return parkedVehicle == null;
     }
 
     public SlotKind getKind() {
@@ -19,17 +19,6 @@ public class Slot {
     }
 
     public void setParkedVehicle(Vehicle vehicle) {
-    }
-
-    public int firstHourFee() {
-        return 0;
-    }
-
-    public int furtherHourFee() {
-        return 0;
-    }
-
-    public int surcharge() {
-        return 0;
+        this.parkedVehicle = vehicle;
     }
 }
