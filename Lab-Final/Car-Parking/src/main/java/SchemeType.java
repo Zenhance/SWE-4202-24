@@ -1,3 +1,3 @@
 public enum SchemeType {
-    NOdiscount, Student, Weekend;
+    None, Student, Weekend;
 }
