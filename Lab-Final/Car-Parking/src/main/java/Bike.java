@@ -3,8 +3,8 @@ public class Bike extends Vehicle {
         super(plate, discount);
     }
 
-}
-@Override
-   String[] getAcceptedslots(){
-    return new String[]{"BIKE", "REGULAR", "LARGE"};
+    @Override
+    String[] getAcceptedSlots() {
+        return new String[]{"BIKE", "REGULAR", "LARGE"};
+    }
 }

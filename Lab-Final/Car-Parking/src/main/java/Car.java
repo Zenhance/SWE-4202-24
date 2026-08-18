@@ -1,11 +1,12 @@
-public class Car extends Vehicle{
+public class Car extends Vehicle {
     public Car(String plate, String discount) {
-            super(plate, discount);
-        }
-
+        super(plate, discount);
     }
+
     @Override
-    String[] getAcceptedslots() {
+    String[] getAcceptedSlots() {
         return new String[]{"REGULAR", "LARGE"};
     }
+}
+
 
