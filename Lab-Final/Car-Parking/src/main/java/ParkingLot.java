@@ -12,10 +12,16 @@ public class ParkingLot {
 
     int time = 0;
     int maxStay;
-    int earned = 0;
-    int refused = 0;
+    private int earned = 0;
+    private int refused = 0;
+    public int getEarned() {
+        return earned;
+    }
+    public int getRefused() {
+        return refused;
+    }
 
-    ParkingLot(int bike, int regular, int large) {
+    public ParkingLot(int bike, int regular, int large) {
         for(int i = 0; i < bike; i++) {
             slots.add(new Slot("BIKE"));
         }
@@ -27,7 +33,10 @@ public class ParkingLot {
         }
     }
 
-    void setMaxStay(int maxStay) {
+    public void setMaxStay(int maxStay) {
+        if(maxStay<=0){
+            throw new IllegalArgumentException();
+        }
         this.maxStay = maxStay;
     }
 
@@ -44,10 +53,15 @@ public class ParkingLot {
 
     public void arrive(Vehicle vehicle) throws ParkingException {
         if(findVehicle(vehicle.getLicencePlate()) != null) {
+            throw new IllegalStateException();
+        }
+        if(vehicle.getLicencePlate().equals("-")){
+            //refused++;
             throw new ParkingException();
         }
         Slot slot = findFreeSlot(vehicle);
         if(slot == null){
+            //refused++;
             throw new SlotFullException();
         }
         slot.park(vehicle);
@@ -55,7 +69,7 @@ public class ParkingLot {
         vehicle.setEntryTime(time);
     }
 
-    public Vehicle findVehicle(String plate){
+    Vehicle findVehicle(String plate){
         for(Vehicle v: vehicles){
             if(v.getLicencePlate().equals(plate)){
                 return v;
@@ -63,7 +77,7 @@ public class ParkingLot {
         }
         return null;
     }
-    public Slot findSlot(String plate){
+    Slot findSlot(String plate){
         for(Slot s: slots){
             if(!s.free() && s.getVehicle().getLicencePlate().equals(plate)){
                 return s;
@@ -113,7 +127,51 @@ public class ParkingLot {
         vehicles.remove(v);
     }
 
-    public int free(String type){
+    public void evict(String plate) throws ParkingException {
+        Vehicle v = findVehicle(plate);
+        if(v == null){
+            throw new ParkingException();
+        }
+        Slot s = findSlot(plate);
+        //earned += *eviction bill calc*
+        earned += bill(plate);
+        s.remove();
+        vehicles.remove(v);
+    }
 
+    public int free(String type){
+        int count = 0;
+        for(Slot s: slots){
+            if(s.getType().equals(type)&&s.free()){
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public void passtime(int hours) throws ParkingException {
+        time += hours;
+        /*ArrayList<Vehicle> removed = new ArrayList<>();
+
+        for(Vehicle v: vehicles){
+            if(time - v.getEntryTime()>maxStay){
+                evict(v.getLicencePlate());
+                removed.add(v);
+            }
+        }*/
+    }
+
+    public int count(){
+        int count = 0;
+        for(Slot s: slots){
+            if(s.free()){
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public void refusedCount(){
+        refused++;
     }
 }
