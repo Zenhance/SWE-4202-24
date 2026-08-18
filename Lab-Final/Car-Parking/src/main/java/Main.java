@@ -41,7 +41,6 @@ public class Main {
         }
 
         int calculateBill(int currentHour, int maxStay) {
-            int totalHour = currentHour - entryHour;
 
             int firstHourFee = switch (slotType) {
                 case BIKE -> 10;
@@ -61,7 +60,7 @@ public class Main {
                 case LARGE -> 15;
             };
 
-            int totalFee = firstHourFee + (totalHour - 1)*furtherHourFee + surcharge;
+            int totalFee = firstHourFee + ((currentHour - 1)*furtherHourFee) + surcharge;
 
             double discount = switch (discountType) {
                 case NONE -> 0;
@@ -166,10 +165,10 @@ public class Main {
             } else if (field[0].equals("FREE")) {
                 SlotType st = SlotType.valueOf(field[1]);
 
-                if (st==SlotType.BIKE) System.out.println(bikeCap - bikeOcc);
-                else if (st == SlotType.REGULAR) {
+                if (st.equals(SlotType.BIKE)) System.out.println(bikeCap - bikeOcc);
+                else if (st.equals(SlotType.REGULAR)) {
                     System.out.println(regCap - regOcc);
-                } else if (st == SlotType.LARGE) {
+                } else if (st.equals(SlotType.LARGE)) {
                     System.out.println(largeCap - largeOcc);
                 }
 
