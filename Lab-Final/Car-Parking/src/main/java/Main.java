@@ -1,3 +1,4 @@
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -39,7 +40,7 @@ public class Main {
             this.entryHour = entryHour;
         }
 
-        int calculateBill(int currentHour) {
+        int calculateBill(int currentHour, int maxStay) {
             int totalHour = currentHour - entryHour;
 
             int firstHourFee = switch (slotType) {
@@ -94,7 +95,6 @@ public class Main {
 
         Scanner input = new Scanner(System.in);
 
-        label:
         while (input.hasNextLine()) {
             String line = input.nextLine().trim();
             if (line.isEmpty()) {
@@ -102,105 +102,101 @@ public class Main {
             }
             String[] field = line.split(" ");
 
-            switch (field[0]) {
-                case "END":
-                    break label;
+            if (field[0].equals("END")) {
+                break;
 
-                case "SLOTS":
-                    bikeCap = Integer.parseInt(field[1]);
-                    regCap = Integer.parseInt(field[2]);
-                    largeCap = Integer.parseInt(field[3]);
-                    break;
-                case "MAXSTAY":
-                    maxStay = Integer.parseInt(field[1]);
+            } else if (field[0].equals("SLOTS")) {
+                bikeCap = Integer.parseInt(field[1]);
+                regCap = Integer.parseInt(field[2]);
+                largeCap = Integer.parseInt(field[3]);
+            }
 
-                    break;
-                case "COUNT":
-                    System.out.println(parkedVehicles.size());
+            else if (field[0].equals("MAXSTAY")) {
+                maxStay = Integer.parseInt(field[1]);
 
-                    break;
-                case "BIKE", "CAR", "REGULAR":
+            } else if (field[0].equals("COUNT")) {
+                System.out.println(parkedVehicles.size());
 
-                    VehicleType vType = VehicleType.valueOf(field[0]);
-                    String numPlate = field[1];
-                    DiscountType discountType = DiscountType.valueOf(field[2]);
+            } else if (field[0].equals("BIKE") || field[0].equals("CAR") || field[0].equals("REGULAR")) {
 
-                    SlotType assigned = null;
+                VehicleType vType = VehicleType.valueOf(field[0]);
+                String numPlate = field[1];
+                DiscountType discountType = DiscountType.valueOf(field[2]);
 
-                    if (vType == VehicleType.BIKE) {
-                        if (bikeOcc < bikeCap) {
-                            assigned = SlotType.BIKE;
-                            bikeOcc++;
-                        } else if (regOcc < regCap) {
-                            assigned = SlotType.REGULAR;
-                            regOcc++;
+                SlotType assigned = null;
 
-                        } else if (largeOcc < largeCap) {
-                            assigned = SlotType.LARGE;
-                            largeOcc++;
-                        }
-                    } else if (vType == VehicleType.CAR) {
-                        if (regOcc < regCap) {
-                            assigned = SlotType.REGULAR;
-                            regOcc++;
-                        } else if (largeOcc < largeCap) {
-                            assigned = SlotType.REGULAR;
-                            largeOcc++;
-                        }
-                    } else if (vType == VehicleType.TRUCK) {
-                        if (largeOcc < largeCap) {
-                            assigned = SlotType.LARGE;
-                            largeOcc++;
-                        }
+                if (vType == VehicleType.BIKE) {
+                    if (bikeOcc < bikeCap) {
+                        assigned = SlotType.BIKE;
+                        bikeOcc++;
+                    } else if (regOcc < regCap) {
+                        assigned = SlotType.REGULAR;
+                        regOcc++;
+
+                    } else if (largeOcc < largeCap) {
+                        assigned = SlotType.LARGE;
+                        largeOcc++;
                     }
-
-                    if (assigned != null) {
-                        parkedVehicles.add(new Vehicle(numPlate, vType, assigned, discountType, currentTime));
+                } else if (vType == VehicleType.CAR) {
+                    if (regOcc < regCap) {
+                        assigned = SlotType.REGULAR;
+                        regOcc++;
+                    } else if (largeOcc < largeCap) {
+                        assigned = SlotType.REGULAR;
+                        largeOcc++;
                     }
-
-                    break;
-                case "FREE":
-                    SlotType st = SlotType.valueOf(field[1]);
-
-                    if (st == SlotType.BIKE) System.out.println(bikeCap - bikeOcc);
-                    else if (st == SlotType.REGULAR) {
-                        System.out.println(regCap - regOcc);
-                    } else if (st == SlotType.LARGE) {
-                        System.out.println(largeCap - largeOcc);
+                } else if (vType == VehicleType.TRUCK) {
+                    if (largeOcc < largeCap) {
+                        assigned = SlotType.LARGE;
+                        largeOcc++;
                     }
-
-                    break;
-                case "EARNED":
-                    System.out.println(totalEarned);
-                    break;
-                case "REFUSED":
-                    System.out.println(refused);
-                    break;
-                case "BILL": {
-                    Vehicle v = findVehicle(parkedVehicles, field[1]);
-
-                    if (v != null) {
-                        System.out.println(v.calculateBill(currentTime));
-                    }
-                    break;
                 }
-                case "SLOT": {
-                    Vehicle v = findVehicle(parkedVehicles, field[1]);
 
-                    System.out.println(v != null ? v.slotType : null);
-                    break;
+                if (assigned != null) {
+                    parkedVehicles.add(new Vehicle(numPlate, vType, assigned, discountType, currentTime ));
+                } else {
+                    refused++;
                 }
-                case "LEAVE": {
-                    Vehicle v = findVehicle(parkedVehicles, field[1]);
 
-                    parkedVehicles.remove(v);
-                    break;
+            } else if (field[0].equals("FREE")) {
+                SlotType st = SlotType.valueOf(field[1]);
+
+                if (st==SlotType.BIKE) System.out.println(bikeCap - bikeOcc);
+                else if (st == SlotType.REGULAR) {
+                    System.out.println(regCap - regOcc);
+                } else if (st == SlotType.LARGE) {
+                    System.out.println(largeCap - largeOcc);
                 }
-                case "PASSTIME":
-                    int passedHour = Integer.parseInt(field[1]);
 
-                    currentTime += passedHour;
-                    break;
+            } else if (field[0].equals("EARNED")) {
+                System.out.println(totalEarned);
+            }
+
+            else if (field[0].equals("REFUSED")) {
+                System.out.println(refused);
+            }
+
+            else if (field[0].equals("BILL")) {
+                Vehicle v = findVehicle(parkedVehicles, field[1]);
+
+                System.out.println(v != null ? v.calculateBill(currentTime, maxStay) : 0);
+            }
+
+            else if (field[0].equals("SLOT")) {
+                Vehicle v = findVehicle(parkedVehicles, field[1]);
+
+                System.out.println(v != null ? v.slotType : null);
+            }
+            else if (field[0].equals("LEAVE")) {
+                Vehicle v = findVehicle(parkedVehicles, field[1]);
+
+                parkedVehicles.remove(v);
+            }
+
+            else if (field[0].equals("PASSTIME")) {
+                int passedHour = Integer.parseInt(field[1]);
+
+                currentTime += passedHour;
             }
 
 
