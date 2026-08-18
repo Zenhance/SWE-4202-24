@@ -1,5 +1,17 @@
-public class Motorcycle extends Vehicle{
-    public Motorcycle(String plate, DiscountScheme discountScheme){
-        super(plate, discountScheme);
+import java.util.List;
+
+public class Motorcycle extends Vehicle {
+    public Motorcycle(String plate, DiscountScheme discount) {
+        super(plate, discount);
+    }
+
+    @Override
+    public SlotKind getHomeSlotKind() {
+        return SlotKind.BIKE;
+    }
+
+    @Override
+    public List<SlotKind> getPreferredSlots() {
+        return List.of(SlotKind.BIKE, SlotKind.REGULAR, SlotKind.LARGE);
     }
 }
