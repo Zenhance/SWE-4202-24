@@ -146,7 +146,7 @@ public class Main {
                         largeOcc++;
                     }
                 } else if (vType == VehicleType.TRUCK) {
-                    if (largeOcc < largeOcc) {
+                    if (largeOcc < largeCap) {
                         assigned = SlotType.LARGE;
                         largeOcc++;
                     }
@@ -189,6 +189,12 @@ public class Main {
                 Vehicle v = findVehicle(parkedVehicles, field[1]);
 
                 parkedVehicles.remove(v);
+            }
+
+            else if (field[0].equals("PASSTIME")) {
+                int passedHour = Integer.parseInt(field[1]);
+
+                currentTime += passedHour;
             }
 
 
