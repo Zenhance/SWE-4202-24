@@ -56,9 +56,7 @@ public abstract class CatalogItem implements Chargeable {
     }
 
     @Override
-    public boolean insurable() {
-        return Chargeable.super.insurable();
-    }
+    public abstract boolean insurable();
 
     @Override
     public int returnDays() {

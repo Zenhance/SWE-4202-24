@@ -20,4 +20,9 @@ public class DigitalGood extends CatalogItem{
     public String label() {
         return "";
     }
+
+    @Override
+    public boolean insurable() {
+        return false;
+    }
 }
