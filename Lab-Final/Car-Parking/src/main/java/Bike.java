@@ -1,0 +1,5 @@
+public class Bike extends Vehicle{
+    public Bike(String plate,Category category){
+        super(plate,category);
+    }
+}
