@@ -52,6 +52,10 @@ public class Main {
                 System.out.println(refusedCount);
             }else if (firstWord.equals("BILL")) {
 
+            }else if (firstWord.equals("PASSTIME")) {
+                int hrs = Integer.parseInt(field[1]);
+
+
             }
 
 
