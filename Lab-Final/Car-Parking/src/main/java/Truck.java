@@ -1,41 +1,43 @@
 import static java.lang.Math.max;
-public class Bike extends Slot{
-    protected int bikeSlot=0;
-    Bike(String numPlate, String Scheme) {
+public class Truck extends Slot{
+    protected int truckSlot=0;
+    Truck(String numPlate, String Scheme) {
         super(numPlate, Scheme);
-        bikeSlot++;
+        truckSlot++;
     }
 
 
 
-    Bike(String numPlate) {
+    Truck(String numPlate) {
         super(numPlate);
-        bikeSlot++;
-
+truckSlot++;
     }
     @Override
     protected void fee() {
-        int x=10+5*PASSTIME;
+        int x=50+40*PASSTIME;
+        if(surchargable){
+            x=x+25;
+        }
         if(student){
             x=x-(20*x/100);
-            bikeBill=x;
+            truckBill=x;
         }
         else if(weekend){
             x=max(0,x-100);
-            bikeBill= x;
+            truckBill= x;
         }
         else {
-            bikeBill= x;
+            truckBill= x;
         }
     }
     public void free(){
-        bikeSlot--;
+        truckSlot--;
         count--;
     }
 
     @Override
     protected void leave() {
-        bikeSlot--;
+        truckSlot--;
         count--;
     }
 
