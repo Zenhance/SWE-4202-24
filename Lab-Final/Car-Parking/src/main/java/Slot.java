@@ -46,5 +46,14 @@ public class Slot {
         };
     }
 
+    public int additionalHoursRate(){
+        return switch(catagory){
+            case BIKE -> 5;
+            case REGULAR -> 20;
+            case LARGE -> 40;
+        };
+
+    }
+
 
 }
