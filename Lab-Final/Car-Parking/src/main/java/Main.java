@@ -28,8 +28,16 @@ public class Main {
                     int hours = Integer.parseInt(field[1]);
                     Vehicle.setMaxTimeStay(hours);
                 }
+                case "BIKE" -> {
+                    vehicles.add(new Motorcycle(field[1]));
+                }
+                case "CAR" -> {
+                    vehicles.add(new Car(field[1]));
+                }
+                case "TRUCK" -> {
+                    vehicles.add(new Truck(field[1]));
+                }
                 case "COUNT" -> {
-
                     System.out.println(/* the number you worked out */);
                 }
             }
