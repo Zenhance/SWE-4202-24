@@ -90,4 +90,24 @@ public class CarParking {
     public void recordRefusal() {
     }
 
+    public boolean vehicleCount() {
+        return false;
+    }
+
+    public boolean earned() {
+        return false;
+    }
+
+    public boolean refused() {
+        return false;
+    }
+    public int freeSlots(SlotKind kind) {
+        int count = 0;
+        for (Slot slot : slots) {
+            if (slot.kind() == kind && slot.isFree()) {
+                count++;
+            }
+        }
+        return count;
+    }
 }

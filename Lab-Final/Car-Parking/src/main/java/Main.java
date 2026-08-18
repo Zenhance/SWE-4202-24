@@ -43,11 +43,6 @@ public class Main {
                 case "SLOT" ->
                         printSlot(park, field[1]);
 
-                case "FREE" ->
-                        System.out.println(
-                                park.freeSlots(SlotKind.valueOf(field[1]))
-                        );
-
                 case "COUNT" ->
                         System.out.println(park.vehicleCount());
 
@@ -56,8 +51,17 @@ public class Main {
 
                 case "REFUSED" ->
                         System.out.println(park.refused());
+                case "FREE" -> System.out.println(park.freeSlots(SlotKind.valueOf(field[1])));
             }
         }
+    }
+
+    private static void printSlot(CarParking park, String s) {
+
+    }
+
+    private static void printBill(CarParking park, String s) {
+
     }
 
     private static void admit(CarParking park, String type, String plate, String schemeName
@@ -87,10 +91,6 @@ public class Main {
             CarParking park,
             String plate
     ) {
-        try {
-            park.leave(plate);
-        } catch (VehicleNotFoundException exception) {
-            park.recordRefusal();
-        }
+        park.leave(plate);
     }
 }
