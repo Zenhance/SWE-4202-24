@@ -29,6 +29,13 @@ public class Main {
             Category category = Category.valueOf(field[2]);
             Vehicle vehicle = new Bike(plate, category);
             lot.register(vehicle);
+        } else if (command.equals("CAR")) {
+            String plate = field[1];
+            Category category = Category.valueOf(field[2]);
+            Vehicle vehicle = new Car(plate, category);
+            lot.register(vehicle);
+
         }
     }
+
 }
