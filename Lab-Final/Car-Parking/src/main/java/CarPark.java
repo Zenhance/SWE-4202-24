@@ -21,4 +21,17 @@ public class CarPark {
     public void setMaxStay(int hours){
         this.maxStay=maxStay;
     }
+    public void countRefusal(){
+        refused++;
+    }
+    public int capacityOf(SlotKind kind){
+        if (kind == SlotKind.BIKE) return bikeCapacity;
+        if (kind == SlotKind.REGULAR) return regularCapacity;
+        return largeCapacity;
+    }
+    public int occupiedOf(SlotKind kind){
+        if (kind == SlotKind.BIKE) return bikeOccupied;
+        if (kind == SlotKind.REGULAR) return regularOccipied;
+        return largeOccupied;
+    }
 }
