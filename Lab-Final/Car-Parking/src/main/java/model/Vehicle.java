@@ -3,29 +3,29 @@ package model;
 import exceptions.InvalidLicensePlateException;
 
 public abstract class Vehicle {
-    private final String kind;
+    private final String type;
     private final String licencePlate;
     private final String permit;
     private boolean isParked;
     private int parkedTime;
 
-    public Vehicle(String kind, String licencePlate, String permit) {
-        if(kind==null || permit==null){
+    public Vehicle(String type, String licencePlate, String permit) {
+        if(type==null || permit==null){
             throw new IllegalArgumentException();
         }
         if(licencePlate==null){
             throw new InvalidLicensePlateException("licencePlate is null");
         }
 
-        this.kind = kind;
+        this.type = type;
         this.licencePlate = licencePlate;
         this.permit = permit;
         this.parkedTime = 0;
         isParked = false;
     }
 
-    public String getKind() {
-        return kind;
+    public String getType() {
+        return type;
     }
     public String getLicencePlate() {
         return licencePlate;
