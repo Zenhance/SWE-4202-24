@@ -5,10 +5,17 @@ public class ParkingLot {
     List<Vehicle> bikeSlots = new ArrayList<>();
     List<Vehicle> regularSlots = new ArrayList<>();
     List<Vehicle> largeSlots = new ArrayList<>();
+
+    int bikeSlotFirst = 10, bikeSlotFurther = 5, bikeSlotSurcharge = 0;
+    int regularSlotFirst = 30, regularSlotFurther = 20, regularSlotSurcharge = 15;
+    int largeSlotFirst = 50, largeSlotFurther = 40, largeSlotSurcharge = 25;
+
     private int maxHours;
     private int bikeCapacity;
     private int regularCapacity;
     private int largeCapacity;
+    int count = 0;
+    int refused = 0;
     public ParkingLot(int bikeCapacity, int regularCapacity, int largeCapacity) {
         this.bikeCapacity = bikeCapacity;
         this.regularCapacity = regularCapacity;
@@ -43,5 +50,47 @@ public class ParkingLot {
 
     public void setLargeCapacity(int largeCapacity) {
         this.largeCapacity = largeCapacity;
+    }
+    public void addBike(Vehicle vehicle){
+        bikeSlots.add(vehicle);
+        bikeCapacity -= 1;
+        count++;
+    }
+    public void addRegular(Vehicle vehicle){
+        regularSlots.add(vehicle);
+        regularCapacity -= 1;
+        count++;
+    }
+    public void addLarge(Vehicle vehicle){
+        largeSlots.add(vehicle);
+        largeCapacity -= 1;
+        count++;
+    }
+    public void leavePlate(String plate){
+        for (Vehicle vehicle : bikeSlots) {
+            if(vehicle.numberPlate.equals(plate)){
+                bikeSlots.remove(vehicle);
+                bikeCapacity += 1;
+                count--;
+                break;
+
+            }
+        }
+        for (Vehicle vehicle : regularSlots) {
+            if(vehicle.numberPlate.equals(plate)){
+                regularSlots.remove(vehicle);
+                regularCapacity += 1;
+                count--;
+                break;
+            }
+        }
+        for (Vehicle vehicle : largeSlots) {
+            if(vehicle.numberPlate.equals(plate)){
+                largeSlots.remove(vehicle);
+                largeCapacity += 1;
+                count--;
+                break;
+            }
+        }
     }
 }
