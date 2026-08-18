@@ -13,8 +13,8 @@ public class Main {
     ArrayList<String> parkedIn = new ArrayList<>();
     ArrayList<Integer> hoursParked = new ArrayList<>();
 
-    int maxStay;
-    int totalEarned = 0;
+    static int maxStay;
+    static int totalEarned = 0;
 
     public static void main(String[] args){
 
@@ -33,7 +33,8 @@ public class Main {
                 freeBike = bikeSlots;
                 freeRegular = regularSlots;
                 freeLarge = largeSlots;
-            }
+            }else if (firstWord.equals("MAXSTAY")) {
+                maxStay = Integer.parseInt(field[1]);
         }
 
     }
