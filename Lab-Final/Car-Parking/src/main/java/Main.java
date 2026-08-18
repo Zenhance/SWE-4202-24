@@ -55,7 +55,10 @@ public class Main {
             }else if (firstWord.equals("PASSTIME")) {
                 int hrs = Integer.parseInt(field[1]);
 
+            }else if(firstWord.equals("LEAVE")){
 
+            }else if (firstWord.equals("EARNED")) {
+                System.out.println(totalEarned);
             }
 
 
