@@ -10,6 +10,18 @@ public class Slot {
         return type;
     }
 
+    public boolean isHomeFor(Vehicle vehicle) {
+        return type == vehicle.getHomeSlotType();
+    }
+
+    public int getSurchargeFor(Vehicle vehicle) {
+        if (isHomeFor(vehicle)) {
+            return 0;
+        }
+
+        return type.getSurcharge();
+    }
+
     public boolean isFree() {
         return vehicle == null;
     }
