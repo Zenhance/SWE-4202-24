@@ -12,6 +12,6 @@ public class Motorcycle extends Vehicle {
 
     @Override
     public List<SlotKind> getPreferredSlots() {
-        return List.of(SlotKind.BIKE, SlotKind.REGULAR, SlotKind.LARGE);
+        return List.of(SlotKind.LARGE, SlotKind.REGULAR, SlotKind.BIKE);
     }
 }
