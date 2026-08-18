@@ -121,8 +121,15 @@ public class Parkinglot {
         if (hours < 1) {
             hours = 1;
         }
+        int fee = v.hourlyRate() * hours;
 
+        if (hours > maxStayhrs) {
+            fee = fee + v.hourlyRate() * (hours - maxStayhrs);
+        }
+        if (v.getCategory() == Category.STUDENT) {
+            fee = fee / 2;
+        }
 
+        return fee;
     }
-
-
+}
