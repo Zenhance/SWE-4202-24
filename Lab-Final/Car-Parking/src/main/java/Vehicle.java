@@ -1,4 +1,3 @@
-package parking;
 public abstract class Vehicle {
     private String registration;
     private String permit;

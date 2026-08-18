@@ -1,4 +1,4 @@
-package parking;
+
 
 public class Truck extends Vehicle {
 
@@ -15,3 +15,4 @@ public class Truck extends Vehicle {
     public boolean canPark(SlotType slotType) {
         return slotType == SlotType.LARGE;
     }
+}

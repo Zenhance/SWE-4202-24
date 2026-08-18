@@ -1,4 +1,4 @@
-package parking ;
+
 public class ParkingSlot{
     private SlotType type;
     private Vehicle vehicle;
