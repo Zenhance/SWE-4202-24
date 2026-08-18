@@ -14,11 +14,9 @@ public class ParkingLot {
         freeRegular = regularSlots;
         freeLarge = largeSlots;
     }
-
     public void setMaxStay(int hours) {
         maxStay = hours;
     }
-
     private boolean isValidRegistration(String registration) {
         return registration.matches("[A-Z]{2}-\\d{2}-\\d{4}");
     }
@@ -31,7 +29,6 @@ public class ParkingLot {
         }
         return null;
     }
-
     public void park(Vehicle vehicle) {
         String registration = vehicle.getRegistration();
         if (!isValidRegistration(registration) || findVehicle(registration) != null) {
@@ -56,7 +53,6 @@ public class ParkingLot {
         vehicle.setOversized(!assignedSlot.equals(preferences[0]));
         parkedVehicles.add(vehicle);
     }
-
     public String getSlot(String registration) {
         Vehicle vehicle = findVehicle(registration);
         if (vehicle == null) {
@@ -64,7 +60,6 @@ public class ParkingLot {
         }
         return vehicle.getAssignedSlot();
     }
-
     public int getFreeSlots(String slot) {
         if (slot.equals("BIKE")) {
             return freeBike;
@@ -74,26 +69,26 @@ public class ParkingLot {
             return freeLarge;
         }
     }
-    public int getCount() {
+    public int getCount(){
         return parkedVehicles.size();
     }
-    public int getRefused() {
+    public int getRefused(){
         return refused;
     }
-    private int calculateBill(Vehicle vehicle) {
+    private int calculateBill(Vehicle vehicle){
         int firstHourFee;
         int extraHourFee;
         if (vehicle.getAssignedSlot().equals("BIKE")) {
             firstHourFee = 10;
             extraHourFee = 5;
-        } else if (vehicle.getAssignedSlot().equals("REGULAR")) {
+        } else if (vehicle.getAssignedSlot().equals("REGULAR")){
             firstHourFee = 30;
             extraHourFee = 20;
-        } else {
+        } else{
             firstHourFee = 50;
             extraHourFee = 40;
         }
-        if (vehicle.isOversized()) {
+        if (vehicle.isOversized()){
             firstHourFee = firstHourFee * 3 / 2;
         }
         int stayedHours = currentTime - vehicle.getEntryTime();
@@ -114,6 +109,42 @@ public class ParkingLot {
             return null;
         }
         return calculateBill(vehicle);
+    }
+    public void leave(String registration) {
+        Vehicle vehicle = findVehicle(registration);
+        if (vehicle == null) {
+            refused++;
+            return;
+        }
+        earned += calculateBill(vehicle);
+        releaseSlot(vehicle.getAssignedSlot());
+        parkedVehicles.remove(vehicle);
+    }
+    public int getEarned() {
+        return earned;
+    }
+    public void passTime(int hours) {
+        currentTime += hours;
+        for (int i = parkedVehicles.size() - 1; i >= 0; i--) {
+            Vehicle vehicle = parkedVehicles.get(i);
+            int stayedHours = currentTime - vehicle.getEntryTime();
+            if (stayedHours > maxStay) {
+                earned += calculateBill(vehicle);
+                releaseSlot(vehicle.getAssignedSlot());
+                parkedVehicles.remove(i);
+            }
+        }
+    }
+    private boolean hasFreeSlot(String slot {
+        if (slot.equals("BIKE")) {
+            return freeBike > 0;
+        }
+        else if (slot.equals("REGULAR")) {
+            return freeRegular > 0;
+        }
+        else {
+            return freeLarge > 0;
+        }
     }
 
 
