@@ -17,8 +17,12 @@ public class Main {
             } else if (field[0].equals("MAXSTAY")) {
                 int hours = Integer.parseInt(field[1]);
                 // ... do something with hours ...
+                Vehicle.maxHours = hours;
             } else if (field[0].equals("COUNT")) {
                 System.out.println(/* the number you worked out */);
+            } else if (field[0].equals("SLOT")) {
+                if(field[2].isBlank())
+
             }
             // ... one branch per keyword ...
 
