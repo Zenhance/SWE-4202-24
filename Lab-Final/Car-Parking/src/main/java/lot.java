@@ -21,22 +21,24 @@ public class lot {
         }
         for (int i = 0; i < lc; i++) {
             slots.add(new Slot(slottype.LARGE));
-        }}
-        public void arrive(vehicles vehicle)throws Parkingexception{
-            if (vehicle.getMeow().equals("-")) {
-                throw new Parkingexception("Invalid");
-            }
-            if (findVehicle(vehicle.getMeow()) != null) {
-                throw new Parkingexception("Duplicote");
-            }
-
-            Slot slot = findFreeSlot(vehicle.getAcceptedSlots());
-
-            if (slot == null) {
-                throw new Parkingexception("No  available");
-            }
-            slot.setVehicle(vehicle);
         }
+    }
+
+    public void arrive(vehicles vehicle) throws Parkingexception {
+        if (vehicle.getMeow().equals("-")) {
+            throw new Parkingexception("Invalid");
+        }
+        if (findVehicle(vehicle.getMeow()) != null) {
+            throw new Parkingexception("Duplicote");
+        }
+
+        Slot slot = findFreeSlot(vehicle.getAcceptedSlots());
+
+        if (slot == null) {
+            throw new Parkingexception("No  available");
+        }
+        slot.setVehicle(vehicle);
+    }
 
     private Slot findVehicle(String meow) {
         for (Slot slot : slots) {
@@ -56,9 +58,7 @@ public class lot {
         return null;
     }
 
-    public int bill(vehicles v , Slot slot , int hours){
-
-    }
+}
 
 
 
