@@ -9,7 +9,7 @@ public class Regular extends Slot{
 
     @Override
     public int calculatefee() {
-        int fee = 30 + (hours-1)*20;
+        int fee = 30 + (hours)*20;
 
         if(surchargeApplicable){
             fee += 15;

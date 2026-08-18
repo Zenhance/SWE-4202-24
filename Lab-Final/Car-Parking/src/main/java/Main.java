@@ -11,6 +11,8 @@ public class Main {
 
         int total = 0;
 
+        int prevpasstime = 1;
+
         while (input.hasNextLine()) {
             String line = input.nextLine().trim();
             if (line.isEmpty()) {
@@ -67,7 +69,8 @@ public class Main {
 
                 case "PASSTIME" -> {
                     for (Slot v : vehicles){
-                        v.passtime(Integer.parseInt(field[1]));
+                        v.passtime(Integer.parseInt(field[1]) - prevpasstime);
+                        prevpasstime = Integer.parseInt(field[1]);
                     }
                 }
 

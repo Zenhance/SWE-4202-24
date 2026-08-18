@@ -9,7 +9,7 @@ public class Bike extends Slot{
 
     @Override
     public int calculatefee() {
-        int fee = 10 + (hours-1)*5;
+        int fee = 10 + (hours)*5;
 
         if(surchargeApplicable){
             fee += 0;

@@ -10,7 +10,7 @@ public class Large extends Slot{
 
     @Override
     public int calculatefee() {
-        int fee = 50 + (hours-1)*40;
+        int fee = 50 + (hours)*40;
 
         if(surchargeApplicable){
             fee += 25;

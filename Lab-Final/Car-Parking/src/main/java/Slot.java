@@ -10,7 +10,6 @@ public abstract class Slot {
     protected boolean WeekendScheme = false;
 
     public Slot(String license, String Scheme, boolean surchargeApplicable){
-        hours = 1;
         this.license = license;
         this.surchargeApplicable = surchargeApplicable;
 
@@ -38,7 +37,7 @@ public abstract class Slot {
     }
 
     public void passtime(int hours){
-        this.hours += hours;
+        this.hours = hours;
     }
 
     public static void setMAXSTAY(int hours){
