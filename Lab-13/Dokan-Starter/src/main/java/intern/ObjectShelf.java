@@ -7,7 +7,7 @@ package intern;
  * about what came back out. Every caller has to cast, and every cast is a promise the
  * compiler cannot check.
  */
-public class ObjectShelf {
+public class ObjectShelf<T> {
 
     private final Object[] slots;
     private int count;
