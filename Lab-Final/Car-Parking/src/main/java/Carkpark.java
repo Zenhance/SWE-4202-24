@@ -76,6 +76,9 @@ public class Carkpark {
         List<Vehicle> toEvict= new ArrayList<>();
         for(Vehicle v: parkedVehicle){
             v.addHours(hours);
+            if(v.getHoursStood()>=maxStay){
+                toEvict.add(v);
+            }
         }
      }
 }
