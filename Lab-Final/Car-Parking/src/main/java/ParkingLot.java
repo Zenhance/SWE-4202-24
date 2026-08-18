@@ -97,6 +97,40 @@ public class ParkingLot {
                 return 25;
             }
         }
+        public int calculateBill(Vehicle v, boolean eviction){
+        SlotType type = v.slot.type;
+        int h= v.hours;
+
+        if(eviction){
+            h=maxStay;
+        }
+
+        int bill= getFirstRate(type);
+        if(h>1){
+            bill = bill+(h-1)*getFurthrRate(type);
+        }
+
+        SlotType ownType = v.getWantedSlots()[0];
+        if(type!=ownType){
+            bill = bill+getSurcharge(type);
+        }
+        if(eviction) {
+            int removalHours = maxStay / 10;
+            if (maxStay % 10 != 0) {
+                removalHours++;
+            }
+            bill = bill + removalHours * getFurthrRate(type);
+        }
+        bill = v.discount.getDiscountedBill(bill);
+        return bill;
+        }
+
+        public int bill(String plate) throws NotFoundException{
+        Vehicle v = findVehicle(plate);
+        if(v==null){
+            throw new NotFoundException();
+        }
+        }
 
     }
 
