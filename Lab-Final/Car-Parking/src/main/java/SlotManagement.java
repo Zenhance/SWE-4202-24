@@ -64,5 +64,33 @@ public class SlotManagement {
         return findFreeSlot(largeSlots);
     }
 
+    public List<Slot> getSlots(Slot.Type type)
+    {
+        if(type==Slot.Type.BIKE)
+        {
+            return bikeSlots;
+        }
+        if(type==Slot.Type.REGULAR)
+        {
+            return regularSlots;
+        }
+        return largeSlots;
+    }
+
+    public int countFreeSlot(Slot.Type type)
+    {
+        List<Slot> slots = getSlots(type);
+        int slotCount=0;
+        for(Slot slot : slots)
+        {
+            if(slot.isFree())
+            {
+                slotCount++;
+            }
+        }
+        return slotCount;
+    }
+
+
 
 }
