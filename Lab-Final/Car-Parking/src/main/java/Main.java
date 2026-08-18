@@ -15,6 +15,12 @@ public class Main {
             if (command.equals("END")){
                 break;
             }
+            if (command.equals("SLOTS")) {
+                int bikeSlots = Integer.parseInt(field[1]);
+                int regularSlots = Integer.parseInt(field[2]);
+                int largeSlots = Integer.parseInt(field[3]);
+                parkingLot.setSlots(bikeSlots, regularSlots, largeSlots);
+            }
         }
 
     }
