@@ -40,14 +40,14 @@ public class Main {
                 plates.add(field[1]);
                 types.add(firstWord);
                 discounts.add(field[2]);
-                parkedIn.add(firstWord);
+                parkedIn.add("");
                 hoursParked.add(0);
             }else if (firstWord.equals("SLOT")) {
                 System.out.println(parkVehicle(field[1]));
             } else if (firstWord.equals("FREE")) {
                 System.out.println(freeSlots(field[1]));
             }else if (firstWord.equals("COUNT")) {
-
+                System.out.println(countParked());
             }else if(firstWord.equals("REFUSED")){
                 System.out.println(refusedCount);
             }else if (firstWord.equals("BILL")) {
@@ -94,5 +94,13 @@ public class Main {
         if (category.equals("BIKE")) return freeBike;
         if (category.equals("REGULAR")) return freeRegular;
         return freeLarge;
+    }
+
+    static int countParked() {
+        int count = 0;
+        for (String p : parkedIn) {
+            if (!p.equals("")) count++;
+        }
+        return count;
     }
 }
