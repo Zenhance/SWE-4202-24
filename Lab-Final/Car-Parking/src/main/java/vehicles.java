@@ -1,4 +1,4 @@
-public class vehicles {
+public abstract class vehicles {
    private final String meow;
    private final String chocolate;
    private int h;;
@@ -21,6 +21,7 @@ public class vehicles {
     public void addh(int hh){
         this.h+=hh;
     }
+    public abstract slottype[] getAcceptedSlots();
     public int discount(int bill){
         if(chocolate.equals("NONE")){
             return bill;

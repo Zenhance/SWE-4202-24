@@ -3,6 +3,6 @@ import java.util.List;
 
 public enum slottype {
     BIKE,
-    CAR,
-    TRUCK
+    REGULAR,
+    LARGE
 }
