@@ -1,25 +1,19 @@
 package Vehicles;
 import Slots.*;
 import Refusals.NoSpaceAvailableException;
-import static Records.slotCount.Count;
-import static Records.slotCount.RefuseCount;
+
+import static Records.slotCount.*;
 
 public class TRUCK implements Discountable{
     String numPlate;
     String scheme;
-    public TRUCK(String numPlate,String scheme){
+    Large slot;
+    public TRUCK(String numPlate,String scheme,Large slot){
         this.numPlate=numPlate;
         this.scheme=scheme;
+        this.slot=slot;
     }
-    if(){
-        Large slot=new Large(numPlate);
-        Count();
-    }
-    else{
-        RefuseCount();
-        throw new NoSpaceAvailableException("No Space is Availabe");
 
-    }
 
     public void setNumPlate(String numPlate) {
         this.numPlate = numPlate;

@@ -1,35 +1,32 @@
 package Vehicles;
+import Records.slotCount;
 import Refusals.NoSpaceAvailableException;
 import Slots.*;
 
-
-import static Records.slotCount.Count;
-import static Records.slotCount.RefuseCount;
+import static Records.slotCount.*;
 
 public class BIKE implements Discountable{
     String numPlate;
     String scheme;
-    public BIKE(String numPlate,String scheme){
+    Regular regularslot;
+    Bike bikeslot;
+    Large largeslot;
+    public BIKE(String numPlate,String scheme,Bike slot){
         this.numPlate=numPlate;
         this.scheme=scheme;
+        this.bikeslot=slot;
     }
-    if(){
-        Bike slot = new Bike(numPlate);
-        Count();
+    public BIKE(String numPlate,String scheme,Regular slot){
+        this.numPlate=numPlate;
+        this.scheme=scheme;
+        this.regularslot=slot;
     }
-    else if(){
-        Regular slot=new Regular(numPlate);
-        Count();
+    public BIKE(String numPlate,String scheme,Large slot){
+        this.numPlate=numPlate;
+        this.scheme=scheme;
+        this.largeslot=slot;
     }
-    else if(){
-        Large slot=new Large(numPlate);
-        Count();
-    }
-    else{
-        RefuseCount();
-        throw new NoSpaceAvailableException("No Space is Availabe");
 
-    }
     public void setNumPlate(String numPlate) {
         this.numPlate = numPlate;
     }
