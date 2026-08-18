@@ -24,6 +24,31 @@ interface DiscountScheme
 }
 
 
+class NoneDiscount implements DiscountScheme
+{
+    public int applyDiscount(int b)
+    {
+        return b;
+    }
+}
+
+class StudentDiscount implements DiscountScheme
+{
+    public int applyDiscount(int b)
+    {
+        return b - (20 * b / 100);
+    }
+}
+
+class WeekendDiscount implements DiscountScheme
+{
+    public int applyDiscount(int b)
+    {
+        return Math.max(0, b - 10);
+    }
+}
+
+
 public class Main {
 
     public static void main(String[] args) {
