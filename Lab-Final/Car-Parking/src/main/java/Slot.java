@@ -30,6 +30,12 @@ public class Slot {
         this.vehicle = vehicle;
     }
 
+    public Vehicle removeVehicle() {
+        Vehicle removedVehicle = vehicle;
+        vehicle = null;
+        return removedVehicle;
+    }
+
     public void passTime(int passedHours) {
         if (vehicle != null) {
             vehicle.addHours(passedHours);
