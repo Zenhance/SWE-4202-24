@@ -13,7 +13,7 @@ public abstract class Vehicle {
     }
 
     public abstract SlotType[] occupiedSlot();
-
+    public abstract int rate();
 
     public String getPlate() {
         return plate;
