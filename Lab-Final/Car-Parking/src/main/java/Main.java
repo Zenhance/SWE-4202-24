@@ -119,9 +119,7 @@ public class Main {
                     System.out.println(parkedVehicles.size());
 
                     break;
-                case "BIKE":
-                case "CAR":
-                case "REGULAR":
+                case "BIKE", "CAR", "REGULAR":
 
                     VehicleType vType = VehicleType.valueOf(field[0]);
                     String numPlate = field[1];
