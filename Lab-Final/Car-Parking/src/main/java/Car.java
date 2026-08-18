@@ -7,6 +7,6 @@ public class Car extends Vehicle {
 
     @Override
     public List<SlotKind> acceptableSlotKinds() {
-        return null;
+        return List.of(SlotKind.REGULAR, SlotKind.LARGE);
     }
 }
