@@ -12,6 +12,6 @@ public class Car extends Vehicle {
     }
     @Override
     public int hourlyRate(){
-        return 20;
+        return 10;
     }
 }

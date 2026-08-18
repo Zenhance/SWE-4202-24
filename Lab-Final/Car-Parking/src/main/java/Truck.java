@@ -10,6 +10,6 @@ public class Truck extends Vehicle{
     }
         @Override
         public int hourlyRate(){
-            return 30;
+            return 15;
         }
     }
