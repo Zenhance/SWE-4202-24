@@ -7,6 +7,6 @@ public class Slot {
         vehicle==null;
     }
     public boolean isFree(){
-        return vehicle=null;
+        return vehicle==null;
     }
 }
