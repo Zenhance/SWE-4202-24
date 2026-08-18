@@ -1,28 +1,37 @@
-public  class Vehicle {
-     private Type type;
-     private Scheme scheme;
-     private int entry;
-     private String plate;
-     Vehicle(Type type,Scheme scheme,int entry,String plate){
-         this.type=type;
-         this.scheme=scheme;
-         this.entry=entry;
-         this.plate=plate;
-     }
 
-    public int getEntry() {
-        return entry;
+import java.util.List;
+
+public abstract class Vehicle {
+    private String numberPlate;
+    private int hoursStayed;
+    private Discount discount;
+    private Slot slot;
+    public Vehicle(String numberPlate,Discount discount){
+        this.numberPlate=numberPlate;
+        this.hoursStayed=0;
+        this.discount=discount;
+        this.slot=slot;
     }
 
-    public Scheme getScheme() {
-        return scheme;
+    public Discount getDiscount() {
+        return discount;
     }
 
-    public String getPlate() {
-        return plate;
+    public String getNumberPlate() {
+        return numberPlate;
     }
 
-    public Type getType() {
-        return type;
+    public int getHoursStayed() {
+        return hoursStayed;
     }
+
+    public Slot getSlot() {
+        return slot;
+    }
+
+    public void addHours(int hours){
+        hoursStayed+=hours;
+    }
+    public abstract List<Slot> acceptanceOrder();
+
 }
