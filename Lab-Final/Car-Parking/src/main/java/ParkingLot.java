@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-public class ParkingLot{
+public class ParkingLot {
     private int freeBike;
     private int freeRegular;
     private int freeLarge;
@@ -8,20 +8,24 @@ public class ParkingLot{
     private int refused = 0;
     private int earned = 0;
     private final ArrayList<Vehicle> parkedVehicles = new ArrayList<>();
+
     public void setSlots(int bikeSlots, int regularSlots, int largeSlots) {
         freeBike = bikeSlots;
         freeRegular = regularSlots;
         freeLarge = largeSlots;
     }
-    public void setMaxStay(int hours){
+
+    public void setMaxStay(int hours) {
         maxStay = hours;
     }
+
     private boolean isValidRegistration(String registration) {
         return registration.matches("[A-Z]{2}-\\d{2}-\\d{4}");
     }
-    private Vehicle findVehicle(String registration){
-        for (Vehicle vehicle : parkedVehicles){
-            if (vehicle.getRegistration().equals(registration)){
+
+    private Vehicle findVehicle(String registration) {
+        for (Vehicle vehicle : parkedVehicles) {
+            if (vehicle.getRegistration().equals(registration)) {
                 return vehicle;
             }
         }
@@ -30,14 +34,14 @@ public class ParkingLot{
 
     public void park(Vehicle vehicle) {
         String registration = vehicle.getRegistration();
-        if (!isValidRegistration(registration) || findVehicle(registration) != null){
+        if (!isValidRegistration(registration) || findVehicle(registration) != null) {
             refused++;
             return;
         }
         String[] preferences = vehicle.getSlotPreferences();
         String assignedSlot = null;
         for (String slot : preferences) {
-            if (hasFreeSlot(slot)){
+            if (hasFreeSlot(slot)) {
                 assignedSlot = slot;
                 takeSlot(slot);
                 break;
@@ -52,6 +56,7 @@ public class ParkingLot{
         vehicle.setOversized(!assignedSlot.equals(preferences[0]));
         parkedVehicles.add(vehicle);
     }
+
     public String getSlot(String registration) {
         Vehicle vehicle = findVehicle(registration);
         if (vehicle == null) {
@@ -59,17 +64,24 @@ public class ParkingLot{
         }
         return vehicle.getAssignedSlot();
     }
-    public int getFreeSlots(String slot){
+
+    public int getFreeSlots(String slot) {
         if (slot.equals("BIKE")) {
             return freeBike;
-        }
-        else if (slot.equals("REGULAR")){
+        } else if (slot.equals("REGULAR")) {
             return freeRegular;
-        }
-        else{
+        } else {
             return freeLarge;
         }
     }
+    public int getCount() {
+        return parkedVehicles.size();
+    }
+    public int getRefused() {
+        return refused;
+    }
+
+
 
 
 
