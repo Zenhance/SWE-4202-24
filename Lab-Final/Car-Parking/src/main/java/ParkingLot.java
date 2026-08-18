@@ -80,6 +80,15 @@ public class ParkingLot {
     public int getRefused() {
         return refused;
     }
+    public Integer getBill(String registration) {
+        Vehicle vehicle = findVehicle(registration);
+        if (vehicle == null) {
+            return null;
+        }
+        return calculateBill(vehicle);
+    }
+
+}
 
 
 
