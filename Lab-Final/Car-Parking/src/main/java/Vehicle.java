@@ -39,4 +39,14 @@ public class Vehicle
     {
         return presentTime-entranceTime;
     }
+
+    public Category getCategory()
+    {
+        return category;
+    }
+
+    public DiscountScheme getScheme()
+    {
+        return scheme;
+    }
 }
