@@ -51,12 +51,17 @@ public class Main {
             } else if (firstWord.equals("REFUSED")) {
                 System.out.println(refusedCount);
             } else if (firstWord.equals("BILL")) {
-
+                System.out.println(billFor(field[1]));
             } else if (firstWord.equals("PASSTIME")) {
                 int hrs = Integer.parseInt(field[1]);
+                for (int i = 0; i < plates.size(); i++) {
+                    if (!parkedIn.get(i).equals("")) {
+                        hoursParked.set(i, hoursParked.get(i) + hrs);
+                    }
+                }
 
             } else if (firstWord.equals("LEAVE")) {
-
+                leaveVehicle(field[1]);
             } else if (firstWord.equals("EARNED")) {
                 System.out.println(totalEarned);
             }
@@ -186,6 +191,7 @@ public class Main {
         } else {
             freeLarge++;
         }
-        }
+        parkedIn.set(i, "");
     }
+}
 
