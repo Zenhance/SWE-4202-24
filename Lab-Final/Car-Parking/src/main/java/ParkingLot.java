@@ -20,4 +20,28 @@ public class ParkingLot {
     public void setMaxHours(int maxHours) {
         this.maxHours = maxHours;
     }
+
+    public int getBikeCapacity() {
+        return bikeCapacity;
+    }
+
+    public void setBikeCapacity(int bikeCapacity) {
+        this.bikeCapacity = bikeCapacity;
+    }
+
+    public int getRegularCapacity() {
+        return regularCapacity;
+    }
+
+    public void setRegularCapacity(int regularCapacity) {
+        this.regularCapacity = regularCapacity;
+    }
+
+    public int getLargeCapacity() {
+        return largeCapacity;
+    }
+
+    public void setLargeCapacity(int largeCapacity) {
+        this.largeCapacity = largeCapacity;
+    }
 }
