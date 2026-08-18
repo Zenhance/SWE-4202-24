@@ -1,6 +1,6 @@
 public class Car extends Vehicle {
 
-    public Car(String plate, DiscountScheme discount) {
+    public Car(String plate, int discount) {
         super(plate, discount);
     }
         public ParkingSlot[] acceptedSlots() {
