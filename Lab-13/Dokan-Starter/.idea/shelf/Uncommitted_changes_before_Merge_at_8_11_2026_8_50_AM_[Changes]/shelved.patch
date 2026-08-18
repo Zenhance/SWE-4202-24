@@ -1,0 +1,186 @@
+Index: ../../Lab before final/src/Student.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../Lab before final/src/Student.java b/../../Lab before final/src/Student.java
+new file mode 100644
+--- /dev/null	(date 1786416634534)
++++ b/../../Lab before final/src/Student.java	(date 1786416634534)
+@@ -0,0 +1,15 @@
++public class Student {
++    private String name;
++    private int ID;
++    private double cgpa;
++
++    public Student(String name, int ID, double cgpa) {
++        this.name = name;
++        this.ID = ID;
++        this.cgpa = cgpa;
++    }
++
++    public String toString() {
++        return ID +"  " + name +"  "+ cgpa;
++    }
++}
+Index: ../../Lab before final/src/resources/Students.CSV
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../Lab before final/src/resources/Students.CSV b/../../Lab before final/src/resources/Students.CSV
+new file mode 100644
+--- /dev/null	(date 1786416634535)
++++ b/../../Lab before final/src/resources/Students.CSV	(date 1786416634535)
+@@ -0,0 +1,151 @@
++ID,Name,CGPA
++1001,James,3.46
++1002,Mary,2.54
++1003,John,2.91
++1004,Patricia,2.83
++1005,Robert,3.6
++1006,Jennifer,3.52
++1007,Michael,3.84
++1008,Linda,2.63
++1009,William,3.13
++1010,Elizabeth,2.54
++1011,David,2.83
++1012,Barbara,3.26
++1013,Richard,2.54
++1014,Susan,2.8
++1015,Joseph,3.47
++1016,Jessica,3.32
++1017,Thomas,2.83
++1018,Sarah,3.38
++1019,Charles,3.71
++1020,Karen,2.51
++1021,Christopher,3.71
++1022,Nancy,3.55
++1023,Daniel,3.01
++1024,Lisa,2.73
++1025,Matthew,3.94
++1026,Betty,3.0
++1027,Anthony,2.64
++1028,Margaret,2.65
++1029,Mark,3.77
++1030,Sandra,3.41
++1031,Donald,3.71
++1032,Ashley,3.59
++1033,Steven,3.3
++1034,Kimberly,3.96
++1035,Paul,3.07
++1036,Emily,3.33
++1037,Andrew,3.74
++1038,Donna,3.43
++1039,Joshua,3.79
++1040,Michelle,3.37
++1041,Kenneth,3.56
++1042,Carol,2.57
++1043,Kevin,2.84
++1044,Amanda,2.93
++1045,Brian,2.62
++1046,Melissa,2.85
++1047,George,2.65
++1048,Deborah,2.92
++1049,Timothy,3.45
++1050,Stephanie,3.05
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
