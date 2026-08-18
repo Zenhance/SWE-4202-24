@@ -1,7 +1,12 @@
 package src.main.java;
 
 public class Discount {
-    int getDiscountedBill(int bill) {
-        return 0;
+
+    private Slot slot;
+
+    public Discount(Slot slot){
+    if(slot == null)
+        throw new IllegalArgumentException("Slot can't be null");
+    this.slot = slot;
     }
 }
