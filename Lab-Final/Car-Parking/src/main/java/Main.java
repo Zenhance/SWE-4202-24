@@ -7,11 +7,11 @@ public class Main {
     static int bikeSlots,regularSlots,largeSlots;
     static int freeBike, freeRegular, freeLarge;
 
-    ArrayList<String> plates = new ArrayList<>();
-    ArrayList<String> types = new ArrayList<>();
-    ArrayList<String> discounts = new ArrayList<>();
-    ArrayList<String> parkedIn = new ArrayList<>();
-    ArrayList<Integer> hoursParked = new ArrayList<>();
+    static ArrayList<String> plates = new ArrayList<>();
+    static ArrayList<String> types = new ArrayList<>();
+    static ArrayList<String> discounts = new ArrayList<>();
+    static ArrayList<String> parkedIn = new ArrayList<>();
+    static ArrayList<Integer> hoursParked = new ArrayList<>();
 
     static int maxStay;
     static int totalEarned = 0;
@@ -35,6 +35,14 @@ public class Main {
                 freeLarge = largeSlots;
             }else if (firstWord.equals("MAXSTAY")) {
                 maxStay = Integer.parseInt(field[1]);
+            }else if (firstWord.equals("BIKE") || firstWord.equals("CAR") || firstWord.equals("TRUCK")) {
+                plates.add(field[1]);
+                types.add(firstWord);
+                discounts.add(field[2]);
+                parkedIn.add(firstWord);
+                hoursParked.add(0);
+
+            }
         }
 
     }
