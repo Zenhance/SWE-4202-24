@@ -3,20 +3,37 @@ package Slot;
 import Vehicle.Vehicle;
 
 public class Slot {
-    private SlotType slotType;
+    private SlotType type;
     private Vehicle vehicle;
-    private int hours;
 
-    public void isFree(){
-
+    public Slot(SlotType type){
+        if(type==null){
+            throw new IllegalArgumentException("Invalid Slot type");
+        }
+        this.type=type;
+        this.vehicle=null;
     }
 
-    public void accepts(Vehicle vehicle){
-
+    public SlotType getType(){
+        return type;
     }
 
-    public double calculateBill(Vehicle vehicle, int hours){
-        return SlotType.
+    public Vehicle getVehicle(){
+        return vehicle;
     }
+
+    public boolean isFree(){
+        return vehicle==null;
+    }
+
+    public void park(Vehicle vehicle) {
+        if(vehicle==null){
+            throw new IllegalArgumentException("Vehicle cannot be null");
+        }
+        this.vehicle=vehicle;
+    }
+
+
+
 
 }
