@@ -9,4 +9,8 @@ public class Truck extends Vehicle {
     public String[] slotOrder() {
         return new String[] {"LARGE"};
     }
+    @Override
+    public String bestSlot() {
+        return "LARGE";
+    }
 }
