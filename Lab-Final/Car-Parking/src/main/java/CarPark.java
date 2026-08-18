@@ -1,34 +1,56 @@
-public class CarPark {
-    public CarPark(int i, int i1, int i2) {
+public final class CarPark {
+    private int refused;
+
+    public CarPark(
+            int bikeSlots,
+            int regularSlots,
+            int largeSlots
+    ) {
     }
 
-    public void setMaximumStay(int i) {
+    public void setMaximumStay(int maximumStay) {
     }
 
-    public void passTime(int i) {
+    public void admit(Vehicle vehicle)
+            throws ParkingException {
     }
 
-    public boolean freeSlots(SlotKind slotKind) {
+    public void passTime(int hours) {
     }
 
-    public boolean vehicleCount() {
+    public void leave(String plate)
+            throws VehicleNotFoundException {
     }
 
-    public boolean earned() {
+    public int bill(String plate)
+            throws VehicleNotFoundException {
+
+        return 0;
     }
 
-    public boolean refused() {
+    public SlotKind slotOf(String plate)
+            throws VehicleNotFoundException {
+
+        return null;
     }
 
-    public void leave(String plate) {
+    public int freeSlots(SlotKind kind) {
+        return 0;
+    }
+
+    public int vehicleCount() {
+        return 0;
+    }
+
+    public int earned() {
+        return 0;
+    }
+
+    public int refused() {
+        return refused;
     }
 
     public void recordRefusal() {
-    }
-
-    public void admit(Vehicle vehicle) {
-    }
-
-    public void admit(Car vehicle) {
+        refused++;
     }
 }
