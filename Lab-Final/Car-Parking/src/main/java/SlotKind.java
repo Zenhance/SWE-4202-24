@@ -1,6 +1,6 @@
 public enum SlotKind {
-    BIKE (10,5,0);
-    REGULAR(30,20,15);
+    BIKE (10,5,0),
+    REGULAR(30,20,15),
     LARGE(50,40,25);
 
     final int firstHour;
