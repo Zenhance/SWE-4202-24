@@ -11,5 +11,5 @@ public abstract class Vehicle {
         this.slot=slot;
     }
 
-
+   public abstract slots[] slots();
 }
