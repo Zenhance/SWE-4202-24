@@ -20,11 +20,17 @@ public class Main {
                 int hours = Integer.parseInt(field[1]);
                 
             } else if (field[0].equals("BIKE")) {
-                System.out.println(/* the number you worked out */);
+                String plate = field[1];
+                String discount =  field[2];
+                Bike bike = new Bike(plate, discount);
             }else if (field[0].equals("CAR")) {
-
+                String plate = field[1];
+                String discount =  field[2];
+                Car car = new Car(plate, discount);
             }else if (field[0].equals("TRUCK")) {
-
+                String plate = field[1];
+                String discount =  field[2];
+                Truck truck = new Truck(plate, discount);
             }else if (field[0].equals("PASSTIME")) {
 
             }else if (field[0].equals("LEAVE")) {
