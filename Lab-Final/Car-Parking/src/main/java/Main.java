@@ -117,4 +117,19 @@ public class Main {
             list.add(new LargeSlot());
         }
     }
+
+    public static int isVehicleInPark(ArrayList<Vehicle> vehicles, String plate) throws UnknownPlateException {
+        boolean vehicleInPark = false;
+        int vehicleIndex = 0;
+        for (int i = 0; i < vehicles.size(); i++) {
+            if (vehicles.get(i).getPlate().equals(plate)) {
+                vehicleInPark = true;
+                vehicleIndex = i;
+                break;
+            }
+        }
+        if (!vehicleInPark)
+            throw new UnknownPlateException("Plate is not in the park");
+        return vehicleIndex;
+    }
 }
