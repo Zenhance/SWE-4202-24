@@ -20,9 +20,22 @@ public final class Shelves {
         // a holder for static methods; no instances
     }
 
-    /** The cheapest item on the shelf, or an empty box if the shelf is empty. */
+    /**
+     * The cheapest item on the shelf, or an empty box if the shelf is empty.
+     */
     public static <T extends Item> Box<T> cheapest(Shelf<T> shelf) {
-        throw new UnsupportedOperationException("TODO: Shelves.cheapest");
+        if (shelf.isEmpty()) {
+            return Box.empty();
+        }
+
+        T cheapestItem = shelf.get(0);
+        for (int i = 1; i < shelf.size(); i++) {
+            T current = shelf.get(i);
+            if (current.priceTaka() < cheapestItem.priceTaka()) {
+                cheapestItem = current;
+            }
+        }
+        return Box.of(cheapestItem);
     }
 
     /**
