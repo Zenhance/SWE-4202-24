@@ -15,4 +15,7 @@ public abstract class Vehicle {
     public Category getCategory(){
         return category;
     }
+    public SlotType getAssignedSlot(){
+        return assignedSlot;
+    }
 }
