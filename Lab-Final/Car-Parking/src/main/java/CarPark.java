@@ -24,4 +24,15 @@ public class CarPark {
             slots.add(new Slot(SlotType.LARGE));
         }
     }
+
+    private Slot findFirstFreeSlot(Vehicle vehicle) {
+        for (SlotType acceptedType : vehicle.getAcceptedSlotTypes()) {
+            for (Slot slot : slots) {
+                if (slot.isFree() && slot.getType() == acceptedType) {
+                    return slot;
+                }
+            }
+        }
+        return null;
+    }
 }
