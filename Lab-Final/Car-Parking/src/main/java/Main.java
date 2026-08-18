@@ -50,6 +50,8 @@ public class Main {
 
             }else if(firstWord.equals("REFUSED")){
                 System.out.println(refusedCount);
+            }else if (firstWord.equals("BILL")) {
+
             }
 
 
