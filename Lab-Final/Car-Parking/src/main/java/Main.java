@@ -156,6 +156,10 @@ public class Main {
                     refused++;
                 }
 
+                if (numPlate==null) {
+                    refused++;
+                }
+
             }
 
 
