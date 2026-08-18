@@ -3,8 +3,6 @@ public abstract class Vehicle {
     private final String Scheme;
     private int hours;
     private ParkingSlot slot;
-
-
     public Vehicle(String Plate, String Scheme) {
         this.Plate = Plate;
         this.Scheme = Scheme;
@@ -24,4 +22,13 @@ public abstract class Vehicle {
     public ParkingSlot getSlot(){
     return slot;
     }
+    public void addHours(int amount){
+        hours += amount;
     }
+    public void setSlot(ParkingSlot slot){
+        this.slot = slot;
+    }
+    public abstract String[] acceptableSlots();
+
+    public abstract String belongsIn();
+}
