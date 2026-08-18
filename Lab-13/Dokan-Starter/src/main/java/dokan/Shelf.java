@@ -1,5 +1,6 @@
 package dokan;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -29,34 +30,53 @@ import java.util.List;
  * caller change the shelf.
  */
 public final class Shelf<T extends Item> {
+    public final ArrayList<T> items;
+    public int capacity;
 
     public Shelf(int capacity) {
-        throw new UnsupportedOperationException("TODO: Shelf constructor");
+        this.capacity=capacity;
+        this.items=new ArrayList<>();
+
+//        throw new UnsupportedOperationException("TODO: Shelf constructor");
     }
 
     /** Puts an item on the shelf. Returns false, without adding, if the shelf is full. */
     public boolean add(T item) {
-        throw new UnsupportedOperationException("TODO: Shelf.add");
+        if(isFull()){
+            return false;
+        }
+        items.add(item);
+        return true;
+
+//        throw new UnsupportedOperationException("TODO: Shelf.add");
     }
 
-    public T get(int index) {
-        throw new UnsupportedOperationException("TODO: Shelf.get");
+    public T get(int index){
+    return items.get(index);
+//        throw new UnsupportedOperationException("TODO: Shelf.get");
     }
 
     public int size() {
-        throw new UnsupportedOperationException("TODO: Shelf.size");
+        return items.size();
+//        throw new UnsupportedOperationException("TODO: Shelf.size");
     }
 
     public int capacity() {
-        throw new UnsupportedOperationException("TODO: Shelf.capacity");
+            return capacity;
+//        throw new UnsupportedOperationException("TODO: Shelf.capacity");
     }
 
     public boolean isFull() {
-        throw new UnsupportedOperationException("TODO: Shelf.isFull");
+            if(items.size()==capacity){
+                return true;
+            }
+            return false;
+//        throw new UnsupportedOperationException("TODO: Shelf.isFull");
     }
 
     public boolean isEmpty() {
-        throw new UnsupportedOperationException("TODO: Shelf.isEmpty");
+        return items.isEmpty();
+//        throw new UnsupportedOperationException("TODO: Shelf.isEmpty");
     }
 
     public boolean contains(String name) {

@@ -7,7 +7,7 @@ public class DigitalGood extends CatalogItem {
 
     @Override
     public long unitCharge() {
-        return 0;
+        return UnitePrize;
     }
 
     @Override

@@ -22,33 +22,51 @@ package dokan;
  * </ul>
  */
 public final class Box<T> {
+    public final T value;
+    public static boolean empty=false;
+
+    public Box(T value, boolean empty) {
+
+        this.value=value;
+        this.empty=empty;
+    }
 
     /** A box holding {@code value}. Refuse null: a full box holding nothing is a lie. */
     public static <T> Box<T> of(T value) {
-        throw new UnsupportedOperationException("TODO: Box.of");
+        throw new NullPointerException("TODO: Box.of");
     }
 
     /** An empty box. */
     public static <T> Box<T> empty() {
-        throw new UnsupportedOperationException("TODO: Box.empty");
+        return new Box<>(null, true);
+//        throw new UnsupportedOperationException("TODO: Box.empty");
+
     }
 
     public boolean isEmpty() {
-        throw new UnsupportedOperationException("TODO: Box.isEmpty");
+//        throw new UnsupportedOperationException("TODO: Box.isEmpty");
+        return empty;
     }
 
     /** The value inside. Opening an empty box is a programming mistake, so throw. */
     public T get() {
-        throw new UnsupportedOperationException("TODO: Box.get");
+        if (empty) {
+            throw new IllegalStateException("Box is empty");
+        }
+        return value;
+//        throw new UnsupportedOperationException("TODO: Box.get");
     }
 
     /** The value inside, or {@code fallback} if the box is empty. */
     public T orElse(T fallback) {
-        throw new UnsupportedOperationException("TODO: Box.orElse");
+        throw new NullPointerException("TODO: Box.orElse");
     }
 
     @Override
     public String toString() {
-        throw new UnsupportedOperationException("TODO: Box.toString");
+        if (empty){
+            return "Box(empty)";
+        }
+        return "Box(" + value + ")";
     }
 }

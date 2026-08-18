@@ -8,21 +8,21 @@ public abstract class CatalogItem implements Chargeable {
     int UnitePrize, StockCount;
     private final Seller seller;
 
-    public CatalogItem(String SKU, String TITLE, int UnitPrize, int StockCount, Seller seller) {
+    public CatalogItem(String SKU, String TITLE, int unitPrice, int StockCount, Seller seller) {
         if (SKU == null || SKU.isBlank())
             throw new IllegalArgumentException();
         if (TITLE == null || TITLE.isBlank())
             throw new IllegalArgumentException();
         if (seller == null)
             throw new IllegalArgumentException();
-        if (UnitPrize < 0)
+        if (unitPrice < 0)
             throw new IllegalArgumentException();
         if (StockCount < 0)
             throw new IllegalArgumentException();
         this.SKU = SKU;
         this.TITLE = TITLE;
         this.StockCount = StockCount;
-        this.UnitePrize = UnitPrize;
+        this.UnitePrize = unitPrice;
         this.seller = seller;
     }
 

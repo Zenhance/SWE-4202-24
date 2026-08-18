@@ -41,7 +41,7 @@ public class Order {
 
 
     public PriceBreakdown quote(int today) {
-        P = null;
+        P=null;
         return P;
     }
 
@@ -55,7 +55,7 @@ public class Order {
     return true;
     }
     public PriceBreakdown finalBreakdown() {
-        P = null;
+        P=null;
         return P;
     }
     public ArrayList<OrderLine> lines() {
