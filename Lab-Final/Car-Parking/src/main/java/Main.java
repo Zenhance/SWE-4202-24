@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -56,10 +57,6 @@ public class Main {
                 }else {
                     System.out.println(bill);
                 }
-            }
-            else if (command.equals("PASSTIME")) {
-                int hours = Integer.parseInt(field[1]);
-                parkingLot.passTime(hours);
             }
             else if (command.equals("LEAVE")) {
                 parkingLot.leave(field[1]);
