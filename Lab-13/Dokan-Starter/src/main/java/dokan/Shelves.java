@@ -1,5 +1,6 @@
 package dokan;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -22,7 +23,12 @@ public final class Shelves {
 
     /** The cheapest item on the shelf, or an empty box if the shelf is empty. */
     public static <T extends Item> Box<T> cheapest(Shelf<T> shelf) {
-        throw new UnsupportedOperationException("TODO: Shelves.cheapest");
+        T best = null;
+        for (T item : shelf.items()) {
+            if (best == null || item.priceTaka() < best.priceTaka()) {
+                best = item;
+            }}
+        return  best == null ? Box.empty() : Box.of(best);
     }
 
     /**
@@ -33,7 +39,14 @@ public final class Shelves {
      * of Books. Writing {@code Check<T>} here would reject that.
      */
     public static <T extends Item> List<T> keep(Shelf<T> shelf, Check<? super T> check) {
-        throw new UnsupportedOperationException("TODO: Shelves.keep");
+        List<T> kept = new ArrayList<>();
+        for (T item : shelf.items()) {
+            if (check.passes(item)) {
+                kept.add(item);
+            }
+        }
+        return kept;
+
     }
 
     /**
@@ -45,7 +58,16 @@ public final class Shelves {
      * An empty list has no largest value, so refuse it.
      */
     public static <T extends Comparable<T>> T max(List<T> values) {
-        throw new UnsupportedOperationException("TODO: Shelves.max");
+        if (values.isEmpty()) {
+            throw new IllegalArgumentException("values must not be empty");
+        }
+        T best = values.get(0);
+        for (T value : values) {
+            if (value.compareTo(best) > 0) {
+                best = value;
+            }
+        }
+        return best;
     }
 
     /**
@@ -56,6 +78,12 @@ public final class Shelves {
      * {@code List<T>} here would reject that perfectly sensible line.
      */
     public static <T extends Item> int addAll(Shelf<T> shelf, List<? extends T> items) {
-        throw new UnsupportedOperationException("TODO: Shelves.addAll");
+        int added = 0;
+        for (T item : items) {
+            if (shelf.add(item)) {
+                added++;
+            }
+        }
+        return added;
     }
 }
