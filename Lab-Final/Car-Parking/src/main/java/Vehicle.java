@@ -1,6 +1,6 @@
 public abstract class Vehicle {
     private final String plate;
-    private Slot preferredType;
+    private Slot slotType;
     private int timeStayed;
     private static int maxTimeStay;
     private boolean isParked;
@@ -11,10 +11,10 @@ public abstract class Vehicle {
         isParked = false;
     }
 
-    public void setPreferredType(Slot preferredType) {
-        if (preferredType == null)
+    public void setSlotType(Slot slotType) {
+        if (slotType == null)
             throw new IllegalArgumentException("Preferred slot type cannot be null");
-        this.preferredType = preferredType;
+        this.slotType = slotType;
     }
 
     public int getTimeStayed() {
