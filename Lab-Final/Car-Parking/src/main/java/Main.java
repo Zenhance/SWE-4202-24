@@ -34,7 +34,7 @@ public class Main {
                     }
                     else if (field[0].equals("COUNT")) {
 
-                        System.out.println(count);
+                        System.out.println(vehicles.size());
                     } else if (field[0].equals("LEAVE")) {
                         int i;
                         try{
@@ -81,6 +81,8 @@ public class Main {
                             vehicle.time+=hours;
                             if(vehicle.time>maxtime) {
                                 vehicle.time =vehicle.time + 1;
+                                earned+=fee.Calcfee(vehicle);
+                                vehicle.stillhere=false;
                             }
 
                         }
