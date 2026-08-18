@@ -63,9 +63,25 @@ public class Parkinglot {
     }
 
 
-    private void setRegularFree(){
+    public void register(Vehicle vehicle) {
+        slotType[] choices = vehicle.prefferedSlot();
 
+        for (int i = 0; i < choices.length; i++) {
+            slotType type = choices[i];
+            if (getFreeSlots(type) > 0) {
+                takeOneSlot(type);
+                vehicle.park(type, time);
+                parkedVehicles.put(vehicle.getVehiclePlate(), vehicle);
+                return;
+            }
         }
+        refusedCount = refusedCount + 1;
+    }
+
+
+
+
+
     }
 
 
@@ -75,6 +91,6 @@ public class Parkinglot {
 
 
 
-}
+
 
 
