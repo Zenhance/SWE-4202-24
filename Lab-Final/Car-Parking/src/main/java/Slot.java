@@ -29,4 +29,10 @@ public class Slot {
     public void park(Vehicle vehicle) {
         this.vehicle = vehicle;
     }
+
+    public void passTime(int passedHours) {
+        if (vehicle != null) {
+            vehicle.addHours(passedHours);
+        }
+    }
 }
