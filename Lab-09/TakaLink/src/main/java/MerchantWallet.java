@@ -18,4 +18,9 @@ public class MerchantWallet extends Wallet{
     public boolean canCashOut() {
         return false;
     }
+
+    @Override
+    public double balance() {
+        return getBalance();
+    }
 }

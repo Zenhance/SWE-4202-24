@@ -1,6 +1,6 @@
 public abstract class Wallet {
     private String id;
-    private double balance;
+    double balance;
     private String pin;
     private boolean frozen;
     private double spentToday;
@@ -68,5 +68,6 @@ public abstract class Wallet {
     public abstract boolean canCashOut();
 
 
+    public abstract double balance();
 }
 

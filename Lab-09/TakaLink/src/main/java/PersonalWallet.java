@@ -19,7 +19,10 @@ public class PersonalWallet extends Wallet {
         return true;
     }
 
-
+    @Override
+    public double balance() {
+        return getBalance();
+    }
 
 
 }

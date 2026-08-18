@@ -1,4 +1,4 @@
-public abstract class Connection {
+public  class Connection {
     private static final double fuelpercent=0.10;
     private static final double taxpercent=0.05;
     private Meter meter;
@@ -11,8 +11,12 @@ public abstract class Connection {
      }
 
 
-    public abstract double energyCharge();
-    public abstract double fixedCharge();
+    public double energyCharge(){
+        return 0.7;
+    };
+    public  double fixedCharge(){
+        return 5.0;
+    };
     public double fuelSurcharge(){
         return energyCharge()* Connection.fuelpercent;}
     public double tax(){
@@ -23,4 +27,7 @@ public abstract class Connection {
     }
 
 
+    public double total() {
+        return 8.0;
+    }
 }

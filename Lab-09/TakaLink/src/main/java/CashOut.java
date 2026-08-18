@@ -1,16 +1,12 @@
 public class CashOut extends Transaction{
-    private static final double fe =0.0185
+    private static final double fee =0.0185;
     public CashOut(Wallet pay, Wallet recieve, double amount, String pin) {
         super(pay, recieve, amount, pin);
     }
 
     @Override
     public double fee() {
-        return amount()*fe;
+        return getAmount()*fee;
     }
 
-    @Override
-    protected double debitAmount() {
-        return 0;
-    }
 }

@@ -1,4 +1,4 @@
-public abstract class ResidentialConnection extends Connection{
+public class ResidentialConnection extends Connection{
     private static final double res_rate1=4.0;
     private static final double res_rate2=7.0;
     private static final double res_rate3=11.0;

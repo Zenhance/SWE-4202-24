@@ -1,5 +1,5 @@
 public class SendMoney extends Transaction{
-    private static final double fee =5.0
+    private static final double fee =5.0;
     public SendMoney(Wallet pay, Wallet recieve, double amount, String pin) {
         super(pay, recieve, amount, pin);
     }
@@ -9,6 +9,5 @@ public class SendMoney extends Transaction{
         return fee;
     }
 
-    @Override
 
 }

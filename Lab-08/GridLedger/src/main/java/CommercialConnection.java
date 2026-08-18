@@ -1,4 +1,4 @@
-public abstract class CommercialConnection extends Connection {
+public class CommercialConnection extends Connection {
     private static final double com_rate1=9.0;
     private static final double com_rate2=13.0;
     private static final double com_rate=500.0;

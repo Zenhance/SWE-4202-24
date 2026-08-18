@@ -3,12 +3,15 @@ public class Square extends Rectangle{
         super(side,side);
     }
     @Override
-    public void setWidth(double width){
+    public double setWidth(double width){
         super.setWidth(width);
         super.setHeight(width);
+        return width;
     }
-    @Override void setHeight(double height) {
+    @Override
+    public double setHeight(double height) {
         super.setHeight(height);
         super.setWidth(height);
+        return height;
     }
 }

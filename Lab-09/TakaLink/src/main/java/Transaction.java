@@ -13,6 +13,9 @@ public abstract class Transaction {
     private final Wallet recieve;
     private final double amount;
     private final String pin;
+    private String fromId;
+    private String toId;
+    private boolean type;
 
     public Transaction(Wallet pay, Wallet recieve, double amount, String pin) {
         if(pay==null){
@@ -32,15 +35,24 @@ public abstract class Transaction {
         this.amount = amount;
         this.pin = pin;
     }
+
+    public double getAmount() {
+        return this.amount;
+    }
+
+    public String getPin() {
+        return this.pin;
+    }
+
     public abstract double fee();
-    public double debitAmoubt(){
+    public double debitAmount(){
         return amount+fee();
     }
     protected void validateOperation() throws OperationNotAllowedException{}
     protected void validateLimit() throws DailyLimitExceededException{}
     protected void onsettled(){}
 
-    public final void settle()throws TransactionException{
+    public void settle()throws TransactionException{
         validateOperation();
         if(pay.isFrozen()){
             throw new FrozenAccountException("Frozen");
@@ -57,7 +69,7 @@ public abstract class Transaction {
 
     }
 
-    protected abstract double debitAmount();
+
 
 
 }

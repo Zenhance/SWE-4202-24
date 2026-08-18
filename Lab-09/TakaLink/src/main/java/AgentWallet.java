@@ -19,4 +19,9 @@ public class AgentWallet extends Wallet{
     public boolean canCashOut() {
         return true;
     }
+
+    @Override
+    public double balance() {
+        return getBalance();
+    }
 }
