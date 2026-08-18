@@ -1,6 +1,6 @@
 public class Slot {
     public enum Type {
-        BIKE,CAR,TRUCK
+        BIKE,REGULAR,LARGE
     }
     private Type type;
     private Vehicle vehicle;
@@ -53,6 +53,9 @@ public class Slot {
             case LARGE -> 40;
         };
 
+    }
+    public Catagory getCatagory(){
+        return catagory;
     }
 
 

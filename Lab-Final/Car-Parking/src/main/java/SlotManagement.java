@@ -10,6 +10,58 @@ public class SlotManagement {
         bikeSlots=new ArrayList<>();
         regularSlots=new ArrayList<>();
         largeSlots=new ArrayList<>();
+
+        createSlots(bikeSlots,Slot.Type.BIKE,bike);
+        createSlots(regularSlots,Slot.Type.REGULAR,regular);
+        createSlots(largeSlots,Slot.Type.LARGE,large);
+    }
+
+    public void createSlots(List<Slot> slots, Slot.Type type, int count) {
+        for (int i = 0; i < count; i++) {
+            slots.add(new Slot(type));
+        }
+    }
+
+        public Slot findFreeSlot(List<Slot> slots){
+        for(Slot s:slots){
+            if(s.isFree()){
+                return s;
+            }
+        }
+        return null;
+    }
+
+    public Slot findSlot(Vehicle.Type type) {
+
+        if (type == Vehicle.Type.BIKE) {
+
+            Slot slot = findFreeSlot(bikeSlots);
+
+            if (slot != null) {
+                return slot;
+            }
+
+            slot = findFreeSlot(regularSlots);
+
+            if (slot != null) {
+                return slot;
+            }
+
+            return findFreeSlot(largeSlots);
+        }
+
+        if (type == Vehicle.Type.CAR) {
+
+            Slot slot = findFreeSlot(regularSlots);
+
+            if (slot != null) {
+                return slot;
+            }
+
+            return findFreeSlot(largeSlots);
+        }
+
+        return findFreeSlot(largeSlots);
     }
 
 

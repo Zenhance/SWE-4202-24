@@ -1,8 +1,16 @@
 public class Vehicle {
+    public enum Type {
+        BIKE,CAR,TRUCK
+    }
+    public enum Scheme {
+        NONE,STUDENT,WEEKEND
+    }
+
     private Type type;
     private Scheme scheme;
     private int entry;
     private String plate;
+    private Catagory catagory;
 
     public Vehicle(Type type,String plate,Scheme scheme,int entry){
         this.type = type;
@@ -37,5 +45,9 @@ public class Vehicle {
     }
     public Slot getSlot(){
         return slot;
+    }
+
+    public Catagory getCatagory(){
+        return catagory;
     }
 }
