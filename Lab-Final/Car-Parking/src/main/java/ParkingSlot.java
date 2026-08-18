@@ -1,3 +1,4 @@
+import java.security.PrivateKey;
 import java.util.ArrayList;
 
 public  class ParkingSlot {
@@ -5,6 +6,8 @@ public  class ParkingSlot {
     public static final ParkingSlot REGULAR=null;
     public static final ParkingSlot LARGE=null;
     public static final ParkingSlot Bike=null;
+    public int bikeCapacity,regularCapacity,largeCapacity;
+    private int count=0;
     private String plate,discount;
     private int freeBike;
     private int freeRegular;
@@ -44,5 +47,8 @@ public  class ParkingSlot {
 
     public void setFreeRegular(int freeRegular) {
         this.freeRegular = freeRegular;
+    }
+    public int getCount() {
+        return count;
     }
 }
