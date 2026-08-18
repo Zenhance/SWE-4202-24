@@ -1,6 +1,6 @@
 public class Truck extends Vehicle{
-    public Truck(String plate,Category category){
-        super(plate,category);
+    public Truck(String Vehicleplate,Category category){
+        super(Vehicleplate,category);
     }
     @Override
     public slotType[] prefferedSlot() {

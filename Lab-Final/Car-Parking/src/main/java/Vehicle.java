@@ -1,16 +1,16 @@
 import java.util.ServiceLoader;
 
-public class Vehicle {
+public abstract class Vehicle {
     private final String Vehicleplate;
     private int time;
     private final Category category;
     private slotType keptslot;
 
-    public Vehicle(String vehicleplate, int time, Category category, slotType keptslot) {
-        this.Vehicleplate = vehicleplate;
-        this.time = time;
+    public Vehicle(String Vehicleplate, Category category) {
+        this.Vehicleplate = Vehicleplate;
+
         this.category = category;
-        this.keptslot = keptslot;
+
     }
 
     public String getVehiclePlate(){
@@ -33,7 +33,7 @@ public class Vehicle {
         this.keptslot=keptslot;
         this.time=time;
     }
-    public abstract slotType[] slotpreference();
+    public abstract slotType[] prefferedSlot();
     public abstract int hourlyRate();
 }
 
