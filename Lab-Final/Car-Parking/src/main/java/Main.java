@@ -142,7 +142,7 @@ public class Main {
                         assigned = SlotType.REGULAR;
                         regOcc++;
                     } else if (largeOcc < largeCap) {
-                        assigned = SlotType.REGULAR;
+                        assigned = SlotType.LARGE;
                         largeOcc++;
                     }
                 } else if (vType == VehicleType.TRUCK) {
