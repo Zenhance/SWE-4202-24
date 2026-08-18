@@ -19,6 +19,7 @@ public class Main {
         Scanner input = new Scanner(System.in);
         while(input.hasNextLine()){
             String line = input.nextLine().trim();
+            String[] field = line.split(" ");
         }
 
     }
