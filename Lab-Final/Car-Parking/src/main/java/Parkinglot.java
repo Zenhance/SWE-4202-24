@@ -109,6 +109,13 @@ public class Parkinglot {
         return calculateFee(v, hoursParked);
     }
 
+    private int calculateFee(Vehicle v, int hoursParked) {
+
+
+
+
+    }
+
 
 
 
