@@ -174,6 +174,21 @@ public class Main {
                 System.out.println(refused);
             }
 
+            else if (field[0].equals("BILL")) {
+                Vehicle v = findVehicle(parkedVehicles, field[1]);
+
+                System.out.println(v.calculateBill(currentTime, maxStay));
+            }
+
         }
+    }
+
+    private Vehicle findVehicle(List<Vehicle> list, String numPlate) {
+        for (Vehicle v : list) {
+            if (v.numPlate.equals(numPlate))
+                return v;
+        }
+        return null;
+
     }
 }
