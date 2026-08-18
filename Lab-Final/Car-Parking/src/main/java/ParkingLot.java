@@ -11,7 +11,7 @@ public class ParkingLot {
             this.maxStay = maxStay;
             this.earned = 0;
             this.refused = 0;
-            this.slots = new ArrayList<Slot>();
+            this.slots = new ArrayList<>();
             for (int i = 0; i < bikeCount; i++) {
                 slots.add(new Slot(SlotType.BIKE));
             }
@@ -22,14 +22,19 @@ public class ParkingLot {
                 slots.add(new Slot(SlotType.LARGE));
             }
         }
+
     public void arrive(Vehicle vehicle) throws ParkingException {
         if (vehicle.getPlate().equals("-")) {
-            throw new ParkingException();
+            throw new ParkingException("Invalid license plate");
+        }
+        if (findVehicle(vehicle.getPlate()) != null) {
+            throw new ParkingException("Duplicate license plate");
         }
 
         Slot slot = findFreeSlot(vehicle.getAcceptedSlots());
+
         if (slot == null) {
-            throw new ParkingException();
+            throw new ParkingException("No suitable slot available");
         }
         slot.setVehicle(vehicle);
     }
@@ -64,12 +69,11 @@ public class ParkingLot {
     public String bill(String plate) throws ParkingException {
             Slot slot = findVehicle(plate);
             if (slot == null) {
-            throw new ParkingException();
+            throw new ParkingException("Invalid.");
         }
             Vehicle vehicle = slot.getVehicle();
             int hours = Math.max(1, vehicle.getHours());
-            return String.valueOf(calculateBill(vehicle, slot, hours);
-        );
+            return String.valueOf(calculateBill(vehicle, slot, hours));
     }
     private Slot findVehicle(String plate) {
             for (Slot slot : slots) {
@@ -89,7 +93,7 @@ public class ParkingLot {
     }
     public String slot(String plate) throws ParkingException {
             Slot slot = findVehicle(plate);
-            if (slot == null) throw new ParkingException();
+            if (slot == null) throw new ParkingException("Invalid");
             return slot.getType().name();
     }
     public int free(String kind) {
@@ -123,4 +127,15 @@ public class ParkingLot {
         refused++;
     }
 
+    public void leave(String plate) throws ParkingException {
+        Slot slot = findVehicle(plate);
+        if (slot == null) {
+            throw new ParkingException("Vehicle not found");
+        }
+        Vehicle vehicle = slot.getVehicle();
+        int hours = Math.max(1, vehicle.getHours());
+        int bill = calculateBill(vehicle, slot, hours);
+        earned += bill;
+        slot.removeVehicle();
+    }
 }
