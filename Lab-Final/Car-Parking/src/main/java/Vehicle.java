@@ -1,6 +1,7 @@
 import java.util.List;
 
 public abstract class Vehicle {
+
     private final String plate;
     private int hours = 0;
 
@@ -14,6 +15,10 @@ public abstract class Vehicle {
 
     public int getHours() {
         return hours;
+    }
+
+    public void addHours(int passedHours) {
+        hours += passedHours;
     }
 
     public abstract List<SlotType> getAcceptedSlotTypes();
