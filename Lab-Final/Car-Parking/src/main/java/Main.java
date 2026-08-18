@@ -89,7 +89,7 @@ public class Main {
     ) {
         try {
             park.leave(plate);
-        } catch (VehiclesNotFoundException exception) {
+        } catch (VehicleNotFoundException exception) {
             park.recordRefusal();
         }
     }
