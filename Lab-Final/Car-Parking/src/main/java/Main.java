@@ -20,6 +20,11 @@ public class Main {
         while(input.hasNextLine()){
             String line = input.nextLine().trim();
             String[] field = line.split(" ");
+            String firstWord=field[0];
+
+            if (firstWord.equals("END")) {
+                break;
+            }
         }
 
     }
