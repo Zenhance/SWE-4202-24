@@ -49,5 +49,15 @@ private void takeOneSlot(SlotType type) {
         largeFree = largeFree - 1;
     }
 }
+private void returnOneSlot(SlotType type){
+    if (type == SlotType.BIKE) {
+        bikeFree = bikeFree + 1;
+    } else if (type == SlotType.REGULAR) {
+        regularFree = regularFree + 1;
+    } else {
+        largeFree = largeFree + 1;
+    }
+}
+}
 
 
