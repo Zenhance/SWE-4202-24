@@ -8,4 +8,6 @@ public class ParkingLot {
         this.regularSlot = regularSlot;
         this.largeSlot = largeSlot;
     }
+
+
 }
