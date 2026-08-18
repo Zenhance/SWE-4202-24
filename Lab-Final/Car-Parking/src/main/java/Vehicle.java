@@ -25,7 +25,7 @@ public abstract class Vehicle {
         return scheme;
     }
     public int addHours(int hours){
-        this.hoursStood += hours;
+        return this.hoursStood += hours;
     }
     public SlotType getCurrentSlot(){
         return currentSlot;
