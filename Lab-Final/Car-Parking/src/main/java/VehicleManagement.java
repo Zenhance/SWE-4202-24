@@ -24,7 +24,7 @@ public class VehicleManagement {
                 return v;
             }
         }
-        return null;
+
     }
 
     public int countVehicles(){
