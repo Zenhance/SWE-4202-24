@@ -1,8 +1,5 @@
 package dokan;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * TODO (step 3). Counts how many times each value has been seen.
  *
@@ -20,34 +17,17 @@ import java.util.List;
  * </ul>
  */
 public final class  Counter<T> {
-    private final List<T> item = new ArrayList<>();
-    private final List<Integer> counter = new ArrayList<>();
 
     /** Records one more sighting of {@code value}. */
     public void add(T value) {
-        int index = item.indexOf(value);
-
-        if (index == -1) {
-            item.add(value);
-            counter.add(1);
-        } else {
-            int currentCount = counter.get(index);
-            counter.set(index, currentCount + 1);
-        }
     }
 
     /** How many times {@code value} has been added. Zero if never. */
     public int count(T value) {
-        int index = item.indexOf(value);
-        if (index == -1) {
-            return 0; // Item not found
-        }
-        return counter.get(index);
     }
 
     /** How many different values have been counted. */
     public int distinct() {
-       return item.size();
     }
 
     /** The value seen most often, or an empty box if nothing has been counted yet. */
