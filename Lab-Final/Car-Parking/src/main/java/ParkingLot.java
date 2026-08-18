@@ -156,7 +156,7 @@ public class ParkingLot {
         for (int i = 0; i < vehicles.size(); i++) {
             Vehicle v = vehicles.get(i);
             if (v.hours >= maxStay) {
-                earned = earned + calculateBill(v. true);
+                earned = earned + calculateBill(v,true);
                 v.slot.vehicle = null;
                 removeList.add(v);
             }
