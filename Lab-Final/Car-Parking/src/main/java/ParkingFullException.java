@@ -1,5 +1,5 @@
 public class ParkingFullException extends Exception{
     public ParkingFullException(String plate){
-        super("No slot available");
+        super("No slot available"+ plate);
     }
 }
