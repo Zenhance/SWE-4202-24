@@ -55,8 +55,12 @@ public class CarPark {
         if (vehicle == null) {
             throw new UnknownPlateException();
         }
-
+        int bill =computeBill(vehicle,Math.max(vehicle.hoursStood,1));
+        earned+=bill;
+        changeOccupied(vehicle.slot,-1);
+        vehicles.remove(plate);
 }
+
     private void changeOccupied(SlotKind kind, int delta){
         if(kind == SlotKind.BIKE){
             bikeOccupied+=delta;
