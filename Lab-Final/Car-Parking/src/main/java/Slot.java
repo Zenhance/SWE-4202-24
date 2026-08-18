@@ -4,7 +4,6 @@ public class Slot {
     }
     private Type type;
     private Vehicle vehicle;
-
     public Slot(Type type){
         this.type = type;
     }
@@ -29,9 +28,9 @@ public class Slot {
         }
         vehicle = null;
     }
-    public Catagory catagory;
+    ;
     public int firstHourRate(){
-        return switch(catagory){
+        return switch(type){
             case BIKE -> 10;
             case REGULAR -> 30;
             case LARGE -> 50;
@@ -39,7 +38,7 @@ public class Slot {
     }
 
     public int surchargeRate(){
-        return switch(catagory){
+        return switch(type){
             case BIKE -> 0;
             case REGULAR -> 15;
             case LARGE -> 25;
@@ -47,16 +46,12 @@ public class Slot {
     }
 
     public int additionalHoursRate(){
-        return switch(catagory){
+        return switch(type){
             case BIKE -> 5;
             case REGULAR -> 20;
             case LARGE -> 40;
         };
 
     }
-    public Catagory getCatagory(){
-        return catagory;
-    }
-
 
 }

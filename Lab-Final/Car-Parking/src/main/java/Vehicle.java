@@ -10,7 +10,7 @@ public class Vehicle {
     private Scheme scheme;
     private int entry;
     private String plate;
-    private Catagory catagory;
+
 
     public Vehicle(Type type,String plate,Scheme scheme,int entry){
         this.type = type;
@@ -47,7 +47,6 @@ public class Vehicle {
         return slot;
     }
 
-    public Catagory getCatagory(){
-        return catagory;
-    }
+
+
 }
