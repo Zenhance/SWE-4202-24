@@ -1,3 +1,3 @@
 public interface Discount {
-    int apply(int bill);
+    int apply(int initialBill);
 }
