@@ -37,6 +37,7 @@ public class Main {
                         System.out.println(count);
                     } else if (field[0].equals("LEAVE")) {
                         int i;
+                        try{
                         for( i=0;i<vehicles.size();i++){
                             if(vehicles.get(i).plate.equals(field[1])){
                                 if(Objects.equals(vehicles.get(i).slot, "BIKE")){slot.bike++;}
@@ -47,7 +48,10 @@ public class Main {
                             }
 
                         }
-                        if(i==vehicles.size()-1)System.out.println("NONE");
+                        if(i==vehicles.size()-1) throw new IllegalArgumentException();
+                        } catch (IllegalArgumentException e) {
+                            System.out.println("NONE");
+                        }
                     }
                     else if (field[0].equals("BILL")) {
                         int i;
