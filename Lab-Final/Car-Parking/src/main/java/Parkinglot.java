@@ -90,6 +90,14 @@ public class Parkinglot {
     public int parkedCount() {
         return parkedVehicles.size();
     }
+    public int refusedCount() {
+        return refusedCount;
+    }
+
+    public int totalEarned() {
+        return totalEarned;
+    }
+
 }
 
 
