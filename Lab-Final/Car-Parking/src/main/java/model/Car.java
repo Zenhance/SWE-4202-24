@@ -9,4 +9,8 @@ public class Car extends Vehicle{
     public String[] slotOrder() {
         return new String[] {"REGULAR", "LARGE"};
     }
+    @Override
+    public String bestSlot() {
+        return "REGULAR";
+    }
 }

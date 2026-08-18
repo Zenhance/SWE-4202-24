@@ -10,4 +10,9 @@ public class Bike extends Vehicle {
         return new String[]{"BIKE", "REGULAR", "LARGE"};
     }
 
+    @Override
+    public String bestSlot() {
+        return "BIKE";
+    }
+
 }

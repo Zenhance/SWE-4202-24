@@ -9,12 +9,13 @@ public abstract class Vehicle {
 
 
     public Vehicle(String licencePlate, String permit) {
-        if(permit==null){
+        if(!permit.equals("NONE") && !permit.equals("STUDENT") && !permit.equals("WEEKEND")){
             throw new IllegalArgumentException();
         }
         if(licencePlate==null){
-            throw new InvalidLicensePlateException("");
+            throw new InvalidLicensePlateException();
         }
+
         this.licencePlate = licencePlate;
         this.permit = permit;
     }
@@ -28,7 +29,10 @@ public abstract class Vehicle {
     public void setEntryTime(int currentTime){
         entryTime = currentTime;
     }
+    public int getEntryTime(){
+        return entryTime;
+    }
 
     public abstract String[] slotOrder();
-
+    public abstract String bestSlot();
 }
