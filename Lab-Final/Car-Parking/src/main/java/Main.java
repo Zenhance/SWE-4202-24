@@ -43,7 +43,7 @@ public class Main {
                 parkedIn.add(firstWord);
                 hoursParked.add(0);
             }else if (firstWord.equals("SLOT")) {
-
+                System.out.println(parkVehicle(field[1]));
             } else if (firstWord.equals("FREE")) {
 
             }else if (firstWord.equals("COUNT")) {
@@ -85,6 +85,8 @@ public class Main {
         }else if (type.equals("TRUCK")) {
             if (freeLarge > 0) { freeLarge--; parkedIn.set(i, "LARGE"); return "LARGE"; }
         }
+        refusedCount++;
+        return "REFUSED";
 
     }
 }
