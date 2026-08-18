@@ -20,12 +20,6 @@ public class CarPark {
         this.freeLarge = Large;
     }
 
-    public int freeCount(SlotType s) {
-        return switch (s) {
-            case BIKE -> freeBike;
-            case REGULAR -> freeRegular;
-            case LARGE -> freeLarge;
-        };}
         private Vehicle search(String plate){
             for (Vehicle v : vehicleParked) {
                 if (v.getPlate().equals(plate)) {
