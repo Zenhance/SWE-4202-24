@@ -84,12 +84,13 @@ public class Main {
         List<Vehicle> parkedVehicles = new ArrayList<>();
 
         int maxStay = Integer.MAX_VALUE;
+        int refused = 0;
+
+        int totalEarned = 0;
+
 
         int bikeCap = 0, regCap = 0, largeCap = 0;
         int bikeOcc = 0, regOcc = 0, largeOcc = 0;
-
-        SlotType assigned = null;
-
 
         Scanner input = new Scanner(System.in);
 
@@ -107,23 +108,36 @@ public class Main {
                 bikeCap = Integer.parseInt(field[1]);
                 regCap = Integer.parseInt(field[2]);
                 largeCap = Integer.parseInt(field[3]);
-
-
-
             }
 
             else if (field[0].equals("MAXSTAY")) {
-                int hours = Integer.parseInt(field[1]);
-
-
-
-
+                maxStay = Integer.parseInt(field[1]);
 
             } else if (field[0].equals("COUNT")) {
                 System.out.println(parkedVehicles.size());
 
-            } else if (field[0].equals("BIKE") || field[0].equals("CAR") || || field[0].equals("REGULAR")) {
+            } else if (field[0].equals("BIKE") || field[0].equals("CAR") || field[0].equals("REGULAR")) {
 
+                VehicleType vType = VehicleType.valueOf(field[0]);
+                String numPlate = field[1];
+
+                SlotType assigned = null;
+
+                if (vType == VehicleType.BIKE) {
+                    if (bikeOcc < bikeCap) {
+                        assigned = SlotType.BIKE;
+                        bikeOcc++;
+                    } else if (regOcc < regCap) {
+                        assigned = SlotType.REGULAR;
+                        regOcc++;
+
+                    } else if (largeOcc < largeCap) {
+                        assigned = SlotType.LARGE;
+                        largeOcc++;
+                    } else {
+                        refused++;
+                    }
+                }
 
             }
 
