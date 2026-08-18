@@ -1,7 +1,7 @@
 import static java.lang.Math.max;
 
 public class Regular extends Slot{
-    private int regularSlot=0;
+    private static int regularSlot=0;
 
 
     Regular(String numPlate, String Scheme) {
@@ -38,7 +38,7 @@ public class Regular extends Slot{
         return reglarBill;
     }
 
-    public void free(){
+    public static void free(){
         regularSlot--;
         count--;
     }
@@ -49,5 +49,7 @@ public class Regular extends Slot{
         regularSlot--;
     }
 
-
+    public static int getRegularSlot() {
+        return regularSlot;
+    }
 }

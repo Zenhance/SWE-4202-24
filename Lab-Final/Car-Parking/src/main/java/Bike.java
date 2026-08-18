@@ -1,6 +1,6 @@
 import static java.lang.Math.max;
 public class Bike extends Slot{
-    protected int bikeSlot=0;
+    protected static int bikeSlot=0;
     Bike(String numPlate, String Scheme) {
         super(numPlate, Scheme);
         bikeSlot++;
@@ -28,10 +28,11 @@ public class Bike extends Slot{
             bikeBill= x;
         }
     }
-    public void free(){
+    public static void free(){
         bikeSlot--;
         count--;
     }
+
 
     @Override
     protected void leave() {
@@ -39,4 +40,7 @@ public class Bike extends Slot{
         count--;
     }
 
+    public static int getBikeSlot() {
+        return bikeSlot;
+    }
 }

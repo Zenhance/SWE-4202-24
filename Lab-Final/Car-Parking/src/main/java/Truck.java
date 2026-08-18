@@ -1,6 +1,6 @@
 import static java.lang.Math.max;
 public class Truck extends Slot{
-    protected int truckSlot=0;
+    protected static int truckSlot=0;
     Truck(String numPlate, String Scheme) {
         super(numPlate, Scheme);
         truckSlot++;
@@ -30,7 +30,7 @@ truckSlot++;
             truckBill= x;
         }
     }
-    public void free(){
+    public static void free(){
         truckSlot--;
         count--;
     }
@@ -41,4 +41,7 @@ truckSlot++;
         count--;
     }
 
+    public static int getTruckSlot() {
+        return truckSlot;
+    }
 }

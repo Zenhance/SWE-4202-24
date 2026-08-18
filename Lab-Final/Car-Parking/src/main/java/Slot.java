@@ -1,11 +1,13 @@
+import java.sql.PreparedStatement;
+
 public abstract class Slot {
     protected boolean student=false;
     protected boolean weekend=false;
     protected boolean surchargable=false;
     protected int earnings=0;
-    private int MAXSTAY;
+    private static int MAXSTAY;
     protected static int count=0;
-    private int refused=0;
+    private static int refused=0;
     protected int PASSTIME;
     private String numPlate;
     private String Scheme;
@@ -30,8 +32,8 @@ public abstract class Slot {
         count++;
     }
 
-    public void setMAXSTAY(int MAXSTAY) {
-        this.MAXSTAY = MAXSTAY;
+    public static void setMAXSTAY(int stayHours) {
+        MAXSTAY = stayHours;
     }
 
     public void setPASSTIME(int PASSTIME) {
@@ -40,14 +42,18 @@ public abstract class Slot {
     public void setSurchargable(){
         surchargable=true;
     }
-    public void refused(){
+    public static int refused(){
         refused++;
+        return refused;
     }
-    public int getSlot(){
+    public static int getSlot(){
         return count;
     }
+    public String getNumPlate(){
+        return numPlate;
+    }
     protected abstract void fee();
-    protected abstract void free();
+
     protected abstract void leave();
     public int getEarnings(){
         return earnings=earnings+bikeBill+reglarBill+truckBill;
