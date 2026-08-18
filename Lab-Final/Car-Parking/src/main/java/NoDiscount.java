@@ -1,5 +1,5 @@
-public interface NoDiscount extends Discount{
-    default int discount(int bill){
+public class NoDiscount implements Discount{
+    public int discount(int bill){
         return bill;
     }
 }

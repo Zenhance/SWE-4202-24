@@ -9,5 +9,4 @@ public class SlotBooking {
         this.regNum="";
     }
 
-
 }

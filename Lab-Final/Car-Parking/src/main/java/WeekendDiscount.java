@@ -1,6 +1,6 @@
-public interface WeekendDiscount extends Discount{
+public class WeekendDiscount implements Discount{
     @Override
-    default int discount(int bill) {
+    public int discount(int bill) {
         return bill-10;
     }
 }
