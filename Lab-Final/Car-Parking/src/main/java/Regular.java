@@ -9,23 +9,26 @@ public class Regular extends Slot{
 
     @Override
     public int calculatefee() {
-        int fee = 30 + hours*20;
+        int fee = 30 + (hours-1)*20;
 
         if(surchargeApplicable){
             fee += 15;
         }
         fee = feeAfterScheme(fee);
 
-        earning(fee);
 
         return fee;
     }
 
-    public int getRegularCount(){
+    public static void freeUpslot(){
+        count--;
+    }
+
+    public static int getRegularCount(){
         return count;
     }
 
-    public int getAvailableRegular(){
+    public static int getAvailableRegular(){
         return total-count;
     }
 

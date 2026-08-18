@@ -10,23 +10,25 @@ public class Large extends Slot{
 
     @Override
     public int calculatefee() {
-        int fee = 30 + hours*20;
+        int fee = 30 + (hours-1)*20;
 
         if(surchargeApplicable){
             fee += 15;
         }
         fee = feeAfterScheme(fee);
 
-        earning(fee);
-
         return fee;
     }
 
-    public int getLargeCount(){
+    public static void freeUpslot(){
+        count--;
+    }
+
+    public static int getLargeCount(){
         return count;
     }
 
-    public int getAvailableLarge(){
+    public static int getAvailableLarge(){
         return total-count;
     }
 

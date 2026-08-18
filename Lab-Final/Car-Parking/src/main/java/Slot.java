@@ -2,7 +2,8 @@ import static java.lang.Math.max;
 
 public abstract class Slot {
 
-    protected int hours;
+    protected int hours = 0;
+    private static int countTotal = 0;
 
     protected String license;
     protected boolean StudentScheme = false;
@@ -21,26 +22,22 @@ public abstract class Slot {
             }
         }
 
-        count++;
+        countTotal++;
     }
 
     private static int MAXSTAY;
-    private static int count = 0;
     protected static int refused = 0;
-    protected static int earned = 0;
     protected boolean surchargeApplicable = false;
-
-
 
 
     public abstract int calculatefee();
 
-    public void refused(){
+    public static void refused(){
         refused++;
     }
 
     public void passtime(int hours){
-        this.hours = hours;
+        this.hours += hours;
     }
 
     public static void setMAXSTAY(int hours){
@@ -63,11 +60,12 @@ public abstract class Slot {
         return fee;
     }
 
-    public void earning(int fee){
-        earned += fee;
+
+    public static int getCount(){
+        return countTotal;
     }
 
-    public int getEarned(){
-        return earned;
+    public String getLicense(){
+        return license;
     }
 }
