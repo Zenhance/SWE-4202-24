@@ -10,6 +10,6 @@ public class BIKE extends Vehicle{
         };
     }
     public int hourlyRate(){
-        return 10;
+        return 5;
     }
 }
