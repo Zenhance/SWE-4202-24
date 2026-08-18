@@ -19,6 +19,7 @@ class Vehicle {
         return type;
     }
 
+
     public SchemeType getScheme() {
         return scheme;
     }

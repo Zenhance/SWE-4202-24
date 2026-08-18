@@ -59,7 +59,6 @@ class CarPark {
                 Vehicle v = slot.getCurrentVehicle();
                 v.incrementHours(hours);
 
-                // Eviction processing triggers immediately upon crossing maximum thresholds
                 if (v.getHoursStood() >= maxStay) {
                     int removalHours = (maxStay + 9) / 10;
                     int totalHoursToBill = maxStay + removalHours;
@@ -74,7 +73,6 @@ class CarPark {
         Slot slot = findSlotByPlate(plate);
         Vehicle v = slot.getCurrentVehicle();
 
-        // Quantize minimum stay durations to 1 full hour per requirement
         int billableHours = Math.max(1, v.getHoursStood());
         runningTotalEarned += slot.calculateBill(billableHours, v.getType(), v.getScheme());
         slot.clear();

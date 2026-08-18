@@ -22,6 +22,7 @@ class Slot {
     }
 
     public void clear() {
+
         this.currentVehicle = null;
     }
 
