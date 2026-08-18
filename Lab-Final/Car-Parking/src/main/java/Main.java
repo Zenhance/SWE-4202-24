@@ -29,7 +29,13 @@ public class Main {
                     Vehicle.setMaxTimeStay(hours);
                 }
                 case "BIKE" -> {
-                    vehicles.add(new Motorcycle(field[1]));
+                    for (int i = 0; i < slots.size(); i++) {
+                        if (slots.get(i).isFree()) {
+                            slots.get(i).equiped();
+                            vehicles.add(new Motorcycle(field[1]));
+                            vehicles.get(vehicles.size()-1).park();
+                        }
+                    }
                 }
                 case "CAR" -> {
                     vehicles.add(new Car(field[1]));
