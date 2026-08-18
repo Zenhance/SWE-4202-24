@@ -130,6 +130,14 @@ public class Parkinglot {
 
     }
 
+    public Integer leave(String plate) {
+        Vehicle v = parkedVehicles.remove(plate);
+        if (v == null) {
+            return null;
+        }
+
+
+
 
 
 
