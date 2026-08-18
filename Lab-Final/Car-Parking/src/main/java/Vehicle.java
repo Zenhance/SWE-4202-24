@@ -11,5 +11,10 @@ public abstract class Vehicle {
     public String getRegistration(){
         return registration;
     }
+    public String getPass(){
+        return pass;
+    }
+
+
 
 }
