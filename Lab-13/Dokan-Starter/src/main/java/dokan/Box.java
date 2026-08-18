@@ -1,21 +1,17 @@
 package dokan;
 
 public final class Box<T> {
-
     private final T value;
 
-    private Box(T value) {
+    private Box(T value){
         this.value = value;
     }
-
-    public static <T> Box<T> of(T value) {
+    public static <T> Box<T> of(T value){
         if (value == null) {
             throw new IllegalArgumentException("Box cannot contain null");
         }
-
         return new Box<>(value);
     }
-
     public static <T> Box<T> empty() {
         return new Box<>(null);
     }
@@ -28,11 +24,9 @@ public final class Box<T> {
         if (isEmpty()) {
             throw new IllegalStateException();
         }
-
         return value;
     }
-
-    public T orElse(T fallback) {
+    public T orElse(T fallback){
         if (isEmpty()) {
             return fallback;
         }
