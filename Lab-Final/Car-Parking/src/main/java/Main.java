@@ -52,6 +52,7 @@ public class Main {
                 lot.advanceTime(hours);
 
 
-            }
+            }  else if (command.equals("LEAVE")) {
+                lot.leave(field[1]);
         }
-    } }
+    } } }
