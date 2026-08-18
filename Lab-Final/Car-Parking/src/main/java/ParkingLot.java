@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class ParkingLot {
@@ -67,6 +68,24 @@ public class ParkingLot {
         v.setAssignedSlot(selectedSlot);
         activeVehicles.add(v);
     }
+
+    public void passTime(int hours) {
+        List<Vehicle> evicted = new ArrayList<>();
+
+        for (Vehicle v : activeVehicles) {
+            v.addHours(hours);
+            if (v.getHoursStood() >= maxStay) {
+                evicted.add(v);
+            }
+        }
+
+        for (Vehicle v : evicted) {
+            activeVehicles.remove(v);
+            totalEarned += v.calculateEvictionBill(maxStay);
+            getSlotList(v.getAssignedSlot().getKind()).add(v.getAssignedSlot());
+        }
+    }
+
 
 
 
