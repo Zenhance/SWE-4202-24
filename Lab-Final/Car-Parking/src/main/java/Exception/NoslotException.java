@@ -1,3 +1,5 @@
+package Exception;
+
 public class NoslotException extends Exception{
     public NoslotException(){
         super("There is no available slot");
