@@ -4,6 +4,7 @@ public abstract class Vehicle {
     private final String Vehicleplate;
     private int time;
     private final Category category;
+    private discountScheme scheme;
     private slotType keptslot;
 
     public Vehicle(String Vehicleplate, Category category) {
@@ -33,6 +34,16 @@ public abstract class Vehicle {
         this.keptslot=keptslot;
         this.time=time;
     }
+    public int stayHours(int presentTime)
+    {
+        return presentTime-time;
+    }
+
+    public discountScheme getScheme()
+    {
+        return scheme;
+    }
+
     public abstract slotType[] prefferedSlot();
     public abstract int hourlyRate();
 }
