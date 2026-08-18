@@ -1,5 +1,3 @@
-package discounts;
-
 public class StudentDiscount implements DiscountScheme {
 
     @Override

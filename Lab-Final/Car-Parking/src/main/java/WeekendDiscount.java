@@ -1,5 +1,3 @@
-package discounts;
-
 public class WeekendDiscount implements DiscountScheme {
 
     @Override

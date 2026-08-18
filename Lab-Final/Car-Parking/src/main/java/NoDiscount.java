@@ -1,5 +1,3 @@
-package discounts;
-
 public class NoDiscount implements DiscountScheme{
 
     @Override

@@ -1,5 +1,3 @@
-package enums;
-
 public enum SchemeType {
     NONE,
     STUDENT,

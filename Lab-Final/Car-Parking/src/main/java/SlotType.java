@@ -1,5 +1,3 @@
-package enums;
-
 public enum SlotType {
 
     BIKE(10, 5, 0),
