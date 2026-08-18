@@ -14,6 +14,7 @@ public class Main {
     static ArrayList<Integer> hoursParked = new ArrayList<>();
 
     static int maxStay;
+    static int refusedCount = 0;
     static int totalEarned = 0;
 
     public static void main(String[] args){
