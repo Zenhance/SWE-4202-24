@@ -4,9 +4,10 @@ public class Vehicle {
     private int hoursStood;
     private Slot assignedSlot;
 
-    public Vehicle( String plate, Slot assignedSlot){
+    public Vehicle( String plate, DiscountScheme discountScheme){
         this.plate = plate;
-        this.assignedSlot = assignedSlot;
+        this.discountScheme = discountScheme;
+
         this.hoursStood = 0;
     }
 

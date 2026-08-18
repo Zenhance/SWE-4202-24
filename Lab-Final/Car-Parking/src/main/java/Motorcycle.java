@@ -1,5 +1,5 @@
 public class Motorcycle extends Vehicle{
-    public Motorcycle(String plate, Slot assignedSlot){
-        super(plate, assignedSlot);
+    public Motorcycle(String plate, DiscountScheme discountScheme){
+        super(plate, discountScheme);
     }
 }
