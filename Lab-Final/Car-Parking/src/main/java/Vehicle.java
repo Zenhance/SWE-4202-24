@@ -1,3 +1,5 @@
+import exceptions.NoPlateException;
+
 public abstract class Vehicle {
     private final String plate;
     private Slot slotType;
@@ -5,7 +7,9 @@ public abstract class Vehicle {
     private static int maxTimeStay;
     private boolean isParked;
 
-    protected Vehicle(String plate) {
+    public Vehicle(String plate, DiscountScheme discountType) throws NoPlateException {
+        if (plate.equals("-"))
+            throw new NoPlateException("Plate was left blank");
         this.plate = plate;
         this.timeStayed = 0;
         isParked = false;
