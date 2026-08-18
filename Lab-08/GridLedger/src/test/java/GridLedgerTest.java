@@ -175,7 +175,7 @@ class GridLedgerTest {
         @Test
         @DisplayName("a lifeline connection IS a residential connection")
         void lifelineIsAResidential() {
-            Connection life = new LifelineConnection(new Meter(0, 100));
+            Connection life = new Connection(new Meter(0, 100));
             assertTrue(life instanceof ResidentialConnection,
                     "a lifeline household is a residential connection with a rebate, not a separate category");
         }
@@ -186,7 +186,7 @@ class GridLedgerTest {
             Meter a = new Meter(200, 520);   // 320 units
             Meter b = new Meter(200, 520);   // an identical reading for the plain residential
 
-            Connection life = new LifelineConnection(a);
+            Connection life = new Connection(a);
             Connection res  = new ResidentialConnection(b);
 
             assertEquals(res.energyCharge() * (1.0 - LIFELINE_REBATE), life.energyCharge(), EPS,
@@ -198,7 +198,7 @@ class GridLedgerTest {
         @Test
         @DisplayName("everything else about it matches a residential connection")
         void sharesTheResidentialCommonParts() {
-            Connection life = new LifelineConnection(new Meter(200, 520));
+            Connection life = new Connection(new Meter(200, 520));
             Connection res  = new ResidentialConnection(new Meter(200, 520));
             assertEquals(res.fixedCharge(), life.fixedCharge(), EPS, "same fixed charge as residential");
             // Full bill: 1799 energy, 100 fixed, 179.9 fuel, 103.945 tax => 2182.845
