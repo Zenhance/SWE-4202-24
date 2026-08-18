@@ -52,6 +52,19 @@ public class Parkinglot {
     }
 
 
+    private void returnOneSlot(slotType type) {
+        if (type == slotType.BIKE) {
+            bikeFree = bikeFree + 1;
+        } else if (type == slotType.REGULAR) {
+            regularFree = regularFree + 1;
+        } else {
+            largeFree = largeFree + 1;
+        }
+    }
+
+
+
+
 
 
 
