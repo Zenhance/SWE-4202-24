@@ -3,10 +3,12 @@ public abstract class Vehicle {
     private Slot preferredType;
     private int timeStayed;
     private static int maxTimeStay;
+    private boolean isParked;
 
     protected Vehicle(String plate) {
         this.plate = plate;
         this.timeStayed = 0;
+        isParked = false;
     }
 
     public void setPreferredType(Slot preferredType) {
@@ -27,5 +29,9 @@ public abstract class Vehicle {
 
     public int getMaxTimeStay() {
         return maxTimeStay;
+    }
+
+    public void park() {
+        isParked = true;
     }
 }
