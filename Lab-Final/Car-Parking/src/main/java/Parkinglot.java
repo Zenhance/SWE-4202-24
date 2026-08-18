@@ -78,6 +78,15 @@ public class Parkinglot {
         refusedCount = refusedCount + 1;
     }
 
+    public slotType slotOf(String plate) {
+        Vehicle v = parkedVehicles.get(plate);
+        if (v == null) {
+            return null;
+        }
+        return v.getKeptslot();
+    }
+
+
 
 
 
