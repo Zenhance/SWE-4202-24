@@ -56,8 +56,11 @@ public class lot {
         return null;
     }
 
+    public int bill(vehicles v , Slot slot , int hours){
 
-        }
+    }
+
+
 
 
 
