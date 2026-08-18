@@ -1,2 +1,5 @@
-public class NoSlotException extends Exception{
+public class NoSlotException extends ParkingException{
+    public NoSlotException(String message) {
+        super(message);
+    }
 }
