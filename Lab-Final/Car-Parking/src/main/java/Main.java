@@ -30,7 +30,11 @@ public class Main {
 
 
             }
-                else if(command.equals("BIKE"){
+                else if(command.equals("BIKE")){
+                String plate = field[1];
+                Category category = Category.valueOf(field[2]);
+                Vehicle vehicle = new Bike(plate, category);
+                lot.register(vehicle);
 
             }
 
@@ -46,7 +50,7 @@ public class Main {
                 lot.register(vehicle);
             }
 
-            else if(command.equals("REFUSED"){
+            else if(command.equals("REFUSED")){
                 System.out.println(lot.refusedCount());
             }
             // ... one branch per keyword ...
