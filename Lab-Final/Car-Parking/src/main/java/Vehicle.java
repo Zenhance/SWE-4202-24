@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class Vehicle {
     private String plate;
     private DiscountScheme discountScheme;
@@ -34,4 +36,23 @@ public class Vehicle {
     public void setDiscountScheme(DiscountScheme discountScheme) {
         this.discountScheme = discountScheme;
     }
+
+    public void addHours(int hours) {
+        this.hoursStood += hours;
+    }
+
+    public SlotKind getHomeSlotKind() {
+        return null;
+    }
+
+    public List<SlotKind> getPreferredSlots() {
+        return null;
+    }
+
+    public  int calculateCurrentBill() {
+        int rawBill = assignedSlot.calculateRawBill(this, hoursStood);
+        return discountScheme.applyDiscount(rawBill);
+    }
+
+
 }
