@@ -45,4 +45,30 @@ public class ParkingLot {
     public void setMaxStay(int maxStay) {
         this.maxStay = maxStay;
     }
+
+
+    public void parkVehicle(Vehicle v) throws ParkRefusalException {
+        if (v.getPlate() == null || v.getPlate().equals("-")) {
+            throw new InvalidPlateException();
+        }
+        Slot selectedSlot = null;
+        for (SlotKind kind : v.getPreferredSlots()) {
+            List<Slot> pool = getSlotList(kind);
+            if (!pool.isEmpty()) {
+                selectedSlot = pool.remove(pool.size() - 1);
+                break;
+            }
+        }
+
+        if (selectedSlot == null) {
+            throw new NoSlotAvailableException();
+        }
+
+        v.setAssignedSlot(selectedSlot);
+        activeVehicles.add(v);
+    }
+
+
+
+
 }
