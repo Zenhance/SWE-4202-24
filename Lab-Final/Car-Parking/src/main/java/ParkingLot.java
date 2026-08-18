@@ -54,6 +54,7 @@ public class ParkingLot {
                     break;
                 }
             }
+            if(chosen!=null){ break; }
         }
         if (chosen == null) {
             throw new NoSlotException();
