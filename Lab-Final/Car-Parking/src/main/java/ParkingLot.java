@@ -164,7 +164,10 @@ public class ParkingLot {
                 removeList.add(v);
             }
         }
-        for(int i)
+        for(int i=0; i<removeList.size(); i++){
+            vehicles.remove(removeList.get(i));
         }
+        }
+
     }
 
