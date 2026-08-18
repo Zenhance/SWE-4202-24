@@ -11,7 +11,8 @@ public class Truck extends Vehicle {
 
     @Override
     public String[] getAcceptedSlotTypes(){
-        return new String[]{"LARGE"};
+        return new String[]
+                {"LARGE"};
     }
 }
 
