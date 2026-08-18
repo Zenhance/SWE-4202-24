@@ -71,8 +71,11 @@ public class ParkingLot {
             return String.valueOf(calculateBill(vehicle, slot, hours);
         );
     }
-
     private Slot findVehicle(String plate) {
+            for (Slot slot : slots) {
+                if (!slot.isFree() && slot.getVehicle().getPlate().equals(plate)) return slot;
+        }
+        return null;
     }
 
     private int calculateBill(Vehicle vehicle, Slot slot, int hours) {
@@ -108,4 +111,16 @@ public class ParkingLot {
         }
         return count;
     }
+    public int getEarned() {
+        return earned;
+    }
+
+    public int getRefused() {
+        return refused;
+    }
+
+    public void addRefusal() {
+        refused++;
+    }
+
 }

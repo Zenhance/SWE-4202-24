@@ -29,6 +29,6 @@ public class Slot {
     }
 
     public void removeVehicle() {
-
+        vehicle = null;
     }
 }
