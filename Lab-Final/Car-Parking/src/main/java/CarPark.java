@@ -3,7 +3,7 @@ import java.util.Map;
 
 public class CarPark {
     private int bikeCapacity, regularCapacity, largeCapacity;
-    private int bikeOccupied, regularOccipied, largeOccupied;
+    private int bikeOccupied, regularOccupied, largeOccupied;
     private int maxStay;
     private int earned;
     private int refused;
@@ -14,7 +14,7 @@ public class CarPark {
         this.regularCapacity = regularCapacity;
         this.largeCapacity = largeCapacity;
         this.bikeOccupied = bikeOccupied;
-        this.regularOccipied = regularOccipied;
+        this.regularOccupied = regularOccipied;
         this.largeOccupied = largeOccupied;
     }
 
@@ -31,7 +31,18 @@ public class CarPark {
     }
     public int occupiedOf(SlotKind kind){
         if (kind == SlotKind.BIKE) return bikeOccupied;
-        if (kind == SlotKind.REGULAR) return regularOccipied;
+        if (kind == SlotKind.REGULAR) return regularOccupied;
         return largeOccupied;
     }
+    public void enter(Vehicle vehicle) throws ParkingException {
+        if (vehicle.plate.equals("")) {
+            throw new NoPlateException();
+        }
+}
+    public void leave(String plate) throws ParkingException {
+        Vehicle vehicle = vehicles.get(plate);
+        if (vehicle == null) {
+            throw new UnknownPlateException();
+        }
+}
 }
