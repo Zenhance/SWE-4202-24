@@ -29,7 +29,20 @@ public class Main {
                     int hours = scanner.nextInt();
                     Slot.setMaxStay(hours);
                 }
-                case "BIKE" ->
+                case "BIKE" -> {}
+                case "CAR" -> {}
+                case "TRUCK" -> {}
+                case "PASSTIME" -> {}
+                case "LEAVE" ->{}
+                case "BILL" ->{}
+                case "SLOT" -> {}
+                case "FREE" ->{}
+                case "COUNT" -> System.out.println(activeSlots.size());
+                case "EARNED" -> System.out.println(Slot.getTotalEarned());
+                case "REFUSED" -> System.out.println(Slot.getTotalDeclined());
+                case "END" -> {
+                    return;
+                }
             }
         }
 
