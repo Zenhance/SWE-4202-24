@@ -9,19 +9,19 @@ public class ParkingLot {
     private int earned;
     private int refused;
 
-    public ParkingLot( int bikeslots, int regular, int large, int maxStay) {
+    public ParkingLot(int bikeslots, int regular, int large, int maxStay) {
         slots = new ArrayList<>();
         this.currentHour = 0;
         this.maxStay = maxStay;
         this.earned = 0;
         this.refused = 0;
-        for(int i =0; i<bikeslots; i++){
+        for (int i = 0; i < bikeslots; i++) {
             slots.add(new BikeSlot());
         }
-        for(int i =0; i<regular; i++){
+        for (int i = 0; i < regular; i++) {
             slots.add(new RegularSlot());
         }
-        for(int i =0; i<large; i++){
+        for (int i = 0; i < large; i++) {
             slots.add(new LargeSlot());
         }
 
@@ -48,45 +48,47 @@ public class ParkingLot {
     public int getRefused() {
         return refused;
     }
-    public void addRefusal(){
+
+    public void addRefusal() {
         refused++;
     }
-    public Slot findFreeSlot(String type){
-        for(Slot slot : slots){
-            if (!slot.isOccupied() && slot.getSlot().equals(type)) {
+
+    public Slot findFreeSlot(String type) {
+        for (Slot slot : slots) {
+            if (!slot.isOccupied() && slot.getSlot().equalsIgnoreCase(type)) {
                 return slot;
             }
         }
         return null;
     }
-    public void parkVehicle(Vehicle vehicle) throws NoPlateException, NoSlotException{
-        if(vehicle.getPlate() == null){
+
+    public void parkVehicle(Vehicle vehicle) throws NoPlateException, NoSlotException {
+        if (vehicle.getPlate() == null) {
             throw new NoPlateException("Cant park without a plate");
         }
         Slot tempSlot = null;
-        if(vehicle instanceof Bike){
+        if (vehicle instanceof Bike) {
             tempSlot = findFreeSlot("BIKE");
-            if(tempSlot == null){
+            if (tempSlot == null) {
                 tempSlot = findFreeSlot("REGULAR");
             }
-            if(tempSlot == null){
+            if (tempSlot == null) {
                 tempSlot = findFreeSlot("LARGE");
             }
-            if(tempSlot == null){
+            if (tempSlot == null) {
                 throw new NoSlotException("No free space available!!");
             }
         } else if (vehicle instanceof Car) {
-                tempSlot = findFreeSlot("REGULAR");
-                if(tempSlot == null){
-                    tempSlot = findFreeSlot("LARGE");
-                }
-                if (tempSlot == null){
-                    throw new NoSlotException("No free space available!!");
-                }
-        }
-        else if(vehicle instanceof Truck){
+            tempSlot = findFreeSlot("REGULAR");
+            if (tempSlot == null) {
+                tempSlot = findFreeSlot("LARGE");
+            }
+            if (tempSlot == null) {
+                throw new NoSlotException("No free space available!!");
+            }
+        } else if (vehicle instanceof Truck) {
             tempSlot = findFreeSlot("LARGE");
-            if(tempSlot == null){
+            if (tempSlot == null) {
                 throw new NoSlotException("No free space available!!");
             }
 
@@ -94,4 +96,34 @@ public class ParkingLot {
         tempSlot.park(vehicle);
 
     }
+
+    public Slot findvehicle(String plate) {
+        for (Slot slot : slots) {
+            if (slot.isOccupied() && slot.getCurrentVehicle().getPlate().equals(plate)) {
+                return slot;
+            }
+
+        }
+        return null;
+    }
+
+    public String getVehicleSlot(String plate) {
+
+        Slot slot = findvehicle(plate);
+        if (slot == null) {
+            return "no vehicle";
+        }
+        return slot.getSlot();
+
+    }
+    public int getvehiclecount(){
+        int count = 0;
+        for(Slot slot: slots){
+            if(slot.isOccupied()){
+                count++;
+            }
+        }
+        return count;
+    }
+
 }
