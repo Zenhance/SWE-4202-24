@@ -23,41 +23,26 @@ package dokan;
  */
 public final class Box<T> {
 
-    private final T value;
-
-    private Box(T value){
-        this.value = value;
-    }
-
     /** A box holding {@code value}. Refuse null: a full box holding nothing is a lie. */
     public static <T> Box<T> of(T value) {
-        return new Box<>(java.util.Objects.requireNonNull(value, "value"));
     }
 
     /** An empty box. */
     public static <T> Box<T> empty() {
-        return new Box<>(null);
     }
 
     public boolean isEmpty() {
-        return value == null;
     }
 
     /** The value inside. Opening an empty box is a programming mistake, so throw. */
     public T get() {
-        if(isEmpty()){
-            throw new IllegalStateException("Box is empty");
-        }
-        return value;
     }
 
     /** The value inside, or {@code fallback} if the box is empty. */
     public T orElse(T fallback) {
-        return isEmpty() ? fallback : value;
     }
 
     @Override
     public String toString() {
-        return isEmpty() ? "Box is empty" : "Box: ("+ value +")";
     }
 }
