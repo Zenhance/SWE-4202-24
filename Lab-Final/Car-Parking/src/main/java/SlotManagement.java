@@ -12,6 +12,10 @@ public class SlotManagement
         bikeSlot = new ArrayList<>();
         regularSlot = new ArrayList<>();
         largeSlot = new ArrayList<>();
+
+        createSlots(bikeSlot, Slot.Type.BIKE, bike);
+        createSlots(regularSlot, Slot.Type.REGULAR, regular);
+        createSlots(largeSlot, Slot.Type.LARGE, large);
     }
 
     public Slot findFreeSlot(List<Slot> slots)
