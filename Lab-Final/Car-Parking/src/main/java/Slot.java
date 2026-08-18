@@ -61,4 +61,9 @@ public class Slot
         }
         vehicle=null;
     }
+    public void assignVehicle(Vehicle vehicle)
+    {
+        this.vehicle = vehicle;
+        vehicle.setSlot(this);
+    }
 }
