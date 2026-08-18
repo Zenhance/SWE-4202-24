@@ -6,7 +6,7 @@ public class largeslots  implements Surcharge{
 
     @Override
     public long surcharge() {
-        return 0;
+        return 25;
     }
     public long lfee(int h,int bill) {
         return firsthour_fee+(h-1)*furtherhour_fee+ v.discount(bill);
