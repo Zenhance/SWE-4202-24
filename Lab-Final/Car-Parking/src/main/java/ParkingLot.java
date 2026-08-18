@@ -75,5 +75,28 @@ public class ParkingLot {
         }
         }
 
+        public int getFurthrRate(SlotType type){
+        if(type == SlotType.BIKE){
+            return 5;
+        }
+        else if(type == SlotType.REGULAR){
+            return 20;
+        }
+        else{
+            return 40;
+        }
+        }
+        public int getSurcharge(SlotType type){
+            if(type == SlotType.BIKE){
+                return 0;
+            }
+            else if(type == SlotType.REGULAR){
+                return 15;
+            }
+            else{
+                return 25;
+            }
+        }
+
     }
 
