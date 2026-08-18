@@ -85,6 +85,7 @@ public class Main {
 
         int maxStay = Integer.MAX_VALUE;
         int refused = 0;
+        int currentTime = 0;
 
         int totalEarned = 0;
 
@@ -120,6 +121,7 @@ public class Main {
 
                 VehicleType vType = VehicleType.valueOf(field[0]);
                 String numPlate = field[1];
+                DiscountType discountType = DiscountType.valueOf(field[2]);
 
                 SlotType assigned = null;
 
@@ -134,9 +136,24 @@ public class Main {
                     } else if (largeOcc < largeCap) {
                         assigned = SlotType.LARGE;
                         largeOcc++;
-                    } else {
-                        refused++;
                     }
+                } else if (vType == VehicleType.CAR) {
+                    if (regOcc < regCap) {
+                        assigned = SlotType.REGULAR;
+                        regOcc++;
+                    } else if (largeOcc < largeCap) {
+                        assigned = SlotType.REGULAR;
+                        largeOcc++;
+                    }
+                } else if (vType == VehicleType.TRUCK) {
+                    if (largeOcc < largeOcc) {
+                        assigned = SlotType.LARGE;
+                        largeOcc++;
+                    }
+                }
+
+                if (assigned != null) {
+                    parkedVehicles.add(new Vehicle(numPlate, vType, assigned, discountType, currentTime ));
                 }
 
             }
