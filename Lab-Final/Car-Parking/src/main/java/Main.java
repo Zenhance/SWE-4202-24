@@ -12,5 +12,8 @@ public class Main {
         ArrayList<String> parkedIn = new ArrayList<>();
         ArrayList<Integer> hoursParked = new ArrayList<>();
 
+        int maxStay;
+        int totalEarned = 0;
+
     }
 }
