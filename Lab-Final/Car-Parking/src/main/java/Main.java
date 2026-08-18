@@ -134,5 +134,17 @@ public class Main {
         if (type.equals("BIKE") && parkedSlot.equals("BIKE")) inOwnSlot = true;
         if (type.equals("CAR") && parkedSlot.equals("REGULAR")) inOwnSlot = true;
         if (type.equals("TRUCK") && parkedSlot.equals("LARGE")) inOwnSlot = true;
+        if (!inOwnSlot) {
+            bill += surchargeAmt;
+        }
+        String discount = discounts.get(i);
+        if (discount.equals("STUDENT")) {
+            int deduction = (20 * bill) / 100;
+            bill -= deduction;
+        } else if (discount.equals("WEEKEND")) {
+            bill = (bill - 10);
+        }
+
+        return bill;
     }
 }
