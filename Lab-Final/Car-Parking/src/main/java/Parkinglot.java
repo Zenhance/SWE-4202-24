@@ -29,7 +29,12 @@ public class Parkinglot {
     }
 
 
-    public void setBikeFree(int bikeFree) {
-        this.bikeFree = bikeFree;
+    private int getFreeSlots(slotType type) {
+        if (type == slotType.BIKE) {
+            return bikeFree;
+        } else if (type == slotType.REGULAR) {
+            return regularFree;
+        } else {
+            return largeFree;
+        }
     }
-}
