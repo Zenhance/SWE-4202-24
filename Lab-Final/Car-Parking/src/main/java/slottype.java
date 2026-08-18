@@ -5,4 +5,5 @@ public enum slottype {
     BIKE,
     REGULAR,
     LARGE
+
 }

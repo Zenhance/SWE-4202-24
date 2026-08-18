@@ -58,7 +58,27 @@ public class lot {
         return null;
     }
 
+
+    public int free(String kind) {
+        slottype type = slottype.valueOf(kind);
+        int count = 0;
+        for (Slot slot : slots) {
+            if (slot.getType() == type && slot.isFree()) {
+                count++;
+            }
+        }
+        return count;
+    }
+    public void addRefusal() {
+        refused++;
+    }
+
+
+
+
 }
+
+
 
 
 
