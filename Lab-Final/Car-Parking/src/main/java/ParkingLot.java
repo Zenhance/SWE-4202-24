@@ -32,5 +32,16 @@ private int getFreeSlots(SlotType type){
         return largeFree;
     }
 }
+private void returnOneSlot(SlotType type){
+    if(type==SlotType.BIKE){
+        bikeFree=bikeFree+1;
+    }
+    else if(type==SlotType.REGULAR){
+        regularFree=regularFree+1;
+    }
+    else{
+        largeFree=largeFree+1;
+    }
+}
 
 }
