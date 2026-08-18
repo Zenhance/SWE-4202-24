@@ -69,6 +69,12 @@ public class Main {
                 int hours = Integer.parseInt(field[1]);
                 lot.advanceTime(hours);
             }
+            else if (command.equals("LEAVE")) {
+                lot.leave(field[1]);
+
+            } else if (command.equals("EARNED")) {
+                System.out.println(lot.totalEarned());
+            }
         }
     }
 }
