@@ -6,11 +6,13 @@ public abstract class Vehicle {
     private int timeStayed;
     private static int maxTimeStay;
     private boolean isParked;
+    private DiscountScheme discountType;
 
     public Vehicle(String plate, DiscountScheme discountType) throws NoPlateException {
         if (plate.equals("-"))
             throw new NoPlateException("Plate was left blank");
         this.plate = plate;
+        this.discountType = discountType;
         this.timeStayed = 0;
         isParked = false;
     }
@@ -23,6 +25,10 @@ public abstract class Vehicle {
 
     public int getTimeStayed() {
         return timeStayed;
+    }
+
+    public void timePassed(int hours) {
+        timeStayed += hours;
     }
 
     public static void setMaxTimeStay(int maxTimeStay) {
