@@ -2,7 +2,7 @@ public abstract class Vehicle {
     private final String plate;
     private Slot preferredType;
     private int timeStayed;
-    private int maxTimeStay;
+    private static int maxTimeStay;
 
     protected Vehicle(String plate) {
         this.plate = plate;
@@ -19,10 +19,10 @@ public abstract class Vehicle {
         return timeStayed;
     }
 
-    public void setMaxTimeStay(int maxTimeStay) {
+    public static void setMaxTimeStay(int maxTimeStay) {
         if (maxTimeStay <= 0)
             throw new IllegalArgumentException("Max time stay cannot be neagtive or zero");
-        this.maxTimeStay = maxTimeStay;
+        Vehicle.maxTimeStay = maxTimeStay;
     }
 
     public int getMaxTimeStay() {
