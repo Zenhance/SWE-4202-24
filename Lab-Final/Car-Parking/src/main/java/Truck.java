@@ -7,6 +7,7 @@ public class Truck extends Vehicle {
     public SlotType[] slotPreference() {
         return new SlotType[]{
                 SlotType.LARGE
+
         };
     }
 
