@@ -22,4 +22,8 @@ public abstract class Vehicle {
     public int getEntryTime(){
         return entryTime;
     }
+    public void park(SlotType slot,int currentTime){
+        this.assignedSlot=slot;
+        this.entryTime=currentTime;
+    }
 }
