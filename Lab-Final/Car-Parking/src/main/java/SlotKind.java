@@ -1,15 +1,15 @@
 import java.security.interfaces.DSAPublicKey;
 
-public class SlotKind {///
-    BIKE(10,5,0);
-    REGULAR(30,20,15);
+public enum SlotKind {///
+    BIKE(10,5,0),
+    REGULAR(30,20,15),
     LARGE(50,40,25);
 
-    public final int firstHour;
-    public final int furtherHour;
-    public final int surcharge;
+    final int firstHour;
+    final int furtherHour;
+    final int surcharge;
 
-    Slotkind(int firstHour, int furtherHour, int surcharge){
+    SlotKind(int surcharge, int furtherHour, int firstHour){
         this.firstHour=firstHour;
         this.furtherHour=furtherHour;
         this.surcharge=surcharge;
