@@ -13,15 +13,19 @@ public class Vehicle {
         this.keptslot = keptslot;
     }
 
-    public String VehiclePlate(){
-    return null;
+    public String getVehiclePlate(){
+    return Vehicleplate;
     }
 
     public int getHourEntered(){
-        return 0;
+        return hourEntered;
     }
 
     public slotType getKeptslot() {
         return keptslot;
+    }
+
+    public Category getCategory(){
+        return category;
     }
 }
