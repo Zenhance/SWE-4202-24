@@ -1,37 +1,41 @@
-public class Slot {
-    private int bikeSlot;
-    private int regularSlot;
-    private int largeSlot;
+public abstract class Slot {
+    protected boolean student=false;
+    protected boolean weekend=false;
+    protected int earnings=0;
     private int MAXSTAY;
     private static int count=0;
-    private int PASSTIME;
+    private int refused=0;
+    protected int PASSTIME;
+    private String numPlate;
+    private String Scheme;
 
-    Slot(int bikeSlot, int regularSlot, int largeSlot){
-        this.bikeSlot=bikeSlot;
-        this.regularSlot=regularSlot;
-        this.largeSlot=largeSlot;
+    Slot(String numPlate){
+        this.numPlate=numPlate;
+    }
+    Slot(String numPlate, String Scheme){
+        this.numPlate=numPlate;
+        this.Scheme=Scheme;
+        if(Scheme.equals(student)){
+            student=true;
+        } else if (Scheme.equals(weekend)) {
+            weekend=true;
+
+        }
+        count++;
     }
 
+    public void setMAXSTAY(int MAXSTAY) {
+        this.MAXSTAY = MAXSTAY;
+    }
 
-
-    public static int getCount() {
+    public void setPASSTIME(int PASSTIME) {
+        this.PASSTIME = PASSTIME;
+    }
+    public void refused(){
+        refused++;
+    }
+    public int getSlot(){
         return count;
     }
-
-    public int getBikeSlot() {
-        return bikeSlot;
-    }
-
-    public int getRegularSlot() {
-        return regularSlot;
-    }
-
-    public int getLargeSlot() {
-        return largeSlot;
-    }
-
-    public int getSlot(){
-        return bikeSlot+regularSlot+largeSlot;
-    }
-
+    protected abstract int fee();
 }
