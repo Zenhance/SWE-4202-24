@@ -45,6 +45,15 @@ public class Main {
                 System.out.println(parkingLot.getFreeSlots(field[1])
                 );
             }
+            else if (command.equals("COUNT")) {
+                System.out.println(parkingLot.getCount());
+            }
+            else if (command.equals("REFUSED")) {
+                System.out.println(parkingLot.getRefused());
+            }
+            else if (command.equals("BILL")) {
+                Integer bill = parkingLot.getBill(field[1]);
+
 
 
 
