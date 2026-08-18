@@ -1,6 +1,11 @@
 package main.java;
 
 public abstract class Vehicle {
-    private String name;
+    private Type type;
+    private String plate;
+    private Scheme scheme;
+    private double Entry;
+
+
 
 }

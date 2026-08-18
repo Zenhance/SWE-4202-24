@@ -16,7 +16,11 @@ public abstract class Slot {
     public Vehicle getCurrentVehicle() {
         return currentVehicle;
     }
-    public double fee(){
+    public Vehicle (Vehicle type){
+        return this.ty
+    }
+    public double feeCalc(){
+        if()
 
     }
 }
