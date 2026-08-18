@@ -1,5 +1,5 @@
 package src.main.java;
 
-public enum SlotTypes {
+public enum SlotType {
     BIKE, REGULAR, LARGE
 }
