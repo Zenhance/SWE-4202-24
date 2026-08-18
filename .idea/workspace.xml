@@ -1,57 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="474c171b-20ee-41c5-bb01-9ea41392defa" name="Changes" comment="" />
+    <list default="true" id="d48e5e5c-b4f4-4284-a4c3-706b76f0bf2a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExternalProjectsData">
-    <projectState path="$PROJECT_DIR$/Lab-04/CineCart">
-      <ProjectState />
-    </projectState>
-    <projectState path="$PROJECT_DIR$/Lab-07/Relay">
-      <ProjectState />
-    </projectState>
-    <projectState path="$PROJECT_DIR$/Lab-08/GridLedger">
-      <ProjectState />
-    </projectState>
-    <projectState path="$PROJECT_DIR$/Lab-09/TakaLink">
-      <ProjectState />
-    </projectState>
-    <projectState path="$PROJECT_DIR$/Lab-10/Sketchpad">
-      <ProjectState />
-    </projectState>
-    <projectState path="$PROJECT_DIR$/Lab-11/KenaKata">
-      <ProjectState />
-    </projectState>
-    <projectState path="$PROJECT_DIR$/Lab-13/Dokan-Starter">
-      <ProjectState />
-    </projectState>
-  </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <projects_view>
-          <tree_state>
-            <expand />
-            <select />
-          </tree_state>
-        </projects_view>
-      </state>
-    </system>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
+  "associatedIndex": 7
 }]]></component>
-  <component name="ProjectId" id="3HkstPMa2QGCLwKTBsCN1iRngbx" />
+  <component name="ProjectId" id="3I4MgfzoYKCnIVGssqGvvv3TY4S" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -67,11 +29,11 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="474c171b-20ee-41c5-bb01-9ea41392defa" name="Changes" comment="" />
-      <created>1786423615290</created>
+      <changelist id="d48e5e5c-b4f4-4284-a4c3-706b76f0bf2a" name="Changes" comment="" />
+      <created>1787019499424</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1786423615290</updated>
+      <updated>1787019499424</updated>
     </task>
     <servers />
   </component>
