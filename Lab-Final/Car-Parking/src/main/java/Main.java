@@ -156,6 +156,16 @@ public class Main {
                     parkedVehicles.add(new Vehicle(numPlate, vType, assigned, discountType, currentTime ));
                 }
 
+            } else if (field[0].equals("FREE")) {
+                SlotType st = SlotType.valueOf(field[1]);
+
+                if (st==SlotType.BIKE) System.out.println(bikeCap - bikeOcc);
+                else if (st == SlotType.REGULAR) {
+                    System.out.println(regCap - regOcc);
+                } else if (st == SlotType.LARGE) {
+                    System.out.println(largeCap - largeOcc);
+                }
+
             }
 
         }
