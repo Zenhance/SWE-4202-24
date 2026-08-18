@@ -68,7 +68,7 @@ public class Carkpark {
         if(vehicle==null){
             throw new NoVehicleFoundException("The plate number "+ plate + "is not in the park");
         }
-       // earned+=billedFor(vehicle,Math.max(1, vehicle.getHoursStood()));
+        //earned+=billedFor(vehicle,Math.max(1, vehicle.getHoursStood()));
         changeFreeCount(vehicle.getCurrentSlot(),1);
         parkedVehicle.remove(vehicle);
      }
