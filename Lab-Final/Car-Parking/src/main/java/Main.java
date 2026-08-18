@@ -12,6 +12,7 @@ public class Main {
         int maxtime=1;
         int refused=0,count=0;
         Fee fee=new Fee();
+        int earned=0;
         List<Vehicles> vehicles=new ArrayList<>();
 
                 Scanner input = new Scanner(System.in);
@@ -27,8 +28,7 @@ public class Main {
                         break;
                     }
                     else if (field[0].equals("MAXSTAY")) {
-                        int hours = Integer.parseInt(field[1]);
-                        maxtime = hours;
+                        maxtime = Integer.parseInt(field[1]);
 
                         // ... do something with hours ...
                     }
@@ -40,16 +40,16 @@ public class Main {
                         try{
                         for( i=0;i<vehicles.size();i++){
                             if(vehicles.get(i).plate.equals(field[1])){
-                                if(Objects.equals(vehicles.get(i).slot, "BIKE")){slot.bike++;}
-                                else if(Objects.equals(vehicles.get(i).slot, "REGULAR")){slot.regular++;}
-                                else if (Objects.equals(vehicles.get(i).slot, "LARGE")) {slot.truck++;}
+                                if(Objects.equals(vehicles.get(i).slot, "BIKE")){slot.bike++;earned+=fee.Calcfee(vehicles.get(i));vehicles.remove(vehicles.get(i));}
+                                else if(Objects.equals(vehicles.get(i).slot, "REGULAR")){slot.regular++;earned+=fee.Calcfee(vehicles.get(i));vehicles.remove(vehicles.get(i));}
+                                else if (Objects.equals(vehicles.get(i).slot, "LARGE")) {slot.truck++;earned+=fee.Calcfee(vehicles.get(i));vehicles.remove(vehicles.get(i));}
                                 count--;
                                 break;
                             }
 
                         }
-                        if(i==vehicles.size()-1) throw new IllegalArgumentException();
-                        } catch (IllegalArgumentException e) {
+                        if(i==vehicles.size()-1) throw new notfound();
+                        } catch (notfound e) {
                             System.out.println("NONE");
                         }
                     }
@@ -68,10 +68,6 @@ public class Main {
                         if(i==vehicles.size()-1)System.out.println("NONE");
                     }
                     else if (field[0].equals("EARNED")) {
-                        int earned=0;
-                        for(int i=0;i<vehicles.size();i++){
-                            earned+=fee.Calcfee(vehicles.get(i));
-                        }
                         System.out.println(earned);
                     }
                     else if(field[0].equals("FREE")) {
@@ -83,7 +79,9 @@ public class Main {
                         int hours = Integer.parseInt(field[1]);
                         for (Vehicles vehicle : vehicles) {
                             vehicle.time+=hours;
-                            if(vehicle.time>maxtime) vehicle.time=max(vehicle.time,maxtime)+1;
+                            if(vehicle.time>maxtime) {
+                                vehicle.time =vehicle.time + 1;
+                            }
 
                         }
 
@@ -108,11 +106,12 @@ public class Main {
                         } catch (Slotsfull e) {
                             vehicles.remove(v);
                             refused++;
-                            System.out.println(0);
                         }
                         v.scheme=field[2];
                     }
-                    else if (field[0].equals("CAR")) { Vehicles v=new Vehicles(field[1]);
+                    else if (field[0].equals("CAR")) {
+
+                        Vehicles v=new Vehicles(field[1]);
                         try {
                             if(field[1].equals("-")) throw new noplates();
                         } catch (noplates e) {
@@ -126,7 +125,6 @@ public class Main {
                         } catch (Slotsfull e) {
                             vehicles.remove(v);
                             refused++;
-                            System.out.println(0);
                         }
                         v.scheme=field[2];
                     }
@@ -146,13 +144,11 @@ public class Main {
                         } catch (Slotsfull e) {
                             vehicles.remove(v);
                             refused++;
-                            System.out.println(0);
                         }
                         v.scheme=field[2];
                     }
 
                     else if (field[0].equals("REFUSED")) {System.out.println(refused);}
-                    // ... one branch per keyword ...
                 }
             }
         }

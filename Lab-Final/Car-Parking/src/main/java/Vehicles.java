@@ -10,4 +10,5 @@ public class Vehicles {
     public Vehicles(String plate) {
         this.plate = plate;
     }
+
 }
