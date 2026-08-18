@@ -9,6 +9,7 @@ public abstract class Vehicle {
         this.category = category;
 
     }
+    //getters
     public String getPlate(){
         return plate;
     }
@@ -17,5 +18,8 @@ public abstract class Vehicle {
     }
     public SlotType getAssignedSlot(){
         return assignedSlot;
+    }
+    public int getEntryTime(){
+        return entryTime;
     }
 }
