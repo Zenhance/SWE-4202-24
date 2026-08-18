@@ -53,10 +53,45 @@ public class ParkingLot {
     }
     public Slot findFreeSlot(String type){
         for(Slot slot : slots){
-            if (!slot.isOccupied() && slot.getSlot().equalsIgnoreCase(type)) {
+            if (!slot.isOccupied()) {
                 return slot;
             }
         }
         return null;
+    }
+    public void parkVehicle(Vehicle vehicle) throws NoPlateException, NoSlotException{
+        if(vehicle.getPlate() == null){
+            throw new NoPlateException("Cant park without a plate");
+        }
+        Slot tempSlot = null;
+        if(vehicle instanceof Bike){
+            tempSlot = findFreeSlot("BIKE");
+            if(tempSlot == null){
+                tempSlot = findFreeSlot("REGULAR");
+            }
+            if(tempSlot == null){
+                tempSlot = findFreeSlot("LARGE");
+            }
+            if(tempSlot == null){
+                throw new NoSlotException("No free space available!!");
+            }
+        } else if (vehicle instanceof Car) {
+                tempSlot = findFreeSlot("REGULAR");
+                if(tempSlot == null){
+                    tempSlot = findFreeSlot("LARGE");
+                }
+                if (tempSlot == null){
+                    throw new NoSlotException("No free space available!!");
+                }
+        }
+        else if(vehicle instanceof Truck){
+            tempSlot = findFreeSlot("LARGE");
+            if(tempSlot == null){
+                throw new NoSlotException("No free space available!!");
+            }
+
+        }
+        tempSlot.park(vehicle);
+
     }
 }
