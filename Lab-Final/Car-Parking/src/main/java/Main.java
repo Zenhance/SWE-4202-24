@@ -25,11 +25,8 @@ public class Main {
                 int hours = Integer.parseInt(field[1]);
 
                 lot.setMaxStay(hours);
-            } else if (command.equals("COUNT")) {
-                System.out.println(lot.parkedCount());
-
-
-            } else if (command.equals("BIKE")) {
+            }
+            else if (command.equals("BIKE")) {
                 String plate = field[1];
                 Category category = Category.valueOf(field[2]);
                 Vehicle vehicle = new Bike(plate, category);
@@ -45,16 +42,36 @@ public class Main {
                 Category category = Category.valueOf(field[2]);
                 Vehicle vehicle = new Truck(plate, category);
                 lot.register(vehicle);
-            } else if (command.equals("REFUSED")) {
-                System.out.println(lot.refusedCount());
-            } else if (command.equals("PASSTIME")) {
-                int hours = Integer.parseInt(field[1]);
-                lot.advanceTime(hours);
+            }
+            else if (command.equals("SLOT")) {
+                slotType slot = lot.slotOf(field[1]);
+                if (slot == null) {
+                    System.out.println("NONE");
+                } else {
+                    System.out.println(slot.name());
+                }
+                if (command.equals("FREE")) {
+                    slotType type = slotType.valueOf(field[1]);
+                    System.out.println(lot.freeCount(type));
 
+                } else if (command.equals("COUNT")) {
+                    System.out.println(lot.parkedCount());
 
-            }  else if (command.equals("LEAVE")) {
-                lot.leave(field[1]); }
-                else if (command.equals("EARNED")) {
+                } else if (command.equals("REFUSED")) {
+                    System.out.println(lot.refusedCount());
+
+                }
+
+                } else if (command.equals("PASSTIME")) {
+                    int hours = Integer.parseInt(field[1]);
+                    lot.advanceTime(hours);
+                } else if (command.equals("LEAVE")) {
+                    lot.leave(field[1]);
+
+                } else if (command.equals("EARNED")) {
                     System.out.println(lot.totalEarned());
+                }
+            }
         }
-    } } }
+    }
+}
