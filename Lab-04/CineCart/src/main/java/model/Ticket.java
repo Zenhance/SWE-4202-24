@@ -1,0 +1,38 @@
+package model;
+
+public abstract class Ticket extends LineItem
+{
+    protected Showtime showtime;
+    protected int row;
+    protected int col;
+    protected double basePrice;
+
+    protected Ticket(Showtime showtime, int row, int col, double basePrice)
+    {
+        this.showtime = showtime;
+        this.row = row;
+        this.col = col;
+        this.basePrice = showtime.getMovie().getBasePrice();
+    }
+
+    public Showtime getShowtime()
+    {
+        return showtime();
+    }
+    public int getRow()
+    {
+        return row;
+    }
+    public int getCol()
+    {
+        return col;
+    }
+    public boolean isTicket()
+    {
+        return true;
+    }
+    public String describe()
+    {
+        return "T" + showtime.getId() + " - R" + row + "C" + col;
+    }
+}

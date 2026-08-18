@@ -1,0 +1,34 @@
+public class BankAccount
+{
+ private String ownername;
+ private double balance;
+
+ public BankAccount(String ownername)
+ {
+  this.ownername = ownername;
+  this.balance = 0;
+ }
+
+ public double deposit(double amount)
+ {
+  balance += amount;
+  return balance;
+ }
+
+ public double withdraw(double amount)
+ {
+  if (amount <= balance) {
+   balance -= amount;
+   return balance;
+  } else {
+   System.out.println(" Insufficient funds ");
+   return balance;
+  }
+ }
+
+ public void printStatement()
+ {
+  System.out.println("Owner's Name: " + ownername);
+  System.out.println("Current Balance: " + balance);
+ }
+}
