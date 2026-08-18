@@ -10,9 +10,8 @@ public abstract class Vehicle {
         this.numberPlate=numberPlate;
         this.hoursStayed=0;
         this.discount=discount;
-        this.slot=slot;
+        this.slot=null;
     }
-
     public Discount getDiscount() {
         return discount;
     }
