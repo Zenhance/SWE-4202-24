@@ -49,4 +49,28 @@ public abstract class Slot {
         }
         return fee;
     }
+
+    public static void setMaxStay(int hours) {
+        maxStay = hours;
+    }
+
+    public static int getMaxStay() {
+        return maxStay;
+    }
+
+    public static void incrementDeclined() {
+        totalDeclined++;
+    }
+
+    public static int getTotalDeclined() {
+        return totalDeclined;
+    }
+
+    public static void addEarned(int amount) {
+        totalEarned += amount;
+    }
+
+    public static int getTotalEarned() {
+        return totalEarned;
+    }
 }
