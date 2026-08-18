@@ -1,5 +1,7 @@
 import exceptions.NoPlateException;
 
+import javax.swing.*;
+
 public abstract class Vehicle {
     private final String plate;
     private Slot slotType;
@@ -8,11 +10,18 @@ public abstract class Vehicle {
     private boolean isParked;
     private DiscountScheme discountType;
 
-    public Vehicle(String plate, DiscountScheme discountType) throws NoPlateException {
+    public Vehicle(String plate, String discountType) throws NoPlateException {
         if (plate.equals("-"))
             throw new NoPlateException("Plate was left blank");
         this.plate = plate;
-        this.discountType = discountType;
+
+        if (discountType.equals("NONE"))
+            this.discountType = new NoDiscount();
+        if (discountType.equals("STUDENT"))
+            this.discountType = new StudentDiscount();
+        if (discountType.equals("WEEKEND"))
+            this.discountType = new WeekendDiscount();
+
         this.timeStayed = 0;
         isParked = false;
     }
