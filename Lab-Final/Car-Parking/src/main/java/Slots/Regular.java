@@ -5,8 +5,13 @@ public class Regular extends Slot{
     public int firstHour=50;
     public int regularHour=40;
     public int surcharge=25;
-    int slotsAvailable(){
+    public int slotsAvailable(){
         return count;
     }
+
+    public void set(int x){
+        count=x;
+    }
+
 }
 

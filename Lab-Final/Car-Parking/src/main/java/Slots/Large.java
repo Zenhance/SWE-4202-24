@@ -8,5 +8,9 @@ public class Large extends Slot{
     int slotsAvailable(){
         return count;
     }
+
+    public void set(int x){
+        count=x;
+    }
 }
 
