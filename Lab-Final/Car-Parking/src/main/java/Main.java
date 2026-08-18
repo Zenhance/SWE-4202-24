@@ -19,10 +19,32 @@ public class Main {
             } else if (field[0].equals("MAXSTAY")) {
                 int hours = Integer.parseInt(field[1]);
                 
-            } else if (field[0].equals("COUNT")) {
+            } else if (field[0].equals("BIKE")) {
                 System.out.println(/* the number you worked out */);
+            }else if (field[0].equals("CAR")) {
+
+            }else if (field[0].equals("TRUCK")) {
+
+            }else if (field[0].equals("PASSTIME")) {
+
+            }else if (field[0].equals("LEAVE")) {
+
+            }else if (field[0].equals("BILL")) {
+
+            }else if (field[0].equals("SLOT")) {
+
+            }else if (field[0].equals("FREE")) {
+
+            }else if (field[0].equals("COUNT")) {
+
+            }else if (field[0].equals("EARNED")) {
+
+            }else if (field[0].equals("REFUSED")) {
+
+            }else if (field[0].equals("END")) {
+
             }
-            // ... one branch per keyword ...
+
         }
     }
 }
