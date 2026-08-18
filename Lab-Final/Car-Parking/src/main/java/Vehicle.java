@@ -1,15 +1,15 @@
 package src.main.java;
 
-abstract class Vehicle {
+public abstract class Vehicle {
     String Plate;
     Slot slot;
     int hours;
     Discount discount;
 
-    public Vehicle(String plate){
+    public Vehicle(String plate) {
         this.Plate = plate;
-        slot=null;
+        slot = null;
         hours = 0;
     }
-
 }
+

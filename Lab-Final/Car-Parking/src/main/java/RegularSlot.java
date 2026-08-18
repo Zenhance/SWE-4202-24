@@ -8,4 +8,5 @@ public class RegularSlot extends Slot{
         setSurcharge(15);
     }
 
+
 }

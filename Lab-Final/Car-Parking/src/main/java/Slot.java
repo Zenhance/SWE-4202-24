@@ -1,7 +1,7 @@
 package src.main.java;
 
 public class Slot {
-    private boolean isFree;
+    boolean isFree;
     private int firstHourFee;
     private int laterHourFee;
     private int surcharge;

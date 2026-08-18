@@ -7,3 +7,4 @@ public class NoDiscount extends Discount {
         super(slot);
     }
 }
+
