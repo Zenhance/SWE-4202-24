@@ -1,5 +1,13 @@
-public class Car extends Car{
-    public Car(String plate,Category category){
-        super(plate,category);
+public class Car extends Vehicle {
+    public Car(String plate, Category category) {
+        super(plate, category);
+    }
+
+    @Override
+    public SlotType[] prefferedSlot() {
+        return new SlotType[]{
+                SlotType.REGULAR,
+                SlotType.LARGE
+        };
     }
 }
