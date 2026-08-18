@@ -26,3 +26,6 @@ public void setSlots(int bike,int regular,int large){
 public void setMaxStay(int hrs) {
     maxStayhrs = hrs;
 }
+public void advanceTime(int hrs){
+    time+=hrs;
+}
