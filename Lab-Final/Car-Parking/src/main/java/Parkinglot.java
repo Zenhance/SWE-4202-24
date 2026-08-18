@@ -105,8 +105,24 @@ public class Parkinglot {
         int hoursParked = time - v.getEntryTime();
         return calculateFee(v, hoursParked);
     }
+    public Integer leave(String plate) {
+        Vehicle v = parkedVehicles.remove(plate);
+        if (v == null) {
+            return null;
+        }
+        int hoursParked =time - v.getEntryTime();
+        int fee = calculateFee(v, hoursParked);
+        totalEarned = totalEarned + fee;
+        returnOneSlot(v.getAssignedSlot());
+        return fee;
+    }
+    private int calculateFee(Vehicle v, int hoursParked) {
+        int hours = hoursParked;
+        if (hours < 1) {
+            hours = 1;
+        }
 
 
-}
+    }
 
 
