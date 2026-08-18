@@ -22,9 +22,9 @@ public abstract class Vehicle {
     public int getEntryTime(){
         return entryTime;
     }
-    public void park(SlotType slot,int currentTime){
+    public void park(SlotType slot,int time){
         this.assignedSlot=slot;
-        this.entryTime=currentTime;
+        this.entryTime=time;
     }
     public abstract SlotType[] prefferedSlot();
     public abstract int hourlyRate();
