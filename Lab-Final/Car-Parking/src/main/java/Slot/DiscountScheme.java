@@ -1,4 +1,5 @@
 package Slot;
 
-public class DiscountScheme {
+public enum DiscountScheme {
+    NONE, STUDENT, WEEKEND;
 }

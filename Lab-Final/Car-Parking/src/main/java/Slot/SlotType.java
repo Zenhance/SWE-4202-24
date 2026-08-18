@@ -1,4 +1,5 @@
 package Slot;
 
-public class SlotType {
+public enum SlotType {
+    BIKE, REGULAR, LARGE;
 }
