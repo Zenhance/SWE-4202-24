@@ -58,6 +58,19 @@ private void returnOneSlot(SlotType type){
         largeFree = largeFree + 1;
     }
 }
+    public void register(Vehicle vehicle) {
+        SlotType[] choices = vehicle.prefferedSlot();
+
+        for (int i = 0; i < choices.length; i++) {
+            SlotType type = choices[i];
+            if (getFreeSlots(type) > 0) {
+                takeOneSlot(type);
+                vehicle.park(type, currentTime);
+                parkedVehicles.put(vehicle.getPlate(), vehicle);
+                return;
+            }
+        }
+refusedCount=refusedCount+1;
 }
 
 
