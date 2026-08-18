@@ -4,7 +4,7 @@ public class Slot {
 
     public Slot(SlotType type){
         this.type = type;
-        vehicle==null;
+        vehicle=null;
     }
     public boolean isFree(){
         return vehicle==null;
