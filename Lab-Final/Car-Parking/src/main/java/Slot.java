@@ -11,7 +11,5 @@ public class Slot {
         this.regName=regName;
     }
 
-    public Slot(SlotType slot) {
-        this.slot = slot;
-    }
+
 }
