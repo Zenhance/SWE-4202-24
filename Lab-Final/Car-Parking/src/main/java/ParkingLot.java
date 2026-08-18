@@ -130,6 +130,7 @@ public class ParkingLot {
         if(v==null){
             throw new NotFoundException();
         }
+        return calculateBill(v,false);
         }
 
     }
