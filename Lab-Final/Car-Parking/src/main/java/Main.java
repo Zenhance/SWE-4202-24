@@ -1,3 +1,5 @@
+import exceptions.NoPlateException;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -32,12 +34,12 @@ public class Main {
                     for (int i = 0; i < slots.size(); i++) {
                         if (slots.get(i).isFree()) {
                             slots.get(i).equiped();
-                            vehicles.add(new Motorcycle(field[1]));
                             try {
+                                vehicles.add(new Motorcycle(field[1], field[2]));
                                 vehicles.get(vehicles.size()-1).park();
                                 vehicles.get(vehicles.size()-1).setSlotType(slots.get(i));
                             }
-                            catch (NullPointerException e) {
+                            catch (NullPointerException | NoPlateException e) {
                                 System.out.println(e.getMessage());
                             }
                         }
@@ -47,12 +49,12 @@ public class Main {
                     for (int i = 0; i < slots.size(); i++) {
                         if (!(slots.get(i) instanceof BikeSlot) && slots.get(i).isFree()) {
                             slots.get(i).equiped();
-                            vehicles.add(new Car(field[1]));
                             try {
+                                vehicles.add(new Car(field[1], field[2]));
                                 vehicles.get(vehicles.size()-1).park();
                                 vehicles.get(vehicles.size()-1).setSlotType(slots.get(i));
                             }
-                            catch (NullPointerException e) {
+                            catch (NullPointerException | NoPlateException e) {
                                 System.out.println(e.getMessage());
                             }
                         }
@@ -62,12 +64,12 @@ public class Main {
                     for (int i = 0; i < slots.size(); i++) {
                         if (slots.get(i) instanceof LargeSlot && slots.get(i).isFree()) {
                             slots.get(i).equiped();
-                            vehicles.add(new Truck(field[1]));
                             try {
+                                vehicles.add(new Truck(field[1], field[2]));
                                 vehicles.get(vehicles.size()-1).park();
                                 vehicles.get(vehicles.size()-1).setSlotType(slots.get(i));
                             }
-                            catch (NullPointerException e) {
+                            catch (NullPointerException | NoPlateException e) {
                                 System.out.println(e.getMessage());
                             }
                         }
@@ -75,6 +77,11 @@ public class Main {
                 }
                 case "COUNT" -> {
                     System.out.println(vehicles.size());
+                }
+                case "PASSTIME" -> {
+                    for (Vehicle v : vehicles) {
+                        v.timePassed(Integer.parseInt(field[1]));
+                    }
                 }
             }
         }
