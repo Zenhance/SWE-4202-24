@@ -33,18 +33,45 @@ public class Main {
                         if (slots.get(i).isFree()) {
                             slots.get(i).equiped();
                             vehicles.add(new Motorcycle(field[1]));
-                            vehicles.get(vehicles.size()-1).park();
+                            try {
+                                vehicles.get(vehicles.size()-1).park();
+                            }
+                            catch (NullPointerException e) {
+                                System.out.println(e.getMessage());
+                            }
                         }
                     }
                 }
                 case "CAR" -> {
-                    vehicles.add(new Car(field[1]));
+                    for (int i = 0; i < slots.size(); i++) {
+                        if (!(slots.get(i) instanceof BikeSlot) && slots.get(i).isFree()) {
+                            slots.get(i).equiped();
+                            vehicles.add(new Car(field[1]));
+                            try {
+                                vehicles.get(vehicles.size()-1).park();
+                            }
+                            catch (NullPointerException e) {
+                                System.out.println(e.getMessage());
+                            }
+                        }
+                    }
                 }
                 case "TRUCK" -> {
-                    vehicles.add(new Truck(field[1]));
+                    for (int i = 0; i < slots.size(); i++) {
+                        if (slots.get(i) instanceof LargeSlot && slots.get(i).isFree()) {
+                            slots.get(i).equiped();
+                            vehicles.add(new Truck(field[1]));
+                            try {
+                                vehicles.get(vehicles.size()-1).park();
+                            }
+                            catch (NullPointerException e) {
+                                System.out.println(e.getMessage());
+                            }
+                        }
+                    }
                 }
                 case "COUNT" -> {
-                    System.out.println(/* the number you worked out */);
+                    System.out.println(vehicles.size());
                 }
             }
         }
