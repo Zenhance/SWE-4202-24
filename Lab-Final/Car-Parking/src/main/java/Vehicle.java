@@ -26,4 +26,6 @@ public abstract class Vehicle {
         this.assignedSlot=slot;
         this.entryTime=currentTime;
     }
+    public abstract SlotType[] prefferdSlot();
+    public abstract int hourlyRate();
 }
