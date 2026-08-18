@@ -1,11 +1,20 @@
 package main.java;
 
 public abstract class Vehicle {
-    private Type type;
     private String plate;
     private Scheme scheme;
-    private double Entry;
 
+    public Vehicle(String plate, Scheme scheme) {
+        this.plate = plate;
+        this.scheme = scheme;
+    }
 
+    public String getPlate() {
+        return plate;
+    }
 
+    public Scheme getScheme() {
+        return scheme;
+    }
+    public abstract String getPrefferedSlot();
 }
