@@ -3,4 +3,10 @@ public abstract class Vehicle {
     private final Category category;
     private SlotType assignedSlot;
     private int entryTime;
+
+    protected Vehicle(String plate, Category category) {
+        this.plate = plate;
+        this.category = category;
+
+    }
 }
