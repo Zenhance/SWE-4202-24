@@ -1,6 +1,6 @@
 public class Car extends Vehicle {
-    public Car(String plate, Category category) {
-        super(plate, category);
+    public Car(String Vehicleplate, Category category) {
+        super(Vehicleplate, category);
     }
 
     @Override
@@ -8,7 +8,14 @@ public class Car extends Vehicle {
         return new slotType[]{
                 slotType.REGULAR,
                 slotType.LARGE
-        }
+        };
+
+    }
+    @Override
+    public int hourlyRate(){
+        return 20;
+    }
+}
 
 
 
