@@ -63,6 +63,17 @@ public class ParkingLot {
 
             vehicles.add(v);
         }
-        public int getFirstRate(SlotType type){}
+        public int getFirstRate(SlotType type){
+        if(type == SlotType.BIKE){
+            return 10;
+        }
+        else if(type == SlotType.REGULAR){
+            return 30;
+        }
+        else{
+            return 30;
+        }
+        }
+
     }
 
