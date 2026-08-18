@@ -62,6 +62,6 @@ public final class Box<T> {
 
     @Override
     public String toString() {
-        throw new UnsupportedOperationException("TODO: Box.toString");
+        return value == null ? "Box(empty)" : "Box(" + value + ")";
     }
 }
