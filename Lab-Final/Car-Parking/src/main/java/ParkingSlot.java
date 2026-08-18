@@ -19,7 +19,15 @@ public  class ParkingSlot {
         freeBike=bikeSlots;
         freeRegular=regularSlots;
         freeLarge=largeSlots;
-
+        for(int i=0;i<bikeSlots;i++){
+            System.out.println("Bike");
+        }
+        for(int i=0;i<largeSlots;i++){
+            System.out.println("LARGE");
+        }
+        for(int i=0;i<regularSlots;i++){
+            System.out.println("REGULAR");
+        }
     }
     public void setMaxStay(int hours) {
         this.maxStay=hours;
