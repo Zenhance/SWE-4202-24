@@ -53,7 +53,7 @@ public class ParkingLot {
     }
     public Slot findFreeSlot(String type){
         for(Slot slot : slots){
-            if (!slot.isOccupied()) {
+            if (!slot.isOccupied() && slot.getSlot().equals(type)) {
                 return slot;
             }
         }
