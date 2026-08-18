@@ -78,6 +78,13 @@ public class Main {
             if (freeBike > 0) { freeBike--; parkedIn.set(i, "BIKE"); return "BIKE"; }
             if (freeRegular > 0) { freeRegular--; parkedIn.set(i, "REGULAR"); return "REGULAR"; }
             if (freeLarge > 0) { freeLarge--; parkedIn.set(i, "LARGE"); return "LARGE"; }
+        }else if (type.equals("CAR")) {
+            if (freeRegular > 0) { freeRegular--; parkedIn.set(i, "REGULAR"); return "REGULAR"; }
+            if (freeLarge > 0) { freeLarge--; parkedIn.set(i, "LARGE"); return "LARGE"; }
+
+        }else if (type.equals("TRUCK")) {
+            if (freeLarge > 0) { freeLarge--; parkedIn.set(i, "LARGE"); return "LARGE"; }
         }
+
     }
 }
