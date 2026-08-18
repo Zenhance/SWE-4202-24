@@ -37,7 +37,7 @@ public final class CompileFailWitnesses {
         // A shelf is for items. A String is not an Item, so the bound must reject it:
         //   error: type argument String is not within bounds of type-variable T
         //
-        // Shelf<String> nonsense = new Shelf<>(4);
+       // Shelf<String> nonsense = new Shelf<>(4);
 
         // ---- 3 ----------------------------------------------------------
         // A box of snacks does not hold books, and the compiler already knows:
