@@ -19,3 +19,28 @@ public class Main {
                 break;
             }
 
+            try {
+                switch (command) {
+                    case "SLOTS" -> park.setupSlots(
+                            Integer.parseInt(parts[1]),
+                            Integer.parseInt(parts[2]),
+                            Integer.parseInt(parts[3])
+                    );
+                    case "MAXSTAY" -> park.setMaxStay(Integer.parseInt(parts[1]));
+                    case "BIKE", "CAR", "TRUCK" -> handleEntry(park, command, parts[1], parts[2]);
+                    case "PASSTIME" -> park.passTime(Integer.parseInt(parts[1]));
+                    case "LEAVE" -> park.leaveVehicle(parts[1]);
+                    case "BILL" -> System.out.println(park.getBill(parts[1]));
+                    case "SLOT" -> System.out.println(park.getSlotKind(parts[1]));
+                    case "FREE" -> System.out.println(park.getFreeCount(SlotKind.valueOf(parts[1])));
+                    case "COUNT" -> System.out.println(park.getActiveCount());
+                    case "EARNED" -> System.out.println(park.getTotalEarned());
+                    case "REFUSED" -> System.out.println(park.getTotalRefused());
+                }
+            } catch (ParkRefusalException e) {
+                park.incrementRefused();
+            }
+        }
+        scanner.close();
+    }
+
