@@ -57,4 +57,8 @@ public abstract class Vehicle {
     public String getPlate() {
         return plate;
     }
+
+    public Slot getSlotType() {
+        return slotType;
+    }
 }
