@@ -26,4 +26,16 @@ public abstract class Slot {
             throw new IllegalArgumentException("Surcharge cannot be negative but can be zero");
         this.surcharge = surcharge;
     }
+
+    public int getFirstHourFee() {
+        return firstHourFee;
+    }
+
+    public int getLaterFee() {
+        return laterFee;
+    }
+
+    public int getSurcharge() {
+        return surcharge;
+    }
 }
