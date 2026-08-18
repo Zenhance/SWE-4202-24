@@ -21,7 +21,12 @@ public class Main {
             } else if (field[0].equals("COUNT")) {
                 System.out.println(/* the number you worked out */);
             } else if (field[0].equals("SLOT")) {
-                if(field[2].isBlank())
+                if(field[2].isBlank()){
+                    Vehicle v = Vehicle.search(field[1]);
+                    if(v!=null) {
+                        Slot s = new Slot(v);
+                    }
+                }
 
             }
             // ... one branch per keyword ...
