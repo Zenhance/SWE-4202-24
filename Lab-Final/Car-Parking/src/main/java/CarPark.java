@@ -33,7 +33,7 @@ public class CarPark {
                 }
             }
         }
-        
+
         return null;
     }
 
@@ -45,5 +45,11 @@ public class CarPark {
         }
 
         return slot;
+    }
+
+    public void passTime(int passedHours) {
+        for (Slot slot : slots) {
+            slot.passTime(passedHours);
+        }
     }
 }
