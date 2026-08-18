@@ -151,6 +151,20 @@ public class ParkingLot {
         vehicles.remove(v);
         }
 
-
+        public void passTime(int h){
+        for(int i=0; i< vehicles.size(); i++){
+            vehicles.get(i).hours = vehicles.get(i).hours+h;
+        }
+        ArrayList<Vehicle> removeList = new ArrayList<Vehicle>();
+        for(int i=0; i< vehicles.size(); i++){
+            Vehicle v = vehicles.get(i);
+            if(v.hours>=maxStay){
+                earned = earned + calculateBill(v.true);
+                v.slot.vehicle = null;
+                removeList.add(v);
+            }
+        }
+        for(int i)
+        }
     }
 
