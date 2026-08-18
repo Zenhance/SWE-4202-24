@@ -1,4 +1,7 @@
 package src.main.java;
 
-public class Truck {
+public class Truck extends Vehicle {
+    public Truck(String plate) {
+        super(plate);
+    }
 }
