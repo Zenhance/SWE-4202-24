@@ -15,5 +15,16 @@ public class ParkingLot{
         freeRegular = regularSlots;
         freeLarge = largeSlots;
     }
+    public void setMaxStay(int hours){
+        maxStay = hours;
+    }
+    public void park(Vehicle vehicle) {
+        String registration = vehicle.getRegistration();
+        if (!isValidRegistration(registration) || findVehicle(registration) != null){
+            refused++;
+            return;
+        }
+        String[] preferences = vehicle.getSlotPreferences();
+        String assignedSlot = null;
 
-}
+    }
