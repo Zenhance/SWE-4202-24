@@ -9,13 +9,13 @@ public class ParkingLot {
     int regularSlot = 0;
     int largeSlot = 0;
 
-    static int count = 0;
-    static int refused = 0;
+    int count = 0;
+    int refused = 0;
 
-    static ArrayList<Vehicle> vehicles = new ArrayList<>();
-    static ArrayList<Vehicle> bikes = new ArrayList<>();
-    static ArrayList<Vehicle> regulars = new ArrayList<>();
-    static ArrayList<Vehicle> larges = new ArrayList<>();
+    ArrayList<Vehicle> vehicles = new ArrayList<>();
+    ArrayList<Vehicle> bikes = new ArrayList<>();
+    ArrayList<Vehicle> regulars = new ArrayList<>();
+    ArrayList<Vehicle> larges = new ArrayList<>();
 
     public ParkingLot(int maxBikeSlot, int maxRegularSlot, int maxLargeSlot) {
         this.maxBikeSlot = maxBikeSlot;
@@ -28,7 +28,7 @@ public class ParkingLot {
         count++;
     }
 
-    private static Vehicle search(String number){
+    private Vehicle search(String number){
         for(Vehicle v: vehicles){
             if(number.equals(v.number)) return v;
         }
@@ -106,26 +106,42 @@ public class ParkingLot {
     }
 
 
+    public int getReturned() {
+        return refused;
+    }
 
-    public static ArrayList<Vehicle> getLarges() {
+    public int getCount(){
+        return count;
+    }
+
+    public int getFreeBikeSlot(){
+        return maxBikeSlot-bikeSlot;
+    }
+
+    public int getFreeRegularSlot(){
+        return maxRegularSlot-regularSlot;
+    }
+
+    public int getFreeLargeSlot(){
+        return maxLargeSlot-largeSlot;
+    }
+
+    public ArrayList<Vehicle> getLarges() {
         return larges;
     }
 
-    public static ArrayList<Vehicle> getRegulars() {
+    public ArrayList<Vehicle> getRegulars() {
         return regulars;
     }
 
-    public static ArrayList<Vehicle> getBikes() {
+    public ArrayList<Vehicle> getBikes() {
         return bikes;
     }
 
-    public static ArrayList<Vehicle> getVehicles() {
+    public ArrayList<Vehicle> getVehicles() {
         return vehicles;
     }
 
-    public static int getReturned() {
-        return refused;
-    }
 
 
 }
