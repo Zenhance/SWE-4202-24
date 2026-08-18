@@ -1,5 +1,15 @@
 public class Truck extends Vehicle{
-    public Truck(String vehicleplate, int time, Category category, slotType keptslot) {
-        super(vehicleplate, time, category, keptslot);
+    public Truck(String plate,Category category){
+        super(plate,category);
+    }
+    @Override
+    public slotType[] prefferedSlot() {
+        return new slotType[]{
+                slotType.LARGE
+        };
+    }
+    @Override
+    public int hourlyRate(){
+        return 30;
     }
 }

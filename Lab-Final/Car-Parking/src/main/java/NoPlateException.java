@@ -1,3 +1,6 @@
-public class NoPlateException extends Exception{
+public class NoPlateException extends ParkingException{
 
+    public NoPlateException(String message) {
+        super(message);
+    }
 }

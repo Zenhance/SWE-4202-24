@@ -3,11 +3,11 @@ public class Bike extends Vehicle{
         super(plate,category);
     }
     @Override
-    public SlotType[] prefferedSlot(){
-        return new SlotType[]{
-                SlotType.BIKE,
-                SlotType.REGULAR,
-                SlotType.LARGE
+    public slotType[] prefferedSlot(){
+        return new slotType[]{
+                slotType.BIKE,
+                slotType.REGULAR,
+                slotType.LARGE
         };
     }
     @Override
