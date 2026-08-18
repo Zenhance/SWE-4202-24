@@ -1,10 +1,10 @@
-import exceptions.NoPlateException;
+import exceptions.*;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) throws ParkingException {
         Scanner input = new Scanner(System.in);
 
         while (input.hasNextLine()) {
@@ -82,6 +82,25 @@ public class Main {
                     for (Vehicle v : vehicles) {
                         v.timePassed(Integer.parseInt(field[1]));
                     }
+                }
+                case "LEAVE" -> {
+                    boolean vehicleInPark = false;
+                    int leavingCarIndex = 0;
+                    for (int i = 0; i < vehicles.size(); i++) {
+
+                        if (vehicles.get(i).getPlate().equals(field[2])) {
+                            vehicleInPark = true;
+                            leavingCarIndex = i;
+                            break;
+                        }
+                    }
+                    if (!vehicleInPark)
+                        throw new UnknownPlateException("Plate is not in the park");
+
+                    vehicles.remove(leavingCarIndex);
+                }
+                case "BILL" -> {
+
                 }
             }
         }

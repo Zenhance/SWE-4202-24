@@ -53,4 +53,8 @@ public abstract class Vehicle {
     public void park() {
         isParked = true;
     }
+
+    public String getPlate() {
+        return plate;
+    }
 }
