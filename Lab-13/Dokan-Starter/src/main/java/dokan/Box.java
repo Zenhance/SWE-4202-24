@@ -39,7 +39,7 @@ public final class Box<T> {
     /** An empty box. */
     public static <T> Box<T> empty() {
 
-        //throw new UnsupportedOperationException("TODO: Box.empty");
+        // throw new UnsupportedOperationException("TODO: Box.empty");
 
         return new Box<>(null);
     }
@@ -66,6 +66,7 @@ public final class Box<T> {
 
     @Override
     public String toString() {
-        throw new UnsupportedOperationException("TODO: Box.toString");
+        return "Box("+boxItem+")";
+        //throw new UnsupportedOperationException("TODO: Box.toString");
     }
 }

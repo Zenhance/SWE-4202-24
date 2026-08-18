@@ -25,27 +25,60 @@ public final class Counter<T> {
 
     /** Records one more sighting of {@code value}. */
     public void add(T value) {
-        /*for(T item : items){
-            item.equals(value)
+        boolean isDone = false;
+        for(T item : items){
+            boolean multiple = item.equals(value);
+            if(multiple) {
+                int i = items.indexOf(value);
+                int c = counts.get(i);
+                c++;
+                counts.set(i, c);
+                isDone = true;
+            }
         }
-        items.add(value);
-        counts.add()*/
+        if(!isDone){
+            items.add(value);
+            counts.add(1);
+        }
+
+
         //throw new UnsupportedOperationException("TODO: Counter.add");
     }
 
     /** How many times {@code value} has been added. Zero if never. */
     public int count(T value) {
-        //for(int i = 0; i < counts.size())
-        throw new UnsupportedOperationException("TODO: Counter.count");
+        for(T item : items){
+            if(item.equals(value)){
+                return counts.get(items.indexOf(item));
+            }
+        }
+        return 0;
+
+        //throw new UnsupportedOperationException("TODO: Counter.count");
     }
 
     /** How many different values have been counted. */
     public int distinct() {
-        throw new UnsupportedOperationException("TODO: Counter.distinct");
+        return items.size();
+        //throw new UnsupportedOperationException("TODO: Counter.distinct");
     }
 
     /** The value seen most often, or an empty box if nothing has been counted yet. */
     public Box<T> mostCommon() {
-        throw new UnsupportedOperationException("TODO: Counter.mostCommon");
+        int c_max = 0;
+        int index = 0;
+
+        for (int i = 0, lim = counts.size(); i < lim; i++) {
+            int c = counts.get(i);
+            if (c_max < c) {
+                c_max = c;
+                index = i;
+            }
+        }
+
+        if(items.isEmpty()) return Box.empty();
+
+        return Box.of(items.get(index));
+        // throw new UnsupportedOperationException("TODO: Counter.mostCommon");
     }
 }
