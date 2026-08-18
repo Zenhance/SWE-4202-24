@@ -36,6 +36,11 @@ public class Main {
             lot.register(vehicle);
 
         }
+        else if (command.equals("TRUCK")) {
+            String plate = field[1];
+            Category category = Category.valueOf(field[2]);
+            Vehicle vehicle = new Truck(plate, category);
+            lot.register(vehicle);
     }
 
 }
