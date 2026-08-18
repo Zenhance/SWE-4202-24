@@ -11,7 +11,10 @@ public class Main {
                 continue;
             }
 
-            if (line.equals("END")) {
+            String[] field = line.split(" ");
+            String command = field[0];
+
+            if (command.equals("END")) {
                 break;
             }
         }
