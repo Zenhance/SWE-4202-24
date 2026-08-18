@@ -1,3 +1,3 @@
 public enum SlotType {
-    BIKESLOT, REGULARSLOT, LARGESLOT;
+    BIKE, REGULAR, LARGE ;
 }

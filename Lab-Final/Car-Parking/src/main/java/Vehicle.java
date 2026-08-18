@@ -30,4 +30,5 @@ class Vehicle {
     public void incrementHours(int hours) {
         this.hoursStood += hours;
     }
+
 }
