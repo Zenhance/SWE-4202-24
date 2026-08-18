@@ -1,3 +1,5 @@
+import static java.lang.Math.max;
+
 public abstract class Slot {
     private String license;
     private int hours;
@@ -33,5 +35,18 @@ public abstract class Slot {
 
     public String getLicense() {
         return license;
+    }
+
+    public int getHours() {
+        return hours;
+    }
+
+    protected int applySchemeDiscount(int fee) {
+        if (studentScheme) {
+            fee -= ((20 * fee) / 100);
+        } else if (weekendScheme) {
+            fee = max(0, fee - 10);
+        }
+        return fee;
     }
 }
