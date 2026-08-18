@@ -185,7 +185,7 @@ public class Main {
             else if (field[0].equals("SLOT")) {
                 Vehicle v = findVehicle(parkedVehicles, field[1]);
 
-                System.out.println(v != null ? v.slotType : null);
+                System.out.println(v != null ? v.slotType :SlotType.LARGE);
             }
             else if (field[0].equals("LEAVE")) {
                 Vehicle v = findVehicle(parkedVehicles, field[1]);
