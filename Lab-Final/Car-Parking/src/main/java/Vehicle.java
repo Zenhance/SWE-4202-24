@@ -32,7 +32,5 @@ public abstract class Vehicle {
     public void setOversized(boolean oversized) {
         this.oversized = oversized;
     }
-
-
-
+    public abstract String[] getSlotPreferences();
 }
