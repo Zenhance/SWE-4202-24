@@ -12,4 +12,16 @@ public enum SlotType {
         this.furtherHourFee = furtherHourFee;
         this.surcharge = surcharge;
     }
+
+    public int getFirstHourFee() {
+        return firstHourFee;
+    }
+
+    public int getFurtherHourFee() {
+        return furtherHourFee;
+    }
+
+    public int getSurcharge() {
+        return surcharge;
+    }
 }
