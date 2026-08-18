@@ -33,6 +33,17 @@ public class CarPark {
                 }
             }
         }
+        
         return null;
+    }
+
+    public Slot parkVehicle(Vehicle vehicle) {
+        Slot slot = findFirstFreeSlot(vehicle);
+
+        if (slot != null) {
+            slot.park(vehicle);
+        }
+
+        return slot;
     }
 }
