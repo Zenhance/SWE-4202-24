@@ -9,6 +9,8 @@ public class largeslots  implements Surcharge{
         return 25;
     }
     public long lfee(int h,int bill) {
-        return firsthour_fee+(h-1)*furtherhour_fee+ v.discount(bill);
+        int meow=  firsthour_fee+(h-1)*furtherhour_fee;
+        int t=meow;
+        return meow+=v.discount(t)+surcharge();
     }
 }

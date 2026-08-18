@@ -59,8 +59,8 @@ public class lot {
     }
 
 
-    public int free(String kind) {
-        slottype type = slottype.valueOf(kind);
+    public int free(String cat) {
+        slottype type = slottype.valueOf(cat);
         int count = 0;
         for (Slot slot : slots) {
             if (slot.getType() == type && slot.isFree()) {
