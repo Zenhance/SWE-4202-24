@@ -1,12 +1,12 @@
 public class Vehicle {
     public String type;
-    public String number_plate;
+    public String id;
     public Slot slot;
     public int entryTime;
 
-    public Vehicle(String type, String number_plate, Slot slot, int entryTime) {
+    public Vehicle(String type, String id, Slot slot, int entryTime) {
         this.type = type;
-        this.number_plate = number_plate;
+        this.id = id;
         this.slot = slot;
         this.entryTime = entryTime;
     }
