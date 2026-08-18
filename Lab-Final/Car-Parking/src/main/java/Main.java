@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws ParkingException {
+    public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
         while (input.hasNextLine()) {
@@ -88,18 +88,21 @@ public class Main {
                         int leavingCarIndex = isVehicleInPark(vehicles, field[2]);
                         vehicles.remove(leavingCarIndex);
 
-                        if (vehicles.get(i).getPlate().equals(field[2])) {
-                            vehicleInPark = true;
-                            leavingCarIndex = i;
-                            break;
-                        }
+                    } catch (UnknownPlateException e) {
+                        System.out.println(e.getMessage());
                     }
-                    if (!vehicleInPark)
-                        throw new UnknownPlateException("Plate is not in the park");
-
-                    vehicles.remove(leavingCarIndex);
                 }
                 case "BILL" -> {
+                    try {
+                        int billingCarIndex = isVehicleInPark(vehicles, field[2]);
+                        int bill = vehicles.get(billingCarIndex).getSlotType().totalCharge();
+                        System.out.println(bill);
+                    } catch (UnknownPlateException e) {
+                        System.out.println(e.getMessage());
+                    }
+
+                }
+                case "SLOT" -> {
 
                 }
             }
