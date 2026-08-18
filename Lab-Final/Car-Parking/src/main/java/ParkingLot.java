@@ -135,7 +135,7 @@ public class ParkingLot {
             }
         }
     }
-    private boolean hasFreeSlot(String slot {
+    private boolean hasFreeSlot(String slot){
         if (slot.equals("BIKE")) {
             return freeBike > 0;
         }
@@ -146,6 +146,18 @@ public class ParkingLot {
             return freeLarge > 0;
         }
     }
+    private void takeSlot(String slot) {
+        if(slot.equals("BIKE")) {
+            freeBike--;
+        }
+        else if(slot.equals("REGULAR")) {
+            freeRegular--;
+        }
+        else{
+            freeLarge--;
+        }
+    }
+
 
 
 }
