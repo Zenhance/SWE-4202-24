@@ -1,5 +1,6 @@
 package dokan;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -29,58 +30,87 @@ import java.util.List;
  * caller change the shelf.
  */
 public final class Shelf<T extends Item> {
+    private int capacity;
+    private List<T> items;
 
     public Shelf(int capacity) {
-        throw new UnsupportedOperationException("TODO: Shelf constructor");
+        if (capacity < 1) throw new IllegalArgumentException("capacity at least one");
+        this.capacity = capacity;
+        items = new ArrayList<>(capacity);
     }
 
     /** Puts an item on the shelf. Returns false, without adding, if the shelf is full. */
     public boolean add(T item) {
-        throw new UnsupportedOperationException("TODO: Shelf.add");
+        if (size() == capacity()) return false;
+        items.add(item);
+        return true;
     }
 
     public T get(int index) {
-        throw new UnsupportedOperationException("TODO: Shelf.get");
+        return items.get(index);
     }
 
     public int size() {
-        throw new UnsupportedOperationException("TODO: Shelf.size");
+        return items.size();
     }
 
     public int capacity() {
-        throw new UnsupportedOperationException("TODO: Shelf.capacity");
+        return capacity;
     }
 
     public boolean isFull() {
-        throw new UnsupportedOperationException("TODO: Shelf.isFull");
+        if (size() >= capacity()) return true;
+        return false;
     }
 
     public boolean isEmpty() {
-        throw new UnsupportedOperationException("TODO: Shelf.isEmpty");
+        if(size() == 0) return true;
+        return false;
     }
 
     public boolean contains(String name) {
-        throw new UnsupportedOperationException("TODO: Shelf.contains");
+        for (T item : items) {
+            if (item.name().equals(name)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     /** Takes the first item with this name off the shelf. True if one was there. */
     public boolean remove(String name) {
-        throw new UnsupportedOperationException("TODO: Shelf.remove");
+        for (int i = 0; i < items.size(); i++) {
+            if (items.get(i).name().equals(name)) {
+                items.remove(i);
+                return true;
+            }
+        }
+        return false;
     }
 
     /** What everything on the shelf is worth. This is the method the bound pays for. */
     public int totalPriceTaka() {
-        throw new UnsupportedOperationException("TODO: Shelf.totalPriceTaka");
+        int total = 0;
+        for (T item : items){
+            total += item.priceTaka();
+        }
+        return total;
     }
 
     /** The items, as a list the caller cannot use to change the shelf. */
     public List<T> items() {
-        throw new UnsupportedOperationException("TODO: Shelf.items");
+        List<T> copy = new ArrayList<>(capacity);
+
+        for (T item : items){
+            copy.add(item);
+        }
+
+        return  copy;
     }
 
     @Override
     public String toString() {
         // The test cases print shelves, so this should look like a list.
-        throw new UnsupportedOperationException("TODO: Shelf.toString");
+        return items.toString();
     }
 }
