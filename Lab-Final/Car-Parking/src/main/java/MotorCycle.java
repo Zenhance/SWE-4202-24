@@ -4,6 +4,6 @@ public abstract class MotorCycle extends Vehicle{
         super(plate, scheme);
     }
     public List<SlotType>acceptanceOrder(){
-        return List.of(SlotType.BIKE, SlotType.REGULAR, StotType.LARGE);
+        return List.of(SlotType.BIKE, SlotType.REGULAR, SlotType.LARGE);
     }
 }
