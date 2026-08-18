@@ -2,8 +2,8 @@ public class Bike extends Slot{
 
     private static int total;
     private static int count;
-    public Bike(String license, String Scheme) {
-        super(license, Scheme);
+    public Bike(String license, String Scheme, boolean surchargeApplicable) {
+        super(license, Scheme, surchargeApplicable);
         count++;
     }
 

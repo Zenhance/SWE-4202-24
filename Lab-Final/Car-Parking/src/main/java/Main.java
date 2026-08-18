@@ -24,6 +24,11 @@ public class Main {
                     break;
                 }
 
+                case "SLOTS" -> {
+                    Bike.setSlotforBike(Integer.parseInt(field[1]));
+                    Regular.setSlotforRegular(Integer.parseInt(field[2]));
+                    Large.setSlotforLarge(Integer.parseInt(field[3]));
+                }
                 case "MAXSTAY" -> {
                     int hours = Integer.parseInt(field[1]);
                     Slot.setMAXSTAY(hours);
@@ -31,13 +36,13 @@ public class Main {
 
                 case "BIKE" -> {
                     if (Bike.getAvailableBike() > 0){
-                        vehicles.add(new Bike(field[1], field[2]));
+                        vehicles.add(new Bike(field[1], field[2], false));
                     }
                     else if (Regular.getAvailableRegular() > 0){
-                        vehicles.add(new Regular(field[1], field[2]));
+                        vehicles.add(new Regular(field[1], field[2], true));
                     }
                     else if (Large.getAvailableLarge() > 0){
-                        vehicles.add(new Regular(field[1], field[2]));
+                        vehicles.add(new Regular(field[1], field[2], true));
                     }
                     else Slot.refused();
 
@@ -45,17 +50,17 @@ public class Main {
 
                 case  "CAR" -> {
                     if (Regular.getAvailableRegular() > 0){
-                        vehicles.add(new Regular(field[1], field[2]));
+                        vehicles.add(new Regular(field[1], field[2], false));
                     }
                     else if (Large.getAvailableLarge() > 0){
-                        vehicles.add(new Large(field[1], field[2]));
+                        vehicles.add(new Large(field[1], field[2],true));
                     }
                     else Slot.refused();
                 }
 
                 case "TRUCK" -> {
                     if (Large.getAvailableLarge() > 0){
-                        vehicles.add(new Large(field[1], field[2]));
+                        vehicles.add(new Large(field[1], field[2],false));
                     }
                     else Slot.refused();
                 }
@@ -89,12 +94,12 @@ public class Main {
                 }
 
                 case "SLOT" -> {
-                    String vehicleType;
+                    String vehicleType = "";
                     for (Slot v : vehicles) {
                         if (v.getLicense().equals(field[1])) {
-                            if (v instanceof Bike) vehicleType = "BIKE";
-                            else if (v instanceof Regular) vehicleType = "REGULAR";
-                            else vehicleType = "LARGE";
+                            if (v instanceof Bike) System.out.println("BIKE");
+                            else if (v instanceof Regular) System.out.println("REGULAR");
+                            else System.out.println("LARGE");
 
                             break;
                         }
@@ -103,16 +108,11 @@ public class Main {
 
                 case "FREE" -> {
                     int res;
-                    for (Slot v : vehicles) {
-                        if (v.getLicense().equals(field[1])) {
-                            if(field[1].equals("BIKE")) res = Bike.getAvailableBike();
-                            else if (field[1].equals("REGULAR")) res = Regular.getAvailableRegular();
-                            else res = Large.getAvailableLarge();
+                    if(field[1].equals("BIKE")) res = Bike.getAvailableBike();
+                    else if (field[1].equals("REGULAR")) res = Regular.getAvailableRegular();
+                    else res = Large.getAvailableLarge();
 
-                            System.out.println(res);
-                            break;
-                        }
-                    }
+                    System.out.println(res);
                 }
 
                 case "COUNT" -> {

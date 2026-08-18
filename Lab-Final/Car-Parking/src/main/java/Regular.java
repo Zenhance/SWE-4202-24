@@ -2,8 +2,8 @@ public class Regular extends Slot{
     private static int total;
     private static int count;
 
-    public Regular(String license, String Scheme) {
-        super(license, Scheme);
+    public Regular(String license, String Scheme, boolean surchargeApplicable) {
+        super(license, Scheme, surchargeApplicable);
         count++;
     }
 

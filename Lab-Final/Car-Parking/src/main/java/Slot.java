@@ -4,14 +4,15 @@ public abstract class Slot {
 
     protected int hours = 0;
     private static int countTotal = 0;
-
+    protected boolean surchargeApplicable;
     protected String license;
     protected boolean StudentScheme = false;
     protected boolean WeekendScheme = false;
 
-    public Slot(String license, String Scheme){
+    public Slot(String license, String Scheme, boolean surchargeApplicable){
         hours = 1;
         this.license = license;
+        this.surchargeApplicable = surchargeApplicable;
 
         switch(Scheme) {
             case "STUDENT" -> {
@@ -27,7 +28,7 @@ public abstract class Slot {
 
     private static int MAXSTAY;
     protected static int refused = 0;
-    protected boolean surchargeApplicable = false;
+
 
 
     public abstract int calculatefee();

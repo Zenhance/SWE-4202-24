@@ -3,17 +3,17 @@ public class Large extends Slot{
     private static int total;
     private static int count;
 
-    public Large(String license, String Scheme) {
-        super(license, Scheme);
+    public Large(String license, String Scheme, boolean surchargeApplicable) {
+        super(license, Scheme, surchargeApplicable);
         count++;
     }
 
     @Override
     public int calculatefee() {
-        int fee = 30 + (hours-1)*20;
+        int fee = 50 + (hours-1)*40;
 
         if(surchargeApplicable){
-            fee += 15;
+            fee += 25;
         }
         fee = feeAfterScheme(fee);
 
