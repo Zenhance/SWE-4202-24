@@ -10,10 +10,11 @@ public class ParkingLot {
     int regularSlotFirst = 30, regularSlotFurther = 20, regularSlotSurcharge = 15;
     int largeSlotFirst = 50, largeSlotFurther = 40, largeSlotSurcharge = 25;
 
+    int earned = 0;
     private int maxHours;
-    private int bikeCapacity;
-    private int regularCapacity;
-    private int largeCapacity;
+     int bikeCapacity;
+     int regularCapacity;
+     int largeCapacity;
     int count = 0;
     int refused = 0;
     public ParkingLot(int bikeCapacity, int regularCapacity, int largeCapacity) {
@@ -93,4 +94,5 @@ public class ParkingLot {
             }
         }
     }
+
 }
