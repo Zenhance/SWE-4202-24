@@ -81,7 +81,9 @@ public class Main {
 
     public static void main(String[] args){
 
-        List<Vehicle> parkedvehicles = new ArrayList<>();
+        List<Vehicle> parkedVehicles = new ArrayList<>();
+
+        int maxStay = Integer.MAX_VALUE;
 
         int bikeCap = 0, regCap = 0, largeCap = 0;
         int bikeOcc = 0, regOcc = 0, largeOcc = 0;
@@ -101,13 +103,27 @@ public class Main {
             if (field[0].equals("END")) {
                 break;
 
-            } else if (field[0].equals("MAXSTAY")) {
+            } else if (field[0].equals("SLOTS")) {
+                bikeCap = Integer.parseInt(field[1]);
+                regCap = Integer.parseInt(field[2]);
+                largeCap = Integer.parseInt(field[3]);
+
+
+
+            }
+
+            else if (field[0].equals("MAXSTAY")) {
                 int hours = Integer.parseInt(field[1]);
 
 
 
+
+
             } else if (field[0].equals("COUNT")) {
-                System.out.println(/* the number you worked out */);
+                System.out.println(parkedVehicles.size());
+
+            } else if (field[0].equals("BIKE") || field[0].equals("CAR") || || field[0].equals("REGULAR")) {
+
 
             }
 
