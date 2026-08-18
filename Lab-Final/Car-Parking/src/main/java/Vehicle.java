@@ -1,5 +1,11 @@
 public class Vehicle
 {
+
+    public enum Category
+    {
+        BIKE, CAR, TRUCK
+    }
+
     private String numberPlate;
     private int entranceTime;
     private Category category;

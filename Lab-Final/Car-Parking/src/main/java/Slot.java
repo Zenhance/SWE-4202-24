@@ -1,5 +1,10 @@
 public class Slot
 {
+    public enum Type
+    {
+        BIKE, REGULAR, LARGE
+    }
+
     private Type type;
     private Vehicle vehicle;
 
