@@ -15,5 +15,6 @@ public class BillingRun {
     }
 
     public void register(Connection res) {
+        
     }
 }
