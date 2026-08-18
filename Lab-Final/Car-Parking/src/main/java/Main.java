@@ -13,9 +13,14 @@ class VehicleNotFoundException extends Exception
 
 }
 
+enum SlotType
+{
+    BIKE, REGULAR, LARGE
+}
 
 
-public class Main {
+public class Main
+{
     public static void main(String[] args)
     {
 
