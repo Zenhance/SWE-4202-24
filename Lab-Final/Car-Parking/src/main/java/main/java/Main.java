@@ -5,18 +5,23 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
         ParkingLot parkingLot = new ParkingLot(1,2,1,10);
+        Scheme nodis = new NoDis();
+        Scheme studentdis = new StudentDis();
+        Bike bike = new Bike("DH-11-2233", nodis);
+        Car car = new Car("DH-14-5678", studentdis);
+        Truck truck = new Truck("CT-19-0001", nodis);
         try{
-            Scheme  nodis = new NoDis();
-            Bike bike1 = new Bike("DH-11-2233", nodis);
-            Bike bike2 = new Bike("DH-11-0009", nodis);
-            parkingLot.parkVehicle(bike1);
-            parkingLot.parkVehicle(bike2);
-            System.out.println("Vehicles parked successfully");
-
+            parkingLot.parkVehicle(bike);
+            parkingLot.parkVehicle(car);
+            parkingLot.parkVehicle(truck);
+            System.out.println("Bike: " + parkingLot.getVehicleSlot("DH-11-2233"));
+            System.out.println("Car: " + parkingLot.getVehicleSlot("DH-14-5678"));
+            System.out.println("Truck: " + parkingLot.getVehicleSlot("CT-19-0001"));
+            System.out.println("Vehicle count: " + parkingLot.getvehiclecount());
         }
         catch (NoPlateException | NoSlotException e) {
-
             parkingLot.addRefusal();
             System.out.println(e.getMessage());
         }
