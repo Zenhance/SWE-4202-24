@@ -32,6 +32,8 @@ public class Main {
         else if (field[0].equals("EARNED")){}
         else if (field[0].equals("FREE")){
      if(field[1].equals("BIKE"))System.out.println(slot.bike);
+     else if(field[1].equals("REGULAR"))System.out.println(slot.regular);
+     else if(field[])
             }
 }       else if (field[0].equals("PASSTIME")){
             int hours = Integer.parseInt(field[1]);
