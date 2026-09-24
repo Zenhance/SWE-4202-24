@@ -12,4 +12,10 @@ public class Wallet {
     public int getBalance(){
         return balance;
     }
+    public void recharge(int amount){
+        if(amount<=0){
+            throw new IllegalArgumentException("Recharge amount cannot be negative nor zero");
+        }
+        this.balance=balance;
+    }
 }
