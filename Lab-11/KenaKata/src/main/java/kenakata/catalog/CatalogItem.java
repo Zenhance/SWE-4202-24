@@ -1,6 +1,8 @@
 package kenakata.catalog;
 
 
+import kenakata.exceptions.OutOfStockException;
+
 public abstract class CatalogItem implements Chargeable {
 
     protected final String sku;
@@ -22,7 +24,7 @@ public abstract class CatalogItem implements Chargeable {
 
     @Override
     public long unitCharge() {
-        return 0;
+        return price;
     }
 
     @Override
@@ -33,9 +35,19 @@ public abstract class CatalogItem implements Chargeable {
         return 0;
     }
     public int remaining(){
-        return 0;
+        return stock;
     }
     public Seller seller(){
-        return null;
+        return seller;
     }
+
+    public void reserve(int quantity) throws OutOfStockException{
+
+    }
+
+    public String title(){
+        return title;
+    }
+
+
 }
