@@ -33,6 +33,9 @@ public class Order {
 
     public void applyCoupon(Coupon eid10) {
     }
+    public void insure(int value){
+
+    }
 
     public PriceBreakdown quote(int i) {
         return null;
