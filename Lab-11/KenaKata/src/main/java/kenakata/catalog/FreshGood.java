@@ -1,7 +1,12 @@
 package kenakata.catalog;
 
-public class FreshGood {
-    public FreshGood(String s, String hilsa, int i, int i1, Seller seller, int i2) {
+public class FreshGood extends CatalogItem {
+
+    private final int days;
+    public FreshGood(String sku, String title,long price, int stock, Seller seller, int days) {
+
+        super(sku,title,price, stock, seller);
+        this.days = days;
     }
 
     public int unitVat() {
