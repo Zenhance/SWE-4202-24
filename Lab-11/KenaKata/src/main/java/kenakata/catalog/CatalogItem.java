@@ -49,5 +49,4 @@ public abstract class CatalogItem implements Chargeable {
         return title;
     }
 
-
 }
