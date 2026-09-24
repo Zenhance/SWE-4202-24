@@ -9,13 +9,13 @@ public class Wallet {
         }
         this.balance=balance;
     }
-    public int getBalance(){
+    public int balance(){
         return balance;
     }
     public void recharge(int amount){
         if(amount<=0){
             throw new IllegalArgumentException("Recharge amount cannot be negative nor zero");
         }
-        this.balance=balance;
+        this.balance+=amount;
     }
 }
