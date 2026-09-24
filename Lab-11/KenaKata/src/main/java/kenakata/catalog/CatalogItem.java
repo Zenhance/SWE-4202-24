@@ -1,16 +1,8 @@
 package kenakata.catalog;
 
-import kenakata.exceptions.OutOfStockException;
-
-
 
 public abstract class CatalogItem implements Chargeable {
     protected CatalogItem(String sku, String title, long price, int stock, Seller seller){
-    }
-
-    @Override
-    public String label() {
-        return "";
     }
 
     @Override
