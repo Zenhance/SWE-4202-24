@@ -1,5 +1,6 @@
 package kenakata.order;
 
+import kenakata.catalog.CatalogItem;
 import kenakata.catalog.GiftWrap;
 import kenakata.catalog.StockedGood;
 import kenakata.exceptions.EmptyWalletException;
@@ -22,11 +23,11 @@ public class Order {
     }
 
 
-    public void addProduct(StockedGood stockedGood, int i) {
+    public void addProduct(CatalogItem item, int i) {
         
     }
 
-    public void addAddOn(GiftWrap giftWrap){
+    public void addAddOn(Object addOn){
         
     }
 
