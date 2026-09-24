@@ -6,15 +6,12 @@ public class DigitalGood extends CatalogItem {
         super(sku, title, price, stock, seller);
     }
 
-    public int unitCharge() {
-        return 0;
+    @Override
+    public long commissionOn(long lineValue) {
+        return Math.round(lineValue*0.20);
     }
-
-    public int unitVat() {
-        return 0;
-    }
-
-    public int commissionOn(int i) {
-        return 0;
+    @Override
+    public long unitVat(){
+        return Math.round(price * 0.05);
     }
 }
