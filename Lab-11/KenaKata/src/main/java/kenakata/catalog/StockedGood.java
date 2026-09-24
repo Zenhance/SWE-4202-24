@@ -1,35 +1,25 @@
 package kenakata.catalog;
 
-public class StockedGood extends CatalogItem  {
+public class StockedGood extends CatalogItem {
 
     private final int weightGrams;
 
-    public StockedGood(String sku, String title, long price, int stock, Seller seller, int weightGrams){
+    public StockedGood(String sku, String title, long price, int stock, Seller seller, int weightGrams) {
         super(sku, title, price, stock, seller);
-        this.weightGrams=weightGrams;
+        this.weightGrams = weightGrams;
     }
-    public int WeightGrams(){
+
+    public int weightGrams() {
         return weightGrams;
     }
 
-
-
-
-    public long unitCharge() {
-        return 0;
+    @Override
+    public long commissionOn(long lineValue) {
+        return Math.round(lineValue * 0.08);
     }
 
+    @Override
     public long unitVat() {
-   return 0; }
-
-    public int commissionOn(int i) {
-        return 0;
-    }
-
-    public void reserve(int i) {
-    }
-
-    public int remaining() {
-        return 0;
+        return Math.round(price * 0.075);
     }
 }
