@@ -1,4 +1,8 @@
 package kenakata.payment;
 
-public class CashOnDeliveryPayment {
+public class CashOnDeliveryPayment implements PaymentMethod{
+    @Override
+    public void pay() {
+
+    }
 }
