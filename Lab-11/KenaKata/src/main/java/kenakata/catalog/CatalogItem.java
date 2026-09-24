@@ -2,6 +2,7 @@ package kenakata.catalog;
 
 
 public abstract class CatalogItem implements Chargeable {
+
     protected CatalogItem(String sku, String title, long price, int stock, Seller seller){
     }
 
@@ -14,7 +15,7 @@ public abstract class CatalogItem implements Chargeable {
     public long unitVat() {
         return 0;
     }
-    public long comissionOn(long lineValue){
+    public long commissionOn(long lineValue){
         return 0;
     }
     public int remaining(){
