@@ -55,6 +55,10 @@ public class Order {
     public PriceBreakdown finalBreakdown(){
         return null;
     }
+    public List<OrderLine> lines(){
+        final List<OrderLine> lines = new ArrayList<>();
+        return Collections.unmodifiableList(lines);
+    }
 
 
 }
