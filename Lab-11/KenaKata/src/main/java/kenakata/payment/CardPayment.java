@@ -1,5 +1,8 @@
 package kenakata.payment;
 
+import kenakata.exceptions.CardLimitExceededException;
+import kenakata.exceptions.PaymentDeclinedException;
+
 public class CardPayment implements PaymentMethod {
     private long remainingLimit;
 
@@ -11,14 +14,18 @@ public class CardPayment implements PaymentMethod {
         return remainingLimit;
     }
 
-    public void authorise(long amount){
-        if(amount>remainingLimit){
-        }
-    remainingLimit -=amount;
+    @Override
+    public void pay() {
+
     }
 
     @Override
-    public void pay() {
+    public void authorise(int amount) throws CardLimitExceededException {
+        if(amount>remainingLimit){
+            throw new CardLimitExceededException("Card limit exceeded");
+        }
+        remainingLimit -=amount;
+
 
     }
 }
