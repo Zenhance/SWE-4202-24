@@ -1,6 +1,8 @@
 package kenakata.catalog;
 
 
+import kenakata.settlement.SellerPayout;
+
 import java.util.Objects;
 
 public class Seller {
@@ -33,5 +35,8 @@ public class Seller {
     @Override
     public int hashCode() {
         return Objects.hashCode(name);
+    }
+    public SellerPayout forSeller(Seller seller){
+        return null;
     }
 }
