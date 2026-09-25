@@ -3,10 +3,12 @@ package kenakata.order;
 import kenakata.catalog.CatalogItem;
 import kenakata.catalog.GiftWrap;
 import kenakata.catalog.StockedGood;
+import kenakata.exceptions.CheckoutException;
 import kenakata.exceptions.EmptyWalletException;
 import kenakata.exceptions.NotInsurableException;
 import kenakata.exceptions.CouponRejectedException;
 import kenakata.payment.MobileWalletPayment;
+import kenakata.payment.PaymentMethod;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,6 +41,12 @@ public class Order {
 
     public PriceBreakdown quote(int i) {
         return null;
+    }
+    public void place(PaymentMethod paymentMethod, int day) throws CheckoutException{
+
+    }
+    public void acceptReturn(int lineIndex, int returnDay){
+
     }
 
 }
