@@ -4,7 +4,7 @@ package kenakata.catalog;
 import java.util.Objects;
 
 public class Seller {
-    private String name;
+    private final String name;
     public Seller(String name) {
         if(name == null || name.isBlank()){
             throw new IllegalArgumentException("Seller can't be empty");
@@ -14,6 +14,13 @@ public class Seller {
     }
     public String name(){
         return name;
+    }
+
+    @Override
+    public String toString() {
+        return "Seller{" +
+                "name='" + name + '\'' +
+                '}';
     }
 
     @Override
