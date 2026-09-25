@@ -36,7 +36,5 @@ public class Seller {
     public int hashCode() {
         return Objects.hashCode(name);
     }
-    public SellerPayout forSeller(Seller seller){
-        return null;
-    }
+
 }
