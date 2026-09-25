@@ -11,6 +11,7 @@ import kenakata.payment.MobileWalletPayment;
 import kenakata.payment.PaymentMethod;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -48,5 +49,12 @@ public class Order {
     public void acceptReturn(int lineIndex, int returnDay){
 
     }
+    public boolean placed(){
+        return true;
+    }
+    public PriceBreakdown finalBreakdown(){
+        return null;
+    }
+
 
 }
